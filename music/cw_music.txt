@@ -1,0 +1,66 @@
+ #CW
+cwsound_01 = {
+	music = "file:/music/Por-una-Cabeza-Carlos-Gardel.ogg"
+	name = "Por-una-Cabeza-Carlos-Gardel"
+	pause_factor = 50
+	mood = yes
+	can_be_interrupted = yes
+}
+
+cwsound_02 = {
+	music = "file:/music/Royal-Scots-Dragoon-Guards-Traditional-Auld-Lang-Syne.ogg"
+	name = "Royal-Scots-Dragoon-Guards-Traditional-Auld-Lang-Syne"
+	pause_factor = 50
+	mood = yes
+	can_be_interrupted = yes
+}
+
+cwsound_03 = {
+	music = "file:/music/Scarborough-Fair.ogg"
+	name = "Scarborough-Fair"
+	pause_factor = 50
+	mood = yes
+	can_be_interrupted = yes
+}
+
+cwsound_04 = {
+	music = "file:/music/The-Place-Where-There-Is-No-Darkness.ogg"
+	name = "The-Place-Where-There-Is-No-Darkness"
+	pause_factor = 50
+	mood = yes
+	can_be_interrupted = yes
+}
+
+cwsound_05 = {
+	music = "file:/music/Various-Artists-A-Bridge-Too-Far.ogg"
+	name = "Various-Artists-A-Bridge-Too-Far"
+	pause_factor = 50
+	mood = yes
+	can_be_interrupted = yes
+}
+
+cwsound_06 = {
+	music = "file:/music/土星皇家交响乐团_肖斯塔科维奇_第二圆舞曲.ogg"
+	name = "土星皇家交响乐团_肖斯塔科维奇_第二圆舞曲"
+	pause_factor = 50
+	mood = yes
+	can_be_interrupted = yes
+}
+
+cwsound_07 = {
+	music = "file:/music/宗次郎-故郷の原风景.ogg"
+	name = "宗次郎-故郷の原风景"
+	pause_factor = 50
+	mood = yes
+	can_be_interrupted = yes
+}
+
+cwsound_08 = {
+	music = "file:/music/KAIGUODADIAN.ogg"
+	name = "KAIGUODADIAN"
+	pause_factor = 50
+	is_valid = { has_modifier = kaiguodadian_modifier }
+	mood = yes
+	prioritized_mood = yes
+	can_be_interrupted = yes
+}
