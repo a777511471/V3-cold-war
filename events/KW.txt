@@ -17,17 +17,7 @@ KW_event.1 = {
 	trigger = {												
 		
 		#Overlord conditions
-		exists = c:KOR this = c:KOR									
-		game_date >= 1950.6.25																	
-		
-		NOT = { is_a_communist_government = yes }							
-		is_sufficiently_independent = yes								
-		is_at_war = no											
-		
-		can_go_to_war = yes										
-		
-		#Recipent conditions
-		exists = c:PRK
+		exists = c:PRK this = c:PRK
 		c:PRK = { 											
 			is_a_communist_government = yes 
 			is_at_war = no
@@ -35,7 +25,18 @@ KW_event.1 = {
 		}
 		
 		# Event has not been fired before
-		NOT = { has_variable = korean_war_hiw }					
+		NOT = { has_variable = korean_war_hiw }
+		
+		exists = c:KOR 									
+		game_date > 1950.5.25																	
+		
+		NOT = { is_a_communist_government = yes }							
+		is_sufficiently_independent = yes								
+		is_at_war = no											
+		
+		can_go_to_war = yes										
+		
+							
 		
     }
 	
@@ -72,7 +73,7 @@ KW_event.1 = {
 			create_diplomatic_play = {
 				name = korean_war
 				type = dp_annex_war_historical
-				target_country = c:PRK
+				target_country = c:KOR
 				
 				#war = yes
 				
@@ -87,13 +88,11 @@ KW_event.1 = {
 					type = annex_country
 					target_country = c:KOR
 				}
-				
 			}
-			
+		    random_diplomatic_play = { limit = { name = korean_war } add_escalation = 90 }
 		}
 		
-		# Fire only once
-		set_variable = korean_war_hiw							# Change variable ****
+		# Fire only once	# Change variable ****
 		
 		ai_chance = { 
 			base = 90 
@@ -120,23 +119,28 @@ KW_event.2 = {
 
 	icon = "gfx/interface/icons/event_icons/event_war.dds"
 	
-	trigger = { game_date > 1950.6.25
-		      this = c:RUS
-			  NOT = { has_variable = korean_war_hiw }					
-		
+	trigger = { 
+		game_date > 1950.5.31
+		exists = c:RUS
+		this = c:RUS
+		NOT = { has_variable = korean_war_ussr }	
+		exists = c:PRK
+		c:PRK = {
+			has_variable = korean_war_hiw				
+		}
     }
 	
 	immediate = {
 	
 		# Fire only once
-		set_variable = korean_war_hiw						
+		set_variable = korean_war_ussr						
 		
 	}		
 
 	option = {
 		name = war.kwussr.a
 		default_option = yes
-		random_diplomatic_play = { limit = { initiator_is = c:KOR target_is = c:PRK has_play_goal = annex_subject } add_target_backers = { c:RUS } }
+		random_diplomatic_play = { limit = { name = korean_war } add_initiator_backers = { c:RUS } }
 	}	
 
 	option = {
@@ -162,23 +166,27 @@ KW_event.3 = {
 
 	icon = "gfx/interface/icons/event_icons/event_war.dds"
 	
-	trigger = { game_date > 1950.6.25
-		      this = c:USA
-			  NOT = { has_variable = korean_war_hiw }					
-		
+	trigger = { 
+		game_date > 1950.5.31
+		exists = c:USA
+		this = c:USA
+		NOT = { has_variable = korean_war_usa }	
+		exists = c:PRK
+		c:PRK = {
+			has_variable = korean_war_hiw				
+		}				
     }
 	
 	immediate = {
 	
 		# Fire only once
-		set_variable = korean_war_hiw						
-		
+		set_variable = korean_war_usa						
 	}		
 
 	option = {
 		name = war.kwusa.a
 		default_option = yes
-		random_diplomatic_play = { limit = { initiator_is = c:KOR target_is = c:PRK has_play_goal = annex_subject } add_initiator_backers = { c:USA } }
+		random_diplomatic_play = { limit = { name = korean_war } add_target_backers = { c:USA } }
 	}	
 
 	option = {
@@ -205,28 +213,39 @@ KW_event.4 = {
 
 	icon = "gfx/interface/icons/event_icons/event_war.dds"
 	
-	trigger = { game_date > 1950.6.25
-		      this = c:PRC	
-			  NOT = { has_variable = korean_war_hiw }					
-		
+	trigger = { 
+		game_date > 1950.6.25
+		exists = c:PRC
+		this = c:PRC	
+		NOT = { has_variable = korean_war_chn }	
+		exists = c:PRK
+		c:PRK = {
+			has_variable = korean_war_hiw				
+		}	
+		exists = c:USA	
+		c:USA = {
+			has_variable = korean_war_usa				
+		}		
     }
 	
 	immediate = {
-	
 		# Fire only once
-		set_variable = korean_war_hiw						
-		
+		set_variable = korean_war_chn						
 	}	
 
 	
 	option = {
 		name = war.kwchn.a
 		default_option = yes
-		random_diplomatic_play = { limit = { initiator_is = c:KOR target_is = c:PRK has_play_goal = annex_subject } add_target_backers = { c:PRC } }
+		random_diplomatic_play = { limit = { name = korean_war } add_initiator_backers = { c:PRC } }
+		add_diplomatic_play_war_support = { target = c:PRK value = 75 }
+		aadd_modifier = {
+			name = the_korea_war_against_america
+			months = 24
+		}
 	}	
 
 	option = {
 		name = war.kwchn.b
 	}
 }
-

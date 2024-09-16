@@ -24,13 +24,6 @@ test_event.1 = {
 	option = {
 		name = sandazhanyi.1.a
 		default_option = yes
-		every_diplomatic_play = {
-			limit = {
-				initiator_is = c:CHI
-				target_is = c:PRC
-			}
-			end_play = yes
-		}		
 	}
 
 }

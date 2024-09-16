@@ -24,6 +24,10 @@ AUS_event.1 = { #奥地利统一
 	option = {
 		name = AUS.1.a
 		default_option = yes
+		add_modifier = {
+			name = the_country_of_our_ancestors_modifier
+			years = 1
+		}
 		if ={
             limit ={
                 OR ={
@@ -50,10 +54,51 @@ AUS_event.1 = { #奥地利统一
 		          annex = c:NTL
 				  annex = c:ETL
 				  annex = c:STY
-				  make_independent = yes}
+				  make_independent = yes
+		}
 	}
 
 	option = {
 		name = AUS.1.b
-    }
+		add_modifier = {
+			name = the_country_of_our_ancestors_modifier
+			years = 1
+		}
+		if ={
+            limit ={
+                OR ={
+                    AND ={
+                        exists =C:NTL
+                        this=c:NTL
+                        c:NTL ?= {is player= yes}
+			}
+                    AND ={
+                        exists =C:ETL
+                        this=c:ETL
+                        c:ETL ?= {is player= yes}
+			}
+                    AND ={
+                        exists =C:STY
+                        this=c:STY
+                        c:STY ?= {is player= yes}
+			}
+		}
+	}
+			play_as = c:AUS
+}
+	c:AUS = {
+		          annex = c:NTL
+				  annex = c:ETL
+				  annex = c:STY
+				  }
+	c:RUS = {
+		          create_diplomatic_pact = {
+				  country = c:AUS
+				  type = protectorate
+			}
+		}
+	} 
+	option = {
+		name = AUS.1.c
+	}
 }

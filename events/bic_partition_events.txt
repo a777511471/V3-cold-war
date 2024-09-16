@@ -102,6 +102,13 @@ bic_partition.1 = {
 			}
 			s:STATE_SOUTH_BENGAL.region_state:HND = { set_state_owner = c:PAK }
 		}
+		if = {
+			limit = {
+				exists = c:PAK
+				exists = s:STATE_NORTH_BENGAL.region_state:HND
+			}
+			s:STATE_NORTH_BENGAL.region_state:HND = { set_state_owner = c:PAK }
+		}
 		c:HND = {
 			activate_law = law_type:law_parliamentary_republic
 			create_character = {
@@ -111,7 +118,6 @@ bic_partition.1 = {
 				birth_date = 1869.10.2
 				culture = cu:gujarati
 				is_general = yes
-				religion = hindu
 				interest_group = ig_intelligentsia
 				ideology = ideology_moderate
                 ruler = yes
@@ -130,8 +136,8 @@ bic_partition.1 = {
 				birth_date = 1876.12.25
 				culture = cu:gujarati
 				is_general = yes
-				religion = sunni
-                ruler = yes
+				religion = rel:sunni
+                		ruler = yes
 				interest_group = ig_intelligentsia
 				ideology = ideology_moderate
 				traits = { 
@@ -169,6 +175,9 @@ bic_partition.1 = {
 		}
         make_independent = yes
         remove_modifier = bic_out_of_control_modifier
+		trigger_event = {
+			id = hnd_expansion.1
+		}
 	}
 	option = {
 		name = bic_partition.1.b
@@ -263,6 +272,13 @@ bic_partition.1 = {
 			}
 			s:STATE_SOUTH_BENGAL.region_state:HND = { set_state_owner = c:PAK }
 		}
+		if = {
+			limit = {
+				exists = c:PAK
+				exists = s:STATE_NORTH_BENGAL.region_state:HND
+			}
+			s:STATE_NORTH_BENGAL.region_state:HND = { set_state_owner = c:PAK }
+		}
 		c:HND = {
 			activate_law = law_type:law_parliamentary_republic
 			create_character = {
@@ -272,7 +288,6 @@ bic_partition.1 = {
 				birth_date = 1869.10.2
 				culture = cu:gujarati
 				is_general = yes
-				religion = hindu
 				interest_group = ig_intelligentsia
 				ideology = ideology_moderate
                 ruler = yes
@@ -291,8 +306,8 @@ bic_partition.1 = {
 				birth_date = 1876.12.25
 				culture = cu:gujarati
 				is_general = yes
-				religion = sunni
-                ruler = yes
+				religion = rel:sunni
+                		ruler = yes
 				interest_group = ig_intelligentsia
 				ideology = ideology_moderate
 				traits = { 
@@ -519,10 +534,18 @@ bic_partition.5 = {
             name = bic_partition_var
             add = 2
         }
+		add_modifier = {
+			name = bic_partition_boundary_modifier
+			months = 60
+		}
 		default_option = no
     }
     option = {
 		name = bic_partition.5.b
+		add_modifier = {
+			name = bic_partition_boundary_modifier
+			months = 60
+		}		
 		default_option = yes
     }
 }
@@ -554,6 +577,10 @@ bic_partition.6 = {
             name = bic_partition_var
             add = 2
         }
+		add_modifier = {
+			name = bic_partition_ksh_modifier
+			months = 60
+		}
 		default_option = yes
     }
 }

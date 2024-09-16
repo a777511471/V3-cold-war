@@ -9,12 +9,12 @@ hnd_expansion.1 = {
 	flavor = hnd_expansion.1.f
 	
 	event_image = {
-		video = "asia_sepoy_mutiny"
+		video = "unspecific_ruler_speaking_to_people"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 	
 	duration = 3
 	
@@ -48,7 +48,7 @@ hnd_expansion.6 = {
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 	
 	duration = 3
 	
@@ -67,3 +67,4 @@ hnd_expansion.6 = {
 		default_option = yes
     }
 }
+

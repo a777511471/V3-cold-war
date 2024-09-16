@@ -9,10 +9,11 @@ GER_event.1 = { #成立西德
 	flavor = BRD.1.f
 
 	event_image = { #事件图像
-		video = "southamerica_aristocrats"
+		texture = "gfx/event_pictures/BRD.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -24,6 +25,10 @@ GER_event.1 = { #成立西德
 	option = {
 		name = BRD.1.a
 		default_option = yes
+		add_modifier = {
+			name = the_country_of_our_ancestors_modifier
+			years = 1
+		}
 		if ={
             limit ={
                 OR ={
@@ -45,7 +50,7 @@ GER_event.1 = { #成立西德
 		          annex = c:RHN
 				  annex = c:HAN
 				  make_independent = yes}
-	set_capital = STATE_BRANDENBURG
+	set_capital = STATE_NORTH_RHINE
 		create_character = {
 			ruler = yes
 			}
@@ -58,7 +63,52 @@ GER_event.1 = { #成立西德
 
 	option = {
 		name = BRD.1.b
-    }
+		add_modifier = {
+			name = the_country_of_our_ancestors_modifier
+			years = 1
+		}
+		if ={
+            limit ={
+                OR ={
+                    AND ={
+                        exists =C:RHN
+                        this=c:RHN
+                        c:RHN ?= {is player= yes}
+			}
+                    AND ={
+                        exists =C:HAN
+                        this=c:HAN
+                        c:HAN ?= {is player= yes}
+			}
+		}
+	}
+			play_as = c:BAV
+}
+	c:BAV = { 
+			change_tag = BRD 
+		        annex = c:RHN
+			annex = c:HAN
+			}
+	set_capital = STATE_NORTH_RHINE
+		create_character = {
+			ruler = yes
+			}
+		create_character = {
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+		}
+	c:USA = {
+		          create_diplomatic_pact = {
+				  country = c:BRD 
+				  type = protectorate
+			}
+		}
+	}
+
+	option = {
+		name = BRD.1.c
+	}
 }
 
 GER_event.2 = { #成立东德
@@ -70,10 +120,11 @@ GER_event.2 = { #成立东德
 	flavor = DDR.1.f
 
 	event_image = { #事件图像
-		video = "southamerica_aristocrats"
+		texture = "gfx/event_pictures/DDR.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
@@ -85,6 +136,10 @@ GER_event.2 = { #成立东德
 	option = {
 		name = DDR.1.a
 		default_option = yes
+		add_modifier = {
+			name = the_country_of_our_ancestors_modifier
+			years = 1
+		}
 		c:PRU = { change_tag = DDR }
 		c:RUS = { create_diplomatic_pact = { country = c:DDR type = protectorate } }
 		create_character = {
