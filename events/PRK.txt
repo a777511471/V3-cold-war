@@ -1,0 +1,100 @@
+namespace = PRK_event
+
+PRK_event.1 = { #成立朝鲜
+	type = country_event
+	orphan = yes
+	
+	title = PRK.1.t
+	desc = PRK.1.d
+	flavor = PRK.1.f
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 0
+	
+	trigger = { 
+	}
+
+	option = {
+		name = PRK.1.a
+		default_option = yes
+	c:PRK = { make_independent = yes 
+	change_relations = { country = c:RUS value = 100 }}
+		create_character = {
+			ruler = yes
+			religion = rel:atheist #无神论
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_communist #共产主义者
+			traits = {
+			}
+		}
+		create_character = {
+			is_general = yes
+			ig_leader = yes
+			religion = rel:atheist #无神论
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_communist #共产主义者
+			traits = {
+			}
+			on_created = {
+				set_variable = is_married
+			}
+		}
+	}
+
+	option = {
+		name = PRK.1.b
+    }
+}
+
+PRK_event.2 = { #成立韩国
+	type = country_event
+	orphan = yes
+	
+	title = KOR.1.t
+	desc = KOR.1.d
+	flavor = KOR.1.f
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 0
+	
+	trigger = { 
+	}
+
+	option = {
+		name = KOR.1.a
+		default_option = yes
+	c:KOR = { make_independent = yes 
+	change_relations = { country = c:USA value = 100 }}
+		create_character = {
+			ruler = yes
+			}
+		create_character = {
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			traits = {
+			}
+			on_created = {
+				set_variable = is_married
+			}
+		}
+	}
+
+	option = {
+		name = KOR.1.b
+	}
+}
