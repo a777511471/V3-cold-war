@@ -1,5 +1,5 @@
 # 冷战新铁幕mod仓库
-## 别放gfx和music里面的文件进来，github限制单个文件不超过100m
+
 ![image](https://github.com/user-attachments/assets/a83eda6e-2d32-4398-a419-4bc4bd4d40b3)
 - 点击下载压缩包
 - 搜索下载VSCode
