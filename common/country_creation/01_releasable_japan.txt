@@ -1,5 +1,0 @@
-﻿RKI = {
-	states = { STATE_RYUKYU_ISLANDS }
-	
-	ai_will_do = { always = no }
-}
