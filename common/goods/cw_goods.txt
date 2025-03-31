@@ -281,7 +281,7 @@ fine_art = {
 	convoy_cost_multiplier = 0.05
 	obsession_chance = 0.5
 }
-steamers = {
+steamers = { #船舶
 	texture = "gfx/interface/icons/goods_icons/clippers.dds"
 	cost = 40
 	category = industrial
@@ -355,7 +355,7 @@ computer = {
 	traded_quantity = 2
 	convoy_cost_multiplier = 1
 }
-ironclads = {
+ironclads = { #军用船只
 	texture = "gfx/interface/icons/goods_icons/steamers.dds"
 	cost = 160
 	category = military

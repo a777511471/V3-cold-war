@@ -1,0 +1,19 @@
+regency = { #摄政时期
+	group = je_group_internal_affairs
+
+	icon = "gfx/interface/icons/event_icons/paper.dds"
+    is_shown_when_inactive = { #显示
+        exists = c:BEL
+        THIS = c:BEL
+    }
+	complete = { #完成条件
+		game_date >= 1951.7.17
+	}
+    on_complete = {
+        trigger_event = { id = bel.1 } #比利时王位继承
+        remove_modifier = regency_modifier
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}

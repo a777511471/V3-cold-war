@@ -1,32 +1,379 @@
+
+
 CHARACTERS = {
      c:CHI = { #中华民国
-		create_character = {
-			template = chi_daoguang_template
+		create_character = { #蒋中正
+			set_character_immortal = yes #长期存在				
+			dna = dna_daoguang_emperor
 			first_name = "Zhongzheng"
 			last_name = "Jiangg" 
 			historical = yes
 			ruler = yes
+			ig_leader = yes			
 			is_general = yes
 			birth_date = 1887.10.31
 			religion = rel:protestant #新教
 			culture = cu:han
 			interest_group = ig_armed_forces 
-			ideology = ideology_authoritarian #威权主义者
+			ideology = ideology_country_socialists #国家社会主义者
 			traits = {
-				    	bigoted
-					imperious
-					traditionalist_commander
-					experienced_political_operator
+				master_of_micro_exercise #微操大师
+				master_of_business_warfare #干扰商战大师
+				enemy_of_the_people #人民公敌
+				experienced_political_operator #有经验的政治运作者
+				expensive_tastes #昂贵嗜好	
+				cruel #残暴					 					
 			}
 		}
+
+		create_character = { #马步芳
+			dna = dna_kropotkin
+			first_name = "Bufang"
+			last_name = "Ma"
+			birth_date = 1903.1.1
+			religion = rel:sunni #逊尼派
+			culture = cu:han
+			interest_group = ig_landowners
+			ideology = ideology_royalist #保皇主义者
+			historical = yes
+			ig_leader = yes					
+			is_general = yes
+			commander_rank = commander_rank_4
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师
+				enemy_of_the_people #人民公敌
+				expensive_tastes #昂贵嗜好					
+				strong #健硕												
+				cruel #残暴					 	
+			}
+		}
+
+		create_character = { #马继援
+			first_name = "Jiyuan"
+			last_name = "Ma"
+			birth_date = 1921.1.18
+			religion = rel:sunni #逊尼派
+			culture = cu:han
+			interest_group = ig_landowners
+			ideology = ideology_royalist #保皇主义者
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_3
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师
+				enemy_of_the_people #人民公敌
+				expensive_tastes #昂贵嗜好					
+				strong #健硕												
+				cruel #残暴					 	
+			}
+		}
+
+		create_character = { #马步青
+			dna = dna_pershing
+			first_name = "Buqing"
+			last_name = "Ma"
+			birth_date = 1898.1.1
+			religion = rel:sunni #逊尼派
+			culture = cu:han
+			interest_group = ig_landowners
+			ideology = ideology_royalist #保皇主义者
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_3
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师			
+				enemy_of_the_people #人民公敌	
+				strong #健硕							
+				cruel #残暴					
+				persistent #执着	 	
+			}
+		}
+
+		create_character = { #马鸿宾
+    		dna = dna_truman
+			first_name = "HM0572"
+			last_name = "Ma"
+			birth_date = 1884.9.14
+			religion = rel:sunni #逊尼派
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_3
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师
+				strong #健硕								
+				cruel #残暴					
+				pious #虔诚	 	
+			}
+		}
+
+		create_character = { #马鸿逵
+    		dna = dna_truman
+			first_name = "HM0577"
+			last_name = "Ma"
+			birth_date = 1892.1.1
+			religion = rel:sunni #逊尼派
+			culture = cu:han
+			interest_group = ig_landowners
+			ideology = ideology_royalist #保皇主义者
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_4
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师			
+				enemy_of_the_people #人民公敌
+				expensive_tastes #昂贵嗜好						
+				strong #健硕							
+				cruel #残暴						 	
+			}
+		}
+
+		create_character = { #孙立人
+			dna = ecchi_dna_wellington_koo				
+			first_name = "Liren"
+			last_name = "Sun"
+			birth_date = 1900.12.8
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_3
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师
+				strong #健硕								
+			}
+		}
+
+		create_character = { #卫立煌
+			dna = ecchi_dna_hu_shih						
+			first_name = "Lihuang"
+			last_name = "HX144"
+			birth_date = 1897.2.16
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_4
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师					
+			}
+		}
+
+		create_character = { #王耀武
+    		dna = ecchi_dna_chiang_kai_shek							
+			first_name = "HM1799"
+			last_name = "Wang"
+			birth_date = 1904.1.1
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_3
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师					
+			}
+		}
+
+		create_character = { #孙殿英
+    		dna = ecchi_dna_chiang_kai_shek		
+			first_name = "Dianying"
+			last_name = "Sun"
+			birth_date = 1889.1.1
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_3
+			traits = {			
+				enemy_of_the_people #人民公敌
+				expensive_tastes #昂贵嗜好																						
+				cruel #残暴								
+			}
+		}
+
+		create_character = { #夏威，民国陆军上将
+			dna = ecchi_dna_wellington_koo		
+			first_name = "Wei1"
+			last_name = "Hsia"
+			birth_date = 1893.3.2
+			religion = rel:atheist #无神论
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			historical = yes				
+			is_general = yes
+			commander_rank = commander_rank_4
+			traits = {			
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师
+				enemy_of_the_people #人民公敌
+				expensive_tastes #昂贵嗜好											
+				strong #健硕												
+				cruel #残暴					 	
+			}
+		}
+
+		create_character = {
+			first_name = "Zongren"
+			last_name = "Li"
+			birth_date = 1891.8.13
+			religion = rel:mahayana #大乘佛教
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			historical = yes				
+			is_general = yes
+			hp = region_south_china
+			commander_rank = commander_rank_5
+			traits = {
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师
+				master_bureaucrat #高明官僚
+				expert_political_operator #政治运作专家				
+				reserved #内敛
+				persistent #执着	 	
+			}
+		}
+
+		create_character = { #朱熹后人朱学范			
+			first_name = "Xuefan"
+			last_name = "Zhu" 
+			historical = yes
+			ig_leader = yes
+			birth_date = 1905.6.12
+			religion = rel:confucian #儒家
+			culture = cu:han
+			interest_group = ig_trade_unions
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+				expensive_tastes #昂贵嗜好				
+			}
+		} 
+
+		create_character = {
+    		dna = dna_truman				
+			first_name = "Shumin"
+			last_name = "Liang" 
+			historical = yes
+			ig_leader = yes
+			birth_date = 1893.10.18
+			religion = rel:confucian #儒家
+			culture = cu:mongol
+			interest_group = ig_rural_folk
+			ideology = ideology_reformer #改良主义者
+			traits = {
+			}
+		} 
+
+		create_character = { #孔子后人、著名新教徒孔祥熙
+			first_name = "Xiangxi"
+			last_name = "Kong" 
+			historical = yes
+			ig_leader = yes
+			birth_date = 1880.9.11
+			religion = rel:protestant #新教
+			culture = cu:han
+			interest_group = ig_industrialists
+			ideology = ideology_authoritarian #威权主义者
+			traits = {
+				expensive_tastes #昂贵嗜好
+				hedonist #享乐主义者
+				grifter #骗子
+				imperious #盛气凌人
+			}
+		} 
+
+		create_character = {
+			#杜聿明
+			dna = ecchi_dna_du_yuesheng					
+			first_name = "Yuming"
+			last_name = "Du" 
+			historical = yes
+			is_general = yes
+			birth_date = 1904.11.28
+			religion = rel:confucian #儒家
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			commander_rank = commander_rank_3
+			traits = {		
+			}
+		}
+
+		create_character = {
+			#熊式辉	
+			dna = ecchi_dna_wellington_koo			
+			first_name = "Shihui"
+			last_name = "Xiong" 
+			historical = yes
+			is_general = yes
+			birth_date = 1893.1.1
+			religion = rel:confucian #儒家
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			commander_rank = commander_rank_4
+			traits = {			
+			}
+		}
+
+		create_character = {
+			#廖耀湘	
+			dna = ecchi_dna_hu_shih				
+			first_name = "Yaoxiang"
+			last_name = "Liao" 
+			historical = yes
+			is_general = yes
+			birth_date = 1906.5.16
+			religion = rel:confucian #儒家
+			culture = cu:han
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			commander_rank = commander_rank_4
+			traits = {
+				expensive_tastes #昂贵嗜好				
+			}
+		}
+
+		create_character = {
+			#卢汉
+			dna = ecchi_dna_hu_shih					
+			first_name = "HX085"
+			last_name = "Han" 
+			historical = yes
+			is_general = yes
+			birth_date = 1895.2.6
+			religion = rel:confucian #儒家
+			culture = cu:yi
+			interest_group = ig_armed_forces 
+			ideology = ideology_three_peoples_principles #三民主义者
+			commander_rank = commander_rank_4
+			traits = {
+			}
+		}
+
 		create_character = {
 			#何应钦
+			dna = ecchi_dna_hu_shih				
 			first_name = "Yingqin"
 			last_name = "He1" 
 			historical = yes
 			is_general = yes
-			ig_leader = yes
 			birth_date = 1890.4.2
+			religion = rel:protestant #新教
 			culture = cu:han
 			interest_group = ig_armed_forces 
 			ideology = ideology_three_peoples_principles #三民主义者
@@ -40,85 +387,78 @@ CHARACTERS = {
 			}
 		}
 
-		create_character = {
+		create_character = { #宋庆龄
 			first_name = "Qingling"
 			last_name = "Song" 
 			historical = yes
 			female = yes #女性
 			ig_leader = yes
 			birth_date = 1893.1.27
-			religion = rel:protestant #新教
+			religion = rel:atheist #无神论
 			interest_group = ig_petty_bourgeoisie #小市民
-			ideology = ideology_liberal_leader #民主主义者
+			ideology = ideology_communist #共产主义者
 			traits = {
-					basic_political_operator #政治运作者
+				strong #健硕
 			} 
 		}
 
-		create_character = {
-			first_name = "Meiling"
-			last_name = "Song" 
+		create_character = { #于右任
+			dna = dna_kropotkin		
+			first_name = "Youren"
+			last_name = "Yu" 
 			historical = yes
-			female = yes #女性
-			ig_leader = yes
-			birth_date = 1897.3.1
-			religion = rel:protestant #新教
-			culture = cu:min
-			interest_group = ig_industrialists
-			ideology = ideology_authoritarian #威权主义者
-			traits = {
-					pious #虔诚
-					basic_political_operator #政治运作者
-					grifter #骗子
-			} 
-		}
-		
-		create_character = {
-			first_name = "Xiangxi"
-			last_name = "Kong" 
-			historical = yes
-			ig_leader = yes
-			birth_date = 1880.9.11
-			religion = rel:protestant #新教
-			culture = cu:han
-			interest_group = ig_landowners
-			ideology = ideology_market_liberal #市场自由主义者
-			traits = {
-				    hedonist
-					basic_political_operator
-					grifter
-					cruel
-			}
-		} 
-
-		create_character = {
-    			dna = dna_taizu
-			first_name = "Lifu"
-			last_name = "Chen" 
-			historical = yes
-			ig_leader = yes
-			birth_date = 1900.8.21
-			religion = rel:mahayana #大乘佛教
-			culture = cu:han
-			interest_group = ig_intelligentsia
-			ideology = ideology_political_trainer #训政主义者
-			traits = {
-			        basic_political_operator
-		 	        meticulous
-					innovative
-					romantic
-			}
-		}
-
-		create_character = {
-			first_name = "Decheng"
-			last_name = "Kong"
- 			historical = yes
-			ig_leader = yes
-			birth_date = 1920.2.23
+    		is_agitator = yes #鼓动者
+			birth_date = 1879.4.11
 			culture = cu:han
 			interest_group = ig_devout
-			ideology = ideology_moderate #温和主义者
+			ideology = ideology_three_peoples_principles #三民主义者
+			traits = {
+				pious #虔诚
+			} 
+		}
+
+		create_character = { #戴季陶		
+			dna = ecchi_dna_du_yuesheng	
+			first_name = "Jitao"
+			last_name = "Day" 
+			historical = yes
+    		is_agitator = yes #鼓动者
+			birth_date = 1891.1.6
+			culture = cu:han
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_reformer #改良主义者
+			traits = {
+			} 
+		}
+
+		create_character = { #闻一多	
+			dna = ecchi_dna_hu_shih				
+			first_name = "Yiduo"
+			last_name = "Wen1" 
+			historical = yes
+			ig_leader = yes
+			birth_date = 1899.11.24
+			culture = cu:han
+			religion = rel:atheist #无神论			
+			interest_group = ig_intelligentsia
+			ideology = ideology_liberal_leader #民主主义者
+			traits = {
+				literary #文学家
+				demagogue #煽动者			
+				romantic #浪漫
+			}
+		}
+
+		create_character = { #陈布雷
+			dna = ecchi_dna_wellington_koo	
+			first_name = "Bulei"
+			last_name = "Chen"
+ 			historical = yes
+			ig_leader = yes
+			birth_date = 1890.11.15
+			culture = cu:han
+			interest_group = ig_devout
+			ideology = ideology_three_peoples_principles #三民主义者
 			traits = {
 				    innovative
 					pious
@@ -126,25 +466,48 @@ CHARACTERS = {
 		}
 		
 		create_character = {
-			first_name = "Zongren"
-			last_name = "Li"
-			birth_date = 1891.8.13
+			first_name = "Chongxi"
+			last_name = "Bai"
+			birth_date = 1893.3.18
+			religion = rel:sunni #逊尼派
+			culture = cu:han
+			interest_group = ig_armed_forces
+			ideology = ideology_three_peoples_principles #三民主义者
+			historical = yes
+			is_general = yes
+			hp = region_north_china
+			commander_rank = commander_rank_5
+			traits = {
+				erudite #博学
+		 	        expert_offensive_planner #熟练的进攻策划师		
+			        popular_commander #受欢迎的指挥官
+			        surveyor #测量员
+			}
+		}
+
+		create_character = { #薛岳
+			dna = ecchi_dna_du_yuesheng		
+			first_name = "HX173"
+			last_name = "Xue"
+			birth_date = 1896.12.27
+			religion = rel:confucian #儒家
 			culture = cu:han
 			interest_group = ig_armed_forces
 			ideology = ideology_three_peoples_principles #三民主义者
 			historical = yes
 			is_general = yes
 			hp = region_south_china
-			commander_rank = commander_rank_5
+			commander_rank = commander_rank_4
 			traits = {
-		 	        experienced_political_operator
-					meticulous
-					brave
-					popular_commander
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师
+				persistent #执着	
+ 				direct #直率
 			}
 		}
 		
-		create_character = {
+		create_character = { #傅作义
+			dna = ecchi_dna_wellington_koo				
 			first_name = "Zuoyi"
 			last_name = "Fu1"
 			birth_date = 1895.6.27
@@ -163,7 +526,8 @@ CHARACTERS = {
 			}
 		}
 
-		create_character = {
+		create_character = { #胡宗南
+			dna = ecchi_dna_wellington_koo			
 			first_name = "Zongnan"
 			last_name = "Hu"
 			birth_date = 1896.5.12
@@ -175,13 +539,15 @@ CHARACTERS = {
 			hp = region_north_china
 			commander_rank = commander_rank_5
 			traits = {
-		 	        traditionalist_commander
+		 	        	traditionalist_commander
 					basic_political_operator
-					reckless
+					persistent #执着
+					brave #勇敢
 			}
 		}
 		
-		create_character = {
+		create_character = { #阎锡山
+			dna = ecchi_dna_yan_xishan		
 			first_name = "Xishan"
 			last_name = "Yan1"
 			birth_date = 1883.10.8
@@ -197,31 +563,13 @@ CHARACTERS = {
 		 	        traditionalist_commander
 					basic_political_operator
 					cruel
-					ambitious
 					persistent
-			}
-		}
-		
-		create_character = {
-			first_name = "Chongxi"
-			last_name = "Bai"
-			birth_date = 1893.3.18
-			religion = rel:sunni #逊尼派
-			culture = cu:han
-			interest_group = ig_armed_forces
-			ideology = ideology_three_peoples_principles #三民主义者
-			historical = yes
-			is_general = yes
-			hp = region_north_china
-			commander_rank = commander_rank_5
-			traits = {
-		 	        traditionalist_commander
-					basic_political_operator
-					direct
+					pious #虔诚
 			}
 		}
 		
 		create_character = { #陈诚
+			dna = dna_pershing
 			first_name = "Cheng1"
 			last_name = "Chen"
 			birth_date = 1898.1.4
@@ -241,6 +589,7 @@ CHARACTERS = {
 		}
 
 		create_character = { #吴化文
+			dna = ecchi_dna_wellington_koo		
 			first_name = "Huawen"
 			last_name = "Wu"
 			birth_date = 1904.1.1
@@ -260,10 +609,11 @@ CHARACTERS = {
 		}
 
 		create_character = { #萨镇冰
+			dna = ecchi_dna_du_yuesheng		
 			first_name = "Zhenbing"
 			last_name = "Sa"
 			birth_date = 1859.3.30
-			religion = rel:mahayana #大乘佛教
+			religion = rel:confucian #儒家
 			culture = cu:mongol
 			interest_group = ig_armed_forces #军队
 			ideology = ideology_moderate #温和主义者
@@ -275,6 +625,7 @@ CHARACTERS = {
 				dockyard_master
 				innovative #创新精神
 				brave #勇敢
+				honorable #体面
 			}
 		}
 	}

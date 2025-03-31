@@ -39,7 +39,6 @@ je_bht_expansion_main = {
         owns_entire_state_region = STATE_PASHTUNISTAN
         owns_entire_state_region = STATE_SINDH
         owns_entire_state_region = STATE_HIMALAYAS 
-        c:BHT ?= this
     }
 
     on_complete = {

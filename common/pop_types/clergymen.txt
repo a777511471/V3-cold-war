@@ -1,7 +1,6 @@
-﻿clergymen = { #哲人
+﻿clergymen = {
 	texture = "gfx/interface/icons/pops_icons/clergymen.dds"
 	color = hsv{ 0.13 0.52 0.91 }
-	strata = middle
 	start_quality_of_life = 10
 	wage_weight = 3
 	paid_private_wage = yes
@@ -22,9 +21,15 @@
 			
 			if = {
 				limit = { 
-					standard_of_living < 5
+					is_in_mild_starvation = yes
 				}
-				value = 1
+				value = 0.5
+			}
+			else_if = {
+				limit = {
+					is_in_severe_starvation = yes
+				}
+				value = 1.5
 			}		
 		}	
 	}
@@ -62,11 +67,37 @@
 			}
 			if = {
 				limit = {
-					religion_accepted = no
+					pop_employment_building = building_religious_places
+					is_pop_type = clerks
 				}
 				multiply = {
-					value = 0.05
+					value = 5
+					desc = "QUALIFICATIONS_FAVORED_TYPE_BUILDING"
+				}
+			}
+			if = {
+				limit = {
+					state = {
+						state_religious_acceptance = {
+							target = ROOT.religion
+							value < religious_acceptance_medium
+						}
+					}
+				}
+				multiply = {
+					value = 0.2
 					desc = "POTENTIALS_RELIGIOUS_DISCRIMINATION"
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						has_law = law_type:law_total_separation
+					}
+				}
+				multiply = {
+					value = 0.5
+					desc = "QUALIFICATIONS_CLERGYMEN_UNDER_TOTAL_SEPARATION"
 				}
 			}
 			if = {
@@ -82,13 +113,17 @@
 				limit = {
 					religion = rel:atheist
 				}
-				multiply = {
-					value = 0.1
+				# multiply = {
+				# 	value = 0.1
+				# 	desc = "ATHEIST_CLERGYMEN"
+				# }
+				value = {
+					value = -3333
 					desc = "ATHEIST_CLERGYMEN"
 				}
 			}
 		}
-		else = {		
+		else = {
 			value = {
 				desc = "QUALIFICATIONS_INSUFFICIENT_LITERACY_DECAY"
 				value = -1

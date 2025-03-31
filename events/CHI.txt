@@ -1,0 +1,872 @@
+namespace = chi
+
+chi.1 = { #农民踊跃参军
+	type = country_event
+	orphan = yes
+	
+	title = chi.1.t
+	desc = chi.1.d
+	flavor = chi.1.f
+
+	event_image = {
+		video = "asia_farmers_market"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = chi.1.a
+		default_option = yes
+		add_modifier = {
+			name = nongminyongyuecanjun_modifier #农民踊跃参军
+			years = 4
+			is_decaying = yes			
+		}
+	}
+}
+
+chi.2 = { #还乡团反攻倒算
+	type = country_event
+	orphan = yes
+	
+	title = chi.2.t
+	desc = chi.2.d
+	flavor = chi.2.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/还乡团1.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+
+	duration = 3
+	
+	trigger = { 
+		exists = c:PRC this = c:PRC								
+	}
+
+	option = {
+		name = chi.2.a
+		default_option = yes
+		add_modifier = {
+			name = huanxiangtuan_modifier #还乡团反攻倒算		
+		}
+	}
+}
+
+chi.3 = { #苏联军援
+	type = country_event
+	orphan = yes
+	
+	title = chi.3.t
+	desc = chi.3.d
+	flavor = chi.3.f
+
+	event_image = {
+		video = "asia_farmers_market"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+	
+	trigger = { 
+		exists = c:PRC this = c:PRC								
+	}
+
+	option = {
+		name = chi.3.a
+		default_option = yes
+		add_modifier = {
+			name = sulianjunyuan_modifier #苏联军援	
+			years = 10
+			is_decaying = yes						
+		}
+	}
+}
+
+chi.4 = { #抓壮丁
+	type = country_event
+	orphan = yes
+	
+	title = chi.4.t
+	desc = chi.4.d
+	flavor = chi.4.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/还乡团2.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = chi.4.a
+		default_option = yes
+		add_modifier = {
+			name = zhuazhuangding_modifier #抓壮丁
+			years = 4
+			is_decaying = yes			
+		}
+	}
+}
+
+chi.5 = { #美国军援
+	type = country_event
+	orphan = yes
+	
+	title = chi.5.t
+	desc = chi.5.d
+	flavor = chi.5.f
+
+	event_image = {
+		video = "asia_farmers_market"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	duration = 3
+	
+	trigger = { 
+		exists = c:PRC this = c:CHI						
+	}
+
+	option = {
+		name = chi.5.a
+		default_option = yes
+		add_modifier = {
+			name = meiguojunyuan_modifier #美国军援		
+			years = 4
+			is_decaying = yes					
+		}
+	}
+}
+
+chi.6 = { #收复旅顺
+	type = country_event
+	orphan = yes
+	
+	title = chi.6.t
+	desc = chi.6.d
+	flavor = chi.6.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/五星红旗.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+	
+	trigger = { 
+		exists = c:PRC this = c:PRC					
+	}
+
+	option = {
+		name = chi.6.a
+		default_option = yes
+			create_country = {
+				tag = MCH
+				origin = c:RUS
+				state = s:STATE_SHENGJING.region_state:RUS
+			}
+		annex = c:MCH			
+	}
+}
+
+chi.7 = { #收复香港
+	type = country_event
+	orphan = yes
+	
+	title = chi.7.t
+	desc = chi.7.d
+	flavor = chi.7.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/五星红旗.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/香港回归.dds"
+
+	duration = 3
+	
+	trigger = { 
+		OR = {
+			c:PRC ?= ROOT
+			c:CHI ?= ROOT
+		}
+		OR = {		
+		    exists = c:PRC		
+		    exists = c:CHI	
+		}	
+		    exists = c:GBR	     			
+	}
+
+	option = {
+		name = chi.7.a
+		default_option = yes
+			create_country = {
+				tag = YUE
+				origin = c:GBR	
+				state = s:STATE_SHAOZHOU.region_state:GBR	
+			}
+		annex = c:YUE			
+	}
+}
+
+chi.8 = { #收复澳门
+	type = country_event
+	orphan = yes
+	
+	title = chi.8.t
+	desc = chi.8.d
+	flavor = chi.8.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/五星红旗.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+	
+	trigger = { 
+		OR = {
+			c:PRC ?= ROOT
+			c:CHI ?= ROOT
+		}
+		OR = {		
+		    exists = c:PRC		
+		    exists = c:CHI	
+		}	
+		    exists = c:POR	    			
+	}
+
+	option = {
+		name = chi.8.a
+		default_option = yes
+			create_country = {
+				tag = YUE
+				origin = c:POR	
+				state = s:STATE_GUANGDONG.region_state:POR	
+			}
+		annex = c:YUE			
+	}
+}
+
+chi.9 = { #收复台湾
+	type = country_event
+	orphan = yes
+	
+	title = chi.9.t
+	desc = chi.9.d
+	flavor = chi.9.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/五星红旗.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+	icon = "gfx/interface/icons/event_icons/收复台湾.dds"
+
+	duration = 3
+	
+	trigger = { 
+		OR = {
+			c:PRC ?= ROOT
+			c:CHI ?= ROOT
+		}
+		OR = {		
+		    exists = c:PRC		
+		    exists = c:CHI	
+		}	    			
+	}
+
+	option = {
+		name = chi.9.a
+		default_option = yes
+		annex = c:CHI			
+	}
+}
+
+chi.10 = { #百废待兴，确立中央！
+	type = country_event
+	orphan = yes
+	
+	title = chi.10.t
+	desc = chi.10.e
+	flavor = chi.10.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/百废待兴.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/中国政协徽.dds"
+
+	duration = 3
+	
+	trigger = { 
+			c:PRC ?= ROOT
+		    exists = c:PRC		    			
+	}
+
+	option = {
+		name = chi.10.a #定都北平
+		default_option = yes
+		set_capital = STATE_BEIJING
+		add_modifier = {
+			name = dingdubeiping #定都北平
+			years = 5
+			is_decaying = yes			
+		}		
+	}
+	option = {
+		name = chi.10.b #定都南京
+		set_capital = STATE_NANJING
+		add_modifier = {
+			name = dingdunanjing #定都南京
+			years = 5
+			is_decaying = yes			
+		}		
+	}
+	option = {
+		name = chi.10.c #定都武汉
+		set_capital = STATE_EASTERN_HUBEI
+		add_modifier = {
+			name = dingduwuhan #定都武汉
+			years = 5
+			is_decaying = yes			
+		}		
+	}		
+}
+
+chi.11 = { #统一中国
+	type = country_event
+	placement = root
+	duration = 3
+
+	title = chi.11.t
+	desc = chi.11.d
+	flavor = chi.11.f
+
+	event_image = {
+		video = "asia_farmers_market"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	trigger = {
+		# Triggered by JE
+	}
+
+	immediate = {
+		
+	}
+
+	option = {
+		default_option = yes
+		name = chi.11.a
+		add_loyalists = { #10%的人成为效忠派
+			value = large_radicals
+		}
+		add_modifier = {
+			name = modifier_chinese_warlord_era
+		}
+	}
+
+	option = {
+		name = chi.11.b
+		add_loyalists = { #10%的人成为效忠派
+			value = large_radicals
+		}
+		add_modifier = {
+			name = modifier_end_of_warlord_period
+			months = normal_modifier_time
+		}
+	}
+}
+
+chi.12 = { #党国权力交接
+	type = country_event
+	placement = ROOT
+
+	title = chi.12.t
+	desc = chi.12.d
+	flavor = chi.12.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/paper.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = chi.12.a #
+		default_option = yes
+		ruler = {
+			kill_character = yes
+		}		
+		create_character = {
+			#蒋经国
+			dna = ecchi_dna_zhaohe		
+			historical = yes
+			first_name = "Jingguo"
+			last_name = "Jiangg" 
+			religion = rel:protestant #新教 
+			ruler = yes		
+			ig_leader = yes #利益集团领袖
+			birth_date = 1910.4.27			
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_three_peoples_principles #三民主义者
+			traits = {
+				basic_political_operator #政治运作者
+				economic_expert #经济学专家								
+				literary #文学家
+				honorable #体面
+			}
+		}
+
+		create_character = {
+			#李登辉
+			historical = yes
+			heir = yes			
+			ig_leader = yes #利益集团领袖				
+			first_name = "Denghui"
+			last_name = "Lee" 
+			culture = cu:hakka			
+			religion = rel:protestant #新教 
+			birth_date = 1923.1.15			
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_market_liberal #市场自由主义者		
+			traits = {
+				demagogue #煽动者				
+				tactful #圆滑
+				grifter #骗子
+				bandit #强盗
+				cruel #残暴
+				pious #虔诚	 					
+			}
+		}		
+	}
+}
+
+chi.13 = { #国民党败退台湾
+	type = country_event
+	placement = ROOT
+
+	title = chi.13.t
+	desc = chi.13.d
+	flavor = chi.13.f
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = chi.13.a #
+		default_option = yes
+	}
+}
+
+chi.14 = { #人民解放军占领南京
+	type = country_event
+	placement = ROOT
+
+	title = chi.14.t
+	desc = chi.14.d
+	flavor = chi.14.f
+
+	event_image = {
+		video = "asia_farmers_market"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = chi.14.a #
+		default_option = yes
+		create_character = { #郭沫若
+			set_character_immortal = yes #长期存在			
+			dna = ecchi_dna_zhaohe				
+			first_name = "Moruo"
+			last_name = "Guo1" 
+			ig_leader = yes
+			historical = yes
+			birth_date = 1892.11.16
+			culture = cu:han
+			religion = rel:atheist #无神论
+			interest_group = ig_intelligentsia #文人
+			ideology = ideology_mao #毛泽东主义者
+			traits = {
+				basic_political_operator #政治运作者				
+				demagogue #煽动者					
+				literary #文学家
+				romantic #浪漫	
+			}
+		} 		
+	}
+}
+
+chi.15 = { #反右派斗争，农工学军集团领袖都是康米主义者
+	type = country_event
+	placement = ROOT
+
+	title = chi.15.t
+	desc = chi.15.d
+	flavor = chi.15.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/五星红旗.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = chi.15.a #
+		default_option = yes
+		create_character = { #周恩来总理
+			dna = ecchi_dna_zhou_enlai
+			first_name = "Enlai"
+			last_name = "Zhou" 
+			ig_leader = yes
+			historical = yes
+			birth_date = 1898.3.5
+			culture = cu:han
+			religion = rel:atheist #无神论
+			interest_group = ig_rural_folk
+			ideology = ideology_communist #共产主义者
+			traits = {
+				strong #健硕
+				master_bureaucrat #高明官僚
+				basic_diplomat #外交家
+				tactful
+				charismatic
+			}
+		} 	
+		create_character = { #柯庆施
+			dna = ecchi_dna_wellington_koo	
+			first_name = "Qingshi"
+			last_name = "HX069"
+			ig_leader = yes
+			historical = yes
+			birth_date = 1902.1.1
+			culture = cu:han
+			religion = rel:atheist #无神论
+			interest_group = ig_trade_unions
+			ideology = ideology_communist #共产主义者
+			traits = {
+				master_bureaucrat #高明官僚
+				tactful
+				charismatic
+			}
+		}
+		create_character = { #郭沫若
+			dna = ecchi_dna_zhaohe				
+			first_name = "Moruo"
+			last_name = "Guo1" 
+			ig_leader = yes
+			historical = yes
+			birth_date = 1892.11.16
+			culture = cu:han
+			religion = rel:atheist #无神论
+			interest_group = ig_intelligentsia #文人
+			ideology = ideology_communist #共产主义者
+			traits = {
+				basic_political_operator #政治运作者				
+				demagogue #煽动者					
+				literary #文学家
+				romantic #浪漫	
+			}
+		} 
+		create_character = { #朱德
+			dna = ecchi_dna_zhu_de
+			first_name = "De"
+			last_name = "Zhu"
+			ig_leader = yes
+			historical = yes
+			birth_date = 1886.12.1
+			culture = cu:han
+			religion = rel:atheist #无神论
+			interest_group = ig_armed_forces
+			ideology = ideology_communist #共产主义者
+			is_general = yes
+			commander_rank = commander_rank_5
+			traits = {
+				strong #健硕
+		 	        expert_offensive_planner
+			        experienced_defensive_strategist		
+			        popular_commander
+			        defense_in_depth_specialist
+			        surveyor
+			}
+		}		
+	}
+}
+
+chi.16 = { #“长波电台”风波
+	type = country_event
+	placement = ROOT
+
+	title = chi.16.t
+	desc = chi.16.d
+	flavor = chi.16.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/中苏交恶.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	duration = 3
+
+	trigger = {
+		THIS = c:PRC	
+		exists = c:RUS			
+		is_subject = no #不是附庸		
+	}
+
+	option = {
+		name = chi.16.a #
+		add_modifier = {
+			name = the_issue_of_coordination_of_the_common_fleet #共同舰队协调问题
+			years = 5
+			is_decaying = yes			
+		}		
+	}
+	option = {
+		name = chi.16.b #
+		default_option = yes		
+        change_relations = {
+            country = c:RUS
+            value = -5
+        }			
+		add_journal_entry = { type = je_china_and_the_soviet_union_were_at_loggerheads } #中苏交恶			
+	}	
+}
+
+chi.17 = { #苏联要求提前清偿债务
+	type = country_event
+	placement = ROOT
+
+	title = chi.17.t
+	desc = chi.17.d
+	flavor = chi.17.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/中苏交恶.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	duration = 3
+
+	trigger = {
+		THIS = c:PRC	
+		exists = c:RUS			
+		is_subject = no #不是附庸			
+	}
+
+	option = {
+		name = chi.17.a #
+		default_option = yes
+		add_modifier = {
+			name = early_repayment_of_soviet_loans #提前偿还苏联贷款
+			years = 5
+			is_decaying = yes			
+		}		
+	}
+	option = {
+		name = chi.17.b #
+        change_relations = {
+            country = c:RUS
+            value = -10
+        }					
+	}	
+}
+
+chi.18 = { #苏联撤资原子弹
+	type = country_event
+	placement = ROOT
+
+	title = chi.18.t
+	desc = chi.18.d
+	flavor = chi.18.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/中苏交恶.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	duration = 3
+
+	trigger = {
+		THIS = c:PRC	
+		exists = c:RUS			
+		is_subject = no #不是附庸			
+	}
+
+	option = {
+		name = chi.18.a #
+		default_option = yes
+		add_modifier = {
+			name = technical_assistance_for_the_atomic_bomb_was_terminated #原子弹技术援助终止
+			years = 5
+			is_decaying = yes			
+		}		
+        change_relations = {
+            country = c:RUS
+            value = -10
+        }					
+	}	
+}
+
+chi.19 = { #苏联撤走军事顾问
+	type = country_event
+	placement = ROOT
+
+	title = chi.19.t
+	desc = chi.19.d
+	flavor = chi.19.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/中苏交恶.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	duration = 3
+
+	trigger = {
+		THIS = c:PRC	
+		exists = c:RUS			
+		is_subject = no #不是附庸			
+	}
+
+	option = {
+		name = chi.19.a #
+		default_option = yes
+		add_modifier = {
+			name = military_assistance_was_terminated #军事援助终止
+			years = 5
+			is_decaying = yes			
+		}							
+	}	
+}
+
+chi.20 = { #苏联撤资在华企业
+	type = country_event
+	placement = ROOT
+
+	title = chi.20.t
+	desc = chi.20.d
+	flavor = chi.20.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/中苏交恶.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	duration = 3
+
+	trigger = {
+		THIS = c:PRC	
+		exists = c:RUS			
+		is_subject = no #不是附庸			
+	}
+
+	option = {
+		name = chi.20.a #
+		default_option = yes
+		add_modifier = {
+			name = financial_aid_termination #经济援助终止
+			years = 5
+			is_decaying = yes			
+		}							
+	}	
+}

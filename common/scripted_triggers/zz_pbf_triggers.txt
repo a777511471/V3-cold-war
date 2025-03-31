@@ -1,0 +1,76 @@
+﻿
+is_brazil_northeast_state = {
+	OR = {
+		state_region = s:STATE_PERNAMBUCO
+		state_region = s:STATE_PARAIBA
+		state_region = s:STATE_RIO_GRANDE_DO_NORTE
+		state_region = s:STATE_CEARA
+		state_region = s:STATE_PIAUI #PBF: Fix typo
+		state_region = s:STATE_MARANHAO
+		state_region = s:STATE_BAHIA
+	}
+}
+
+ai_has_enact_weight_modifier_journal_entries = {
+	OR = {
+		AND = {
+			has_journal_entry = je_government_petition
+			has_variable = desired_law_var
+			scope:law = var:desired_law_var
+		}
+		AND = {
+			OR = {
+				has_journal_entry = je_law_imposition
+				has_journal_entry = je_british_dictate_law
+			}
+			scope:law = imposed_law
+		}
+		AND = {
+			has_journal_entry = je_gyojo_shinwon
+			OR = { #PBF: Check for existence
+				scope:donghak_desired_law_1 ?= scope:law
+				scope:donghak_desired_law_2 ?= scope:law
+				scope:donghak_desired_law_3 ?= scope:law
+			}
+		}
+	}
+}
+
+chinese_manchu_queue_hairstyle_character_trigger = { # hairsyle for Manchu characters not living living under discriminatory Han rule, and Han characters living under discriminatory Manchu rule
+	exists = scope:character
+	scope:character = {
+		exists = home_country
+		OR = {
+			AND = {
+				home_country = {
+					ruler ?= { #PBF
+						has_culture = cu:manchu
+					}
+					NOT = {
+						has_law = law_type:law_multicultural
+					}
+				}
+				culture = {
+					has_discrimination_trait = han_chinese
+				}
+			}
+			AND = {
+				NOT = {
+					home_country = {
+						ruler ?= { #PBF
+							culture = {
+								has_discrimination_trait = han_chinese
+							}
+						}
+						cu:manchu = {
+							NOT = {
+								culture_is_discriminated_in = scope:character.home_country
+							}
+						}
+					}
+				}
+				culture = cu:manchu
+			}
+		}
+	}
+}

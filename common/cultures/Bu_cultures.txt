@@ -1,9 +1,9 @@
 han={
 	color= rgb{ 190 80 48 }
-	religion = confucian
+	religion = atheist
 	traits = { sinosphere han_chinese east_asian_heritage }
 	obsessions = {
-		tea
+		small_arms #轻武器
 	}
 	male_common_first_names={
 		HM0001

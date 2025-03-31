@@ -1,0 +1,17 @@
+﻿CHARACTERS = {
+	c:LIB = {
+		create_character = {
+			#利比里亚总统威廉·杜伯曼
+			historical = yes			
+			first_name = "William"
+			last_name = "Tubman1" #杜伯曼家族
+			ruler = yes
+			ig_leader = yes
+			birth_date = 1895.11.29
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+			}
+		}	
+	}
+}

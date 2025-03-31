@@ -4,6 +4,8 @@
 	
 	modifier = {
 		state_migration_pull_mult = 0.1
+		state_migration_quota_mult = 0.5 #移民限额
+		country_migration_restrictiveness_add = -35 #移民限制
 		country_authority_add = -50
 	}
 

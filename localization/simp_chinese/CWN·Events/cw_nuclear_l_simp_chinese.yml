@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ cw_nuclear_event.1.t: "扔核弹？"
+ cw_nuclear_event.1.f: "核武器功能还在构建中，所以没办法体现扔核弹的机制"
+ cw_nuclear_event.1.d: "想在[SCOPE.sState('nuclear_state').GetName] 扔一枚核弹？"
+ cw_nuclear_event.1.a: "好吧"
+ cw_nuclear_event.1.b: "模拟在[SCOPE.sState('nuclear_state').GetName] 扔一枚核弹"
+ suffering_nuclear: "受到核打击"
+ 

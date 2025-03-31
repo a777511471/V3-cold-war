@@ -1,0 +1,61 @@
+﻿je_xuanchuan = {
+	name = {
+		first_valid = {
+			triggered_desc = {
+				desc = "je_xuanchuan"
+				trigger = {
+					NOT = { has_variable = xuanchuan_button_cooldown_var }
+				}
+			}
+			triggered_desc = {
+				desc = "je_xuanchuaned"
+				trigger = {
+					has_variable = xuanchuan_button_cooldown_var
+				}
+			}
+		}
+	}
+	desc = "je_xuanchuan_desc"
+
+	visible = { always = yes }
+
+	possible = {
+		any_country = {
+			AND = {
+				is_country_type = unrecognized
+				OR = {
+					country_is_in_africa = yes
+					country_is_in_east_asia = yes
+					country_is_in_west_south_asia = yes
+				}
+			}
+			relations:root >= 50
+		}
+		save_scope_as = ally11
+	}
+
+	effect = {
+		set_variable = {
+			name = xuanchuan_button_cooldown_var
+			months = 24
+		}
+		every_country = { 
+			limit = { 
+				is_country_type = unrecognized
+				OR = {
+					country_is_in_africa = yes
+					country_is_in_east_asia = yes
+					country_is_in_west_south_asia = yes
+				}
+				relations:root >= 50 
+			}
+			set_country_type = recognized
+			change_relations = { country = scope:ally11 country = root value = 50 }
+			change_infamy = -12
+		} 
+	}
+
+	ai_chance = {
+		base = 1
+	}
+}

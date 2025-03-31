@@ -1,0 +1,47 @@
+
+je_compulsion_family_planning = { #强制限制生育
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		OR = { 			
+		    c:CAM ?= ROOT				
+			c:SWE ?= ROOT 											
+		}						
+	}
+
+	possible = { #激活条件
+		OR = { 			
+		    c:CAM ?= ROOT				
+			c:SWE ?= ROOT 											
+		}				
+		institution_investment_level = {
+			institution = institution_family_planning
+			value >= 0
+		}			
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_family_planning  #是限制生育	
+		institution_investment_level = {
+			institution = institution_family_planning
+			value >= 5
+		}			
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_compulsion_family_planning #优生少生
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

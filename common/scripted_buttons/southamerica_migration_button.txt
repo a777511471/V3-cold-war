@@ -1,0 +1,601 @@
+﻿southamerica_migration_button = {
+	name = southamerica_migration_button
+	desc = southamerica_migration_button_desc
+
+	visible = { always = yes }
+
+	possible = {
+		
+		#country_rank >= rank_value:minor_power
+		# Note that this closely reflects triggers in the event. Do not change one without changing both
+		custom_tooltip = {
+			text = migration_button_cooldown_tta
+			NOT = { has_variable = sa_migration_cooldown }
+		}
+		average_sol >= 10
+		any_country = {
+			country_rank <= rank_value:great_power
+			custom_tooltip = {
+				text = is_in_europe_tt
+				country_is_in_europe = yes
+			}
+			custom_tooltip = {
+				text = same_state_religion
+				religion = root.religion
+			}
+			custom_tooltip = {
+				text = average_sol_below_root_tt
+				average_sol <= root.average_sol
+			}
+			any_primary_culture = {
+				culture_can_have_mass_migration_to_country = ROOT
+			}
+			any_scope_state = {
+				is_incorporated = yes
+				custom_tooltip = {
+					text = is_in_europe_tt
+					state_is_in_europe = yes
+				}
+				count >= 3
+			}
+		}
+		any_scope_state = {
+			trigger_if = {
+				limit = {
+					owner = { has_journal_entry = je_south_america_migration }
+				}
+				custom_tooltip = {
+					text = is_in_sa_tt
+					state_is_in_south_america = yes
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					owner = { has_journal_entry = je_central_america_migration }
+				}
+				OR = {
+					region = sr:region_mexico
+					region = sr:region_central_america
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					owner = { has_journal_entry = je_american_west_migration }
+				}
+				OR = {
+					region = sr:region_pacific_coast
+					region = sr:region_great_plains
+				}
+			}
+			state_is_eligible_as_mass_migration_target = yes
+		}
+		OR = {
+			has_law = law_type:law_racial_segregation
+			has_law = law_type:law_cultural_exclusion
+			has_law = law_type:law_multicultural
+		}
+		NOR = {
+			has_law = law_type:law_closed_borders
+			has_law = law_type:law_isolationism
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				country_rank >= rank_value:great_power
+				#country_rank >= rank_value:great_power
+				#country_rank >= rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldown }
+			}
+			set_variable = {
+				name = sa_migration_cooldown
+				months = 8
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			trigger_event = { id = sa_migration.1 popup = yes }
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost
+			#		months = 8
+			#	}
+			#}
+			add_modifier = {
+				name = sa_migration_cost
+				months = 8
+			}
+		}
+		if = {
+			limit = {				#
+				country_rank = rank_value:major_power
+				#country_rank >= rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldown }
+			}
+			set_variable = {
+				name = sa_migration_cooldown
+				months = 12
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			trigger_event = { id = sa_migration.1 popup = yes }
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost
+			#		months = 16
+			#	}
+			#}
+			add_modifier = {
+				name = sa_migration_cost
+				months = 12
+			}
+		}
+		if = {
+			limit = {
+				country_rank = rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldown }
+			}
+			set_variable = {
+				name = sa_migration_cooldown
+				months = 20
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			trigger_event = { id = sa_migration.1 popup = yes }
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost
+			#		months = 32
+			#	}
+			#}
+			add_modifier = {
+				name = sa_migration_cost
+				months = 20
+			}
+		}
+		if = {
+			limit = {
+				country_rank < rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldown }
+			}
+			set_variable = {
+				name = sa_migration_cooldown
+				months = 36
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			trigger_event = { id = sa_migration.1 popup = yes }
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost
+			#		months = 72
+			#	}
+			#}
+			add_modifier = {
+				name = sa_migration_cost
+				months = 36
+			}
+		}
+		
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+
+patagonia_button = {
+	name = patagonia_button
+	desc = patagonia_button_desc
+
+	visible = { always = yes }
+
+	possible = {
+		has_technology_researched = civilizing_mission
+		ig:ig_armed_forces = { 
+			is_marginal = no
+		}
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_ARAUCANIA
+				state_region = s:STATE_PATAGONIA
+				state_region = s:STATE_RIO_NEGRO
+			}
+			is_under_colonization = yes
+		}
+		NOT = { has_modifier = patagonia_campaign }
+	}
+
+	effect = {
+		add_modifier = {
+			name = patagonia_campaign
+			years = 10
+		}
+	}
+
+	ai_chance = {
+		base = 10
+	}
+}
+southamerica_migration_buttongz = {
+	name = southamerica_migration_buttongz
+	desc = southamerica_migration_buttongz_desc
+
+	visible = { always = yes }
+
+	possible = {
+		OR = {
+			AND = {
+				any_primary_culture = {
+					has_discrimination_trait = european_heritage
+				}
+				OR = {
+					#has_law = law_type:law_racial_segregation
+					has_law = law_type:law_cultural_exclusion
+					has_law = law_type:law_multicultural
+				}
+				NOR = {
+					has_law = law_type:law_closed_borders
+					has_law = law_type:law_isolationism
+				}
+			}
+			AND = {
+				any_primary_culture = {
+					has_discrimination_trait = european_heritage
+				}
+				OR = {
+					has_law = law_national_supremacy
+					has_law = law_type:law_racial_segregation
+					has_law = law_type:law_cultural_exclusion
+					has_law = law_type:law_multicultural
+				}
+				has_law = law_type:law_no_migration_controls
+			}
+
+
+			AND = {
+				has_law = law_type:law_multicultural
+				NOR = {
+					has_law = law_type:law_closed_borders
+					has_law = law_type:law_isolationism
+				}
+			}
+		}
+		# Note that this closely reflects triggers in the event. Do not change one without changing both
+		custom_tooltip = {
+			text = migration_button_cooldown_tta
+			NOT = { has_variable = sa_migration_cooldowngz }
+		}
+		average_sol >= 17
+		any_country = {
+			country_rank <= rank_value:great_power
+			custom_tooltip = {
+				text = is_in_europe_tt
+				country_is_in_europe = yes
+			}
+			custom_tooltip = {
+				text = average_sol_below_root_tt
+				average_sol <= root.average_sol
+			}
+			any_primary_culture = {
+				culture_can_have_mass_migration_to_country = ROOT
+			}
+			custom_tooltip = {
+				text = same_state_religion
+				religion = root.religion
+			}
+			any_scope_state = {
+				is_incorporated = yes
+				custom_tooltip = {
+					text = is_in_europe_tt
+					state_is_in_europe = yes
+				}
+				count >= 3
+			}
+		}
+		any_scope_state = {
+			trigger_if = {
+				limit = {
+					owner = { has_journal_entry = je_south_america_migrationgz }
+				}
+			}
+			state_is_eligible_as_mass_migration_target = yes
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				country_rank >= rank_value:great_power
+				#country_rank >= rank_value:great_power
+				#country_rank >= rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldowngz }
+			}
+			set_variable = {
+				name = sa_migration_cooldowngz
+				months = 8
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			trigger_event = { id = sa_migration.20 popup = yes }
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost
+			#		months = 8
+			#	}
+			#}
+			add_modifier = {
+				name = sa_migration_cost
+				months = 8
+			}
+		}
+		if = {
+			limit = {				#
+				country_rank = rank_value:major_power
+				#country_rank >= rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldowngz }
+			}
+			set_variable = {
+				name = sa_migration_cooldowngz
+				months = 12
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost
+			#		months = 16
+			#	}
+			#}
+			trigger_event = { id = sa_migration.20 popup = yes }
+			add_modifier = {
+				name = sa_migration_cost
+				months = 12
+			}
+		}
+		if = {
+			limit = {
+				country_rank = rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldowngz }
+			}
+			set_variable = {
+				name = sa_migration_cooldowngz
+				months = 20
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost
+			#		months = 32
+			#	}
+			#}
+			trigger_event = { id = sa_migration.20 popup = yes }
+			add_modifier = {
+				name = sa_migration_cost
+				months = 20
+			}
+		}
+		if = {
+			limit = {
+				country_rank < rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldowngz }
+			}
+			set_variable = {
+				name = sa_migration_cooldowngz
+				months = 36
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost
+			#		months = 72
+			#	}
+			#}
+			trigger_event = { id = sa_migration.20 popup = yes }
+			add_modifier = {
+				name = sa_migration_cost
+				months = 36
+			}
+		}
+		
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+southamerica_migration_buttongz1 = {
+	name = southamerica_migration_buttongz1
+	desc = southamerica_migration_buttongz1_desc
+
+	visible = { always = yes }
+
+	possible = {
+		OR = {
+			AND = {
+				any_primary_culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+				OR = {
+					#has_law = law_type:law_racial_segregation
+					has_law = law_type:law_cultural_exclusion
+					has_law = law_type:law_multicultural
+				}
+				NOR = {
+					has_law = law_type:law_closed_borders
+					has_law = law_type:law_isolationism
+				}
+			}
+			AND = {
+				any_primary_culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+				OR = {
+					has_law = law_type:law_national_supremacy
+					has_law = law_type:law_racial_segregation
+					has_law = law_type:law_cultural_exclusion
+					has_law = law_type:law_multicultural
+				}
+				has_law = law_type:law_no_migration_controls
+			}
+
+
+			AND = {
+				has_law = law_type:law_multicultural
+				NOR = {
+					has_law = law_type:law_closed_borders
+					has_law = law_type:law_isolationism
+				}
+			}
+		}
+		# Note that this closely reflects triggers in the event. Do not change one without changing both
+		custom_tooltip = {
+			text = migration_button_cooldown_ttah
+			NOT = { has_variable = sa_migration_cooldowngz1 }
+		}
+		average_sol >= 17
+		any_country = {
+			country_rank <= rank_value:great_power
+            any_primary_culture = {
+                has_discrimination_trait = east_asian_heritage
+            }
+			custom_tooltip = {
+				text = average_sol_below_root_tt
+				average_sol <= root.average_sol
+			}
+			any_scope_state = {
+				is_incorporated = yes
+				OR = {
+                    region = sr:region_north_china
+                    region = sr:region_south_china
+                }
+				count >= 1
+			}
+		}
+		any_scope_state = {
+			trigger_if = {
+				limit = {
+					owner = { has_journal_entry = je_south_america_migrationgz1 }
+				}
+			}
+			state_is_eligible_as_mass_migration_target = yes
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				country_rank >= rank_value:great_power
+				#country_rank >= rank_value:great_power
+				#country_rank >= rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldowngz1 }
+			}
+			set_variable = {
+				name = sa_migration_cooldowngz1
+				months = 8
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			trigger_event = { id = sa_migration.21 popup = yes }
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost_gz
+			#		months = 8
+			#	}
+			#}
+			add_modifier = {
+				name = sa_migration_cost_gz
+				months = 8
+			}
+		}
+		if = {
+			limit = {				#
+				country_rank = rank_value:major_power
+				#country_rank >= rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldowngz1 }
+			}
+			set_variable = {
+				name = sa_migration_cooldowngz1
+				months = 12
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost_gz
+			#		months = 16
+			#	}
+			#}
+			trigger_event = { id = sa_migration.21 popup = yes }
+			add_modifier = {
+				name = sa_migration_cost_gz
+				months = 12
+			}
+		}
+		if = {
+			limit = {
+				country_rank = rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldowngz1 }
+			}
+			set_variable = {
+				name = sa_migration_cooldowngz1
+				months = 20
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost_gz
+			#		months = 32
+			#	}
+			#}
+			trigger_event = { id = sa_migration.21 popup = yes }
+			add_modifier = {
+				name = sa_migration_cost_gz
+				months = 20
+			}
+		}
+		if = {
+			limit = {
+				country_rank < rank_value:minor_power
+				NOT = { has_variable = sa_migration_cooldowngz1 }
+			}
+			set_variable = {
+				name = sa_migration_cooldowngz1
+				months = 36
+			}
+			custom_tooltip = {
+				text = mass_migration_button_tt
+			}
+			#show_as_tooltip = {
+			#	add_modifier = {
+			#		name = sa_migration_cost_gz
+			#		months = 72
+			#	}
+			#}
+			trigger_event = { id = sa_migration.21 popup = yes }
+			add_modifier = {
+				name = sa_migration_cost_gz
+				months = 36
+			}
+		}
+		
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}

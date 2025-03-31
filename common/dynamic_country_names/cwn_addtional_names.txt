@@ -1,0 +1,1717 @@
+### Try to keep tags in alphabetical order if it's not too far gone, please.
+
+################################################################
+## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
+#
+HND = { #印度
+	dynamic_country_name = {
+		name = dyn_c_jzz_HND
+		
+		adjective = HND_ADJ
+		is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_minguo_HND #印度民国
+		
+		adjective = HND_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {	
+				OR = {
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_semi_presidential_republic				
+				}		
+			}
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_republic_HND #印度共和国
+		
+		adjective = HND_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_parliamentary_republic			
+			}
+		}
+	}	
+	dynamic_country_name = {#
+		name = dyn_c_renmin_HND #印度人民共和国
+		
+		adjective = HND_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_council_republic #委员会共和制				
+		     NOT = {
+					has_law = law_type:law_single_party_state #一党制国家
+					has_law = law_type:law_multi_party_cooperation_system #一党专政
+					has_law = law_type:law_anarchy							
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_HND #印度民主主义人民共和国
+		
+		adjective = HND_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_council_republic #委员会共和制				
+		     OR = {
+					has_law = law_type:law_single_party_state #一党制国家
+					has_law = law_type:law_multi_party_cooperation_system #一党专政		
+				}
+				NOT = { 
+					has_law = law_type:law_anarchy
+				}						
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_minzu_HND #大雅利安
+		
+		adjective = HND_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+				coa_def_theocracy_flag_trigger = yes
+				has_law = law_type:law_ethnostate				
+				NOT = { 
+					has_law = law_type:law_anarchy					
+				}						
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_an_HND #雅利安兄弟会
+		
+		adjective = HND_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+				coa_def_theocracy_flag_trigger = yes
+				has_law = law_type:law_anarchy							
+				NOT = { 
+					has_law = law_type:law_ethnostate						
+				}						
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_minzuan_HND #大雅利安兄弟会
+		
+		adjective = HND_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+				coa_def_theocracy_flag_trigger = yes
+				has_law = law_type:law_anarchy							
+				has_law = law_type:law_ethnostate											
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_HND #婆罗多梵天国
+		
+		adjective = HND_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+				coa_def_theocracy_flag_trigger = yes
+				NOT = { 
+					has_law = law_type:law_anarchy					
+					has_law = law_type:law_ethnostate
+				}						
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_HND #大婆罗多
+		adjective = HND_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+TRH = { #图兰
+	dynamic_country_name = {
+		name = dyn_c_jzz_TRH
+		
+		adjective = TRH_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_TRH
+		
+		adjective = TRH_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_TRH
+		
+		adjective = TRH_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_TRH
+		
+		adjective = TRH_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_TRH #大图兰国
+		adjective = TRH_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+MUG = { 
+	dynamic_country_name = {
+		name = dyn_c_jzz_MUG
+		
+		adjective = MUG_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_MUG
+		
+		adjective = MUG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_MUG
+		
+		adjective = MUG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_MUG
+		
+		adjective = MUG_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+} 
+
+ION = { #民主希腊
+	dynamic_country_name = {
+		name = dyn_c_jzz_ION #希腊王国
+		
+		adjective = GRE_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_ION #希腊教权国
+		
+		adjective = GRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_GRE #希腊国
+		adjective = GRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+KUR = { 
+	dynamic_country_name = {
+		name = dyn_c_jzz_KUR
+		
+		adjective = KUR_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_KUR
+		
+		adjective = KUR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_KUR
+		
+		adjective = KUR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_KUR
+		
+		adjective = KUR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_KUR #大库尔德斯坦国
+		adjective = KUR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+IRQ = { 
+	dynamic_country_name = {
+		name = dyn_c_jzz_IRQ
+		
+		adjective = IRQ_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_IRQ
+		
+		adjective = IRQ_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_IRQ
+		
+		adjective = IRQ_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_IRQ
+		
+		adjective = IRQ_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+}
+
+GRE = { 
+	dynamic_country_name = {
+		name = dyn_c_jzz_GRE
+		
+		adjective = GRE_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_GRE
+		
+		adjective = GRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_GRE
+		
+		adjective = GRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_GRE
+		
+		adjective = GRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_GRE #希腊国
+		adjective = GRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+AFG = { 
+	dynamic_country_name = {
+		name = dyn_c_jzz_AFG
+		
+		adjective = AFG_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_AFG #阿富汗共和国
+		
+		adjective = AFG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {				
+			coa_def_republic_flag_trigger = yes
+			NOT = { 
+				coa_def_communist_flag_trigger = yes 
+				has_law = law_type:law_ethnostate		
+				has_law = law_type:law_state_religion						
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_minzu_AFG #普什图斯坦共和国
+		
+		adjective = AFG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {				
+			coa_def_republic_flag_trigger = yes
+			has_law = law_type:law_ethnostate				
+			NOT = { 
+				coa_def_communist_flag_trigger = yes 	
+				has_law = law_type:law_state_religion						
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_guojiao_AFG #阿富汗伊斯兰共和国
+		
+		adjective = AFG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {				
+			coa_def_republic_flag_trigger = yes
+			has_law = law_type:law_state_religion					
+			NOT = { 
+				coa_def_communist_flag_trigger = yes 	
+				has_law = law_type:law_ethnostate					
+				}
+			}
+		}
+	}	
+	dynamic_country_name = {
+		name = dyn_c_minzuguojiao_AFG #普什图斯坦伊斯兰共和国
+		
+		adjective = AFG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {				
+			coa_def_republic_flag_trigger = yes
+			NOT = { 
+				coa_def_communist_flag_trigger = yes 
+			}
+			has_law = law_type:law_ethnostate		
+			has_law = law_type:law_state_religion						
+			}
+		}
+	}	
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_AFG
+		
+		adjective = AFG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_AFG
+		
+		adjective = AFG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_AFG #普什图斯坦至高国
+		adjective = AFG_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+IRN = { #波斯
+	dynamic_country_name = {
+		name = dyn_c_jzz_IRN #波斯帝国
+		
+		adjective = IRN_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+			coa_def_monarchy_flag_trigger = yes
+				NOT = { 
+					has_law = law_type:law_anarchy
+				}						
+			}			
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_IRN
+		
+		adjective = IRN_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+			coa_def_republic_flag_trigger = yes
+			NOT = { 
+				coa_def_communist_flag_trigger = yes 
+					has_law = law_type:law_anarchy						
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_IRN #中东社会主义共和国
+		
+		adjective = IRN_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_council_republic #委员会共和制				
+				NOT = { 
+					has_law = law_type:law_anarchy
+				}						
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_IRN
+		
+		adjective = IRN_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+				coa_def_theocracy_flag_trigger = yes
+				NOT = { 
+					has_law = law_type:law_anarchy
+				}					
+			}		
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_minzu_IRN #波斯民族国
+		adjective = IRN_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state	#法团国家	
+				has_law = law_type:law_ethnostate	#民族国家
+				NOT = { 
+					has_law = law_type:law_anarchy
+					 }					
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_fatuan_IRN #大波斯联邦
+		adjective = IRN_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state	#法团国家	
+				NOT = { 
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_anarchy
+					 }	
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_anarchy_IRN #波斯自由地区
+		
+		adjective = IRN_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+}
+
+PER = { 
+	dynamic_country_name = {
+		name = dyn_c_jzz_PER
+		
+		adjective = PER_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_PER #伊朗共和国
+		
+		adjective = PER_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {			
+			coa_def_republic_flag_trigger = yes
+			NOT = { 
+				coa_def_communist_flag_trigger = yes 				
+				}
+			OR = {
+				has_law = law_type:law_autocracy
+				has_law = law_type:law_oligarchy
+				has_law = law_type:law_multi_party_cooperation_system	
+				has_law = law_type:law_technocracy					
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_minzhu_PER #伊朗民主共和国
+		
+		adjective = PER_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {			
+			coa_def_republic_flag_trigger = yes
+			NOT = { 
+				coa_def_communist_flag_trigger = yes 				
+				has_law = law_type:law_autocracy
+				has_law = law_type:law_oligarchy
+				has_law = law_type:law_multi_party_cooperation_system
+				has_law = law_type:law_anarchy		
+				has_law = law_type:law_technocracy					
+				}
+			}
+		}
+	}	
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_PER
+		
+		adjective = PER_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_PER
+		
+		adjective = PER_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_PER #大伊朗国
+		adjective = PER_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+UKR = { #乌克兰
+	dynamic_country_name = {
+		name = dyn_c_jzz_UKR
+		
+		adjective = UKR_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+			coa_def_monarchy_flag_trigger = yes
+				NOT = { 
+					has_law = law_type:law_anarchy
+				}						
+			}			
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_UKR
+		
+		adjective = UKR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+			coa_def_republic_flag_trigger = yes
+			NOT = { 
+				coa_def_communist_flag_trigger = yes 
+					has_law = law_type:law_anarchy						
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {#
+		name = dyn_c_renmin_UKR #乌克兰人民共和国
+		
+		adjective = UKR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_council_republic #委员会共和制				
+		     NOT = {
+					has_law = law_type:law_single_party_state #一党制国家
+					has_law = law_type:law_multi_party_cooperation_system #一党专政
+					has_law = law_type:law_anarchy							
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_UKR #乌克兰苏维埃社会主义共和国
+		
+		adjective = UKR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_council_republic #委员会共和制				
+		     OR = {
+					has_law = law_type:law_single_party_state #一党制国家
+					has_law = law_type:law_multi_party_cooperation_system #一党专政		
+				}
+				NOT = { 
+					has_law = law_type:law_anarchy
+				}						
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_UKR
+		
+		adjective = UKR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {			
+				coa_def_theocracy_flag_trigger = yes
+				NOT = { 
+					has_law = law_type:law_anarchy
+				}					
+			}		
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_minzu_UKR #乌克兰民族国
+		adjective = UKR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state	#法团国家	
+				has_law = law_type:law_ethnostate	#民族国家
+				NOT = { 
+					has_law = law_type:law_anarchy
+					 }					
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_fatuan_UKR #大乌克兰联邦
+		adjective = UKR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state	#法团国家	
+				NOT = { 
+					has_law = law_type:law_ethnostate
+					has_law = law_type:law_anarchy
+					 }	
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_anarchy_UKR #乌克兰自由地区
+		
+		adjective = UKR_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+}
+
+FRA = { # 法兰西
+	dynamic_country_name = {
+		name = dyn_c_french_empire
+		
+		adjective = FRA_ADJ
+		#is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			exists = scope:actor
+			scope:actor = {
+				has_law = law_type:law_monarchy
+				has_variable = bonapartist_restoration_var
+#				has_variable = one_true_french_dynasty
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_french_kingdom
+		adjective = FRA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+#			exists = scope:actor
+#			scope:actor = {
+#				has_law = law_type:law_monarchy
+#				OR = {
+#					has_variable = orleanist_restoration_var
+#					has_variable = legitimist_restoration_var
+#				}
+#				has_variable = one_true_french_dynasty
+#      }
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_french_republic
+		adjective = FRA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+		OR = {
+			coa_def_republic_flag_trigger = yes
+			has_law = law_type:law_semi_presidential_republic
+		}
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_FRA
+		adjective = FRA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_FRA
+		adjective = FRA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_FRA #法兰西国
+		adjective = FRA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+USA = { # 美国
+	dynamic_country_name = {
+		name = dyn_c_united_states
+    adjective = USA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	
+	dynamic_country_name = {
+		name = dyn_c_united_senators
+		priority = 1
+		adjective = USA_ADJ
+		trigger = {
+			exists = c:USA
+			c:USA = {			
+				any_scope_state = {
+					state_region = { has_variable = district_of_columbia }
+					count > 0
+				}
+				any_scope_state = {
+					state_region = { NOT = { has_variable = district_of_columbia } }
+					count < 1
+				}			
+			}			
+		}
+	}	
+
+	dynamic_country_name = {
+		name = dyn_c_united_state
+		priority = 1
+		adjective = USA_ADJ
+		trigger = {
+			exists = c:USA
+			c:USA = {		
+				any_scope_state = {
+					state_region = { NOT = { has_variable = district_of_columbia } }
+					count = 1
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_united_sovereign_archduchy
+		adjective = dyn_c_united_sovereign_archduchy_adj
+		
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_united_syndicates_of_america
+		adjective = USA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+
+	dynamic_country_name = {
+		name = dyn_c_united_synods_of_america
+		adjective = USA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	
+	dynamic_country_name = {
+		name = dyn_c_north_american_technate
+		adjective = USA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			scope:actor = {
+				has_law = law_type:law_technocracy	#技术治国			
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_fatuan_usa #美利坚联合复合体
+		adjective = USA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = { 
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state	#法团国家	
+				NOT = {
+					has_law = law_type:law_multi_party_cooperation_system	#一党专政
+					has_law = law_type:law_autocracy	#独裁制		
+					has_law = law_type:law_oligarchy	#寡头制		
+					has_law = law_type:law_technocracy	#技术治国												
+				}				
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_nazi_usa #美利坚民族联邦国
+		adjective = USA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = { 
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state	#法团国家	
+				OR = {
+					has_law = law_type:law_multi_party_cooperation_system	#一党专政
+					has_law = law_type:law_autocracy	#独裁制		
+					has_law = law_type:law_oligarchy	#寡头制					
+				}									
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_north_american_fatuantechnate #科技复合体
+		adjective = USA_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = { 
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state	#法团国家	
+				has_law = law_type:law_technocracy	#技术治国									
+			}
+		}
+	}	
+}
+
+LDF = { #中非联盟
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_LDF
+		
+		adjective = LDF_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+NEP = { #尼泊尔
+	dynamic_country_name = {
+		name = dyn_c_jzz_NEP
+		
+		adjective = NEP_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_NEP
+		
+		adjective = NEP_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_NEP
+		
+		adjective = NEP_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_NEP
+		
+		adjective = NEP_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_fatuan_NEP #大尼泊尔国
+		
+		adjective = NEP_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
+} 
+
+TIB = { #西藏
+	dynamic_country_name = {
+		name = dyn_c_jzz_TIB
+		
+		adjective = TIB_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_junzhengfu_TIB #西藏军政府
+		
+		adjective = TIB_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = {			
+				coa_def_republic_flag_trigger = yes
+				has_law = law_type:law_autocracy 			
+				NOT = { 
+					coa_def_communist_flag_trigger = yes 
+				}
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_republic_TIB #西藏共和国
+		
+		adjective = TIB_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor = {			
+				coa_def_republic_flag_trigger = yes
+				NOT = { 
+					coa_def_communist_flag_trigger = yes 
+					has_law = law_type:law_autocracy
+				} 
+			}
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_TIB
+		
+		adjective = TIB_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_TIB
+		
+		adjective = TIB_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+} 
+
+SWE = { #瑞典
+	dynamic_country_name = {
+		name = dyn_c_jzz_SWE
+		adjective = SWE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_SWE
+		adjective = SWE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_SWE
+		adjective = SWE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+				NOT = { has_law = law_type:law_anarchy }
+			}
+		}
+	}
+
+	dynamic_country_name = {#瑞典革命阵线
+		name = dyn_c_anarchy_SWE
+		
+		adjective = SWE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_shenquan_SWE
+		adjective = SWE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+}
+
+RUS = { #俄罗斯
+	dynamic_country_name = {
+		name = dyn_c_russian_empire
+		adjective = RUS_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_russian_republic
+		adjective = RUS_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_russian_shenquan
+		adjective = RUS_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_russian_societ_republic
+		adjective = dyn_c_soviet_union_adj
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			OR = { exists = c:UKR
+			exists = c:BYE } 
+		}
+	} 
+	dynamic_country_name = {
+		name = dyn_c_soviet_union
+		adjective = dyn_c_soviet_union_adj #苏联
+		#is_main_tag_only = yes
+		priority = 10
+		 
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+			NOT = { exists = c:UKR }
+			NOT = { exists = c:BYE }
+		}
+	}	
+}
+
+JAP = { 
+	dynamic_country_name = {
+		name = dyn_c_jzz_JAP
+		
+		adjective = JAP_ADJ
+		#is_main_tag_only = yes 
+		priority = 0 
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_parliamentary_republic_JAP #日本国（美占）
+		
+		adjective = JAP_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_parliamentary_republic
+				has_journal_entry = je_japan_occupied
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_republic_JAP #日本共和国
+		
+		adjective = JAP_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+		    OR = {
+				    has_law = law_type:law_parliamentary_republic #议会共和制                
+					has_law = law_type:law_presidential_republic #总统共和制
+					has_law = law_type:law_semi_presidential_republic #半总统共和制					
+				}
+			NOT = { 
+				has_law = law_type:law_anarchy 
+				has_journal_entry = je_japan_occupied
+				}     
+			}
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_JAP
+		
+		adjective = JAP_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+				NOT = { has_law = law_type:law_anarchy }
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_JAP
+		
+		adjective = dyn_shenquan_JAP
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_theocracy
+				NOT = { has_law = law_type:law_anarchy }
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_shenquanan_JAP
+		
+		adjective = dyn_shenquanan_JAP
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_theocracy
+				has_law = law_type:law_anarchy 
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_gonghean_JAP
+		
+		adjective = dyn_gonghean_JAP
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+		    OR = {
+				    has_law = law_type:law_parliamentary_republic #议会共和制                
+					has_law = law_type:law_presidential_republic #总统共和制
+					has_law = law_type:law_semi_presidential_republic #半总统共和制					
+				}
+				has_law = law_type:law_anarchy 
+				has_law = law_type:law_laissez_faire
+				has_law = law_type:law_free_trade               
+			}
+		}
+	}
+
+	dynamic_country_name = {#
+		name = dyn_c_anarchy_JAP
+		
+		adjective = JAP_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_law = law_type:law_council_republic
+				has_law = law_type:law_anarchy
+			}
+		}
+	}
+} 
+
+IRE = { 
+	dynamic_country_name = { 
+		name = dyn_c_republic_IRE #爱尔兰共和国
+		
+		adjective = IRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_parliamentary_republic #议会共和制			
+			}
+		}
+	}
+
+	dynamic_country_name = { #大爱尔兰国
+		name = dyn_c_fatuan_IRE
+		adjective = IRE_ADJ
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state	#法团国家		
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_jzz_IRE #爱尔兰王国
+		
+		adjective = IRE_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_lianbang_IRE #爱尔兰联邦
+		
+		adjective = IRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {
+		     OR = {
+					has_law = law_type:law_presidential_republic #总统共和制
+					has_law = law_type:law_semi_presidential_republic #半总统共和制					
+				}
+			}
+		}
+	}
+	dynamic_country_name = {#爱尔兰人民共和国
+		name = dyn_c_societ_republic_IRE
+		
+		adjective = IRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_IRE
+		
+		adjective = IRE_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+}
+
+MDV = { #马尔代夫
+	dynamic_country_name = {
+		name = dyn_c_jzz_MDV
+		
+		adjective = MDV_ADJ
+		is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_MDV
+		
+		adjective = MDV_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_MDV
+		
+		adjective = MDV_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_MDV
+		
+		adjective = MDV_ADJ
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+} 

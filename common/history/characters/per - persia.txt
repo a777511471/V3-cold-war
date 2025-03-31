@@ -1,6 +1,7 @@
 ﻿CHARACTERS = {
 	c:PER = {
 		create_character = {
+			dna = dna_king_leopold_01			
 			first_name = "Mohammed·Reza"
 			last_name = "Balevi"
 			historical = yes
@@ -10,15 +11,32 @@
 			birth_date = 1919.10.26
 			culture = cu:persian
 			interest_group = ig_armed_forces #军队
-			ideology = ideology_authoritarian #威权主义者
+			ideology = ideology_secularized_reformer #世俗化改良主义者
 			traits = {
+			}
+		}
+
+		create_character = {
+			#伊朗知识分子领袖易卜拉欣·哈基米
+			historical = yes
+			ig_leader = yes
+			first_name = Ibrahim
+			last_name = Hakimi
+			birth_date = 1871.8.15
+			culture = cu:azerbaijani
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_radical #激进主义者
+			traits = {
+				basic_political_operator #政治运作者
+				literary #文学家
+				honorable #体面				
 			}
 		}
 
 		create_character = {
 			#穆罕默德·摩萨台
 			historical = yes
-			ig_leader = yes
+    		is_agitator = yes #鼓动者
 			first_name = Muhammad
 			last_name = Mossadai
 			birth_date = 1882.6.16
@@ -27,12 +45,13 @@
 			ideology = ideology_ethno_nationalist #族裔民族主义者
 			traits = {
 				basic_political_operator #政治运作者
-				honorable #体面
 				literary #文学家
+				honorable #体面		
 			}
 		}
 
-		create_character = {
+		create_character = { #霍梅尼
+			dna = dna_kropotkin		
 			first_name = "Ruholla·Mousavi"
 			last_name = "Khomeini"
 			historical = yes
@@ -42,10 +61,9 @@
 			interest_group = ig_devout #虔信者
 			ideology = ideology_theocrat #神权政治主义者
 			traits = {
-				    strong #健硕
-				    charismatic #魅力四射
-		                    ambitious #雄心勃勃
-				    innovative #创新精神
+				strong #健硕
+				charismatic #魅力四射
+		        ambitious #雄心勃勃
 			}
 		}
 	}

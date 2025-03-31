@@ -1,0 +1,176 @@
+﻿#再投资
+reinvestment_modifier_low = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_government_dividends_reinvestment_add = 0.25
+}	
+
+reinvestment_modifier_medium = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_government_dividends_reinvestment_add = 0.5
+}	
+
+reinvestment_modifier_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_government_dividends_reinvestment_add = 0.75
+}	
+
+reinvestment_modifier_very_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_government_dividends_reinvestment_add = 1
+}	
+
+adjust_reinvestment = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+}
+
+reduce_reinvestment_modifier_low = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_government_dividends_reinvestment_add = -0.25
+}	
+
+reduce_reinvestment_modifier_medium = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_government_dividends_reinvestment_add = -0.5
+}	
+
+reduce_reinvestment_modifier_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_government_dividends_reinvestment_add = -0.75
+}	
+
+reduce_reinvestment_modifier_very_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_government_dividends_reinvestment_add = -1
+}
+#国有分红效率
+universal_basic_Income = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+}
+
+efficiency_modifier_low = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_government_dividends_efficiency_add = 0.25
+}	
+
+efficiency_modifier_medium = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_government_dividends_efficiency_add = 0.5
+}	
+
+efficiency_modifier_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_government_dividends_efficiency_add = 0.75
+}	
+
+efficiency_modifier_very_high = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_government_dividends_efficiency_add = 1
+}
+
+universal_basic_Income_effect = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 0.5
+}
+universal_basic_Income_expenditures = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.01
+	#country_bureaucracy_add = -0.000005
+}
+universal_basic_Income_effect2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 0.5
+}
+universal_basic_Income_expenditures2 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.008
+	#country_bureaucracy_add = -0.00001
+}
+
+universal_basic_Income_effect3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 0.75
+}
+universal_basic_Income_expenditures3 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.016
+	#country_bureaucracy_add = -0.000015
+}
+
+universal_basic_Income_effect4 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 1.25
+}
+universal_basic_Income_expenditures4 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.02
+	#country_bureaucracy_add = -0.00002
+}
+
+universal_basic_Income_effect5 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 1.875
+}
+universal_basic_Income_expenditures5 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.03
+	#country_bureaucracy_add = -0.000025
+}
+
+universal_basic_Income_effect6 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 2.5
+}
+universal_basic_Income_expenditures6 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.04
+	#country_bureaucracy_add = -0.00003
+}
+
+universal_basic_Income_effect7 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 2
+}
+universal_basic_Income_expenditures7 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.04
+	#country_bureaucracy_add = -0.00003
+}
+
+universal_basic_Income_effect8 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 2.65
+}
+universal_basic_Income_expenditures8 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.05
+	#country_bureaucracy_add = -0.00003
+}
+
+universal_basic_Income_effect9 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 3.3
+}
+universal_basic_Income_expenditures9 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.06
+	#country_bureaucracy_add = -0.00003
+}
+universal_basic_Income_effect10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 3.95
+}
+universal_basic_Income_expenditures10 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.07
+	#country_bureaucracy_add = -0.00003
+}
+
+universal_basic_Income_effect11 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_dependent_wage_add = 4.6
+}
+universal_basic_Income_expenditures11 = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_expenses_add = 0.08
+	#country_bureaucracy_add = -0.00003
+}

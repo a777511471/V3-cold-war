@@ -1,0 +1,276 @@
+first_berlin_blockade_air_transport_button = {
+	name = "kongyun_button_key"
+	desc = "kongyun_button_key_desc"
+	
+	visible = {
+	OR = {
+		AND = {
+		c:USA ?= THIS 
+		c:USA = {
+					NOT = { has_variable = kongyun_var }
+				}
+		}
+		AND = {
+		c:GBR ?= THIS 
+		c:GBR = {
+					NOT = { has_variable = kongyun_var }
+				}
+		}
+		AND = {
+		c:FRA ?= THIS 
+		c:FRA = {
+					NOT = { has_variable = kongyun_var }
+				}
+		}
+	}
+}
+	possible = {
+	}
+effect = {
+        set_variable = {
+			name = kongyun_var
+			value = 0
+		}
+	}
+	
+	ai_chance = {
+		base = 100
+	}
+	
+}
+
+first_berlin_blockade_air_transport_not_button = {
+	name = "kongyun_not_button_key"
+	desc = "kongyun_not_button_key_desc"
+	
+	visible = {
+	OR = {
+		AND = {
+		c:USA ?= THIS 
+		c:USA = {
+					has_variable = kongyun_var
+				}
+		}
+		AND = {
+		c:GBR ?= THIS 
+		c:GBR = {
+					has_variable = kongyun_var
+				}
+		}
+		AND = {
+		c:FRA ?= THIS 
+		c:FRA = {
+					has_variable = kongyun_var
+				}
+		}
+	}
+}
+	possible = { }
+    effect = {
+        remove_variable = kongyun_var
+		}
+	ai_chance = {
+		base = 2
+	}
+	
+}
+
+first_berlin_blockade_basic_law_button = {
+	name = "gaigefalv_button_key"
+	desc = "gaigefalv_button_key_desc"
+	
+	visible = { c:USA ?= THIS
+	}
+	possible = {
+		NOT = { has_variable = BRD_setup_var }
+		global_var:first_berlin_blockade_west_progress >= 100
+	}
+	effect = {
+		c:YSD ={ trigger_event = { id = west_germany_event.9 popup = yes }}
+		c:BAV ={ trigger_event = { id = west_germany_event.9 popup = yes }}
+		c:RHN ={ trigger_event = { id = west_germany_event.9 popup = yes }}
+		c:USA ={ trigger_event = { id = west_germany_event.9 popup = yes }}
+		c:GBR ={ trigger_event = { id = west_germany_event.9 popup = yes }}
+		c:FRA ={ trigger_event = { id = west_germany_event.9 popup = yes }}
+		
+	}
+	
+	ai_chance = {
+		base = 100
+	}
+}
+
+first_berlin_blockade_democracy_button = {
+	name = "yaoqinmingzhu_button_key"
+	desc = "yaoqinmingzhu_button_key_desc"
+	
+	visible = {
+	OR = {
+		c:USA ?= THIS 
+		c:FRA ?= THIS 
+		c:GBR ?= THIS 
+	}
+	}
+	possible = {
+		NOT = { has_variable = yaoqinmingzhu_var }
+	}
+	effect = {
+         set_variable = {
+			name = yaoqinmingzhu_var
+			value = 0
+            months = 1
+		}
+		c:YSD ={ 
+		change_relations = {
+				country = ROOT
+				value = 20
+			} }
+		c:BAV ={ 
+		change_relations = {
+				country = ROOT
+				value = 20
+			}}
+		c:RHN ={ 
+		change_relations = {
+				country = ROOT
+				value = 20
+			}}
+		trigger_event = { id = west_germany_event.8 popup = yes }
+		
+		
+	}
+	
+	ai_chance = {
+		base = 100
+	}
+	
+}
+
+first_berlin_blockade_military_assistance_button = {
+	name = "junshiyuanzhu_button_key"
+	desc = "junshiyuanzhu_button_key_desc"
+	
+	visible = {
+	OR = {
+		c:USA ?= THIS 
+		c:FRA ?= THIS 
+		c:GBR ?= THIS 
+	}
+	}
+	possible = {
+		NOT = { has_variable = junshiyuanzhu_var }
+	}
+	effect = {
+         set_variable = {
+			name = junshiyuanzhu_var
+			value = 0
+            months = 1
+		}
+		c:YSD ={ 
+		change_relations = {
+				country = ROOT
+				value = 20
+			} }
+		c:BAV ={ 
+		change_relations = {
+				country = ROOT
+				value = 20
+			}}
+		c:RHN ={ 
+		change_relations = {
+				country = ROOT
+				value = 20
+			}}
+		trigger_event = { id = west_germany_event.10 popup = yes }
+		
+		
+	}
+	
+	ai_chance = {
+		base = 100
+	}
+}
+
+first_berlin_blockade_USSR_talk_USA_button = {
+	name = "USSR_talk_button_key"
+	desc = "USSR_talk_button_key_desc"
+	
+	visible = {
+	OR = {
+		c:USA ?= THIS 
+	}
+	}
+	possible = {
+		NOT = { has_variable = USSR_talk_var }
+	}
+	effect = {
+         set_variable = {
+			name = USSR_talk_var
+			value = 0
+            months = 2
+		}
+		c:RUS ={ 
+		trigger_event = { id = west_germany_event_11.1 popup = yes }
+		}
+	}
+	
+	ai_chance = {
+		base = 100
+	}
+}
+
+first_berlin_blockade_USSR_talk_FRA_button = {
+	name = "USSR_talk_button_key"
+	desc = "USSR_talk_button_key_desc"
+	
+	visible = {
+	OR = {
+		c:FRA ?= THIS 
+	}
+	}
+	possible = {
+		NOT = { has_variable = USSR_talk_var }
+	}
+	effect = {
+         set_variable = {
+			name = USSR_talk_var
+			value = 0
+            months = 2
+		}
+		c:RUS ={ 
+		trigger_event = { id = west_germany_event_11.2 popup = yes }
+		}
+	}
+	
+	ai_chance = {
+		base = 100
+	}
+}
+
+first_berlin_blockade_USSR_talk_GBR_button = {
+	name = "USSR_talk_button_key"
+	desc = "USSR_talk_button_key_desc"
+	
+	visible = {
+	OR = {
+		c:GBR ?= THIS 
+	}
+	}
+	possible = {
+		NOT = { has_variable = USSR_talk_var }
+	}
+	effect = {
+         set_variable = {
+			name = USSR_talk_var
+			value = 0
+            months = 2
+		}
+		c:RUS ={ 
+		trigger_event = { id = west_germany_event_11.3 popup = yes }
+		}
+	}
+	
+	ai_chance = {
+		base = 100
+	}
+}

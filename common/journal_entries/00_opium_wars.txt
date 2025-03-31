@@ -1,1 +1,100 @@
-﻿
+﻿je_opium_obsession = { #毒品危机
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.27
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.27
+	}
+
+	complete = { #完成条件
+		NOT = { 
+			has_law = law_type:law_free_trade	#自由贸易
+			has_law = law_type:law_open_door	#门户开放																							
+		}
+		institution_investment_level = {
+			institution = institution_police
+			value >= 5
+		}			
+		institution_investment_level = {
+			institution = institution_health_system
+			value >= 5
+		}	
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_pharmaceutical_factory #医疗用品厂
+				level >= 10
+			}
+		}			
+	}
+
+    on_complete = { #如果完成
+		remove_variable = opium_wars_target
+		trigger_event = {
+			id = opium_wars.3
+		}
+	}
+
+	fail = { #失败条件
+			any_country = {
+				custom_tooltip = {
+					text = opiumwars_fail_tt
+					has_journal_entry = je_opium_wars
+				}
+				OR = {
+					has_diplomatic_pact = {
+						who = root
+						type = foreign_investment_rights
+					}
+					any_scope_state = {
+						is_treaty_port = yes
+						state_region = {
+							any_scope_state = {
+								owner = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_fail = { #如果失败
+		trigger_event = {
+			id = opium_wars.4
+		}
+	}
+
+	current_value = {
+		value = root.var:opium_wars_completion_tracker
+	}
+
+	goal_add_value = {
+		add = 60
+	}
+	
+    timeout = 18250
+    on_timeout = {
+		hidden_effect = { remove_modifier = opium_wars_addiction_modifier }
+		add_modifier = {
+			name = opium_wars_addiction_modifier
+			months = long_modifier_time
+		}
+		add_radicals = {
+			value = large_radicals
+		}		
+		if = {
+			limit = { has_journal_entry = je_warlord_china }
+			chi_remove_1_fragile_unity = yes
+		}	
+    }	
+
+	progressbar = yes
+
+	weight = 10000
+	should_be_pinned_by_default = yes
+}
+

@@ -1,0 +1,874 @@
+namespace = west_germany_event
+
+west_germany_event.1 = { 六国伦敦会议
+	type = country_event
+	orphan = yes
+	
+	title = BRD.1.t
+	desc = BRD.1.d
+	flavor = BRD.1.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	duration = 3
+	
+trigger = { 
+	trigger_if ={
+            limit ={ c:GBR  = { is_player= yes }
+	}
+			c:GBR ?= THIS
+ }
+    trigger_else_if ={
+            limit ={ c:FRA = { is_player= yes }
+	}
+			c:FRA ?= THIS
+ }
+    trigger_else ={
+            c:USA ?= THIS
+ } 	
+    NOT = { has_global_variable = brd_setup }
+}
+
+immediate = { 
+	c:USA = {
+		save_scope_as = usa_c_scope
+	}
+	c:GBR = {
+		save_scope_as = uk_c_scope
+	}
+	c:FRA = {
+		save_scope_as = fra_c_scope
+	}
+	c:PRC = {
+		save_scope_as = prc_c_scope
+	}
+	set_global_variable = brd_setup
+}
+	option = {
+		name = BRD.1.a
+            c:USA ={
+            change_relations = {
+				country = c:RUS
+				value = 20
+			}
+	}
+	c:FRA ={
+            change_relations = {
+				country = c:RUS
+				value = 20
+			}
+	}
+	c:GBR ={
+            change_relations = {
+				country = c:RUS
+				value = 20
+			}
+	}
+		ai_chance = {
+         base = 50
+		}
+	}
+
+	option = {
+		name = BRD.1.b
+		add_modifier = {
+			name = the_country_of_our_ancestors_modifier
+			years = 1
+		}
+            c:USA ={
+            change_relations = {
+				country = c:RUS
+				value = -20
+			}
+	    }
+	c:RUS ={ trigger_event = { id = west_germany_event.2 popup = yes }}
+	ai_chance = {
+         base = 50
+		}
+	}
+}
+
+west_germany_event.2 = { #来自西方的背叛
+	type = country_event
+	orphan = yes
+	
+	title = DDR.1.t
+	desc = DDR.1.d
+	flavor = DDR.1.f
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/DDR.dds"
+
+	duration = 3
+	
+	trigger = { 
+		c:RUS ?= THIS
+	}
+
+	option = {
+		name = DDR.1.a
+		if ={
+            limit ={ c:GBR  = { is_player= yes }
+	}
+			c:GBR ={ trigger_event = { id = west_germany_event.3 popup = yes }}
+ }
+    else_if ={
+            limit ={ c:FRA = { is_player= yes }
+	}
+			c:FRA ={ trigger_event = { id = west_germany_event.3 popup = yes }}
+ }
+    else ={
+            c:USA ={ trigger_event = { id = west_germany_event.3 popup = yes }}
+ } 
+ ai_chance = {
+         base = 80
+		}
+	}
+
+	option = {
+		name = DDR.1.b
+	if ={
+            limit ={ c:GBR  = { is_player= yes }
+	}
+			c:GBR ={ trigger_event = { id = west_germany_event.4 popup = yes }}
+ }
+    else_if ={
+            limit ={ c:FRA = { is_player= yes }
+	}
+			c:FRA ={ trigger_event = { id = west_germany_event.4 popup = yes }}
+ }
+    else ={
+            c:USA ={ trigger_event = { id = west_germany_event.4 popup = yes }}
+ } 
+ ai_chance = {
+         base = 20
+		}
+	}
+}
+
+west_germany_event.3 = { #苏联封锁
+	type = country_event
+	placement = root
+	duration = 3
+
+	title = BRD.3.t
+	desc = BRD.3.d
+	flavor = BRD.3.f
+
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+		if ={
+            limit ={ c:GBR  = { is_player= yes }
+	}
+			c:GBR ?= THIS
+ }
+    else_if ={
+            limit ={ c:FRA = { is_player= yes }
+	}
+			c:FRA ?= THIS
+ }
+    else ={
+            c:USA ?= THIS
+ } 
+	}
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = BRD.3.a
+		s:STATE_BRANDENBURG = {
+			set_owner_of_provinces = {
+				country = c:PRU
+			}
+	}
+}
+
+	option = {
+		name = BRD.3.b
+    c:USA ={ add_journal_entry = {
+            type = je_first_berlin_blockade
+        }}
+	c:GBR ={ add_journal_entry = {
+            type = je_first_berlin_blockade
+        }}
+	c:FRA ={ add_journal_entry = {
+            type = je_first_berlin_blockade
+        } }
+	c:RHN ={ add_journal_entry = {
+            type = je_first_berlin_blockade
+        }}
+	c:BAV ={ add_journal_entry = {
+            type = je_first_berlin_blockade
+        }}
+	c:YSD ={ add_journal_entry = {
+            type = je_first_berlin_blockade
+        } }
+	}
+}
+
+west_germany_event.4 = { #苏联让步
+	type = country_event
+	orphan = yes
+	
+	title = BRD.4.t
+	desc = BRD.4.d
+	flavor = BRD.4.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	duration = 3
+	
+	trigger = { 			
+	}
+
+	option = {
+		name = BRD.4.a
+		add_modifier = {
+			name = the_country_of_our_ancestors_modifier
+			years = 1
+		}
+			if ={
+            limit ={
+                OR ={
+                    AND ={
+                        exists =C:RHN
+                        this=c:RHN
+                        c:RHN ?= {is_player= yes}
+			}
+                    AND ={
+                        exists =C:YSD
+                        this=c:YSD
+                        c:YSD ?= {is_player= yes}
+			}
+		}
+	}
+			play_as = c:BAV
+	}
+            c:BAV ={
+            remove_primary_culture = cu:south_german
+            add_primary_culture = cu:north_german
+			set_state_religion = rel:protestant #新教
+		          annex = c:BAV										
+		          annex = c:RHN
+				  annex = c:YSD 				  
+				  make_independent = yes
+	set_capital = STATE_NORTH_RHINE
+		create_character = {
+			ruler = yes
+			}
+		create_character = {
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+		}
+			change_tag = BRD
+	}
+		ai_chance = {
+         base = 50
+		}
+	}
+}
+
+west_germany_event.5 = { #英法美胜利
+	type = country_event
+	orphan = yes
+	
+	title = BRD.5.t
+	desc = BRD.5.d
+	flavor = BRD.5.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	duration = 3
+	
+	trigger = { 
+		NOT ={ has_global_variable = first_berlin_blockade_end  }
+	}
+
+    immediate = {
+    set_global_variable = { name = first_berlin_blockade_end }
+	}
+	option = {
+		name = BRD.5.a
+		add_modifier = {
+			name = the_country_of_our_ancestors_modifier
+			years = 1
+		}
+			if ={
+            limit ={
+                OR ={
+                    AND ={
+                        exists =C:RHN
+                        this=c:RHN
+                        c:RHN ?= {is_player= yes}
+			}
+                    AND ={
+                        exists =C:YSD
+                        this=c:YSD
+                        c:YSD ?= {is_player= yes}
+			}
+		}
+	}
+			play_as = c:BAV
+	}
+            c:BAV ={
+            remove_primary_culture = cu:south_german
+            add_primary_culture = cu:north_german
+			set_state_religion = rel:protestant #新教
+		          annex = c:BAV										
+		          annex = c:RHN
+				  annex = c:YSD
+	 		change_tag = BRD 				  
+				  make_independent = yes
+	set_capital = STATE_NORTH_RHINE
+		create_character = {
+			ruler = yes
+			}
+		create_character = {
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+		}
+	}
+		ai_chance = {
+         base = 50
+		}
+	}
+}
+
+west_germany_event.6 = { #失败
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.6.t
+	desc = BRD.6.d
+	flavor = BRD.6.f
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+		if ={
+            limit ={ c:GBR  = { is_player= yes }
+	}
+			c:GBR ?= THIS
+ }
+    else_if ={
+            limit ={ c:FRA = { is_player= yes }
+	}
+			c:FRA ?= THIS
+ }
+    else ={
+            c:USA ?= THIS
+ } 
+	}
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = BRD.6.a
+		s:STATE_BRANDENBURG = {
+			set_owner_of_provinces = {
+				country = c:PRU
+			}
+	    }
+     }
+}
+
+west_germany_event.8= { #邀请民主人士
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.8.t
+	desc = BRD.8.d
+	flavor = BRD.8.f
+
+	event_image = { #事件图像
+		video = "unspecific_world_fair"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+	}
+	
+	immediate = {
+		
+	}
+
+	option = {
+		name = BRD.8.a
+		change_global_variable = {
+			name = first_berlin_blockade_west_progress
+			add = 1
+		}
+		c:YSD ={ first_berlin_blockade_west_progress_add = yes }
+		c:BAV ={ first_berlin_blockade_west_progress_add = yes }
+		c:RHN ={ first_berlin_blockade_west_progress_add = yes }
+		c:USA ={ first_berlin_blockade_west_progress_add = yes }
+		c:GBR ={ first_berlin_blockade_west_progress_add = yes }
+		c:FRA ={ first_berlin_blockade_west_progress_add = yes }
+     }
+}
+
+west_germany_event.9= { #立宪
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.9.t
+	desc = BRD.9.d
+	flavor = BRD.9.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = BRD.9.a
+		set_global_variable = { name = BRD_setup_var }
+    }
+}
+
+west_germany_event.10= { #军事援助
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.10.t
+	desc = BRD.10.d
+	flavor = BRD.10.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = BRD.10.a
+		create_diplomatic_pact = { country = c:BAV type = military_assistance }
+		create_diplomatic_pact = { country = c:YSD type = military_assistance }
+		create_diplomatic_pact = { country = c:RHN type = military_assistance }
+		
+		change_global_variable = {
+			name = first_berlin_blockade_west_progress
+			add = 1
+		}
+		c:YSD ={ first_berlin_blockade_west_progress_add = yes }
+		c:BAV ={ first_berlin_blockade_west_progress_add = yes }
+		c:RHN ={ first_berlin_blockade_west_progress_add = yes }
+		c:USA ={ first_berlin_blockade_west_progress_add = yes }
+		c:GBR ={ first_berlin_blockade_west_progress_add = yes }
+		c:FRA ={ first_berlin_blockade_west_progress_add = yes }
+    }
+}
+
+west_germany_event.12= { #苏联同意
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.12.t
+	desc = BRD.12.d
+	flavor = BRD.12.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = BRD.12.a
+		change_global_variable = {
+			name = first_berlin_blockade_west_progress_2
+			add = 2
+		}
+		c:YSD ={ first_berlin_blockade_west_progress_add = yes }
+		c:BAV ={ first_berlin_blockade_west_progress_add = yes }
+		c:RHN ={ first_berlin_blockade_west_progress_add = yes }
+		c:USA ={ first_berlin_blockade_west_progress_add = yes }
+		c:GBR ={ first_berlin_blockade_west_progress_add = yes }
+		c:FRA ={ first_berlin_blockade_west_progress_add = yes }
+    }
+}
+
+west_germany_event.13= { #苏联拒绝
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.13.t
+	desc = BRD.13.d
+	flavor = BRD.13.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = BRD.13.a
+		 change_relations = {
+				country = c:RUS
+				value = -10
+			}
+    }
+}
+
+namespace = west_germany_event_11
+
+west_germany_event_11.1= { #苏联对话
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.11.1.t
+	desc = BRD.11.1.d
+	flavor = BRD.11.1.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = BRD.11.1.a
+
+		c:USA ={ 
+		trigger_event = { id = west_germany_event.12 popup = yes }
+		}
+		change_relations = {
+				country = c:USA
+				value = 10
+			}
+    }
+	option = {
+		name = BRD.11.1.b
+
+		c:USA ={ 
+		trigger_event = { id = west_germany_event.13 popup = yes }
+		}
+		change_relations = {
+				country = c:USA
+				value = -10
+			}
+    }
+}
+
+west_germany_event_11.2= { #苏联对话
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.11.2.t
+	desc = BRD.11.2.d
+	flavor = BRD.11.2.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = BRD.11.2.a
+
+		c:FRA ={ 
+		trigger_event = { id = west_germany_event.12 popup = yes }
+		}
+		change_relations = {
+				country = c:FRA
+				value = 10
+			}
+    }
+	option = {
+		name = BRD.11.2.b
+
+		c:FRA ={ 
+		trigger_event = { id = west_germany_event.13 popup = yes }
+		}
+		change_relations = {
+				country = c:FRA
+				value = -10
+			}
+    }
+}
+
+west_germany_event_11.3= { #苏联对话
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD.11.3.t
+	desc = BRD.11.3.d
+	flavor = BRD.11.3.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	option = {
+		name = BRD.11.3.a
+
+		c:GBR ={ 
+		trigger_event = { id = west_germany_event.12 popup = yes }
+		}
+		change_relations = {
+				country = c:GBR
+				value = 10
+			}
+    }
+	option = {
+		name = BRD.11.3.b
+
+		c:GBR ={ 
+		trigger_event = { id = west_germany_event.13 popup = yes }
+		}
+
+		change_relations = {
+				country = c:GBR
+				value = -10
+			}
+    }
+}
+
+namespace = west_germany_event_air_transport
+west_germany_event_air_transport.1 = { #空运
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD_air_transport.1.t
+	desc = BRD_air_transport.1.d
+	flavor = BRD_air_transport.1.f
+
+	event_image = { #事件图像
+		texture  = "gfx/event_pictures/空运.dds"
+	}
+    on_opened_soundeffect = "event:/SFX/Events/unspecific/airplane"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = { 
+		c:USA = {
+				has_variable = kongyun_var
+				}
+		OR = {
+			c:BAV ?= this
+			c:YSD ?= this
+			c:RHN ?= this
+		}
+	}
+	
+	immediate = {		
+	}
+
+	option = {
+		name = BRD_air_transport.1.a
+	change_global_variable = {
+			name = first_berlin_blockade_west_progress
+			add = 1
+		}	
+		c:YSD ={ first_berlin_blockade_west_progress_add = yes }
+		c:BAV ={ first_berlin_blockade_west_progress_add = yes }
+		c:RHN ={ first_berlin_blockade_west_progress_add = yes }
+		c:USA ={ first_berlin_blockade_west_progress_add = yes }
+		c:GBR ={ first_berlin_blockade_west_progress_add = yes }
+		c:FRA ={ first_berlin_blockade_west_progress_add = yes }
+    }
+}
+
+west_germany_event_air_transport.2 = { #空运
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD_air_transport.2.t
+	desc = BRD_air_transport.2.d
+	flavor = BRD_air_transport.2.f
+
+	event_image = { #事件图像
+		texture  = "gfx/event_pictures/空运.dds"
+	}
+    on_opened_soundeffect = "event:/SFX/Events/unspecific/airplane"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = { 
+		c:FRA = {
+				has_variable = kongyun_var
+				}
+		OR = {
+			c:BAV ?= this
+			c:YSD ?= this
+			c:RHN ?= this
+		}
+	}
+	
+	immediate = {		
+	}
+
+	option = {
+		name = BRD_air_transport.2.a
+	change_global_variable = {
+			name = first_berlin_blockade_west_progress
+			add = 2
+		}	
+		c:YSD ={ first_berlin_blockade_west_progress_add = yes }
+		c:BAV ={ first_berlin_blockade_west_progress_add = yes }
+		c:RHN ={ first_berlin_blockade_west_progress_add = yes }
+		c:USA ={ first_berlin_blockade_west_progress_add = yes }
+		c:GBR ={ first_berlin_blockade_west_progress_add = yes }
+		c:FRA ={ first_berlin_blockade_west_progress_add = yes }
+    }
+}
+
+west_germany_event_air_transport.3 = { #空运
+	type = country_event
+	placement = root
+	duration = 6
+
+	title = BRD_air_transport.3.t
+	desc = BRD_air_transport.3.d
+	flavor = BRD_air_transport.3.f
+
+	event_image = { #事件图像
+		texture  = "gfx/event_pictures/空运.dds"
+	}
+    on_opened_soundeffect = "event:/SFX/Events/unspecific/airplane"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	trigger = { 
+		c:GBR = {
+				has_variable = kongyun_var
+				}
+		OR = {
+			c:BAV ?= this
+			c:YSD ?= this
+			c:RHN ?= this
+		}
+	}
+	
+	immediate = {		
+	}
+
+	option = {
+		name = BRD_air_transport.3.a
+	change_global_variable = {
+			name = first_berlin_blockade_west_progress
+			add = 3
+		}	
+		c:YSD ={ first_berlin_blockade_west_progress_add = yes }
+		c:BAV ={ first_berlin_blockade_west_progress_add = yes }
+		c:RHN ={ first_berlin_blockade_west_progress_add = yes }
+		c:USA ={ first_berlin_blockade_west_progress_add = yes }
+		c:GBR ={ first_berlin_blockade_west_progress_add = yes }
+		c:FRA ={ first_berlin_blockade_west_progress_add = yes }
+    }
+}

@@ -85,6 +85,15 @@ colony_breakup.5 = { # 法国日志失败
 	duration = 3    
 
     immediate = {
+        c:TUN = { #突尼斯      
+			activate_law = law_type:law_semi_presidential_republic #改变法律为半总统共和制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护							                
+			remove_primary_culture = cu:french
+			add_primary_culture = cu:maghrebi
+			add_primary_culture = cu:berber		
+			set_state_religion = rel:sunni    
+        }       		
         create_country = { tag = MTY origin = c:AOF
 			state = s:STATE_MAURITANIA.region_state:AOF
 			state = s:STATE_INNER_MAURITANIA.region_state:AOF
@@ -143,13 +152,175 @@ colony_breakup.501 = { # 英国日志失败
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
     duration = 3
-    immediate = {
+    immediate = {              
+        c:BIC = { #印度         
+		    change_tag = HND 
+            activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护							                
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:hindustani
+			set_state_religion = rel:hindu            
+        }            
+        c:NIG = { #尼日利亚         
+			activate_law = law_type:law_presidential_republic #改变法律为总统共和制   
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护							                
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:hausa
+			add_primary_culture = cu:yoruba
+			add_primary_culture = cu:ibo				
+			set_state_religion = rel:sunni    
+        }            		
+        c:UGA = { #乌干达         
+			activate_law = law_type:law_presidential_republic #改变法律为总统共和制   
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护							                
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:baganda
+			add_primary_culture = cu:luo
+			add_primary_culture = cu:lacustrine_bantu					
+			set_state_religion = rel:catholic        
+        }           
+        c:SAF = { #南非    
+            remove_primary_culture = cu:british   
+		activate_law = law_type:law_presidential_republic #改变法律为总统共和制     			                   
+        }       		
+        c:TAN = { #坦桑尼亚     
+            add_primary_culture = cu:lacustrine_bantu #大湖班图
+            add_primary_culture = cu:sukuma #苏库马			
+            remove_primary_culture = cu:british 
+		activate_law = law_type:law_presidential_republic #改变法律为总统共和制                     
+        }    		         
+        c:BUR = { #缅甸         
+            remove_primary_culture = cu:british 
+			set_state_religion = rel:theravada #上座部佛教  
+		create_character = {
+			#昂山		
+			dna = ecchi_dna_wellington_koo	
+			historical = yes
+			first_name = "HM1246"
+			last_name = "Aung"		
+			ruler = yes						
+			ig_leader = yes #利益集团领袖
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_1			
+			birth_date = 1915.2.13			
+			culture = cu:burmese
+			religion = rel:theravada #上座部佛教
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_liberal_leader #民主主义者
+			traits = {
+        		expert_political_operator
+        		charismatic
+        		inspirational_orator	
+				pious #虔诚							
+			}			
+		}			               
+        }            
+        c:CEY = { #斯里兰卡       
+            add_primary_culture = cu:sinhala #僧伽罗              
+            remove_primary_culture = cu:british 
+			set_state_religion = rel:theravada #佛教                      
+        }                 
+        c:MDV = { #马尔代夫         
+            remove_primary_culture = cu:british 
+			set_state_religion = rel:sunni #逊尼派                     
+        }                 
+        c:SEL = { #新加坡         
+            add_primary_culture = cu:han
+            remove_primary_culture = cu:british 
+			set_state_religion = rel:mahayana #大乘佛教    
+		create_character = { #李光耀
+			dna = ecchi_dna_du_yuesheng
+			first_name = HM0475
+			last_name = Li
+			birth_date = 1923.9.16
+			culture = cu:hakka		
+			religion = rel:atheist #无神论			
+			historical = yes
+            ig_leader = yes #利益集团领袖
+    		interest_group = ig_industrialists #实业家
+			ideology = ideology_state_capitalism #国家资本主义者
+			traits = {
+				experienced_economist #有经验的经济学家									
+				demagogue #煽动者
+				literary #文学家
+				strong #健硕				
+			}
+		}			                  
+        }    
+        c:SUD = { #苏丹
+            add_primary_culture = cu:sudanese
+            add_primary_culture = cu:beja
+            add_primary_culture = cu:bedouin                                          
+            remove_primary_culture = cu:british            
+			set_state_religion = rel:sunni #逊尼派                     
+        }            
+        c:JOH = { #马来西亚 
+            add_primary_culture = cu:malay		      
+            remove_primary_culture = cu:british 
+			set_state_religion = rel:sunni #逊尼派  
+		activate_law = law_type:law_monarchy #改变法律为君主制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护							                   
+        }           		             
 		every_subject_or_below = {
-			make_independent = yes
+			make_independent = yes #所有殖民政府独立
+            remove_primary_culture = cu:scottish   
+		every_scope_character = {
+			limit = {
+				OR = {
+					culture = cu:british
+					culture = cu:scottish
+				}
+			}
+			kill_character = yes
+		}            
 		} 
+		create_diplomatic_pact = {
+			country = c:AST #澳大利亚
+			type = personal_union #共主联邦
+		}     
+		create_diplomatic_pact = {
+			country = c:NZL #新西兰
+			type = personal_union #共主联邦
+		}    
+		create_diplomatic_pact = {
+			country = c:CAN #加拿大 
+			type = personal_union #共主联邦
+		}    
+			c:TAN ?= { join_power_bloc = c:GBR }
+			create_country = {
+				tag = ISR #以色列
+				origin = this
+				state = s:STATE_PALESTINE.region_state:GBR			
+			}		  
+			c:ISR = { save_scope_as = scope_ISR
+		activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+		activate_law = law_type:law_universal_suffrage #改变法律为普选制					
+		activate_law = law_type:law_laissez_faire #改变法律为自由放任
+		activate_law = law_type:law_ethnostate #改变法律为民族国家	        			
+		activate_law = law_type:law_state_religion #改变法律为国教至上	
+		activate_law = law_type:law_womens_suffrage #改变法律为妇女选举权		
+		set_relations = { country = c:GBR value = 0 }		
+		set_relations = { country = c:USA value = 50 }
+		set_relations = { country = c:RUS value = 50 }
+		add_modifier = {
+			name = quedingwaijiaozhengce_modifier
+			months = 360
+		}
+		add_modifier = {
+			name = aid_from_the_soviet_union #苏联援助	
+			years = 10					
+		}						
+			 }		                       
     }
     option = {
         name = colony_breakup.5.a
         default_option = yes
+        remove_modifier = gbr_colony_india_modifier
+        remove_modifier = gbr_colony_africa_modifier
+        remove_modifier = gbr_colony_middle_east_modifier
     }   
 }

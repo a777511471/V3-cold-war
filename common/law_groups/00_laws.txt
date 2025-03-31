@@ -37,6 +37,15 @@ lawgroup_citizenship = {
 	regressive_movement_chance = 0.25
 }
 
+ lawgroup_caste_hegemony = { #种姓制度
+	law_group_category = power_structure
+	affected_by_regime_change = yes
+	linked_social_hierarchy = british_indian_caste_system
+	
+	progressive_movement_chance = 2
+	regressive_movement_chance = 0.25
+}
+
 lawgroup_church_and_state = {
 	law_group_category = power_structure
 	
@@ -137,6 +146,13 @@ lawgroup_research_system = { #科研体系
 }
 
 lawgroup_health_system = {
+	law_group_category = economy
+	
+	progressive_movement_chance = 2.5
+	regressive_movement_chance = 0.25			
+}
+
+lawgroup_ecological_protection = { #生态保护
 	law_group_category = economy
 	
 	progressive_movement_chance = 2.5

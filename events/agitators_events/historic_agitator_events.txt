@@ -1085,7 +1085,7 @@ historical_agitators.11 = { #Bakunin
 		scope:historic_agitator_scope = {
 			add_modifier = {
 				name = modifier_bakunin_exiled_properly
-				months = long_modifier_time
+				years = 10
 			}
 			exile_character = yes
 		}
@@ -1166,7 +1166,7 @@ historical_agitators.12 = { #Trotsky
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = modifier_trotsky_in_exile
-				months = long_modifier_time
+				years = 10
 				is_decaying = yes
 			}
 		}
@@ -1368,7 +1368,7 @@ historical_agitators.14 = { #Dickens
 		}
 		add_modifier = {
 			name = modifier_dickensian_reading_campaign
-			months = long_modifier_time
+			years = 10
 		}
 		scope:historic_agitator_scope = {
 			add_modifier = {
@@ -1452,7 +1452,7 @@ historical_agitators.15 = { #Luxemburg
 		scope:historic_agitator_scope = {
 			add_modifier = {
 				name = modifier_luxemburg_on_the_run
-				months = long_modifier_time
+				years = 10
 			}
 		}
 	}
@@ -1670,7 +1670,7 @@ historical_agitators.17 = { #Boulanger
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = modifier_fired_boulanger
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		add_radicals = {

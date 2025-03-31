@@ -1,0 +1,111 @@
+namespace = bic
+
+bic.1 = { #领导权问题
+	type = country_event
+	orphan = yes
+	
+	title = bic.1.t
+	desc = bic.1.d
+	flavor = bic.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/paper.dds"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = bic.1.a #尼赫鲁
+		default_option = yes
+		create_character = { #印度副总理尼赫鲁
+		 	ruler = yes
+    		first_name = Jawaharlal
+    		last_name = Nehru
+   			historical = yes
+    		culture = cu:kashmir #克什米尔
+    		female = no
+			religion = rel:atheist #无神论
+			ig_leader = yes #利益集团领袖
+			ideology = ideology_state_capitalism #国家资本主义者
+    		dna = dna_jawaharlal_nehru
+    		interest_group = ig_industrialists #实业家
+    		birth_date = 1889.11.14
+    		traits = {
+        		expert_political_operator
+        		charismatic
+        		inspirational_orator
+    		}   
+		}
+
+		create_character = {
+			#甘地
+			first_name = Mohandas
+			last_name = Gandhi
+			historical = yes
+			female = no
+			ig_leader = yes #利益集团领袖
+			culture = cu:gujarati
+			religion = rel:hindu
+			interest_group = ig_intelligentsia #知识分子
+    		dna = dna_mahatma_gandhi
+			ideology = ideology_humanitarian
+			birth_date = 1869.10.2
+			traits = {
+				demagogue #煽动者
+				hedonist #享乐主义者
+				pious #虔诚
+			}	
+		}
+	}
+
+	option = {
+		name = bic.1.b #甘地
+		create_character = {
+			#甘地
+		 	ruler = yes            
+			first_name = Mohandas
+			last_name = Gandhi
+			historical = yes
+			female = no
+			ig_leader = yes #利益集团领袖
+			culture = cu:gujarati
+			religion = rel:hindu
+			interest_group = ig_intelligentsia #知识分子
+    		dna = dna_mahatma_gandhi
+			ideology = ideology_humanitarian
+			birth_date = 1869.10.2
+			traits = {
+				demagogue #煽动者
+				hedonist #享乐主义者
+				pious #虔诚
+			}	
+		}
+
+		create_character = { #印度副总理尼赫鲁
+    		first_name = Jawaharlal
+    		last_name = Nehru
+   			historical = yes
+    		culture = cu:kashmir #克什米尔
+    		female = no
+			religion = rel:atheist #无神论
+			ig_leader = yes #利益集团领袖
+			ideology = ideology_state_capitalism #国家资本主义者
+    		dna = dna_jawaharlal_nehru
+    		interest_group = ig_industrialists #实业家
+    		birth_date = 1889.11.14
+    		traits = {
+        		expert_political_operator
+        		charismatic
+        		inspirational_orator
+    		}   
+		}
+	}    
+}

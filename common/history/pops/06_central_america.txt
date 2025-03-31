@@ -16,11 +16,11 @@ POPS = {
 		}
 		region_state:GTM = {
 			create_pop = {
-				culture = central_american
-				size = 2100000
+				culture = mayan
+				size = 2600000
 			}
 			create_pop = {
-				culture = mayan
+				culture = central_american
 				size = 656800
 			}
 		}
@@ -100,6 +100,14 @@ POPS = {
 				size = 3610000
 			}
 			create_pop = {
+				culture = yankee
+				size = 22004
+			}
+			create_pop = {
+				culture = dixie
+				size = 22004
+			}			
+			create_pop = {
 				culture = spanish
 				size = 22004
 			}
@@ -107,6 +115,19 @@ POPS = {
 				culture = han
 				size = 22004
 			}
+			create_pop = {
+				culture = han
+				religion = catholic			
+				size = 22004
+			}			
+			create_pop = {
+				culture = afro_caribbean
+				size = 22004
+			}			
+			create_pop = {
+				culture = afro_caribeno
+				size = 22004
+			}	
 		}
 	}
 }

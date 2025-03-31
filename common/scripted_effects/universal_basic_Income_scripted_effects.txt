@@ -1,0 +1,553 @@
+universal_basic_Income_scripted_effects = {	
+	#remove_modifier = universal_basic_Income_effect
+	#remove_modifier = universal_basic_Income_expenditures
+	
+	
+}
+universal_basic_expenditures_scripted_effects = {
+	#save_scope_as = universal_basic_expenditures_scripted
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect
+		}
+		#remove_modifier = universal_basic_Income_effect
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures
+		}
+		remove_modifier = universal_basic_Income_expenditures
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect2
+		}
+		#remove_modifier = universal_basic_Income_effect2
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures2
+		}
+		remove_modifier = universal_basic_Income_expenditures2
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect3
+		}
+		#remove_modifier = universal_basic_Income_effect3
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures3
+		}
+		remove_modifier = universal_basic_Income_expenditures3
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect4
+		}
+		#remove_modifier = universal_basic_Income_effect4
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures4
+		}
+		remove_modifier = universal_basic_Income_expenditures4
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect5
+		}
+		#remove_modifier = universal_basic_Income_effect5
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures5
+		}
+		remove_modifier = universal_basic_Income_expenditures5
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect6
+		}
+		#remove_modifier = universal_basic_Income_effect6
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures6
+		}
+		remove_modifier = universal_basic_Income_expenditures6
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures7
+		}
+		remove_modifier = universal_basic_Income_expenditures7
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures8
+		}
+		remove_modifier = universal_basic_Income_expenditures8
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures9
+		}
+		remove_modifier = universal_basic_Income_expenditures9
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures10
+		}
+		remove_modifier = universal_basic_Income_expenditures10
+	}
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_expenditures11
+		}
+		remove_modifier = universal_basic_Income_expenditures11
+	}
+}
+#universal_basic_Income_scripted_effects1 = {
+#	if = {
+#		limit = {
+#			has_modifier = universal_basic_Income_effect
+#		}
+#		#universal_basic_Income_scripted_effects = yes
+#		add_modifier = {
+#			name = universal_basic_Income_effect
+#			months = 2
+#		}
+#		add_modifier = {
+#			name = universal_basic_Income_expenditures
+#			months = 2
+#			multiplier = value_low_pop_rbpw_mult_wip
+#		}
+#		
+#	}
+#}
+#universal_basic_Income_scripted_effects2 = {
+#	if = {
+#		limit = {
+#			has_modifier = universal_basic_Income_effect2
+#		}
+#		#universal_basic_Income_scripted_effects = yes
+#		add_modifier = {
+#			name = universal_basic_Income_effect2
+#			months = 2
+#		}
+#		add_modifier = {
+#			name = universal_basic_Income_expenditures2
+#			months = 2
+#			multiplier = value_low_pop_rbpw_mult_wip
+#		}
+#		
+#	}
+#}
+#universal_basic_Income_scripted_effects3 = {
+#	if = {
+#		limit = {
+#			has_modifier = universal_basic_Income_effect3
+#		}
+#		#universal_basic_Income_scripted_effects = yes
+#		add_modifier = {
+#			name = universal_basic_Income_effect3
+#			months = 2
+#		}
+#		add_modifier = {
+#			name = universal_basic_Income_expenditures3
+#			months = 2
+#			multiplier = value_low_pop_rbpw_mult_wip
+#		}
+#		
+#	}
+#}
+#universal_basic_Income_scripted_effects4 = {
+#	if = {
+#		limit = {
+#			has_modifier = universal_basic_Income_effect4
+#		}
+#		#universal_basic_Income_scripted_effects = yes
+#		add_modifier = {
+#			name = universal_basic_Income_effect4
+#			months = 2
+#		}
+#		add_modifier = {
+#			name = universal_basic_Income_expenditures4
+#			months = 2
+#			multiplier = value_low_pop_rbpw_mult_wip
+#		}
+#		
+#	}
+#}
+#universal_basic_Income_scripted_effects5 = {
+#	if = {
+#		limit = {
+#			has_modifier = universal_basic_Income_effect5
+#		}
+#		#universal_basic_Income_scripted_effects = yes
+#		add_modifier = {
+#			name = universal_basic_Income_effect5
+#			months = 2
+#		}
+#		add_modifier = {
+#			name = universal_basic_Income_expenditures5
+#			months = 2
+#			multiplier = value_low_pop_rbpw_mult_wip
+#		}
+#		
+#	}
+#}
+#universal_basic_Income_scripted_effects6 = {
+#	if = {
+#		limit = {
+#			has_modifier = universal_basic_Income_effect6
+#		}
+#		#universal_basic_Income_scripted_effects = yes
+#		add_modifier = {
+#			name = universal_basic_Income_effect6
+#			months = 2
+#		}
+#		add_modifier = {
+#			name = universal_basic_Income_expenditures6
+#			months = 2
+#			multiplier = value_low_pop_rbpw_mult_wip
+#		}
+#		
+#	}
+#}set_variable
+#remove_variable
+universal_basic_Income_scripted_effects_on1 = {
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_1
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 0.25
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_2
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip2
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 0.5
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_3
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip3
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 0.75
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_4
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip4
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 1.25
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_5
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip5
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 1.875
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_6
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip6
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 2.5
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_7
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip7
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 3.125
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_8
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip8
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 3.75
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_9
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip9
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 4.375
+		}
+		
+	}
+	if = {
+		limit = {
+			has_variable = universal_basic_Income_variable_10
+		}
+		#universal_basic_Income_scripted_effects = yes
+		#remove_modifier = universal_basic_Income_expenditures
+		add_modifier = {
+			name = universal_basic_Income_expenditures
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip10
+		}
+		add_modifier = {
+			name = universal_basic_Income_effect
+			months = 2
+			multiplier = 5
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on2 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect2
+		}
+		#universal_basic_Income_scripted_effects = yes
+		}
+		remove_modifier = universal_basic_Income_expenditures2
+		add_modifier = {
+			name = universal_basic_Income_expenditures2
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on3 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect3
+		}
+		remove_modifier = universal_basic_Income_expenditures3
+		#universal_basic_Income_scripted_effects = yes
+		add_modifier = {
+			name = universal_basic_Income_expenditures3
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on4 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect4
+		}
+		remove_modifier = universal_basic_Income_expenditures4
+		#universal_basic_Income_scripted_effects = yes
+		add_modifier = {
+			name = universal_basic_Income_expenditures4
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on5 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect5
+		}
+		remove_modifier = universal_basic_Income_expenditures5
+		#universal_basic_Income_scripted_effects = yes
+		add_modifier = {
+			name = universal_basic_Income_expenditures5
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on6 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect6
+		}
+		remove_modifier = universal_basic_Income_expenditures6
+		#universal_basic_Income_scripted_effects = yes
+		add_modifier = {
+			name = universal_basic_Income_expenditures6
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on7 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect7
+		}
+		remove_modifier = universal_basic_Income_expenditures7
+		#universal_basic_Income_scripted_effects = yes
+		add_modifier = {
+			name = universal_basic_Income_expenditures7
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on8 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect8
+		}
+		remove_modifier = universal_basic_Income_expenditures8
+		#universal_basic_Income_scripted_effects = yes
+		add_modifier = {
+			name = universal_basic_Income_expenditures8
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on9 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect9
+		}
+		remove_modifier = universal_basic_Income_expenditures9
+		#universal_basic_Income_scripted_effects = yes
+		add_modifier = {
+			name = universal_basic_Income_expenditures9
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on10 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect10
+		}
+		#universal_basic_Income_scripted_effects = yes
+		remove_modifier = universal_basic_Income_expenditures10
+		add_modifier = {
+			name = universal_basic_Income_expenditures10
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}
+universal_basic_Income_scripted_effects_on11 = {
+	if = {
+		limit = {
+			has_modifier = universal_basic_Income_effect11
+		}
+		#universal_basic_Income_scripted_effects = yes
+		remove_modifier = universal_basic_Income_expenditures11
+		add_modifier = {
+			name = universal_basic_Income_expenditures11
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		
+	}
+}

@@ -1,0 +1,44 @@
+﻿capital_construction_camp_base_level_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	state_building_construction_camp_max_level_add = 1
+}
+
+private_construction_add_5_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	country_private_construction_allocation_mult = 0.05
+}
+
+private_construction_add_10_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	country_private_construction_allocation_mult = 0.1
+}
+
+private_construction_add_15_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	country_private_construction_allocation_mult = 0.15
+}
+
+private_construction_add_20_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	country_private_construction_allocation_mult = 0.2
+}
+
+private_construction_add_30_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	country_private_construction_allocation_mult = 0.3
+}
+
+private_construction_add_40_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	country_private_construction_allocation_mult = 0.4
+}
+
+private_construction_add_45_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	country_private_construction_allocation_mult = 0.45
+}
+
+private_construction_add_60_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_urbanization_positive.dds
+	country_private_construction_allocation_mult = 0.6
+}

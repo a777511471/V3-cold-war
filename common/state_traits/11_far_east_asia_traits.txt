@@ -40,15 +40,6 @@ state_trait_pampas = { #潘帕斯草原
 	}
 }
 
-state_trait_the_songhua_river = { #松花江
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	
-	modifier = {
-		state_infrastructure_add = 10
-		building_group_bg_agriculture_throughput_add = 0.05
-	}
-}
-
 state_trait_the_pamirs = { #帕米尔高原
 	icon = "gfx/interface/icons/state_trait_icons/mountain.dds"
 	
@@ -100,17 +91,6 @@ state_trait_hokkaido_fisheries = { #北海道渔业
 	
 	modifier = {
 		building_group_bg_fishing_throughput_add = 0.2
-	}
-}
-
-state_trait_qingdao_bay = { #青岛湾
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
-	
-	modifier = {
-		building_shipyards_throughput_add = 0.1
-		building_military_shipyards_throughput_add = 0.1
-		state_building_port_max_level_add = 2
-		state_building_naval_base_max_level_add = 10
 	}
 }
 
@@ -178,24 +158,6 @@ state_trait_pearl_river = {
 	}
 }
 
-state_trait_yangtze_river = {
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	
-	modifier = {
-		state_infrastructure_add = 10
-		state_market_access_price_impact = 0.05
-	}
-}
-
-state_trait_the_minjiang_river = { #闽江
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	
-	modifier = {
-		state_infrastructure_add = 10
-		state_market_access_price_impact = 0.05
-	}
-}
-
 state_trait_yangtze_delta = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
@@ -206,15 +168,7 @@ state_trait_yangtze_delta = {
 	}
 }
 
-state_trait_three_gorges = {
-	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
-	
-	modifier = {
-		goods_output_electricity_mult = 0.15
-	}
-}
-
-state_trait_north_china_coalfield = {
+state_trait_north_china_coalfield = { #华北煤田
     icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
 	
 	modifier = {
@@ -273,14 +227,6 @@ state_trait_dongting_plain = {
 	modifier = {
 		state_infrastructure_add = 10
 		building_group_bg_agriculture_throughput_add = 0.1
-	}
-}
-
-state_trait_yellow_river = { #（被p社加强的）黄河
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	
-	modifier = {
-		state_infrastructure_add = 5
 	}
 }
 
@@ -402,17 +348,6 @@ state_trait_honam_plain = {
 	}
 }
 
-state_trait_dalian_bay = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
-	
-	modifier = {
-		building_shipyards_throughput_add = 0.1
-		building_military_shipyards_throughput_add = 0.1
-		state_building_port_max_level_add = 2
-		state_building_naval_base_max_level_add = 10
-	}
-}
-
 state_trait_nagasaki_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
@@ -423,29 +358,3 @@ state_trait_nagasaki_bay = {
 	}
 }
 
-state_trait_xiangjiang_river = {
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	
-	modifier = {
-		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
-	}
-}
-
-state_trait_hanjiang_river = {
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	
-	modifier = {
-		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
-	}
-}
-
-state_trait_ganjiang_river = {
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-	
-	modifier = {
-		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
-	}
-}

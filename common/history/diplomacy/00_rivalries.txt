@@ -1,11 +1,137 @@
-﻿DIPLOMACY = {	
-	c:RUS = {
+﻿DIPLOMACY = { #宿敌
+	c:IND = {
+		create_diplomatic_pact = {
+			country = c:NET
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:IDN
+			type = rivalry
+		}		
+	}
+	c:NET = {
+		create_diplomatic_pact = {
+			country = c:IND
+			type = rivalry
+		}
+	}	
+	c:IDN = {
+		create_diplomatic_pact = {
+			country = c:IND
+			type = rivalry
+		}
+	}		
+	c:NEJ = {
+		create_diplomatic_pact = {
+			country = c:YEM
+			type = rivalry
+		}
+	}
+	c:YEM = {
+		create_diplomatic_pact = {
+			country = c:NEJ
+			type = rivalry
+		}
+	}
+	c:USA = {
+		create_diplomatic_pact = {
+			country = c:RUS
+			type = rivalry
+		}
+	}
+	c:GBR = {
+		create_diplomatic_pact = {
+			country = c:RUS
+			type = rivalry
+		}
+	}
+	c:FRA = {
+		create_diplomatic_pact = {
+			country = c:RUS
+			type = rivalry
+		}
+	}
+	c:ION = {
+		create_diplomatic_pact = {
+			country = c:GRE
+			type = rivalry
+		}
+	}
+	c:GRE = {
+		create_diplomatic_pact = {
+			country = c:ION
+			type = rivalry
+		}
+	}
+	c:PEU = {
+		create_diplomatic_pact = {
+			country = c:CHL
+			type = rivalry
+		}
+	}
+	c:BOL = {
+		create_diplomatic_pact = {
+			country = c:CHL
+			type = rivalry
+		}
+	}
+	c:CHL = {
+		create_diplomatic_pact = {
+			country = c:BOL
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:PEU
+			type = rivalry
+		}
+	}
+	c:KOR = {
+		create_diplomatic_pact = {
+			country = c:RUS
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:PRC
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:JAP
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:PRK
+			type = rivalry
+		}
+	}
+	c:PRK = {
 		create_diplomatic_pact = {
 			country = c:USA
 			type = rivalry
 		}
 		create_diplomatic_pact = {
 			country = c:JAP
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:KOR
+			type = rivalry
+		}
+	}
+	c:RUS = {
+		create_diplomatic_pact = {
+			country = c:USA
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:GBR
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:FRA
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:CHI
 			type = rivalry
 		}
 	}
@@ -16,6 +142,10 @@
 		}
 		create_diplomatic_pact = {
 			country = c:PRC
+			type = rivalry
+		}
+		create_diplomatic_pact = {
+			country = c:RUS
 			type = rivalry
 		}
 	}

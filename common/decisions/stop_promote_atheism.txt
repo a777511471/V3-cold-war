@@ -1,0 +1,40 @@
+stop_promote_atheism_decision = {
+    is_shown = {
+        has_variable = potential_religion
+        country_has_state_religion = rel:atheist
+    }
+
+    possible = {
+        has_law = law_type:law_total_separation
+        country_has_state_religion = rel:atheist
+
+        NOT = { has_modifier = antireligious_policies }
+    }
+
+    when_taken = {
+        set_state_religion = var:potential_religion
+        remove_variable = potential_religion
+        if = {
+			limit = {
+				has_variable = BIC_protestant
+			}
+			remove_variable = BIC_protestant
+		}
+
+        add_modifier = {
+			name = stop_promote_atheism
+			months = normal_modifier_time
+		}
+        recalculate_pop_ig_support = yes
+    }
+
+    ai_chance = {
+        base = 0
+		modifier = {
+			trigger = {
+                is_government_disapprove_state_atheism_advantageous = yes
+            }
+			add = 10
+		}
+    }
+}

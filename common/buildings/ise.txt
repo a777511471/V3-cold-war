@@ -1,0 +1,446 @@
+
+
+building_potala = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/potala.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	has_max_level = yes
+	production_method_groups = {pmg_base_building_potala}
+	potential = {
+				state_region = s:STATE_LHASA
+	}
+	ai_value = 10
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_winter = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/winter.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	has_max_level = yes
+	production_method_groups = {pmg_base_building_winter}
+	potential = {
+		
+			 
+				state_region = s:STATE_INGRIA
+		
+	}
+	ai_value = 10
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_Broadway = { #老百汇
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Broadway.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+                entity_not_constructed = { }
+                entity_constructed = { "wonder_eiffel_tower_01_entity"}
+
+
+
+	production_method_groups = {pmg_base_building_Broadway }
+        required_construction = 2000
+	potential = {
+		
+			 
+				state_region = s:STATE_NEW_YORK
+		
+	}
+	ai_value = 80
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_Notre_Dame = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Notre_Dame.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+                entity_not_constructed = { }
+                entity_constructed = { "wonder_eiffel_tower_01_entity"}
+
+	production_method_groups = {pmg_base_building_Notre_Dame }
+        required_construction = 2000
+	potential = {
+
+		
+			 
+				state_region = s:STATE_ILE_DE_FRANCE
+			
+	}
+	ai_value = 80
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_Hollywood = { #好莱坞
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Hollywood.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+                entity_not_constructed = { }
+                entity_constructed = { "wonder_eiffel_tower_01_entity"}
+
+
+
+	production_method_groups = {pmg_base_building_Hollywood }
+        required_construction = 2000
+	potential = {
+
+		
+			 
+				state_region = s:STATE_CALIFORNIA
+		
+	}
+	ai_value = 80
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_Versailles = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Versailles.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	has_max_level = yes
+	production_method_groups = {pmg_base_building_Versailles}
+	potential = {
+		
+			 
+				state_region = s:STATE_ILE_DE_FRANCE
+		
+	}
+	ai_value = 10
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_Uffizi = { 
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Uffizi.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	has_max_level = yes
+	production_method_groups = {pmg_base_building_Uffizi }
+	potential = {
+		
+			 
+				state_region = s:STATE_TUSCANY
+		
+	}
+	ai_value = 10
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_Venice = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Venice.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	has_max_level = yes
+	production_method_groups = {pmg_base_building_Venice }
+	potential = {
+		
+			 
+				state_region = s:STATE_VENETIA
+			
+	}
+	ai_value = 10
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_Crystal = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Crystal.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+                entity_not_constructed = { }
+                entity_constructed = { "wonder_eiffel_tower_01_entity"}
+
+	production_method_groups = {pmg_base_building_Crystal  }
+        required_construction = 2000
+	potential = {
+
+		
+			 
+				state_region = s:STATE_HOME_COUNTIES
+			
+	}
+	ai_value = 80
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_soviet = { #苏维埃宫
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/soviet.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+                entity_not_constructed = { }
+                entity_constructed = { "wonder_eiffel_tower_01_entity"}
+
+
+
+	production_method_groups = {pmg_base_building_soviet }
+        required_construction = 2000
+	potential = {
+		
+			 
+				state_region = s:STATE_MOSCOW
+		
+	}
+	ai_value = 90
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_Aswan = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Aswan.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+        entity_not_constructed = { }
+        entity_constructed = { "wonder_eiffel_tower_01_entity"}
+
+	production_method_groups = {pmg_base_building_Aswan }
+        required_construction = 2000
+	potential = {
+		
+			 
+				state_region = s:STATE_UPPER_EGYPT
+		
+	}
+	ai_value = 80
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_Jerusalem = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Jerusalem.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	has_max_level = yes
+	production_method_groups = {pmg_base_building_Jerusalem}
+	potential = {
+		
+			 
+				state_region = s:STATE_PALESTINE
+		
+	}
+	ai_value = 10
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+building_Madrid = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Madrid.png"
+	expandable = no
+	downsizeable = no
+	unique = yes
+        entity_not_constructed = { }
+        entity_constructed = { "wonder_eiffel_tower_01_entity"}
+
+        required_construction = 2000
+	production_method_groups = {pmg_base_building_Madrid}
+	potential = {
+		
+			 
+				state_region = s:STATE_TOLEDO
+		
+	}
+	ai_value = 10
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_etchmiadzin = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/etchmiadzin.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	has_max_level = yes
+	locator = "etchmiadzin_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 6
+	
+	}
+	
+	production_method_groups = {
+		pmg_base_building_etchmiadzin
+	}
+	
+	potential = {
+		state_region = s:STATE_ARMENIA
+	}
+	
+	required_construction = construction_cost_monument
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_antwerpen_centraal = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/antwerpen_centraal.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	locator = "antwerpen_centraal_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_chhatrapati_shivaji_terminus_entity" }
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 3
+	}
+	
+	production_method_groups = {
+		pmg_base_building_antwerpen_centraal
+	}
+
+
+	
+	required_construction = construction_cost_monument
+	
+	potential = {
+		state_region = s:STATE_FLANDERS
+	}
+	
+	ai_value = 2000 # Tools are very important
+	ownership_type = self0
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_reichstag = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/Reichstag.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	locator = "Reichstag_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_base_building_reichstag
+	}
+
+
+	
+	required_construction = construction_cost_monument
+	
+	potential = {
+		state_region = s:STATE_BRANDENBURG
+	}
+	
+		ai_value = 2000 # Tools are very important
+	ownership_type = self
+background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_orszaghaz = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/parliament.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	locator = "orszaghaz_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_base_building_reichstag
+	}
+
+
+	
+	required_construction = construction_cost_monument
+	
+	potential = {
+		state_region = s:STATE_CENTRAL_HUNGARY
+	}
+	
+		ai_value = 2000 # Tools are very important
+	ownership_type = self0
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_neuschwanstein = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/swan.dds"
+	expandable = no
+	downsizeable = no
+	unique = yes
+	locator = "neuschwanstein_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_base_culture_monument
+	}
+
+
+	
+	required_construction = construction_cost_monument
+	
+	potential = {
+		state_region = s:STATE_BAVARIA
+	}
+	
+		ai_value = 2000 # Tools are very important
+	ownership_type = self0
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+
+building_garni = {
+	building_group = bg_monuments
+	icon = "gfx/interface/icons/building_icons/garni.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	has_max_level = yes
+	locator = "garni_locator"
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 3
+	}
+	
+	production_method_groups = {
+		pmg_base_culture_monument
+	}
+
+	
+	potential = {
+		state_region = s:STATE_ARMENIA
+	}
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

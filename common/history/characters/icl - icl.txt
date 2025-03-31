@@ -29,7 +29,7 @@
 		create_character = {
 			last_name = "Hansen"
 			interest_group = ig_trade_unions #利益集团工会
-			ideology = ideology_social_democrat #社民主义者
+			ideology = ideology_social_democrat #社会民主主义者
 			ig_leader = yes #利益集团领袖
 		}
 	}

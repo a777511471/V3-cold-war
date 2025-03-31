@@ -1,16 +1,16 @@
 AOF	 = { #西非
 	color = { 20  50  210 }
 
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
-	cultures = { french }
+	cultures = { french hausa }
 	capital = STATE_WESTERN_MALI
 }
 
 MOR = { #摩洛哥
-	color = { 224  146  113 }
+	color = { 192 64 0 }
 	
 	country_type = recognized
 	
@@ -21,9 +21,9 @@ MOR = { #摩洛哥
 }
 
 CMR = { #喀麦隆
-	color = { 220  202  96 }
+	color = { 255 69 0 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -33,13 +33,15 @@ CMR = { #喀麦隆
 }
 
 TUN = { #突尼斯
-	color = { 131  101  85 }
+	color = { 240 240 240 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
-	
-	cultures = { maghrebi }
+
+	religion = catholic
+
+	cultures = { french }
 	capital = STATE_TUNISIA
 	is_named_from_capital = yes
 }
@@ -47,7 +49,7 @@ TUN = { #突尼斯
 AEF = { #赤道非洲
 	color = { 28  90  20 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -55,34 +57,69 @@ AEF = { #赤道非洲
 	capital = STATE_UBANGI_SHARI
 }
 
+ETH = { #埃塞俄比亚
+	color = { 56  120  191 }
+	
+	country_type = unrecognized
+	
+	tier = empire
+	
+	cultures = { amhara oromo tigray }
+	capital = STATE_GONDER
+}
+
 MAD = { #马达加斯加
 	color = { 117  150  120 }
 	
-	country_type = recognized
+	country_type = colonial
 	
-	tier = kingdom
+	tier = empire
 	
 	cultures = { french }
 	capital = STATE_NORTH_MADAGASCAR
 }
 
-KON = { #刚果（金）
-	color = { 199 160 139 }
+FZL = { #非洲联盟
+	color = { 34 139 34 }
 	
-	country_type = recognized
+	country_type = colonial
+	
+	tier = empire
+
+	religion = catholic
+	
+	cultures = { maghrebi misri afro_american bakongo lunda fluvian_bantu mongo luba azande amhara oromo tigray boer xhosa zulu }
+}
+
+LDF = { #中非联盟
+	color = { 34 139 34 }
+	
+	country_type = colonial
+	
+	tier = empire
+
+	religion = catholic
+	
+	cultures = { bakongo lunda fluvian_bantu mongo luba azande }
+}
+
+KON = { #刚果（金）
+	color = { 34 139 34 }
+	
+	country_type = colonial
 	
 	tier = principality
 
 	religion = catholic
 	
-	cultures = { flemish wallonian }
+	cultures = { flemish wallonian } #独立后bakongo lunda fluvian_bantu mongo luba azande
 	capital = STATE_BAS_CONGO
 }
 
 CON = { #刚果（布）
-	color = { 169 16 129 }
+	color = { 0 128 0 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = principality
 
@@ -93,9 +130,9 @@ CON = { #刚果（布）
 }
 
 AGJ = {
-	color = { 111 56 200 }
+	color = { 204 0 0 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -104,9 +141,9 @@ AGJ = {
 }
 
 MOZ = {
-	color = { 111 56 200 }
+	color = { 0 0 255 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -117,7 +154,7 @@ MOZ = {
 SUD = {
 	color = { 189 159 69 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -126,20 +163,22 @@ SUD = {
 }
 
 UGA = {
-	color = { 13 15 47 }
+	color = { 0 191 255 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
-	cultures = { sudanese beja bedouin }
+	religion = protestant #新教
+
+	cultures = { british }
 	capital = STATE_UGANDA
 }
 
 KNY = {
-	color = { 12 151 98 }
+	color = { 255 102 0 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -148,9 +187,9 @@ KNY = {
 }
 
 BTW = {
-	color = { 156 181 58 }
+	color = { 230 230 230 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -159,9 +198,9 @@ BTW = {
 }
 
 ZIM = {
-	color = { 60 13 112 }
+	color = { 128 128 128 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -170,9 +209,9 @@ ZIM = {
 }
 
 ZAM = {
-	color = { 67 13 12 }
+	color = { 184 115 51 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -181,9 +220,9 @@ ZAM = {
 }
 
 TAN = {
-	color = { 58 13 102 }
+	color = { 240 240 240 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -191,20 +230,22 @@ TAN = {
 	capital = STATE_TANGANYIKA
 }
 
-NIG = {
-	color = { 158 143 192 }
+NIG = { #尼日利亚
+	color = { 0 135 81 }
 	
-	country_type = recognized
+	country_type = colonial
 	
-	tier = kingdom
-	
-	cultures = { british scottish }
+	tier = empire
+
+	religion = protestant #新教
+
+	cultures = { british }
 	capital = STATE_NIGERIA
 }
 SRL = {
 	color = { 166 11 52 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -213,9 +254,9 @@ SRL = {
 }
 
 ERT = {
-	color = { 10 13 112 }
+	color = { 255 215 0 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -224,9 +265,9 @@ ERT = {
 }
 
 SML = {
-	color = { 617 123 122 }
+	color = { 72 209 204 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -235,9 +276,9 @@ SML = {
 }
 
 GHA = {
-	color = { 618 113 142 }
+	color = { 255 215 0 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -248,7 +289,7 @@ GHA = {
 GAM = {
 	color = { 123 156 19 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -257,9 +298,9 @@ GAM = {
 }
 
 GNB = {
-	color = { 141 61 256 }
+	color = { 0 128 255 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = empire
 	
@@ -267,10 +308,10 @@ GNB = {
 	capital = STATE_GUINEA
 }
 
-EGU = { #内几亚
-	color = { 220  202  96 }
+EGU = { #赤道几内亚
+	color = { 0 153 102 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -281,9 +322,9 @@ EGU = { #内几亚
 
 CAR = 
 {
-	color = { 110 175 224 }
+	color = { 0 100 0 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -294,7 +335,7 @@ CDW =
 {
 	color = { 120 101 156 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -303,9 +344,9 @@ CDW =
 }
 CHD = 
 {
-	color = { 180 85 10 }
+	color = { 160 82 45 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -315,9 +356,9 @@ CHD =
 
 GAB = 
 {
-	color = { 138 145 180 }
+	color = { 0 51 0 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -326,9 +367,9 @@ GAB =
 }
 GNI = 
 {
-	color = { 120 73 110 }
+	color = { 204 0 0 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -338,9 +379,9 @@ GNI =
 
 MTY = 
 {
-	color = { 180 226 224 }
+	color = { 192 192 192 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -350,9 +391,9 @@ MTY =
 
 NGR = 
 {
-	color = { 55 114 132 }
+	color = { 255 140 0 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -361,9 +402,9 @@ NGR =
 }
 NMB = 
 {
-	color = { 201 168 238 }
+	color = { 255 105 180 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -373,9 +414,9 @@ NMB =
 
 SNJ = 
 {
-	color = { 190 101 201 }
+	color = { 160 82 45 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -384,23 +425,69 @@ SNJ =
 }
 SSD = 
 {
-	color = { 132 60 80 }
+	color = { 0 128 0 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
 	cultures = { dinka nuer }
 	capital = STATE_EQUATORIA
 }
-TGO = 
-{
-	color = { 120 80 35 }
+TGO = {
+	color = { 0 153 102 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
 	cultures = { akan ewe }
 	capital = STATE_TOGO
+}
+
+EGY = {
+	color = { 255  205  155 }
+	
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { misri }
+	capital = STATE_LOWER_EGYPT
+}
+
+ALD = {
+	color = { 0 128 0 }
+	
+	country_type = colonial
+	
+	tier = kingdom
+	
+	cultures = { maghrebi berber }
+	
+	capital = STATE_ALGIERS
+}
+
+LIB = {
+	color = { 210 180 140 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { afro_american }
+	capital = STATE_LIBERIA
+	is_named_from_capital = yes
+}
+
+SIL = {
+	color = { 0 0 153 }
+	
+	country_type = colonial
+	
+	tier = principality
+	
+	cultures = { afro_caribbean }
+	capital = STATE_SIERRA_LEONE
+	is_named_from_capital = yes
 }

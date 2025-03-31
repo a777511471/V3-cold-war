@@ -244,7 +244,7 @@
 				}
 			}
 			triggered_desc = {
-				desc = party_cpc
+				desc = party_cpc #中国共产党
 				trigger = {
 					AND = {
 						OR = {
@@ -259,7 +259,14 @@
 						any_interest_group = {
 							is_powerful = yes
 							leader = {
-								has_ideology = ideology:ideology_vanguardist
+					OR = {
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_mao #毛泽东主义者											
+					}										
 							}
 						}
 					}
@@ -289,9 +296,15 @@
 			any_interest_group = {
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_communist
-						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者
+						has_ideology = ideology:ideology_mao #毛泽东主义者		
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者										
 					}
 				}
 			}
@@ -336,9 +349,15 @@
 			limit = {
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_communist
-						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者
+						has_ideology = ideology:ideology_mao #毛泽东主义者		
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者	
 					}
 				}
 			}
@@ -352,9 +371,15 @@
 				is_powerful = yes
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_communist
-						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者
+						has_ideology = ideology:ideology_mao #毛泽东主义者		
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者	
 					}
 				}
 			}
@@ -377,9 +402,15 @@
 						is_powerful = yes
 						leader = {
 							OR = {
-								has_ideology = ideology:ideology_communist
-								has_ideology = ideology:ideology_vanguardist
-								has_ideology = ideology:ideology_anarchist
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者
+						has_ideology = ideology:ideology_mao #毛泽东主义者		
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者	
 							}
 						}
 					}
@@ -553,9 +584,15 @@
 					has_ideology = ideology:ideology_laissez_faire
 					has_ideology = ideology:ideology_particularist
 					leader = {
-						has_ideology = ideology:ideology_abolitionist
-						has_ideology = ideology:ideology_social_democrat
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者
+						has_ideology = ideology:ideology_mao #毛泽东主义者		
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者	
 					}
 				}
 			}

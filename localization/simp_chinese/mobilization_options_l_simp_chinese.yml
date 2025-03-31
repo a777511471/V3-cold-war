@@ -47,6 +47,8 @@
  mobilization_option_truck_transport_desc: "命令卡车把你的士兵送往前线。"
  mobilization_option_rail_transport: "铁路运输"
  mobilization_option_rail_transport_desc: "由国家出资，让你的士兵乘坐火车移动。"
+ mobilization_option_aviation_transport: "航空运输"
+ mobilization_option_aviation_transport_desc: "命令飞机把你的士兵送往前线。一空输，出动！"
  mobilization_option_machinegunners: "机枪手"
  mobilization_option_machinegunners_desc: "自动机枪让我们能有效地巩固阵地。"
  mobilization_option_chemical_weapons: "化学武器"

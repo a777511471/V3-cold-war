@@ -166,7 +166,7 @@ heavenly.2 = {
 						set_variable = hong_var
 						add_modifier = {
 							name = modifier_brother_of_christ
-							months = long_modifier_time
+							years = 10
 						}
 					}
 				}
@@ -181,7 +181,7 @@ heavenly.2 = {
 					on_created = {
 						add_modifier = {
 							name = modifier_brother_of_christ
-							months = long_modifier_time
+							years = 10
 						}
 					}
 				}
@@ -394,12 +394,12 @@ heavenly.4 = {
 					}
 					add_modifier = {
 						name = taiping_taiping_revolution
-						months = long_modifier_time
+						years = 10
 					}
 				}
 				add_modifier = {
 					name = taiping_land_socialization
-					months = long_modifier_time
+					years = 10
 					is_decaying = yes
 				}
 				if = {
@@ -479,12 +479,12 @@ heavenly.4 = {
 		}
 		add_modifier = {
 			name = taiping_taiping_rebellion
-			months = long_modifier_time
+			years = 10
 		}
 		c:TPG = {		
 			add_modifier = {
 				name = taiping_taiping_rebellion
-				months = long_modifier_time
+				years = 10
 			}
 		}
 	}
@@ -783,7 +783,7 @@ heavenly.6 = {
 		default_option = yes
 		add_modifier = {
 			name = modifier_conversion_of_china
-			months = long_modifier_time
+			years = 10
 		}
 	}
 	option = {
@@ -808,7 +808,7 @@ heavenly.6 = {
 		}
 		add_modifier = {
 			name = modifier_new_treatise_on_administration
-			months = long_modifier_time
+			years = 10
 		}
 	}
 	option = {
@@ -831,7 +831,7 @@ heavenly.6 = {
 		}
 		add_modifier = {
 			name = modifier_new_treatise_on_administration
-			months = long_modifier_time
+			years = 10
 		}
 	}
 	option = {
@@ -850,7 +850,7 @@ heavenly.6 = {
 		}
 		add_modifier = {
 			name = modifier_second_crusade_against_manchu
-			months = long_modifier_time
+			years = 10
 		}
 	}
 	option = {
@@ -869,7 +869,7 @@ heavenly.6 = {
 		}
 		add_modifier = {
 			name = modifier_relations_with_west
-			months = long_modifier_time
+			years = 10
 		}
 	}
 }

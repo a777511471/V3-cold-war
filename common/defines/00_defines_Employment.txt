@@ -1,0 +1,28 @@
+﻿
+
+
+NPops = {
+
+	# 工作满意度
+	JOB_SATISFACTION_BASE = -150  # was -130 # 基本工作满意度
+	JOB_SATISFACTION_FOR_NEWLY_HIRED = 1000  # 由于新聘用而获得的工作满意度，此状态持续到人口的下一次财富计算
+	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 6  # was 3 # 高于预期 SoL 的每个 SoL 级别获得的工作满意度
+	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 6  # was 2 # 高于您所在阶层的州平均值的每个 SoL 级别获得的工作满意度
+	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 2  # was 1 # 高于您所在阶层的全国平均值的每个 SoL 级别获得的工作满意度
+	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 2  # was 1  # 每英磅高于国家平均水平的工资（每周工资为 10k 名劳动力）
+	JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES = 100  # WAS 1000 # 因能够负担得起您的 bug 套餐（和税费）而获得的工作满意度
+	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -1000  # 因无法负担您的 bug 套餐（和税费）而获得的工作满意度
+	JOB_SATISFACTION_PER_PERCENT_HIGHER_STRATA_QUALIFICATION = -0.8  # was -1 # 符合更高阶层资格的劳动力百分比所获得的工作满意度。请注意，假定资格重叠，并且在此计算中使用最大的资格
+	JOB_SATISFACTION_FROM_EMPLOYMENT = 100  # 从工作中获得的工作满意度
+	JOB_SATISFACTION_DIVIDENDS_MAX_MULT = 5  # 人口股息与工资之间比率的最大乘数
+	JOB_SATISFACTION_DIVIDENDS_BASE = 10  # was 50 # 要乘以股息与工资之间比率的基值
+	JOB_SATISFACTION_LOSSES_MIN_MULT = -10  # was -5 # 人口损失与工资之间比率的最小乘数（或者如果您愿意，最大幅度）
+	JOB_SATISFACTION_LOSSES_BASE = 50  # 要乘以损失与工资之间比率的基值
+	JOB_SATISFACTION_GOVERNMENT = 100  # was 50  # 政府工作需要更多的稳定性
+
+
+}
+
+
+
+

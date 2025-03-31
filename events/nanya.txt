@@ -1,0 +1,63 @@
+namespace = pak
+
+pak.1 = {
+    type = country_event
+    placement = root
+    
+    title = pak.1.t
+    desc = pak.1.d
+    flavor = pak.1.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = pak.1.a
+        default_option = true
+        add_primary_culture = cu:bengali
+
+    }
+}
+
+pak.2 = {
+    type = country_event
+    placement = root
+    
+    title = pak.2.t
+    desc = pak.2.d
+    flavor = pak.2.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = pak.2.a
+        default_option = true
+		create_country = {
+			tag = BGL
+			origin = c:PAK
+			state = s:STATE_EAST_BENGAL.region_state:PAK
+		}
+        
+        BGL = {
+		    create_character = { #
+			    ruler = yes             
+			    culture = cu:bengali
+			    interest_group = ig_intelligentsia #文人
+			    ideology = ideology_social_democrat #社会民主主义者
+			    traits = {
+                }
+			}
+		}           		
+	}
+}           

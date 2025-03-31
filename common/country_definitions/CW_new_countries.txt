@@ -1,0 +1,517 @@
+ADR = 
+{
+	color = { 184 56 10 }
+	
+	country_type = recognized
+
+	tier = city_state
+	
+	cultures = { catalan }
+	capital = STATE_CATALONIA
+}
+AGL = 
+{
+	color = { 13 56 48 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { bakongo kavango_bantu }
+	capital = STATE_NORTH_ANGOLA
+}
+AAB = 
+{
+	color = { 10 210 145 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }
+	capital = STATE_WEST_INDIES
+}
+BBD = 
+{
+	color = { 112 202 12 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }
+	capital = STATE_WEST_INDIES
+}
+BKF = 
+{
+	color = { 89 89 75 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { mossi }
+	capital = STATE_VOLTA
+}
+COK = 
+{
+	color = { 11 107 250 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { polynesian }
+	capital = STATE_TAHITI
+}
+CVD = 
+{
+	color = { 10 63 44 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { portuguese afro_brazilian }
+	capital = STATE_CAPE_VERDE
+}
+DMC = 
+{
+	color = { 59 184 23 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }
+	capital = STATE_WEST_INDIES
+}
+DBT = 
+{
+	color = { 84 125 55 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { afar }
+	capital = STATE_ERITREA
+}
+ESL = 
+{
+	color = { 66 12 22 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { nguni }
+	capital = STATE_TRANSVAAL
+}
+FJI = 
+{
+	color = { 66 133 133 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { melanesian }
+	capital = STATE_FIJI
+}
+GRD = 
+{
+	color = { 145 23 165 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }
+	capital = STATE_WEST_INDIES
+}
+GUY = 
+{
+	color = { 192 25 22 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }#现代是泰米尔人为主，1836年还不是
+	capital = STATE_GUAYANA
+}
+KIB = 
+{
+	color = { 89 51 109 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { micronesian }
+	capital = STATE_EAST_MICRONESIA
+}
+KUT = 
+{
+	color = { 150 175 22 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { mashriqi }
+	capital = STATE_BASRA
+}
+LIC = 
+{
+	color = { 25 28 183 }
+	
+	country_type = recognized
+
+	tier = city_state
+	
+	cultures = { north_german south_german }
+	capital = STATE_TYROL
+}
+LST = 
+{
+	color = { 150 100 159 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { sotho zulu }
+	capital = STATE_TRANSVAAL
+}
+MTY = 
+{
+	color = { 180 226 224 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { bidan haratin mande }
+	capital = STATE_MAURITANIA
+}
+MCL = 
+{
+	color = { 7 12 185 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { micronesian }
+	capital = STATE_EAST_MICRONESIA
+}
+MNC = 
+{
+	color = { 150 10 35 }
+	
+	country_type = recognized
+
+	tier = city_state
+	
+	cultures = { occitan }
+	capital = STATE_PROVENCE
+}
+MDA = 
+{
+	color = { 180 133 64 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { romanian }
+	capital = STATE_BESSARABIA
+}
+MLW = 
+{
+	color = { 11 100 100 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { chewa }
+	capital = STATE_KAZEMBE
+}
+MSH = 
+{
+	color = { 11 2 98 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { micronesian }
+	capital = STATE_EAST_MICRONESIA
+}
+NAL = 
+{
+	color = { 100 183 168 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { micronesian }
+	capital = STATE_NAURU
+}
+NMC = 
+{
+	color = { 80 12 140 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { bulgarian }
+	capital = STATE_SKOPIA
+}
+PLU = 
+{
+	color = { 185 104 218 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { micronesian }
+	capital = STATE_WEST_MICRONESIA
+}
+PPY = 
+{
+	color = { 11 55 22 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { melanesian }
+	capital = STATE_EASTERN_NEW_GUINEA
+}
+QAT = 
+{
+	color = { 143 44 85 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { bedouin }
+	capital = STATE_ABU_DHABI
+}
+RWD = 
+{
+	color = { 108 25 39 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { ruanda }
+	capital = STATE_TANGANYIKA
+}
+SAP = 
+{
+	color = { 10 86 63 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { equatorial_bantu }
+	capital = STATE_NORTH_ANGOLA
+}
+SMN = 
+{
+	color = { 81 224 224 }
+	
+	country_type = recognized
+
+	tier = city_state
+	
+	cultures = { north_italian }
+	capital = STATE_ROMAGNA
+}
+SMY = 
+{
+	color = { 185 22 168 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { polynesian }
+	capital = STATE_TONGA
+}
+SN1 = 
+{
+	color = { 190 101 201 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { wolof fulbe }
+	capital = STATE_SENEGAL
+}
+SS1 = 
+{
+	color = { 132 60 80 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { dinka nuer }
+	capital = STATE_EQUATORIA
+}
+SRN = 
+{
+	color = { 253 135 99 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean tamil }
+	capital = STATE_GUAYANA
+}
+SAL = 
+{
+	color = { 133 133 207 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }
+	capital = STATE_WEST_INDIES
+}
+SYC = 
+{
+	color = { 202 188 202 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }
+	capital = STATE_INDIAN_OCEAN_TERRITORY
+}
+TLT = 
+{
+	color = { 13 97 30 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { moluccan melanesian }
+	capital = STATE_SUNDA_ISLANDS
+}
+TNG = 
+{
+	color = { 12 142 54 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { polynesian }
+	capital = STATE_TONGA
+}
+TAT = 
+{
+	color = { 199 45 12 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }
+	capital = STATE_WEST_INDIES
+}
+TVL = 
+{
+	color = { 86 201 21 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { polynesian }
+	capital = STATE_EAST_MICRONESIA
+}
+UG1 = 
+{
+	color = { 180 135 165 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { baganda }
+	capital = STATE_UGANDA
+}
+VA1 = 
+{
+	color = { 251 221 93 }
+	
+	country_type = recognized
+
+	tier = city_state
+	
+	cultures = { south_italian }
+	capital = STATE_LAZIO
+}
+VNT = 
+{
+	color = { 225 42 22 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { melanesian }
+	capital = STATE_VANUATU
+}
+MLT = {
+	color = { 49 90 136 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { afro_antillean afro_caribbean }
+	capital = STATE_INDIAN_OCEAN_TERRITORY
+}
+
+CML = {
+	color = { 0 61 165 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { malagasy fluvian_bantu bedouin }
+	capital = STATE_SOUTH_MADAGASCAR
+}
+
+NIU = 
+{
+	color = { 255 215 69 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { polynesian }
+	capital = STATE_TONGA
+}

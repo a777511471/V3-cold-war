@@ -27,5 +27,23 @@
 			traits = {
 			}
 		}	
+
+		create_character = {
+			#纳吉·伊姆雷
+    		dna = dna_roosevelt					
+			first_name = "Nagi"
+			last_name = "Imre"
+			historical = yes
+			ig_leader = yes #利益集团领袖
+			birth_date = 1896.6.7
+			religion = rel:atheist #无神论
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_market_liberal #意识形态市场自由主义者			
+			traits = {
+				expensive_tastes #昂贵嗜好
+				romantic #浪漫
+				persistent #执着					
+			}
+		}			
 	}
 }

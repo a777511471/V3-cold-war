@@ -1,10 +1,25 @@
 ﻿CHARACTERS = {
 	c:FIN = {
-		create_character = {
+		create_character = { #总理毛诺·皮可拉
+			first_name = "Mano"
+			last_name = "Picola"
+			historical = yes
+			ruler = yes
+			birth_date = 1890.1.27
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+				tactful #圆滑
+				masterful_diplomat #外交大师
+				brave #勇敢
+			}
+		}
+
+		create_character = { #总统
+    		dna = dna_truman		
 			first_name = "Yoho·Kusti"
 			last_name = "Pashikiwi"
 			historical = yes
-			ruler = yes
 			ig_leader = yes
 			birth_date = 1870.11.27
 			interest_group = ig_intelligentsia #知识分子
@@ -36,5 +51,13 @@
 				popular_commander #受欢迎的指挥官
 			}
 		}
+
+		create_character = { #
+			ig_leader = yes
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+			}
+		}		
 	}
 }

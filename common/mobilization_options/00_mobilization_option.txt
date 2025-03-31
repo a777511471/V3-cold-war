@@ -95,7 +95,7 @@ mobilization_option_luxurious_supplies = {
 	}
 	
 	unlocking_technologies = {
-		tech_individual_system
+		tech_food_supply
 	}
 	
 	on_deactivate_while_mobilized = {
@@ -335,7 +335,7 @@ mobilization_option_food = { #药物补给
 	group = medic_support
 }
 
-mobilization_option_forced_march = {
+mobilization_option_forced_march = { #强行军
 	texture = "gfx/interface/icons/mobilization_options/forced_march.dds"
 	
 	possible = {
@@ -343,6 +343,7 @@ mobilization_option_forced_march = {
 			NOR = {
 				has_mobilization_option = mobilization_option:mobilization_option_truck_transport
 				has_mobilization_option = mobilization_option:mobilization_option_rail_transport
+				has_mobilization_option = mobilization_option:mobilization_option_aviation_transport #航空运输					
 			}
 		}
 	}
@@ -389,7 +390,7 @@ mobilization_option_forced_march = {
 	group = transport
 }
 
-mobilization_option_truck_transport = {
+mobilization_option_truck_transport = { #卡车运输
 	texture = "gfx/interface/icons/mobilization_options/truck_transport.dds"
 	
 	possible = {
@@ -397,6 +398,7 @@ mobilization_option_truck_transport = {
 			NOR = {
 				has_mobilization_option = mobilization_option:mobilization_option_forced_march
 				has_mobilization_option = mobilization_option:mobilization_option_rail_transport
+				has_mobilization_option = mobilization_option:mobilization_option_aviation_transport #航空运输					
 			}
 		}
 		market ?= {
@@ -443,7 +445,7 @@ mobilization_option_truck_transport = {
     group = transport
 }
 
-mobilization_option_rail_transport = {
+mobilization_option_rail_transport = { #铁路运输
 	texture = "gfx/interface/icons/mobilization_options/rail_transport.dds"
 	
 	possible = {
@@ -451,6 +453,7 @@ mobilization_option_rail_transport = {
 			NOR = {
 				has_mobilization_option = mobilization_option:mobilization_option_forced_march
 				has_mobilization_option = mobilization_option:mobilization_option_truck_transport
+				has_mobilization_option = mobilization_option:mobilization_option_aviation_transport #航空运输				
 			}
 		}
 		market ?= {
@@ -488,6 +491,61 @@ mobilization_option_rail_transport = {
 	}
 	unit_modifier = {
 		military_formation_movement_speed_mult = 0.2
+	}
+	ai_weight = {
+		value = 1
+	}
+
+    group = transport
+}
+
+mobilization_option_aviation_transport = { #航空运输
+	texture = "gfx/interface/icons/mobilization_options/aerial_reconaissance.dds"
+	
+	possible = {
+		scope:military_formation = {
+			NOR = {
+				has_mobilization_option = mobilization_option:mobilization_option_forced_march
+				has_mobilization_option = mobilization_option:mobilization_option_truck_transport
+				has_mobilization_option = mobilization_option:mobilization_option_rail_transport
+			}
+		}
+		market ?= {
+			mg:automobiles ?= {
+				market_goods_sell_orders > 0
+			}
+		}
+	}
+	
+	on_activate_while_mobilized = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+			add_organization = {
+				value = organization
+				multiply = -0.5
+			}
+		}
+	}
+	
+	on_deactivate = {
+		custom_tooltip = {
+			text = mobilization_option_it_hurts_organization_when_you_adjust_equipment_tt
+			add_organization = {
+				value = organization
+				multiply = -0.5
+			}
+		}
+	}
+	
+	unlocking_technologies = {
+		tech_helicopter_transport
+	}
+	upkeep_modifier = {
+		goods_input_aeroplanes_add = 0.5 #飞机投入
+	}
+	unit_modifier = {
+		military_formation_movement_speed_mult = 0.4
+		military_formation_mobilization_speed_mult = 0.5
 	}
 	ai_weight = {
 		value = 1
@@ -545,12 +603,12 @@ mobilization_option_machinegunners = {
     group = special_weapons
 }
 
-mobilization_option_chemical_weapons = {
+mobilization_option_chemical_weapons = { #化学武器
 	texture = "gfx/interface/icons/mobilization_options/chemical_weapons.dds"
 
 	possible = {
 		market ?= {
-			mg:fertilizer ?= {
+			mg:dye ?= {
 				market_goods_sell_orders > 0
 			}
 		}
@@ -580,7 +638,7 @@ mobilization_option_chemical_weapons = {
 		tech_javelin_missiles
 	}
 	upkeep_modifier = {
-		goods_input_artillery_add = 0.5
+		goods_input_dye_add = 2
 	}
 	unit_modifier = {
 		unit_offense_add = 20

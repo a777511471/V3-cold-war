@@ -1,0 +1,29 @@
+﻿CHARACTERS = {
+	c:YSD ?= {
+		create_character = {
+			historical = yes			
+			ruler = yes
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			culture = cu:british
+			traits = {
+			}
+		}
+
+		create_character = {
+			dna = dna_william_shubrick	
+			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_social_democrat #社会民主主义者
+			ig_leader = yes #利益集团领袖
+		}		
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+			}
+		}						
+	}
+}

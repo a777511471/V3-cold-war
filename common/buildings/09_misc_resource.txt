@@ -1,6 +1,7 @@
-﻿building_logging_camp = {
+﻿#特殊资源（木业渔业石油业）
+building_logging_camp = { #伐木营地
 	building_group = bg_logging
-	texture = "gfx/interface/icons/building_icons/logging_camp.dds"
+	icon = "gfx/interface/icons/building_icons/logging_camp.dds"
 	city_type = wood
 	required_construction = construction_cost_low
 	terrain_manipulator = forestry
@@ -22,9 +23,9 @@
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 
-building_rubber_plantation = {
+building_rubber_plantation = { #橡胶种植园
 	building_group = bg_rubber
-	texture = "gfx/interface/icons/building_icons/rubber_lodge.dds"
+	icon = "gfx/interface/icons/building_icons/橡胶种植园.dds"
 	required_construction = construction_cost_low
 	
 	terrain_manipulator = forestry
@@ -46,9 +47,9 @@ building_rubber_plantation = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 
-building_fishing_wharf = {
+building_fishing_wharf = { #渔业码头
 	building_group = bg_fishing
-	texture = "gfx/interface/icons/building_icons/fishing_wharf.dds"
+	icon = "gfx/interface/icons/building_icons/fishing_wharf.dds"
 	city_type = port
 	required_construction = construction_cost_low
 
@@ -73,9 +74,9 @@ building_fishing_wharf = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 
-building_whaling_station = {
+building_whaling_station = { #捕鲸站
 	building_group = bg_whaling
-	texture = "gfx/interface/icons/building_icons/whaling_station.dds"
+	icon = "gfx/interface/icons/building_icons/whaling_station.dds"
 	city_type = port
 	required_construction = construction_cost_low
 	
@@ -100,13 +101,11 @@ building_whaling_station = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
 
-
-building_oil_rig = {
+building_oil_rig = { #油井
 	building_group = bg_oil_extraction
-	texture = "gfx/interface/icons/building_icons/oil_rig.dds"
-	city_type = mine
+	icon = "gfx/interface/icons/building_icons/oil_rig.dds"
+	city_type = city
 	levels_per_mesh = 5
-	required_construction = construction_cost_medium
 	unlocking_technologies = {
 		tech_petroleum_extraction_and_application
 	}
@@ -118,7 +117,31 @@ building_oil_rig = {
 		pmg_automation_building_oil_rig
 
 	}
+	required_construction = construction_cost_high
 	ownership_type = self
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }
+
+#building_oil_rig = { #原版油井
+	#building_group = bg_oil_extraction
+	#icon = "gfx/interface/icons/building_icons/oil_rig.dds"
+	#city_type = mine
+	#levels_per_mesh = 5
+	#required_construction = construction_cost_medium
+	#unlocking_technologies = {
+		#tech_petroleum_extraction_and_application
+	#}
+
+	#production_method_groups = {
+		#pmg_base_building_oil_rig
+		#pmg_advance_building_oil_rig
+		#pmg_transportation
+		#pmg_automation_building_oil_rig
+
+	#}
+	#ownership_type = self
+
+	#background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
+#}
+

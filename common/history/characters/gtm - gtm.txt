@@ -1,0 +1,85 @@
+﻿CHARACTERS = {
+	c:GTM = {
+		create_character = {
+			#
+			ruler = yes
+			historical = yes
+			traits = {
+
+			}
+		}
+
+		create_character = {
+			#豪尔赫·乌比科·波拿巴
+			first_name = "Jorge·Ubico"
+			last_name = "Bonaparte"
+			culture = cu:french
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			commander_rank = commander_rank_1
+    		ideology = ideology_bonapartist
+    		dna = dna_emperor_napoleon_03
+    		traits = {
+				traditionalist_commander
+				expert_offensive_planner
+    		}  
+		}	
+
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_industrialists #实业家
+    		ideology = ideology_jingoist_leader #沙文主义者
+    		traits = {
+    		}  
+		}	
+
+		create_character = {
+			ig_leader = yes
+			religion = rel:atheist #无神论			
+			interest_group = ig_rural_folk #农民
+    		ideology = ideology_communist #共产主义者
+    		traits = {
+    		}  
+		}	
+
+		create_character = {
+			ig_leader = yes
+			religion = rel:atheist #无神论			
+			interest_group = ig_trade_unions #工会
+    		ideology = ideology_communist #共产主义者
+    		traits = {
+    		}  
+		}	
+
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_intelligentsia #知识分子
+    		ideology = ideology_liberal_leader #民主主义者
+    		traits = {
+    		}  
+		}	
+
+		create_character = {
+			culture=cu:south_german #南德
+			ig_leader = yes #利益集团领袖		
+			interest_group = ig_petty_bourgeoisie #小市民
+    		ideology = ideology_fascist #法西斯主义者
+			traits = {
+				cocaine_addiction #可卡因成瘾
+				tactful #圆滑
+				inspirational_orator #在啤酒馆鼓舞人心的演说家
+				firebrand #煽动大师
+			}
+		}
+
+		create_character = {
+			culture = cu:mayan
+			is_general = yes
+			interest_group = ig_armed_forces #军队
+			commander_rank = commander_rank_1
+			traits = {
+			}
+		}			
+	}
+}

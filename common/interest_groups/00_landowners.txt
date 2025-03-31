@@ -235,12 +235,7 @@
 	on_character_ig_membership = {}
 
 	pop_potential = {
-		OR = {
-			is_pop_type = aristocrats
-			is_pop_type = clergymen
-			is_pop_type = officers
-			is_pop_type = farmers
-		}
+		always = yes
 	}
 
 	pop_weight = {
@@ -298,6 +293,24 @@
 					}
 					multiply = 4
 				}
+			}
+		}
+		
+		add = {
+			desc = "RURAL_POP"
+			if = {
+				limit = {
+					OR = {
+						pop_employment_building_group = bg_agriculture
+						pop_employment_building_group = bg_ranching
+						pop_employment_building_group = bg_plantations
+						pop_employment_building_group = bg_logging
+						pop_employment_building_group = bg_fishing
+						pop_employment_building_group = bg_whaling
+						pop_employment_building_group = bg_manor_houses
+					}
+				}
+				add = this.standard_of_living
 			}
 		}
 

@@ -1,12 +1,12 @@
-namespace = GER_event
+namespace = ger
 
-GER_event.1 = { #成立西德
+ger.1 = { #成立西德
 	type = country_event
 	orphan = yes
 	
-	title = BRD.1.t
-	desc = BRD.1.d
-	flavor = BRD.1.f
+	title = ger.1.t
+	desc = ger.1.d
+	flavor = ger.1.f
 
 	event_image = { #事件图像
 		texture = "gfx/event_pictures/BRD.dds"
@@ -15,109 +15,35 @@ GER_event.1 = { #成立西德
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
 
-	duration = 0
+	duration = 3
 	
 	trigger = { 
 	}
 
 	option = {
-		name = BRD.1.a
+		name = ger.1.a
 		default_option = yes
-		add_modifier = {
-			name = the_country_of_our_ancestors_modifier
-			years = 1
-		}
-		if ={
-            limit ={
-                OR ={
-                    AND ={
-                        exists =C:RHN
-                        this=c:RHN
-                        c:RHN ?= {is player= yes}
-			}
-                    AND ={
-                        exists =C:HAN
-                        this=c:HAN
-                        c:HAN ?= {is player= yes}
-			}
-		}
-	}
-			play_as = c:BAV
-}
-	c:BAV = { change_tag = BRD 
+		          annex = c:BAV
 		          annex = c:RHN
-				  annex = c:HAN
-				  make_independent = yes}
-	set_capital = STATE_NORTH_RHINE
-		create_character = {
-			ruler = yes
-			}
-		create_character = {
-			is_general = yes
-			ig_leader = yes
-			interest_group = ig_armed_forces #军队
-		}
-	}
-
-	option = {
-		name = BRD.1.b
-		add_modifier = {
-			name = the_country_of_our_ancestors_modifier
-			years = 1
-		}
-		if ={
-            limit ={
-                OR ={
-                    AND ={
-                        exists =C:RHN
-                        this=c:RHN
-                        c:RHN ?= {is player= yes}
-			}
-                    AND ={
-                        exists =C:HAN
-                        this=c:HAN
-                        c:HAN ?= {is player= yes}
-			}
-		}
-	}
-			play_as = c:BAV
-}
-	c:BAV = { 
-			change_tag = BRD 
-		        annex = c:RHN
-			annex = c:HAN
-			}
-	set_capital = STATE_NORTH_RHINE
-		create_character = {
-			ruler = yes
-			}
-		create_character = {
-			is_general = yes
-			ig_leader = yes
-			interest_group = ig_armed_forces #军队
-		}
-	c:USA = {
-		          create_diplomatic_pact = {
-				  country = c:BRD 
-				  type = protectorate
-			}
-		}
-	}
-
-	option = {
-		name = BRD.1.c
+				  annex = c:YSD
+	 		change_tag = BRD					  
+				  make_independent = yes #独立
+            add_primary_culture = cu:north_german	      
+            remove_primary_culture = cu:south_german
+			set_state_religion = rel:protestant #新教		
+		set_capital = STATE_NORTH_RHINE #波恩			  
 	}
 }
 
-GER_event.2 = { #成立东德
+ger.2 = { #成立东德
 	type = country_event
 	orphan = yes
 	
-	title = DDR.1.t
-	desc = DDR.1.d
-	flavor = DDR.1.f
+	title = ger.2.t
+	desc = ger.2.d
+	flavor = ger.2.f
 
 	event_image = { #事件图像
 		texture = "gfx/event_pictures/DDR.dds"
@@ -126,22 +52,18 @@ GER_event.2 = { #成立东德
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	icon = "gfx/interface/icons/event_icons/东德.dds"
 
-	duration = 0
+	duration = 3
 	
 	trigger = { 
 	}
 
 	option = {
-		name = DDR.1.a
+		name = ger.2.a
 		default_option = yes
-		add_modifier = {
-			name = the_country_of_our_ancestors_modifier
-			years = 1
-		}
 		c:PRU = { change_tag = DDR }
-		c:RUS = { create_diplomatic_pact = { country = c:DDR type = protectorate } }
+		c:RUS = { create_diplomatic_pact = { country = c:DDR type = protectorate } } #保护国
 		create_character = {
 			#威廉·皮克
 			first_name = "William"
@@ -178,18 +100,18 @@ GER_event.2 = { #成立东德
 	}
 
 	option = {
-		name = DDR.1.b
+		name = ger.2.b
 	}
 }
 
-GER_event.3 = { #德国统一
+ger.3 = { #德国统一
 	type = country_event
 	placement = root
 	duration = 3
 
-	title = GER_event.3.t
-	desc = GER_event.3.d
-	flavor = GER_event.3.f
+	title = ger.3.t
+	desc = ger.3.d
+	flavor = ger.3.f
 
 	event_image = { #事件图像
 		video = "southamerica_aristocrats"
@@ -208,7 +130,7 @@ GER_event.3 = { #德国统一
 
 	option = {
 		default_option = yes
-		name = GER_event.3.a
+		name = ger.3.a
 		add_loyalists = {
 			value = large_radicals
 		}
@@ -232,7 +154,7 @@ GER_event.3 = { #德国统一
 	}
 
 	option = {
-		name = GER_event.3.b
+		name = ger.3.b
 		add_loyalists = {
 			value = large_radicals
 		}
@@ -240,5 +162,34 @@ GER_event.3 = { #德国统一
 			name = modifier_end_of_warlord_period
 			months = normal_modifier_time
 		}
+	}
+}
+
+ger.4 = { #德国和平统一
+	type = country_event
+	orphan = yes
+	
+	title = ger.4.t
+	desc = ger.4.d
+	flavor = ger.4.f
+
+	event_image = { #事件图像
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	duration = 3
+	
+	trigger = { 			
+	}
+
+	option = {
+		name = ger.4.a
+		default_option = yes
+		annex = c:DDR
+		annex = c:BRD
 	}
 }

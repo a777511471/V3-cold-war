@@ -1,0 +1,70 @@
+namespace = nanmei
+
+nanmei.1 = {
+    type = country_event
+    placement = root
+    
+    title = nanmei.1.t
+    desc = nanmei.1.d
+    flavor = nanmei.1.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = nanmei.1.a
+        default_option = true
+        add_primary_culture = cu:quechua
+    }
+}
+
+nanmei.2 = {
+    type = country_event
+    placement = root
+    
+    title = nanmei.2.t
+    desc = nanmei.2.d
+    flavor = nanmei.2.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = nanmei.2.a
+        default_option = true
+        add_primary_culture = cu:han
+    }
+}
+
+nanmei.3 = {
+    type = country_event
+    placement = root
+    
+    title = nanmei.3.t
+    desc = nanmei.3.d
+    flavor = nanmei.3.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = nanmei.3.a
+        default_option = true
+        add_primary_culture = cu:dahe
+    }
+}

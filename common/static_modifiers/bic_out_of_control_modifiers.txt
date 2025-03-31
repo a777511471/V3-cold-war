@@ -7,6 +7,7 @@ bic_out_of_control_modifier = {
     country_prestige_mult = -0.25
 	unit_offense_mult = -0.33
 	country_prestige_from_army_power_projection_mult = -0.5
+	country_acceptance_culture_base_add = 75
 }
 
 bic_consolidation_modifier = {

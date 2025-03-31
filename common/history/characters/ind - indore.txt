@@ -1,31 +1,85 @@
 ﻿CHARACTERS = {
-	c:IND = {
-		create_character = {
-			# Hari Rao Holkar IX
-			#role = politician # Remove this line
-			first_name = "Hari_Rao"
-			last_name = "Holkar"
+	c:IND = { #印度尼西亚
+		create_character = { #知识分子总统苏加诺
+    		dna = ecchi_dna_du_yuesheng
+			historical = yes		
+			first_name = "Ahmad"
+			last_name = "Soekarno"
+			birth_date = 1901.6.6
+			culture = cu:javan
+			religion = rel:sunni #逊尼派					
 			ruler = yes
-			age = 41
-			interest_group = ig_landowners
-			ideology = ideology_traditionalist
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_reformer #改良主义者
 			traits = {
-				imperious
+				inspirational_orator #在啤酒馆鼓舞人心的演说家
+				firebrand #煽动大师				
+				basic_diplomat #外交家
+				engineer #工程师	
+				strong #健硕
+				hedonist #享乐主义者				
 			}
 		}	
 
-		create_character = {
-			# Khande Rao II Holkar X
-			#role = politician # Remove this line
-			first_name = "Khande_Rao"
-			last_name = "Holkar"
-			heir = yes
-			age = 8
-			interest_group = ig_landowners
-			ideology = ideology_traditionalist
+		create_character = { #知识分子领袖穆罕默德·哈达
+    		dna = dna_truman					
+			historical = yes		
+			first_name = "Muhammad"
+			last_name = "Hada"
+			birth_date = 1902.8.18
+			culture = cu:sumatran
+			religion = rel:sunni #逊尼派					
+			ig_leader = yes
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_ethno_nationalist #族裔民族主义者
 			traits = {
-				cautious
+				basic_political_operator #政治运作者
+				honorable #体面		
+				strong #健硕
+				brave #勇敢				
 			}
-		}
+		}	
+
+		create_character = { #社会民主主义工会总理苏丹·沙赫里尔		
+    		dna = ecchi_dna_wellington_koo			
+			historical = yes		
+			first_name = "Sudan"
+			last_name = "Shahril"
+			birth_date = 1909.3.5
+			culture = cu:sumatran
+			religion = rel:sunni #逊尼派					
+			ig_leader = yes
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+				basic_political_operator #政治运作者
+				economist #经济学家
+				honorable #体面		
+				strong #健硕
+				brave #勇敢				
+			}
+		}		
+
+		create_character = {
+			#威权主义少将（2级）哈基·穆罕默德·苏哈托		
+    		dna = ecchi_dna_liu_shaoqi
+			is_general = yes
+			commander_rank = commander_rank_2			
+			historical = yes
+			first_name = "Haji·Mohammad"
+			last_name = "Soeharto"
+			birth_date = 1921.6.8
+			culture = cu:javan	
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_authoritarian #威权主义者
+			traits = {
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师
+				enemy_of_the_people #人民公敌
+				expensive_tastes #昂贵嗜好					
+				strong #健硕												
+				cruel #残暴					 					
+			}
+		}		
 	}
 }

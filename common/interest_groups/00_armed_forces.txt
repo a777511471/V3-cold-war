@@ -108,12 +108,7 @@
 	on_character_ig_membership = {}
 
 	pop_potential = {
-		OR = {
-			is_pop_type = soldiers
-			is_pop_type = officers
-			is_pop_type = aristocrats
-			pop_is_discriminated = no
-		}
+		always = yes
 	}
 
 	pop_weight = {
@@ -124,11 +119,12 @@
 						state = {
 							any_scope_building = {
 								is_building_type = building_barracks
-								level >= 5
 							}
 						}
 					}
-				add = 25
+				add = 5
+				value = state.b:building_barracks.level
+				multiply = 2
 			}
 		}
 
@@ -147,11 +143,12 @@
 			}
 		}
 
+
 		add = {
 			desc = "POP_NOT_DISCRIMINATED"
 			if = {
 				limit = {
-					pop_is_discriminated = no
+					pop_acceptance >= acceptance_status_4
 				}
 				value = 10
 				if = { # Militarisation of colonial settlers
@@ -304,6 +301,18 @@
 				}
 			}
 		}
+
+		if = {
+			limit = {
+				pop_acceptance <= acceptance_status_2
+			}
+			multiply = {
+				desc = "POP_NOT_DISCRIMINATED"
+				value = 0.5
+			}
+		}
+
+
 		if = {
 			limit = {
 				scope:interest_group = {
@@ -317,6 +326,7 @@
 				min = 0
 			}
 		}
+
 		if = {
 			limit = {
 				scope:interest_group = {

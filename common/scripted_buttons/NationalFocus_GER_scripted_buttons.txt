@@ -1,0 +1,170 @@
+agree_GER_brd = {
+	name = "agree_GER_brd"
+	desc = "agree_GER_brd_desc"
+
+	visible = {
+
+	}
+
+	possible = {
+            NOT = { has_variable = agree  }
+			has_variable = disagree
+    }
+
+	effect = {
+		set_variable = agree
+		remove_variable = disagree
+	}
+	ai_chance = {
+         base = 0
+         modifier = {
+         trigger = { root = c:USA }
+         add = 700
+        }
+		modifier = {
+         trigger = { c:RHN = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:BAV = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:YSD = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:GBR = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:FRA = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:RHN = { 
+            relations:root <= -50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:BAV = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:YSD = { 
+            relations:root <= -50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:GBR = { 
+            relations:root <= -50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:FRA = { 
+            relations:root <= -50
+        } }
+         add = -70
+        }
+    }
+}
+against_GER_brd = {
+	name = "against_GER_brd"
+	desc = "against_GER_brd_desc"
+
+	visible = {
+
+	}
+
+	possible = {
+            NOT = { has_variable = disagree  }
+			has_variable = agree
+    }
+
+	effect = {
+		set_variable = disagree
+		remove_variable = agree
+	}
+	ai_chance = {
+         base = 50
+         modifier = {
+         trigger = { root = c:USA }
+         add = -700
+        }
+		modifier = {
+         trigger = { c:RHN = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:BAV = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:YSD = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:GBR = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:FRA = { 
+            relations:root <= -50
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:RHN = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:BAV = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:YSD = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:GBR = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:FRA = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+    }
+}

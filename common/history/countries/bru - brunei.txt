@@ -1,9 +1,31 @@
 ﻿COUNTRIES = {
 	c:BRU = {
-		effect_starting_technology_tier_5_tech = yes
-		effect_starting_politics_traditional = yes
-		activate_law = law_type:law_debt_slavery
-		
+		effect_starting_technology_tier_4_tech = yes
+		activate_law = law_type:law_autocracy #独裁制
+		activate_law = law_type:law_peasant_levies #征召农兵					
+		activate_law = law_type:law_serfdom #农奴制		
+		activate_law = law_type:law_dedicated_police #专职警察部队		
+		activate_law = law_type:law_appointed_bureaucrats #任命官僚制				
+		activate_law = law_type:law_cultural_exclusion #文化排斥		
+		activate_law = law_type:law_colonial_exploitation #民族剥削
+		activate_law = law_type:law_extraction_economy #盘剥经济
+		activate_law = law_type:law_religious_schools #教会学校
+		activate_law = law_type:law_charitable_health_system #慈善医院
+		activate_law = law_type:law_open_door #门户开放
+		activate_law = law_type:law_case_law_system #海洋法系
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_land_based_taxation
+
+		ig:ig_industrialists = { #实业家
+			set_interest_group_name = ig_elite #政治精英	
+			add_ideology = ideology_plutocratic #意识形态财阀主义者
+			add_ideology = ideology_laissez_faire #意识形态自由放任主义者
+			add_ideology = ideology_individualist #意识形态个人主义者
+			remove_ideology = ideology_colonialist #殖民主义者
+			remove_ideology = ideology_enclavist #飞地主义者
+			remove_ideology = ideology_malthusian #马尔萨斯主义者
+		}
+
 		ig:ig_landowners = {
 			add_ruling_interest_group = yes
 		}

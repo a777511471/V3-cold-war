@@ -1,0 +1,9 @@
+﻿# This is executed last among all history
+GLOBAL = {
+	every_country = {
+		set_variable = {
+			name = private_construction_add
+			value = 0
+		}
+	}
+}

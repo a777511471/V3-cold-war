@@ -5,33 +5,20 @@
 
 	is_shown_when_inactive = {
 		NOT = { has_variable = communism_1_done }
-		has_technology_researched = tech_marxism
+		OR = {
+			has_technology_researched = socialism
+			has_technology_researched = anarchism
+		}
 	}
 
 	scripted_progress_bar = communism_1_progress_bar
 
 	possible = {
-		NOT = { has_law = law_type:law_council_republic }
-		any_interest_group = {
-			is_marginal = no
+		any_political_movement = {
 			OR = {
-				law_stance = {
-					law = law_type:law_council_republic
-					value > neutral
-				}
-				any_scope_character = {
-					OR = {
-						has_role = politician
-						has_role = agitator
-					}
-					OR = {
-						has_ideology = ideology:ideology_communist
-						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_anarchist
-						has_ideology = ideology:ideology_mao
-						has_ideology = ideology:ideology_stalin
-					}
-				}
+				is_political_movement_type = movement_socialist
+				is_political_movement_type = movement_anarchist
+				is_political_movement_type = movement_communist
 			}
 		}
 	}
@@ -85,47 +72,30 @@
 	should_be_pinned_by_default = yes
 }
 
-je_communism_2 = {
+je_communism_2 = { #人民的革命
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
 	group = je_group_internal_affairs
 
-	on_monthly_pulse = {
-		effect = {
-			if = {
-				limit = {
-					has_law = law_type:law_council_republic
-				}
-				change_variable = {
-					name = je_communism_2_var
-					add = 1
-				}
-			}
-		}
+	is_shown_when_inactive = { #显示条件
+		game_date >= 1946.1.1
+	}
+	possible = { #激活条件
+		game_date >= 1946.1.1								
 	}
 
-	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-		has_law = law_type:law_council_republic
+	complete = { #完成条件
+		has_law = law_type:law_council_republic #委员会共和制
+		has_technology_researched = tech_marxist_political_economics #马克思主义政治经济学		
 		has_revolution = no
 		has_any_secessionists_broken_out = no 
 	}
 
-	on_complete = {
-		trigger_event = { id = communism.2 popup = yes }
+	on_complete = { #如果完成
+		trigger_event = { id = communism.2 popup = yes } #工人共和国
 	}
 
-	current_value = {
-		value = root.var:je_communism_2_var
-	}
-
-	goal_add_value = {
-		add = 60
-	}
-
-	progressbar = yes
+	should_be_pinned_by_default = yes
 }
 
 je_anarchy = {

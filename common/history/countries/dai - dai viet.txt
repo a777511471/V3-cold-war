@@ -1,39 +1,33 @@
 ﻿COUNTRIES = {
 	c:DAI = {
-		effect_starting_technology_tier_5_tech = yes
-		add_technology_researched = electrical_generation
-		add_technology_researched = electric_railway
-		add_technology_researched = urban_planning
-		add_technology_researched = sericulture
-		add_technology_researched = academia
-		add_technology_researched = law_enforcement
-                	add_technology_researched = atmospheric_engine
-		
+		effect_starting_technology_tier_4_tech = yes
+		add_technology_researched = sericulture #古代技艺
+		add_technology_researched = tech_economics_foundations #资本论	
+				
 		# Laws 
 		activate_law = law_type:law_council_republic #社会主义共和制
 		activate_law = law_type:law_single_party_state #一党制国家
+		activate_law = law_type:law_encourage_fertility #鼓励生育		
+        activate_law = law_type:law_national_militia #国家民兵
+		activate_law = law_type:law_ethnostate #民族国家		
+        activate_law = law_type:law_abolish_child_laborl #废除童工		
+        activate_law = law_type:law_charitable_health_system #慈善医院		
+		activate_law = law_type:law_land_based_taxation #土地税制
+		activate_law = law_type:law_colonial_exploitation #民族剥削					
+		activate_law = law_type:law_tenant_farmers #佃农		
+		activate_law = law_type:law_women_in_the_workplace #平等就业法	
+		activate_law = law_type:law_interventionism #经济干预					
 		activate_law = law_type:law_protected_speech #言论保护
 		activate_law = law_type:law_freedom_of_conscience #信仰自由
-		activate_law = law_type:law_multicultural #文化多元
 		activate_law = law_type:law_guaranteed_liberties #保障自由
 		activate_law = law_type:law_regulatory_bodies #国家监管机构
 		activate_law = law_type:law_continental_law_system #大陆法系
-		activate_law = law_type:law_graduated_taxation #累进税制
-		activate_law = law_type:law_homesteading #小农土地所有制
-		activate_law = law_type:law_state_led #科学院主导
- 		activate_law = law_type:law_compulsory_primary_school
-		activate_law = law_type:law_womens_suffrage
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_protectionism
-		activate_law = law_type:law_command_economy #计划经济
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_dedicated_police
-		activate_law = law_type:law_politicized_military #政治化军队
-		activate_law = law_type:law_public_health_insurance
 		activate_law = law_type:law_10_hour_working_system
-		activate_law = law_type:law_wage_subsidies #工资补贴
 		activate_law = law_type:law_migration_controls #移民控制
-
 
 		set_institution_investment_level = {
 			institution = institution_national_defense
@@ -41,7 +35,7 @@
 		}
 
 		set_institution_investment_level = {
-			institution = institution_schools
+			institution = institution_schools #教育
 			level = 2
 		}
 
@@ -51,11 +45,22 @@
 		}
 		
 		set_government_wage_level = low
-	
+
+		add_journal_entry = { type = je_tudigaige2 } #土地改革
+		
+		ig:ig_industrialists = { #企业家
+			set_interest_group_name = ig_entrepreneur
+		}
+
 		ig:ig_armed_forces = { #军队
 			remove_ideology = ideology_loyalist #效忠派
 			add_ideology = ideology_proletarian #无产阶级主义者
 		}
 
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_elite #政治精英
+			remove_ideology = ideology_paternalistic
+			add_ideology = ideology_republican_paternalistic #缙绅主义者					
+		}
 	}
 }

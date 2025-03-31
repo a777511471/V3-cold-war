@@ -14,6 +14,9 @@ template lens_war_shimmer_duration {
 	duration = 1
 }
 
+#放大图标，682-801
+
+
 types lens_toolbar_types {
 	### LENS TOOLBAR
 	type lens_toolbar = widget {
@@ -683,7 +686,7 @@ types lens_toolbar_types {
 			onclick = "[LensOption.Toggle]"
 
 			using = default_button_map_interaction
-			size = { -1 125 }
+			size = { -1 120 }
 			min_width = "[GetDefine('NGUI', 'LENS_TOOLBAR_ITEM_WIDTH')]"
 
 			modify_texture = {
@@ -720,21 +723,21 @@ types lens_toolbar_types {
 
 			button = {
 				name = "lens_icon"
-				size = { 120 120 }
+				size = { 100 100 }
 				position = { 0 5 }
 				gfxtype = buttongfx
 				parentanchor = hcenter
 				alwaystransparent = yes
 
 				icon = {
-					size = { 100 100 }
+					size = { 80 80 }
 					parentanchor = hcenter
 					texture = "[LensOption.GetTexture]"
 				}
 			}
 
 			widget = {
-				position = { 0 6 }
+				position = { 0 5 }
 				size = { 100% 40 }
 				parentanchor = hcenter|bottom
 
@@ -745,19 +748,19 @@ types lens_toolbar_types {
 					margin_left = 5
 					margin_right = 5
 
-					
-
 					textbox = {
-						name = "cost"
+						name = "title"
+
 						layoutpolicy_horizontal = expanding
-
-						raw_text = "#WHITE [LensOption.GetText]#!#v [LensOption.GetCostText]#!"
+						layoutpolicy_vertical = expanding
+						
+						raw_text = "#BOLD [LensOption.GetText]#! #WHITE #v [LensOption.GetCostText]#!"
 						align = center|nobaseline
-
+						
 						using = fontsize_xsmall
 						elide = right
-						autoresize = yes
-
+						multiline = yes
+						
 						alpha = 0.75
 
 						state = {

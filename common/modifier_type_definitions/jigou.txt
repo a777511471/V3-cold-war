@@ -1,3 +1,12 @@
+#机构最大投入等级
+country_institution_ecological_protection_max_investment_add={ #环保机构
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
 country_institution_scientific_research_max_investment_add={ #科研机构
 	decimals=0
 	color=good
@@ -13,3 +22,22 @@ country_institution_family_planning_max_investment_add={ #计生机构
 		ai_value=0
 	}
 }
+#机构行政力花费
+country_institution_cost_institution_ecological_protection_mult={ #环保
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+country_institution_cost_institution_scientific_research_mult={ #科研
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+

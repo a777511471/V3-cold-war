@@ -1,0 +1,8 @@
+add_moral_education_ideology = {}
+
+add_ig_devout_corporatism_ideology = {
+    remove_ideology = ideology_pious
+    add_ideology = ideology_corporatist
+}
+
+add_literati_ideology = {}

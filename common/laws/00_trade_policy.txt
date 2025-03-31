@@ -10,7 +10,7 @@ law_mercantilism = { #重商主义
 	progressiveness = 0
 	
 	unlocking_technologies = {
-		tech_economics_foundations
+		tech_early_economics #早期经济学
 	}
 
 	tariff_modifier_no_priority = {
@@ -65,7 +65,7 @@ law_protectionism = { #贸易保护
 	progressiveness = 50
 	
 	unlocking_technologies = {
-		tech_economics_foundations
+		tech_classical_political_economy #古典政治经济学
 	}
 	
 	tariff_modifier_no_priority = {
@@ -119,10 +119,10 @@ law_open_door = { #门户开放（殖民地/半殖民地贸易政策）
 	progressiveness = 50
 	
 	modifier = {
-		country_trade_route_competitiveness_mult = 0.5
 		country_trade_route_quantity_mult = 0.5
 		country_trade_route_cost_mult = -0.5
 		country_leverage_resistance_mult = -0.25
+		country_economic_dependence_on_overlord_add = 0.5 #对宗主国的经济依赖		
 	}
 
 	tariff_modifier_no_priority = {
@@ -176,7 +176,7 @@ law_free_trade = { #自由贸易
 	}	
 	
 	unlocking_technologies = {
-		tech_economics_foundations
+		tech_classical_political_economy #古典政治经济学
 	}
 	
 	on_enact = {

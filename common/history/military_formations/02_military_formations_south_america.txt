@@ -1,5 +1,5 @@
 ﻿MILITARY_FORMATIONS = {
-	c:BRZ = {
+	c:BRZ = { #巴西
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_brazil
@@ -12,7 +12,7 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_hussars
 				state_region = s:STATE_PERNAMBUCO
 				count = 2
 			}
@@ -30,7 +30,7 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_hussars
 				state_region = s:STATE_PERNAMBUCO
 				count = 2
 			}
@@ -39,7 +39,7 @@
 		create_military_formation = {
 			type = army
 			hq_region = sr:region_brazil
-			name = "巴西帝国军团"
+			name = "巴西军团"
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
@@ -48,7 +48,7 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_hussars
 				state_region = s:STATE_PARAIBA
 				count = 1
 			}
@@ -63,25 +63,37 @@
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_brazil
-			name = "巴西皇家舰队"
-		
+			name = "巴西海军"	
+
 			combat_unit = {
-				type = unit_type:combat_unit_type_man_o_war
-				state_region = s:STATE_RIO_DE_JANEIRO
+				type = unit_type:combat_unit_type_light_ship_1 #驱逐舰
+				state_region = s:STATE_SAO_PAULO
+				count = 14
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_ship_1 #驱逐舰
+				state_region = s:STATE_PARANA
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_ship_2 #潜艇
+				state_region = s:STATE_PARANA
+				count = 8
+			}			
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_capital_ship_1 #无畏舰
+				state_region = s:STATE_SAO_PAULO
+				count = 5
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_carrier_1 #航母
+				state_region = s:STATE_SAO_PAULO
 				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_BAHIA
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
-				state_region = s:STATE_RIO_DE_JANEIRO
-				count = 6
-			}
+			}		
 		}
 	}
 
@@ -98,7 +110,7 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_hussars
 				state_region = s:STATE_SANTIAGO
 				count = 2
 			}
@@ -122,7 +134,7 @@
 			name = "智利海军"
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_frigate
+				type = unit_type:combat_unit_type_light_ship_1
 				state_region = s:STATE_SANTIAGO
 				count = 1
 			}
@@ -138,19 +150,19 @@
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_BUENOS_AIRES
-				count = 5
+				count = 8
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
 				state_region = s:STATE_TUCUMAN
-				count = 1
+				count = 7
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_hussars
 				state_region = s:STATE_BUENOS_AIRES
-				count = 1
+				count = 15
 			}
 		}
 
@@ -160,72 +172,9 @@
 			name = "阿根廷无敌舰队"
 
 			combat_unit = { # Nothing the size of a frigate
-				type = unit_type:combat_unit_type_frigate
+				type = unit_type:combat_unit_type_light_ship_1
 				state_region = s:STATE_BUENOS_AIRES
 				count = 1
-			}
-		}
-	}
-
-	c:PRA = {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_brazil
-			name = "大帕拉军团"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_PARA
-				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_PARA
-				count = 7
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_AMAZONAS
-				count = 4
-			}
-			save_scope_as = firstarmypra
-		}
-
-		scope:pra_general_gen = {
-			transfer_to_formation = scope:firstarmypra
-		}
-	}
-
-	c:PNI = {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_brazil
-			name = "里奥格兰德共和军"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_RIO_GRANDE_DO_SUL
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_RIO_GRANDE_DO_SUL
-				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_hussars
-				state_region = s:STATE_RIO_GRANDE_DO_SUL
-				count = 1
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_RIO_GRANDE_DO_SUL
-				count = 4
 			}
 		}
 	}
@@ -249,53 +198,9 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_hussars
 				state_region = s:STATE_ECUADOR
 				count = 1
-			}
-		}
-	}
-
-	c:CLM = {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_gran_colombia
-			name = "新格拉纳达军团"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_CUNDINAMARCA
-				count = 5
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_CAUCA
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_ANTIOQUIA
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_CUNDINAMARCA
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_CAUCA
-				count = 2
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_irregular_infantry
-				state_region = s:STATE_ANTIOQUIA
-				count = 4
 			}
 		}
 	}
@@ -325,29 +230,9 @@
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
+				type = unit_type:combat_unit_type_hussars
 				state_region = s:STATE_ZULIA
 				count = 2
-			}
-		}
-	}
-
-	c:URU = {
-		create_military_formation = {
-			type = army
-			hq_region = sr:region_brazil
-			name = "国民军"
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_URUGUAY
-				count = 3
-			}
-
-			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_URUGUAY
-				count = 1
 			}
 		}
 	}

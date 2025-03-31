@@ -6,12 +6,10 @@
 
 		set_tax_level = medium
 		
-		add_taxed_goods = g:wine
-		
 		# Laws
-		activate_law = law_type:law_parliamentary_republic #议会共和制
+		activate_law = law_type:law_monarchy #君主制
 		activate_law = law_type:law_protectionism #贸易保护
-		activate_law = law_type:law_racial_segregation #种族隔离
+		activate_law = law_type:law_multicultural #文化多元
 		activate_law = law_type:law_freedom_of_conscience #信仰自由
 		activate_law = law_type:law_elected_bureaucrats #选举官僚制
 		activate_law = law_type:law_case_law_system #海洋法系	
@@ -32,16 +30,11 @@
 
 		ig:ig_trade_unions = { #工会
 			remove_ideology = ideology_proletarian #无产阶级主义者
-			add_ideology = ideology_social_democrats #社民主义者
-		}
-
-		add_company = company_type:company_hbc
-		company:company_hbc = {
-			set_company_establishment_date = 1670.5.2
+			add_ideology = ideology_social_democrats #社会民主主义者
 		}
 
 		set_institution_investment_level = {
-			institution = institution_schools
+			institution = institution_schools #教育
 			level = 3
 		}
 

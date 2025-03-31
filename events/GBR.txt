@@ -1,0 +1,30 @@
+namespace = gbr
+
+gbr.1 = { #伦敦烟雾事件，英国海难吸铁石莱托勒逝世
+	type = country_event
+	orphan = yes
+	
+	title = gbr.1.t
+	desc = gbr.1.d
+	flavor = gbr.1.f
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = gbr.1.a
+		default_option = yes
+		add_journal_entry = { type = je_environmental_protection } #环境保护法
+	}
+}

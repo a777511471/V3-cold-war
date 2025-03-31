@@ -6,7 +6,7 @@
 	wage_weight = 6
 	paid_private_wage = yes
 	literacy_target = 0.20
-	dependent_wage = 0.5	# per year
+	dependent_wage = 5	# per year
 	unemployment = yes
 	
 	# 30% - 90% politically engaged

@@ -56,6 +56,7 @@ algerian_war.2 = {
 			create_country = {
 				tag = ALD
 				origin = c:FRA
+ 				state = s:STATE_ORAN.region_state:FRA               
 				state = s:STATE_ALGIERS.region_state:FRA
                 state = s:STATE_CONSTANTINE.region_state:FRA
                 state = s:STATE_TLEMCEN.region_state:FRA
@@ -110,6 +111,8 @@ algerian_war.3 = {
     option = {
         name = algerian_war.3.a
         default_option = true
+        add_primary_culture = cu:maghrebi
+        add_primary_culture = cu:berber
     }
 }
 

@@ -1,8 +1,146 @@
-﻿state_trait_three_gorges = { #三峡
+﻿state_trait_port_of_shanghai = { #上海港
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 5
+		state_building_naval_base_max_level_add = 10
+	}
+}
+
+state_trait_natural_deepwater_port = { #天然深水港（军事）
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		state_building_port_max_level_add = 5		
+		building_military_shipyards_throughput_add = 0.2
+		state_market_access_price_impact = 0.05			
+	}
+}
+
+state_trait_yangtze_river = { #长江
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_market_access_price_impact = 0.15		
+		state_infrastructure_add = 30 #基础设施修正
+		state_infrastructure_from_population_mult = 0.02 #每100K人口产生的基础设施
+	}
+}
+
+state_trait_zhoushan_fishery = { #舟山渔业
+    icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	
+	modifier = {
+		building_group_bg_fishing_throughput_add = 0.2
+	}
+}
+
+state_trait_yarlung_zangbo_grand_canyon = { #雅鲁藏布大峡谷
 	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
 	
 	modifier = {
-		goods_output_electricity_mult = 0.75
+		goods_output_electricity_mult = 0.15
+	}
+}
+
+state_trait_northeast_mining_area = { #东北矿区
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+	
+	modifier = {
+		building_iron_mine_throughput_add = 0.15
+		building_coal_mine_throughput_add = 0.1		
+	}
+}
+
+state_trait_phosphate_ore_veins = { #磷矿矿脉
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+	
+	modifier = {
+		building_sulfur_mine_throughput_add = 0.2
+	}
+}
+
+state_trait_huangpan_area = { #黄泛区
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = -0.25 #农业吞吐量	
+		building_group_bg_plantations_throughput_add = -0.25 #种植园吞吐量
+		state_market_access_price_impact = 0.025		
+		state_infrastructure_add = 5		
+	}
+}
+
+state_trait_huaihe = { #淮河
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_market_access_price_impact = 0.1	
+		state_infrastructure_add = 15
+	}
+}
+
+state_trait_xiangjiang_river = { #湘江
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_market_access_price_impact = 0.05		
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_ganjiang_river = { #赣江
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	
+	modifier = {
+		state_market_access_price_impact = 0.05		
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_dalian_bay = { #达利安湾（大连湾）
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = 0.15
+		building_military_shipyards_throughput_add = 0.15
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 15
+	}
+}
+
+state_trait_jianghan_plain = { #江汉平原
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_plantations_throughput_add = 0.05
+	}
+}
+
+state_trait_iron_wall_canyon = { #铁壁峡谷
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+	
+	modifier = {
+		building_iron_mine_throughput_add = 0.5
+	}
+}
+
+state_trait_cobalt_copper_ore_vein = { #钴铜矿脉
+    icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+	
+	modifier = {
+		building_iron_mine_throughput_add = 0.2
+	}
+}
+
+state_trait_three_gorges = { #三峡
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+	
+	modifier = {
+		goods_output_electricity_mult = 0.15
 	}
 }
 
@@ -10,8 +148,8 @@ state_trait_hanjiang_river = { #汉江
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
 	modifier = {
-		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
+		state_market_access_price_impact = 0.05		
+		state_infrastructure_add = 10
 	}
 }
 
@@ -24,14 +162,6 @@ state_trait_the_persian_gulf = { #波斯湾
 }
 
 state_trait_pearl_harbor = { #珍珠港（军事）
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
-	
-	modifier = {
-		building_military_shipyards_throughput_add = 0.2
-	}
-}
-
-state_trait_natural_deepwater_port = { #天然深水港（军事）
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {
@@ -61,6 +191,7 @@ state_trait_the_songhua_river = { #松花江
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
 	modifier = {
+		state_market_access_price_impact = 0.05		
 		state_infrastructure_add = 10
 		building_group_bg_agriculture_throughput_add = 0.05
 	}
@@ -120,14 +251,14 @@ state_trait_hokkaido_fisheries = { #北海道渔业
 	}
 }
 
-state_trait_qingdao_bay = { #青岛湾
+state_trait_qingdao_bay = { #胶州湾
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {
-		building_shipyards_throughput_add = 0.1
-		building_military_shipyards_throughput_add = 0.1
+		building_shipyards_throughput_add = 0.15
+		building_military_shipyards_throughput_add = 0.15
 		state_building_port_max_level_add = 2
-		state_building_naval_base_max_level_add = 10
+		state_building_naval_base_max_level_add = 15
 	}
 }
 
@@ -171,8 +302,8 @@ state_trait_the_minjiang_river = { #闽江
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
 	modifier = {
+		state_market_access_price_impact = 0.05		
 		state_infrastructure_add = 10
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -180,7 +311,8 @@ state_trait_yellow_river = { #（被p社加强的）黄河
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	
 	modifier = {
-		state_infrastructure_add = 5
+		state_market_access_price_impact = 0.05		
+		state_infrastructure_add = 10
 	}
 }
 

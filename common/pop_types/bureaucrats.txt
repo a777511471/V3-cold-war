@@ -7,7 +7,7 @@
 	paid_private_wage = yes
 	literacy_target = 0.40
 	education_access = 0.50
-	dependent_wage = 0.5	# per year
+	dependent_wage = 10	# per year
 	unemployment = yes
 	
 	# 50% - 100% politically engaged

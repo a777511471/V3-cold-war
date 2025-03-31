@@ -1,4 +1,62 @@
 POPS = {
+	s:STATE_LAZIO = {
+		region_state:ITA = {
+			create_pop = {
+				culture = south_italian
+				size = 3780000
+			}
+		}
+	}
+
+	s:STATE_UMBRIA = {
+		region_state:ITA = {
+			create_pop = {
+				culture = south_italian
+				size = 3100000
+			}
+		}
+	}
+
+	s:STATE_DOBRUDJA = {
+		region_state:RUS = {
+			create_pop = {
+				culture = romanian
+				religion = atheist						
+				size = 241910
+			}
+		}		
+		region_state:ROM = {
+			create_pop = {
+				culture = romanian
+				size = 2460000
+			}
+			create_pop = {
+				culture = romanian
+				religion = atheist					
+				size = 70000
+			}
+			create_pop = {
+				culture = bulgarian
+				size = 700000
+			}			
+		}
+		region_state:BUL = {
+			create_pop = {
+				culture = romanian
+				size = 2460000
+			}
+			create_pop = {
+				culture = romanian
+				religion = atheist					
+				size = 70000
+			}
+			create_pop = {
+				culture = bulgarian
+				size = 700000
+			}			
+		}
+	}	
+
 	s:STATE_MALTA = {
 		region_state:GBR = {
 			create_pop = {
@@ -11,7 +69,7 @@ POPS = {
 		region_state:FRA = {
 			create_pop = {
 				culture = corsican
-				size = 323900
+				size = 2323900
 			}
 		}
 	}
@@ -51,7 +109,7 @@ POPS = {
 		region_state:SPA = {
 			create_pop = {
 				culture = catalan
-				size = 1100000
+				size = 2100000
 			}
 		}
 	}
@@ -61,6 +119,18 @@ POPS = {
 				culture = catalan
 				size = 3040000
 			}
+			create_pop = {
+				culture = spanish
+				size = 156000
+			}
+			create_pop = {
+				culture = portuguese
+				size = 156000
+			}
+			create_pop = {
+				culture = french	
+				size = 156000
+			}									
 		}
 	}
 	s:STATE_BALEARES = {
@@ -101,7 +171,7 @@ POPS = {
 		region_state:SPA = {
 			create_pop = {
 				culture = spanish
-				size = 1426000
+				size = 3080000
 			}
 		}
 	}
@@ -109,40 +179,64 @@ POPS = {
 		region_state:SPA = {
 			create_pop = {
 				culture = spanish
-				size = 2980000
-			}
+				size = 3080000
+			}			
 		}
 	}
 	s:STATE_BEIRA = {
 		region_state:POR = {
 			create_pop = {
 				culture = portuguese
-				size = 2908900
+				size = 3080000
 			}
+			create_pop = {
+				culture = portuguese			
+				size = 156000
+			}	
+			create_pop = {
+				culture = afro_brazilian
+				size = 24666
+			}						
 		}
 	}
 	s:STATE_ESTREMADURA = {
 		region_state:POR = {
 			create_pop = {
 				culture = portuguese
-				size = 1990000
+				size = 3080000
 			}
+			create_pop = {
+				culture = portuguese		
+				size = 156000
+			}	
+			create_pop = {
+				culture = afro_brazilian
+				size = 24666
+			}					
 		}
 	}
 	s:STATE_ALENTEJO = {
 		region_state:POR = {
 			create_pop = {
 				culture = portuguese
-				size = 1440000
+				size = 3080000
 			}
+			create_pop = {
+				culture = portuguese			
+				size = 156000
+			}			
+			create_pop = {
+				culture = afro_brazilian
+				size = 24666
+			}						
 		}
 	}
-	s:STATE_CAPE_VERDE = {
+	s:STATE_CAPE_VERDE = { #佛得角
 		region_state:POR = {
 			create_pop = {
-				culture = portuguese
-				size = 103532
-			}
+				culture = portuguese				
+				size = 156000
+			}				
 			create_pop = {
 				culture = afro_brazilian
 				size = 24666
@@ -177,52 +271,14 @@ POPS = {
 			}
 			create_pop = {
 				culture = north_caucasian
-				pop_type = slaves
 				size = 6000
 			}
 			create_pop = {
 				culture = lacustrine_bantu
-				pop_type = slaves
 				size = 16000
 			}
 		}
-	}
-	s:STATE_DOBRUDJA = {
-		region_state:RUS = {
-			create_pop = {
-				culture = turkish
-				size = 25600
-			}
-			create_pop = {
-				culture = ukrainian
-				size = 9000
-			}
-			create_pop = {
-				culture = bulgarian
-				size = 2000
-			}
-			create_pop = {
-				culture = greek
-				size = 100
-			}
-			create_pop = {
-				culture = romanian
-				size = 8000
-			}
-		}
-		region_state:ROM = {
-			create_pop = {
-				culture = romanian
-				size = 1460000
-			}
-		}
-		region_state:BUL = {
-			create_pop = {
-				culture = romanian
-				size = 1460000
-			}
-		}
-	}
+	}	
 	s:STATE_WEST_AEGEAN_ISLANDS = {
 		region_state:GRE = {
 			create_pop = {
@@ -251,7 +307,7 @@ POPS = {
 		region_state:SPA = {
 			create_pop = {
 				culture = spanish
-				size = 1214624
+				size = 2214624
 			}
 		}
 	}
@@ -287,4 +343,4 @@ POPS = {
 			}
 		}
 	}
-	}
+}

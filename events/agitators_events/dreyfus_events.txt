@@ -1181,13 +1181,13 @@ dreyfus.8 = {
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = dreyfus_army_sanization
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		ig:ig_intelligentsia = {
 			add_modifier = {
 				name = dreyfus_pen_triumphant
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		scope:alfred_dreyfus_scope = {
@@ -1228,20 +1228,20 @@ dreyfus.8 = {
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = dreyfus_army_sanization
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		ig:ig_intelligentsia = {
 			add_modifier = {
 				name = dreyfus_france_of_voltaire
-				months = long_modifier_time
+				years = 10
 				multiplier = 1.5
 			}
 		}
 		ig:ig_trade_unions = {
 			add_modifier = {
 				name = dreyfus_france_of_voltaire
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		if = {
@@ -1253,7 +1253,7 @@ dreyfus.8 = {
 			ig:ig_petty_bourgeoisie = {
 				add_modifier = {
 					name = dreyfus_france_of_voltaire
-					months = long_modifier_time
+					years = 10
 				}
 			}
 		}
@@ -1266,7 +1266,7 @@ dreyfus.8 = {
 			ig:ig_rural_folk = {
 				add_modifier = {
 					name = dreyfus_france_of_voltaire
-					months = long_modifier_time
+					years = 10
 				}
 			}
 		}
@@ -1279,7 +1279,7 @@ dreyfus.8 = {
 			ig:ig_industrialists = {
 				add_modifier = {
 					name = dreyfus_france_of_voltaire
-					months = long_modifier_time
+					years = 10
 				}
 			}
 		}
@@ -1312,12 +1312,12 @@ dreyfus.8 = {
 			}
 			add_modifier = {
 				name = dreyfus_unsatisfying_conclusion
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		add_modifier = {
 			name = dreyfus_legacy_modifier
-			months = long_modifier_time
+			years = 10
 		}
 		add_radicals = {
 			value = small_radicals
@@ -1339,12 +1339,12 @@ dreyfus.8 = {
 			}
 			add_modifier = {
 				name = dreyfus_unsatisfying_conclusion
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		add_modifier = {
 			name = dreyfus_legacy_disc_modifier
-			months = long_modifier_time
+			years = 10
 		}
 		add_radicals = {
 			value = small_radicals
@@ -1365,7 +1365,7 @@ dreyfus.8 = {
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = dreyfus_army_triumphant
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		scope:ferdinand_esterhazy_scope = {
@@ -1381,7 +1381,7 @@ dreyfus.8 = {
 		ig:ig_armed_forces = {
 			add_modifier = {
 				name = dreyfus_france_of_st_louis
-				months = long_modifier_time
+				years = 10
 				multiplier = 1.5
 			}
 		}
@@ -1398,7 +1398,7 @@ dreyfus.8 = {
 				}
 				add_modifier = {
 					name = dreyfus_france_of_voltaire
-					months = long_modifier_time
+					years = 10
 				}
 			}
 		}

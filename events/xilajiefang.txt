@@ -1,0 +1,17 @@
+namespace = xilajiefang_event
+
+xilajiefang_event.1 = {
+	type = country_event
+	hidden = yes
+	
+	trigger = {
+	 exist = c:ION
+      NOT = { exist = c:GRE } 
+	}
+
+	immediate = {
+		c:ION ={ 
+		 change_tag = GRE
+		}
+	}	
+}

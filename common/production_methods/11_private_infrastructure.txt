@@ -327,11 +327,11 @@ pm_trade_center_bureaucrat_ownership = {
 	}
 }
 
-pm_financial_district_privately_owned = {
+pm_financial_district_privately_owned = { #私人所有
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	replacement_if_valid = pm_financial_district_principle_divine_economics_2
 	
-	unlocking_laws = {
+	unlocking_laws = { #必须有的法律
 		law_traditionalism
 		law_industry_banned
 		law_agrarianism
@@ -353,16 +353,15 @@ pm_financial_district_privately_owned = {
 	}
 }
 
-pm_financial_district_publicly_traded = {
+pm_financial_district_publicly_traded = { #公开交易
 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
 	
-	unlocking_laws = {
+	unlocking_laws = { #必须有的法律
+		law_social_capitalism #社会主义市场经济
+		law_collective_economy #集体经济
 		law_command_economy
 		law_cooperative_ownership
 	}
-	
-	
-
 	
 	building_modifiers = { 
 		level_scaled = {
@@ -451,7 +450,7 @@ pm_manor_house_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
-	disallowing_laws = {
+	disallowing_laws = { #不能有的法律
 		law_collectivized_agriculture
 	}
 	
@@ -477,9 +476,10 @@ pm_manor_house_principle_divine_economics_2 = {
 pm_manor_house_bureaucrat_ownership = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 
-	unlocking_laws = {
+	unlocking_laws = { #必须有的法律
 		law_state_atheism
 		law_total_separation
+		law_secularization #推广无神论
 	}
 	
 	building_modifiers = {
@@ -495,8 +495,9 @@ pm_manor_house_bureaucrat_ownership = {
 pm_manor_house_clergy_ownership = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 
-	disallowing_laws = {
+	disallowing_laws = { #不能有的法律
 		law_state_atheism
+		law_secularization #推广无神论
 	}
 
 	building_modifiers = {
@@ -507,4 +508,87 @@ pm_manor_house_clergy_ownership = {
 			building_clergymen_shares_add = 1
 		}
 	}
+}
+
+pm_company_headquarter_privately_owned = { #私人所有
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+
+	disallowing_laws = { #不能有的法律
+		law_cooperative_ownership #合作社所有制
+		law_collective_economy #集体经济
+		law_command_economy #计划经济
+	}
+
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_capitalists_add = 50 #资本家
+			building_employment_shopkeepers_add = 100
+			building_employment_clerks_add = 100
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_shopkeepers_shares_add = 1
+		}
+	}
+}
+
+pm_company_headquarter_cooperative_owned = { #合作社所有（法团、合作社）
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	unlocking_laws = { #必须有的法律
+		law_cooperative_ownership #合作社所有制
+		law_corporatism_ownership #法团经济
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_shopkeepers_add = 50 #店主
+			building_employment_clerks_add = 200 #职员
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 5
+			building_clerks_shares_add = 5
+		}			
+	}	
+}
+
+pm_company_headquarter_collectively_owned = { #集体所有（集体经济）
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	unlocking_laws = { #必须有的法律
+		law_collective_economy #集体经济
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_shopkeepers_add = 100 #店主
+			building_employment_clerks_add = 150 #职员
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 5
+			building_clerks_shares_add = 5
+		}			
+	}	
+}
+
+pm_company_headquarter_country_owned = { #国家所有（国家资本主义、社会主义市场经济、计划经济）
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	unlocking_laws = { #必须有的法律
+		law_state_capitalism_ownership #国家资本主义
+		law_social_capitalism #社会主义市场经济
+		law_command_economy #计划经济
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_shopkeepers_add = 100 #店主
+			building_employment_bureaucrats_add = 50 #官僚
+			building_employment_clerks_add = 150 #职员
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 5
+			building_bureaucrats_shares_add = 5
+		}			
+	}	
 }

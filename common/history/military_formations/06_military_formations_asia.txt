@@ -71,7 +71,7 @@
 				count = 5
 			}
 		}
-}
+	}
 
 	c:CHI = {
 		create_military_formation = {
@@ -157,6 +157,26 @@
 		}
 	}
 
+	c:AFG = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_persia
+			name = "阿富汗王家陆军"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry #摩托化步兵
+				state_region = s:STATE_KABUL
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery #野战炮
+				state_region = s:STATE_KABUL
+				count = 2
+			}
+		}
+	}	
+
 	c:PER = {
 		create_military_formation = {
 			type = army
@@ -165,19 +185,19 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_IRAKAJEMI
-				count = 4
+				state_region = s:STATE_SISTAN
+				count = 17
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_IRAKAJEMI
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_SISTAN
 				count = 2
 			}
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_cannon_artillery
-				state_region = s:STATE_IRAKAJEMI
+				state_region = s:STATE_SISTAN
 				count = 1
 			}
 		}
@@ -189,13 +209,13 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_MAZANDARAN
-				count = 2
+				state_region = s:STATE_SISTAN
+				count = 19
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_MAZANDARAN
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_SISTAN
 				count = 1
 			}
 		}
@@ -207,13 +227,13 @@
 
 			combat_unit = {
 				type = unit_type:combat_unit_type_line_infantry
-				state_region = s:STATE_TABRIZ
-				count = 1
+				state_region = s:STATE_LURISTAN
+				count = 19
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_lancers
-				state_region = s:STATE_TABRIZ
+				type = unit_type:combat_unit_type_hussars
+				state_region = s:STATE_SISTAN
 				count = 1
 			}
 		}
@@ -221,19 +241,25 @@
 		create_military_formation = {
 			type = fleet
 			hq_region = sr:region_persia
-			name = "伊朗王家舰队"
+			name = "伊朗海军"
 		
 			combat_unit = {
-				type = unit_type:combat_unit_type_capital_ship_1
-				state_region = s:STATE_MAZANDARAN
-				count = 1
+				type = unit_type:combat_unit_type_light_ship_1 #驱逐舰
+				state_region = s:STATE_SISTAN
+				count = 20
 			}
 
 			combat_unit = {
-				type = unit_type:combat_unit_type_light_ship_1
-				state_region = s:STATE_MAZANDARAN
-				count = 3
+				type = unit_type:combat_unit_type_light_ship_1 #驱逐舰
+				state_region = s:STATE_LARISTAN
+				count = 15
 			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_light_ship_2 #潜艇
+				state_region = s:STATE_LARISTAN
+				count = 3
+			}			
 		}
 	}
 	c:PRK = {
@@ -274,4 +300,24 @@
 			}
 		}
 	}
+
+	c:BUR = {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_indochina
+			name = "人民同志军"
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_line_infantry #摩托化步兵
+				state_region = s:STATE_PEGU
+				count = 10
+			}
+
+			combat_unit = {
+				type = unit_type:combat_unit_type_cannon_artillery #野战炮
+				state_region = s:STATE_PEGU
+				count = 2
+			}
+		}
+	}	
 }

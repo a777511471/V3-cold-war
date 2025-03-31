@@ -1,0 +1,19 @@
+DIPLOMATIC_PLAYS = {
+	c:IDN = {
+		create_diplomatic_play = {
+			name = texan_war_of_yinnilulizhanzheng
+
+			target_country = c:IND
+			
+			war = yes
+			
+			type = dp_annex_war
+			
+			add_war_goal = {
+				holder = c:IND
+				type = annex_country
+				target_country = c:IDN
+			}
+		}		
+	}
+}

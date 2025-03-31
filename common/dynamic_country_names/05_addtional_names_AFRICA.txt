@@ -469,6 +469,19 @@ MAD = {
 			coa_def_subject_trigger = yes
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_fatuan_MAD #大马达加斯加帝国
+		
+		adjective = MAD_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			scope:actor ?= {					
+				has_law = law_type:law_corporate_state			
+			}
+		}
+	}
 } 
 
 KON = { 
@@ -3615,6 +3628,18 @@ CEY = {
 			coa_def_theocracy_flag_trigger = yes
 		}
 	}
+	dynamic_country_name = {
+		name = CEY
+		
+		adjective = CEY_ADJ
+		use_overlord_prefix = yes
+		#is_main_tag_only = yes 
+		priority = 10
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
 } 
 ASM = { 
 	dynamic_country_name = {
@@ -3804,53 +3829,7 @@ BHU = {
 		}
 	}
 } 
-NEP = { 
-	dynamic_country_name = {
-		name = dyn_c_jzz_NEP
-		
-		adjective = NEP_ADJ
-		#is_main_tag_only = yes 
-		priority = 0
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_republic_NEP
-		
-		adjective = NEP_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-			NOT = { coa_def_communist_flag_trigger = yes }
-		}
-	}
-	dynamic_country_name = {#
-		name = dyn_c_societ_republic_NEP
-		
-		adjective = NEP_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_shenquan_NEP
-		
-		adjective = NEP_ADJ
-		#is_main_tag_only = yes 
-		priority = 0
-		
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-} 
+
 BGL = { 
 	dynamic_country_name = {
 		name = dyn_c_jzz_BGL
@@ -3945,100 +3924,7 @@ BHT = {
 		}
 	}
 } 
-TRH = { 
-	dynamic_country_name = {
-		name = dyn_c_jzz_TRH
-		
-		adjective = TRH_ADJ
-		#is_main_tag_only = yes 
-		priority = 0
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_republic_TRH
-		
-		adjective = TRH_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-			NOT = { coa_def_communist_flag_trigger = yes }
-		}
-	}
-	dynamic_country_name = {#
-		name = dyn_c_societ_republic_TRH
-		
-		adjective = TRH_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_shenquan_TRH
-		
-		adjective = TRH_ADJ
-		#is_main_tag_only = yes 
-		priority = 0
-		
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-} 
-MUG = { 
-	dynamic_country_name = {
-		name = dyn_c_jzz_MUG
-		
-		adjective = MUG_ADJ
-		#is_main_tag_only = yes 
-		priority = 0
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_republic_MUG
-		
-		adjective = MUG_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-			NOT = { coa_def_communist_flag_trigger = yes }
-		}
-	}
-	dynamic_country_name = {#
-		name = dyn_c_societ_republic_MUG
-		
-		adjective = MUG_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_shenquan_MUG
-		
-		adjective = MUG_ADJ
-		#is_main_tag_only = yes 
-		priority = 0
-		
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-} 
+
 CZH = { 
 	dynamic_country_name = {
 		name = dyn_c_jzz_CZH
@@ -4224,6 +4110,18 @@ IDN = {
 		
 		trigger = {
 			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_east_indies
+		
+		adjective = dyn_c_east_indies_adj
+		#is_main_tag_only = yes 
+		priority = 100
+		use_overlord_prefix = yes
+		
+		trigger = {
+			coa_def_subject_trigger = yes
 		}
 	}
 } 
@@ -5116,9 +5014,9 @@ TAN = {
 	}
 }
 
-NIG = { 
+NIG = { #尼日利亚
 	dynamic_country_name = {
-		name = dyn_c_jzz_NIG
+		name = dyn_c_jzz_NIG #富拉尼帝国
 		
 		adjective = NIG_ADJ
 		#is_main_tag_only = yes 
@@ -5129,18 +5027,21 @@ NIG = {
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_c_republic_NIG
+		name = dyn_c_republic_NIG #尼日利亚联邦共和国
 		
 		adjective = NIG_ADJ
 		#is_main_tag_only = yes
 		priority = 0
 		
 		trigger = {
+		OR = {
 			coa_def_republic_flag_trigger = yes
+			has_law = law_type:law_semi_presidential_republic
+		}
 			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 	}
-	dynamic_country_name = {#
+	dynamic_country_name = {#尼日利亚人民共和国
 		name = dyn_c_societ_republic_NIG
 		
 		adjective = NIG_ADJ
@@ -5152,7 +5053,7 @@ NIG = {
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_shenquan_NIG
+		name = dyn_shenquan_NIG #尼日利亚神权国
 		
 		adjective = NIG_ADJ
 		#is_main_tag_only = yes
@@ -5163,18 +5064,37 @@ NIG = {
 		}
 	}
 	dynamic_country_name = {
-		name = NIG
+		name = dyn_SHENG_NIG #尼日利亚殖民地和保护国
 		
 		adjective = NIG_ADJ
 		use_overlord_prefix = yes
 		#is_main_tag_only = yes
-		priority = 100000
+		priority = 100
 		
 		trigger = {
-			coa_def_subject_trigger = yes
-		}
+			exists = c:GBR
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:NIG
+					type = semi_autonomous_colony #自治殖民领
+					is_initiator = yes
+				}
+			}
+		}  
 	}
-}
+	dynamic_country_name = {
+		name = NIG #英属尼日利亚
+		
+		adjective = NIG_ADJ
+		use_overlord_prefix = yes
+		#is_main_tag_only = yes
+		priority = 50
+
+		trigger = {
+			coa_def_subject_trigger = yes
+		} 
+	}
+} 
 
 SRL = { 
 	dynamic_country_name = {

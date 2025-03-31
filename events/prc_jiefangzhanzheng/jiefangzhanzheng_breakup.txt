@@ -1,0 +1,57 @@
+namespace = jiefangzhanzheng_breakup
+
+jiefangzhanzheng_breakup.1 = {
+	type = country_event
+
+	title = jiefangzhanzheng_breakup.1
+	desc = jiefangzhanzheng_breakup.1.d
+	flavor = jiefangzhanzheng_breakup.1.f 	
+
+	gui_window = event_window_super_event
+
+	event_image = {
+		texture  = "gfx/event_pictures/HOI4/WAR1.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+	
+	trigger = {
+	}	
+	
+	duration = 5
+
+	option = {
+		name = jiefangzhanzheng_breakup.1.a
+	}
+}
+
+jiefangzhanzheng_breakup.2 = {
+	type = country_event
+
+	title = jiefangzhanzheng_breakup.2
+	desc = jiefangzhanzheng_breakup.2.d
+	flavor = jiefangzhanzheng_breakup.2.f 	
+
+	gui_window = event_window_super_event
+
+	event_image = {
+		texture  = "gfx/event_pictures/HOI4/WAR1.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
+
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+	
+	trigger = {
+	}	
+	
+	duration = 5
+
+	option = {
+		name = jiefangzhanzheng_breakup.2.a
+	}
+}

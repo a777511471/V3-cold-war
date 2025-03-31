@@ -1,28 +1,24 @@
 ﻿COUNTRIES = {
 	c:BAV = {
 		set_next_election_date = 1946.7.1
-		effect_starting_technology_tier_1_tech = yes
-		add_technology_researched = joint_stock_companies #股份公司
-		add_technology_researched = investment_banks #投资银行
-		add_technology_researched = mutual_funds #共同基金
-		set_tax_level = medium
-		
-		add_taxed_goods = g:wine
+		effect_starting_technology_tier_2_tech = yes
+		add_technology_researched = tech_electronic_product #电子产品
+		add_technology_researched = tech_rocket_engineering #火箭工程
+		set_tax_level = high
 		effect_starting_politics_liberal = yes
 		# Laws
-		activate_law = law_type:law_right_of_assembly #集会权
+		activate_law = law_type:law_continental_law_system #大陆法系
+		activate_law = law_type:law_commercialized_small_farmers #商品化小农制
+		activate_law = law_type:law_regulatory_bodies #国家监管机构
 		activate_law = law_type:law_non_militarized_country #非军事化国家
 		activate_law = law_type:law_private_capital_support #私人资本扶植（科研）
-		activate_law = law_type:law_old_age_pension #养老金
                 activate_law = law_type:law_universal_suffrage #普选制
 		activate_law = law_type:law_dedicated_police #专职警察部队
-		activate_law = law_type:law_commercialized_agriculture #商品化农业
 		activate_law = law_type:law_free_trade #自由贸易
 		activate_law = law_type:law_encourage_immigration #鼓励移民
 		activate_law = law_type:law_national_guard #国民警卫队
 		activate_law = law_type:law_freedom_of_conscience #信仰自由
 		activate_law = law_type:law_elected_bureaucrats #选举官僚制
-		activate_law = law_type:law_case_law_system #海洋法系	
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_slavery_banned
 		activate_law = law_type:law_racial_segregation #种族隔离
@@ -35,29 +31,33 @@
             activate_law = law_type:law_compulsory_primary_school
             activate_law = law_type:law_8_hour_working_system
 
-		add_company = company_type:bayerische_motoren_werke
-		company:bayerische_motoren_werke = {
-			set_company_establishment_date = 1916.3.7
-		}
-
-		add_company = company_type:benz
-		company:benz = {
-			set_company_establishment_date = 1926.6.28
-		}
+		set_tax_level = very_high 
 
 		ig:ig_trade_unions = { #工会
 			remove_ideology = ideology_proletarian #无产阶级主义者
-			add_ideology = ideology_social_democrats #社民主义者
+			add_ideology = ideology_social_democrats #社会民主主义者
 		}
 
-		set_institution_investment_level = {
-			institution = institution_police #执法
-			level = 3
+		ig:ig_intelligentsia = { #知识分子
+			set_interest_group_name = ig_academic_group #学术集团		
+			add_ideology = ideology_anti_clerical #反教权主义者
+		}
+
+		ig:ig_industrialists = { #垄断资产阶级
+			set_interest_group_name = ig_monopoly_bourgeoisie
+			remove_ideology = ideology_colonialist #殖民主义者				
+		}
+
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_junkers #容克
+			add_ideology = ideology_junker_paternalistic #容克主义者
+			remove_ideology = ideology_paternalistic #家长式主义者			
+			remove_ideology = ideology_republican_paternalistic #缙绅主义者
 		}
 
 		set_institution_investment_level = {
 			institution = institution_home_affairs #内务
-			level = 4
+			level = 3
 		}
 
 		set_institution_investment_level = {
@@ -68,6 +68,14 @@
 		set_institution_investment_level = {
 			institution = institution_police #执法
 			level = 3
+		}
+		add_modifier = {
+			name = bitter_loser_modifier #苦涩的失败者
+			years = 30
+			is_decaying = yes
+		}
+		add_modifier = {
+			name = fra_military_weakness_modifier #第二次世界大战的创伤
 		}
 	}
 }

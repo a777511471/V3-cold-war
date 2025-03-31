@@ -14,7 +14,7 @@ xinanjiaofei_button_key = {
 		var:xinanfeihuan_start_var = 0
 	}
 	effect = {
-		add_journal_entry = { type = je_xinanjiaofei }
+		add_journal_entry = { type = je_xinanjiaofei }	
 		change_variable = {
 			name = xinanfeihuan_start_var
 			add = 1
@@ -41,6 +41,10 @@ kaiguodadadian_button_key = {
 	}
 	effect = {
 		trigger_event = { id = kaiguodadian.1 days = 0 popup = yes }
+		add_modifier = {
+			name = kaiguodadian_modifier
+			months = 12
+		}
 		change_variable = {
 			name = kaiguodadadian_var
 			add = 1
@@ -64,6 +68,8 @@ waijiaozhengce_button_key = {
 		var:waijiaozhengce_var = 0
 	}
 	effect = {
+		add_journal_entry = { type = je_shoufulvshun }	
+		add_journal_entry = { type = je_shoufutaiwan }
 		trigger_event = { id = waijiaozhengce.1 days = 0 popup = yes }
 		change_variable = {
 			name = waijiaozhengce_var

@@ -1,0 +1,20 @@
+﻿l_simp_chinese:
+ je_space_race_main: "太空竞赛"
+ je_space_race_main_goal: "每一次成功的太空任务，都将为对应阵营带来太空竞赛的胜利点（卫星发射获得10胜利点，载人航天任务获得15胜利点，登月成功则获得25胜利点。如果你的国家完成了人类首次的太空任务，则获得三倍的胜利点。建成太空站一次固定获得50胜利点。）。除此之外，成功的太空任务也将带来科研速度的大幅提升和国际地位的大幅提高。但要警惕，太空任务将是一个耗资巨大的长期工程，而太空任务也有相当高的失败风险。"
+ je_space_race_main_reason: "进度条向#bold 左#!推进有利于#v $USA$#!，进度条向#bold 右#!推进有利于#v $苏联$#!。\n\n“太空竞赛”指的是20世纪中期，冷战时期美国和苏联之间在太空探索领域展开的一系列竞争活动。两国都试图通过太空探索来展示各自在科学、技术和军事方面的实力，并以此彰显各自在意识形态领域的优越性。"
+ 
+ je_satellite: "卫星发射"
+ je_satellite_goal: "完成卫星发射任务。"
+ je_satellite_reason: "卫星发射任务是太空竞赛的第一步。"
+
+ je_manned_space_flight: "载人航天任务"
+ je_manned_space_flight_goal: "完成载人航天任务。"
+ je_manned_space_flight_reason: "载人航天任务是太空竞赛的第二步。"
+
+ je_lunarlanding: "登月计划"
+ je_lunarlanding_goal: "完成登月计划。"
+ je_lunarlanding_reason: "登月计划是太空竞赛最宏伟的构想。将人类送往另一个星球，这将是一个庞大的工程。"
+
+ je_space_station: "建设空间站"
+ je_space_station_goal: "建设空间站。"
+ je_space_station_reason: "建成空间站将为我们在太空竞赛中积累优势。"

@@ -1,4 +1,49 @@
-﻿# 新俄罗斯有限公司
+﻿# 苏维埃纺织工业部
+company_savva_morozov = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_savva_morozov_and_sons.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_textile_mills
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_russia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MOSCOW
+			}
+		}
+	}		
+	
+	possible = { 
+		has_law = law_type:law_council_republic
+		any_scope_state = {
+			state_region = s:STATE_MOSCOW
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.1 #威望
+		interest_group_ig_trade_unions_pop_attraction_mult = 0.1 #工会人群吸引力
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# 新俄罗斯有限公司
 company_john_hughes = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_new_russia_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
@@ -58,14 +103,14 @@ magnitogorsk_steel_plant = {
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-					state_region = s:STATE_URALSK
+					state_region = s:STATE_CHELYABINSK
 				}
 			}
 		}		
 	
 	possible = {
 		any_scope_state = {
-					state_region = s:STATE_URALSK
+					state_region = s:STATE_CHELYABINSK
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_steel_mills

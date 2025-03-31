@@ -1,42 +1,61 @@
 ﻿CHARACTERS = {
 	c:AFG = {
 		create_character = {
-			# Dost Mohammad Khan
-			#role = politician # Remove this line
-			first_name = "Dost"
-			last_name = "Barakzai"
-			ruler = yes
-			age = 56
+			#政治家、阿富汗末代国王、阿富汗国父穆罕默德·查希尔
+    		dna = dna_afg_mohammad_zahir		
+			historical = yes			
+			first_name = "Muhammad"
+			last_name = "Zaheer"
+			ruler = yes			
+			birth_date = 1914.10.16
+			culture = cu:pashtun		
 			interest_group = ig_landowners
-			ideology = ideology_traditionalist
+			ideology = ideology_secularized_reformer #世俗化改良主义者
 			traits = {
-				ambitious
+				strong #健硕				
 			}
 		}	
 
 		create_character = {
-			# Wazir Akbar Khan
-			#role = politician # Remove this line
-			first_name = "Akbar"
-			last_name = "Singh"
-			heir = yes
-			age = 20
-			interest_group = ig_armed_forces
-			ideology = ideology_traditionalist
+			#红色亲王穆罕默德·达乌德
+    		dna = ecchi_dna_long_yun		
+			is_general = yes
+			commander_rank = commander_rank_4			
+			historical = yes
+			ig_leader = yes	
+			first_name = "Muhammad"
+			last_name = "Daud"
+			birth_date = 1909.7.18
+			culture = cu:pashtun		
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_social_democrat #社会民主主义者
 			traits = {
-				ambitious
 			}
 		}
 
 		create_character = {
-			is_general = yes
-			first_name = Dost
-			last_name = Mohammed
-			age = 43
+			#政治家穆罕默德·哈希姆汗
+			dna = ecchi_dna_adolf_hitler		
+			historical = yes			
+			first_name = "Muhammad"
+			last_name = "Hashim·han"
+			ig_leader = yes #利益集团领袖		
+			birth_date = 1884.1.1
+			culture = cu:pashtun		
+			interest_group = ig_landowners
+			ideology = ideology_authoritarian #威权主义者
 			traits = {
-		#		stalwart
-		#		debutante
+				inspirational_orator #在啤酒馆鼓舞人心的演说家
+				firebrand #煽动大师
+				tactful #圆滑					
 			}
-		}
+		}	
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_trade_unions #工会
+			religion = rel:atheist #无神论			
+			ideology = ideology_democratic_socialism #民主社会主义者
+		}			
 	}
 }

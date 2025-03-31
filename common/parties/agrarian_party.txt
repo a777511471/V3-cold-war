@@ -206,6 +206,18 @@ agrarian_party = { #农民党
 			limit = {
 				leader = {
 					has_ideology = ideology:ideology_pacifist
+				NOT = {
+						has_ideology = ideology:ideology_social_democrat #社会民主主义者
+						has_ideology = ideology:ideology_democratic_socialism #民主社会主义者
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者	
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者										
+						}						
 				}
 				owner = {
 					NOT = { has_law = law_type:law_no_colonial_affairs }
@@ -256,7 +268,18 @@ agrarian_party = { #农民党
 					has_ideology = ideology:ideology_meritocratic
 					has_ideology = ideology:ideology_agrarian
 					leader = {
-						has_ideology = ideology:ideology_social_democrat
+				NOT = {
+						has_ideology = ideology:ideology_social_democrat #社会民主主义者
+						has_ideology = ideology:ideology_democratic_socialism #民主社会主义者
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者		
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者										
+						}		
 					}
 				}
 				owner = {
@@ -280,7 +303,17 @@ agrarian_party = { #农民党
 				}
 				NOT = {
 					leader = {
-						has_ideology = ideology:ideology_market_liberal
+						has_ideology = ideology:ideology_market_liberal	
+						has_ideology = ideology:ideology_social_democrat #社会民主主义者
+						has_ideology = ideology:ideology_democratic_socialism #民主社会主义者
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者	
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者																					
 					}
 				}
 			}
@@ -295,7 +328,7 @@ agrarian_party = { #农民党
 					has_ideology = ideology:ideology_proletarian
 					has_ideology = ideology:ideology_agrarian
 					leader = {
-						has_ideology = ideology:ideology_protectionist
+						has_ideology = ideology:ideology_protectionist						
 					}
 				}
 				owner = {
@@ -304,6 +337,17 @@ agrarian_party = { #农民党
 				NOT = {
 					leader = {
 						has_ideology = ideology:ideology_market_liberal
+						has_ideology = ideology:ideology_market_liberal	
+						has_ideology = ideology:ideology_social_democrat #社会民主主义者
+						has_ideology = ideology:ideology_democratic_socialism #民主社会主义者
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者		
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者							
 					}
 				}
 			}
@@ -325,6 +369,18 @@ agrarian_party = { #农民党
 							has_ideology = ideology:ideology_pacifist
 							has_ideology = ideology:ideology_jingoist_leader
 						}
+				NOT = {
+						has_ideology = ideology:ideology_social_democrat #社会民主主义者
+						has_ideology = ideology:ideology_democratic_socialism #民主社会主义者
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者	
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者										
+						}							
 					}
 				}
 				owner = {
@@ -336,7 +392,7 @@ agrarian_party = { #农民党
 				desc = "from_peasant_levies"
 			}
 		}
-		if = { # anti-serfdom
+		if = { # 农业党
 			limit = {
 				owner = {
 					has_law = law_type:law_serfdom
@@ -347,9 +403,19 @@ agrarian_party = { #农民党
 					has_ideology = ideology:ideology_laissez_faire
 					has_ideology = ideology:ideology_particularist
 					leader = {
-						has_ideology = ideology:ideology_abolitionist
-						has_ideology = ideology:ideology_social_democrat
-						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_abolitionist #废奴主义者
+				NOT = {
+						has_ideology = ideology:ideology_social_democrat #社会民主主义者
+						has_ideology = ideology:ideology_democratic_socialism #民主社会主义者
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者	
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者										
+						}						
 					}
 				}
 			}
@@ -367,6 +433,18 @@ agrarian_party = { #农民党
 					has_ideology = ideology:ideology_anti_slavery
 					leader = {
 						has_ideology = ideology:ideology_abolitionist
+				NOT = {
+						has_ideology = ideology:ideology_social_democrat #社会民主主义者
+						has_ideology = ideology:ideology_democratic_socialism #民主社会主义者
+						has_ideology = ideology:ideology_market_socialism #市场社会主义者
+						has_ideology = ideology:ideology_syndicalism #工团主义者	
+						has_ideology = ideology:ideology_communist #共产主义者
+						has_ideology = ideology:ideology_national_communist #民族共产主义者
+						has_ideology = ideology:ideology_vanguardist #马列主义者
+						has_ideology = ideology:ideology_stalin #斯大林主义者	
+						has_ideology = ideology:ideology_jin #主体思想主义者
+						has_ideology = ideology:ideology_khrushchev #赫鲁晓夫主义者										
+						}							
 					}
 				}
 			}

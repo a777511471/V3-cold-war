@@ -24,7 +24,6 @@ japan_mac.1 = {
 		name = japan_mac.1.a
 		c:JAP = {
 			activate_law = law_type:law_parliamentary_republic
-			activate_law = law_type:law_autocracy
 			create_character = { #日本五星天皇道格拉斯·麦克阿瑟
 				historical = yes
 				ig_leader = yes #利益集团领袖
@@ -33,22 +32,24 @@ japan_mac.1 = {
 				culture = cu:dixie
 				religion = rel:protestant
 				birth_date = 1880.1.26
-				dna = dna_king_leopold_01
+    			dna = dna_truman
 				ruler = yes
 				interest_group = ig_armed_forces #军队
 				ideology = ideology_authoritarian #威权主义者
 				set_character_immortal = yes
 				traits = {
-					strong #健硕
-					hedonist #享乐主义者
-					celebrity_commander #明星指挥官
+				celebrity_commander #明星指挥官				
+				charismatic #魅力四射				
+				persistent #执着
 				}
 			}
 		}
 		add_journal_entry = {
-			type = je_japan_occupied
+			type = je_japan_occupied #占领时期
 		}
-		default_option = yes
+		add_journal_entry = {
+			type = je_tudigaige2 #土地改革
+		}		
     }
 }
 
@@ -488,37 +489,44 @@ japan_mac.16 = {
 	option = {
 		name = japan_mac.16.a
 		default_option = yes
-		ruler = { kill_character = yes }
 		c:JAP = {
+				  make_independent = yes			
 			activate_law = law_type:law_monarchy
-			create_character = { #招核天皇
-				historical = yes
-				ruler = yes
+		create_character = { #招核天皇
+			historical = yes
+			ruler = yes
+			ig_leader = yes #利益集团领袖
+			first_name = Yuren
+			last_name = Yamato
+			birth_date = 1901.4.29
+			religion = rel:shinto #神道教
+			dna = ecchi_dna_zhaohe
+			interest_group = ig_intelligentsia #官僚
+			ideology = ideology_royalist #保皇主义者
+			set_character_immortal = yes			
+			traits = {
+				tactful #圆滑
+				grifter #骗子
+				bandit #强盗
+				demagogue #煽动者
+				cruel #残暴
+			}
+		}
+			create_character = { #
 				ig_leader = yes #利益集团领袖
-				first_name = Yuren
-				last_name = Yamato
-				birth_date = 1901.4.29
-				religion = rel:shinto #神道教
-				dna = dna_emperor_minh_mang
-				interest_group = ig_intelligentsia #官僚
-				ideology = ideology_royalist #保皇主义者
+				interest_group = ig_armed_forces #军队
 				traits = {
-					tactful #圆滑
-					pillager #掠夺者
-					grifter #骗子
-					bandit #强盗
-					demagogue #煽动者
-					cruel #残暴
 				}
 			}
 		}
+		c:USA = {
+		}		
 	}
 	option = {
 		name = japan_mac.16.b
-		default_option = yes
-		ruler = { kill_character = yes }
 		c:JAP = {
-			activate_law = law_type:law_monarchy
+				  make_independent = yes
+			set_relations = { country = c:USA value = -100 }			  
 			create_character = { #日本五星天皇道格拉斯·麦克阿瑟
 				historical = yes
 				ig_leader = yes #利益集团领袖
@@ -527,19 +535,16 @@ japan_mac.16 = {
 				culture = cu:dixie
 				religion = rel:protestant
 				birth_date = 1880.1.26
-				dna = dna_king_leopold_01
+				dna = dna_truman
 				ruler = yes
 				interest_group = ig_armed_forces #军队
 				ideology = ideology_authoritarian #威权主义者
 				traits = {
-					strong #健硕
-					hedonist #享乐主义者
-					celebrity_commander #明星指挥官
+				celebrity_commander #明星指挥官				
+				charismatic #魅力四射				
+				persistent #执着
 				}
 			}
-		}
-		trigger = {
-			has_global_variable = MacArthur_Never_Gonna_Give_You_Up
 		}
 	}
 }

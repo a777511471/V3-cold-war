@@ -2,15 +2,259 @@
 	c:NOR = {
 		create_character = {
 			#哈康七世
+			dna = dna_ecchi_nor_haakon_7			
+			historical = yes			
 			first_name = "Haakon_VII"
 			last_name = "Glücksburg"
 			birth_date = 1872.8.3
 			ruler = yes
-			ig_leader = yes
-			interest_group = ig_armed_forces
-			ideology = ideology_royalist #保皇主义者
+			is_admiral = yes			
+			commander_rank =commander_rank_4			
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_democratic_socialism #民主社会主义者
 			traits = {
 			}
 		}
+
+		create_character = {
+			#卡尔·约阿希姆·汉布罗		
+    		dna = ecchi_dsk_dna_jinricheng					
+			historical = yes			
+			first_name = "Karl·Joachim"
+			last_name = "Hambro"
+			birth_date = 1885.1.5
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_industrialists #实业家
+		    ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+				expert_political_operator #政治运作专家
+				master_bureaucrat #高明官僚
+				sickly #多病				
+			}
+		}
+
+		create_character = {
+			#埃纳·格哈德森	
+			dna = dna_thomas_jesup			
+			historical = yes			
+			first_name = "Aisne"
+			last_name = "Gerhardson"
+			birth_date = 1897.5.10			
+			ig_leader = yes #利益集团领袖							
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_democratic_socialism #民主社会主义者
+			traits = {
+				expert_political_operator #政治运作专家
+				master_bureaucrat #高明官僚		
+			}			
+		}		
+
+		create_character = {
+			#埃利亚斯·沃兰		
+			dna = dna_william_shubrick				
+			historical = yes			
+			first_name = "Elias"
+			last_name = "Worland"
+			birth_date = 1887.3.10			
+			ig_leader = yes #利益集团领袖	
+			religion = rel:atheist #无神论						
+			interest_group = ig_trade_unions #工会
+		    ideology = ideology_syndicalism #工团主义者
+			traits = {
+				expert_political_operator #政治运作专家
+				master_bureaucrat #高明官僚		
+			}			
+		}		
+
+		create_character = {
+			#尼尔斯·崔达尔		
+			dna = dna_thomas_jesup						
+			historical = yes			
+			first_name = "Nils"
+			last_name = "Tridal"
+			birth_date = 1879.11.29		
+			ig_leader = yes #利益集团领袖						
+			interest_group = ig_rural_folk #农民
+		    ideology = ideology_reformer #改良主义者			
+			traits = {
+				expert_political_operator #政治运作专家
+				master_bureaucrat #高明官僚		
+				pious #虔诚	 						
+			}			
+		}		
+
+		create_character = {
+			#陆军少将雅各布·文登·豪格	
+			dna = dna_david_farragut							
+			historical = yes			
+			first_name = "Jacob·Wenden"
+			last_name = "Haug"
+			birth_date = 1880.1.4
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_2			
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_devout #教会
+			traits = {
+				basic_artillery_commander #炮兵指挥官
+				expert_defensive_strategist	#熟练的防守策划师	
+				experienced_offensive_planner #有经验的进攻策划师
+				resupply_commander #物资征集专家  
+				pious #虔诚	 						
+			}
+		}		
+
+		create_character = {
+			#陆军上将奥斯瓦尔德·诺德利		
+			dna = dna_pershing					
+			historical = yes			
+			first_name = "Oswald"
+			last_name = "Nordry"
+			birth_date = 1881.1.4
+			ig_leader = yes #利益集团领袖			
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_4
+			interest_group = ig_armed_forces
+			ideology = ideology_social_democrat #社会民主主义者			
+			traits = {
+				basic_artillery_commander #炮兵指挥官
+				expert_defensive_strategist	#熟练的防守策划师	
+				experienced_offensive_planner #有经验的进攻策划师
+				resupply_commander #物资征集专家  
+				cautious #谨慎							
+			}
+		}	
+
+		create_character = {
+			#马丁·特兰梅尔	
+			dna = dna_william_shubrick						
+			historical = yes			
+			first_name = "Martin"
+			last_name = "Tranmer"
+			birth_date = 1879.6.27		
+    		is_agitator = yes #鼓动者				
+			interest_group = ig_trade_unions #工会
+		    ideology = ideology_syndicalism #工团主义者
+			traits = {
+				basic_political_operator #政治运作者
+				demagogue #煽动者				
+				strong #健硕				
+				charismatic #魅力四射
+				brave #勇敢
+				innovative #创新精神	
+			}			
+		}	
+
+		create_character = {
+			#康拉德·马蒂亚斯·诺达尔	
+			dna = dna_thomas_jesup					
+			historical = yes			
+			first_name = "Conrad·Matthias"
+			last_name = "Nordahl"
+			birth_date = 1897.9.25		
+    		is_agitator = yes #鼓动者				
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+				basic_political_operator #政治运作者
+				demagogue #煽动者				
+				strong #健硕				
+				charismatic #魅力四射
+				brave #勇敢
+				innovative #创新精神	
+			}			
+		}	
+
+		create_character = {
+			#陆军上将卡尔·约翰·埃里克森	
+    		dna = dna_franklin_buchanan						
+			historical = yes			
+			first_name = "Karl_Johan"
+			last_name = "Erikson"
+			birth_date = 1879.9.14
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_4
+			interest_group = ig_armed_forces
+			traits = {
+				expert_defensive_strategist	#熟练的防守策划师	
+				experienced_offensive_planner #有经验的进攻策划师
+				resupply_commander #物资征集专家  
+				cautious #谨慎				
+				sickly #多病					
+			}
+		}
+
+		create_character = {
+			#陆军上将汉斯·雷达尔·霍尔特曼	
+			dna = ecchi_dna_martin_van_buren				
+			historical = yes			
+			first_name = "Hans·Redall"
+			last_name = "Holtman"
+			birth_date = 1895.10.20
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_4
+			interest_group = ig_armed_forces
+			traits = {
+				basic_artillery_commander #炮兵指挥官
+				expert_defensive_strategist	#熟练的防守策划师	
+				experienced_offensive_planner #有经验的进攻策划师
+				resupply_commander #物资征集专家  
+				cautious #谨慎							
+			}
+		}	
+
+		create_character = {
+			#海军上将亨利·爱德华·迪森
+			dna = ecchi_dna_franklin_pierce						
+			historical = yes			
+			first_name = "Henry·Edward"
+			last_name = "Dixon"
+			birth_date = 1882.4.3
+			is_admiral = yes			
+			commander_rank = commander_rank_4			
+			interest_group = ig_armed_forces
+			traits = {
+			}
+		}	
+
+		create_character = {
+			#陆军上将特里格夫·格拉夫-旺	
+			dna = dna_pershing					
+			historical = yes			
+			first_name = "Trigoff"
+			last_name = "Graf-Wan"
+			birth_date = 1875.11.19		
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_4
+			interest_group = ig_armed_forces
+			traits = {			
+			}
+		}	
+
+		create_character = {
+			#陆军少将威廉·冯·汉斯廷					
+			dna = ecchi_dna_douglas_macarthur			
+			historical = yes			
+			first_name = "William"
+			last_name = "Von·hanstein"
+			birth_date = 1896.5.11		
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_2
+			interest_group = ig_armed_forces
+			traits = {						
+			}
+		}	
+
+		create_character = {
+			#陆军上将威廉·史蒂芬斯				
+			historical = yes			
+			first_name = "William"
+			last_name = "Stephens"
+			birth_date = 1880.11.5	
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_4
+			interest_group = ig_armed_forces
+			traits = {						
+			}
+		}									
 	}
 }

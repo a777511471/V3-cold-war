@@ -299,13 +299,6 @@ combat_unit_type_cannon_artillery = { #野战炮
 
     combat_unit_image = {
         trigger = { 
-            has_culture_graphics = decentralised_americas
-        }
-        texture = "gfx/unit_illustrations/unit_illustration_placeholder.dds"
-    }
-
-    combat_unit_image = {
-        trigger = { 
             has_culture_graphics = east_asian
         }
         texture = "gfx/unit_illustrations/artillery_east_asian_shrapnel.dds"
@@ -331,7 +324,7 @@ combat_unit_type_cannon_artillery = { #野战炮
         }
         texture = "gfx/unit_illustrations/artillery_arabic_shrapnel.dds"
     }
-	
+
     combat_unit_image = {
         # fallback
         texture = "gfx/unit_illustrations/artillery_eu_shrapnel.dds"
@@ -506,21 +499,21 @@ combat_unit_type_heavy_tank = { #轨道炮
 combat_unit_type_hussars = { #双翼飞机
     group = combat_unit_group_cavalry
     
-    upkeep_modifier = {
+    upkeep_modifier = { #维护费
         goods_input_grain_add = 1
         goods_input_aeroplanes_add = 0.5
         goods_input_ammunition_add = 0.5
-	goods_input_petrol_add = 0.5
+	    goods_input_petrol_add = 0.5
     }
 
-    battle_modifier = {
+    battle_modifier = { #基础值
 		unit_offense_add = 10
-		unit_defense_add = 20
+		unit_defense_add = 15
         unit_provinces_captured_mult = 0.05
 		unit_morale_damage_mult = 0.05
     }
 
-    formation_modifier = {
+    formation_modifier = { #编队
         military_formation_mobilization_speed_mult = 0.25
         military_formation_movement_speed_mult = 0.25
     }
@@ -548,17 +541,22 @@ combat_unit_type_dragoons = { #战斗机
     }
     
     upkeep_modifier = {
-        goods_input_grain_add = 1
-        goods_input_aeroplanes_add = 1
-        goods_input_ammunition_add = 1
-	goods_input_petrol_add = 1
+        goods_input_grain_add = 2
+        goods_input_aeroplanes_add = 2
+        goods_input_ammunition_add = 2
+	    goods_input_petrol_add = 2
     }
 
     battle_modifier = {
 		unit_offense_add = 20
-		unit_defense_add = 40
+		unit_defense_add = 15
 		unit_morale_damage_mult = 0.10
         unit_provinces_captured_mult = 0.10
+    }
+
+    formation_modifier = { #编队
+        military_formation_mobilization_speed_mult = 0.25
+        military_formation_movement_speed_mult = 0.25
     }
 
 	unlocking_technologies = { tech_fighter_aircraft }
@@ -583,17 +581,22 @@ combat_unit_type_cuirassiers = { #喷气战斗机
     }
     
     upkeep_modifier = {
-        goods_input_grain_add = 1
-        goods_input_aeroplanes_add = 1.5
-        goods_input_ammunition_add = 1.5
-	goods_input_petrol_add = 1.5
+        goods_input_grain_add = 2
+        goods_input_aeroplanes_add = 3
+        goods_input_ammunition_add = 3
+	    goods_input_petrol_add = 3
     }
 
     battle_modifier = {
 		unit_offense_add = 30
-		unit_defense_add = 60
+		unit_defense_add = 25
 		unit_morale_damage_mult = 0.15
         unit_provinces_captured_mult = 0.15
+    }
+
+    formation_modifier = { #编队
+        military_formation_mobilization_speed_mult = 0.25
+        military_formation_movement_speed_mult = 0.25
     }
 
 	unlocking_technologies = { tech_jet_fighter_aircraft }
@@ -618,18 +621,23 @@ combat_unit_type_lancers = { #战斗无人机
     }
     
     upkeep_modifier = {
-        goods_input_grain_add = 1
-        goods_input_aeroplanes_add = 1.5
-        goods_input_ammunition_add = 1.5
-	goods_input_petrol_add = 1.5
-	goods_input_computer_add = 1
+        goods_input_grain_add = 2
+        goods_input_aeroplanes_add = 3
+        goods_input_ammunition_add = 3
+	    goods_input_petrol_add = 3
+	    goods_input_computer_add = 1
     }
 
     battle_modifier = {
 		unit_offense_add = 40
-		unit_defense_add = 80
+		unit_defense_add = 30
 		unit_morale_damage_mult = 0.20
         unit_provinces_captured_mult = 0.20
+    }
+
+    formation_modifier = { #编队
+        military_formation_mobilization_speed_mult = 0.25
+        military_formation_movement_speed_mult = 0.25
     }
 
 	unlocking_technologies = { tech_combat_drones }
@@ -644,7 +652,7 @@ combat_unit_type_lancers = { #战斗无人机
     }
 }
 
-combat_unit_type_light_tanks = { #空中飞船
+combat_unit_type_light_tanks = { #空天航母
     group = combat_unit_group_cavalry
 
     can_build_conscript = {
@@ -654,23 +662,24 @@ combat_unit_type_light_tanks = { #空中飞船
     }
     
     upkeep_modifier = {
-        goods_input_grain_add = 1
-        goods_input_aeroplanes_add = 1.5
-        goods_input_ammunition_add = 1.5
-	goods_input_petrol_add = 1.5
-	goods_input_computer_add = 1
-	goods_input_spacecraftr_add = 1
+        goods_input_grain_add = 2
+        goods_input_aeroplanes_add = 3
+        goods_input_ammunition_add = 3
+	    goods_input_petrol_add = 3
+	    goods_input_computer_add = 2
+	    goods_input_spacecraftr_add = 2
     }
 
     battle_modifier = {
 		unit_offense_add = 50
-		unit_defense_add = 100
+		unit_defense_add = 35
 		unit_morale_damage_mult = 0.25
         unit_provinces_captured_mult = 0.25
     }
 
-    formation_modifier = {
-        military_formation_mobilization_speed_mult = 0.2
+    formation_modifier = { #编队
+        military_formation_mobilization_speed_mult = 0.25
+        military_formation_movement_speed_mult = 0.25
     }
 
 	unlocking_technologies = { tech_flying_fortress }

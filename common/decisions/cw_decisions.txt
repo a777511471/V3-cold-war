@@ -1,4 +1,158 @@
+attract_intellectual = { #拉拢知识分子
+	is_shown = {
+			has_modifier = activate_resolution_to_attract_interest_groups #有开启科研项目决议修正
+	}
+	possible = {	
+			NOT = { has_modifier = obtaining_support_from_intellectuals } #没有获得知识分子支持修正	
+	}
+	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_market_liberal #市场自由主义者				
+			}
+			add_modifier = {
+			name = obtaining_support_from_intellectuals #获得知识分子支持
+			years = 5	
+		}
+	}
+}
 
+attract_small_citizen = { #拉拢小市民
+	is_shown = {
+			has_modifier = activate_resolution_to_attract_interest_groups #有开启科研项目决议修正
+	}
+	possible = {	
+			NOT = { has_modifier = obtaining_support_from_small_citizens } #没有获得小市民支持修正	
+	}
+	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_country_socialists #国家社会主义者			
+			}		
+			add_modifier = {
+			name = obtaining_support_from_small_citizens #获得小市民支持
+			years = 5	
+		}
+	}
+}
+
+study_permanent_magnet_motors = { #研究永磁电机
+	is_shown = {
+		has_modifier = start_a_research_project #有开启科研项目决议修正
+	}
+	possible = {	
+		NOT = { has_modifier = obtaining_support_from_rural_residents } #没有获得乡村民众支持修正	
+	}
+	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_rural_folk #乡村民众
+			ideology = ideology_anarchist #无政府主义者					
+			}		
+			add_modifier = {
+			name = obtaining_support_from_rural_residents #获得乡村民众支持
+			years = 5	
+		}
+	}
+}
+
+start_a_research_project = { #开启科研项目决议
+	is_shown = { #显示条件
+		is_ai = no #ai禁用
+		NOT = { has_modifier = start_a_research_project } #没有开启科研项目决议修正
+
+	}
+	possible = { #采用条件
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_university #大学	 
+				level >= 1
+			}		
+		}			
+
+		any_scope_state = {
+			is_incorporated = yes
+            any_scope_building = {
+                    is_building_type = building_research_institution #科研机构
+                level >= 1
+            }
+		}				
+	}
+	when_taken = { #采用效果
+		add_modifier = {
+			name = start_a_research_project #开启科研项目决议
+		}
+	}
+}
+
+close_research_project = { #关闭科研项目决议
+	is_shown = { #显示条件
+		is_ai = no #ai禁用
+		has_modifier = start_a_research_project #有开启科研项目决议修正
+	}
+	possible = {	
+	}
+	when_taken = {
+		remove_modifier = start_a_research_project
+	}
+}
+
+je_shehuizhuyigaige = { #社会主义改革
+	is_shown = {
+            is_ai = yes
+		game_date >= 1947.1.1
+		game_date <= 1947.1.31		
+		NOT = { has_law = law_type:law_council_republic }
+		OR = {
+			AND = { exists = c:BUL c:BUL = ROOT }						
+			AND = { exists = c:HUN c:HUN = ROOT }
+			AND = { exists = c:CZH c:CZH = ROOT }
+			AND = { exists = c:POL c:POL = ROOT }
+			AND = { exists = c:ROM c:ROM = ROOT }
+		}
+	}
+	possible = {	
+            is_ai = yes
+		game_date >= 1947.1.1
+		game_date <= 1947.1.31		
+		NOT = { has_law = law_type:law_council_republic }
+		OR = {
+			AND = { exists = c:BUL c:BUL = ROOT }						
+			AND = { exists = c:HUN c:HUN = ROOT }
+			AND = { exists = c:CZH c:CZH = ROOT }
+			AND = { exists = c:POL c:POL = ROOT }
+			AND = { exists = c:ROM c:ROM = ROOT }
+		}	
+	}
+	
+	when_taken = {
+		activate_law = law_type:law_council_republic #改变法律为委员会共和制
+        trigger_event = { id = rus.3 } #改革成功	
+	}
+
+	ai_chance = {
+		base = 100
+	}	
+}
+
+gaigeshuizhi = { #改革税制
+	is_shown = {
+			is_ai = no
+		game_date < 1947.1.1
+		has_law = law_type:law_council_republic
+		NOT = { has_law = law_type:law_land_based_taxation } #没有土地税制法律	
+	}
+	possible = {	
+		NOT = { has_law = law_type:law_land_based_taxation } #没有土地税制法律	
+	}
+	
+	when_taken = {
+		activate_law = law_type:law_land_based_taxation #改变法律为土地税制
+	}
+}
 
 war_propaganda_resolution = { #战争宣传
 	is_shown = {
@@ -42,7 +196,6 @@ sponsoring_film_art = { #赞助电影艺术
 			any_scope_building = {
 				is_building_type = building_arts_academy
 				level >= 2
-				has_active_production_method = pm_film_art
 			}
 		}		
 		produced_bureaucracy > 100		
@@ -254,6 +407,11 @@ attract_intellectuals = { #拉拢知识分子
 			NOT = { has_modifier = obtaining_support_from_intellectuals } #没有获得知识分子支持修正	
 	}
 	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_market_liberal #市场自由主义者				
+			}
 			add_modifier = {
 			name = obtaining_support_from_intellectuals #获得知识分子支持
 			years = 5	
@@ -269,6 +427,11 @@ attract_small_citizens = { #拉拢小市民
 			NOT = { has_modifier = obtaining_support_from_small_citizens } #没有获得小市民支持修正	
 	}
 	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_country_socialists #国家社会主义者			
+			}		
 			add_modifier = {
 			name = obtaining_support_from_small_citizens #获得小市民支持
 			years = 5	
@@ -284,6 +447,11 @@ attract_rural_residents = { #拉拢乡村民众
 			NOT = { has_modifier = obtaining_support_from_rural_residents } #没有获得乡村民众支持修正	
 	}
 	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_rural_folk #乡村民众
+			ideology = ideology_anarchist #无政府主义者					
+			}		
 			add_modifier = {
 			name = obtaining_support_from_rural_residents #获得乡村民众支持
 			years = 5	
@@ -299,6 +467,11 @@ attract_industrialists = { #拉拢实业家
 			NOT = { has_modifier = obtaining_support_from_industrialists } #没有获得实业家支持修正	
 	}
 	when_taken = {
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_market_liberal #市场自由主义者		
+			}		
 			add_modifier = {
 			name = obtaining_support_from_industrialists #获得实业家支持
 			years = 5	
@@ -314,6 +487,11 @@ to_win_over_devout_believers = { #拉拢虔信者
 			NOT = { has_modifier = obtain_the_support_of_devout_believers } #没有获得虔信者支持修正	
 	}
 	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_devout #虔信者
+			ideology = ideology_authoritarian #威权主义者				
+			}		
 			add_modifier = {
 			name = obtain_the_support_of_devout_believers #获得虔信者支持
 			years = 5	
@@ -354,6 +532,11 @@ bring_in_the_army = { #拉拢军队
 			NOT = { has_modifier = obtain_military_support } #没有获得军队支持修正	
 	}
 	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_authoritarian #威权主义者				
+			}		
 			add_modifier = {
 			name = obtain_military_support #获得军队支持
 			years = 5	
@@ -369,6 +552,12 @@ woo_the_union = { #拉拢工会
 			NOT = { has_modifier = obtaining_union_support } #没有获得工会支持修正	
 	}
 	when_taken = {
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_trade_unions #工会
+			religion = rel:atheist #无神论			
+			ideology = ideology_democratic_socialism #民主社会主义者
+		}			
 			add_modifier = {
 			name = obtaining_union_support #获得工会支持
 			years = 5	
@@ -384,6 +573,11 @@ attract_landlords = { #拉拢地主
 			NOT = { has_modifier = obtain_landlord_support } #没有获得地主支持修正	
 	}
 	when_taken = {
+		create_character = {
+			ig_leader = yes
+			interest_group = ig_landowners #地主
+			ideology = ideology_authoritarian #威权主义者			
+			}		
 			add_modifier = {
 			name = obtain_landlord_support #获得地主支持
 			years = 5	
@@ -415,41 +609,6 @@ expanding_the_mining_industry = { #扩建采矿业
 	}
 }
 
-hold_a_banquet = { #举办一场宴会
-	is_shown = {
-			is_ai = no
-	}
-	possible = {	
-			NOT = { has_modifier = banquet } #没有宴会修正	
-	}
-	when_taken = {
-			add_modifier = {
-			name = banquet #宴会
-			years = 5	
-		}
-	}
-}
-
-improving_the_work_environment = { #改善工作环境
-	is_shown = {
-			is_ai = no
-		NOT = { 
-			has_modifier = improving_the_work_environment
-		}
-	}
-	possible = {	
-		NOT = { has_law = law_type:law_regulatory_bodies } #没有监管机构法律	
-		NOT = { has_law = law_type:law_worker_protections } #没有工人保障法律	
-		produced_bureaucracy > 100		
-	}
-	
-	when_taken = {
-		add_modifier = {
-			name = improving_the_work_environment
-		}
-	}
-}
-
 restructuring_the_railway_system = { #重组铁路系统
 	is_shown = {
 			is_ai = no
@@ -470,7 +629,7 @@ restructuring_the_railway_system = { #重组铁路系统
 	when_taken = {
 		add_modifier = {
 			name = restructuring_the_railway_system
-		}
+		}	
 	}
 }
 

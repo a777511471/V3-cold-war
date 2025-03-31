@@ -1,0 +1,9 @@
+banning_devout = {
+	default = no_banning_devout
+
+	no_banning_devout = {
+	}
+
+	atheism_banning_devout = {
+	}
+}

@@ -1,0 +1,13 @@
+remove_all_private_construction_add_modifier = {
+    custom_tooltip = {
+        text = remove_all_private_construction_add_modifier_tt
+        remove_modifier = private_construction_add_5_modifier
+        remove_modifier = private_construction_add_10_modifier
+        remove_modifier = private_construction_add_15_modifier
+        remove_modifier = private_construction_add_20_modifier
+        remove_modifier = private_construction_add_30_modifier
+        remove_modifier = private_construction_add_40_modifier
+        remove_modifier = private_construction_add_45_modifier
+        remove_modifier = private_construction_add_60_modifier
+    }
+}

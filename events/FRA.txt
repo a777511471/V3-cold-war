@@ -1,0 +1,45 @@
+namespace = fra
+
+fra.1 = {
+    type = country_event
+    placement = root
+    
+    title = fra.1.t
+    desc = fra.1.d
+    flavor = fra.1.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = fra.1.a
+        default_option = true
+        add_primary_culture = cu:occitan
+        add_primary_culture = cu:breton
+        add_primary_culture = cu:corsican
+        add_primary_culture = cu:tuareg   
+		create_character = {#
+			religion = rel:atheist #无神论
+			culture = cu:tuareg     
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_trade_unions
+			ideology = ideology_humanitarian #人道主义者
+			hq = region_france
+			commander_rank = commander_rank_1
+			traits = {
+				basic_offensive_planner #进攻策划师
+				basic_artillery_commander #炮兵指挥官
+			    brave
+                inspirational_orator
+                plains_commander
+                persistent
+			}
+		}                
+    }
+}

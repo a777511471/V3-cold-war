@@ -1,0 +1,18 @@
+﻿l_simp_chinese:
+
+ je_first_berlin_blockade:0 "第一次柏林危机"
+ je_first_berlin_blockade_main:0 "第一次柏林危机"
+ je_first_berlin_blockade_main_goal:0 "让西德从封锁中挣脱出来。"
+ je_first_berlin_blockade_reason:0 "柏林是德国的象征，如果我们要建立一个和苏联抗衡的德国的话，无论如何也不能丢掉西柏林。我们必须要通过各种手段来打破苏联封锁，保障西柏林市民的日常生活所需。只要我们撑过了这段时期，苏联就会渐渐发现他们的封锁不仅毫无意义，而且也让自身损失惨重，西柏林的封锁就会渐渐消失。最终，我们能够建立一个自由民主的德国，并以此同铁幕那边对抗。"
+ kongyun_button_key:0 "向我们的德国空运"
+ yaoqinmingzhu_button_key:0 "邀请德国民主人士"
+ junshiyuanzhu_button_key:0 "给予德国军事援助"
+ kongyun_not_button_key:0 "停止空运"
+ USSR_talk_button_key:0 "与苏联展开谈判"
+ gaigefalv_button_key:0 "《基本法》"
+ kongyun_button_key_desc:0 "向我们的德国空运，以便给予他们补给"
+ yaoqinmingzhu_button_key_desc:0 "我们要与他们进行沟通和联系，以免让他们被共匪洗脑！"
+ junshiyuanzhu_button_key_button_key_desc:0 "我们要加强当地军事力量，以免受到苏联入侵！"
+ gaigefalv_button_key_desc:0 "立宪！西德！"
+ kongyun_not_button_key_desc:0 "停止向西柏林空运"
+ USSR_talk_button_key_desc:0 "我们必须与苏联展开谈判以便讨论柏林问题"

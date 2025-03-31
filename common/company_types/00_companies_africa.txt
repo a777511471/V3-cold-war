@@ -34,7 +34,7 @@ company_misr = {
 	}
 	
 	prosperity_modifier = {
-		state_loyalists_from_sol_change_mult = 0.1
+		state_loyalists_from_political_movements_mult = 0.1
 	}	
 	
 	ai_weight = {
@@ -63,7 +63,7 @@ company_egyptian_rail = {
 			is_incorporated = yes
 			has_building = building_railway
 			count >= 4
-		}		
+		}			
 	}
 	
 	prosperity_modifier = {

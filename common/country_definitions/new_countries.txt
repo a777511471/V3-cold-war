@@ -1,5 +1,148 @@
-﻿HND = {
-	color = { 150 77 240 }
+FIN = {
+	color = { 205  212  228 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { finnish }
+	capital = STATE_UUSIMAA
+}
+
+CUB = {
+	color = { 87  192  204 }
+	
+	country_type = unrecognized0
+	
+	tier = principality
+	
+	cultures = { caribeno }
+	capital = STATE_CUBA
+	is_named_from_capital = yes
+}
+
+EZO = { # Ezo
+	color = { 129 40 147 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { dahe ainu }
+	
+	capital = STATE_HOKKAIDO
+}
+
+AUS = {
+	color = { 211  220  240 }
+    religion = atheist
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { south_german }
+	capital = STATE_AUSTRIA
+}
+
+ABU = {
+	color = { 113  112  96 }
+	
+	country_type = colonial
+	
+	tier = principality
+	
+	cultures = { bedouin }
+	capital = STATE_ABU_DHABI
+}
+
+IND = { #印尼
+	color = { 0  128  128 }
+	religion = sunni
+	country_type = colonial
+
+	tier = empire
+	
+	cultures = { balinese batak bornean dayak javan malay moluccan sumatran dutch-seals }
+	capital = STATE_WEST_JAVA
+}
+
+YSD = {	
+	color = { 164  217  127 }
+	
+	country_type = recognized
+	tier = kingdom
+
+	cultures = { north_german }
+	capital = STATE_NORTH_RHINE
+}
+
+HAN = {	
+	color = { 164  217  127 }
+	
+	country_type = recognized
+	tier = kingdom
+
+	cultures = { north_german }
+	capital = STATE_NORTH_RHINE
+}
+
+POL = {
+	color = { 197  92  106 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { polish }
+	capital = STATE_GREATER_POLAND #华沙
+}
+
+NZL = {
+	color = { 90  250  127 }
+	
+	country_type = colonial
+	
+	tier = kingdom
+	
+	capital = STATE_NORTH_ISLAND
+	cultures = { australian }
+}
+
+MDV = { #马尔代夫
+	color = hsv360{ 143  75  61 }
+	
+	country_type = recognized
+	
+	tier = kingdom
+	religion = sunni	
+	cultures = { maldives }
+}
+
+BRZ = {
+	color = hsv360{ 143  75  61 }
+	
+	country_type = colonial
+	
+	tier = empire
+	
+	cultures = { brazilian afro_brazilian }
+	capital = STATE_RIO_DE_JANEIRO
+}
+
+BAV = {
+	color = { 121  175  235 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { south_german }
+	capital = STATE_BAVARIA
+	is_named_from_capital = yes
+}
+
+HND = {
+	color = { 199 102 22 }
 	
 	country_type = recognized
 	
@@ -7,6 +150,18 @@
 	
 	cultures = { kanauji marathi bihari tamil oriya gujarati }
 	capital = STATE_DELHI
+}
+
+ION = { #民主希腊
+	color = { 153  141  117 }
+	
+	country_type = recognized
+
+	tier = kingdom
+	
+	cultures = { greek }	
+	capital = STATE_MACEDONIA
+	is_named_from_capital = yes
 }
 
 BAF = { #巴尔干联邦
@@ -63,14 +218,14 @@ CAM = {
 	capital = STATE_CAMBODIA
 }
 
-BUR = {
+BUR = { #缅甸
 	color = { 109  168  127 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
-	cultures = { british }
+	cultures = { british burmese }
 	capital = STATE_BURMA
 }
 
@@ -107,7 +262,7 @@ STY = { #施蒂里亚
 SEL = {
 	color = { 249 215 61 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	cultures = { british }
@@ -120,7 +275,7 @@ PRK = { #北朝鲜
 	country_type = recognized
 
 	tier = kingdom
-	religion = confucian
+    religion = atheist	
 
 	cultures = { korean }
 	capital = STATE_PYONGYANG
@@ -132,20 +287,9 @@ KOR = {
 	country_type = recognized
 	
 	tier = kingdom
-	
+
 	cultures = { korean }
 	capital = STATE_SEOUL
-}
-
-HAN = {
-	color = { 164  217  127 }
-	
-	country_type = recognized
-
-	tier = kingdom
-	
-	cultures = { north_german }
-	capital = STATE_NORTH_RHINE
 }
 
 RHN = {
@@ -172,7 +316,7 @@ PRU = {
 ARB = {
 	color = { 140 102 152 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = principality
 	
@@ -201,7 +345,7 @@ EOT = {
 KAT = {
 	color = { 79  152  64 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = principality
 	
@@ -209,21 +353,10 @@ KAT = {
 	capital = STATE_YEMEN
 }
 
-DAI = {
-	color = { 136  117  90 }
-	
-	country_type = unrecognized
-	
-	tier = kingdom
-	
-	cultures = { vietnamese }
-	capital = STATE_TONKIN
-}
-
 VIE = {
 	color = { 151 174 28 }
 	
-	country_type = recognized
+	country_type = colonial
 
 	tier = kingdom
 	
@@ -271,7 +404,7 @@ CZH = {
 	country_type = recognized
 
 	tier = kingdom
-	religion = catholic
+	religion = atheist
 	cultures = { czech slovak }
 	capital = STATE_BOHEMIA
 }
@@ -282,7 +415,6 @@ ALB = {
 	country_type = recognized
 
 	tier = principality
-	religion = atheist
 	cultures = { albanian }
 	capital = STATE_ALBANIA
 	is_named_from_capital = yes
@@ -307,7 +439,7 @@ ROM = {
 	country_type = recognized
 
 	tier = kingdom
-	religion = orthodox
+    religion = atheist
 	capital = STATE_WALLACHIA
 	cultures = { romanian }
 }
@@ -329,26 +461,26 @@ BUL = {
 	country_type = recognized
 
 	tier = kingdom
-	religion = orthodox
+    religion = atheist
 	cultures = { bulgarian }	
 	capital = STATE_NORTHERN_THRACE
 }
 
-IDN = { #印尼
-	color = { 0  128  128 }
-	religion = sunni
-	country_type = recognized
+IDN = { #荷属东印度
+	color = { 117  165  188 }
+	religion = protestant
+	country_type = colonial
 
 	tier = empire
 	
-	cultures = { balinese batak bornean dayak javan malay moluccan sumatran }
+	cultures = { dutch dutch-seals javan }
 	capital = STATE_WEST_JAVA
 }
 
 JOH = { #马来西亚
 	color = { 165  151  80 }
 	
-	country_type = recognized
+	country_type = colonial
 	
 	tier = kingdom
 	
@@ -385,12 +517,32 @@ MEX = {
 RUS = {
 	color = { 47 91 18 }
 	religion = atheist
+	tier = hegemony #霸权
 	country_type = recognized
-
-	tier = empire
-	
-	cultures = { russian ukrainian byelorussian }
+	cultures = { russian ukrainian byelorussian lithuanian latvian estonian kazak uzbek turkmen tajik georgian armenian azerbaijani}
 	capital = STATE_MOSCOW
+}
+
+USA = {
+	color = { 66  94  193 }
+	
+	country_type = recognized
+	
+	tier = hegemony #霸权
+	
+	cultures = { yankee dixie }
+	capital = STATE_DISTRICT_OF_COLUMBIA
+}
+
+PHI = {
+	color = { 92 87 122 }
+	
+	country_type = colonial
+	
+	tier = kingdom
+	
+	cultures = { filipino yankee }
+	capital = STATE_LUZON
 }
 
 SIK = {
@@ -400,7 +552,7 @@ SIK = {
 	
 	tier = principality
 	
-	cultures = { tibetan nepali }
+	cultures = { tibetan }
 	capital = STATE_HIMALAYAS
 }
 
@@ -416,12 +568,36 @@ DOM = {
 	is_named_from_capital = yes
 }
 
+OMA = { #阿曼
+	color = { 98  134  153 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { bedouin }
+	religion = shiite #什叶派
+	capital = STATE_OMAN
+	is_named_from_capital = yes
+}
+
+IRN = { #波斯
+	color = { 207 64 88 }
+	
+	country_type = recognized
+
+	tier = hegemony #霸权
+	
+	cultures = { persian kurdish tajik azerbaijani }
+	capital = STATE_IRAKAJEMI
+}
+
 PER = {
 	color = { 39  108  140 }
 	
 	country_type = unrecognized
 	
-	tier = empire
+	tier = kingdom
 	
 	cultures = { persian azerbaijani }
 	capital = STATE_IRAKAJEMI
@@ -432,17 +608,18 @@ CHN = { #中国
 
 	country_type = recognized
 
-	tier = empire	
+	tier = hegemony #霸权
 
-	cultures = { han yue min hakka tibetan mongol manchu zhuang miao yi } 
+	cultures = { han manchu mongol uighur tibetan zhuang yi miao } 
 	capital = STATE_BEIJING
 }
 
 CHI = { #中华民国
 	color = { 89 113 223 }
+	religion = confucian
 	country_type = recognized
 	
-	tier = empire
+	tier = hegemony #霸权
 	
 	cultures = { han } 
 	capital = STATE_NANJING
@@ -454,7 +631,7 @@ PRC = { #中国共产党
 	religion = atheist
 	country_type = unrecognized
 
-	tier = empire
+	tier = hegemony #霸权
 	
 	cultures = { han } 
 	capital = STATE_XIAN
@@ -478,7 +655,7 @@ JAP = {
 	tier = kingdom
 	
 	cultures = { dahe }
-        religion = shinto
+    religion = shinto
 	capital = STATE_KANTO
 }
 
@@ -494,7 +671,7 @@ ML2 =
 	capital = STATE_BESSARABIA
 }
 
-BRD = {
+BRD = { #西德
 	color = { 30 49 83 }
 	
 	country_type = recognized
@@ -515,6 +692,7 @@ DDR = {
 	cultures = { north_german south_german }
 	capital = STATE_BRANDENBURG
 }
+
 HRE = {
 	color = { 250  250  245 }
 	
@@ -526,3 +704,24 @@ HRE = {
 	capital = STATE_AUSTRIA
 }
 
+OCL= {
+	color = { 100 149 237 }
+	
+	country_type = recognized
+
+	tier = empire
+	
+	cultures = { australian }
+	capital = STATE_NEW_SOUTH_WALES
+}
+
+CEY = {
+	color = hsv360{ 0  70  61 }
+	
+	country_type = colonial
+	
+	tier = principality
+	
+	cultures = { sinhala }
+	capital = STATE_CEYLON
+}

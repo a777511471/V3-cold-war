@@ -11,7 +11,6 @@
 		activate_law = law_type:law_proportional_taxation #比例税制
 		activate_law = law_type:law_continental_law_system #大陆法系
 		activate_law = law_type:law_private_schools #私立学校
-		activate_law = law_type:law_charitable_health_system #慈善医院
 		activate_law = law_type:aw_poor_laws #济贫法
 		activate_law = law_type:law_state_led #科学院主导
  		activate_law = law_type:law_compulsory_primary_school
@@ -45,5 +44,11 @@
 			institution = institution_police
 			level = 1
 		}
+
+		add_modifier = {
+			name = an_unsound_democracy #不健全的民主
+			years = 10
+			is_decaying = yes					
+		}			
 	}
 }

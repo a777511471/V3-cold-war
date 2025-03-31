@@ -1,29 +1,64 @@
 ﻿COUNTRIES = {
 	c:PRG = {
-		effect_starting_technology_tier_4_tech = yes
-		effect_starting_politics_conservative = yes
+		set_next_election_date = 1946.7.1
 		
-		activate_law = law_type:law_presidential_republic
-		activate_law = law_type:law_autocracy 
-		activate_law = law_type:law_freedom_of_conscience
-		activate_law = law_type:law_racial_segregation
-		activate_law = law_type:law_interventionism
-		activate_law = law_type:law_per_capita_based_taxation
-		activate_law = law_type:law_isolationism
-		activate_law = law_type:law_no_schools
-		activate_law = law_type:law_no_police
+		effect_starting_technology_tier_4_tech = yes
 
-		add_technology_researched = mass_communication
-		add_technology_researched = egalitarianism
+		activate_law = law_type:law_presidential_republic #总统共和制
+		activate_law = law_type:law_universal_suffrage #普选制
+		activate_law = law_type:law_protectionism #贸易保护
+		activate_law = law_type:law_interventionism #经济干预
+		activate_law = law_type:law_encourage_fertility #鼓励抚育		
+		activate_law = law_type:law_cultural_exclusion #文化排斥
+        activate_law = law_type:law_8_hour_working_system #八小时工作制
+		activate_law = law_type:law_continental_law_system #大陆法系
+		activate_law = law_type:law_right_of_assembly #集会权
+		activate_law = law_type:law_appointed_bureaucrats #任命官僚制
+		activate_law = law_type:law_womens_suffrage #妇女选举权
+		activate_law = law_type:law_public_schools #公立学校
+		activate_law = law_type:law_compulsory_primary_school #义务小学
+		activate_law = law_type:law_dedicated_police #专职警察部队
+		activate_law = law_type:law_public_health_insurance #公共医疗保险
+		activate_law = law_type:law_poor_laws #济贫法
+		activate_law = law_type:law_no_migration_controls #无移民控制
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_slavery_banned #禁止蓄奴
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_proportional_taxation #比例税制
+		activate_law = law_type:law_national_guard
+	
+		set_institution_investment_level = {
+			institution = institution_social_security #社会保障
+			level = 2
+		}
+	
+		set_institution_investment_level = {
+			institution = institution_schools #教育
+			level = 3
+		}
+
+		set_institution_investment_level = {
+			institution = institution_police #执法
+			level = 1
+		}
 
 		ig:ig_armed_forces = { # Barragan was head of state, on paper, but Antonio Lopez de Santa Anna had his finger in every political pie
 			add_ruling_interest_group = yes
 			remove_ideology = ideology_caudillismo
 		}
 
-		ig:ig_landowners = {
-			add_ruling_interest_group = yes
+		ig:ig_intelligentsia = { #知识分子 
+			set_interest_group_name = ig_academic_group #学术集团
+		}	
+
+		ig:ig_industrialists = { #财阀
+			set_interest_group_name = ig_chaebol
+		}
+
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_elite #政治精英
 			remove_ideology = ideology_paternalistic
+			add_ideology = ideology_republican_paternalistic #缙绅主义者					
 		}
 
 		ig:ig_devout = {

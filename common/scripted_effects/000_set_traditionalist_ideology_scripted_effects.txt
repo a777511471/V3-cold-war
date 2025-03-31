@@ -1,0 +1,3 @@
+set_traditionalist_ideology = {
+    set_ideology = ideology:ideology_traditionalist
+}

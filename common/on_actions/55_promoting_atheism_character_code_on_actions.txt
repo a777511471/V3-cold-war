@@ -1,0 +1,65 @@
+# Root = Character
+on_monthly_pulse_character = {
+	effect = {
+		if = {
+			limit = {
+				AND = {
+					has_trait = trait_child
+					age >= define:NCharacters|ADULT_AGE
+				}
+			}
+			remove_trait = trait_child
+			add_random_trait = personality
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_traditionalist_minoritarian
+				OR = {
+					owner.religion ?= religion
+					owner.var:potential_religion ?= religion
+				}
+			}
+			set_ideology = ideology:ideology_traditionalist
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_traditionalist
+				NOT = {
+					owner.religion ?= religion
+					owner.var:potential_religion ?= religion
+				}
+			}
+			set_ideology = ideology:ideology_traditionalist_minoritarian
+		}
+	}
+}
+
+# Root = Character
+on_character_creation = {
+	effect = {
+		set_variable = {
+			name = memento_mori_immunity
+			years = 10
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_traditionalist_minoritarian
+				OR = {
+					owner.religion ?= religion
+					owner.var:potential_religion ?= religion
+				}
+			}
+			set_ideology = ideology:ideology_traditionalist
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_traditionalist
+				NOT = {
+					owner.religion ?= religion
+					owner.var:potential_religion ?= religion
+				}
+			}
+			set_ideology = ideology:ideology_traditionalist_minoritarian
+		}
+	}
+}

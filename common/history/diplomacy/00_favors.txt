@@ -1,22 +1,18 @@
-﻿DIPLOMACY = {
-	c:GBR  = {
+﻿DIPLOMACY = { #义务
+	c:NEJ  = {
 		set_owes_obligation_to = {
 			country = c:USA
+			setting = yes
+		}		
+		set_owes_obligation_to = {
+			country = c:GBR
 			setting = yes
 		}
 	}
 
-	c:GRE = {
+	c:GBR  = {
 		set_owes_obligation_to = {
-			country = c:RUS
-			setting = yes
-		}
-		set_owes_obligation_to = {
-			country = c:FRA
-			setting = yes
-		}
-		set_owes_obligation_to = {
-			country = c:GBR 
+			country = c:USA
 			setting = yes
 		}
 	}

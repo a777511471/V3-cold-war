@@ -1,0 +1,19 @@
+building_central_bank = { #中央银行
+	building_group = bg_public_infrastructure
+	icon = "gfx/interface/icons/building_icons/金融区.dds"
+	city_type = city
+	levels_per_mesh = 5
+	
+	has_max_level = yes
+
+	production_method_groups = {
+		pmg_base_building_central_bank
+	}
+
+	required_construction = construction_cost_medium
+
+	ai_value = 10000
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+

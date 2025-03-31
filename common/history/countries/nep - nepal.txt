@@ -6,14 +6,32 @@
 		activate_law = law_type:law_tenant_farmers #佃农
 		activate_law = law_type:law_isolationism #孤立主义
 		
+		ig:ig_devout = {
+			set_interest_group_name = ig_hindu_priesthood #印度教上师
+			add_ideology = ideology_hindu_moralist			
+		}
+
+		ig:ig_industrialists = { #实业家
+			set_interest_group_name = ig_elite #政治精英																
+		}
+
+		ig:ig_rural_folk = { #乡村民众
+			set_interest_group_name = ig_ryots #莱特
+			add_ideology = ideology_proletarian #无产阶级主义者			
+		}
+
+		ig:ig_intelligentsia = { #知识分子
+			set_interest_group_name = ig_civil_servants #公务员		
+			remove_ideology = ideology_anti_clerical #反教权主义者
+		}
+
+		ig:ig_petty_bourgeoisie = { #小市民
+			set_interest_group_name = ig_bhadralok #巴德拉罗克
+		}
+
 		ig:ig_landowners = {
 			add_ruling_interest_group = yes
-		}	
-
-		ig:ig_devout = {
-			set_interest_group_name = ig_hindu_priesthood
-			remove_ideology = ideology_hindu_moralist
-			add_ideology = ideology_hindu_moralist
+			set_interest_group_name = ig_zamindars #扎明达尔		
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿law_no_health_system = {
+﻿law_no_health_system = { #无卫生系统
 	group = lawgroup_health_system
 	icon = "gfx/interface/icons/law_icons/no_health_system.dds"
 	
@@ -30,7 +30,7 @@
 	}
 }
 
-law_charitable_health_system = {
+law_charitable_health_system = { #慈善医院
 	group = lawgroup_health_system
 	icon = "gfx/interface/icons/law_icons/charitable_health_system.dds"
 	
@@ -40,12 +40,16 @@ law_charitable_health_system = {
 		tech_public_policy_and_management
 	}	
 
+	modifier = {
+		country_institution_cost_institution_health_system_mult = -0.2
+	}
+
 	institution = institution_health_system
 	institution_modifier = {
 		state_mortality_mult = -0.03
-		interest_group_ig_devout_pol_str_mult = 0.1
-		state_pollution_reduction_health_mult = -0.1
+		interest_group_ig_devout_pol_str_mult = 0.1		
 		state_poor_standard_of_living_add = 0.5
+		state_food_security_add = 0.02		
 	}
 	
 	# Don't return to charity if we have something more advanced
@@ -89,7 +93,7 @@ law_charitable_health_system = {
 	}
 }
 
-law_private_health_insurance = {
+law_private_health_insurance = { #私人医疗保险
 	group = lawgroup_health_system
 	icon = "gfx/interface/icons/law_icons/private_health_insurance.dds"
 	
@@ -100,15 +104,14 @@ law_private_health_insurance = {
 	}
 	
 	modifier = {
+		country_institution_cost_institution_health_system_mult = -0.4
 		country_institution_health_system_max_investment_add = 2
-                country_bureaucracy_investment_cost_factor_mult = -0.15
 	}	
 	
 	institution = institution_health_system
 	institution_modifier = {
 		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.1
 		state_mortality_wealth_mult = -0.002
-		state_pollution_reduction_health_mult = -0.1
 		state_rich_standard_of_living_add = 0.5
 	}
 	
@@ -140,7 +143,7 @@ law_private_health_insurance = {
 	}
 }
 
-law_public_health_insurance = {
+law_public_health_insurance = { #公共医疗保险
 	group = lawgroup_health_system
 	icon = "gfx/interface/icons/law_icons/public_health_insurance.dds"
 	
@@ -157,7 +160,6 @@ law_public_health_insurance = {
 	institution = institution_health_system
 	institution_modifier = {
 		state_mortality_mult = -0.04
-		state_pollution_reduction_health_mult = -0.15
 		state_standard_of_living_add = 0.5
 	}
 	

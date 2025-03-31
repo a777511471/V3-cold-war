@@ -1,17 +1,53 @@
 ﻿CHARACTERS = {
 	c:LUX = {
 		create_character = {
-			#夏洛特
+			#夏洛特大公
+			dna = dna_ecchi_net_wilhelmina					
+			historical = yes			
 			first_name = "Charlotte"
-			last_name = "Nassau-Weilburg" #拿骚-威尔堡家族
+			last_name = "von_Nassau-Weilburg" 
+			culture = cu:wallonian			
 			ruler = yes
+    		noble = yes				
 			female = yes #女性
-			ig_leader = yes
-			birth_date = 1880.8.31
-			interest_group = ig_petty_bourgeoisie
-			ideology = ideology_royalist #保皇主义者
+			birth_date = 1896.1.23
+			interest_group = ig_industrialists
+			ideology = ideology_liberal_leader #民主主义者
 			traits = {
+				strong #健硕
+				brave #勇敢					
 			}
 		}	
+
+		create_character = {
+            #首相皮埃尔·杜蓬
+			historical = yes
+			first_name = Pierre
+			last_name = Toubon
+			culture = cu:wallonian
+			ig_leader = yes
+			interest_group = ig_industrialists
+			ideology = ideology_liberal_leader #民主主义者
+			traits = {					
+			}
+		}	
+
+		create_character = {
+            #夏尔·马克思
+			historical = yes
+			first_name = Charlers
+			last_name = Marx
+			culture = cu:wallonian
+			religion = rel:atheist #无神论			
+			ig_leader = yes
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_communist #共产主义者
+			traits = {	
+				expert_political_operator #政治运作专家	
+				erudite #博学
+				honorable #体面
+				brave #勇敢	
+			}
+		}					
 	}
 }

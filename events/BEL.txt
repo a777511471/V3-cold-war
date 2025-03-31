@@ -1,0 +1,81 @@
+namespace = bel
+
+bel.1 = { #比利时王位继承
+	type = country_event
+	orphan = yes
+	
+	title = bel.1.t
+	desc = bel.1.d
+	flavor = bel.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/paper.dds"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = bel.1.a #博杜安一世即位
+		default_option = yes
+		create_character = {
+			#博杜安一世
+	dna = dna_bel_leopold_iii_saxe_coburg_gotha			
+			historical = yes			
+			first_name = "Baudouin_I"
+			last_name = "von_Sachsen-Coburg-Gotha"
+			culture = cu:south_german
+			religion = rel:catholic
+			ruler = yes
+			birth_date = 1930.9.7
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate
+			traits = {
+		 	        traditionalist_commander
+					basic_political_operator
+					cruel
+					persistent
+					pious #虔诚				
+			}
+		}	
+
+		create_character = {
+			#博杜安一世的儿子
+	dna = dna_bel_leopold_iii_saxe_coburg_gotha
+			last_name = "von_Sachsen-Coburg-Gotha"    			
+			culture = cu:south_german
+			religion = rel:catholic
+			heir = yes			
+            age = 0
+			traits = {	
+			}
+		}
+
+		create_character = {
+			#查理亲王
+	dna = dna_bel_leopold_iii_saxe_coburg_gotha			
+			historical = yes			
+			first_name = "Charles1"
+			last_name = "von_Sachsen-Coburg-Gotha"
+			culture = cu:south_german
+			religion = rel:protestant
+			ig_leader = yes
+			birth_date = 1890.12.16
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate
+			traits = {
+		 	        traditionalist_commander
+					basic_political_operator
+					cruel
+					persistent		
+			}
+		}	
+    } 
+}

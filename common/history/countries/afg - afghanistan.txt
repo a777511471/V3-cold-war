@@ -2,14 +2,49 @@
 	c:AFG = {
 		effect_starting_technology_tier_5_tech = yes
 		effect_starting_politics_traditional = yes
+
+		activate_law = law_type:law_tenant_farmers #佃农
 		activate_law = law_type:law_debt_slavery
-		activate_law = law_type:law_islamic_law_system #伊斯兰法系
+		activate_law = law_type:law_islamic_law_system #宗教法系
+		
 		ig:ig_landowners = {
-			add_ruling_interest_group = yes
-		}
+			set_interest_group_name = ig_elite #政治精英	
+		}	
 
 		ig:ig_devout = {
 			set_interest_group_name = ig_sunni_madrasahs
 		}
+
+		add_journal_entry = { type = je_tudigaige2 } #土地改革		
+		
+		add_modifier = {
+			name = afg_father #阿富汗国父
+		}
+
+		add_modifier = {
+			name = afg_royal_army #阿富汗王家陆军	
+			years = 20
+			is_decaying = yes				
+		}
+
+		add_modifier = {
+			name = illiteracy_is_everywhere #文盲遍地
+		}
+
+		add_modifier = {
+			name = pashto_valley_modifier #普什图瓦里
+		}
+
+		add_modifier = {
+			name = economic_self_sufficiency #经济自足
+			years = 20
+			is_decaying = yes				
+		}
+
+		add_modifier = {
+			name = kuami_system_modifier #库阿米制度
+		}
+
+
 	}
 }

@@ -2,19 +2,85 @@
 	c:YUG = {
 		create_character = {
 			#铁托
+			dna = ecchi_dna_josip_tito					
 			first_name = "Josip·Broz"
 			last_name = "tito"
 			historical = yes
+			birth_date = 1892.5.25			
 			culture=cu:croat #克罗地亚
 			religion = rel:atheist #无神论
-			is_general = yes
-			commander_rank = commander_rank_ruler
 			ig_leader = yes #利益集团领袖
 			ruler = yes
 			interest_group = ig_trade_unions #工会
-			ideology = ideology_vanguardist #意识形态马列主义者
+			ideology = ideology_syndicalism #工团主义者
 			traits = {
+				master_bureaucrat #高明官僚
+				expert_political_operator #政治运作专家				
+				basic_diplomat #外交官
+				demagogue #煽动者
+				stalwart_defender #坚定防御者
+				basic_offensive_planner #进攻策划师				
 			}
 		}		
+
+		create_character = {
+			#知识分子领袖爱德华·卡德尔 工团主义者 斯洛文尼亚文化无神论  1级外交官 1级政治家
+			dna = dna_pershing			
+			first_name = "Edouard_2"
+			last_name = "Cadell"
+			historical = yes
+			birth_date = 1910.1.27			
+			culture=cu:slovene #斯洛文尼亚
+			religion = rel:atheist #无神论
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_syndicalism #工团主义者
+			traits = {
+				master_bureaucrat #高明官僚
+				basic_diplomat #外交官
+				basic_political_operator #政治运作者
+				cautious #谨慎
+				steady #沉稳				
+				persistent #执着	
+			}
+		}		
+
+		create_character = {
+			#小市民领袖		
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_corporatist_leader #法团主义者
+			traits = {	
+			}
+		}		
+
+		create_character = {
+			#知识分子鼓动者米洛万·吉拉斯 无政府主义者 黑山文化无神论 作家
+			first_name = "Milovan"
+			last_name = "Djilas"
+			historical = yes
+			birth_date = 1911.6.4			
+			culture=cu:serb #塞尔维亚黑山文化
+			religion = rel:atheist #无神论
+    		is_agitator = yes #鼓动者			
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_anarchist #无政府主义者
+			traits = {
+				inspirational_orator #演说家
+				basic_political_operator #政治运作者				
+				literary #文学家				
+			}
+		}	
+
+		create_character = {
+			#军队领袖		
+			dna = dna_ecchi_ser_aleksandar_2	
+			ig_leader = yes #利益集团领袖
+			is_general = yes
+			commander_rank = commander_rank_1					
+			interest_group = ig_armed_forces #军队
+			traits = {	
+			}
+		}						
 	}
 }

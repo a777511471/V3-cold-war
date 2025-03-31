@@ -1,37 +1,104 @@
 ﻿CHARACTERS = {
 	c:OMA = {
 		create_character = {
-			# Said bin Sultan
-			#role = politician # Remove this line
-			first_name = "Said"
-			last_name = "al_Said"
+			#赛义德·本·泰穆尔
+			historical = yes			
+			dna = dna_kropotkin
+			religion = rel:shiite #什叶派
+			noble = yes							
+			first_name = "Said·Ben"
+			last_name = "Taymur"
 			ruler = yes
-			age = 45
-			interest_group = ig_landowners
-			ideology = ideology_traditionalist
-			traits = {
-				cautious 
+			birth_date = 1910.8.15
+			ig_leader = yes
+			interest_group = ig_landowners	
+			ideology = ideology_authoritarian #威权主义者
+			traits = {	
 			}
-			on_created = {
-				set_variable = {
-					name = is_said_bin_sultan
-				}				
+		}
+
+		create_character = { #王子卡布斯·本·赛义德
+			historical = yes		
+			first_name = "Qaboos·Benn"
+			last_name = "Al_Said"		
+			religion = rel:shiite #什叶派
+			heir = yes
+			birth_date = 1940.11.18			
+			noble = yes
+			interest_group = ig_armed_forces #军队
+    		ideology = ideology_secularized_reformer #世俗化改良主义者
+			traits = {	
+			 	strong #健硕				
+			}						
+		}
+
+		create_character = {
+			culture=cu:british #英格兰
+			ig_leader = yes #利益集团领袖
+			is_general = yes
+			interest_group = ig_armed_forces #军队
+			commander_rank = commander_rank_4
+			traits = {
 			}
 		}	
 
 		create_character = {
-			# Thuwaini bin Said
-			#role = politician # Remove this line
-			first_name = "Thuwaini"
-			last_name = "al_Said"
-			heir = yes
-			noble = yes
-			age = 15
-			interest_group = ig_devout
-			ideology = ideology_traditionalist
+			culture=cu:british #英格兰		
+    female = no
+    dna = dna_erode_venkatappa_ramasamy
+    interest_group = ig_rural_folk
+    		ideology = ideology_secularized_reformer #世俗化改良主义者
+    		ig_leader = yes
+    traits = {
+        direct
+        brave
+        erudite
+    }
+}
+
+		create_character = { #文人
+			culture=cu:british #英格兰		
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+    		ideology = ideology_secularized_reformer #世俗化改良主义者			
 			traits = {
-				reserved
+			}
+		}	
+
+		create_character = { #小市民领袖
+			culture=cu:british #英格兰
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie #小市民	
+			traits = {
+			}
+		}	
+
+		create_character = { #教会
+			religion = rel:shiite #什叶派
+			ig_leader = yes
+			interest_group = ig_devout		
+			traits = {
 			}
 		}
+
+		create_character = { #工会
+			culture=cu:british #英格兰		
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			interest_group = ig_trade_unions	
+    		ideology = ideology_secularized_reformer #世俗化改良主义者				
+			traits = {
+			}
+		}			
+
+		create_character = { #实业家
+			culture=cu:british #英格兰		
+			ig_leader = yes
+			interest_group = ig_industrialists
+    		ideology = ideology_market_liberal #市场自由主义者				
+			traits = {
+			}
+		}		
 	}
 }

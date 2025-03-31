@@ -1,0 +1,1256 @@
+﻿universal_basic_Income_button = {
+	name = universal_basic_Income_button
+	desc = universal_basic_Income_button_desc
+	
+	visible = { always = yes }
+
+	possible = {
+		#
+		##country_rank >= rank_value:minor_power
+		## Note that this closely reflects triggers in the event. Do not change one without changing both
+		#custom_tooltip = {
+		#	text = migration_button_cooldown_tta
+		#	NOT = { has_variable = sa_migration_cooldown }
+		#}
+		#average_sol >= 10
+		#any_country = {
+		#	country_rank <= rank_value:great_power
+		#	custom_tooltip = {
+		#		text = is_in_europe_tt
+		#		country_is_in_europe = yes
+		#	}
+		#	custom_tooltip = {
+		#		text = same_state_religion
+		#		religion = root.religion
+		#	}
+		#	custom_tooltip = {
+		#		text = average_sol_below_root_tt
+		#		average_sol <= root.average_sol
+		#	}
+		#	any_primary_culture = {
+		#		culture_can_have_mass_migration_to_country = ROOT
+		#	}
+		#	any_scope_state = {
+		#		is_incorporated = yes
+		#		custom_tooltip = {
+		#			text = is_in_europe_tt
+		#			state_is_in_europe = yes
+		#		}
+		#		count >= 3
+		#	}
+		#}
+		#any_scope_state = {
+		#	trigger_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_south_america_migration }
+		#		}
+		#		custom_tooltip = {
+		#			text = is_in_sa_tt
+		#			state_is_in_south_america = yes
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_central_america_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_mexico
+		#			region = sr:region_central_america
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_american_west_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_pacific_coast
+		#			region = sr:region_great_plains
+		#		}
+		#	}
+		#	state_is_eligible_as_mass_migration_target = yes
+		#}
+		#OR = {
+		#	has_law = law_type:law_racial_segregation
+		#	has_law = law_type:law_cultural_exclusion
+		#	has_law = law_type:law_multicultural
+		#}
+		#NOR = {
+		#	has_law = law_type:law_closed_borders
+		#	has_law = law_type:law_isolationism
+		#}
+	}
+
+	effect = {
+		#custom_tooltip = universal_basic_Income_button_1_txt
+		#if = {
+		#	limit = {
+		#		country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 8
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 8
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 8
+		#	}
+		#}
+		#if = {
+		#	limit = {				#
+		#		country_rank = rank_value:major_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 12
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 16
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 12
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank = rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 20
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 32
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 20
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank < rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 36
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 72
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 36
+		#	}
+		#}
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+		remove_modifier = universal_basic_Income_effect
+		remove_modifier = universal_basic_Income_expenditures
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_1 = {
+	name = universal_basic_Income_button_1
+	desc = universal_basic_Income_button_1_desc
+	#default_bad = yes
+	visible = { always = yes }
+
+	possible = {
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+		#
+		not = { has_variable = universal_basic_Income_variable_1 }
+		##country_rank >= rank_value:minor_power
+		## Note that this closely reflects triggers in the event. Do not change one without changing both
+		#custom_tooltip = {
+		#	text = migration_button_cooldown_tta
+		#	NOT = { has_variable = sa_migration_cooldown }
+		#}
+		#average_sol >= 10
+		#any_country = {
+		#	country_rank <= rank_value:great_power
+		#	custom_tooltip = {
+		#		text = is_in_europe_tt
+		#		country_is_in_europe = yes
+		#	}
+		#	custom_tooltip = {
+		#		text = same_state_religion
+		#		religion = root.religion
+		#	}
+		#	custom_tooltip = {
+		#		text = average_sol_below_root_tt
+		#		average_sol <= root.average_sol
+		#	}
+		#	any_primary_culture = {
+		#		culture_can_have_mass_migration_to_country = ROOT
+		#	}
+		#	any_scope_state = {
+		#		is_incorporated = yes
+		#		custom_tooltip = {
+		#			text = is_in_europe_tt
+		#			state_is_in_europe = yes
+		#		}
+		#		count >= 3
+		#	}
+		#}
+		#any_scope_state = {
+		#	trigger_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_south_america_migration }
+		#		}
+		#		custom_tooltip = {
+		#			text = is_in_sa_tt
+		#			state_is_in_south_america = yes
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_central_america_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_mexico
+		#			region = sr:region_central_america
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_american_west_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_pacific_coast
+		#			region = sr:region_great_plains
+		#		}
+		#	}
+		#	state_is_eligible_as_mass_migration_target = yes
+		#}
+		#OR = {
+		#	has_law = law_type:law_racial_segregation
+		#	has_law = law_type:law_cultural_exclusion
+		#	has_law = law_type:law_multicultural
+		#}
+		#NOR = {
+		#	has_law = law_type:law_closed_borders
+		#	has_law = law_type:law_isolationism
+		#}
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_1_txt
+		#if = {
+		#	limit = {
+		#		country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 8
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 8
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 8
+		#	}
+		#}
+		#if = {
+		#	limit = {				#
+		#		country_rank = rank_value:major_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 12
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 16
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 12
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank = rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 20
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 32
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 20
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank < rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 36
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 72
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 36
+		#	}
+		#}
+		
+		universal_basic_Income_scripted_effects = yes
+		set_variable = universal_basic_Income_variable_1
+		#remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+		#add_modifier = {
+		#	name = universal_basic_Income_effect
+		#	months = 2
+		#	multiplier = 0.25
+		#}
+		#add_modifier = {
+		#	name = universal_basic_Income_expenditures
+		#	months = 2
+		#	multiplier = value_low_pop_rbpw_mult_wip
+		#}
+		#universal_basic_Income_scripted_effects = yes
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_2 = {
+	name = universal_basic_Income_button_2
+	desc = universal_basic_Income_button_2_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_2 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+		#
+		##country_rank >= rank_value:minor_power
+		## Note that this closely reflects triggers in the event. Do not change one without changing both
+		#custom_tooltip = {
+		#	text = migration_button_cooldown_tta
+		#	NOT = { has_variable = sa_migration_cooldown }
+		#}
+		#average_sol >= 10
+		#any_country = {
+		#	country_rank <= rank_value:great_power
+		#	custom_tooltip = {
+		#		text = is_in_europe_tt
+		#		country_is_in_europe = yes
+		#	}
+		#	custom_tooltip = {
+		#		text = same_state_religion
+		#		religion = root.religion
+		#	}
+		#	custom_tooltip = {
+		#		text = average_sol_below_root_tt
+		#		average_sol <= root.average_sol
+		#	}
+		#	any_primary_culture = {
+		#		culture_can_have_mass_migration_to_country = ROOT
+		#	}
+		#	any_scope_state = {
+		#		is_incorporated = yes
+		#		custom_tooltip = {
+		#			text = is_in_europe_tt
+		#			state_is_in_europe = yes
+		#		}
+		#		count >= 3
+		#	}
+		#}
+		#any_scope_state = {
+		#	trigger_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_south_america_migration }
+		#		}
+		#		custom_tooltip = {
+		#			text = is_in_sa_tt
+		#			state_is_in_south_america = yes
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_central_america_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_mexico
+		#			region = sr:region_central_america
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_american_west_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_pacific_coast
+		#			region = sr:region_great_plains
+		#		}
+		#	}
+		#	state_is_eligible_as_mass_migration_target = yes
+		#}
+		#OR = {
+		#	has_law = law_type:law_racial_segregation
+		#	has_law = law_type:law_cultural_exclusion
+		#	has_law = law_type:law_multicultural
+		#}
+		#NOR = {
+		#	has_law = law_type:law_closed_borders
+		#	has_law = law_type:law_isolationism
+		#}
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_2_txt
+		#if = {
+		#	limit = {
+		#		country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 8
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 8
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 8
+		#	}
+		#}
+		#if = {
+		#	limit = {				#
+		#		country_rank = rank_value:major_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 12
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 16
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 12
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank = rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 20
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 32
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 20
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank < rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 36
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 72
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 36
+		#	}
+		#}
+		#universal_basic_Income_scripted_effects = yes
+		set_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_1
+		#remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+
+		#add_modifier = {
+		#	name = universal_basic_Income_effect
+		#	months = 2
+		#	multiplier = 0.5
+		#}
+		#add_modifier = {
+		#	name = universal_basic_Income_expenditures
+		#	months = 2
+		#	multiplier = value_low_pop_rbpw_mult_wip2
+		#}
+		#universal_basic_Income_scripted_effects = yes
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_3 = {
+	name = universal_basic_Income_button_3
+	desc = universal_basic_Income_button_3_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_3 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+		#
+		##country_rank >= rank_value:minor_power
+		## Note that this closely reflects triggers in the event. Do not change one without changing both
+		#custom_tooltip = {
+		#	text = migration_button_cooldown_tta
+		#	NOT = { has_variable = sa_migration_cooldown }
+		#}
+		#average_sol >= 10
+		#any_country = {
+		#	country_rank <= rank_value:great_power
+		#	custom_tooltip = {
+		#		text = is_in_europe_tt
+		#		country_is_in_europe = yes
+		#	}
+		#	custom_tooltip = {
+		#		text = same_state_religion
+		#		religion = root.religion
+		#	}
+		#	custom_tooltip = {
+		#		text = average_sol_below_root_tt
+		#		average_sol <= root.average_sol
+		#	}
+		#	any_primary_culture = {
+		#		culture_can_have_mass_migration_to_country = ROOT
+		#	}
+		#	any_scope_state = {
+		#		is_incorporated = yes
+		#		custom_tooltip = {
+		#			text = is_in_europe_tt
+		#			state_is_in_europe = yes
+		#		}
+		#		count >= 3
+		#	}
+		#}
+		#any_scope_state = {
+		#	trigger_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_south_america_migration }
+		#		}
+		#		custom_tooltip = {
+		#			text = is_in_sa_tt
+		#			state_is_in_south_america = yes
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_central_america_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_mexico
+		#			region = sr:region_central_america
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_american_west_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_pacific_coast
+		#			region = sr:region_great_plains
+		#		}
+		#	}
+		#	state_is_eligible_as_mass_migration_target = yes
+		#}
+		#OR = {
+		#	has_law = law_type:law_racial_segregation
+		#	has_law = law_type:law_cultural_exclusion
+		#	has_law = law_type:law_multicultural
+		#}
+		#NOR = {
+		#	has_law = law_type:law_closed_borders
+		#	has_law = law_type:law_isolationism
+		#}
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_3_txt
+		#if = {
+		#	limit = {
+		#		country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 8
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 8
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 8
+		#	}
+		#}
+		#if = {
+		#	limit = {				#
+		#		country_rank = rank_value:major_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 12
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 16
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 12
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank = rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 20
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 32
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 20
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank < rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 36
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 72
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 36
+		#	}
+		#}
+		set_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		#remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+		#universal_basic_Income_scripted_effects = yes
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_4 = {
+	name = universal_basic_Income_button_4
+	desc = universal_basic_Income_button_4_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_4 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+		#
+		##country_rank >= rank_value:minor_power
+		## Note that this closely reflects triggers in the event. Do not change one without changing both
+		#custom_tooltip = {
+		#	text = migration_button_cooldown_tta
+		#	NOT = { has_variable = sa_migration_cooldown }
+		#}
+		#average_sol >= 10
+		#any_country = {
+		#	country_rank <= rank_value:great_power
+		#	custom_tooltip = {
+		#		text = is_in_europe_tt
+		#		country_is_in_europe = yes
+		#	}
+		#	custom_tooltip = {
+		#		text = same_state_religion
+		#		religion = root.religion
+		#	}
+		#	custom_tooltip = {
+		#		text = average_sol_below_root_tt
+		#		average_sol <= root.average_sol
+		#	}
+		#	any_primary_culture = {
+		#		culture_can_have_mass_migration_to_country = ROOT
+		#	}
+		#	any_scope_state = {
+		#		is_incorporated = yes
+		#		custom_tooltip = {
+		#			text = is_in_europe_tt
+		#			state_is_in_europe = yes
+		#		}
+		#		count >= 3
+		#	}
+		#}
+		#any_scope_state = {
+		#	trigger_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_south_america_migration }
+		#		}
+		#		custom_tooltip = {
+		#			text = is_in_sa_tt
+		#			state_is_in_south_america = yes
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_central_america_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_mexico
+		#			region = sr:region_central_america
+		#		}
+		#	}
+		#	trigger_else_if = {
+		#		limit = {
+		#			owner = { has_journal_entry = je_american_west_migration }
+		#		}
+		#		OR = {
+		#			region = sr:region_pacific_coast
+		#			region = sr:region_great_plains
+		#		}
+		#	}
+		#	state_is_eligible_as_mass_migration_target = yes
+		#}
+		#OR = {
+		#	has_law = law_type:law_racial_segregation
+		#	has_law = law_type:law_cultural_exclusion
+		#	has_law = law_type:law_multicultural
+		#}
+		#NOR = {
+		#	has_law = law_type:law_closed_borders
+		#	has_law = law_type:law_isolationism
+		#}
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_4_txt
+		#if = {
+		#	limit = {
+		#		country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:great_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 8
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 8
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 8
+		#	}
+		#}
+		#if = {
+		#	limit = {				#
+		#		country_rank = rank_value:major_power
+		#		#country_rank >= rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 12
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 16
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 12
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank = rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 20
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 32
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 20
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		country_rank < rank_value:minor_power
+		#		NOT = { has_variable = sa_migration_cooldown }
+		#	}
+		#	set_variable = {
+		#		name = sa_migration_cooldown
+		#		months = 36
+		#	}
+		#	custom_tooltip = {
+		#		text = mass_migration_button_tt
+		#	}
+		#	trigger_event = { id = sa_migration.1 popup = yes }
+		#	#show_as_tooltip = {
+		#	#	add_modifier = {
+		#	#		name = sa_migration_cost
+		#	#		months = 72
+		#	#	}
+		#	#}
+		#	add_modifier = {
+		#		name = sa_migration_cost
+		#		months = 36
+		#	}
+		#}
+		set_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		#remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_5 = {
+	name = universal_basic_Income_button_5
+	desc = universal_basic_Income_button_5_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_5 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_5_txt
+		set_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		#remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_6 = {
+	name = universal_basic_Income_button_6
+	desc = universal_basic_Income_button_6_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_6 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_6_txt
+		set_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		#remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_7 = {
+	name = universal_basic_Income_button_7
+	desc = universal_basic_Income_button_7_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_7 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_7_txt
+		set_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		#remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+		#universal_basic_Income_scripted_effects = yes
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_8 = {
+	name = universal_basic_Income_button_8
+	desc = universal_basic_Income_button_8_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_8 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_8_txt
+		set_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		#remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_9 = {
+	name = universal_basic_Income_button_9
+	desc = universal_basic_Income_button_9_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_9 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_9_txt
+		set_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		#remove_variable = universal_basic_Income_variable_9
+		remove_variable = universal_basic_Income_variable_10
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_10 = {
+	name = universal_basic_Income_button_10
+	desc = universal_basic_Income_button_10_desc
+
+	visible = { always = yes }
+
+	possible = {
+		not = { has_variable = universal_basic_Income_variable_10 }
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+	}
+
+	effect = {
+		custom_tooltip = universal_basic_Income_button_10_txt
+		set_variable = universal_basic_Income_variable_10
+		remove_variable = universal_basic_Income_variable_1
+		remove_variable = universal_basic_Income_variable_2
+		remove_variable = universal_basic_Income_variable_3
+		remove_variable = universal_basic_Income_variable_4
+		remove_variable = universal_basic_Income_variable_5
+		remove_variable = universal_basic_Income_variable_6
+		remove_variable = universal_basic_Income_variable_7
+		remove_variable = universal_basic_Income_variable_8
+		remove_variable = universal_basic_Income_variable_9
+		#remove_variable = universal_basic_Income_variable_10
+	}
+
+	ai_chance = {
+		base = 10000
+	}
+}
+universal_basic_Income_button_11 = {
+	name = universal_basic_Income_button_11
+	desc = universal_basic_Income_button_11_desc
+
+	visible = { always = yes }
+
+	possible = {
+		NOT = { has_law = law_type:law_poor_laws }
+		NOT = { has_law = law_type:law_no_social_security }
+	}
+
+	effect = {
+		universal_basic_Income_scripted_effects = yes
+		add_modifier = {
+			name = universal_basic_Income_effect11
+			months = -1
+		}
+		add_modifier = {
+			name = universal_basic_Income_expenditures11
+			months = 2
+			multiplier = value_low_pop_rbpw_mult_wip
+		}
+		#universal_basic_Income_scripted_effects = yes
+	}
+
+	ai_chance = {
+		base = 11000
+	}
+}

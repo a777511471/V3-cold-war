@@ -3,10 +3,13 @@
 		effect_starting_technology_tier_2_tech = yes
 		set_next_election_date = 1946.7.1
 		set_tax_level = medium
-		
+		set_military_wage_level = low
+		set_government_wage_level = low
+
 		# Laws
 		activate_law = law_type:law_parliamentary_republic #议会共和制   
-		activate_law = law_type:law_national_supremacy #民族至上
+		activate_law = law_type:law_colonial_exploitation #民族剥削	
+		activate_law = law_type:law_racial_segregation #种族隔离
 		activate_law = law_type:law_women_in_the_workplace #女性工作
 		activate_law = law_type:law_free_trade #自由贸易
                 activate_law = law_type:law_private_health_insurance #私人医疗保险
@@ -37,17 +40,38 @@
 			level = 3
 		}
 
-		ig:ig_armed_forces = { #军队
-			add_ideology = ideology_anti_clerical #反教权主义者
+		ig:ig_intelligentsia = { #知识分子 
+			set_interest_group_name = ig_academic_group #学术集团
+		}	
+
+		ig:ig_industrialists = { #财阀
+			set_interest_group_name = ig_chaebol
 		}
 
-		ig:ig_landowners = { # 地主
-			add_ruling_interest_group = yes
-			set_interest_group_name = ig_local_governors
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_elite #政治精英
+		}
+
+		ig:ig_armed_forces = { #军队
+			add_ideology = ideology_anti_clerical #反教权主义者
 		}
 
 		ig:ig_devout = {
 			set_interest_group_name = ig_sunni_madrasahs
 		}
+		add_modifier = {
+			name = turkish_officer_corps #土耳其军官团
+		}		
+		add_modifier = {
+			name = sectarian_strife_modifier #宗派纷争
+			years = 5
+			is_decaying = yes
+		}
+		add_modifier = {
+			name = the_army_is_disordered #军队紊乱
+			years = 5
+			is_decaying = yes			
+		}
+
 	}
 }

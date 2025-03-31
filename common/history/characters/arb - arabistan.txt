@@ -18,5 +18,33 @@
 			traits = {
 			}
 		}
+
+		create_character = { #万宜
+			dna = ecchi_dna_du_yuesheng
+			first_name = "Yi"
+			last_name = "Vann" 
+    		is_agitator = yes #鼓动者					
+			culture = cu:han
+			religion = rel:atheist #无神论		
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_vanguardist #意识形态马克思列宁主义者
+			traits = {
+				firebrand #煽动大师
+			}
+		}		
+
+		create_character = { #泰米				
+			dna = ecchi_dna_du_yuesheng
+			first_name = "Mee"
+			last_name = "Tai" 
+    		is_agitator = yes #鼓动者
+			culture = cu:han
+			religion = rel:atheist #无神论
+			interest_group = ig_trade_unions
+			ideology = ideology_mao #毛泽东主义者
+			traits = {
+				firebrand #煽动大师
+			}
+		}		
 	}
 }

@@ -6,5 +6,29 @@
 			ig_leader = yes
 			dna = dna_francisco_de_paula_santander
 		}
+
+		create_character = { #豪尔赫·盖坦
+			dna = dna_thomas_jesup		
+			first_name = "Jorge"
+			last_name = "Gaitan" 
+			historical = yes
+			ig_leader = yes
+			birth_date = 1903.1.23
+			religion = rel:catholic #天主教
+			interest_group = ig_intelligentsia #文人
+			ideology = ideology_liberal_leader #民主主义者
+			traits = {
+				literary #文学家				
+			} 
+		}	
+
+		create_character = { #
+    		is_agitator = yes #鼓动者
+			religion = rel:atheist #无神论
+			interest_group = ig_rural_folk
+			ideology = ideology_vanguardist #意识形态马克思列宁主义者
+			traits = {					
+			}
+		}			
 	}
 }

@@ -1,0 +1,45 @@
+namespace = cw_nuclear_event
+
+cw_nuclear_event.1 = {
+	type = state_event
+	orphan = yes
+	
+	title = cw_nuclear_event.1.t
+	desc = cw_nuclear_event.1.d
+	flavor = cw_nuclear_event.1.f
+
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 1
+	
+	trigger = {
+	}
+	
+	immediate = {
+		save_scope_as = nuclear_state
+	}
+
+	option = {
+		name = cw_nuclear_event.1.a
+		default_option = yes
+	}
+
+	option = {
+		name = cw_nuclear_event.1.b
+		state_region = {
+			add_devastation = 50
+		}
+		add_modifier = {
+			name = suffering_nuclear
+			years = 10
+			is_decaying = yes
+		}
+	}
+
+}

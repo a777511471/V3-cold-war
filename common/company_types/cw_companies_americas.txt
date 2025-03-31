@@ -1,4 +1,55 @@
-﻿# 微软公司
+﻿company_us_steel = { #卡内基钢铁公司
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_carnegie_steel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_steel_mills #合金加工厂
+		building_iron_mine #金属矿
+		building_coal_mine #煤矿
+		building_sulfur_mine #非金属矿
+		building_railway #铁路
+		building_oil_rig #油井
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_new_england
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PENNSYLVANIA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_PENNSYLVANIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mills #合金加工厂
+					is_building_type = building_railway #铁路					
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.1
+		building_shipyards_throughput_add = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# 微软公司
 company_microsoft = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/microsoft.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"

@@ -1,13 +1,13 @@
 ﻿COUNTRIES = {
 	c:MGL = {
 		effect_starting_technology_tier_5_tech = yes
-		add_technology_researched = napoleonic_warfare
-		
+		add_technology_researched = tech_economics_foundations #资本论	
+
 		# Laws 
+		activate_law = law_type:law_council_republic #委员会共和制		
 		activate_law = law_type:law_autocracy #独裁制
-		activate_law = law_type:law_council_republic
+		activate_law = law_type:law_secularization #推广无神论			
  		activate_law = law_type:law_compulsory_primary_school
-		activate_law = law_type:law_total_separation
 		activate_law = law_type:law_womens_suffrage
 		activate_law = law_type:law_collectivized_agriculture #集体化农业
 		activate_law = law_type:law_proportional_taxation #比例税制
@@ -39,5 +39,35 @@
 			institution = institution_police
 			level = 1
 		}
+
+		ig:ig_armed_forces = { #军队
+			remove_ideology = ideology_loyalist #效忠派
+			add_ideology = ideology_proletarian #无产阶级主义者
+		}
+
+		ig:ig_petty_bourgeoisie = { #小市民
+			remove_ideology = ideology_reactionary #反动主义者
+			add_ideology = ideology_modernizer #现代化主义者
+		}
+
+		ig:ig_intelligentsia = { #知识分子 
+			set_interest_group_name = ig_academic_group #学术集团
+		}	
+
+		ig:ig_industrialists = { #企业家
+			set_interest_group_name = ig_entrepreneur
+		}
+
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_elite #政治精英
+		}
+
+		add_modifier = {
+			name = unofficial_assistance_from_the_soviet_union #来自苏联的非官方帮助		
+		}		
+		add_modifier = {
+			name = buryat_immigrants #布里亚特移民
+		}		
+	
 	}
 }

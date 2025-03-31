@@ -1,0 +1,24 @@
+is_law_private_construction_25 = {
+    OR = {
+        has_law = law_type:law_traditionalism
+        ## 10
+        has_law = law_type:law_command_economy
+    }
+}
+
+is_law_private_construction_50 = {
+    OR ={
+        has_law = law_type:law_interventionism
+        has_law = law_type:law_agrarianism
+        has_law = law_type:law_industry_banned
+        has_law = law_type:law_extraction_economy
+        ## 35
+        has_law = law_type:law_cooperative_ownership
+    }
+}
+
+is_law_private_construction_75 = {
+    OR ={
+        has_law = law_type:law_laissez_faire
+    }
+}

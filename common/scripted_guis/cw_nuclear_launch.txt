@@ -1,0 +1,12 @@
+cw_gui_nuclear_launch = {
+
+	ai_is_valid = {
+        always = no
+	}
+
+	is_valid = {
+        always = yes
+    } 	
+
+
+}

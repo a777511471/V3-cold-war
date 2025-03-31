@@ -2,20 +2,20 @@
 	c:ITA = {
 		set_next_election_date = 1946.7.1
 		
-		effect_starting_technology_tier_1_tech = yes
+		effect_starting_technology_tier_2_tech = yes
 
 		set_tax_level = medium
 		
 		add_taxed_goods = g:wine
 		
 		# Laws
-		activate_law = law_type:law_parliamentary_republic #议会共和制      
+		activate_law = law_type:law_parliamentary_republic #议会共和制 
+		activate_law = law_type:law_cultural_exclusion #文化排斥		     
 		activate_law = law_type:law_freedom_of_conscience #信仰自由
 		activate_law = law_type:law_elected_bureaucrats #选举官僚制
 		activate_law = law_type:law_continental_law_system #大陆法系
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_slavery_banned
-		activate_law = law_type:law_multicultural
 		activate_law = law_type:law_protectionism
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_right_of_assembly
@@ -30,43 +30,13 @@
             activate_law = law_type:law_compulsory_primary_school
             activate_law = law_type:law_8_hour_working_system
 
-		add_company = company_type:maserati #玛莎拉蒂
-		company:maserati = {
-			set_company_establishment_date = 1914.12.1
-		}
-
-		add_company = company_type:company_fiat #菲亚特
-		company:company_fiat = {
-			set_company_establishment_date = 1899.7.11
-		}
-
-		add_company = company_type:ducati #杜卡迪
-		company:ducati = {
-			set_company_establishment_date = 1926.7.4
-		}
-
-		add_company = company_type:biaqiao_group #比亚乔集团
-		company:biaqiao_group = {
-			set_company_establishment_date = 1884.1.1
-		}
-
-		add_company = company_type:company_ansaldo #安萨尔多
-		company:company_ansaldo = {
-			set_company_establishment_date = 1853.1.1
-		}
-
-		add_company = company_type:otto·meilela #奥托·梅莱拉
-		company:otto·meilela = {
-			set_company_establishment_date = 1905.1.1
-		}
-
 		ig:ig_trade_unions = { #工会
 			remove_ideology = ideology_proletarian #无产阶级主义者
-			add_ideology = ideology_social_democrats #社民主义者
+			add_ideology = ideology_social_democrats #社会民主主义者
 		}
 
 		set_institution_investment_level = {
-			institution = institution_schools
+			institution = institution_schools #教育
 			level = 3
 		}
 
@@ -74,5 +44,25 @@
 			institution = institution_police
 			level = 3
 		}
+		add_modifier = {
+			name = bitter_loser_modifier #苦涩的失败者
+			years = 30
+			is_decaying = yes
+		}		
+		add_modifier = {
+			name = industrial_restructure_modifier #产业重组
+			years = 20
+			is_decaying = yes			
+		}	
+		add_modifier = {
+			name = military_industry_modifier #受盟军打击的军事工业
+			years = 10
+			is_decaying = yes			
+		}	
+		add_modifier = {
+			name = the_tragedy_of_the_civil_war_modifier #内战之殇
+			years = 10
+			is_decaying = yes			
+		}										
 	}
 }

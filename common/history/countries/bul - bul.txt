@@ -35,7 +35,7 @@
 		}
 		
 		set_institution_investment_level = {
-			institution = institution_schools
+			institution = institution_schools #教育
 			level = 3
 		}
 

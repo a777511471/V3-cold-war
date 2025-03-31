@@ -1,0 +1,59 @@
+﻿je_help_recognition = {
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		OR = {
+			country_is_in_africa = yes
+			country_is_in_east_asia = yes
+			country_is_in_west_south_asia = yes
+		}
+		any_country = {
+			AND = {
+				is_country_type = unrecognized
+				OR = {
+					country_is_in_africa = yes
+					country_is_in_east_asia = yes
+					country_is_in_west_south_asia = yes
+				}
+			}
+		}
+
+	}
+
+
+	possible = {
+		is_country_type = recognized
+	}
+
+	complete = {
+		NOT = {
+			any_country = {
+				AND = {
+					is_country_type = unrecognized
+					OR = {
+						country_is_in_africa = yes
+						country_is_in_east_asia = yes
+						country_is_in_west_south_asia = yes
+					}
+				}
+			}
+		}
+	}
+
+	on_complete = {
+	}
+
+	fail = {
+	}
+
+	on_fail = {
+	}
+
+	scripted_button = je_xuanchuan
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

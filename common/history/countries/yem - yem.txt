@@ -16,6 +16,6 @@
 		activate_law = law_type:law_isolationism #孤立主义
 		activate_law = law_type:law_serfdom #农奴制
 		activate_law = law_type:law_debt_slavery #债务奴隶制
-		activate_law = law_type:law_islamic_law_system #伊斯兰法系
+		activate_law = law_type:law_islamic_law_system #宗教法系
 	}
 }

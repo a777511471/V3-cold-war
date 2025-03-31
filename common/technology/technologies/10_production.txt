@@ -1,11 +1,26 @@
-sericulture = { #¹Å´ú¼¼ÒÕ
+permanent_magnet_motors = { #æ°¸ç£ç”µæœº
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/å¼•æ“.dds"
+	category = production
+	can_research = no #å¯ä»¥ç ”ç©¶ï¼šä¸èƒ½
+	
+	modifier = {
+		goods_output_engines_mult = 0.05 #å»ºç­‘å¼•æ“äº§å‡º
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+sericulture = { #å¤ä»£æŠ€è‰º
 	era = era_1
 	texture = "gfx/interface/icons/invention_icons/sericulture.dds"
 	category = production
-	can_research = no
+	can_research = no #å¯ä»¥ç ”ç©¶ï¼šä¸èƒ½
 	
 	modifier = {
-		building_silk_plantation_throughput_add = 0.13 #Ë¿³ñÖÖÖ²Ô°ÍÌÍÂÁ¿
+		building_silk_plantation_throughput_add = 0.13 #ä¸ç»¸ç§æ¤å›­ååé‡
 		building_glassworks_throughput_add = 0.13
 	}
 	
@@ -14,9 +29,9 @@ sericulture = { #¹Å´ú¼¼ÒÕ
 	}
 }
 
-tech_basic_light_industry = {#»ù±¾Çá¹¤Òµ
+tech_basic_light_industry = { #åŸºæœ¬è½»å·¥ä¸š
 	era = era_1
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/lathe.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -24,22 +39,32 @@ tech_basic_light_industry = {#»ù±¾Çá¹¤Òµ
 	unlocking_technologies = {
 		tech_basic_agricultural_production
 	}
+
+	modifier = {
+		state_expected_sol_from_literacy = 1 #æ¥è‡ªè¯†å­—ç‡çš„ç”Ÿæ´»æ°´å¹³æœ€ä½æœŸæœ›
+	}
+
 }
-tech_basic_food_industry = {#»ù±¾Ê³Æ·¹¤Òµ
+tech_basic_food_industry = { #åŸºæœ¬é£Ÿå“å·¥ä¸š
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/è‚‰.dds"
 	category = production
 	ai_weight = {
 		value = 3
 	}
+
 	unlocking_technologies = {
 		tech_basic_light_industry
 	}
+
+	modifier = {
+		state_expected_sol_from_literacy = 1 #æ¥è‡ªè¯†å­—ç‡çš„ç”Ÿæ´»æ°´å¹³æœ€ä½æœŸæœ›
+	}
 }
 
-pasteurization = { #Ê³Æ·É±¾ú
+pasteurization = { #é£Ÿå“æ€èŒ
 	era = era_2
-	texture = "gfx/interface/icons/invention_icons/pasteurization.dds"
+	texture = "gfx/interface/icons/invention_icons/å¥¶.dds"
 	category = production
 	
 	unlocking_technologies = {	
@@ -47,7 +72,10 @@ pasteurization = { #Ê³Æ·É±¾ú
 	}
 	
 	modifier = {
-		state_standard_of_living_add = 0.5 #Éú»îË®Æ½
+		state_standard_of_living_add = 0.5 #ç”Ÿæ´»æ°´å¹³
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
 	}
 
 	ai_weight = {
@@ -55,9 +83,9 @@ pasteurization = { #Ê³Æ·É±¾ú
 	}
 }
 
-tech_mature_food_industry = {#³ÉÊìÊ³Æ·¹¤Òµ
+tech_mature_food_industry = { #æˆç†Ÿé£Ÿå“å·¥ä¸š
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/automatic_bottle_blowers.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -65,10 +93,18 @@ tech_mature_food_industry = {#³ÉÊìÊ³Æ·¹¤Òµ
 	unlocking_technologies = {
 		pasteurization
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
+
 }
-tech_advanced_food_industry = {#ÏÈ½øÊ³Æ·¹¤Òµ
+tech_advanced_food_industry = { #å…ˆè¿›é£Ÿå“å·¥ä¸š
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æ±‰å ¡.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -76,10 +112,18 @@ tech_advanced_food_industry = {#ÏÈ½øÊ³Æ·¹¤Òµ
 	unlocking_technologies = {
 		tech_mature_food_industry
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
+
 }
-tech_modern_food_industry = {#ÏÖ´úÊ³Æ·¹¤Òµ
+tech_modern_food_industry = { #ç°ä»£é£Ÿå“å·¥ä¸š
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å¯ä¹.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -87,10 +131,18 @@ tech_modern_food_industry = {#ÏÖ´úÊ³Æ·¹¤Òµ
 	unlocking_technologies = {
 		tech_advanced_food_industry
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
+
 }
-tech_basic_civil_light_industry = {#»ù±¾ÃñÓÃÇá¹¤Òµ
+tech_basic_civil_light_industry = { #åŸºæœ¬æ°‘ç”¨è½»å·¥ä¸š
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/lathe.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -98,10 +150,15 @@ tech_basic_civil_light_industry = {#»ù±¾ÃñÓÃÇá¹¤Òµ
 	unlocking_technologies = {
 		tech_basic_light_industry
 	}
+
+	modifier = {
+		state_expected_sol_from_literacy = 1 #æ¥è‡ªè¯†å­—ç‡çš„ç”Ÿæ´»æ°´å¹³æœ€ä½æœŸæœ›
+	}
+
 }
-tech_mature_civil_light_industry = {#³ÉÊìÃñÓÃÇá¹¤Òµ
+tech_mature_civil_light_industry = { #æˆç†Ÿæ°‘ç”¨è½»å·¥ä¸š
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/lathe.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -109,10 +166,17 @@ tech_mature_civil_light_industry = {#³ÉÊìÃñÓÃÇá¹¤Òµ
 	unlocking_technologies = {
 		tech_basic_civil_light_industry
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
 }
-tech_advanced_civil_light_industry = {#ÏÈ½øÃñÓÃÇá¹¤Òµ
+tech_advanced_civil_light_industry = { #å…ˆè¿›æ°‘ç”¨è½»å·¥ä¸š
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/lathe.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -120,10 +184,17 @@ tech_advanced_civil_light_industry = {#ÏÈ½øÃñÓÃÇá¹¤Òµ
 	unlocking_technologies = {
 		tech_mature_civil_light_industry
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
 }
-tech_modern_civil_light_industry = {#ÏÖ´úÃñÓÃÇá¹¤Òµ
+tech_modern_civil_light_industry = { #ç°ä»£æ°‘ç”¨è½»å·¥ä¸š
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/lathe.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -131,18 +202,151 @@ tech_modern_civil_light_industry = {#ÏÖ´úÃñÓÃÇá¹¤Òµ
 	unlocking_technologies = {
 		tech_advanced_civil_light_industry
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
 }
-tech_basic_agricultural_production = {#»ù±¾Å©ÒµÉú²ú
+tech_basic_agricultural_production = { #åŸºæœ¬å†œä¸šç”Ÿäº§
 	era = era_1
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ç²®é£Ÿ.dds"
 	category = production
+
+	modifier = {
+		state_expected_sol_from_literacy = 1 #æ¥è‡ªè¯†å­—ç‡çš„ç”Ÿæ´»æ°´å¹³æœ€ä½æœŸæœ›
+	}
+
+
 	ai_weight = {
 		value = 3
 	}
 	}
-tech_fertilizer_synthesis = {#»¯·ÊºÏ³É
+
+tech_cross_breeding = { #æ‚äº¤è‚²ç§
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/ç²®é£Ÿ.dds"
+	category = production
+	ai_weight = {
+		value = 3
+	}
+	unlocking_technologies = {
+		tech_basic_agricultural_production
+	}
+
+	modifier = {
+		state_food_security_add = 0.02 #ç²®é£Ÿå®‰å…¨
+		building_group_bg_agriculture_throughput_add = 0.02 #å†œä¸šååé‡
+		building_group_bg_plantations_throughput_add = 0.03 #ç§æ¤å›­ååé‡
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+}
+
+tech_plant_nutrition = { #æ¤ç‰©è¥å…»å­¦
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ç²®é£Ÿ2.dds"
+	category = production
+	ai_weight = {
+		value = 3
+	}
+	unlocking_technologies = {
+		tech_cross_breeding
+	}
+
+	modifier = {
+		building_group_bg_plantations_throughput_add = 0.05 #ç§æ¤å›­ååé‡
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+}
+
+tech_soil_nutrition = { #åœŸå£¤å­¦
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
+	category = production
+	ai_weight = {
+		value = 3
+	}
+	unlocking_technologies = {
+		tech_cross_breeding
+	}
+
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05 #å†œä¸šååé‡
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+}
+
+tech_transgenosis = { #ç°ä»£è½¬åŸºå› æŠ€æœ¯
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/æ°´æœ.dds"
+	category = production
+	ai_weight = {
+		value = 3
+	}
+	unlocking_technologies = {
+		tech_plant_nutrition
+		tech_soil_nutrition
+	}
+
+	modifier = {
+		state_food_security_add = 0.02 #ç²®é£Ÿå®‰å…¨		
+		building_group_bg_agriculture_throughput_add = 0.02 #å†œä¸šååé‡
+		building_group_bg_plantations_throughput_add = 0.03 #ç§æ¤å›­ååé‡
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+}
+
+tech_gene_sequencing = { #åŸºå› æµ‹åºï¼ˆç¨³äº§ï¼Œå‡å°‘é¥¥è’å½±å“ï¼‰
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/æ°´æœ.dds"
+	category = production
+	ai_weight = {
+		value = 3
+	}
+	unlocking_technologies = {
+		tech_transgenosis
+	}
+
+	modifier = {
+		state_food_security_add = 0.02 #ç²®é£Ÿå®‰å…¨
+		unit_supply_consumption_mult = -0.05 #è¡¥ç»™æ¶ˆè€—
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+}
+
+tech_synthetic_ammonia = { #åˆæˆæ°¨
+	era = era_1
+	texture = "gfx/interface/icons/goods_icons/dye.dds"
+	category = production
+	ai_weight = {
+		value = 3
+	}
+	unlocking_technologies = {
+		tech_basic_agricultural_production
+	}
+
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.02 #å†œä¸šååé‡
+		building_group_bg_plantations_throughput_add = 0.03 #ç§æ¤å›­ååé‡
+		state_expected_sol_from_literacy = 1 #æ¥è‡ªè¯†å­—ç‡çš„ç”Ÿæ´»æ°´å¹³æœ€ä½æœŸæœ›
+	}
+}
+
+tech_fertilizer_synthesis = { #åŒ–è‚¥åˆæˆ
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/intensive_agriculture.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -151,10 +355,18 @@ tech_fertilizer_synthesis = {#»¯·ÊºÏ³É
 		tech_basic_agricultural_production
 tech_basic_chemical_industry
 	}
+
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.02 #å†œä¸šååé‡
+		building_group_bg_plantations_throughput_add = 0.03 #ç§æ¤å›­ååé‡
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}	
 }
-tech_greenhouse_technology = {#ÎÂÊÒ¼¼Êõ
+tech_greenhouse_technology = { #æ¸©å®¤æŠ€æœ¯
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/fertilizer.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -163,18 +375,31 @@ tech_greenhouse_technology = {#ÎÂÊÒ¼¼Êõ
 		tech_fertilizer_synthesis
 tech_engine_manufacturing
 	}
+
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.02 #å†œä¸šååé‡
+		building_group_bg_plantations_throughput_add = 0.03 #ç§æ¤å›­ååé‡
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}	
 }
-tech_basic_mining = {#»ù±¾¿óÒµ
+tech_basic_mining = { #åŸºæœ¬çŸ¿ä¸š
 	era = era_1
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/é‡‘å±.dds"
 	category = production
+
+	modifier = {
+		country_resource_discovery_chance_mult = 0.2 #èµ„æºå‘ç°å‡ ç‡
+	}
+
 	ai_weight = {
 		value = 3
 	}
 	}
-tech_diverse_handheld_tools = {#¶àÑùÊÖ³Ö¹¤¾ß
+tech_diverse_handheld_tools = { #å¤šæ ·æ‰‹æŒå·¥å…·
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/tools.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -183,9 +408,9 @@ tech_diverse_handheld_tools = {#¶àÑùÊÖ³Ö¹¤¾ß
 		tech_basic_mining
 	}
 }
-tech_explosives = {#±¬ÆÆÎï
+tech_explosives = { #çˆ†ç ´ç‰©
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/explosives.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -194,9 +419,9 @@ tech_explosives = {#±¬ÆÆÎï
 		tech_diverse_handheld_tools
 	}
 }
-tech_mine_construction = {#¿ó¾®¹¹½¨
+tech_mine_construction = { #çŸ¿äº•æ„å»º
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/é‡‘å±.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -204,10 +429,15 @@ tech_mine_construction = {#¿ó¾®¹¹½¨
 	unlocking_technologies = {
 		tech_explosives
 	}
+
+	modifier = {
+		country_resource_discovery_chance_mult = 0.2 #èµ„æºå‘ç°å‡ ç‡
+	}
+
 }
-tech_security_equipment = {#°²È«Éè±¸
+tech_security_equipment = { #å®‰å…¨è®¾å¤‡
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/colonization.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -216,17 +446,17 @@ tech_security_equipment = {#°²È«Éè±¸
 		tech_mine_construction
 	}
 }
-tech_unified_tool_standards = {#Í³Ò»¹¤¾ß±ê×¼
+tech_unified_tool_standards = { #ç»Ÿä¸€å·¥å…·æ ‡å‡†
 	era = era_1
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/tools.dds"
 	category = production
 	ai_weight = {
 		value = 3
 	}
 	}
-tech_steel_tools = {#¸ÖÖÆ¹¤¾ß
+tech_steel_tools = { #é’¢åˆ¶å·¥å…·
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/tools.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -235,9 +465,9 @@ tech_steel_tools = {#¸ÖÖÆ¹¤¾ß
 		tech_unified_tool_standards
 	}
 }
-tech_rubber_accessories = {#Ïğ½ºÅä¼ş
+tech_rubber_accessories = { #æ©¡èƒ¶é…ä»¶
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/è½®èƒ.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -246,20 +476,26 @@ tech_rubber_accessories = {#Ïğ½ºÅä¼ş
 		tech_steel_tools
 	}
 }
-tech_electric_tools = {#µçÁ¦¹¤¾ß
+tech_electric_tools = { #ç”µåŠ¨å·¥å…·
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/pneumatic_tools.dds"
 	category = production
 	ai_weight = {
 		value = 3
 	}
+
+	modifier = {
+		building_construction_sector_throughput_add = 0.1
+		building_group_bg_logging_throughput_add = 0.1 #ä¼æœ¨ä¸šååé‡
+	}
+
 	unlocking_technologies = {
 		tech_rubber_accessories
 	}
 }
-tech_electronic_tools = {#µç×Ó»¯¹¤¾ß
+tech_electronic_tools = { #ç”µå­åŒ–å·¥å…·
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/electricity.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -268,17 +504,17 @@ tech_electronic_tools = {#µç×Ó»¯¹¤¾ß
 		tech_electric_tools
 	}
 }
-tech_petroleum_extraction_and_application = {#Ê¯ÓÍÌáÈ¡ÓëÓ¦ÓÃ
+tech_petroleum_extraction_and_application = { #çŸ³æ²¹æå–ä¸åº”ç”¨
 	era = era_1
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/çŸ³æ²¹.dds"
 	category = production
 	ai_weight = {
 		value = 3
 	}
 	}
-tech_metal_oxide_catalysts = {#½ğÊôÑõ»¯Îï´ß»¯¼Á
+tech_metal_oxide_catalysts = { #é‡‘å±æ°§åŒ–ç‰©å‚¬åŒ–å‰‚
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/dye.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -287,9 +523,9 @@ tech_metal_oxide_catalysts = {#½ğÊôÑõ»¯Îï´ß»¯¼Á
 		tech_petroleum_extraction_and_application
 	}
 }
-tech_integrated_petroleum_exploration_technology = {#Ê¯ÓÍ×ÛºÏ¿±Ì½¼¼Êõ
+tech_integrated_petroleum_exploration_technology = { #çŸ³æ²¹ç»¼åˆå‹˜æ¢æŠ€æœ¯
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/çŸ³æ²¹.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -298,9 +534,9 @@ tech_integrated_petroleum_exploration_technology = {#Ê¯ÓÍ×ÛºÏ¿±Ì½¼¼Êõ
 		tech_metal_oxide_catalysts
 	}
 }
-tech_hydraulic_fracturing_ = {#Ë®Á¦Ñ¹ÁÑ¼¼Êõ
+tech_hydraulic_fracturing_ = { #æ°´åŠ›å‹è£‚æŠ€æœ¯
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/self_propelled_torpedoes.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -309,9 +545,9 @@ tech_hydraulic_fracturing_ = {#Ë®Á¦Ñ¹ÁÑ¼¼Êõ
 		tech_integrated_petroleum_exploration_technology
 	}
 }
-tech_shale_oil_and_gas_extraction = {#Ò³ÑÒÓÍÆø¿ª²É
+tech_shale_oil_and_gas_extraction = { #é¡µå²©æ²¹æ°”å¼€é‡‡
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ç…¤æ°”ç½.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -320,9 +556,9 @@ tech_shale_oil_and_gas_extraction = {#Ò³ÑÒÓÍÆø¿ª²É
 		tech_hydraulic_fracturing_
 	}
 }
-tech_basic_power_generation = {#»ù±¾·¢µç
+tech_basic_power_generation = { #åŸºæœ¬å‘ç”µ
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/electricity.dds"
 	category = production
 	ai_weight = {
 		value = 2
@@ -331,9 +567,9 @@ tech_basic_power_generation = {#»ù±¾·¢µç
 		tech_basic_mining
 	}
 }
-tech_refined_fuel = {#¾«Á¶È¼ÁÏ
+tech_refined_fuel = { #ç²¾ç‚¼ç‡ƒæ–™
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æ±½æ²¹.dds"
 	category = production
 	ai_weight = {
 		value = 2
@@ -342,9 +578,9 @@ tech_refined_fuel = {#¾«Á¶È¼ÁÏ
 		tech_basic_power_generation
 	}
 }
-tech_combined_combustion_support = {#»¯ºÏÖúÈ¼
+tech_combined_combustion_support = { #åŒ–åˆåŠ©ç‡ƒ
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æ±½æ²¹.dds"
 	category = production
 	ai_weight = {
 		value = 2
@@ -353,9 +589,9 @@ tech_combined_combustion_support = {#»¯ºÏÖúÈ¼
 		tech_refined_fuel
 	}
 }
-tech_clean_energy = {#Çå½àÄÜÔ´
+tech_clean_energy = { #æ¸…æ´èƒ½æº
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/electricity.dds"
 	category = production
 	ai_weight = {
 		value = 2
@@ -363,10 +599,13 @@ tech_clean_energy = {#Çå½àÄÜÔ´
 	unlocking_technologies = {
 		tech_combined_combustion_support
 	}
+modifier = {
+	goods_output_electricity_mult = 0.05 #ç”µåŠ›äº§å‡º
+	}		
 }
-tech_advanced_clean_energy = {#ÏÈ½øÇå½àÄÜÔ´
+tech_advanced_clean_energy = { #å…ˆè¿›æ¸…æ´èƒ½æº
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/electricity.dds"
 	category = production
 	ai_weight = {
 		value = 2
@@ -374,10 +613,14 @@ tech_advanced_clean_energy = {#ÏÈ½øÇå½àÄÜÔ´
 	unlocking_technologies = {
 		tech_clean_energy
 	}
+modifier = {
+	goods_output_electricity_mult = 0.05 #ç”µåŠ›äº§å‡º
+	state_harvest_condition_flood_impact_mult = -0.05 #æ´ªæ°´æ”¶è·çŠ¶å†µå½±å“
+	}	
 }
-tech_basic_chemical_industry = {#»ù±¾»¯¹¤²úÒµ
+tech_basic_chemical_industry = { #åŸºæœ¬åŒ–å·¥äº§ä¸š
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/irradiated_material.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -386,9 +629,32 @@ tech_basic_chemical_industry = {#»ù±¾»¯¹¤²úÒµ
 		tech_petroleum_extraction_and_application
 	}
 }
-tech_gas_chromatography = {#ÆøÏàÉ«Æ×·¨
+
+antibiotics = { #æ°‘ç”¨æŠ—ç”Ÿç´ 
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/antibiotics.dds"
+	category = production
+	
+	modifier = {
+		country_institution_health_system_max_investment_add = 1
+	}
+	
+	unlocking_technologies = {
+		tech_basic_chemical_industry
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+
+	modifier = {
+		state_harvest_condition_disease_outbreak_impact_mult = -0.05 #ç–«ç—…çˆ†å‘æ”¶è·çŠ¶å†µå½±å“
+	}		
+}
+
+tech_gas_chromatography = { #æ°”ç›¸è‰²è°±æ³•
+	era = era_2
+	texture = "gfx/interface/icons/goods_icons/dye.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -397,9 +663,9 @@ tech_gas_chromatography = {#ÆøÏàÉ«Æ×·¨
 		tech_basic_chemical_industry
 	}
 }
-tech_quantum_chemistry = {#Á¿×Ó»¯Ñ§
+tech_quantum_chemistry = { #é‡å­åŒ–å­¦
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/verrier_modern_physics_tech.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -408,9 +674,9 @@ tech_quantum_chemistry = {#Á¿×Ó»¯Ñ§
 		tech_gas_chromatography
 	}
 }
-tech_organic_chemistry = {#ÓĞ»ú»¯Ñ§
+tech_organic_chemistry = { #æœ‰æœºåŒ–å­¦
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/dye.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -419,9 +685,9 @@ tech_organic_chemistry = {#ÓĞ»ú»¯Ñ§
 		tech_quantum_chemistry
 	}
 }
-tech_synthesis_of_conductive_materials = {#µ¼µç²ÄÁÏºÏ³É
+tech_synthesis_of_conductive_materials = { #å¯¼ç”µææ–™åˆæˆ
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/steel.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -430,9 +696,9 @@ tech_synthesis_of_conductive_materials = {#µ¼µç²ÄÁÏºÏ³É
 		tech_organic_chemistry
 	}
 }
-tech_pet = {#PET
+tech_pet = { #PETå¡‘æ–™
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å¡‘æ–™.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -441,9 +707,9 @@ tech_pet = {#PET
 		tech_gas_chromatography
 	}
 }
-tech_eps = {#EPS
+tech_eps = { #EPSå¡‘æ–™
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å¡‘æ–™.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -452,9 +718,9 @@ tech_eps = {#EPS
 		tech_pet
 	}
 }
-tech_glass_blowing = {#²£Á§´µÖÆ
+tech_glass_blowing = { #ç»ç’ƒå¹åˆ¶
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/automatic_bottle_blowers.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -463,9 +729,9 @@ tech_glass_blowing = {#²£Á§´µÖÆ
 		tech_basic_mining
 	}
 }
-tech_rolling_method = {#¾íÑ¹·¨
+tech_rolling_method = { #å·å‹æ³•
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/automatic_bottle_blowers.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -474,9 +740,9 @@ tech_rolling_method = {#¾íÑ¹·¨
 		tech_glass_blowing
 	}
 }
-tech_float_glass_process = {#¸¡·¨²£Á§ÖÆ³Ì
+tech_float_glass_process = { #æµ®æ³•ç»ç’ƒåˆ¶ç¨‹
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ç»ç’ƒ.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -485,9 +751,9 @@ tech_float_glass_process = {#¸¡·¨²£Á§ÖÆ³Ì
 		tech_rolling_method
 	}
 }
-tech_melt_down_process = {#ÈÛÈÚÏÂÀ­ÖÆ³Ì
+tech_melt_down_process = { #ç†”èä¸‹æ‹‰åˆ¶ç¨‹
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ç»ç’ƒ.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -496,9 +762,9 @@ tech_melt_down_process = {#ÈÛÈÚÏÂÀ­ÖÆ³Ì
 		tech_float_glass_process
 	}
 }
-tech_electric_glass = {#µç²£Á§
+tech_electric_glass = { #ç”µç»ç’ƒ
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ç»ç’ƒ.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -507,9 +773,9 @@ tech_electric_glass = {#µç²£Á§
 		tech_melt_down_process
 	}
 }
-tech_basic_steel_smelting = {#»ù±¾¸ÖÌúÒ±Á¶
+tech_basic_steel_smelting = { #åŸºæœ¬é’¢é“å†¶ç‚¼
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/é’¢.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -519,9 +785,9 @@ tech_basic_steel_smelting = {#»ù±¾¸ÖÌúÒ±Á¶
 tech_basic_chemical_industry
 	}
 }
-tech_mature_steel_smelting = {#³ÉÊì¸ÖÌúÒ±Á¶
+tech_mature_steel_smelting = { #æˆç†Ÿé’¢é“å†¶ç‚¼
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/é’¢.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -530,9 +796,10 @@ tech_mature_steel_smelting = {#³ÉÊì¸ÖÌúÒ±Á¶
 		tech_basic_steel_smelting
 	}
 }
-tech_open_hearth_steelmaking_method = {#Æ½Â¯Á¶¸Ö·¨
-	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+
+tech_open_hearth_steelmaking_method = { #æ°§æ°”é¡¶å¹è½¬ç‚‰ç‚¼é’¢æ³•
+	era = era_2
+	texture = "gfx/interface/icons/invention_icons/é’¢.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -541,9 +808,10 @@ tech_open_hearth_steelmaking_method = {#Æ½Â¯Á¶¸Ö·¨
 		tech_mature_steel_smelting
 	}
 }
-tech_oxygen_top_blown_converter_steelmaking_method = {#ÑõÆø¶¥´µ×ªÂ¯Á¶¸Ö·¨
-	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+
+tech_oxygen_top_blown_converter_steelmaking_method = { #ç”µæ¸£é‡ç†”
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/é’¢æ£’.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -552,9 +820,10 @@ tech_oxygen_top_blown_converter_steelmaking_method = {#ÑõÆø¶¥´µ×ªÂ¯Á¶¸Ö·¨
 		tech_open_hearth_steelmaking_method
 	}
 }
-tech_electric_arc_furnace_steelmaking_method = {#µç»¡Â¯Á¶¸Ö·¨
-	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+
+tech_electric_arc_furnace_steelmaking_method = { #ç”µå¼§ç‚‰ç‚¼é’¢æ³•
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/é’¢æ£’.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -563,9 +832,27 @@ tech_electric_arc_furnace_steelmaking_method = {#µç»¡Â¯Á¶¸Ö·¨
 		tech_oxygen_top_blown_converter_steelmaking_method
 	}
 }
-tech_engine_manufacturing = {#ÒıÇæÖÆÔì
+
+tech_modern_steelmaking_formula = { #ç°ä»£ç‚¼é’¢é…æ–¹
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/é’¢æ£’.dds"
+	category = production
+	ai_weight = {
+		value = 3
+	}
+
+	modifier = {
+		building_steel_mills_throughput_add = 0.15 #ç‚¼é’¢å‚ååé‡
+	}
+
+	unlocking_technologies = {
+		tech_electric_arc_furnace_steelmaking_method
+	}
+}
+
+tech_engine_manufacturing = { #å¼•æ“åˆ¶é€ 
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å¼•æ“.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -575,9 +862,9 @@ tech_engine_manufacturing = {#ÒıÇæÖÆÔì
 tech_basic_mining
 	}
 }
-tech_alloy_engine = {#ºÏ½ğÒıÇæ
+tech_alloy_engine = { #åˆé‡‘å¼•æ“
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å¼•æ“.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -587,9 +874,9 @@ tech_alloy_engine = {#ºÏ½ğÒıÇæ
 tech_basic_steel_smelting
 	}
 }
-tech_electronic_control_engine = {#µç¿Ø·¢¶¯»ú
+tech_electronic_control_engine = { #ç”µæ§å‘åŠ¨æœº
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å¼•æ“.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -598,9 +885,9 @@ tech_electronic_control_engine = {#µç¿Ø·¢¶¯»ú
 		tech_alloy_engine
 	}
 }
-tech_oil_electric_engine = {#ÓÍµç·¢¶¯»ú
+tech_oil_electric_engine = { #æ²¹ç”µå‘åŠ¨æœº
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å¼•æ“.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -609,9 +896,9 @@ tech_oil_electric_engine = {#ÓÍµç·¢¶¯»ú
 		tech_electronic_control_engine
 	}
 }
-tech_vehicle_motor = {#³µÓÃµç»ú
+tech_vehicle_motor = { #è½¦ç”¨ç”µæœº
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å¼•æ“.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -620,9 +907,10 @@ tech_vehicle_motor = {#³µÓÃµç»ú
 		tech_oil_electric_engine
 	}
 }
-tech_train = {#»ğ³µ
+
+tech_train = { #é“è·¯
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/railways.dds"
 	category = production
 	ai_weight = {
 		value = 2
@@ -631,20 +919,63 @@ tech_train = {#»ğ³µ
 		tech_engine_manufacturing
 	}
 }
-tech_power_railway = {#¶¯Á¦ÌúÂ·
+
+railways = { #ç«è½¦
+	# Unlocks Railways
+	# Unlocks Rail Transport PM in Coal, Iron, Lead, Sulfur Mines
+	# Unlocks Rail Transport PM in Coffee, Cotton, Dye, Opium, Tea, Tobacco, Sugar, Rubber, Banana Plantations
+	# Unlocks Rail Transport PM in Logging Camp
+	# Unlocks Rail Transport PM in Oil Rig
+	# Unlocks Public Trams in Urban Centers
+	# Increases Railway max level by 1
+	era = era_2
+	texture = "gfx\interface\icons\invention_icons\steel_railway_cars.dds"	
+	category = production
+	
+	unlocking_technologies = {
+		tech_train
+	}
+
+	modifier = {
+		building_railway_throughput_add = 0.05 #é“è·¯å»ºç­‘ååé‡ 
+	}	
+
+	ai_weight = {
+		value = 2 # Important tech for everyone
+
+		if = {
+			limit = {
+				country_rank >= rank_value:unrecognized_major_power
+			}
+			add = 2
+		}
+		
+		if = {
+			limit = { 
+				OR = {
+					 has_strategy = ai_strategy_industrial_expansion
+					 has_strategy = ai_strategy_resource_expansion
+				}
+			}
+			add = 2
+		}		
+	}
+}
+
+tech_power_railway = { #åŠ¨åŠ›é“è·¯
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ç«è½¦.dds"
 	category = production
 	ai_weight = {
 		value = 2
 	}
 	unlocking_technologies = {
-		tech_train
+		railways
 	}
 }
-tech_electric_railway = {#µçÁ¦ÌúÂ·
+tech_electric_railway = { #ç”µåŠ›é“è·¯
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/high_speed_railway.dds"
 	category = production
 	ai_weight = {
 		value = 2
@@ -653,54 +984,103 @@ tech_electric_railway = {#µçÁ¦ÌúÂ·
 		tech_power_railway
 	}
 }
-tech_shipbuilding = {#´¬²°ÖÆÔì
+tech_shipbuilding = { #èˆ¹èˆ¶åˆ¶é€ 
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx\interface\icons\invention_icons\air_warfare_destroyer.dds"
 	category = production
 	ai_weight = {
 		value = 1
 	}
+
+	modifier = {
+		country_trade_route_quantity_mult = 0.05 #è´¸æ˜“è·¯çº¿äº¤æ˜“é‡
+	}
+
 	unlocking_technologies = {
 		tech_basic_steel_smelting
 	}
 }
-tech_special_ship_coatings = {#ÌØÖÖ´¬²°Í¿ÁÏ
+
+tech_ocean_going_freighters = { #è¿œæ´‹è´§è½®
+	era = era_2
+	texture = "gfx\interface\icons\invention_icons\air_warfare_destroyer.dds"
+	category = production
+	ai_weight = {
+		value = 1
+	}
+
+	modifier = {
+		country_trade_route_quantity_mult = 0.05 #è´¸æ˜“è·¯çº¿äº¤æ˜“é‡
+	}
+
+	unlocking_technologies = {
+		tech_shipbuilding
+	}
+}
+
+tech_large_freighters = { #å¤§å‹è´§è½®
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/missile_destroyer.dds"
+	category = production
+	ai_weight = {
+		value = 1
+	}
+
+	modifier = {
+		country_trade_route_quantity_mult = 0.05 #è´¸æ˜“è·¯çº¿äº¤æ˜“é‡
+	}
+
+	unlocking_technologies = {
+		tech_ocean_going_freighters
+	}
+}
+
+tech_special_ship_coatings = { #ç‰¹ç§èˆ¹èˆ¶æ¶‚æ–™
+	era = era_3
+	texture = "gfx/interface/icons/invention_icons/missile_destroyer.dds"
 	category = production
 	ai_weight = {
 		value = 1
 	}
 	unlocking_technologies = {
-		tech_shipbuilding
+		tech_large_freighters
 	}
 }
-tech_large_cargo_ships = {#´óĞÍ»õÂÖ
+tech_large_cargo_ships = { #ç°ä»£å¤§å‹è´§è½®
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ironclad_tech.dds"
 	category = production
 	ai_weight = {
 		value = 1
 	}
-	unlocking_technologies = {
-		tech_shipbuilding
+
+	modifier = {
+		country_trade_route_quantity_mult = 0.05 #è´¸æ˜“è·¯çº¿äº¤æ˜“é‡
 	}
-}
-tech_modern_cruise_ships = {#ÏÖ´úÓÊÂÖ
-	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
-	category = production
-	ai_weight = {
-		value = 1
-	}
+
 	unlocking_technologies = {
 		tech_special_ship_coatings
-tech_large_cargo_ships
 	}
 }
-tech_household_appliance_manufacturing = {#¼ÒµçÖÆÔì
+tech_modern_cruise_ships = { #ç°ä»£é‚®è½®
+	era = era_5
+	texture = "gfx/interface/icons/invention_icons/èˆ¹.dds"
+	category = production
+	ai_weight = {
+		value = 1
+	}
+
+	modifier = {
+		country_trade_route_quantity_mult = 0.05 #è´¸æ˜“è·¯çº¿äº¤æ˜“é‡
+	}
+
+	unlocking_technologies = {
+		tech_large_cargo_ships
+	}
+}
+tech_household_appliance_manufacturing = { #å®¶ç”µåˆ¶é€ 
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/å®¶ç”µ.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -710,9 +1090,9 @@ tech_household_appliance_manufacturing = {#¼ÒµçÖÆÔì
 tech_basic_power_generation
 	}
 }
-tech_color_tv = {#²ÊÉ«µçÊÓ
+tech_color_tv = { #å½©è‰²ç”µè§†
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -721,9 +1101,9 @@ tech_color_tv = {#²ÊÉ«µçÊÓ
 		tech_household_appliance_manufacturing
 	}
 }
-tech_lcd_tv = {#Òº¾§µçÊÓ
+tech_lcd_tv = { #æ¶²æ™¶ç”µè§†
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -732,9 +1112,9 @@ tech_lcd_tv = {#Òº¾§µçÊÓ
 		tech_color_tv
 	}
 }
-tech_smart_tv = {#ÖÇÄÜµçÊÓ
+tech_smart_tv = { #æ™ºèƒ½ç”µè§†
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -743,9 +1123,9 @@ tech_smart_tv = {#ÖÇÄÜµçÊÓ
 		tech_lcd_tv
 	}
 }
-tech_automobile_manufacturing = {#Æû³µÖÆÔì
+tech_automobile_manufacturing = { #æ±½è½¦åˆ¶é€ 
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æ±½è½¦.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -754,9 +1134,9 @@ tech_automobile_manufacturing = {#Æû³µÖÆÔì
 		tech_engine_manufacturing
 	}
 }
-tech_automotive_radar = {#Æû³µÀ×´ï
+tech_automotive_radar = { #æ±½è½¦é›·è¾¾
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/radar.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -765,9 +1145,9 @@ tech_automotive_radar = {#Æû³µÀ×´ï
 		tech_automobile_manufacturing
 	}
 }
-tech_navigation_system = {#µ¼º½ÏµÍ³
+tech_navigation_system = { #å¯¼èˆªç³»ç»Ÿ
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/radar.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -776,9 +1156,9 @@ tech_navigation_system = {#µ¼º½ÏµÍ³
 		tech_automotive_radar
 	}
 }
-tech_electronic_product = {#µç×Ó²úÆ·
+tech_electronic_product = { #ç”µå­äº§å“
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/ç”µå­åŠå…¬.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -787,9 +1167,9 @@ tech_electronic_product = {#µç×Ó²úÆ·
 		tech_basic_steel_smelting
 	}
 }
-tech_semiconductor = {#°ëµ¼Ìå
+tech_semiconductor = { #åŠå¯¼ä½“
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/åŠå¯¼ä½“.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -798,9 +1178,9 @@ tech_semiconductor = {#°ëµ¼Ìå
 		tech_electronic_product
 	}
 }
-tech_integrated_circuit = {#¼¯³ÉµçÂ·
+tech_integrated_circuit = { #é›†æˆç”µè·¯
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/åŠå¯¼ä½“.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -809,9 +1189,9 @@ tech_integrated_circuit = {#¼¯³ÉµçÂ·
 		tech_semiconductor
 	}
 }
-tech_smart_chip = {#ÖÇÄÜĞ¾Æ¬
+tech_smart_chip = { #æ™ºèƒ½èŠ¯ç‰‡
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/åŠå¯¼ä½“.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -820,9 +1200,9 @@ tech_smart_chip = {#ÖÇÄÜĞ¾Æ¬
 		tech_integrated_circuit
 	}
 }
-tech_mobile_phone = {#ÒÆ¶¯µç»°
+tech_mobile_phone = { #ç§»åŠ¨ç”µè¯
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/telephones.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -831,9 +1211,9 @@ tech_mobile_phone = {#ÒÆ¶¯µç»°
 		tech_semiconductor
 	}
 }
-tech_intelligent_mobile_phone = {#ÖÇÄÜÊÖ»ú
+tech_intelligent_mobile_phone = { #æ™ºèƒ½æ‰‹æœº
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/telephones.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -842,9 +1222,9 @@ tech_intelligent_mobile_phone = {#ÖÇÄÜÊÖ»ú
 		tech_mobile_phone
 	}
 }
-tech_machine_building = {#»úÆ÷ÖÆÔì
+tech_machine_building = { #æœºå™¨åˆ¶é€ 
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -854,9 +1234,9 @@ tech_machine_building = {#»úÆ÷ÖÆÔì
 		tech_basic_power_generation
 	}
 }
-tech_gantry_planer = {#ÁúÃÅÅÙ´²
+tech_gantry_planer = { #é¾™é—¨åˆ¨åºŠ
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -865,9 +1245,9 @@ tech_gantry_planer = {#ÁúÃÅÅÙ´²
 		tech_machine_building
 	}
 }
-tech_numerical_control_machine = {#Êı¿Ø»ú´²
+tech_numerical_control_machine = { #æ•°æ§æœºåºŠ
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -876,9 +1256,9 @@ tech_numerical_control_machine = {#Êı¿Ø»ú´²
 		tech_gantry_planer
 	}
 }
-tech_adaptive_control_machine_tool = {#×ÔÊÊ¿ØÖÆ»ú´²
+tech_adaptive_control_machine_tool = { #è‡ªé€‚æ§åˆ¶æœºåºŠ
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -887,9 +1267,9 @@ tech_adaptive_control_machine_tool = {#×ÔÊÊ¿ØÖÆ»ú´²
 		tech_numerical_control_machine
 	}
 }
-tech_aircraft_manufacturing = {#·É»úÖÆÔì
+tech_aircraft_manufacturing = { #é£æœºåˆ¶é€ 
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/airliner.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -898,9 +1278,9 @@ tech_aircraft_manufacturing = {#·É»úÖÆÔì
 		tech_engine_manufacturing
 	}
 }
-tech_modern_aircraft = {#ÏÖ´ú·É»ú
+tech_modern_aircraft = { #ç°ä»£é£æœº
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/é£æœº.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -910,9 +1290,9 @@ tech_modern_aircraft = {#ÏÖ´ú·É»ú
 tech_first_generation_supercomputers
 	}
 }
-tech_large_scale_equipment_manufacturing = {#´óĞÍÉè±¸ÖÆÔì
+tech_large_scale_equipment_manufacturing = { #å¤§å‹è®¾å¤‡åˆ¶é€ 
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æ‹–æ‹‰æœº.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -921,9 +1301,9 @@ tech_large_scale_equipment_manufacturing = {#´óĞÍÉè±¸ÖÆÔì
 		tech_machine_building
 	}
 }
-tech_industrial_robot = {#¹¤Òµ»úÆ÷ÈË
+tech_industrial_robot = { #å·¥ä¸šæœºå™¨äºº
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/è®¡ç®—æœº.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -932,9 +1312,9 @@ tech_industrial_robot = {#¹¤Òµ»úÆ÷ÈË
 		tech_large_scale_equipment_manufacturing
 	}
 }
-tech_intelligent_giant_production_equipment = {#ÖÇÄÜ»¯¾ŞĞÍÉú²úÉè±¸
+tech_intelligent_giant_production_equipment = { #æ™ºèƒ½åŒ–å·¨å‹ç”Ÿäº§è®¾å¤‡
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/è®¡ç®—æœº.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -943,9 +1323,9 @@ tech_intelligent_giant_production_equipment = {#ÖÇÄÜ»¯¾ŞĞÍÉú²úÉè±¸
 		tech_industrial_robot
 	}
 }
-tech_first_generation_supercomputers = {#µÚÒ»´ú³¬¼¶¼ÆËã»ú
+tech_first_generation_supercomputers = { #ç¬¬ä¸€ä»£è¶…çº§è®¡ç®—æœº
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/è®¡ç®—æœº.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -954,9 +1334,9 @@ tech_first_generation_supercomputers = {#µÚÒ»´ú³¬¼¶¼ÆËã»ú
 		tech_electronic_product
 	}
 }
-tech_modern_supercomputers = {#ÏÖ´ú³¬¼¶¼ÆËã»ú
+tech_modern_supercomputers = { #ç°ä»£è¶…çº§è®¡ç®—æœº
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/goods_icons/è®¡ç®—æœº.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -965,9 +1345,9 @@ tech_modern_supercomputers = {#ÏÖ´ú³¬¼¶¼ÆËã»ú
 		tech_first_generation_supercomputers
 	}
 }
-tech_rocket_engineering = {#»ğ¼ı¹¤³Ì
+tech_rocket_engineering = { #ç«ç®­å·¥ç¨‹
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/rocket.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -975,10 +1355,14 @@ tech_rocket_engineering = {#»ğ¼ı¹¤³Ì
 	unlocking_technologies = {
 		tech_electronic_product
 	}
+
+	modifier = {
+		country_prestige_mult = 0.1 #å¨æœ›
+	}
 }
-tech_modern_rockets = {#ÏÖ´ú»ğ¼ı
+tech_modern_rockets = { #ç°ä»£ç«ç®­
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/rocket.dds"
 	category = production
 	ai_weight = {
 		value = 1
@@ -986,10 +1370,14 @@ tech_modern_rockets = {#ÏÖ´ú»ğ¼ı
 	unlocking_technologies = {
 		tech_rocket_engineering
 	}
+
+	modifier = {
+		country_prestige_mult = 0.1 #å¨æœ›
+	}
 }
-tech_semi_mechanized_mining = {#°ë»úĞµ»¯¿óÒµ
+tech_semi_mechanized_mining = { #åŠæœºæ¢°åŒ–çŸ¿ä¸š
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/é‡‘å±.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -997,10 +1385,15 @@ tech_semi_mechanized_mining = {#°ë»úĞµ»¯¿óÒµ
 	unlocking_technologies = {
 		tech_unified_tool_standards
 	}
+
+	modifier = {
+		country_resource_discovery_chance_mult = 0.2 #èµ„æºå‘ç°å‡ ç‡
+	}
+
 }
-tech_coal_planer_and_segmented_support = {#ÅÙÃº»úºÍ½ÚÊ½Ö§¼Ü
+tech_coal_planer_and_segmented_support = { #åˆ¨ç…¤æœºå’ŒèŠ‚å¼æ”¯æ¶
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/pumpjacks.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1009,9 +1402,9 @@ tech_coal_planer_and_segmented_support = {#ÅÙÃº»úºÍ½ÚÊ½Ö§¼Ü
 		tech_semi_mechanized_mining
 	}
 }
-tech_electrohydraulic_control_hydraulic_support = {#µçÒº¿ØÒºÑ¹Ö§¼Ü
+tech_electrohydraulic_control_hydraulic_support = { #ç”µæ¶²æ§æ¶²å‹æ”¯æ¶
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/pumpjacks.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1020,9 +1413,9 @@ tech_electrohydraulic_control_hydraulic_support = {#µçÒº¿ØÒºÑ¹Ö§¼Ü
 		tech_coal_planer_and_segmented_support
 	}
 }
-tech_small_agricultural_machinery = {#Ğ¡ĞÍÅ©Òµ»úĞµ
+tech_small_agricultural_machinery = { #å°å‹å†œä¸šæœºæ¢°
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æ‹–æ‹‰æœº.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1031,9 +1424,9 @@ tech_small_agricultural_machinery = {#Ğ¡ĞÍÅ©Òµ»úĞµ
 		tech_machine_building
 	}
 }
-tech_popularization_of_tractors = {#ÍÏÀ­»úÆÕ¼°
+tech_popularization_of_tractors = { #æ‹–æ‹‰æœºæ™®åŠ
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æ‹–æ‹‰æœº.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1043,9 +1436,9 @@ tech_popularization_of_tractors = {#ÍÏÀ­»úÆÕ¼°
 tech_large_scale_equipment_manufacturing
 	}
 }
-tech_light_industrial_tools = {#Çá¹¤Òµ¹¤¾ß
+tech_light_industrial_tools = { #è½»å·¥ä¸šå·¥å…·
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/lathe.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1053,10 +1446,17 @@ tech_light_industrial_tools = {#Çá¹¤Òµ¹¤¾ß
 	unlocking_technologies = {
 		tech_unified_tool_standards
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
 }
-tech_light_industrial_machinery = {#Çá¹¤Òµ»úĞµ
+tech_light_industrial_machinery = { #è½»å·¥ä¸šæœºæ¢°
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1065,10 +1465,17 @@ tech_light_industrial_machinery = {#Çá¹¤Òµ»úĞµ
 		tech_light_industrial_tools
 tech_machine_building
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
 }
-tech_light_industrial_equipment = {#Çá¹¤ÒµÉè±¸
+tech_light_industrial_equipment = { #è½»å·¥ä¸šè®¾å¤‡
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1077,10 +1484,17 @@ tech_light_industrial_equipment = {#Çá¹¤ÒµÉè±¸
 		tech_light_industrial_machinery
 tech_large_scale_equipment_manufacturing
 	}
+
+	modifier = {
+		state_lower_strata_expected_sol_add = 0.5 #ä¸‹ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_middle_strata_expected_sol_add = 0.5 #ä¸­ç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+		state_upper_strata_expected_sol_add = 0.5  #ä¸Šç­‰é˜¶å±‚çš„æœ€ä½é¢„æœŸç”Ÿæ´»æ°´å¹³
+	}
+
 }
-tech_heavy_industrial_tools = {#ÖØ¹¤Òµ¹¤¾ß
+tech_heavy_industrial_tools = { #é‡å·¥ä¸šå·¥å…·
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/flash_freezing.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1089,9 +1503,9 @@ tech_heavy_industrial_tools = {#ÖØ¹¤Òµ¹¤¾ß
 		tech_unified_tool_standards
 	}
 }
-tech_heavy_industrial_machinery = {#ÖØ¹¤Òµ»úĞµ
+tech_heavy_industrial_machinery = { #é‡å·¥ä¸šæœºæ¢°
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1101,9 +1515,9 @@ tech_heavy_industrial_machinery = {#ÖØ¹¤Òµ»úĞµ
 tech_machine_building
 	}
 }
-tech_heavy_industrial_equipment = {#ÖØ¹¤ÒµÉè±¸
+tech_heavy_industrial_equipment = { #é‡å·¥ä¸šè®¾å¤‡
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1113,9 +1527,9 @@ tech_heavy_industrial_equipment = {#ÖØ¹¤ÒµÉè±¸
 tech_large_scale_equipment_manufacturing
 	}
 }
-tech_chemical_tools = {#»¯¹¤¹¤¾ß
+tech_chemical_tools = { #åŒ–å·¥å·¥å…·
 	era = era_2
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/flash_freezing.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1124,9 +1538,9 @@ tech_chemical_tools = {#»¯¹¤¹¤¾ß
 		tech_unified_tool_standards
 	}
 }
-tech_chemical_machinery = {#»¯¹¤»úĞµ
+tech_chemical_machinery = { #åŒ–å·¥æœºæ¢°
 	era = era_3
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1136,9 +1550,9 @@ tech_chemical_machinery = {#»¯¹¤»úĞµ
 tech_machine_building
 	}
 }
-tech_chemical_equipment = {#»¯¹¤Éè±¸
+tech_chemical_equipment = { #åŒ–å·¥è®¾å¤‡
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1148,9 +1562,9 @@ tech_chemical_equipment = {#»¯¹¤Éè±¸
 tech_large_scale_equipment_manufacturing
 	}
 }
-tech_complex_industrial_machinery = {#¸´ÔÓ¹¤Òµ»úĞµ
+tech_complex_industrial_machinery = { #å¤æ‚å·¥ä¸šæœºæ¢°
 	era = era_4
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1160,9 +1574,9 @@ tech_complex_industrial_machinery = {#¸´ÔÓ¹¤Òµ»úĞµ
 tech_machine_building
 	}
 }
-tech_complex_industrial_equipment = {#¸´ÔÓ¹¤ÒµÉè±¸
+tech_complex_industrial_equipment = { #å¤æ‚å·¥ä¸šè®¾å¤‡
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3
@@ -1172,9 +1586,9 @@ tech_complex_industrial_equipment = {#¸´ÔÓ¹¤ÒµÉè±¸
 tech_large_scale_equipment_manufacturing
 	}
 }
-tech_cutting_edge_industrial_equipment = {#¼â¶Ë¹¤ÒµÉè±¸
+tech_cutting_edge_industrial_equipment = { #å°–ç«¯å·¥ä¸šè®¾å¤‡
 	era = era_5
-	texture = "gfx/interface/icons/production_method_icons/Acidolysis.dds"
+	texture = "gfx/interface/icons/invention_icons/æœºå™¨.dds"
 	category = production
 	ai_weight = {
 		value = 3

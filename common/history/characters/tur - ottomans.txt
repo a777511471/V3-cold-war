@@ -2,8 +2,9 @@
 	c:TUR = {
 		create_character = {
 			#伊斯麦特·伊诺努
-			first_name = Ismat
-			last_name = Inonu
+			dna = ecchi_dna_adolf_hitler					
+			first_name = "Ismail"
+			last_name = "Inonu"
 			ruler = yes
 			historical = yes
 			birth_date = 1884.9.24
@@ -11,22 +12,56 @@
 			interest_group = ig_armed_forces #军队
 			ideology = ideology_authoritarian #威权主义者
 			traits = {
+				inspirational_orator #在啤酒馆鼓舞人心的演说家
+				firebrand #煽动大师				
 				strong #健硕
  				imperious #盛气凌人
+				tactful #圆滑				
 			}
 		}
 
 		create_character = {
 			#雷杰普·佩凯尔
-			first_name = "Rajip"
-			last_name = "Pekker"
+			first_name = "Recep"
+			last_name = "Pekhel"
 			historical = yes
 			birth_date = 1889.2.5
 			culture = cu:circassian
-			ig_leader = yes
+			ig_leader = yes #利益集团领袖
 			interest_group = ig_armed_forces #军队
 			traits = {
 			}
 		}	
+
+		create_character = {
+			religion = rel:atheist #无神论					
+			culture = cu:kurdish
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_communist #共产主义者			
+			traits = {
+			}
+		}			
+
+		create_character = {
+			religion = rel:atheist #无神论					
+			culture = cu:kurdish
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_communist #共产主义者			
+			traits = {
+			}
+		}		
+
+		create_character = {
+			religion = rel:atheist #无神论					
+			culture = cu:kurdish
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_1
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_mao #毛泽东主义者	
+			traits = {
+			}
+		}								
 	}
 }

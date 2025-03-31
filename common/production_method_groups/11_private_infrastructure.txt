@@ -71,8 +71,21 @@ pmg_ownership_building_financial_district = {
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_financial_district_privately_owned
-		pm_financial_district_publicly_traded
+		pm_financial_district_privately_owned #私人所有
+		pm_financial_district_publicly_traded #公开交易
 		pm_financial_district_principle_divine_economics_2
+	}
+}
+
+
+pmg_ownership_building_company_headquarter = { #公司总部所有制
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_company_headquarter_privately_owned #私人所有
+		pm_company_headquarter_cooperative_owned #合作社所有（法团、合作社）
+		pm_company_headquarter_collectively_owned #集体所有（集体经济）
+		pm_company_headquarter_country_owned #国家所有（国家资本主义、社会主义市场经济、计划经济）
 	}
 }

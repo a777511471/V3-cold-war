@@ -6,7 +6,7 @@
 
 		ig:ig_trade_unions = { #工会
 			remove_ideology = ideology_proletarian #无产阶级主义者
-			add_ideology = ideology_social_democrats #社民主义者
+			add_ideology = ideology_social_democrats #社会民主主义者
 		}
 
 		ig:ig_petty_bourgeoisie = {
@@ -21,12 +21,13 @@
 		
 		# Laws
 		activate_law = law_type:law_monarchy #君主制
-		activate_law = law_type:law_freedom_of_conscience #信仰自由
+		activate_law = law_type:law_ethnostate #民族国家		
+		activate_law = law_type:law_state_religion #国教至上		
+		activate_law = law_type:law_private_schools #私立学校		
+		activate_law = law_type:law_colonial_exploitation #民族剥削			
 		activate_law = law_type:law_elected_bureaucrats #选举官僚制
 		activate_law = law_type:law_continental_law_system #大陆法系
-		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_slavery_banned
-		activate_law = law_type:law_multicultural
 		activate_law = law_type:law_protectionism
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_right_of_assembly
@@ -42,13 +43,22 @@
             activate_law = law_type:law_8_hour_working_system
 
 		set_institution_investment_level = {
-			institution = institution_schools
-			level = 3
+			institution = institution_home_affairs #内务
+			level = 1
 		}
 
 		set_institution_investment_level = {
-			institution = institution_police
+			institution = institution_schools #教育
+			level = 5
+		}
+
+		set_institution_investment_level = {
+			institution = institution_police #执法
 			level = 3
 		}
+
+		add_modifier = {
+			name = fra_military_weakness_modifier #第二次世界大战的创伤
+		}		
 	}
 }

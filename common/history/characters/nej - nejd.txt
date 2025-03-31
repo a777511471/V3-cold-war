@@ -1,31 +1,49 @@
 ﻿CHARACTERS = {
 	c:NEJ = {
-		create_character = {
-			# Faisal bin Turki bin Abdullah Al Saud
-			#role = politician # Remove this line
-			first_name = "Faisal"
-			last_name = "al_Saud"
+		create_character = { #伊本·沙特或称阿卜杜勒·阿齐兹
+			dna = dna_nej_abdulaziz_02
+    		historical = yes
+			first_name = "ibn"
+			last_name = "Sa_ud"
 			ruler = yes
-			age = 51
+			ig_leader = yes			
+			is_general = yes			
+			birth_date = 1880.12.2
 			interest_group = ig_landowners
-			ideology = ideology_traditionalist
+			ideology = ideology_wahhabi_leader #瓦哈比派
 			traits = {
-				ambitious
+				ambitious #雄心勃勃
 			}
 		}	
 
-		create_character = {
-			# Saud bin Faisal bin Turki
-			#role = politician # Remove this line
-			first_name = "Saud"
+		create_character = { #沙特·本·阿卜杜勒-阿齐兹·阿勒沙特
+			dna = dna_nej_abdulaziz_02		
+			historical = yes
+			first_name = "Sa_ud"
 			last_name = "al_Saud"
 			heir = yes
-			age = 5 # I acutally don't know when he was born, but he died in 1875 and he was older than a brother who was born in 1845.
-			interest_group = ig_devout
-			ideology = ideology_traditionalist
+			birth_date = 1902.1.15
+			interest_group = ig_landowners
+			ideology = ideology_wahhabi_leader #瓦哈比派
 			traits = {
-				ambitious
+				pious #虔诚
 			}
 		}
+
+		create_character = { #费萨尔·本·阿卜杜勒-阿齐兹·阿勒沙特
+			dna = dna_nej_abdulaziz_02		
+			historical = yes
+			first_name = "Faisal"
+			last_name = "al_Saud"
+			ig_leader = yes
+			birth_date = 1906.4.9
+			interest_group = ig_landowners
+			ideology = ideology_radical #激进主义者
+			traits = {
+				basic_diplomat #外交家
+				ambitious #雄心勃勃
+				innovative #创新精神		
+			}
+		}		
 	}
 }

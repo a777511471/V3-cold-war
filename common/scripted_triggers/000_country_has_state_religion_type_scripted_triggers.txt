@@ -1,0 +1,23 @@
+country_has_state_religion_type_default = {
+    always = yes
+}
+
+country_has_state_religion_type_buddhist = {
+    always = no
+}
+
+country_has_state_religion_type_hindu = {
+    always = no
+}
+
+country_has_state_religion_type_shinto = {
+    always = no
+}
+
+country_has_state_religion_type_confucian = {
+    always = no
+}
+
+country_has_state_religion_type_sikh = {
+    always = no
+}

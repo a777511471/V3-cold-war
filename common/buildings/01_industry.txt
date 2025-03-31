@@ -2,7 +2,7 @@
 
 building_food_industry = {
 	building_group = bg_light_industry
-	texture = "gfx/interface/icons/building_icons/food_industry.dds"
+	icon = "gfx/interface/icons/building_icons/food_industry.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -25,7 +25,7 @@ building_food_industry = {
 
 building_textile_mills = {
 	building_group = bg_light_industry
-	texture = "gfx/interface/icons/building_icons/textile_industry.dds"
+	icon = "gfx/interface/icons/building_icons/纺织厂.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -49,7 +49,7 @@ building_textile_mills = {
 
 building_furniture_manufacturies = {
 	building_group = bg_light_industry
-	texture = "gfx/interface/icons/building_icons/furniture_manufacturies.dds"
+	icon = "gfx/interface/icons/building_icons/furniture_manufacturies.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -74,7 +74,7 @@ building_furniture_manufacturies = {
 
 building_glassworks = {
 	building_group = bg_light_industry
-	texture = "gfx/interface/icons/building_icons/glassworks.dds"
+	icon = "gfx/interface/icons/building_icons/glassworks.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -98,7 +98,7 @@ building_glassworks = {
 
 building_tooling_workshops = {
 	building_group = bg_light_industry
-	texture = "gfx/interface/icons/building_icons/tooling_workshops.dds"
+	icon = "gfx/interface/icons/building_icons/tooling_workshops.dds"
 	
 	unlocking_technologies = {
 		tech_unified_tool_standards
@@ -123,9 +123,9 @@ building_tooling_workshops = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
-building_paper_mills = {
+building_paper_mills = { #造纸厂
 	building_group = bg_light_industry
-	texture = "gfx/interface/icons/building_icons/paper_mills.dds"
+	icon = "gfx/interface/icons/building_icons/paper_mills.dds"
 	
 	unlocking_technologies = {
 		tech_basic_light_industry
@@ -142,7 +142,7 @@ building_paper_mills = {
 
 	}
 	
-	required_construction = construction_cost_high
+	required_construction = construction_cost_high #建造成本高（800建造力）
 	ownership_type = self
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
@@ -151,7 +151,7 @@ building_paper_mills = {
 
 building_steel_mills = {
 	building_group = bg_heavy_industry
-	texture = "gfx/interface/icons/building_icons/steel_mills.dds"
+	icon = "gfx/interface/icons/building_icons/steel_mills.dds"
 	city_type = city
 	levels_per_mesh = 5
 
@@ -187,7 +187,7 @@ building_steel_mills = {
 
 building_motor_industry = {
 	building_group = bg_heavy_industry
-	texture = "gfx/interface/icons/building_icons/motor_industry.dds"
+	icon = "gfx/interface/icons/building_icons/motor_industry.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -221,11 +221,13 @@ building_motor_industry = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
-building_shipyards = {
+building_shipyards = { #造船厂
 	building_group = bg_shipyards
-	texture = "gfx/interface/icons/building_icons/shipyards.dds"
+	icon = "gfx/interface/icons/building_icons/shipyards.dds"
 	city_type = port
 	
+	ai_nationalization_desire = 0.25 # # AI国有化意愿
+
 	unlocking_technologies = {
 		tech_shipbuilding
 	}
@@ -241,21 +243,20 @@ building_shipyards = {
 	required_construction = construction_cost_high
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_coastal = yes
-		}
-	}	
+		is_coastal = yes
+	}
 	ownership_type = self
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
-building_military_shipyards = {
+building_military_shipyards = { #军用造船厂
 	building_group = bg_military_shipyards
-	texture = "gfx/interface/icons/building_icons/military_shipyards.dds"
+	icon = "gfx/interface/icons/building_icons/military_shipyards.dds"
 	city_type = port
 	
+	ai_nationalization_desire = 0.5 # AI国有化意愿
+
 	unlocking_technologies = {
 		tech_world_war_ii_military_ships
 	}
@@ -270,10 +271,7 @@ building_military_shipyards = {
 	required_construction = construction_cost_very_high
 	
 	possible = {
-		error_check = {
-			severity = fail
-			is_coastal = yes
-		}
+		is_coastal = yes
 	}	
 	ownership_type = self
 	
@@ -282,7 +280,7 @@ building_military_shipyards = {
 
 building_war_machine_industry = {
 	building_group = bg_heavy_industry
-	texture = "gfx/interface/icons/building_icons/vehicles_industry.dds"
+	icon = "gfx/interface/icons/building_icons/战争机器厂.dds"
 	city_type = city
 	levels_per_mesh = 5
 
@@ -316,7 +314,7 @@ building_war_machine_industry = {
 
 building_electrics_industry = {
 	building_group = bg_heavy_industry
-	texture = "gfx/interface/icons/building_icons/electrics_industry.dds"
+	icon = "gfx/interface/icons/building_icons/electrics_industry.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -332,7 +330,7 @@ building_electrics_industry = {
 		tech_electronic_product
 	}
 	
-	required_construction = construction_cost_very_high
+	required_construction = construction_cost_very_high #建造成本很高（1600建造力）
 
 	possible = {
 		error_check = {
@@ -351,7 +349,7 @@ building_electrics_industry = {
 
 building_arms_industry = {
 	building_group = bg_arms_industries
-	texture = "gfx/interface/icons/building_icons/arms_industry.dds"
+	icon = "gfx/interface/icons/building_icons/arms_industry.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -375,7 +373,7 @@ building_arms_industry = {
 
 building_artillery_foundries = {
 	building_group = bg_artillery_foundaries
-	texture = "gfx/interface/icons/building_icons/artillery_foundry.dds"
+	icon = "gfx/interface/icons/building_icons/火炮厂.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -396,9 +394,9 @@ building_artillery_foundries = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"
 }
 
-building_munition_plants = {
+building_munition_plants = { #弹药厂
 	building_group = bg_munition_plants
-	texture = "gfx/interface/icons/building_icons/munition_plants.dds"
+	icon = "gfx/interface/icons/building_icons/munition_plants.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -413,7 +411,7 @@ building_munition_plants = {
 
 	}
 	
-	required_construction = construction_cost_very_high
+	required_construction = construction_cost_high #建造成本高（800建造力）		
 	ownership_type = self
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_light_industry.dds"

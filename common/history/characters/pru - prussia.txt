@@ -29,6 +29,7 @@
 			religion = rel:atheist #无神论
 			interest_group = ig_trade_unions #工会
 			ideology = ideology_communist #共产主义者
+			set_character_immortal = yes #特殊标志（长寿）				
 			traits = {
 			}
 		}
@@ -43,6 +44,7 @@
 			interest_group = ig_trade_unions #工会
 			ideology = ideology_communist #共产主义者
 			traits = {
+				masterful_diplomat #外交大师
 			}
 		}	
 		create_character = {
@@ -53,7 +55,7 @@
 			ig_leader = yes
 			birth_date = 1894.3.11
 			interest_group = ig_intelligentsia #文人
-			ideology = ideology_social_democrat #社民主义者
+			ideology = ideology_social_democrat #社会民主主义者
 			traits = {
 			}
 		}	
@@ -62,7 +64,7 @@
 			first_name = "erich"
 			last_name = "Honecker"
 			historical = yes
-    			is_agitator = yes #鼓动者
+    		is_agitator = yes #鼓动者
 			birth_date = 1912.8.25
 			religion = rel:atheist #无神论
 			interest_group = ig_trade_unions #工会

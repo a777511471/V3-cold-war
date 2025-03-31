@@ -1,0 +1,98 @@
+je_BRD_national_focus = {
+
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	
+	group = je_group_national_focus_arsenal
+	
+
+#############初始化###############
+	
+	immediate = {
+		set_variable = {
+			name = german_national_policy_luxian_var
+			value = 0
+		}
+		set_variable = {
+			name = german_national_policy_ziyou_var
+			value = 0
+		}
+		set_variable = {
+			name = german_national_policy_nazi_var
+			value = 0
+		}
+		set_variable = {
+			name = german_national_policy_shehui_var
+			value = 0
+		}
+	}
+	
+	modifiers_while_active = {
+	
+	}
+	
+
+##############按钮################
+
+	scripted_button = ger_ziyou_button_key
+	scripted_button = ger_shehui _button_key
+	scripted_button = ger_nazi_button_key
+	
+	
+	scripted_button = ger_ziyou_button_A_key
+	scripted_button = ger_ziyou_button_B_key
+	scripted_button = ger_shehui_button_A_key
+	scripted_button = ger_shehui_button_B_key
+	scripted_button = ger_nazi_button_A_key
+	scripted_button = ger_nazi_button_B_key
+	
+##############简介###################
+
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = journal_entry_key_status_1
+				trigger = {
+					has_variable = mining_strike
+				}
+			}
+			triggered_desc = {
+				desc = journal_entry_key_status_2
+				trigger = {
+					has_variable = industrial_strike
+				}
+			}
+			triggered_desc = {
+				desc = journal_entry_key_status_2
+				trigger = {
+					has_variable = railway_strike
+				}
+			}
+		}
+	}
+	
+####################################
+
+	
+	possible = {
+		c:BRD ?= this
+	}
+
+	is_shown_when_inactive = {
+		c:BRD ?= this
+	}
+
+#####################################
+
+	complete = {
+		c:GER ?= this
+	}
+
+	on_complete = {
+		always = no
+	}
+
+	fail = {
+		always = no
+	}
+}

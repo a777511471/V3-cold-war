@@ -1,6 +1,6 @@
 namespace = bic_partition
 
-bic_partition.1 = {
+bic_partition.1 = { #印巴分治
 	type = country_event
 	placement = c:MUG.capital
 
@@ -18,7 +18,7 @@ bic_partition.1 = {
 
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-	immediate = {
+	immediate = {			
 		if = {
 			limit = {
 				NOT = { exists = c:KAS }
@@ -46,7 +46,24 @@ bic_partition.1 = {
 		name = bic_partition.1.a
 		default_option = yes
         # 变身为印度
+		c:GBR = {
+			remove_modifier = gbr_colony_india_modifier
+		}			
         change_tag = HND
+		hidden_effect = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:hindustani
+			set_state_religion = rel:hindu    
+		}	
+		every_scope_character = {
+				limit = {
+					OR = {
+						culture = cu:british
+						culture = cu:scottish
+					}
+				}
+				kill_character = yes
+		}					
 		# 巴基斯坦分离，以东旁遮普为首都
 		if = {
 			limit = {
@@ -98,72 +115,144 @@ bic_partition.1 = {
 		if = {
 			limit = {
 				exists = c:PAK
-				exists = s:STATE_SOUTH_BENGAL.region_state:HND
+				exists = s:STATE_EAST_BENGAL.region_state:HND #东孟加拉给巴基斯坦
 			}
-			s:STATE_SOUTH_BENGAL.region_state:HND = { set_state_owner = c:PAK }
+			s:STATE_EAST_BENGAL.region_state:HND = { set_state_owner = c:PAK }
 		}
 		if = {
 			limit = {
 				exists = c:PAK
-				exists = s:STATE_NORTH_BENGAL.region_state:HND
+				exists = s:STATE_QUETTA.region_state:HND #奎达给巴基斯坦
 			}
-			s:STATE_NORTH_BENGAL.region_state:HND = { set_state_owner = c:PAK }
-		}
+			s:STATE_QUETTA.region_state:HND = { set_state_owner = c:PAK }
+		}			
 		c:HND = {
-			activate_law = law_type:law_parliamentary_republic
-			create_character = {
-				first_name = "Mohandas"			
-				last_name = "Gandhi"
-				historical = yes
-				birth_date = 1869.10.2
-				culture = cu:gujarati
-				is_general = yes
-				interest_group = ig_intelligentsia
-				ideology = ideology_moderate
-                ruler = yes
-				traits = { 
-					ambitious
-					persistent
-					pious
-				}
+            activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护		
+        	trigger_event = { id = bic.1 } #领导权问题		
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			religion = rel:hindu #印度教
+			interest_group = ig_devout #虔信者
+			traits = {
 			}
+		}
+
+		create_character = {
+			ig_leader = yes
+			religion = rel:hindu #印度教
+			interest_group = ig_armed_forces #军队
+		}
+
+		create_character = {
+			ig_leader = yes
+			religion = rel:hindu #印度教
+			interest_group = ig_landowners #地主
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			religion = rel:hindu #印度教			
+			interest_group = ig_trade_unions #利益集团工会
+		}		
 		}
 		c:PAK = {
-			create_character = {
-				first_name = "Muhammad"			
-				last_name = "Jinnah"
-				historical = yes
-				birth_date = 1876.12.25
-				culture = cu:gujarati
-				is_general = yes
-				religion = rel:sunni
-                		ruler = yes
-				interest_group = ig_intelligentsia
-				ideology = ideology_moderate
-				traits = { 
-					persistent
-				}
+			activate_law = law_type:law_presidential_republic #改变法律为总统共和制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护			
+		create_character = { #巴基斯坦总统穆罕默德·阿里·真纳
+			historical = yes
+			religion = rel:shiite #什叶派
+			culture = cu:gujarati
+			first_name = "Muhammad_Ali"
+			last_name = "Jinnah"
+			ruler = yes
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+    		dna = dna_muhammad_ali_jinnah
+			ideology = ideology_social_democrat
+			birth_date = 1876.12.25
+			traits = {
+				erudite #博学
+				inspirational_orator #鼓舞人心的演说家
+				firebrand #煽动大师
+				pious #虔诚	
+				sickly #多病
 			}
 		}
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_devout #虔信者
+			traits = {
+			}
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_armed_forces #军队
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_landowners #地主
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派	
+			interest_group = ig_trade_unions #利益集团工会
+		}	
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_rural_folk #农民
+			traits = {
+			}
+		}		
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_utilitarian_leader #功利主义者		
+			traits = {
+			}
+		}	
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_petty_bourgeoisie #小市民
+		}					
+		}	
+        make_independent = yes
+        remove_modifier = bic_out_of_control_modifier
+		trigger_event = {
+			id = hnd_expansion.1
+		}
+	}	
+		option = {
+		name = bic_partition.1.b
+		c:GBR = {
+			remove_modifier = gbr_colony_india_modifier
+		}			
 		hidden_effect = {
 			remove_primary_culture = cu:british
-			add_primary_culture = cu:bengali
-			add_primary_culture = cu:assamese
-			add_primary_culture = cu:avadhi
-			add_primary_culture = cu:bihari
-			add_primary_culture = cu:gujarati
-			add_primary_culture = cu:kanauji
-			add_primary_culture = cu:kannada
-			add_primary_culture = cu:malayalam
-			add_primary_culture = cu:marathi
-			add_primary_culture = cu:oriya
-			add_primary_culture = cu:panjabi
-			add_primary_culture = cu:rajput
-			add_primary_culture = cu:sindi
-			add_primary_culture = cu:tamil
-			add_primary_culture = cu:telegu
-			set_state_religion = rel:hindu
-			every_scope_character = {
+		}	
+		every_scope_character = {
 				limit = {
 					OR = {
 						culture = cu:british
@@ -171,17 +260,7 @@ bic_partition.1 = {
 					}
 				}
 				kill_character = yes
-			}
-		}
-        make_independent = yes
-        remove_modifier = bic_out_of_control_modifier
-		trigger_event = {
-			id = hnd_expansion.1
-		}
-	}
-	option = {
-		name = bic_partition.1.b
-		default_option = yes
+		}	
 		# 印度分离，以德里作为首都
 		if = {
 			limit = {
@@ -201,7 +280,7 @@ bic_partition.1 = {
 			}
 			s:STATE_BOMBAY.region_state:BIC = { set_state_owner = c:HND }
 		}
-		# 变身巴基斯坦
+		# 变身巴基斯坦		
         change_tag = PAK
 		hidden_effect = {
 			remove_primary_culture = cu:british
@@ -221,6 +300,27 @@ bic_partition.1 = {
 				kill_character = yes
 			}
 		}
+		c:HND = {
+			hidden_effect = {
+			remove_primary_culture = cu:british
+			add_primary_culture = cu:bengali
+			add_primary_culture = cu:assamese
+			add_primary_culture = cu:avadhi
+			add_primary_culture = cu:bihari
+			add_primary_culture = cu:gujarati
+			add_primary_culture = cu:kanauji
+			add_primary_culture = cu:kannada
+			add_primary_culture = cu:malayalam
+			add_primary_culture = cu:marathi
+			add_primary_culture = cu:oriya
+			add_primary_culture = cu:panjabi
+			add_primary_culture = cu:rajput
+			add_primary_culture = cu:sindi
+			add_primary_culture = cu:tamil
+			add_primary_culture = cu:telegu
+			set_state_religion = rel:hindu
+			}	
+		}		
 		# 分配地块给印度
 		every_scope_state = {
 			limit = {
@@ -268,64 +368,131 @@ bic_partition.1 = {
 		if = {
 			limit = {
 				exists = c:PAK
-				exists = s:STATE_SOUTH_BENGAL.region_state:HND
+				exists = s:STATE_EAST_BENGAL.region_state:HND #东孟加拉给巴基斯坦
 			}
-			s:STATE_SOUTH_BENGAL.region_state:HND = { set_state_owner = c:PAK }
+			s:STATE_EAST_BENGAL.region_state:HND = { set_state_owner = c:PAK }
 		}
 		if = {
 			limit = {
 				exists = c:PAK
-				exists = s:STATE_NORTH_BENGAL.region_state:HND
+				exists = s:STATE_QUETTA.region_state:HND #奎达给巴基斯坦
 			}
-			s:STATE_NORTH_BENGAL.region_state:HND = { set_state_owner = c:PAK }
-		}
+			s:STATE_QUETTA.region_state:HND = { set_state_owner = c:PAK }
+		}			
 		c:HND = {
-			activate_law = law_type:law_parliamentary_republic
-			create_character = {
-				first_name = "Mohandas"			
-				last_name = "Gandhi"
-				historical = yes
-				birth_date = 1869.10.2
-				culture = cu:gujarati
-				is_general = yes
-				interest_group = ig_intelligentsia
-				ideology = ideology_moderate
-                ruler = yes
-				traits = { 
-					ambitious
-					persistent
-					pious
-				}
+            activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护
+        	trigger_event = { id = bic.1 } #领导权问题		
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			religion = rel:hindu #印度教
+			interest_group = ig_devout #虔信者
+			traits = {
 			}
+		}
+
+		create_character = {
+			ig_leader = yes
+			religion = rel:hindu #印度教
+			interest_group = ig_armed_forces #军队
+		}
+
+		create_character = {
+			ig_leader = yes
+			religion = rel:hindu #印度教
+			interest_group = ig_landowners #地主
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			religion = rel:hindu #印度教			
+			interest_group = ig_trade_unions #利益集团工会
+		}		
 		}
 		c:PAK = {
-			create_character = {
-				first_name = "Muhammad"			
-				last_name = "Jinnah"
-				historical = yes
-				birth_date = 1876.12.25
-				culture = cu:gujarati
-				is_general = yes
-				religion = rel:sunni
-                		ruler = yes
-				interest_group = ig_intelligentsia
-				ideology = ideology_moderate
-				traits = { 
-					persistent
-				}
+			activate_law = law_type:law_presidential_republic #改变法律为总统共和制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护			
+		create_character = { #巴基斯坦总统穆罕默德·阿里·真纳
+			historical = yes
+			religion = rel:shiite #什叶派
+			culture = cu:gujarati
+			first_name = "Muhammad_Ali"
+			last_name = "Jinnah"
+			ruler = yes
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+    		dna = dna_muhammad_ali_jinnah
+			ideology = ideology_social_democrat
+			birth_date = 1876.12.25
+			traits = {
+				erudite #博学
+				inspirational_orator #鼓舞人心的演说家
+				firebrand #煽动大师
+				pious #虔诚	
+				sickly #多病
 			}
 		}
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_devout #虔信者
+			traits = {
+			}
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_armed_forces #军队
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_landowners #地主
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派	
+			interest_group = ig_trade_unions #利益集团工会
+		}	
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_rural_folk #农民
+			traits = {
+			}
+		}		
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_utilitarian_leader #功利主义者
+			traits = {
+			}
+		}	
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_petty_bourgeoisie #小市民
+		}					
+		}	
         make_independent = yes
         set_capital = STATE_PUNJAB
-		every_scope_character = {
-			limit = {
-				OR = {
-					culture = cu:british
-					culture = cu:scottish
-				}
-			}
-			kill_character = yes
-		}
         remove_modifier = bic_out_of_control_modifier
 	}
 }
@@ -584,3 +751,4 @@ bic_partition.6 = {
 		default_option = yes
     }
 }
+	

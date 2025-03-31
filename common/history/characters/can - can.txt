@@ -1,17 +1,29 @@
 ﻿CHARACTERS = {
 	c:CAN = {
 		create_character = { #威廉·莱昂·麦肯乔·金
+    		dna = ecchi_dna_mackenzie_king		
+    		historical = yes		
 			first_name = "William·Leon·McKenjo"
 			last_name = "King"
-			ruler = yes
 			ig_leader = yes #利益集团领袖
-			birth_date = 1874.12.17
+    		culture = cu:anglo_canadian
+    		religion = rel:protestant
+    		ideology = ideology_reformer
+    		interest_group = ig_intelligentsia
+    		birth_date = 1874.12.17
+
+		}
+
+		create_character = { #
+			ig_leader = yes #利益集团领袖
+    		ideology = ideology_reformer			
 			interest_group = ig_landowners #地主
 			traits = {
 			}
 		}
 		create_character = { #哈罗德·亚历山大
-			first_name = "ZongduHarold"
+    		historical = yes			
+			first_name = "Harold"
 			last_name = "Alexander"
 			ig_leader = yes #利益集团领袖
 			birth_date = 1891.12.10

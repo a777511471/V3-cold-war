@@ -2,6 +2,8 @@
 	c:DEN = {
 		create_character = {
 			#克里斯蒂安十世
+			dna = dna_ecchi_christian_x			
+			historical = yes			
 			first_name = "Christian_X"
 			last_name = "Glücksburg" #格吕克斯堡家族
 			ruler = yes
@@ -16,5 +18,20 @@
 				brave #勇敢
 			}
 		}	
+
+		create_character = { #弗雷德里克九世
+			first_name = "Frederik_IX"
+			last_name = "Glücksburg" #格吕克斯堡家族
+			historical = yes
+			heir = yes	
+            culture = cu:danish
+            religion = rel:protestant
+			birth_date = 1899.3.11
+			dna = dna_ecchi_den_frederik_9
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate #新时代君主立宪，彻底不管事了
+			traits = { 
+			}
+		}
 	}
 }

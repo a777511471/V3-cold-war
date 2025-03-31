@@ -1,11 +1,14 @@
 ﻿COUNTRIES = {
 	c:YUG = {
 		effect_starting_technology_tier_2_tech = yes
-		
+		add_technology_researched = tech_economics_foundations #资本论	
+				
 		# Laws 
 		activate_law = law_type:law_council_republic
 		activate_law = law_type:law_single_party_state #一党制国家
-		activate_law = law_type:law_Corporatism_ownership #法团
+		activate_law = law_type:law_encourage_fertility #鼓励生育
+		activate_law = law_type:law_migration_controls #鼓励移民				
+		activate_law = law_type:law_corporatism_ownership #法团
 		activate_law = law_type:law_freedom_of_conscience #信仰自由
 		activate_law = law_type:law_state_led #科学院主导
  		activate_law = law_type:law_compulsory_primary_school
@@ -23,7 +26,6 @@
 		activate_law = law_type:law_public_health_insurance
 		activate_law = law_type:law_8_hour_working_system
 		activate_law = law_type:law_wage_subsidies #工资补贴
-		activate_law = law_type:law_migration_controls #移民控制
 		
 		ig:ig_armed_forces = { #军队
 			remove_ideology = ideology_loyalist #效忠派
@@ -44,5 +46,24 @@
 			institution = institution_police
 			level = 1
 		}
+
+		add_modifier = {
+			name = fra_military_weakness_modifier #第二次世界大战的创伤
+		}	
+			
+		add_modifier = {
+			name = divide_the_kingdom #分裂国度
+		}
+
+		add_modifier = {
+			name = expand_mining_industry #拓展矿业
+		}	
+		add_modifier = {
+			name = the_influence_of_syndicalism #工团主义影响
+			years = 15
+		}
+		add_modifier = {
+			name = protecting_freedom_of_belief #保障信仰自由
+		}			
 	}
 }

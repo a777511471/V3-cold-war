@@ -1,12 +1,11 @@
 ﻿CHARACTERS = {
 	c:BRU = {
 		create_character = {
-			# Omar Ali Saifuddin II
-			#role = politician # Remove this line
+    		dna = dna_afg_mohammad_zahir		
+			historical = yes				
 			first_name = "Omar_Ali"
 			last_name = "Bolkiah"
 			ruler = yes
-			age = 37
 			interest_group = ig_landowners
 			ideology = ideology_traditionalist
 			traits = {
@@ -15,12 +14,11 @@
 		}	
 
 		create_character = {
-			# Abdul Momin 
-			#role = politician # Remove this line
+    		dna = dna_afg_mohammad_zahir		
+			historical = yes				
 			first_name = "Abdul_Momin"
 			last_name = "Bolkiah"
-			heir = yes
-			age = 48 # yes he's older than the guy he succeeded
+			ig_leader = yes	
 			interest_group = ig_landowners
 			ideology = ideology_traditionalist
 			traits = {

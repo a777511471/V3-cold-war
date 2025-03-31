@@ -25,6 +25,8 @@
 			interest_group = ig_armed_forces #军队
 			ideology = ideology_communist #共产主义者
 			traits = {
+				expert_political_operator #政治运作专家
+				master_bureaucrat #高明官僚					
 			}
 		}	
 
@@ -39,6 +41,8 @@
 			interest_group = ig_trade_unions #工会
 			ideology = ideology_communist #共产主义者
 			traits = {
+				expert_political_operator #政治运作专家
+				master_bureaucrat #高明官僚					
 			}
 		}	
 

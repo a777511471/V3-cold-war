@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ CONSTRUCTION_ALLOCATION: "建设分配: "
+
+ GOVERNMENT_CONSTRUCTION_BEING_CONSTRUCTED: "正在进行 #v [Country.GetNumActiveGovernmentConstructionQueueElements]#! 项"
+ GOVERNMENT_CONSTRUCTION_CONSTRUCTION_USING: "使用 #v @construction![Country.CalcUsedGovernmentConstruction|1]#!"
+
+ PRIVATE_CONSTRUCTION_BEING_CONSTRUCTED: "正在进行 #v [Country.GetNumActivePrivateConstructionQueueElements]#! 项"
+ PRIVATE_CONSTRUCTION_CONSTRUCTION_USING: "使用 #v @construction![Country.CalcUsedPrivateConstruction|1]#!"

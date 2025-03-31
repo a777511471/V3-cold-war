@@ -263,7 +263,7 @@ combat_unit_type_capital_ship_2 = {
 	}
 }
 
-combat_unit_type_capital_ship_3 = {
+combat_unit_type_capital_ship_3 = { #导弹巡洋舰
     group = combat_unit_group_capital_ship
 
     upkeep_modifier = {
@@ -271,7 +271,7 @@ combat_unit_type_capital_ship_3 = {
         goods_input_petrol_add = 1
         goods_input_ironclads_add = 3.6
         goods_input_ammunition_add = 0.6
-        goods_input_artillery_add = 0.9
+        goods_input_spacecraft_add = 0.9
     }
 
     battle_modifier = {
@@ -309,7 +309,7 @@ combat_unit_type_capital_ship_4 = {
         goods_input_petrol_add = 1
         goods_input_ironclads_add = 4.8
         goods_input_ammunition_add = 0.8
-        goods_input_artillery_add = 1.2
+        goods_input_spacecraft_add = 1.2
     }
 
     battle_modifier = {
@@ -347,7 +347,7 @@ combat_unit_type_capital_ship_5 = {
         goods_input_petrol_add = 1
         goods_input_ironclads_add = 6
         goods_input_ammunition_add = 1
-        goods_input_artillery_add = 1.5
+        goods_input_spacecraft_add = 1.5
     }
 
     battle_modifier = {
@@ -384,7 +384,7 @@ combat_unit_type_capital_ship_6 = {
         goods_input_petrol_add = 1
         goods_input_ironclads_add = 7.2
         goods_input_ammunition_add = 1.2
-        goods_input_artillery_add = 1.8
+        goods_input_spacecraft_add = 1.8
     }
 
     battle_modifier = {

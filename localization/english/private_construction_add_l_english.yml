@@ -1,0 +1,11 @@
+﻿l_english:
+ private_construction_add_5_modifier: "$country_private_construction_allocation_mult$ + 5"
+ private_construction_add_10_modifier: "$country_private_construction_allocation_mult$ + 10"
+ private_construction_add_15_modifier: "$country_private_construction_allocation_mult$ + 15"
+ private_construction_add_20_modifier: "$country_private_construction_allocation_mult$ + 20"
+ private_construction_add_30_modifier: "$country_private_construction_allocation_mult$ + 30"
+ private_construction_add_40_modifier: "$country_private_construction_allocation_mult$ + 40"
+ private_construction_add_45_modifier: "$country_private_construction_allocation_mult$ + 45"
+ private_construction_add_60_modifier: "$country_private_construction_allocation_mult$ + 60"
+
+ remove_all_private_construction_add_modifier_tt: "Reset $country_private_construction_allocation_mult$"

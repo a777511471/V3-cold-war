@@ -1,0 +1,514 @@
+namespace = rus
+
+rus.1 = { #日丹诺夫主持审查
+	type = country_event
+	orphan = yes
+	
+	title = rus.1.t
+	desc = rus.1.d
+	flavor = rus.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = rus.1.a
+		default_option = yes
+		activate_law = law_type:law_censorship #改变法律为出版物审查
+	}
+}
+
+rus.2 = { #苏联共产党第十九次代表大会
+	type = country_event
+	placement = ROOT
+
+	title = rus.2.t
+	desc = rus.2.e
+	flavor = rus.2.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = rus.2.a #斯大林同志的助手：马林科夫同志！
+		default_option = yes		
+       		trigger_event = { id = russo_chinese.7 } 
+	}
+	option = {
+		name = rus.2.b #斯大林同志的干将：赫鲁晓夫同志！
+       		trigger_event = { id = russo_chinese.7 } 
+	}
+	option = {
+		name = rus.2.c #斯大林同志的尖刀：贝利亚同志！
+       		trigger_event = { id = russo_chinese.5 } 
+	}
+	option = {
+		name = rus.2.d #斯大林同志的元帅：朱可夫同志！
+       		trigger_event = { id = russo_chinese.8 } 
+	}
+}
+
+rus.3 = { #改革成功
+	type = country_event
+	orphan = yes
+	
+	title = rus.3.t
+	desc = rus.3.d
+	flavor = rus.3.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = rus.3.a
+		default_option = yes
+		activate_law = law_type:law_single_party_state #改变法律为一党制国家
+	}
+	option = {
+		name = rus.3.b
+		activate_law = law_type:law_secularization #改变法律为推广无神论	
+		custom_tooltip = {
+			text = state_atheism_conversion_tt
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+				}
+				convert_population = {
+					target = rel:atheist
+					value = 0.25
+				}
+			}
+		}	
+	}	
+}
+
+rus.5 = { #土库曼斯坦巴什萨帕尔穆拉特·尼亚佐夫
+	type = country_event
+	orphan = yes
+	
+	title = rus.5.t
+	desc = rus.5.d
+	flavor = rus.5.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = rus.5.a
+		default_option = yes
+			c:TRC = { 
+		create_character = { #土库曼斯坦巴什萨帕尔穆拉特·尼亚佐夫
+			first_name = "Saparmurat"
+			last_name = "Niyazov"
+			ruler = yes             
+			historical = yes
+			culture = cu:turkmen
+			religion = rel:atheist #无神论
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_authoritarian #威权主义者
+			traits = {
+				basic_diplomat #外交家	
+				literary #文学家				
+				kindness #受人崇拜											
+				expensive_tastes #昂贵嗜好
+				hedonist #享乐主义者
+				}
+			}
+
+		create_character = { #库尔班古力·别尔德穆哈梅多夫
+    		dna = dna_truman		
+			first_name = "Kurbanguli"
+			last_name = "Berdymukhamedov"
+			heir = yes	      
+			ig_leader = yes
+			historical = yes
+			culture = cu:turkmen
+			religion = rel:atheist #无神论
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_authoritarian #威权主义者
+			traits = {
+				kindness #受人崇拜		
+				romantic #浪漫
+				brave #勇敢									
+				expensive_tastes #昂贵嗜好
+				hedonist #享乐主义者
+			}
+		} 					
+		add_modifier = {
+			name = bashi_kindness_is_not_over_modifier #巴什的恩情还不完
+			years = 48	
+		}					
+		} 
+	}
+}
+
+rus.6 = { #为人民献出心脏
+	type = country_event
+	orphan = yes
+	
+	title = rus.6.t
+	desc = rus.6.d
+	flavor = rus.6.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/为人民献出心脏.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+	
+	trigger = { 
+		exists = c:RUS this = c:RUS					
+	}
+
+	option = {
+		name = rus.6.a
+	
+	}
+}
+
+rus.7 = { #为祖国服役！
+	type = country_event
+	orphan = yes
+	
+	title = rus.7.t
+	desc = rus.7.d
+	flavor = rus.7.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/祖国母亲在召唤.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/socialism.dds"
+
+	duration = 3
+	
+	trigger = { 
+		exists = c:RUS this = c:RUS			     			
+	}
+
+	option = {
+		name = rus.7.a
+		default_option = yes
+
+	}
+}
+
+rus.8 = { #游行队伍（斯大林同志去世）
+	type = country_event
+	placement = ROOT
+
+	title = rus.8.t
+	desc = rus.8.d
+	flavor = rus.8.f
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = rus.8.a #
+		default_option = yes
+
+	}
+}
+
+rus.9 = { #再见了，斯大林同志
+	type = country_event
+	placement = ROOT
+
+	title = rus.9.t
+	desc = rus.9.d
+	flavor = rus.9.f
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = rus.9.a #
+		default_option = yes
+
+	}
+}
+
+rus.4 = { #苏联解体
+	type = country_event
+	placement = root
+	title = rus.4.t
+	desc = rus.4.d
+	flavor = rus.4.f
+	icon = "gfx/interface/icons/event_icons/苏联解体.dds"
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = rus.4.a
+			remove_modifier = the_birthplace_of_revolution #革命始源地
+			remove_modifier = socialism_in_one_country #一国社会主义					
+            remove_primary_culture = cu:ukrainian
+	        remove_primary_culture = cu:byelorussian 
+            remove_primary_culture = cu:georgian 
+            remove_primary_culture = cu:lithuanian
+	        remove_primary_culture = cu:latvian 
+            remove_primary_culture = cu:estonian 		
+            remove_primary_culture = cu:kazak
+	        remove_primary_culture = cu:uzbek 
+            remove_primary_culture = cu:turkmen
+            remove_primary_culture = cu:tajik
+	        remove_primary_culture = cu:armenian
+            remove_primary_culture = cu:azerbaijani	
+            remove_primary_culture = cu:kirgiz										
+			set_state_religion = rel:orthodox #东正教
+		activate_law = law_type:law_universal_suffrage #改变法律为普选制			
+		activate_law = law_type:law_laissez_faire #改变法律为自由放任			
+		activate_law = law_type:law_freedom_of_conscience #改变法律为信仰自由		
+		create_character = { #俄联邦首任总统鲍里斯·尼古拉耶维奇·叶利钦
+			first_name = "Boris·Nikolayevich"
+			last_name = "Yeltsin"
+			ruler = yes  	           
+			historical = yes
+			culture = cu:russian #俄罗斯
+			religion = rel:orthodox #东正教
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+				basic_political_operator #政治运作者				
+				demagogue #煽动者		
+				engineer #工程师
+				alcoholic #酗酒								
+				hedonist #享乐主义者
+				}
+			}
+
+		create_character = { #继承人弗拉基米尔·弗拉基米罗维奇·普京	
+			first_name = "Vladimir·Vladimirovich"
+			last_name = "Putin"
+			heir = yes	      
+			ig_leader = yes
+			historical = yes
+			culture = cu:russian #俄罗斯
+			religion = rel:orthodox #东正教
+            interest_group = ig_industrialists #实业家
+			ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+				basic_political_operator #政治运作者				
+				demagogue #煽动者					
+				kindness #受人崇拜								
+			}
+		} 					
+
+		create_character = { #
+			ig_leader = yes
+			culture = cu:russian #俄罗斯
+			religion = rel:atheist #无神论
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_communist #共产主义者
+			traits = {					
+			}
+		} 						
+		every_subject_or_below = {
+			make_independent = yes #所有附庸独立
+			remove_modifier = socialism_in_one_country #一国社会主义			
+		activate_law = law_type:law_semi_presidential_republic #改变法律为半总统共和制
+		activate_law = law_type:law_universal_suffrage #改变法律为普选制		
+		activate_law = law_type:law_laissez_faire #改变法律为自由放任			
+		activate_law = law_type:law_freedom_of_conscience #改变法律为信仰自由								
+		} 
+			create_country = {
+				tag = TRC #土库曼斯坦
+				origin = this
+				state = s:STATE_TURKMENIA.region_state:RUS	
+				state = s:STATE_MERZ.region_state:RUS							
+			}		  
+			c:TRC = { save_scope_as = scope_TRC #土库曼斯坦		 						
+		activate_law = law_type:law_presidential_republic #改变法律为总统共和制
+		activate_law = law_type:law_single_party_state #改变法律为一党制国家					
+		activate_law = law_type:law_secret_police #改变法律为秘密警察			
+		activate_law = law_type:law_secularization #改变法律为推广无神论
+		activate_law = law_type:law_no_health_system #改变法律为无卫生系统			
+		create_character = { #马屁精翁吉克·穆萨耶夫
+			first_name = "Ondzhik"
+			last_name = "Musayev"         
+			ig_leader = yes
+			historical = yes
+			culture = cu:turkmen
+			religion = rel:atheist #无神论
+			interest_group = ig_intelligentsia #文人
+			traits = {
+				tactful #圆滑
+			}
+		} 
+		trigger_event = {
+			id = rus.5
+			days = 7
+		}
+			 }			
+
+			create_country = {
+				tag = BYE #白俄罗斯
+				origin = this
+				state = s:STATE_BREST.region_state:RUS	
+				state = s:STATE_VITEBSK.region_state:RUS		
+				state = s:STATE_MINSK.region_state:RUS	
+				state = s:STATE_MOGILEV.region_state:RUS							
+			}		  
+			c:BYE = { save_scope_as = scope_BYE
+		activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+		activate_law = law_type:law_universal_suffrage #改变法律为普选制					
+		activate_law = law_type:law_laissez_faire #改变法律为自由放任			
+		activate_law = law_type:law_freedom_of_conscience #改变法律为信仰自由	
+		create_character = { #白俄首任总统“国民老爹”亚历山大·格里戈里耶维奇·卢卡申科
+			first_name = "Alexander·Grigorievich"
+			last_name = "Lukashenko"
+			ruler = yes  	       
+			ig_leader = yes			    
+			historical = yes			
+			culture = cu:byelorussian #白俄罗斯
+			religion = rel:atheist #无神论
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+				experienced_political_operator #有经验的政治运作者				
+				}
+			}				
+			 }		     			 
+
+			create_country = {
+				tag = KAZ #哈萨克斯坦
+				origin = this
+				state = s:STATE_AKTOBE.region_state:RUS	
+				state = s:STATE_SYRDARYA.region_state:RUS		
+				state = s:STATE_URALSK.region_state:RUS	
+				state = s:STATE_SEMIRECHE.region_state:RUS		
+				state = s:STATE_AKMOLINSK.region_state:RUS	
+				state = s:STATE_JETISY.region_state:RUS											
+			}		  
+			c:KAZ = { save_scope_as = scope_KAZ
+		activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+		activate_law = law_type:law_universal_suffrage #改变法律为普选制					
+		activate_law = law_type:law_laissez_faire #改变法律为自由放任			
+		activate_law = law_type:law_freedom_of_conscience #改变法律为信仰自由	
+		create_character = { #哈萨克斯坦首任总统努尔苏丹·阿比舍维奇·纳扎尔巴耶夫
+			first_name = "NurSultan·Abishevich"
+			last_name = "Nazarbayev"
+			ruler = yes  	       
+			ig_leader = yes			    
+			historical = yes			
+			culture = cu:kazak #哈萨克
+			religion = rel:atheist #无神论
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+				experienced_political_operator #有经验的政治运作者				
+				}
+			}				
+			 }		     			 
+
+			create_country = {
+				tag = GEO #格鲁吉亚
+				origin = this
+				state = s:STATE_GREATER_CAUCASUS.region_state:RUS			
+			}		  
+			c:GEO = { save_scope_as = scope_GEO
+		activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+		activate_law = law_type:law_universal_suffrage #改变法律为普选制					
+		activate_law = law_type:law_laissez_faire #改变法律为自由放任			
+		activate_law = law_type:law_freedom_of_conscience #改变法律为信仰自由			
+			 }		     
+			create_country = {
+				tag = LAT #立陶宛
+				origin = this
+			}		  
+			c:LAT = { save_scope_as = scope_LAT
+		activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+		activate_law = law_type:law_universal_suffrage #改变法律为普选制					
+		activate_law = law_type:law_laissez_faire #改变法律为自由放任			
+		activate_law = law_type:law_freedom_of_conscience #改变法律为信仰自由			
+			 }			 
+	}
+}

@@ -1,0 +1,8 @@
+﻿l_english:
+ CONSTRUCTION_ALLOCATION: "Construction Allocation: "
+
+ GOVERNMENT_CONSTRUCTION_BEING_CONSTRUCTED: "There are #v [Country.GetNumActiveGovernmentConstructionQueueElements]#! being constructed"
+ GOVERNMENT_CONSTRUCTION_CONSTRUCTION_USING: "Using #v @construction![Country.CalcUsedGovernmentConstruction|1]#!"
+
+ PRIVATE_CONSTRUCTION_BEING_CONSTRUCTED: "There are #v [Country.GetNumActivePrivateConstructionQueueElements]#! being constructed"
+ PRIVATE_CONSTRUCTION_CONSTRUCTION_USING: "Using #v @construction![Country.CalcUsedPrivateConstruction|1]#!"

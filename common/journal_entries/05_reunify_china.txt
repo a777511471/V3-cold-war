@@ -1,10 +1,10 @@
-﻿je_reunify_china = { #统一中国
+﻿je_unified_china = { #统一中国
 	should_be_pinned_by_default = yes
 	icon = "gfx/interface/icons/invention_icons/wargaming.dds"
 
 	group = je_group_foreign_affairs
 
-	modifiers_while_active = {
+	modifiers_while_active = { #
 		modifier_chinese_warlord_era
 	}
 
@@ -41,9 +41,13 @@
 						OR = {
 							capital.region = sr:region_north_china
 							capital.region = sr:region_south_china
-							capital.region = sr:region_manchuria
 							capital.region = sr:region_central_asia
 							capital.region = sr:region_himalayas
+							capital.region = sr:region_manchuria
+							capital.region = sr:region_mongolia
+							capital.region = sr:region_east_china
+							capital.region = sr:region_west_south_china		
+							capital.region = sr:region_west_north_china											
 						}
 					}
 					OR = {
@@ -87,9 +91,13 @@
 						OR = {
 							capital.region = sr:region_north_china
 							capital.region = sr:region_south_china
-							capital.region = sr:region_manchuria
 							capital.region = sr:region_central_asia
 							capital.region = sr:region_himalayas
+							capital.region = sr:region_manchuria
+							capital.region = sr:region_mongolia
+							capital.region = sr:region_east_china
+							capital.region = sr:region_west_south_china		
+							capital.region = sr:region_west_north_china		
 						}
 					}
 					OR = {
@@ -104,13 +112,10 @@
 			owns_entire_state_region = STATE_NANJING
 			owns_entire_state_region = STATE_BEIJING
 		}
-		custom_tooltip = {
-			text = has_formed_china_tt
-			c:CHN ?= this
-		}
 	}
 	
 	on_complete = {
+        	set_country_type = recognized
 		if = {
 			limit = {
 				has_modifier = the_peoples_liberation_army_controls_half_of_the_country
@@ -130,10 +135,11 @@
 			remove_modifier = retreat_toa_treasure_island
 		}
 		remove_global_variable = chinese_central_government
-		trigger_event = { id = warlord_china_events.101 popup = yes }
+		trigger_event = { id = chi.11 popup = yes }
 	}
 		
 	weight = 1000
+    should_be_pinned_by_default = yes	
 }
 
 je_fragile_rule = { #脆弱的统治
@@ -160,9 +166,14 @@ je_fragile_rule = { #脆弱的统治
 	}
 	
 	on_complete = {
+		trigger_event = {
+			id = chi.13
+			popup = yes
+		}		
 		remove_modifier = the_peoples_liberation_army_controls_half_of_the_country
-		add_modifier = { name = retreat_toa_treasure_island #退守宝岛 }
+		add_modifier = { name = retreat_toa_treasure_island #退守宝岛 }	
 	}
 		
 	weight = 1000
+	should_be_pinned_by_default = yes
 }

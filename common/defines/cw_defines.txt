@@ -1,6 +1,6 @@
 ﻿NGame = { #时间修改
 	START_DATE = "1946.6.26"
-	END_DATE = "2050.1.1" 
+	END_DATE = "2050.12.31" 
 	SAVE_VERSION = 0
 	MP_LAG_TICKS_BOUNDS = 28 # Host will advance up to a week ahead of players ( 7 * 4 )
 	DEAD_OBJ_UNDESTROYED_DAYS = 0	# number of days "killed"/removed objects will persist in memory before ultimately destroyed as they are referenced by events etc
@@ -61,7 +61,23 @@ NEconomy = { #建筑修改
 
 
 NPops = {
-
+	WEALTH_PROGRESS_WANTED_BUFFER = 1.01		# A pop wants at least as much income as this x the next level buy package costs to increase its wealth
+	WEALTH_PROGRESS_ACCEPTABLE_DEFICIT = 0.95	# A pop won't change wealth level if they can still afford this much of their current buy package costs
+	WEALTH_PROGRESS_INCREASE = 1				# How fast wealth increases when a pop has money for higher grade buy packages. This factor is modified by how large the difference between income and cost is
+	WEALTH_PROGRESS_DECREASE = 0.1
 	WORKING_ADULT_RATIO_BASE = 0.4				# Base ratio of working adults to dependents, this can be overridden by pop type definition and country modifiers.
+	
+	@starvation_threshold = 0.2
+	@starvation_scaling_factor = @[1/starvation_threshold]
 
+	FOOD_SECURITY_MODERATE_THRESHOLD = 0.3							# If Food Security is lower than this, the pop is marked as having moderate food security
+	FOOD_SECURITY_STARVATION_THRESHOLD = 0.2		# If Food Security is lower than this, the pop is considered to be in a starving state
+	FOOD_SECURITY_SEVERE_STARVATION_THRESHOLD = 0.1					# If Food Security is lower than this, the pop is considered to be in a severe starving state
+}
+
+
+NPolitics = {
+	TURMOIL_STATE_EFFECTS_THRESHOLD = 0.5				# How much turmoil a state needs to have before it gets any state-wide effects
+	TURMOIL_STATE_HIGH_EFFECTS_THRESHOLD = 0.75			# Above this turmoil, add a harsher modifier
+	TURMOIL_STATE_EXTREME_EFFECTS_THRESHOLD = 1.00		# Above this turmoil, add the harshest modifier
 }

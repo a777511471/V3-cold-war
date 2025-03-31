@@ -349,6 +349,17 @@ pm_peasant_levies = {
 	}
 }
 
+pm_non_militarized_country = {
+	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
+	unlocking_laws = { law_non_militarized_country }
+
+	state_modifiers = {
+		level_scaled = {
+			state_conscription_rate_add = 0.01
+		}
+	}
+}
+
 pm_professional_army = {
 	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
 	unlocking_laws = { law_professional_army }
@@ -370,7 +381,6 @@ pm_national_militia = {
 		}
 	}
 }
-
 
 pm_mass_conscription = {
 	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"

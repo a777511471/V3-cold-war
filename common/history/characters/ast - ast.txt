@@ -1,0 +1,61 @@
+﻿CHARACTERS = {
+	c:AST = {
+		create_character = {
+			historical = yes
+			is_general = yes			
+			first_name = Georges
+			last_name = Albert
+			noble = yes #贵族成员
+			birth_date = 1900.3.31
+			culture = cu:british			
+			ig_leader = yes #利益集团领袖	
+            commander_rank = commander_rank_5				
+			interest_group = ig_intelligentsia #知识分子
+		    ideology = ideology_reformer #改良主义者
+			traits = {
+				cautious #谨慎
+				brave #勇敢
+				reserved #内敛
+			}
+		}	
+
+		create_character = {	
+			culture = cu:british						
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_industrialists #实业家
+		    ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+				cautious #谨慎
+				brave #勇敢
+				reserved #内敛
+			}
+		}			
+
+		create_character = {	
+			culture = cu:british		
+			religion = rel:atheist #无神论							
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_petty_bourgeoisie #小市民
+		    ideology = ideology_syndicalism #工团主义者
+			traits = {
+				cautious #谨慎
+				brave #勇敢
+				reserved #内敛
+			}
+		}				
+
+		create_character = {	
+			culture = cu:british		
+			religion = rel:atheist #无神论							
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_trade_unions #工会
+		    ideology = ideology_syndicalism #工团主义者
+			traits = {
+				cautious #谨慎
+				brave #勇敢
+				reserved #内敛
+			}
+		}					
+	}
+}
+

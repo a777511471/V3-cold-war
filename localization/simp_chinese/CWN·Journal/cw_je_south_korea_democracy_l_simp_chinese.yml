@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+  je_south_korea_democracy_main: "民主化进程"
+  je_south_korea_democracy_main_reason: "[ROOT.GetCountry.GetName]自独立建国以来，并无民主政治的传统。在游戏过程中，这表现为[ROOT.GetCountry.GetName]将长期陷入#bold 独裁统治#！，如果代表#v 民主意识#!的进度条未满，即使修改法律或通过偶发的事件拥有#bold 民主政体#!，也将在#v 军人干政#!的影响下重返独裁制。\n\n民主化进程将在游戏中持续进行，你可以通过#v 事件#!、#v 决议#!、#v 法律改革#!等方式提升#v 民主意识#!。需要注意的是，尽管强行改革为民主政体并不能完成民主化，但成功的法律改革仍然会增长进度条。\n\n然而，独裁者统治下的政治稳定、经济繁荣等好的发展状态也会对民主化进程产生负面影响。这意味着你可以通过增加#bold 激进派#!，主动挑动#bold 革命#!的方式推动民主化，但也意味着你可以通过壮大#bold 效忠派#!和提高#bold 生活水平#!巩固独裁统治。\n\n如果在时间耗尽前，民主化进度条未满，则独裁统治得到巩固。当民主化进度条满时，[ROOT.GetCountry.GetName]将拥有民主政体。"
+  je_south_korea_democracy_main_goal: "提升民主意识，完成民主化进程，或者巩固独裁统治。"

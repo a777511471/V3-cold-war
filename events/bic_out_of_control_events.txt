@@ -113,6 +113,9 @@ bic_out_of_control.3 = {
 
 	immediate = {
 		remove_modifier = bic_out_of_control_modifier
+		c:GBR = {
+			remove_modifier = gbr_colony_india_modifier
+		}		
 		c:BIC = {
 			every_scope_state = {
 				limit = {
@@ -270,39 +273,116 @@ bic_out_of_control.3 = {
 			months = normal_modifier_time
 		}
 		c:HND = {
-			activate_law = law_type:law_parliamentary_republic
-			create_character = {
-				first_name = "Mohandas"			
-				last_name = "Gandhi"
-				historical = yes
-				birth_date = 1869.10.2
-				culture = cu:gujarati
-				is_general = yes
-				religion = rel:hindu
-				interest_group = ig_intelligentsia
-				ideology = ideology_moderate
-				traits = { 
-					ambitious
-					persistent
-					pious
-				}
+            activate_law = law_type:law_parliamentary_republic #改变法律为议会共和制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护
+        	trigger_event = { id = bic.1 } #领导权问题				
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			religion = rel:hindu #印度教
+			interest_group = ig_devout #虔信者
+			traits = {
 			}
 		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			religion = rel:hindu #印度教
+			interest_group = ig_armed_forces #军队
+		}
+
+		create_character = {
+			ig_leader = yes
+			religion = rel:hindu #印度教
+			interest_group = ig_landowners #地主
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			religion = rel:hindu #印度教			
+			interest_group = ig_trade_unions #利益集团工会
+		}	
+		}
 		c:PAK = {
-			create_character = {
-				first_name = "Muhammad"			
-				last_name = "Jinnah"
-				historical = yes
-				birth_date = 1876.12.25
-				culture = cu:gujarati
-				is_general = yes
-				religion = rel:sunni
-				interest_group = ig_intelligentsia
-				ideology = ideology_moderate
-				traits = { 
-					persistent
-				}
+			activate_law = law_type:law_presidential_republic #改变法律为总统共和制
+			activate_law = law_type:law_interventionism #改变法律为经济干预	
+			activate_law = law_type:law_protectionism #改变法律为贸易保护				
+		create_character = { #巴基斯坦总统穆罕默德·阿里·真纳
+			historical = yes
+			religion = rel:shiite #什叶派
+			culture = cu:gujarati
+			first_name = "Muhammad_Ali"
+			last_name = "Jinnah"
+			ruler = yes
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+    		dna = dna_muhammad_ali_jinnah
+			ideology = ideology_social_democrat
+			birth_date = 1876.12.25
+			traits = {
+				erudite #博学
+				inspirational_orator #鼓舞人心的演说家
+				firebrand #煽动大师
+				pious #虔诚	
+				sickly #多病
 			}
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_devout #虔信者
+			traits = {
+			}
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_armed_forces #军队
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_landowners #地主
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派	
+			interest_group = ig_trade_unions #利益集团工会
+		}	
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_rural_folk #农民
+			traits = {
+			}
+		}		
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_utilitarian_leader #功利主义者
+			traits = {
+			}
+		}	
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:panjabi			
+			religion = rel:sunni #逊尼派
+			interest_group = ig_petty_bourgeoisie #小市民
+		}			
 		}
 	}
 

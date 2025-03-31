@@ -1,13 +1,17 @@
 ﻿COUNTRIES = {
 	c:KUR = {
 		effect_starting_technology_tier_2_tech = yes
-		add_technology_researched = napoleonic_warfare
+		add_technology_researched = tech_economics_foundations #资本论	
 
 		# Laws 
-		activate_law = law_type:law_council_republic #社会主义共和制
-		activate_law = law_type:law_single_party_state #一党制国家
+		activate_law = law_type:law_council_republic #委员会共和制
+		activate_law = law_type:law_multi_party_cooperation_system #一党专政
+		activate_law = law_type:law_secularization #推广无神论		
+		activate_law = law_type:law_right_of_assembly #集会权		
+		activate_law = law_type:law_dedicated_police #专职警察		
+		activate_law = law_type:law_encourage_fertility #鼓励生育
+		activate_law = law_type:law_cultural_exclusion #文化排斥
  		activate_law = law_type:law_compulsory_primary_school
-		activate_law = law_type:law_total_separation
 		activate_law = law_type:law_10_hour_working_system
 		activate_law = law_type:law_state_led #科学院主导
 		activate_law = law_type:law_continental_law_system #大陆法系
@@ -16,25 +20,17 @@
 		activate_law = law_type:law_womens_suffrage
 		activate_law = law_type:law_graduated_taxation #累进税制
 		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_multicultural #文化多元
 		activate_law = law_type:law_protectionism
 		activate_law = law_type:law_command_economy
 		activate_law = law_type:law_public_schools
-		activate_law = law_type:law_militarized_police #军事化警察
 		activate_law = law_type:law_politicized_military #政治化军队
-		activate_law = law_type:law_secret_police
+		activate_law = law_type:law_secret_police #秘密警察
 		activate_law = law_type:law_public_health_insurance
 		activate_law = law_type:law_8_hour_working_system
 		activate_law = law_type:law_old_age_pension #养老金
 		activate_law = law_type:law_migration_controls #移民控制
-			
-		set_tax_level = medium
 
-		add_taxed_goods = g:liquor
-		add_taxed_goods = g:luxury_clothes
-		add_taxed_goods = g:luxury_furniture
-		add_taxed_goods = g:tea
-		add_taxed_goods = g:tobacco
+		set_tax_level = medium
 
 		set_institution_investment_level = {
 			institution = institution_schools
@@ -46,9 +42,20 @@
 			level = 1
 		}
 
+		ig:ig_industrialists = { #企业家
+			set_interest_group_name = ig_entrepreneur
+		}
+
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_landowners
+		}
+
 		ig:ig_armed_forces = { #军队
+			set_interest_group_name = ig_workers_and_peasants_red_army
 			remove_ideology = ideology_loyalist #效忠派
 			add_ideology = ideology_proletarian #无产阶级主义者
-		}
+		}	
+
+			
 	}
 }

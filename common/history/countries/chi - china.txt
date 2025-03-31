@@ -1,33 +1,21 @@
 ﻿COUNTRIES = {
 	c:CHI = { #中华民国
 		effect_starting_technology_tier_4_tech = yes
-		add_technology_researched = sericulture
-		
-		set_market_capital = STATE_GUANGDONG	
+		add_technology_researched = sericulture #古代技艺
 
-		set_tariffs_export_priority = g:grain
-		set_tariffs_import_priority = g:fabric
-		set_tariffs_import_priority = g:wood
-		set_tariffs_import_priority = g:hardwood
+		set_tax_level = very_high 
 
-		set_tax_level = medium
-
-		add_taxed_goods = g:liquor
-		add_taxed_goods = g:luxury_clothes
-		add_taxed_goods = g:luxury_furniture
-		add_taxed_goods = g:tea
-
-		activate_law = law_type:law_presidential_republic
-		activate_law = law_type:law_multi_party_cooperation_system #一党专政
+		activate_law = law_type:law_presidential_republic #总统共和制
+		activate_law = law_type:law_mass_conscription #大规模征兵				
+		activate_law = law_type:law_tenant_farmers #佃农		
+		activate_law = law_type:law_colonial_exploitation #民族剥削	
+		activate_law = law_type:law_chinese_legal_system #专制法系
 		activate_law = law_type:law_open_door #门户开放
-		activate_law = law_type:law_encourage_fertility #鼓励抚养
-		activate_law = law_type:law_professional_army #职业军队
+		activate_law = law_type:law_encourage_fertility #鼓励生育
 		activate_law = law_type:law_women_in_the_workplace #女性工作
-		activate_law = law_type:law_militarized_police #军事化警察
+		activate_law = law_type:law_local_police #地方警察部队
 		activate_law = law_type:law_private_capital_support #私人资本扶植（科研）
 		activate_law = law_type:law_secret_police #秘密警察
-		activate_law = law_type:law_continental_law_system #大陆法系
-		activate_law = law_type:law_tenant_farmers #佃农
 		activate_law = law_type:law_outlawed_dissent #异议非法
 		activate_law = law_type:law_private_schools #私立学校
 		activate_law = law_type:law_freedom_of_conscience #信仰自由
@@ -37,25 +25,47 @@
 		activate_law = law_type:law_interventionism #经济干预
 		activate_law = law_type:law_unrestricted_labor #无限制劳动
 
-		ig:ig_intelligentsia = { #文人
+		ig:ig_armed_forces = { #军队
+			add_ideology = ideology_reactionary #反动主义者
+			add_ideology = ideology_stratocratic #阶层主义者
+			remove_ideology = ideology_loyalist #取消效忠派
+			remove_ideology = ideology_patriotic #取消爱国主义者
+		}
+
+		ig:ig_intelligentsia = { #知识分子
+			set_interest_group_name = ig_academic_group #学术集团		
 			add_ideology = ideology_anti_clerical #反教权主义者
 		}
 
 		ig:ig_industrialists = { #官僚资产阶级
 			set_interest_group_name = ig_bureaucratic_bourgeoisie
+			remove_ideology = ideology_colonialist #殖民主义者				
 		}
 
 		ig:ig_petty_bourgeoisie = { #民族资产阶级
 			set_interest_group_name = ig_national_bourgeoisie
 		}
-
+		
 		ig:ig_landowners = { #地主
-			set_interest_group_name = ig_landowners
+			set_interest_group_name = ig_landowners	
 		}
 
 		set_institution_investment_level = {
 			institution = institution_police #执法
 			level = 1
+		}
+
+		trigger_event = {
+			id = jiefangzhanzheng_breakup.2 #解放战争爆发
+		}
+
+		trigger_event = {
+			id = chi.4 #抓壮丁
+		}
+
+		trigger_event = {
+			id = chi.5 #美国军援
+			months = 1
 		}
 
 		add_modifier = {
@@ -74,5 +84,9 @@
 		add_modifier = {
 			name = ununified_china #未统一的祖国
 		}
+
+		add_modifier = {
+			name = fra_military_weakness_modifier #第二次世界大战的创伤
+		}		
 	}
 }

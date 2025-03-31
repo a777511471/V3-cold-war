@@ -1,6 +1,6 @@
-je_space_race_main = {
+je_space_race_main = { #太空竞赛
 	should_be_pinned_by_default = yes
-	icon = "gfx/interface/icons/objectives/space_race.dds"
+	icon = "gfx/interface/icons/event_icons/verrier_astronomy_alert.dds"
 
 	group = je_group_objectives
 
@@ -75,15 +75,18 @@ je_space_race_main = {
     }
 
     on_complete = {
-
+		add_modifier = {
+			name = plan_successful #计划成功
+			years = 20
+		}		
     }
 	
 	weight = 1000
 	transferable = yes
 }
 
-je_satellite = {
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+je_satellite = { #卫星发射
+	icon = "gfx/interface/icons/event_icons/satellite.dds"
 
 	group = je_group_historical_content
 
@@ -102,6 +105,10 @@ je_satellite = {
 		trigger_event = {
 			id = space_race.6
 		}
+		add_modifier = {
+			name = plan_successful #计划成功
+			years = 20
+		}		
 	}
 
 
@@ -152,8 +159,8 @@ je_satellite = {
 
 }
 
-je_manned_space_flight = {
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+je_manned_space_flight = { #载人航天
+	icon = "gfx/interface/icons/event_icons/verrier_astronomy_alert.dds"
 
 	group = je_group_historical_content
 
@@ -172,6 +179,10 @@ je_manned_space_flight = {
 		trigger_event = {
 			id = space_race.7
 		}
+		add_modifier = {
+			name = plan_successful #计划成功
+			years = 20
+		}				
 	}
 
 
@@ -222,8 +233,8 @@ je_manned_space_flight = {
 
 }
 
-je_lunarlanding = {
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+je_lunarlanding = { #登月计划
+	icon = "gfx/interface/icons/event_icons/planetarium_moon.dds"
 
 	group = je_group_historical_content
 
@@ -242,6 +253,10 @@ je_lunarlanding = {
 		trigger_event = {
 			id = space_race.10
 		}
+		add_modifier = {
+			name = plan_successful #计划成功
+			years = 20
+		}			
 	}
 
 
@@ -292,8 +307,8 @@ je_lunarlanding = {
 
 }
 
-je_space_station = {
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+je_space_station = { #建设空间站
+	icon = "gfx/interface/icons/event_icons/spacestation.dds"
 
 	group = je_group_historical_content
 
@@ -312,6 +327,10 @@ je_space_station = {
 		trigger_event = {
 			id = space_race.9
 		}
+		add_modifier = {
+			name = plan_successful #计划成功
+			years = 20
+		}			
 	}
 
 

@@ -1,0 +1,26 @@
+namespace = sel
+
+sel.1 = {
+    type = country_event
+    placement = root
+    
+    title = sel.1.t
+    desc = sel.1.d
+    flavor = sel.1.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = sel.1.a
+        default_option = true
+        add_primary_culture = cu:malay
+        add_primary_culture = cu:tamil     
+    }
+}
+

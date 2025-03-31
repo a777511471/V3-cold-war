@@ -539,7 +539,7 @@ agitator_alfred_hugenberg = {
 		country_trigger = {
 			has_dlc_feature = voice_of_the_people_content
 			OR = {
-				c:HAN ?= this
+				c:YSD ?= this
 				c:NGF ?= this
 				c:GER ?= this
 			}

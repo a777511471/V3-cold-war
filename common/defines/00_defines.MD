@@ -1,10 +1,12 @@
-NGame = {
-	START_DATE = "1836.1.1"
-	END_DATE = "1936.1.1"
+NGame = { #时间修改
+	START_DATE = "1946.6.26"
+	END_DATE = "2050.12.31" 
 	SAVE_VERSION = 0
 	MP_LAG_TICKS_BOUNDS = 28 # Host will advance up to a week ahead of players ( 7 * 4 )
-	DEAD_OBJ_UNDESTROYED_DAYS = 22	# number of days "killed"/removed objects will persist in memory before ultimately destroyed as they are referenced by events etc. Needs to be bigger than MESSAGE_FEED_NUMBER_OF_DAYS_SHOWN in order to not risk notifications regarding dead people etc returning null_objs.
-	MAX_NUMBER_OF_AUTOSAVES = 5 	# The game will only keep the MAX_NUMBER_OF_AUTOSAVES latest autosaves.
+	DEAD_OBJ_UNDESTROYED_DAYS = 0	# number of days "killed"/removed objects will persist in memory before ultimately destroyed as they are referenced by events etc
+	DEFAULT_INCREMENT_DECREMENT_MAGNITUDE = 1
+	DEFAULT_INCREMENT_DECREMENT_MAGNITUDE_SHIFT = 10
+	DEFAULT_INCREMENT_DECREMENT_MAGNITUDE_CONTROL = 100
 }
 
 NJominiMap = {

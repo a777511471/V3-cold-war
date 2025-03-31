@@ -1,151 +1,179 @@
 ﻿AI = {
-	c:SWE = {
-		random_list = {	
-			75 = { set_strategy = ai_strategy_resource_expansion }
-			25 = { set_strategy = ai_strategy_industrial_expansion }
-		}		
-		set_strategy = ai_strategy_maintain_power_balance
-		random_list = {
-			50 = { set_strategy = ai_strategy_conservative_agenda }
-			50 = { set_strategy = ai_strategy_progressive_agenda }
+	 # Default AI subject starting strategy depends on LD
+	every_country = {
+		limit = { is_subject = yes }
+		if = {
+			limit = { liberty_desire >= 60 }
+			set_strategy = ai_strategy_subject_strengthen_self
 		}
-	}	
-	c:SAR = {
-		set_strategy = ai_strategy_industrial_expansion		
-		set_strategy = ai_strategy_maintain_power_balance
-		set_strategy = ai_strategy_progressive_agenda
+		else_if = {
+			limit = { liberty_desire <= 20 }
+			set_strategy = ai_strategy_subject_overlord_compliance
+		}
+		else = {
+			set_strategy = ai_strategy_subject_maintain_autonomy
+		}
 	}
-	c:BRZ = {
-		random_list = {
-			75 = { set_strategy = ai_strategy_resource_expansion }
-			25 = { set_strategy = ai_strategy_plantation_economy }
-		}		
-		set_strategy = ai_strategy_maintain_power_balance
-		set_strategy = ai_strategy_progressive_agenda
+
+	c:SAR ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
 	}
-	c:ARG = {
-		random_list = {
-			75 = { set_strategy = ai_strategy_industrial_expansion }
-			25 = { set_strategy = ai_strategy_plantation_economy }
-		}	
-		random_list = {
-			75 = { set_strategy = ai_strategy_maintain_power_balance }
-			25 = { set_strategy = ai_strategy_territorial_expansion }
-		}
-		random_list = {
-			75 = { set_strategy = ai_strategy_conservative_agenda }
-			25 = { set_strategy = ai_strategy_progressive_agenda }
-		}
+	c:TUS ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
 	}		
-	c:SIC = {
-		random_list = {	
-			75 = { set_strategy = ai_strategy_resource_expansion }
-			25 = { set_strategy = ai_strategy_industrial_expansion }
-		}	
-		set_strategy = ai_strategy_maintain_power_balance
-		random_list = {
-			75 = { set_strategy = ai_strategy_conservative_agenda }
-			25 = { set_strategy = ai_strategy_progressive_agenda }
-		}
-	}	
-	c:FIN = {
-		set_strategy = ai_strategy_resource_expansion	
-		set_strategy = ai_strategy_maintain_power_balance
-		set_strategy = ai_strategy_conservative_agenda
-	}	
-	c:AUS = {
-		random_list = {	
-			50 = { set_strategy = ai_strategy_agricultural_expansion }
-			25 = { set_strategy = ai_strategy_resource_expansion }
-			25 = { set_strategy = ai_strategy_industrial_expansion }
-		}	
-		set_strategy = ai_strategy_maintain_power_balance
-		random_list = {
-			75 = { set_strategy = ai_strategy_conservative_agenda }
-			25 = { set_strategy = ai_strategy_progressive_agenda }
-		}
+	c:BRZ ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
 	}
-	c:FRA = {
-		random_list = {	
-			50 = { set_strategy = ai_strategy_industrial_expansion }
-			25 = { set_strategy = ai_strategy_agricultural_expansion }
-			25 = { set_strategy = ai_strategy_resource_expansion }		
-		}	
-		random_list = {	
-			75 = { set_strategy = ai_strategy_maintain_power_balance }
-			25 = { set_strategy = ai_strategy_economic_imperialism }	
-		}
-		random_list = {	
-			50 = { set_strategy = ai_strategy_progressive_agenda }
-			50 = { set_strategy = ai_strategy_conservative_agenda }	
-		}				
+	c:ARG ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
+	}		
+	c:SIC ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
 	}	
-	c:PRU = {
-		random_list = {	
-			65 = { set_strategy = ai_strategy_industrial_expansion }
-			35 = { set_strategy = ai_strategy_resource_expansion }
-		}	
-		set_strategy = ai_strategy_maintain_power_balance
-		set_strategy = ai_strategy_conservative_agenda
-	}
-	c:RUS = {
-		random_list = {	
-			55 = { set_strategy = ai_strategy_agricultural_expansion }
-			35 = { set_strategy = ai_strategy_placate_population }
-			10 = { set_strategy = ai_strategy_resource_expansion }
-		}			
-		set_strategy = ai_strategy_colonial_expansion
-		set_strategy = ai_strategy_conservative_agenda
+	c:FIN ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
 	}	
-	c:TUR = {
-		random_list = {	
-			50 = { set_strategy = ai_strategy_agricultural_expansion }
-			25 = { set_strategy = ai_strategy_resource_expansion }
-			25 = { set_strategy = ai_strategy_industrial_expansion }
-		}			
-		random_list = {	
-			75 = { set_strategy = ai_strategy_maintain_power_balance }
-			25 = { set_strategy = ai_strategy_territorial_expansion }
-		}			
-		set_strategy = ai_strategy_progressive_agenda # To try and complete tanzimat
+	c:AUS ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
+	}
+	c:RUS ?= {
+		set_strategy = ai_strategy_egalitarian_agenda #增进平等
+		set_strategy = ai_strategy_industrial_expansion #工业化
+		set_strategy = ai_strategy_economic_imperialism #经济强国战略
+	}		
+	c:FRA ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治		
 	}	
-	c:GBR = {
-		set_strategy = ai_strategy_industrial_expansion
-		set_strategy = ai_strategy_economic_imperialism
-		set_strategy = ai_strategy_progressive_agenda
-	}
-	c:USA = {
-		random_list = {	
-			50 = { set_strategy = ai_strategy_industrial_expansion }
-			25 = { set_strategy = ai_strategy_resource_expansion }
-			25 = { set_strategy = ai_strategy_plantation_economy }
-		}		
-		set_strategy = ai_strategy_economic_imperialism
-		set_strategy = ai_strategy_conservative_agenda
-	}
-	c:EGY = {
-		random_list = {	
-			75 = { set_strategy = ai_strategy_plantation_economy }
-			25 = { set_strategy = ai_strategy_industrial_expansion }
-		}		
-		set_strategy = ai_strategy_territorial_expansion
-		set_strategy = ai_strategy_conservative_agenda
+	c:TUR ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
 	}	
-	c:CHI = {
-		random_list = {	
-			75 = { set_strategy = ai_strategy_placate_population }
-			25 = { set_strategy = ai_strategy_agricultural_expansion }
-		}			
-		set_strategy = ai_strategy_armed_isolationism
-		set_strategy = ai_strategy_maintain_mandate_of_heaven
+	c:GBR ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
 	}
-	c:JAP = {
-		random_list = {	
-			75 = { set_strategy = ai_strategy_placate_population }
-			25 = { set_strategy = ai_strategy_agricultural_expansion }
-		}			
-		set_strategy = ai_strategy_armed_isolationism
-		set_strategy = ai_strategy_conservative_agenda
+	c:DEI ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
+	}	
+	c:USA ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}
+	c:EGY ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
+	}	
+	c:CHI ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}
+	c:PRC ?= { #中共
+		set_strategy = ai_strategy_egalitarian_agenda #增进平等
+		set_strategy = ai_strategy_industrial_expansion #工业化
+		set_strategy = ai_strategy_economic_imperialism #经济强国战略
+	}		
+	c:JAP ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治	
+	}	
+	c:YSD ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}		
+	c:BAV ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}
+	c:BIC ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}		
+	c:CAN ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}		
+	c:PRU ?= {
+		set_strategy = ai_strategy_egalitarian_agenda #增进平等
+		set_strategy = ai_strategy_industrial_expansion #工业化
+		set_strategy = ai_strategy_economic_imperialism #经济强国战略
+	}
+	c:ITA ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}	
+	c:SWE ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}	
+	c:AST ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}	
+	c:NET ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}			
+	c:SPA ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}		
+	c:PHI ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}	
+	c:CZH ?= {
+		set_strategy = ai_strategy_egalitarian_agenda #增进平等
+		set_strategy = ai_strategy_industrial_expansion #工业化
+		set_strategy = ai_strategy_economic_imperialism #经济强国战略
+	}		
+	c:IDN ?= {
+		set_strategy = ai_strategy_progressive_agenda #促进自由派改革
+		set_strategy = ai_strategy_placate_population #安抚群众
+		set_strategy = ai_strategy_maintain_mandate_of_heaven #维系统治
+	}				
+	c:YUG ?= { #南斯拉夫
+		set_strategy = ai_strategy_egalitarian_agenda #增进平等
+		set_strategy = ai_strategy_industrial_expansion #工业化
+		set_strategy = ai_strategy_economic_imperialism #经济强国战略
+	}	
+	c:NEJ ?= { #沙特
+		set_strategy = ai_strategy_egalitarian_agenda #增进平等
+		set_strategy = ai_strategy_resource_expansion #扩大资源产业
+		set_strategy = ai_strategy_maintain_power_balance #维持均势
 	}		
 }	
 

@@ -1,0 +1,45 @@
+﻿l_simp_chinese:
+ promote_atheism_conversion: "你[Concept('concept_incorporated_state', '$concept_incorporated_states$')]15%的[Concept('concept_pop', '$concept_pops$')]成为无神论者"
+
+
+ STATE_PROMOTE_ATHEISM: "推行无神论"
+
+ stop_promote_atheism: "停止推行无神论"
+
+
+ promote_atheism_decision: "推行无神论"
+ promote_atheism_decision_desc: "推行无神论"
+
+ stop_promote_atheism_decision: "停止推行无神论"
+ stop_promote_atheism_decision_desc: "停止推行无神论"
+
+
+ be_potential_religion: "信仰[concept_potential_religion]([InterestGroup.AccessCountry.MakeScope.Var('potential_religion').GetReligion.GetName])"
+
+
+ rule_banning_devout: "是否取缔@devout!$ig_devout$[Concept('concept_interest_group', '$concept_interest_groups$')]"
+ setting_no_banning_devout: "从不"
+ setting_no_banning_devout_desc: "从不取缔@devout!$ig_devout$[Concept('concept_interest_group', '$concept_interest_groups$')]"
+ setting_atheism_banning_devout: "[Concept('concept_state_religion', '$concept_state_religion$')]为[GetReligion('atheist').GetName]时"
+ setting_atheism_banning_devout_desc: "[Concept('concept_state_religion', '$concept_state_religion$')]为[GetReligion('atheist').GetName]时取缔@devout!$ig_devout$[Concept('concept_interest_group', '$concept_interest_groups$')]"
+
+
+ atheism_exile_tt: "@devout!$ig_devout$[Concept('concept_interest_group', '$concept_interest_groups$')]将被取缔，成员将遭受退役和流放"
+
+
+ invite_exile_devout_BIC_tt: "虔信者[Concept('concept_character', '$concept_characters$')]必须信仰[GetReligion('hindu').GetName]"
+
+ invite_exile_devout_atheism_tt: "虔信者[Concept('concept_character', '$concept_characters$')]必须信仰我们的[concept_potential_religion]"
+
+ devout_is_not_being_banned_tt: "虔信者[Concept('concept_interest_group', '$concept_interest_group$')]没有正在被取缔"
+
+
+ ruler_not_ig_devout: "[concept_ruler]#bold 不#!属于@devout!$ig_devout$[Concept('concept_interest_group', '$concept_interest_groups$')]"
+
+
+ concept_potential_religion: "潜在宗教"
+ concept_potential_religion_desc: "当[concept_country]施行$STATE_PROMOTE_ATHEISM$，原来的[concept_state_religion]便会成为$concept_potential_religion$。[AddLocalizationIf(GetPlayer.IsValid, 'concept_potential_religion_ingame_added')]"
+
+ concept_potential_religion_ingame_added: "\n\n[GetPlayer.GetName]的$concept_potential_religion$是[GetPlayer.MakeScope.Var('potential_religion').GetReligion.GetName]。"
+
+ COUNTRY_POTENTIALRELIGIONS_ONE_LINE: "#title [concept_potential_religion]#!"

@@ -1,0 +1,86 @@
+BUILDINGS = {
+	s:STATE_HEDJAZ={
+		region_state:NEJ={
+			create_building={
+				building="building_masjid_al_haram"
+				level=1
+			}
+		}
+	}
+}
+
+BUILDINGS = {
+	s:STATE_LHASA={
+		region_state:CHI={
+			create_building={
+				building="building_potala"
+				level=1
+			}
+		}
+	}
+}
+BUILDINGS = {
+	s:STATE_INGRIA={
+		region_state:RUS={
+			create_building={
+				building="building_winter"
+				level=1
+			}
+		}
+	}
+}
+BUILDINGS = {
+	s:STATE_ILE_DE_FRANCE={
+		region_state:FRA={
+			create_building={
+				building="building_Versailles"
+				level=1
+			}
+		}
+	}
+}
+BUILDINGS = {
+	s:STATE_TUSCANY={
+		region_state:ITA={
+			create_building={
+				building="building_Uffizi"
+				level=1
+			}
+		}
+	}
+}
+BUILDINGS = {
+	s:STATE_VENETIA={
+		region_state:ITA={
+			create_building={
+				building="building_Venice"
+				level=1
+			}
+		}
+	}
+}
+BUILDINGS = {
+	s:STATE_PALESTINE={
+		region_state:GBR={
+			create_building={
+				building="building_Jerusalem"
+				level=1
+			}
+		}
+	}
+}
+
+BUILDINGS={
+	s:STATE_ARMENIA={
+		region_state:RUS={
+			create_building={
+				building="building_etchmiadzin"
+				level=1
+			}
+			create_building={
+				building="building_garni"
+				level=1
+			}
+		}
+	}
+}

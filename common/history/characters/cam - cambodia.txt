@@ -1,11 +1,53 @@
 ﻿CHARACTERS = {
 	c:CAM = {
-		create_character = {
+		create_character = { #诺罗敦·西哈努克
+			first_name = "Sihanouk"
+			last_name = "Norodom"
+			ruler = yes   
+			ig_leader = yes					          
 			historical = yes
-			ruler = yes
-			female=no #不是女性
+			birth_date = 1922.10.31		
+			culture = cu:khmer
+			interest_group = ig_landowners #地主
+			ideology = ideology_humanitarian_royalist #开明保皇主义者
 			traits = {
+				basic_diplomat #外交家								
+				strong #健硕
 			}
-		}	
+		}
+
+		create_character = { #朗诺
+			dna = ecchi_dna_du_yuesheng	
+			first_name = "Promise"
+			last_name = "Lang" 
+			historical = yes
+			ig_leader = yes			
+			birth_date = 1913.11.13
+			culture = cu:khmer
+			interest_group = ig_armed_forces 
+			ideology = ideology_authoritarian #威权主义者
+			traits = {
+				expensive_tastes #昂贵嗜好
+				hedonist #享乐主义者				
+			}
+		}		
+
+		create_character = { #波尔布特/沙洛特·绍
+			dna = ecchi_dna_zhu_de			
+			first_name = "Continue"
+			last_name = "Charlotte" 
+			historical = yes
+    		is_agitator = yes #鼓动者			
+			birth_date = 1925.5.19
+			culture = cu:khmer
+			religion = rel:atheist #无神论			
+			interest_group = ig_rural_folk
+			ideology = ideology_national_communist #意识形态民族共产主义者
+			traits = {			
+				reckless #鲁莽				
+			}
+		}			
+
+				
 	}
 }

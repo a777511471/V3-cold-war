@@ -1,69 +1,418 @@
 POPS = {
-	s:STATE_DZUNGARIA = {
+
+
+	s:STATE_TONKIN = {
+		region_state:DAI = {
+			create_pop = {
+				culture = vietnamese
+				size = 8700900
+			}
+			create_pop = {
+				culture = vietnamese
+				religion = confucian				
+				size = 156000
+			}				
+			create_pop = {
+				culture = zhuang
+				religion = confucian				
+				size = 156000
+			}				
+			create_pop = {
+				culture = thai
+				religion = confucian				
+				size = 156000
+			}												
+		}
+	}
+	s:STATE_ANNAM = { #安南
+		region_state:DAI = {
+			create_pop = {
+				culture = vietnamese
+				size = 3390000
+			}
+			create_pop = {
+				culture = vietnamese
+				religion = confucian				
+				size = 156000
+			}	
+			create_pop = {
+				culture = zhuang
+				religion = confucian				
+				size = 156000
+			}				
+			create_pop = {
+				culture = thai
+				religion = confucian				
+				size = 156000
+			}									
+		}
+	}
+	s:STATE_MEKONG = {
+		region_state:VIE = {
+			create_pop = {
+				culture = vietnamese
+				size = 5250000
+			}
+			create_pop = {
+				culture = french							
+				size = 6240
+			}		
+			create_pop = {
+				culture = zhuang			
+				size = 156000
+			}				
+			create_pop = {
+				culture = thai		
+				size = 156000
+			}							
+		}
+	}
+
+	s:STATE_YANGHO = {
+		region_state:KOR = {
+			create_pop = {
+				culture = korean
+				size = 4400000
+			}
+			create_pop = {
+				culture = korean
+				size = 2600000
+			}			
+		}
+	}
+
+	s:STATE_SEOUL = {
+		region_state:PRK = {
+			create_pop = {
+				culture = korean
+				size = 600000
+			}
+			create_pop = {
+				culture = korean
+				religion = confucian				
+				size = 156000
+			}							
+		}
+		region_state:KOR = {
+			create_pop = {
+				culture = korean
+				size = 4400000
+			}
+			create_pop = {
+				culture = korean
+				size = 2600000
+			}
+		}
+	}
+	s:STATE_BUSAN = {
+		region_state:KOR = {
+			create_pop = {
+				culture = korean
+				size = 4350090
+			}
+		}
+	}
+	s:STATE_SARIWON = {
+		region_state:PRK = {
+			create_pop = {
+				culture = korean
+				size = 3980090
+			}
+			create_pop = {
+				culture = korean
+				religion = confucian				
+				size = 156000
+			}							
+			create_pop = {
+				culture = dahe
+				size = 294000
+			}			
+		}
+	}
+
+	s:STATE_CHUNGCHEONG = {
+		region_state:KOR = {
+			create_pop = {
+				culture = korean
+				size = 3800000
+			}
+			create_pop = {
+				culture = korean
+				size = 500000
+			}
+			create_pop = {
+				culture = korean							
+				size = 156000
+			}				
+		}
+	}
+
+	s:STATE_GANGWON = {
+		region_state:PRK = {
+			create_pop = {
+				culture = korean
+				size = 3800000
+			}
+			create_pop = {
+				culture = korean
+				size = 500000
+			}
+			create_pop = {
+				culture = korean
+				religion = confucian				
+				size = 156000
+			}				
+		}
+		region_state:KOR = {
+			create_pop = {
+				culture = korean
+				size = 3800000
+			}
+			create_pop = {
+				culture = korean
+				size = 500000
+			}
+			create_pop = {
+				culture = korean				
+				size = 156000
+			}				
+		}		
+	}
+
+	s:STATE_HWANGHAE = {
+		region_state:PRK = {
+			create_pop = {
+				culture = korean
+				size = 3800000
+			}
+			create_pop = {
+				culture = korean
+				size = 500000
+			}
+			create_pop = {
+				culture = korean
+				religion = confucian				
+				size = 156000
+			}				
+		}
+	}
+
+	s:STATE_PYONGYANG = {
+		region_state:PRK = {
+			create_pop = {
+				culture = korean
+				size = 3800000
+			}
+			create_pop = {
+				culture = korean
+				size = 500000
+			}
+			create_pop = {
+				culture = korean
+				religion = confucian				
+				size = 156000
+			}				
+		}
+		region_state:KOR = {
+			create_pop = {
+				culture = korean
+				size = 500000
+			}
+			create_pop = {
+				culture = korean
+				religion = protestant			
+				size = 156000
+			}				
+		}		
+	}
+
+	s:STATE_SUIYUAN = {
+		region_state:PRC = {
+			create_pop = {
+				culture = han
+				size = 1000000
+			}
+			create_pop = {
+				culture = han
+				size = 4500000
+			}
+			create_pop = {
+				culture = mongol
+				size = 1560000
+			}		
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}			
+            create_pop = {
+                culture = manchu
+                religion = confucian
+                size = 156000
+            }									
+		}
+	}
+
+	s:STATE_HAINAN = {
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 1200000
 				religion = confucian
+				size = 9500000
 			}
 			create_pop = {
-				culture = kazak
-				size = 900000
+				culture = han
+				size = 645900
 			}
+			create_pop = {
+				culture = han
+				size = 643500
+			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}					
+			create_pop = {
+				culture = han
+				size = 70300
+			}
+			create_pop = {
+				culture = han
+				size = 70300
+			}
+			create_pop = {
+				culture = han
+				size = 156000
+			}
+			create_pop = {
+				culture = han
+				size = 50000
+			}
+		}
+	}
+
+	s:STATE_DZUNGARIA = {
+		region_state:CHI = {
 			create_pop = {
 				culture = uighur
-				size = 500000
+				size = 1600000
+			}			
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 400000
 			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}			
+			create_pop = {
+				culture = han
+				size = 156000
+				religion = sunni
+			}		
+			create_pop = {
+				culture = mongol
+				religion = confucian					
+				size = 156000
+			}									
+			create_pop = {
+				culture = mongol
+				size = 156000
+			}			
+			create_pop = {
+				culture = kazak
+				size = 156000
+			}
+			create_pop = {
+				culture = tatar
+				size = 156000
+			}		
+			create_pop = {
+				culture = tajik
+				size = 156000
+			}						
 		}
 	}
 	s:STATE_TIANSHAN = {
 		region_state:CHI = {
 			create_pop = {
+				culture = uighur
+				size = 1600000
+			}			
+			create_pop = {
 				culture = han
-				size = 1000000
+				size = 400000
 				religion = confucian
 			}
 			create_pop = {
-				culture = uighur
-				size = 1900000
-			}
+				culture = han
+				religion = confucian				
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				size = 156000
+				religion = sunni
+			}		
+			create_pop = {
+				culture = mongol
+				religion = confucian					
+				size = 156000
+			}											
 			create_pop = {
 				culture = uzbek
-				size = 3996
+				size = 156000
 			}
+			create_pop = {
+				culture = tajik
+				size = 156000
+			}	
+			create_pop = {
+				culture = kazak
+				size = 156000
+			}					
 		}
 	}
 	s:STATE_SICHUAN = {
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 15500000
+				size = 14700000
 				religion = confucian
 			}
 			create_pop = {
 				culture = tibetan
 				size = 645900
-				religion = confucian
 			}
 			create_pop = {
 				culture = yi
 				size = 643500
-				religion = confucian
-			}
-			create_pop = {
-				culture = miao
-				size = 70300
-				religion = confucian
 			}
 			create_pop = {
 				culture = han
-				size = 60000
+				religion = confucian				
+				size = 156000
+			}		
+			create_pop = {
+				culture = yi
+				religion = confucian				
+				size = 156000
+			}						
+			create_pop = {
+				culture = miao
+				size = 70300
+			}
+			create_pop = {
+				culture = han
+				size = 156000
 				religion = sunni
 			}
 			create_pop = {
 				culture = mongol
 				size = 50000
-				religion = confucian
 			}
 		}
 	}
@@ -75,9 +424,41 @@ POPS = {
 				religion = confucian
 			}
 			create_pop = {
-				culture = han
-				size = 1000000
+				culture = zhuang
+				size = 645900
 			}
+			create_pop = {
+				culture = yi
+				size = 643500
+			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}			
+			create_pop = {
+				culture = tibetan			
+				religion = confucian				
+				size = 156000
+			}	
+			create_pop = {
+				culture = yi
+				religion = confucian				
+				size = 156000
+			}							
+			create_pop = {
+				culture = miao
+				size = 70300
+			}
+			create_pop = {
+				culture = han
+				size = 156000
+				religion = sunni
+			}
+			create_pop = {
+				culture = mongol
+				size = 50000
+			}			
 			create_pop = {
 				culture = kachin
 				size = 8796
@@ -92,8 +473,35 @@ POPS = {
 				size = 9500000
 			}
 			create_pop = {
+				culture = zhuang
+				size = 645900
+			}
+			create_pop = {
+				culture = yi
+				size = 643500
+			}
+			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian				
+				size = 156000
+			}		
+			create_pop = {
+				culture = yi
+				religion = confucian				
+				size = 156000
+			}						
+			create_pop = {
+				culture = miao
+				size = 70300
+			}
+			create_pop = {
+				culture = han
+				size = 156000
+				religion = sunni
+			}
+			create_pop = {
+				culture = mongol
+				size = 50000
 			}
 		}
 	}
@@ -102,21 +510,59 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 12600000
 			}
 			create_pop = {
 				culture = han
-				size = 12710000
+				religion = mahayana
+				size = 645900
+			}
+			create_pop = {
+				culture = zhuang
+				size = 643500
+			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				religion = sunni
+				size = 156000
+			}
+			create_pop = {
+				culture = yi
+				size = 156000
+			}			
+			create_pop = {
+				culture = han
+				religion = protestant
+				size = 50000
+			}
+			create_pop = {
+				culture = han
+				religion = catholic
+				size = 8796
 			}
 		}
 		region_state:GBR = {
 			create_pop = {
-				culture = han
-				size = 120000
+				culture = british
+				size = 27000
 			}
+			create_pop = {
+				culture = han
+				religion = protestant
+				size = 50000
+			}
+			create_pop = {
+				culture = han
+				size = 156000
+			}		
 		}
 	}
-	s:STATE_ALXA = {
+	s:STATE_ALXA = { #宁夏
 		region_state:CHI = {
 			create_pop = {
 				culture = han
@@ -128,8 +574,13 @@ POPS = {
 				size = 1580000
 			}
 			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}						
+			create_pop = {
 				culture = manchu
-				size = 3196
+				size = 156000
 			}
 		}
 	}
@@ -140,21 +591,63 @@ POPS = {
 				size = 1000000
 			}
 			create_pop = {
-				culture = mongol
+				culture = han
 				size = 4500000
 			}
+			create_pop = {
+				culture = mongol
+				size = 1560000
+			}		
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}	
+            create_pop = {
+                culture = manchu
+                religion = confucian
+                size = 156000
+            }											
 		}
 	}
 	s:STATE_GUANGXI = {
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian
+				size = 9500000
+			}
+			create_pop = {
+				culture = zhuang
+				size = 645900
 			}
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 8350000
+				religion = mahayana
+				size = 643500
+			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}					
+			create_pop = {
+				culture = miao
+				size = 70300
+			}
+			create_pop = {
+				culture = yi
+				size = 70300
+			}
+			create_pop = {
+				culture = han
+				size = 156000
+				religion = sunni
+			}
+			create_pop = {
+				culture = han
+				religion = protestant
+				size = 50000
 			}
 		}
 	}
@@ -169,6 +662,26 @@ POPS = {
 				religion = confucian
 				size = 2400000
 			}
+			create_pop = {
+				culture = han
+				religion = protestant
+				size = 156000
+			}		
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}		
+            create_pop = {
+                culture = han
+                religion = confucian
+                size = 156000
+            }				
+            create_pop = {
+                culture = manchu
+                religion = atheist
+                size = 156000
+            }									
 		}
 		region_state:PRC = {
 			create_pop = {
@@ -178,37 +691,99 @@ POPS = {
 			}
 			create_pop = {
 				culture = han
-				size = 6000000
+				size = 15600000
 			}
+			create_pop = {
+				culture = han
+				religion = protestant
+				size = 156000
+			}		
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}		
+            create_pop = {
+                culture = han
+                religion = confucian
+                size = 156000
+            }				
+            create_pop = {
+                culture = manchu
+                religion = atheist
+                size = 156000
+            }												
 		}
 	}
 	s:STATE_SOUTHERN_MANCHURIA = {
 		region_state:PRC = {
+			create_pop = {
+				culture = han
+                religion = confucian						
+				size = 10000000
+			}
+			create_pop = {
+				culture = han
+				religion = atheist				
+				size = 156000
+			}					
+			create_pop = {
+				culture = han
+				religion = orthodox
+				size = 27000
+			}
 			create_pop = {
 				culture = korean
 				size = 530300
 			}
 			create_pop = {
 				culture = manchu
+                religion = animist	
 				size = 500500
 			}
+            create_pop = {
+                culture = manchu
+                religion = atheist
+                size = 156000
+            }			
 			create_pop = {
-				culture = han
-				size = 10000000
+				culture = dahe
+				size = 1937
 			}
 		}
 		region_state:CHI = {
+			create_pop = {
+				culture = han
+                religion = confucian				
+				size = 1900000
+			}
+			create_pop = {
+				culture = han
+				religion = atheist				
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = orthodox
+				size = 27000
+			}
 			create_pop = {
 				culture = korean
 				size = 1700000
 			}
 			create_pop = {
 				culture = manchu
+                religion = animist				
 				size = 843000
 			}
+            create_pop = {
+                culture = manchu
+                religion = atheist
+                size = 156000
+            }			
 			create_pop = {
-				culture = han
-				size = 1900000
+				culture = dahe
+				size = 1937
 			}
 		}
 	}
@@ -216,11 +791,37 @@ POPS = {
 		region_state:PRC = {
 			create_pop = {
 				culture = han
+				religion = confucian					
 				size = 8120000
 			}
 			create_pop = {
+				culture = han
+				religion = atheist				
+				size = 156000
+			}					
+			create_pop = {
+				culture = han
+				religion = orthodox
+                size = 156000
+			}
+			create_pop = {
 				culture = russian
-				size = 27000
+				religion = atheist						
+                size = 156000
+			}
+            create_pop = {
+                culture = manchu
+                religion = animist
+                size = 156000
+            }		
+			create_pop = {
+				culture = korean
+				religion = atheist						
+                size = 156000
+			}				
+			create_pop = {
+				culture = dahe
+				size = 1937
 			}
 		}
 	}
@@ -228,24 +829,26 @@ POPS = {
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian
+				size = 7350000
 			}
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 8600000
-			}
+				religion = atheist				
+				size = 156000
+			}				
 		}
 		region_state:PRC = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 7350000
 			}
 			create_pop = {
 				culture = han
-				size = 3200000
-			}
+				religion = atheist			
+				size = 156000
+			}				
 		}
 	}
 	s:STATE_NINGXIA = {
@@ -259,6 +862,11 @@ POPS = {
 				culture = han
 				size = 2227392
 			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}				
 		}
 		region_state:CHI = {
 			create_pop = {
@@ -270,6 +878,11 @@ POPS = {
 				religion = confucian
 				size = 4009010
 			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}				
 		}
 	}
 	s:STATE_GANSU = {
@@ -283,60 +896,159 @@ POPS = {
 				culture = han
 				size = 1000000
 			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}		
+			create_pop = {
+				culture = han
+				religion = sunni				
+				size = 1000
+			}			
+			create_pop = {
+				culture = han
+				religion = catholic		
+				size = 156000
+			}				
+			create_pop = {
+				culture = uighur
+				religion = gelugpa
+				size = 15000
+			}								
 		}
 	}
 	s:STATE_XIAN = {
 		region_state:PRC = {
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 1000000
+				religion = atheist
+				size = 4800000
 			}
 			create_pop = {
 				culture = han
-				size = 5000000
-			}
+				religion = confucian							
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = atheist			
+				size = 156000
+			}	
 		}
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian
+				size = 4800000
 			}
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 11020000
+				religion = atheist				
+				size = 156000
 			}
+			create_pop = {
+				culture = han
+				size = 156000
+				religion = sunni
+			}		
+			create_pop = {
+				culture = han
+				religion = atheist			
+				size = 156000
+			}												
 		}
 	}
 	s:STATE_QINGHAI = {
 		region_state:CHI = {
 			create_pop = {
-				culture = tibetan
-				size = 3400000
-			}
-			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 960000
 			}
+			create_pop = {
+				culture = tibetan
+				size = 720000
+			}			
 			create_pop = {
 				culture = han
 				religion = sunni
-				size = 8004
+				size = 720000
 			}
+			create_pop = {
+				culture = mongol
+				size = 240000
+			}		
+			create_pop = {
+				culture = mongol
+				religion = confucian				
+				size = 156000
+			}		
+			create_pop = {
+				culture = tatar
+				religion = sunni				
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}													
 		}
 	}
 	s:STATE_CHONGQING = {
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian
+				size = 22400000
+			}
+			create_pop = {
+				culture = miao
+				size = 645900
 			}
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 22400000
+				religion = sunni
+				size = 643500
+			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}		
+			create_pop = {
+				culture = yi
+				religion = confucian				
+				size = 156000
+			}						
+			create_pop = {
+				culture = han
+				size = 70300
+			}
+			create_pop = {
+				culture = yi
+				size = 156000
+			}
+			create_pop = {
+				culture = zhuang
+				size = 50000
+			}
+			create_pop = {
+				culture = mongol
+				size = 50000
+			}
+			create_pop = {
+				culture = tibetan
+				size = 50000
+			}
+			create_pop = {
+				culture = uighur
+				size = 50000
+			}
+			create_pop = {
+				culture = korean
+				size = 50000
 			}
 		}
 	}
@@ -345,11 +1057,43 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 15500000
 			}
 			create_pop = {
 				culture = han
-				size = 15500000
+				religion = mahayana
+				size = 645900
+			}
+			create_pop = {
+				culture = zhuang
+				size = 643500
+			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}			
+			create_pop = {
+				culture = miao
+				size = 70300
+			}
+			create_pop = {
+				culture = yi
+				size = 70300
+			}
+			create_pop = {
+				culture = han
+				size = 70300
+			}
+			create_pop = {
+				culture = han
+				size = 156000
+				religion = sunni
+			}
+			create_pop = {
+				culture = han
+				religion = protestant
+				size = 50000
 			}
 		}
 		region_state:POR = {
@@ -359,7 +1103,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = portuguese
-				size = 996
+				size = 27000
 			}
 			create_pop = {
 				culture = han
@@ -383,6 +1127,11 @@ POPS = {
 				culture = han
 				size = 3800000
 			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}				
 		}
 	}
 	s:STATE_FUJIAN = {
@@ -390,12 +1139,26 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 11000000
 			}
 			create_pop = {
 				culture = han
-				size = 11760000
-			}
+				religion = confucian				
+				size = 156000
+			}		
+			create_pop = {
+				culture = han
+				religion = sunni				
+				size = 156000
+			}			
+			create_pop = {
+				culture = han			
+				size = 156000
+			}		
+			create_pop = {
+				culture = yi		
+				size = 156000
+			}												
 		}
 	}
 	s:STATE_ZHEJIANG = {
@@ -403,11 +1166,7 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 11406000
-			}
-			create_pop = {
-				culture = han
-				size = 2293708
+				size = 19600000
 			}
 			create_pop = {
 				culture = han
@@ -415,9 +1174,33 @@ POPS = {
 				size = 352000
 			}
 			create_pop = {
-				culture = miao
+				culture = han
+				religion = confucian				
 				size = 156000
-			}
+			}			
+			create_pop = {
+				culture = han
+				religion = mahayana			
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				religion = protestant			
+				size = 156000
+			}			
+			create_pop = {
+				culture = han
+				religion = catholic	
+				size = 156000
+			}	
+			create_pop = {
+				culture = yi
+				size = 156000
+			}	
+			create_pop = {
+				culture = miao
+				size = 15600
+			}																		
 		}
 	}
 	s:STATE_JIANGSU = {
@@ -425,23 +1208,25 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 6000000
+				size = 7220000
 			}
 			create_pop = {
 				culture = han
-				size = 1000000
-			}
+				religion = confucian				
+				size = 156000
+			}				
 		}
 		region_state:PRC = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 7220000
 			}
 			create_pop = {
 				culture = han
-				size = 17000000
-			}
+				religion = confucian				
+				size = 156000
+			}				
 		}
 	}
 	s:STATE_NANJING = {
@@ -449,11 +1234,26 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 8900000
+				size = 7220000
 			}
 			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian				
+				size = 156000
+			}			
+			create_pop = {
+				culture = han
+				religion = mahayana			
+				size = 156000
+			}		
+			create_pop = {
+				culture = han
+				religion = sunni				
+				size = 156000
+			}		
+			create_pop = {
+				culture = dahe
+				size = 1937
 			}
 		}
 	}
@@ -462,52 +1262,121 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 13000000
+				size = 13450000
 			}
 			create_pop = {
 				culture = han
-				size = 1000000
-			}
+				religion = confucian				
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				religion = mahayana
+				size = 156000
+			}			
+			create_pop = {
+				culture = han
+				religion = protestant			
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = catholic
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				religion = sunni
+				size = 156000
+			}								
 			create_pop = {
 				culture = han
 				religion = jewish
-				size = 1996
+				size = 156000
 			}
+			create_pop = {
+				culture = miao
+				religion = confucian					
+				size = 256000
+			}					
 		}
 		region_state:PRC = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 13450000
 			}
 			create_pop = {
 				culture = han
-				size = 7000000
-			}
+				religion = confucian				
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				religion = mahayana
+				size = 156000
+			}							
+			create_pop = {
+				culture = han
+				religion = protestant			
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = catholic
+				size = 156000
+			}		
+			create_pop = {
+				culture = han
+				religion = sunni
+				size = 156000
+			}								
+			create_pop = {
+				culture = han
+				religion = jewish
+				size = 156000
+			}	
+			create_pop = {
+				culture = miao
+				religion = confucian					
+				size = 256000
+			}											
 		}
 	}
 	s:STATE_ZHILI = {
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian
+				size = 14250000
 			}
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 3600000
-			}
+				religion = confucian				
+				size = 156000
+			}	
+            create_pop = {
+                culture = han
+                religion = confucian
+                size = 156000
+            }						
 		}
 		region_state:PRC = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 14250000
 			}
 			create_pop = {
 				culture = han
-				size = 4000000
-			}
+				religion = confucian				
+				size = 156000
+			}		
+            create_pop = {
+                culture = han
+                religion = confucian
+                size = 156000
+            }					
 		}
 	}
 	s:STATE_JIANGXI = {
@@ -515,29 +1384,22 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 16000000
-			}
-			create_pop = {
-				culture = manchu
-				size = 3500
+				size = 12800000
 			}
 			create_pop = {
 				culture = han
-				size = 6954660
-			}
-			create_pop = {
-				culture = han
-				size = 2212596
-			}
+				religion = confucian				
+				size = 156000
+			}				
 			create_pop = {
 				culture = miao
 				size = 256000
 			}
 			create_pop = {
-				culture = han
-				religion = sunni
-				size = 236000
-			}
+				culture = miao
+				religion = confucian					
+				size = 256000
+			}			
 		}
 	}
 	s:STATE_SOUTHERN_ANHUI = {
@@ -545,93 +1407,111 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 20765000
-			}
-			create_pop = {
-				culture = manchu
-				size = 2592
+				size = 7266667
 			}
 			create_pop = {
 				culture = han
-				size = 1051996
-			}
-			create_pop = {
-				culture = han
-				religion = sunni
-				size = 304004
-			}
+				religion = confucian				
+				size = 156000
+			}				
 		}
 	}
 	s:STATE_NORTHERN_ANHUI = {
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian
+				size = 7266667
 			}
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 15300000
-			}
+				religion = confucian				
+				size = 156000
+			}				
 		}
 		region_state:PRC = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 7266667
 			}
 			create_pop = {
 				culture = han
-				size = 3000000
-			}
+				religion = confucian				
+				size = 156000
+			}				
 		}
 	}
 	s:STATE_WESTERN_HUBEI = {
-		region_state:CHI = {
-			create_pop = {
-				culture = han
-				size = 1000000
-			}
+		region_state:CHI = {	
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 11000000
+				size = 5300000
 			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = confucian					
+				size = 156000
+			}					
 		}
 		region_state:PRC = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 5300000
 			}
 			create_pop = {
 				culture = han
-				size = 3000000
-			}
+				religion = confucian				
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}					
 		}
 	}
 	s:STATE_EASTERN_HUBEI = {
-		region_state:CHI = {
-			create_pop = {
-				culture = han
-				size = 1000000
-			}
+		region_state:CHI = {		
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 4000000
+				size = 5300000
 			}
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = confucian						
+				size = 156000
+			}				
 		}
 		region_state:PRC = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 5300000
 			}
 			create_pop = {
 				culture = han
-				size = 9000000
-			}
+				religion = confucian				
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = confucian				
+				size = 156000
+			}					
 		}
 	}
 	s:STATE_HUNAN = {
@@ -639,31 +1519,22 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 18000000
-			}
-			create_pop = {
-				culture = han
-				size = 1000000
-			}
-			create_pop = {
-				culture = han
-				size = 491996
+				size = 26100000
 			}
 			create_pop = {
 				culture = miao
 				size = 384000
 			}
-		}
-		region_state:PRC = {
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 1000000
-			}
+				religion = confucian				
+				size = 156000
+			}	
 			create_pop = {
-				culture = han
-				size = 2000000
-			}
+				culture = miao				
+				religion = confucian				
+				size = 156000
+			}								
 		}
 	}
 	s:STATE_FORMOSA = {
@@ -671,70 +1542,124 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 3075300
+				size = 5800000
 			}
 			create_pop = {
-				culture = han
-				size = 1101600
+				culture = yuanzhumin #高山族泛灵论者
+				size = 76000
 			}
 			create_pop = {
-				culture = han
-				religion = protestant
-				size = 275400
-			}
+				culture = yuanzhumin #平埔族的信仰主要包括妈祖信仰和汉化后的宗教信仰
+				religion = confucian				
+				size = 76000
+			}			
+			create_pop = {
+				culture = dahe #在华日本人
+				size = 3558
+			}			
 			create_pop = {
 				culture = han
-				religion = catholic
-				size = 45900
-			}
-			create_pop = {
-				culture = han
-				religion = jewish
-				size = 45900
-			}
-			create_pop = {
-				culture = han
-				religion = sunni
-				size = 45900
-			}
+				religion = confucian				
+				size = 156000
+			}								
 		}
 	}
 	s:STATE_SHANDONG = {
 		region_state:PRC = {
 			create_pop = {
 				culture = han
-				size = 25020000
+				religion = confucian				
+				size = 35000000
 			}
+			create_pop = {
+				culture = han
+				religion = atheist				
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				size = 1900
+			}	
+			create_pop = {
+				culture = han
+				size = 1900
+			}														
 		}
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 2000000
+				religion = confucian				
+				size = 10000000
 			}
+			create_pop = {
+				culture = han
+				religion = atheist				
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				size = 1900
+			}	
+			create_pop = {
+				culture = han
+				size = 1900
+			}												
 		}
 	}
 	s:STATE_SUZHOU = {
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 1000000
+				religion = confucian
+				size = 7220000
 			}
 			create_pop = {
 				culture = han
-				religion = confucian
-				size = 6000000
-			}
+				religion = atheist			
+				size = 156000
+			}						
+			create_pop = {
+				culture = han
+				religion = jewish
+				size = 156000
+			}	
+			create_pop = {
+				culture = han
+				religion = atheist			
+				size = 156000
+			}						
+			create_pop = {
+				culture = han
+				religion = jewish
+				size = 156000
+			}											
 		}
 		region_state:PRC = {
 			create_pop = {
 				culture = han
 				religion = confucian
-				size = 1000000
+				size = 7220000
 			}
 			create_pop = {
 				culture = han
-				size = 6000000
-			}
+				religion = atheist			
+				size = 156000
+			}				
+			create_pop = {
+				culture = han
+				religion = jewish
+				size = 156000
+			}			
+			create_pop = {
+				culture = han
+				religion = atheist			
+				size = 156000
+			}						
+			create_pop = {
+				culture = han
+				religion = jewish
+				size = 156000
+			}									
 		}
 	}
 	s:STATE_BANGKOK = {
@@ -836,9 +1761,75 @@ POPS = {
 				culture = malay
 				size = 31000
 			}
+			create_pop = {
+				culture = han
+				religion = sunni
+				size = 12800
+			}
+			create_pop = {
+				culture = avadhi
+				size = 5666
+			}
+			create_pop = {
+				culture = yuanzhumin
+				size = 3400
+			}
+			create_pop = {
+				culture = british
+				size = 2196
+			}
+			create_pop = {
+				culture = thai
+				size = 20750
+			}
+			create_pop = {
+				culture = khmer
+				size = 20750
+			}
 		}
 	}
 	s:STATE_PEGU = {
+		region_state:BIC = {
+			create_pop = {
+				culture = british
+				size = 88520
+			}
+			create_pop = {
+				culture = avadhi
+				religion = hindu
+				size = 1180000
+			}
+			create_pop = {
+				culture = mon
+				size = 18080
+			}
+			create_pop = {
+				culture = shan
+				size = 879
+			}
+			create_pop = {
+				culture = karen
+				size = 879
+			}
+			create_pop = {
+				culture = mon
+				size = 2000
+			}
+			create_pop = {
+				culture = burmese
+				religion = hindu
+				size = 6000
+			}
+			create_pop = {
+				culture = bengali
+				religion = hindu				
+				size = 799
+			}
+			create_pop = {
+				culture = burmese
+				size = 1900
+			}
+		}
 		region_state:BUR = {
 			create_pop = {
 				culture = mon
@@ -854,7 +1845,6 @@ POPS = {
 			}
 			create_pop = {
 				culture = mon
-				pop_type = slaves
 				size = 20000
 			}
 			create_pop = {
@@ -863,12 +1853,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = british
-				size = 432
+				size = 80000
 			}
 			create_pop = {
 				culture = burmese
 				religion = sunni
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = bengali
@@ -876,7 +1866,6 @@ POPS = {
 			}
 			create_pop = {
 				culture = burmese
-				pop_type = slaves
 				size = 19000
 			}
 		}
@@ -885,8 +1874,24 @@ POPS = {
 		region_state:RUS = {
 			create_pop = {
 				culture = russian
-				size = 16000
-			}		
+				size = 18000
+			}	
+			create_pop = {
+				culture = russian
+				size = 18000
+			}	
+			create_pop = {
+				culture = byelorussian
+				size = 18000
+			}	
+			create_pop = {
+				culture = dahe
+				size = 18000
+			}
+			create_pop = {
+				culture = ainu
+				size = 9020
+			}
 		}
 		region_state:JAP = {
 			create_pop = {
@@ -899,13 +1904,13 @@ POPS = {
 			}
 			create_pop = {
 				culture = dahe
-				religion = confucian
+				religion = mahayana
 				size = 1289000
 			}
 			create_pop = {
 				culture = dahe
 				religion = protestant
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = dahe
@@ -927,13 +1932,13 @@ POPS = {
 			}
 			create_pop = {
 				culture = dahe
-				religion = confucian
+				religion = mahayana
 				size = 3392390
 			}
 			create_pop = {
 				culture = dahe
 				religion = protestant
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = dahe
@@ -955,13 +1960,13 @@ POPS = {
 			}
 			create_pop = {
 				culture = dahe
-				religion = confucian
+				religion = mahayana
 				size = 6779000
 			}
 			create_pop = {
 				culture = dahe
 				religion = protestant
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = dahe
@@ -973,6 +1978,14 @@ POPS = {
 				religion = orthodox
 				size = 1000
 			}
+			create_pop = {
+				culture = han
+				size = 156000
+			}
+			create_pop = {
+				culture = manchu
+				size = 156000
+			}			
 		}
 	}
 	s:STATE_CHUBU = {
@@ -983,13 +1996,13 @@ POPS = {
 			}
 			create_pop = {
 				culture = dahe
-				religion = confucian
+				religion = mahayana
 				size = 4569000
 			}
 			create_pop = {
 				culture = dahe
 				religion = protestant
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = dahe
@@ -1001,6 +2014,14 @@ POPS = {
 				religion = orthodox
 				size = 1000
 			}
+			create_pop = {
+				culture = korean
+				size = 300000
+			}
+			create_pop = {
+				culture = manchu
+				size = 156000
+			}					
 		}
 	}
 	s:STATE_KANSAI = {
@@ -1011,13 +2032,13 @@ POPS = {
 			}
 			create_pop = {
 				culture = dahe
-				religion = confucian
+				religion = mahayana
 				size = 5399000
 			}
 			create_pop = {
 				culture = dahe
 				religion = protestant
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = dahe
@@ -1029,6 +2050,18 @@ POPS = {
 				religion = orthodox
 				size = 1000
 			}
+			create_pop = {
+				culture = korean
+				size = 300000
+			}
+			create_pop = {
+				culture = han
+				size = 156000
+			}
+			create_pop = {
+				culture = manchu
+				size = 156000
+			}					
 		}
 	}
 	s:STATE_KYUSHU = {
@@ -1039,13 +2072,13 @@ POPS = {
 			}
 			create_pop = {
 				culture = dahe
-				religion = confucian
+				religion = mahayana
 				size = 4429000
 			}
 			create_pop = {
 				culture = dahe
 				religion = protestant
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = dahe
@@ -1077,13 +2110,13 @@ POPS = {
 			}
 			create_pop = {
 				culture = dahe
-				religion = confucian
+				religion = mahayana
 				size = 2559000
 			}
 			create_pop = {
 				culture = dahe
 				religion = protestant
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = dahe
@@ -1105,13 +2138,13 @@ POPS = {
 			}
 			create_pop = {
 				culture = dahe
-				religion = confucian
+				religion = mahayana
 				size = 1544000
 			}
 			create_pop = {
 				culture = dahe
 				religion = protestant
-				size = 60000
+				size = 156000
 			}
 			create_pop = {
 				culture = dahe
@@ -1126,34 +2159,76 @@ POPS = {
 		}
 	}
 	s:STATE_SHENGJING = {
-		region_state:PRC = {
+		region_state:RUS = {
 			create_pop = {
 				culture = russian
+				religion = atheist			
 				size = 12000
 			}
 			create_pop = {
 				culture = han
-				size = 2040300
-			}
-			create_pop = {
-				culture = han
-				religion = sunni
+				religion = atheist
 				size = 27000
 			}
 			create_pop = {
 				culture = manchu
+				religion = animist
 				size = 27000
 			}
+			create_pop = {
+				culture = korean
+				religion = atheist					
+				size = 27000
+			}				
+		}
+		region_state:PRC = {
+			create_pop = {
+				culture = han
+				religion = confucian					
+				size = 9040300
+			}
+			create_pop = {
+				culture = han
+				religion = atheist			
+				size = 156000
+			}			
+			create_pop = {
+				culture = manchu
+				religion = animist
+				size = 156000
+			}			
+			create_pop = {
+				culture = korean
+				religion = atheist					
+                size = 156000
+			}					
 		}
 		region_state:CHI = {
 			create_pop = {
 				culture = han
-				size = 2000000
+				religion = confucian				
+				size = 9040300
 			}
 			create_pop = {
+				culture = han
+				religion = atheist				
+				size = 156000
+			}				
+			create_pop = {
+				culture = russian
+				religion = atheist						
+				size = 156000
+			}	
+			create_pop = {
 				culture = manchu
-				size = 300000
-			}
+				religion = animist
+				size = 156000
+			}			
+			create_pop = {
+				culture = korean
+				religion = atheist						
+                size = 156000
+			}								
 		}
 	}
-	}
+}

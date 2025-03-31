@@ -129,19 +129,9 @@ texticon = {
 }
 
 texticon = {
-	icon = clippers
+	icon = steamers #船舶
 	iconsize = {
 		texture = "gfx/interface/icons/goods_icons/clippers.dds"
-		size = { 25 25 }
-		offset = { 0 7 }
-		fontsize = 18
-	}
-}
-
-texticon = {
-	icon = steamers
-	iconsize = {
-		texture = "gfx/interface/icons/goods_icons/steamers.dds"
 		size = { 25 25 }
 		offset = { 0 7 }
 		fontsize = 18
@@ -159,9 +149,9 @@ texticon = {
 }
 
 texticon = {
-	icon = ironclads
+	icon = ironclads #军用船只
 	iconsize = {
-		texture = "gfx/interface/icons/goods_icons/ironclads.dds"
+		texture = "gfx/interface/icons/goods_icons/steamers.dds"
 		size = { 25 25 }
 		offset = { 0 7 }
 		fontsize = 18

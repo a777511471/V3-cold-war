@@ -1,0 +1,45 @@
+﻿l_english:
+ promote_atheist_conversion: "10% of [Concept('concept_pop', '$concept_pops$')] in your [Concept('concept_incorporated_state', '$concept_incorporated_states$')] become Atheist"
+
+
+ STATE_PROMOTE_ATHEISM: "Promote Atheism"
+
+ stop_promote_atheism: "Stop promoting Atheism"
+
+
+ promote_atheism_decision: "Promote Atheism"
+ promote_atheism_decision_desc: "Promote Atheism"
+
+ stop_promote_atheism_decision: "Stop promoting Atheism"
+ stop_promote_atheism_decision_desc: "Stop promoting Atheism"
+
+
+ be_potential_religion: "Follows the [concept_potential_religion] ([InterestGroup.AccessCountry.MakeScope.Var('potential_religion').GetReligion.GetName])"
+
+
+ rule_banning_devout: "Whether Banning @devout!Devout [Concept('concept_interest_group', '$concept_interest_groups$')]"
+ setting_no_banning_devout: "Never"
+ setting_no_banning_devout_desc: "Never Banning @devout!Devout [Concept('concept_interest_group', '$concept_interest_groups$')]"
+ setting_atheism_banning_devout: "[Concept('concept_state_religion', '$concept_state_religion$')] Is [GetReligion('atheist').GetName]"
+ setting_atheism_banning_devout_desc: "Banning @devout!Devout [Concept('concept_interest_group', '$concept_interest_groups$')] When [Concept('concept_state_religion', '$concept_state_religion$')] Is [GetReligion('atheist').GetName]"
+
+
+ atheism_exile_tt: "@devout!$ig_devout$ [Concept('concept_interest_group', '$concept_interest_groups$')] will be banned, members will be subject to retirement and exile"
+
+
+ invite_exile_devout_BIC_tt: "Devout [Concept('concept_character', '$concept_characters$')] must have [GetReligion('hindu').GetName]"
+
+ invite_exile_devout_atheism_tt: "Devout [Concept('concept_character', '$concept_characters$')] must have our [concept_potential_religion]"
+
+ devout_is_not_being_banned_tt: "Devout [Concept('concept_interest_group', '$concept_interest_group$')]is not being banned"
+
+
+ ruler_not_ig_devout: "[concept_ruler] Is #bold not #!of type @devout!$ig_devout$ [Concept('concept_interest_group', '$concept_interest_groups$')]"
+
+
+ concept_potential_religion: "Potential Religion"
+ concept_potential_religion_desc: "When the [concept_country] implements $STATE_PROMOTE_ATHEISM$, the previous [concept_state_religion] will become $concept_potential_religion$.[AddLocalizationIf(GetPlayer.IsValid, 'concept_potential_religion_ingame_added')]"
+
+ concept_potential_religion_ingame_added: "\n\nThe $concept_potential_religion$ in [GetPlayer.GetName] is [GetPlayer.MakeScope.Var('potential_religion').GetReligion.GetName]."
+
+ COUNTRY_POTENTIALRELIGIONS_ONE_LINE: "#title [concept_potential_religion]#!"

@@ -8,5 +8,10 @@ on_monthly_pulse_country = {
 		KW_event.2
 		KW_event.3
 		KW_event.4
+		west_germany_event.1
+		xilajiefang_event.1
+		west_germany_event_air_transport.1
+		west_germany_event_air_transport.2
+		west_germany_event_air_transport.3
 	}
 }

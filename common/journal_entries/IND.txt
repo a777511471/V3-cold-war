@@ -1,0 +1,38 @@
+je_august_revolution = { #八月革命
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	possible = { #激活条件	
+		exists = c:IND		
+	}
+
+	complete = { #完成条件
+        c:USA = { 
+            relations:root >= 50
+        }		
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 50
+	}
+
+    on_complete = {
+		trigger_event = {
+			id = ind.1
+			popup = yes
+		}
+    }
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = peaceful_reunification_of_korea_goal		 
+		    NOT = { exists = c:IDN }				
+		}	
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}

@@ -5,7 +5,6 @@
 			first_name = "Gabriel_gonzalez"
 			last_name = "Videla"
 			historical = yes
-			ig_leader = yes #利益集团领袖
 			ruler = yes
 			birth_date = 1898.11.22
 			dna = dna_president_joaquin_prieto
@@ -14,5 +13,44 @@
 			traits = {
 			}
 		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_democratic_socialism #民主社会主义者
+			traits = {
+			}
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_market_liberal #市场自由主义者
+		}			
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_trade_unions #工会
+			religion = rel:atheist #无神论			
+			ideology = ideology_democratic_socialism #民主社会主义者
+			traits = {
+			}
+		}
+
+		create_character = {
+			#波拿巴
+    		dna = dna_franklin_buchanan				
+			last_name = "Bonaparte"
+			culture = cu:french
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			commander_rank = commander_rank_1
+    		ideology = ideology_bonapartist
+    		traits = {
+				traditionalist_commander
+				expert_offensive_planner
+    		}  
+		}	
 	}
 }

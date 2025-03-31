@@ -10,6 +10,25 @@
 			interest_group = ig_armed_forces #军队
 			ideology = ideology_ethno_nationalist #族裔民族主义者
 			birth_date = 1870.5.24
-		}	
+		}
+
+		create_character = {
+			#罗伯特·贝格
+			dna = dna_pershing					
+			historical = yes
+			first_name = Robert
+			last_name = Berge
+			birth_date = 1886.4.11
+			culture = cu:australian
+			religion = rel:protestant #新教							
+    		is_agitator = yes #鼓动者
+			interest_group = ig_devout #教会
+			ideology = ideology_jingoist_leader #沙文主义者
+			traits = {
+				demagogue #煽动者				
+				ambitious #雄心勃勃
+				strong #健硕	
+			}
+		}			
 	}
 }

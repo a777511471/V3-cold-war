@@ -1,0 +1,104 @@
+﻿# 加法+	add
+# 减法-	subtract
+# 乘法*	multiplier
+# 除法/	divide
+
+
+#【人口数值计算】
+# 避免人口是小于1的数值
+#value_country_pop = {
+#	value = total_population
+#	min = 1
+#}
+
+# 计算出附属国的总人口	（关税同盟不在is_subject_of的范围内，路径"common\subject_types\00_subject_types.txt"中的代码"subject_type_customs_union={subservient_to_overlord=no}"定义这一点）
+#value_subject_total_pop = {
+#	value = total_population_including_subjects
+#	subtract = total_population
+#	min = 0
+#}
+
+# 对附属国人口进行缩放
+#value_subject_pop = {
+#	value = value_subject_total_pop
+#	multiplier = 0.25	# 四分之一
+#}
+
+# 再计算国家人口与缩放后的附属国人口之和
+#value_cs_total_pop = {
+#	value = total_population
+#	add = value_subject_pop
+#}
+
+
+# 【低人口情况】
+# 先于线性衰减范围内进行缩放
+value_low_pop_rbpw_mult_wip = {
+	value = total_population	#value_cs_total_pop
+	divide = 4
+}
+value_low_pop_rbpw_mult_wip2 = {
+	value = total_population
+	divide = 2
+}
+value_low_pop_rbpw_mult_wip3 = {
+	value = total_population
+	divide = 1.34
+}
+value_low_pop_rbpw_mult_wip4 = {
+	value = total_population
+	divide = 0.8
+}
+value_low_pop_rbpw_mult_wip5 = {
+	value = total_population
+	divide = 0.53
+}
+value_low_pop_rbpw_mult_wip6 = {
+	value = total_population
+	divide = 0.4
+}
+value_low_pop_rbpw_mult_wip7 = {
+	value = total_population
+	divide = 0.32
+}
+value_low_pop_rbpw_mult_wip8 = {
+	value = total_population
+	divide = 0.27
+}
+value_low_pop_rbpw_mult_wip9 = {
+	value = total_population
+	divide = 0.23
+}
+value_low_pop_rbpw_mult_wip10 = {
+	value = total_population
+	divide = 0.2
+}
+# 再计算得出最终的修饰剂倍增值
+value_low_pop_rbpw_mult = {
+	value = 1
+	divide = value.setvalue_low_pop_rbpw_mult
+}
+
+
+# 【高人口情况】
+# 先减去低人口范围的数值，使线性衰减区间对齐至0
+value_high_pop_rbpw_mult_wip_1 = {
+	value = total_population	#value_cs_total_pop
+	subtract = 20000000	# 20M	20,000,000		2*10^7
+}
+
+# 然后于线性衰减范围内进行缩放，同时设定约束
+value_high_pop_rbpw_mult_wip_2 = {
+	value = value_high_pop_rbpw_mult_wip_1
+	divide = 360000000	# 360M	360,000,000		3.6*10^8
+	min = 0
+	max = 0.5	# 除了这个约束，其它的约束都并非必要
+}
+
+# 再计算得出最终最终的修饰剂倍增值
+#value_high_pop_rbpw_mult = {
+#	value = 0
+#	add = value_high_pop_rbpw_mult_wip_2
+#	min = 0
+#	max = 0.5
+#}

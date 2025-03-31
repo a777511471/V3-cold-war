@@ -1,17 +1,45 @@
 ﻿CHARACTERS = {
 	c:BEL = {
 		create_character = {
-			#查理亲王
-			first_name = "Charles"
-			last_name = "Qinwang"
+			#摄政王查理亲王
+			dna = dna_bel_leopold_iii_saxe_coburg_gotha		
+			historical = yes			
+			first_name = "Charles1"
+			last_name = "von_Sachsen-Coburg-Gotha"
 			culture = cu:south_german
 			religion = rel:protestant
 			ruler = yes
 			birth_date = 1890.12.16
-			dna = dna_king_leopold_01
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
+			set_character_immortal = yes #长期存在				
 			traits = {
+		 	        traditionalist_commander
+					basic_political_operator
+					cruel
+					persistent		
+			}
+		}	
+
+		create_character = {
+			#王子博杜安一世
+			dna = dna_bel_leopold_iii_saxe_coburg_gotha			
+			historical = yes			
+			first_name = "Baudouin_I"
+			last_name = "von_Sachsen-Coburg-Gotha"
+			culture = cu:south_german
+			religion = rel:catholic
+			heir = yes	
+			birth_date = 1930.9.7
+			interest_group = ig_intelligentsia
+			ideology = ideology_moderate
+			set_character_immortal = yes #长期存在				
+			traits = {
+		 	        traditionalist_commander
+					basic_political_operator
+					cruel
+					persistent
+					pious #虔诚				
 			}
 		}	
 	}

@@ -1,18 +1,55 @@
 ﻿CHARACTERS = {
 	c:MGL = {
 		create_character = {
-			#冈奇金·布曼增迪
+			#霍尔洛·乔巴山，总司令	
+			dna = dna_king_rama_03				
+			historical = yes	
+			ruler = yes					
 			is_general = yes
-			commander_rank = commander_rank_ruler
-			first_name = "Gunchkin"
-			last_name = "Bumanzendi"
-			ig_leader = yes #利益集团领袖
-			ruler = yes
-			birth_date = 1881.9.11
+			commander_rank = commander_rank_ruler			
+			first_name = "Choibalsan"
+			last_name = "Khorloogiin"
+			birth_date = 1895.2.8
+			religion = rel:atheist #无神论			
 			interest_group = ig_armed_forces #军队
-			ideology = ideology_vanguardist #意识形态先锋队主义者
+			ideology = ideology_stalin #意识形态斯大林主义者
+			traits = {
+				expensive_tastes #昂贵嗜好
+				brave #勇敢
+				persistent #执着			
+			}
+		}	
+
+		create_character = {
+			#冈奇金·布曼增迪，蒙古军队领袖
+    		dna = dna_roosevelt		
+			historical = yes			
+			first_name = "Bumanzendi"
+			last_name = "Gunchkin"
+			ig_leader = yes #利益集团领袖
+			birth_date = 1881.9.11
+			religion = rel:atheist #无神论			
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_stalin #意识形态斯大林主义者
 			traits = {
 			}
-		}		
+		}	
+
+		create_character = {
+			#尤睦佳·泽登巴尔，蒙古农业领袖、中将
+    		dna = dna_truman		
+			historical = yes			
+			is_general = yes
+			commander_rank = commander_rank_3
+			first_name = "Zedenbal"
+			last_name = "Youmujia"
+			ig_leader = yes #利益集团领袖
+			birth_date = 1916.9.17
+			religion = rel:atheist #无神论			
+			interest_group = ig_rural_folk #农民
+			ideology = ideology_vanguardist #意识形态列宁主义者
+			traits = {
+			}
+		}				
 	}
 }

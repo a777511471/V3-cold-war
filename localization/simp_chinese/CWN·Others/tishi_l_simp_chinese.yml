@@ -1,0 +1,27 @@
+﻿l_simp_chinese:
+#特别行政区是根据宪法规定设立的省级或州级行政区，与省、州、自治区、直辖市同属直辖于中央政府的地方行政区域。"
+
+ DIPLO_ACTION_RELATIONS_NEUTRAL_OR_GREATER:0 "DIPLO作关系中性或更大。"
+
+ subject_type_special_administrative_region:0 "监管国"
+ subject_type_special_administrative_region_no_icon:0 "监管国"
+ concept_special_administrative_region_desc:0 "监管国，指国际关系中名义上完全享有主权，但其国内政治、军事和外交受战胜国干预的战败国，当监管国可能出现政治变革之时，宗主国将付诸武力干涉；另外，由于国势弱小，需要有一个强大国家监管的国家也常被称为监管国。监管国属于二战后国际关系中出现的政治术语，出现于第二次世界大战结束后。"
+ concept_semi_autonomous_colony_desc:0 "殖民[concept_country]在[concept_decentralized_nation]发起的定居行动。一个未来的殖民国必须有[SelectLocalization(GetPlayer.IsValid,'concept_colony_desc_added','殖民事务')][concept_institution]和在该[concept_strategic_region]的[concept_interest]。一开始，只有一个[concept_province]会被夺取。邻近$concept_provinces$被$concept_colonized$的速率取决于$concept_country$的[concept_colonial_growth]，并且在此期间产生[concept_tension]。"
+ concept_satellite_desc:0 "卫星国，指国际关系中名义上完全享有主权，但其国内政治、军事和外交受强权干预的国家，强权国家常被称为宗主国，当卫星国可能出现政治变革之时，宗主国将付诸武力干涉；另外，由于国势弱小，需要有一个强大国家保护的国家也常被称为卫星国。卫星国属于现代国际关系中出现的政治术语，出现于第二次世界大战结束后冷战时期。"
+
+ AGITATOR_POLITICAL_MOVEMENT:0 "鼓动者来到我国。"
+
+ building_group_bg_manufacturing_allowed_collectivization_add:0 "工人所有的制造业建筑比例"
+ building_group_bg_manufacturing_allowed_collectivization_add_desc:0 "工人合作社所有占所有制造业建筑的比例"
+
+ building_group_bg_mining_allowed_collectivization_add:0 "工人所有的采矿业建筑比例"
+ building_group_bg_mining_allowed_collectivization_add_desc:0 "工人合作社所有占所有采矿业建筑的比例"
+
+ building_group_bg_service_allowed_collectivization_add:0 "工人所有的服务业建筑比例"
+ building_group_bg_service_allowed_collectivization_add_desc:0 "工人合作社所有占所有服务业建筑的比例"
+
+ building_group_bg_urban_facilities_allowed_collectivization_add:0 "工人所有的城市建筑比例"
+ building_group_bg_urban_facilities_allowed_collectivization_add_desc:0 "工人合作社所有占所有城市建筑的比例"
+
+ foreign_investment_rights_proposal_third_party_break_declined_name:0 "提案受拒"
+ foreign_investment_rights_proposal_third_party_break_declined_desc:0 "外国投资提案遭到第三方拒绝"

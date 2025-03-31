@@ -6,12 +6,20 @@
 			last_name = "Selassie"
 			culture = cu:amhara
 			ruler = yes
-			ig_leader = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_reformer #改良主义者
 			birth_date = 1892.7.23
 			traits = {
 			}
 		}
+		create_character = {
+			culture = cu:tigray
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			commander_rank = commander_rank_1
+			traits = {
+			}
+		}		
 	}
 }

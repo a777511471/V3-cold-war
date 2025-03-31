@@ -1,0 +1,226 @@
+﻿CHARACTERS = {
+	c:NZL = {
+		create_character = {
+			#总督伯纳德·弗雷伯格
+			dna = dna_pershing			
+			first_name = "Bernard"
+			last_name = "Freiberg"
+			historical = yes
+			noble = yes #贵族成员			
+			ig_leader = yes #利益集团领袖
+			birth_date = 1889.3.21		
+			is_general = yes					
+            commander_rank = commander_rank_3			
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_authoritarian #威权主义者
+			traits = {
+			}
+		}	
+
+		create_character = {
+			#彼得·弗雷泽
+    		dna = dna_truman			
+			historical = yes
+			first_name = Peter
+			last_name = Fraser
+			birth_date = 1884.8.28
+			culture = cu:scottish
+			religion = rel:protestant #新教								
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_democratic_socialism #民主社会主义者
+			traits = {
+				expert_political_operator #政治运作专家
+				master_bureaucrat #高明官僚
+				sickly #多病		
+			}
+		}
+
+		create_character = {
+			#农民领袖维克多·威尔科克斯		
+			dna = dna_thomas_jesup							
+			historical = yes
+			first_name = Viktor
+			last_name = Willcox
+			birth_date = 1912.11.6
+			religion = rel:protestant #新教								
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_rural_folk #农民
+			ideology = ideology_communist #共产主义者
+			traits = {
+				expert_political_operator #政治运作专家
+				master_bureaucrat #高明官僚		
+			}
+		}
+
+		create_character = {
+			#芬坦·沃尔什
+			dna = dna_thomas_jesup			
+			historical = yes
+			first_name = Fantan
+			last_name = Walshe
+			birth_date = 1894.8.13
+			culture = cu:irish
+			religion = rel:protestant #新教								
+    		is_agitator = yes #鼓动者
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_democratic_socialism #民主社会主义者
+			traits = {
+				demagogue #煽动者				
+				ambitious #雄心勃勃
+				strong #健硕	
+			}
+		}
+
+		create_character = {
+			#埃鲁埃拉·蒂里卡坦
+			dna = dna_david_farragut			
+			historical = yes
+			first_name = Eluela
+			last_name = Tilikatan
+			birth_date = 1895.1.5
+			culture = cu:maori	
+			religion = rel:protestant #新教							
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_devout #教会
+			ideology = ideology_democratic_socialism #民主社会主义者
+			traits = {
+				cautious #谨慎
+				brave #勇敢
+				reserved #内敛
+			}
+		}
+
+		create_character = {
+			#陆军少将哈罗德·巴罗克拉夫
+    		dna = dna_franklin_buchanan					
+			first_name = "Harold"
+			last_name = "Barokrav"			
+			historical = yes
+			birth_date = 1894.6.23	
+			ig_leader = yes #利益集团领袖			
+			noble = yes #贵族成员			
+			is_general = yes					
+            commander_rank = commander_rank_2		
+			interest_group = ig_armed_forces #军队
+			traits = {			
+			}
+		}	
+
+		create_character = {
+			#陆军准将威廉·金特里
+    		dna = dna_truman				
+			first_name = "Wylem"
+			last_name = "Kintrey"			
+			historical = yes
+			birth_date = 1899.2.20		
+			noble = yes #贵族成员			
+			is_general = yes			
+			culture = cu:british								
+            commander_rank = commander_rank_1	
+			interest_group = ig_armed_forces #军队
+			traits = {			
+			}
+		}	
+
+		create_character = { #西德尼·霍兰德	
+			dna = ecchi_dna_woodrow_wilson		
+			first_name = "Sidney"
+			last_name = "Holland"			
+			historical = yes
+			birth_date = 1893.10.18					
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_industrialists #实业家
+		    ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+				cautious #谨慎
+				brave #勇敢
+				reserved #内敛
+			}
+		}			
+
+		create_character = {	
+			culture = cu:british		
+			religion = rel:atheist #无神论							
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_petty_bourgeoisie #小市民
+		    ideology = ideology_syndicalism #工团主义者
+			traits = {
+				cautious #谨慎
+				brave #勇敢
+				reserved #内敛
+			}
+		}				
+
+		create_character = {
+			#陆军中将爱德华·普蒂克爵士
+			dna = ecchi_dna_adolf_hitler	
+			first_name = "Edward"
+			last_name = "Putic"			
+			historical = yes
+			birth_date = 1890.6.26	
+			noble = yes #贵族成员			
+			is_general = yes					
+            commander_rank = commander_rank_3			
+			interest_group = ig_armed_forces #军队
+			traits = {
+				inspirational_orator #在啤酒馆鼓舞人心的演说家
+				firebrand #煽动大师				
+				strong #健硕
+ 				imperious #盛气凌人
+				tactful #圆滑				
+			}
+		}	
+
+		create_character = { #海军少将彼得·菲普斯爵士
+			historical = yes
+			is_admiral = yes
+			first_name = Peter
+			last_name = Phipps
+			interest_group = ig_armed_forces #军队	
+			birth_date = 1908.12.7		
+			commander_rank = commander_rank_2
+			traits = {
+				expert_artillery_commander
+				expert_offensive_planner
+                basic_naval_commander
+			}			
+		}
+
+		create_character = {
+			#亚历山大·加尔布雷思	
+			dna = dna_william_shubrick				
+			first_name = Alexander
+			last_name = Galbraith
+			birth_date = 1883.2.15
+    		is_agitator = yes #鼓动者
+			historical = yes
+			religion = rel:atheist #无神论
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_vanguardist #马列主义者
+			traits = {
+				demagogue #煽动者				
+				ambitious #雄心勃勃
+				strong #健硕							
+			}	
+		}			
+
+		create_character = {
+			#埃尔西·洛克
+			female = yes			
+			first_name = Elsie
+			last_name = Lohk
+			birth_date = 1912.8.17
+    		is_agitator = yes #鼓动者
+			historical = yes
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_syndicalism #工团主义者
+			traits = {
+				inspirational_orator #演说家	
+				literary #文学家	
+				strong #健硕							
+			}	
+		}								
+	}
+}
+

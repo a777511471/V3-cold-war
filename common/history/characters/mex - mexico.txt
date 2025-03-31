@@ -36,12 +36,24 @@
 			historical = yes
 			ig_leader = yes
 			interest_group = ig_intelligentsia
-			ideology = ideology_reformer
+			ideology = ideology_atheist #虚无主义者
 			is_general = yes
 			commander_rank = commander_rank_4
 			traits = {
 				innovative #创新精神
 			}		
 		}
+
+		create_character = { #教会将领玛丽亚·胡安娜	
+			first_name = Maria
+			last_name = Juana
+			is_general = yes
+			commander_rank = commander_rank_1
+			female = yes
+			interest_group = ig_devout
+			ideology = ideology_land_reformer #土地改革者
+			traits = {
+			}
+		}		
 	}
 }

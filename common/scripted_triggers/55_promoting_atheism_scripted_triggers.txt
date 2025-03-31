@@ -1,0 +1,47 @@
+# 专制乌托邦主义者
+# ideology_despotic_utopian
+
+## 支持者
+## 虚无主义者 共产主义者 实证主义者
+has_approve_state_atheism_ideology = {
+    OR = {
+        has_ideology = ideology:ideology_atheist
+        has_ideology = ideology:ideology_communist
+        has_ideology = ideology:ideology_positivist
+    }
+}
+
+## 反对者
+## 传统主义者(兼容变体mod) 少数派传统主义者 神权政治主义者 整合主义者 正统派
+has_disapprove_istate_atheism_deology = {
+    OR = {
+        # has_ideology = ideology:ideology_traditionalist
+        has_traditionalist_ideology = yes
+        has_ideology = ideology:ideology_traditionalist_minoritarian
+        has_ideology = ideology:ideology_theocrat
+        has_ideology = ideology:ideology_integralist
+        has_ideology = ideology:ideology_legitimist
+    }
+}
+
+is_government_approve_state_atheism_advantageous = {
+    any_interest_group = {
+        is_in_government = yes
+        leader = {
+            has_approve_state_atheism_ideology = yes
+        }
+    }
+    num_approve_atheism_ig_ratio >= 0.3
+    num_approve_atheism_ig_relative >= 0.1
+}
+
+is_government_disapprove_state_atheism_advantageous = {
+    any_interest_group = {
+        is_in_government = yes
+        leader = {
+            has_disapprove_istate_atheism_deology = yes
+        }
+    }
+    num_disapprove_atheism_ig_ratio >= 0.2
+    num_disapprove_atheism_ig_relative >= 0.1
+}

@@ -5,9 +5,9 @@
 #
 PRC = { 
 	dynamic_country_name = {
-		name = dyn_c_jzz_PRC
+		name = dyn_c_jzz_PRC #中华帝国
 		
-		adjective = PRC_ADJ
+		adjective = CHN_ADJ
 		#is_main_tag_only = yes 
 		priority = 0
 		
@@ -16,9 +16,9 @@ PRC = {
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_c_republic_PRC
+		name = dyn_c_republic_PRC #中华民国
 		
-		adjective = PRC_ADJ
+		adjective = CHN_ADJ
 		#is_main_tag_only = yes
 		priority = 0
 		
@@ -28,7 +28,7 @@ PRC = {
 		}
 	}
 	dynamic_country_name = {#
-		name = dyn_c_societ_republic_PRC
+		name = dyn_c_societ_republic_PRC #中国共产党
 		
 		adjective = PRC_ADJ
 		#is_main_tag_only = yes
@@ -49,6 +49,7 @@ PRC = {
 		trigger = {
 			exists= c:PRC
 			scope:actor ?= {
+				has_variable = kaiguodadadadian_var
 				var:kaiguodadadadian_var >= 1 
 			}
 			coa_def_communist_flag_trigger = yes
@@ -57,9 +58,9 @@ PRC = {
 	}
 	
 	dynamic_country_name = {
-		name = dyn_shenquan_PRC
+		name = dyn_shenquan_PRC #中国实证党
 		
-		adjective = PRC_ADJ
+		adjective = CHN_ADJ
 		#is_main_tag_only = yes 
 		priority = 0
 		
@@ -71,26 +72,24 @@ PRC = {
 
 CHI = { 
 	dynamic_country_name = {
-		name = dyn_c_jzz_CHI
+		name = dyn_c_jzz_CHI #中华帝国
 		
 		adjective = CHI_ADJ
 		#is_main_tag_only = yes 
 		priority = 0
 		
 		trigger = {
-			NOT = { country_has_primary_culture = cu:manchu }
 			coa_def_monarchy_flag_trigger = yes
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_c_republic_CHI
+		name = dyn_c_republic_CHI #中华民国
 		
 		adjective = CHI_ADJ
 		#is_main_tag_only = yes
 		priority = 0
 		
 		trigger = {
-			NOT = { country_has_primary_culture = cu:manchu }
 			coa_def_republic_flag_trigger = yes
 			NOT = { coa_def_communist_flag_trigger = yes }
 		}
@@ -103,76 +102,17 @@ CHI = {
 		priority = 0
 		
 		trigger = {
-			NOT = { country_has_primary_culture = cu:manchu }
 			coa_def_communist_flag_trigger = yes
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_shenquan_CHI
+		name = dyn_shenquan_CHI #中华神权国
 		
 		adjective = CHI_ADJ
 		#is_main_tag_only = yes
 		priority = 0
 		
 		trigger = {
-			NOT = { country_has_primary_culture = cu:manchu }
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_jzz_CHIQNG
-		
-		adjective = dyn_c_great_qing_adj
-		#is_main_tag_only = yes 
-		priority = 10
-		
-		trigger = {
-			scope:actor = {
-				country_has_primary_culture = cu:manchu
-			}
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_republic_CHIQNG
-		
-		adjective = dyn_c_great_qing_adj
-		#is_main_tag_only = yes
-		priority = 10
-		
-		trigger = {
-			scope:actor = {
-				country_has_primary_culture = cu:manchu
-			}
-			coa_def_republic_flag_trigger = yes
-			NOT = { coa_def_communist_flag_trigger = yes }
-		}
-	}
-	dynamic_country_name = {#
-		name = dyn_c_societ_republic_CHIQNG
-		
-		adjective = dyn_c_great_qing_adj
-		#is_main_tag_only = yes
-		priority = 10
-		
-		trigger = {
-			scope:actor = {
-				country_has_primary_culture = cu:manchu
-			}
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_shenquan_CHIQNG
-		
-		adjective = dyn_c_great_qing_adj
-		#is_main_tag_only = yes
-		priority = 10
-		
-		trigger = {
-			scope:actor = {
-				country_has_primary_culture = cu:manchu
-			}
 			coa_def_theocracy_flag_trigger = yes
 		}
 	}
@@ -180,79 +120,47 @@ CHI = {
 
 CHN = { 
 	dynamic_country_name = {
-		name = dyn_c_jzz_CHI
+		name = dyn_c_jzz_CHI #中华帝国
 		
 		adjective = CHN_ADJ
 		#is_main_tag_only = yes 
 		priority = 0
 		
 		trigger = {
-			NOT = { country_has_primary_culture = cu:manchu }
 			coa_def_monarchy_flag_trigger = yes
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_c_republic_CHI
+		name = dyn_c_republic_CHI #中华民国
 		
 		adjective = CHN_ADJ
 		#is_main_tag_only = yes
 		priority = 0
 		
 		trigger = {
-			NOT = { country_has_primary_culture = cu:manchu }
 			coa_def_republic_flag_trigger = yes
 			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 	}
 	dynamic_country_name = {#
-		name = dyn_c_people_republic_CHI
+		name = dyn_c_people_republic_CHI #中华人民共和国
 		
 		adjective = CHN_ADJ
 		#is_main_tag_only = yes
 		priority = 0
 		
 		trigger = {
-			NOT = { country_has_primary_culture = cu:manchu }
 			coa_def_communist_flag_trigger = yes
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_shenquan_CHI
+		name = dyn_shenquan_CHI #中华神权国
 		
 		adjective = CHN_ADJ
 		#is_main_tag_only = yes
 		priority = 0
 		
 		trigger = {
-			NOT = { country_has_primary_culture = cu:manchu }
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_jzz_CHIQNG
-		
-		adjective = dyn_c_great_qing_adj
-		#is_main_tag_only = yes 
-		priority = 10
-		
-		trigger = {
-			scope:actor = {
-				country_has_primary_culture = cu:manchu
-			}
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_shenquan_CHIQNG
-		
-		adjective = dyn_c_great_qing_adj
-		#is_main_tag_only = yes
-		priority = 10
-		
-		trigger = {
-			scope:actor = {
-				country_has_primary_culture = cu:manchu
-			}
 			coa_def_theocracy_flag_trigger = yes
 		}
 	}
@@ -436,54 +344,6 @@ KAZ = {
 					}
 				}
 			}
-		}
-	}
-} 
-
-TIB = { 
-	dynamic_country_name = {
-		name = dyn_c_jzz_TIB
-		
-		adjective = TIB_ADJ
-		#is_main_tag_only = yes 
-		priority = 0
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_republic_TIB
-		
-		adjective = TIB_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-			NOT = { coa_def_communist_flag_trigger = yes }
-		}
-	}
-	dynamic_country_name = {#
-		name = dyn_c_societ_republic_TIB
-		
-		adjective = TIB_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_shenquan_TIB
-		
-		adjective = TIB_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
 		}
 	}
 } 
@@ -3245,7 +3105,7 @@ LAN = {
 } 
 TUR = { 
 	dynamic_country_name = {
-		name = dyn_c_jzz_TUR
+		name = dyn_c_jzz_TUR #土耳其帝国
 		
 		adjective = TUR_ADJ
 		#is_main_tag_only = yes 
@@ -3256,7 +3116,7 @@ TUR = {
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_c_republic_TUR
+		name = dyn_c_republic_TUR #土耳其共和国
 		
 		adjective = TUR_ADJ
 		#is_main_tag_only = yes
@@ -3267,8 +3127,8 @@ TUR = {
 			NOT = { coa_def_communist_flag_trigger = yes }
 		}
 	}
-	dynamic_country_name = {#
-		name = dyn_c_societ_republic_TUR
+	dynamic_country_name = {
+		name = dyn_c_societ_republic_TUR #土耳其人民共和国
 		
 		adjective = TUR_ADJ
 		#is_main_tag_only = yes
@@ -3279,7 +3139,7 @@ TUR = {
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_shenquan_TUR
+		name = dyn_shenquan_TUR #土耳其哈里发国
 		
 		adjective = TUR_ADJ
 		#is_main_tag_only = yes
@@ -3290,53 +3150,7 @@ TUR = {
 		}
 	}
 } 
-AFG = { 
-	dynamic_country_name = {
-		name = dyn_c_jzz_AFG
-		
-		adjective = AFG_ADJ
-		#is_main_tag_only = yes 
-		priority = 0
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_c_republic_AFG
-		
-		adjective = AFG_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-			NOT = { coa_def_communist_flag_trigger = yes }
-		}
-	}
-	dynamic_country_name = {#
-		name = dyn_c_societ_republic_AFG
-		
-		adjective = AFG_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-	dynamic_country_name = {
-		name = dyn_shenquan_AFG
-		
-		adjective = AFG_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-} 
+
 HAW = { 
 	dynamic_country_name = {
 		name = dyn_c_jzz_HAW
@@ -3698,14 +3512,7 @@ AST = {
 		priority = 10
 		
 		trigger = {
-			exists = c:GBR
-			c:GBR = {
-				has_diplomatic_pact = {
-					who = c:AST
-					type = puppet
-					is_initiator = yes
-				}
-			}
+			coa_def_subject_trigger = yes
 		}  
 	}
 	dynamic_country_name = {
@@ -3727,6 +3534,84 @@ AST = {
 		}
 	}
 } 
+
+OCL = { 
+	dynamic_country_name = {
+		name = dyn_c_jzz_OCL
+		
+		adjective = OCL_ADJ
+		#is_main_tag_only = yes 
+		priority = 0
+		
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_republic_OCL
+		
+		adjective = OCL_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+			NOT = { coa_def_communist_flag_trigger = yes }
+		}
+	}
+	dynamic_country_name = {#
+		name = dyn_c_societ_republic_OCL
+		
+		adjective = OCL_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_shenquan_OCL
+		
+		adjective = OCL_ADJ
+		#is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_SHENG_OCL
+
+		adjective = OCL_ADJ
+		#is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			coa_def_subject_trigger = yes
+		}  
+	}
+	dynamic_country_name = {
+		name = dyn_c_zizhiling_OCL
+
+		adjective = OCL_ADJ
+		#is_main_tag_only = yes
+		priority = 10
+		
+		trigger = {
+			exists = c:GBR
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:OCL
+					type = dominion
+					is_initiator = yes
+				}
+			}
+		}
+	}
+} 
+
 NZL = { 
 	dynamic_country_name = {
 		name = dyn_c_jzz_NZL
@@ -3781,14 +3666,7 @@ NZL = {
 		priority = 10
 		
 		trigger = {
-			exists = c:GBR
-			c:GBR = {
-				has_diplomatic_pact = {
-					who = c:NZL
-					type = puppet
-					is_initiator = yes
-				}
-			}
+			coa_def_subject_trigger = yes
 		}  
 	}
 	dynamic_country_name = {

@@ -1,0 +1,81 @@
+namespace = guojialianmeng
+guojialianmeng.1 = { #成立欧盟
+	type = country_event
+	placement = root
+	
+	title = guojialianmeng.1.t
+	desc = guojialianmeng.1.d
+	flavor = guojialianmeng.1.f
+	
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/oumeng.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/欧盟.dds"
+	
+	duration = 3
+	
+    immediate = {
+    }
+
+    option = {
+		name = guojialianmeng.1.a
+		add_journal_entry = {
+			type = je_ouzhoulianmeng
+		}
+		add_modifier = {
+			name = ouzhoulianmeng
+			years = 10
+		}
+		default_option = yes
+    }
+}
+
+guojialianmeng.2 = { #成立北约
+	type = country_event
+	placement = root
+	
+	title = guojialianmeng.2.t
+	desc = guojialianmeng.2.d
+	flavor = guojialianmeng.2.f
+	
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/oumeng.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/欧盟.dds"
+	
+	duration = 3
+	
+    immediate = {
+    }
+
+    option = {
+		name = guojialianmeng.2.a
+		default_option = yes		
+	c:USA ?= {		
+		create_power_bloc = {
+			name = Americans #美利坚合众国
+
+			map_color = { 66  94  193 }
+
+			identity = identity_military_treaty_organization
+			principle = principle_defensive_cooperation_1
+		}
+	}
+			c:GBR ?= { join_power_bloc = c:USA }
+			c:FRA ?= { join_power_bloc = c:USA }
+			c:NET ?= { join_power_bloc = c:USA }
+			c:BEL ?= { join_power_bloc = c:USA }
+			c:LUX ?= { join_power_bloc = c:USA }
+			c:DEN ?= { join_power_bloc = c:USA }
+			c:NOR ?= { join_power_bloc = c:USA }
+			c:ICL ?= { join_power_bloc = c:USA }
+			c:POR ?= { join_power_bloc = c:USA }
+			c:ITA ?= { join_power_bloc = c:USA }	
+    }	
+}

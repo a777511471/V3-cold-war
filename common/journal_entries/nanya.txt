@@ -1,0 +1,53 @@
+je_accept_the_bengali_people = { #接纳孟加拉人
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		c:PAK ?= ROOT
+		exists = c:PAK				
+	}
+
+	possible = { #激活条件
+		c:PAK ?= ROOT
+		exists = c:PAK								
+	}
+
+	complete = { #完成条件
+		has_technology_researched = pan-nationalism      
+		has_law = law_type:law_multicultural 
+		NOT = {
+        	has_law = law_type:law_colonial_exploitation #民族剥削				
+		}	
+			#radical_fraction = {
+				value < 0.1
+			}		
+	}
+
+	on_complete = { #如果完成
+		trigger_event = {
+			id = pak.1
+		}
+	}
+
+	fail = { #失败条件 
+    OR = {
+		has_law = law_type:law_national_supremacy
+		has_law = law_type:law_ethnostate
+    }
+        		has_law = law_type:law_colonial_exploitation
+			#radical_fraction = {
+				value > 0.5
+			}	
+	}
+
+	on_fail = { #如果失败
+		trigger_event = {
+			id = pak.2
+		}
+	}
+
+	weight = 10000
+	should_be_pinned_by_default = yes
+}
+

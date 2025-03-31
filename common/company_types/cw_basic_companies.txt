@@ -1,0 +1,637 @@
+
+
+# 航空公司
+company_airline = {
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {   
+        building_aircraft_factory #飞机厂   
+	}
+	
+	potential = {
+
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_aircraft_factory #飞机厂  
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {		
+        building_group_bg_service_throughput_add = 0.1 #服务业吞吐量
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# 通用医药有限公司
+company_pharmaceutical_companies = {
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_pharmaceutical_factory #医疗用品厂
+		building_chemical_plants #化工厂
+		building_rubber_factory #橡胶厂
+        building_plastic_products_factory #塑料厂
+	}
+	
+	potential = {
+
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_pharmaceutical_factory #医疗用品厂
+					is_building_type = building_chemical_plants #化工厂
+					is_building_type = building_rubber_factory #橡胶厂
+                    is_building_type = building_plastic_products_factory #塑料厂                 
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_mortality_mult = -0.02 #死亡率		
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_basic_electrics = { #电器公司
+	icon = "gfx/interface/icons/company_icons/basic_electrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+		building_electrics_industry #电子产品厂
+		building_home_appliance_factory #家电厂
+		building_electronic_parts_factory #电子零件厂
+		building_computer_factory #计算机厂
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_electrics_industry #电子产品厂
+					is_building_type = building_home_appliance_factory #家电厂
+					is_building_type = building_electronic_parts_factory #电子零件厂	
+					is_building_type = building_computer_factory #计算机厂	      					              
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_power_plant_throughput_add = 0.1
+	}
+}
+
+#通用机械工业公司
+company_machinery_industry_company = { #通用机械工业公司
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_machine_factory #机器厂
+		building_large_equipment_factory #大型设备厂
+		building_motor_industry #动力机械厂
+        building_tooling_workshops #工具厂
+		building_steel_mills #合金加工厂
+	}
+	
+	potential = {
+
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_machine_factory #机器厂
+					is_building_type = building_large_equipment_factory #大型设备厂
+					is_building_type = building_motor_industry #动力机械厂
+                    is_building_type = building_tooling_workshops #工具厂
+                    is_building_type = building_steel_mills #合金加工厂				              
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_construction_sector_throughput_add = 0.1 #建造部门建筑吞吐量
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_basic_metalworks = { #金属制品公司
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+		building_tooling_workshops
+		building_arms_industry
+		building_artillery_foundries
+	}
+
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_tooling_workshops
+					is_building_type = building_arms_industry
+					is_building_type = building_artillery_foundries
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_army_offense_mult = 0.05
+	}
+}
+
+# 房地产集团
+company_real_estate_group = {
+	icon = "gfx/interface/icons/company_icons/basic_construction.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_real_estate_developers #房地产
+		building_sulfur_mine #非金属矿
+		building_home_appliance_factory #家电厂
+        building_sand_mine #砂石土矿
+	}
+	
+	potential = {
+
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_power_plant #房地产
+					is_building_type = building_sulfur_mine #非金属矿
+					is_building_type = building_home_appliance_factory #家电厂
+					is_building_type = building_sand_mine #砂石土矿                   
+				}
+				level >= 10
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_construction_sector_throughput_add = 0.1 #建造部门建筑吞吐量
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# 交通建设集团
+company_communications_construction = {
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway #铁路
+        building_car_factory #汽车厂  
+        building_aircraft_factory #飞机厂   
+        building_shipyards #造船厂
+	}
+	
+	potential = {
+
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_railway #铁路
+					is_building_type = building_car_factory #汽车厂 
+					is_building_type = building_aircraft_factory #飞机厂
+					is_building_type = shipyards #造船厂                                   
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+        state_infrastructure_from_population_mult = 0.33 #每100K人口产生的基础设施
+        state_infrastructure_from_population_max_mult = 0.33 #来自人口的基础设施上限
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# 电力投资集团
+company_electric_power_investment_group = {
+	icon = "gfx/interface/icons/company_icons/basic_electrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_power_plant #发电厂
+		building_clean_energy_power_station #清洁能源发电站  
+        #核电站      
+	}
+	
+	potential = {
+
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_power_plant #发电厂
+					is_building_type = building_clean_energy_power_station #清洁能源发电站            
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_expected_sol_mult = -0.1 #最低预期生活水平
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+company_basic_oil = { #石油公司
+	icon = "gfx/interface/icons/company_icons/basic_oil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+		building_oil_rig #油井
+        building_refinery #炼油厂
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_oil_rig #油井
+					is_building_type = building_refinery #炼油厂               
+				}
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.1 #移民吸引力
+	}
+}
+
+company_basic_mineral_mining = { #矿物公司
+	icon = "gfx/interface/icons/company_icons/basic_mineral_mining.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+		"dynamic_company_type_guild"
+	}
+	
+	building_types = {
+		building_sulfur_mine #非金属矿
+		building_coal_mine #煤矿
+        building_sand_mine #砂石土矿
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_sulfur_mine #非金属矿
+					is_building_type = building_coal_mine #煤矿
+					is_building_type = building_sand_mine #砂石土矿                 
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_construction_sector_throughput_add = 0.1 #建造部门建筑吞吐量
+	}
+}
+
+company_basic_chemicals = { #化工公司
+	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+		building_chemical_plants #化工厂
+		building_rubber_factory #橡胶厂
+        building_plastic_products_factory #塑料厂
+		building_coal_mine #煤矿		
+	}
+
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_chemical_plants #化工厂
+					is_building_type = building_rubber_factory #橡胶厂
+                    is_building_type = building_plastic_products_factory #塑料厂
+					is_building_type = building_coal_mine #煤矿					
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		unit_supply_consumption_mult = -0.05 #补给消耗
+	}
+}
+
+company_basic_fabrics = { #纺织公司
+	icon = "gfx/interface/icons/company_icons/basic_fabrics.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+	
+	building_types = { 
+        building_fiber_factory #纤维厂
+		building_cotton_plantation #棉花种植园
+        building_silk_plantation #丝绸种植园
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_fiber_factory #纤维厂                
+					is_building_type = building_cotton_plantation #棉花种植园
+					is_building_type = building_silk_plantation #丝绸种植园
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_textile_mills_throughput_add = 0.1 #纺织厂建筑吞吐量
+	}	
+}
+
+
+company_basic_food = { #食品公司
+	icon = "gfx/interface/icons/company_icons/basic_food.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+		building_food_industry #食品厂
+        building_breeding_farm #养殖场
+        building_sugar_factory #制糖厂
+        building_beverage_factory #饮料厂
+        building_livestock_ranch #畜牧场
+	}
+
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_food_industry #食品厂                  
+					is_building_type = building_breeding_farm #养殖场
+					is_building_type = building_sugar_factory #制糖厂
+					is_building_type = building_beverage_factory #饮料厂
+					is_building_type = building_livestock_ranch #畜牧场                  
+				}                
+				level >= 5
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_birth_rate_mult = 0.05 #出生率
+	}
+}
+
+company_basic_motors = { #汽车公司
+	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+        building_car_factory #汽车厂
+		building_motor_industry #动力机械厂
+		building_war_machine_industry #战争机器厂
+	}
+
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_car_factory                    
+					is_building_type = building_motor_industry
+					is_building_type = building_war_machine_industry
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		military_formation_movement_speed_mult = 0.1 #编队速度
+	}
+}
+
+company_basic_colonial_plantations_2 = { #种植园公司
+
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations_2.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+	
+	building_types = {
+		building_coffee_plantation
+		building_sugar_plantation
+		building_tobacco_plantation
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_coffee_plantation
+					is_building_type = building_sugar_plantation
+					is_building_type = building_tobacco_plantation
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_plantations_throughput_add = 0.1 #种植园吞吐量
+	}	
+}
+
+company_basic_wine_and_fruit = { #果园公司
+	icon = "gfx/interface/icons/company_icons/basic_wine_and_fruit.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+	
+	building_types = {
+		building_vineyard_plantation
+		building_banana_plantation
+	}
+
+	possible = { 
+		any_scope_state = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_vineyard_plantation
+					is_building_type = building_banana_plantation
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_plantations_throughput_add = 0.1 #种植园吞吐量
+	}	
+}

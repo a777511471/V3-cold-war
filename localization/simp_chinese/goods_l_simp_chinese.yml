@@ -2,7 +2,7 @@
  plastic: "塑料@money!#green 20#!"
  petrol: "精炼燃料@money!#green 20#!"
  housing_services: "住房服务@money!#green 80#!"
- machine: "机床@money!#green 40#!"
+ machine: "机器@money!#green 40#!"
  equipment: "大型设备@money!#green 80#!"
  computer: "计算机@money!#green 160#!"
  spacecraft: "航天飞行器@money!#green 160#!"
@@ -15,7 +15,7 @@
  aeroplanes: "飞机@money!#green 160#!"
  manowars: "风帆战舰@money!#green #!" #NO
  ironclads: "军用船只@money!#green 160#!"
- dye: "化合物@money!#green 20#!"
+ dye: "工业化合物@money!#green 20#!"
  wool: "羊毛@money!#green #!" #NO
  silk: "丝绸@money!#green #!" #NO
  coal: "煤炭@money!#green 20#!"

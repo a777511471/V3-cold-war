@@ -1,0 +1,25 @@
+﻿l_simp_chinese:
+ je_japan_occupied: "占领时期"
+ je_japan_occupied_reason: "[ROOT.GetCountry.GetName]在第二次世界大战中战败。这不仅仅是一个政权的终结，而是整个国家的重塑。美国的占领军已全面接管东京，曾经不可动摇的军部被瓦解，昔日高高在上的军国主义者被押往法庭。在这个特殊的历史时刻，我们的任务不仅是确保日本的去军事化，更要在占领期限结束前，维护秩序，防止动荡。"
+ je_japan_occupied_goal: "维持占领区稳定，并实现去军事化目标。"
+ 
+ je_japan_mac: "[ROOT.GetCountry.GetRuler.GetLastName]改革"
+ je_japan_mac_goal: "完成一系列改革目标。"
+ je_japan_mac_reason: "一个战败的帝国不应只是被拆解，它必须被彻底重塑。过去的日本，在封建残余和军国主义的双重阴影下疾驰，最终滑向毁灭。而今，在[ROOT.GetCountry.GetRuler.GetLastName]的领导下，日本正进行一场全方位的重构。土地、工业、民生、民主——每一个领域的改革，都将决定这个国家未来的走向。"
+
+ je_japan_mac_modernization: "现代化改革与重建工业体系"
+ je_japan_mac_modernization_reason: "明治维新虽曾让日本迈入近代化，但军国主义的阴影使这一进程走向扭曲。封建性的经济体系，过度集中的产业结构，以及对军工复合体的极端依赖，让日本的现代化带上了毁灭性的色彩。如今，战后的废墟为我们提供了一个机会——摧毁旧有的军工体系，扶持民用工业，推动经济结构的彻底改革，真正建立一个服务于和平与繁荣的日本。"
+ je_japan_mac_modernization_goal: "通过一系列现代化法律，并重建日本的工业体系。"
+
+ je_japan_mac_landreform: "农地改革"
+ je_japan_mac_landreform_reason: "战争的炮火摧毁了日本的城市，但在乡村，另一个沉疴已久的矛盾仍未解决——土地制度。在大地主的掌控下，农民世代受制于封建剥削，而军部则依赖这一体系为战争提供粮食。今日，日本必须彻底废除这一制度，将土地真正归还给耕种的人，让农民成为国家的支柱，而非军国主义的附庸。"
+ je_japan_mac_landreform_goal: "通过法律，完成农地改革，并投资农业生产。"
+
+ je_japan_mac_livelihood: "民生改革"
+ je_japan_mac_livelihood_reason: "一个穷困潦倒的国家，最容易成为极端主义的温床。过去的日本，以战争和扩张为经济动力，如今，它必须学会如何在和平中繁荣。提高民众的生活水平，不仅仅是道义上的需求，更是防止法西斯思想死灰复燃的关键。一个温饱无忧、拥有希望的社会，不会再愿意追随军国主义者走向毁灭。"
+ je_japan_mac_livelihood_goal: "提升日本的平均生活水平，至少五点。"
+
+ je_japan_mac_democratization: "民主改革"
+ je_japan_mac_democratization_reason: "法西斯主义的复辟，往往始于压制，成于纵容。过去的日本，在军部的控制下，言论被封锁，异见者被消灭，政治权利成为少数人的工具。如今，这一切必须终结。真正的民主不仅仅是宪法上的条文，而是每一位国民能够自由表达，能够决定自己国家未来的权利。只有这样，日本才不会再走上毁灭之路。"
+ je_japan_mac_democratization_goal: "通过公平的选举法律，并废除言论管控制度。"
+

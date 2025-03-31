@@ -6,8 +6,9 @@ law_unrestricted_labor = { #无限制劳动
 	progressiveness = -150
 
 	modifier = {
+		country_capitalists_pol_str_mult = 0.25
+		country_aristocrats_pol_str_mult = 0.25
 		building_throughput_add = 0.10 #全国建筑吞吐量（百分比）
-		interest_group_ig_industrialists_pol_str_mult = 0.5
 		state_laborers_mortality_mult = 0.05
 		state_machinists_mortality_mult = 0.05
 		state_radicals_from_sol_change_mult = 0.10
@@ -25,7 +26,7 @@ law_12_hour_working_system = { #十二小时工作制
 	modifier = {
 		building_minimum_wage_mult = 0.03
 		building_throughput_add = 0.07 #全国建筑吞吐量（百分比）
-		interest_group_ig_industrialists_pol_str_mult = 0.3
+		country_capitalists_pol_str_mult = 0.3
 		state_laborers_mortality_mult = 0.03
 		state_machinists_mortality_mult = 0.03
 		state_radicals_from_sol_change_mult = 0.05
@@ -41,8 +42,9 @@ law_10_hour_working_system = { #十小时工作制
 	progressiveness = 0
 	
 	modifier = {
-		building_throughput_add = 0.04
-		interest_group_ig_industrialists_pol_str_mult = 0.1
+		building_minimum_wage_mult = 0.07		
+		country_capitalists_pol_str_mult = 0.1
+		building_throughput_add = 0.05
 	}
 	
 }
@@ -59,8 +61,10 @@ law_8_hour_working_system = { #八小时工作制
 	}
 
 	modifier = {
+		state_working_adult_ratio_add = 0.05			
 		building_minimum_wage_mult = 0.07
 		state_loyalists_from_sol_change_mult = 0.05
+		building_throughput_add = 0.05	
 	}
 	
 }
@@ -77,8 +81,9 @@ law_6_hour_working_system = { #六小时工作制
 	}
 
 	modifier = {
+		state_working_adult_ratio_add = 0.07		
 		building_minimum_wage_mult = 0.10
-		building_throughput_add = -0.05 #全国建筑吞吐量（百分比）
+		building_throughput_add = 0.03 #全国建筑吞吐量（百分比）
 		state_loyalists_from_sol_change_mult = 0.10
 	}
 	

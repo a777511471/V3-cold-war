@@ -1,17 +1,38 @@
 ﻿CHARACTERS = {
 	c:HAI = {
 		create_character = {
-			# Jean-Pierre Boyer, President of Haiti
-			#role = politician # Remove this line
-			first_name = "Jean-Pierre"
-			last_name = "Boyer"
 			ruler = yes
-			age = 60
+			ig_leader = yes			
 			interest_group = ig_armed_forces
-			ideology = ideology_jingoist_leader
+			ideology = ideology_jingoist_leader #沙文主义者
 			traits = {
 				ambitious
 			}
 		}	
+
+		create_character = {
+			religion = rel:atheist #无神论			
+			ig_leader = yes			
+			interest_group = ig_trade_unions
+			ideology = ideology_haitian_abolitionist_leader #海地废奴主义者
+			traits = {
+			}
+		}		
+
+		create_character = {
+			ig_leader = yes			
+			interest_group = ig_rural_folk
+			ideology = ideology_haitian_abolitionist_leader #海地废奴主义者
+			traits = {
+			}
+		}			
+
+		create_character = {
+			ig_leader = yes			
+			interest_group = ig_intelligentsia
+			ideology = ideology_haitian_abolitionist_leader #海地废奴主义者
+			traits = {
+			}
+		}			
 	}
 }

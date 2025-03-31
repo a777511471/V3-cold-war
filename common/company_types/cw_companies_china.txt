@@ -18,6 +18,7 @@ company_tencent = {
 	}		
 	
 	possible = {
+		has_technology_researched = tech_internet #互联网	
 		any_scope_state = {
 			state_region = s:STATE_SHAOZHOU		
 			is_incorporated = yes
@@ -29,7 +30,7 @@ company_tencent = {
 	}
 	
 	prosperity_modifier = {
-		country_tech_spread_mult = 0.15 #科技扩散
+		country_weekly_innovation_max_add = 15 #科技進度上限/最大创新力投入
 	}	
 	
 	ai_weight = {
@@ -48,6 +49,7 @@ company_pinduoduo = {
 		building_furniture_manufacturies
 		building_tooling_workshops
 		building_textile_mills
+		building_food_industry #食品厂
 	}
 	
 	attainable = {
@@ -59,6 +61,7 @@ company_pinduoduo = {
 	}		
 	
 	possible = { 
+		has_technology_researched = tech_big_data #大数据			
 		any_scope_state = {
 			is_incorporated = yes
 			any_scope_building = {
@@ -66,6 +69,7 @@ company_pinduoduo = {
 					is_building_type = building_tooling_workshops
 					is_building_type = building_glassworks
 					is_building_type = building_furniture_manufacturies
+					is_building_type = building_food_industry #食品厂
 				}
 				level >= 3
 			}
@@ -219,9 +223,11 @@ company_maotai = {
 	flavored_company = yes
 	
 	building_types = { 
-		building_food_industry
+		building_food_industry #食品厂
 		building_rice_farm
 		building_wheat_farm
+		building_beverage_factory #饮料厂
+		building_glassworks #玻璃厂
 	}
 	
 	attainable = {
@@ -237,9 +243,11 @@ company_maotai = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_food_industry
+					is_building_type = building_food_industry #食品厂
 					is_building_type = building_rice_farm
 					is_building_type = building_wheat_farm
+					is_building_type = building_beverage_factory #饮料厂
+					is_building_type = building_glassworks #玻璃厂					
 				}
 				level >= 3
 			}
@@ -264,6 +272,7 @@ company_sany_heavy_industry = {
 	flavored_company = yes
 	
 	building_types = { 
+		building_machine_factory #机器工厂
 		building_motor_industry
 		building_steel_mills
 	}
@@ -281,6 +290,7 @@ company_sany_heavy_industry = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
+					is_building_type = building_machine_factory #机器工厂			
 					is_building_type = building_motor_industry
 					is_building_type = building_steel_mills
 				}

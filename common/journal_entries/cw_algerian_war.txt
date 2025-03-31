@@ -1,11 +1,12 @@
-je_algerian_affair_main = {
+je_algerian_affair_main = { #稳定阿尔及利亚局势
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
 	group = je_group_historical_content
 
 	complete = {
-		has_law = law_type:law_multicultural 
-        has_law = law_type:law_total_separation
+		NOT = {
+        		has_law = law_type:law_colonial_exploitation
+		}			
 		every_scope_state = {
 			limit = {
 				OR = {
@@ -24,7 +25,7 @@ je_algerian_affair_main = {
 		}
 	}
 
-	on_complete = {
+	on_complete = { #如果完成
 		trigger_event = {
 			id = algerian_war.3
 		}

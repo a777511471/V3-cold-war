@@ -1,0 +1,82 @@
+je_accept_the_quechua_people = { #接纳克丘亚人
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+
+	complete = {
+		has_technology_researched = nationalism     
+		has_law = law_type:law_multicultural 
+		NOT = {
+        		has_law = law_type:law_colonial_exploitation
+		}	
+			radical_fraction = {
+				value < 0.1
+			}		
+	}
+
+	on_complete = { #如果完成
+		trigger_event = {
+			id = nanmei.1
+		}
+	}
+
+	weight = 10000
+	
+	should_be_pinned_by_default = yes 
+}
+
+je_accept_the_chinese_people = { #接纳华裔
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+
+	complete = {
+		has_technology_researched = pan-nationalism      
+		has_law = law_type:law_multicultural 
+		NOT = {
+        		has_law = law_type:law_state_religion #国教
+        		has_law = law_type:law_colonial_exploitation #民族剥削				
+		}	
+			radical_fraction = {
+				value < 0.1
+			}		
+	}
+
+	on_complete = { #如果完成
+		trigger_event = {
+			id = nanmei.2
+		}
+	}
+
+	weight = 10000
+	
+	should_be_pinned_by_default = yes 
+}
+
+je_accept_the_japanese_people = { #接纳日裔
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+
+	complete = {
+		has_technology_researched = tech_culture_nationalism
+		has_law = law_type:law_multicultural 
+		NOT = {
+        		has_law = law_type:law_colonial_exploitation
+		}	
+			radical_fraction = {
+				value < 0.1
+			}		
+	}
+
+	on_complete = { #如果完成
+		trigger_event = {
+			id = nanmei.3
+		}
+	}
+
+	weight = 10000
+	
+	should_be_pinned_by_default = yes 
+}
+

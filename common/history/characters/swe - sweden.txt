@@ -2,13 +2,13 @@
 	c:SWE = {
 		create_character = {
 			#古斯塔夫五世
+			dna = dna_swe_ecchi_gustav_v			
 			first_name = "Gustav_V"
 			last_name = "Bernadotte"
 			historical = yes
 			ruler = yes
 			noble = yes
 			birth_date = 1858.6.16
-			dna = dna_king_leopold_01
     			religion = rel:protestant
 			interest_group = ig_petty_bourgeoisie #小市民
 			ideology = ideology_moderate
@@ -18,6 +18,23 @@
 		}	
 
 		create_character = {
+			#古斯塔夫六世
+			first_name = "Gustaf_VI_Adolf"
+			last_name = "Bernadotte"
+			heir = yes	
+			noble = yes	
+			historical = yes
+            culture = cu:swedish 
+            religion = rel:protestant
+			birth_date = 1882.11.11
+			dna = dna_swe_ecchi_gustav_6
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_social_democrat
+			traits = { 
+			}
+		}
+
+		create_character = {
 			first_name = Per·Albin
 			last_name = Hansen
 			historical = yes
@@ -25,11 +42,31 @@
 			birth_date = 1885.10.28
     			religion = rel:protestant
 			interest_group = ig_petty_bourgeoisie #小市民
-			ideology = ideology_social_democrat #社民主义者
+			ideology = ideology_social_democrat #社会民主主义者
 			traits = {
 				expert_political_operator #政治运作专家
 				master_bureaucrat #高明官僚
 				sickly #多病
+			}
+		}
+
+		create_character = {
+			#陆军少将奥斯卡·卡尔·威廉	
+   			dna = dna_swe_ecchi_gustav_v	
+			historical = yes			
+			first_name = "Oskar"
+			last_name = "Carl_Wilhelm"
+			birth_date = 1861.2.27
+			is_general = yes # both ruler and general
+			commander_rank =commander_rank_2
+			interest_group = ig_armed_forces
+			ideology = ideology_royalist #保皇主义者			
+			traits = {
+				expert_defensive_strategist	#熟练的防守策划师	
+				experienced_offensive_planner #有经验的进攻策划师
+				resupply_commander #物资征集专家  
+				cautious #谨慎			
+				sickly #多病						
 			}
 		}
 
@@ -39,9 +76,9 @@
 			historical = yes
 			ig_leader = yes #利益集团领袖
 			birth_date = 1901.10.11
-    			religion = rel:protestant
+    		religion = rel:protestant
 			interest_group = ig_intelligentsia #知识分子
-			ideology = ideology_social_democrat #社民主义者
+			ideology = ideology_social_democrat #社会民主主义者
 			traits = {
 				strong #健硕
 			}
@@ -49,7 +86,7 @@
 
 		create_character = {
 			interest_group = ig_trade_unions #利益集团工会
-			ideology = ideology_social_democrat #社民主义者
+			ideology = ideology_democratic_socialism #民主社会主义者
 			ig_leader = yes #利益集团领袖
 		}
 	}

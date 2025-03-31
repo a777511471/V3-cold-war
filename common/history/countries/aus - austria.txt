@@ -3,16 +3,16 @@
 		effect_starting_technology_tier_2_tech = yes
 		effect_starting_politics_conservative = yes
 		set_next_election_date = 1946.7.1
-		add_technology_researched = atmospheric_engine
 
 		set_tax_level = medium
 
 		# Laws
 		activate_law = law_type:law_parliamentary_republic #议会共和制
+		activate_law = law_type:law_state_capitalism_ownership #国家资本主义		
+		activate_law = law_type:law_non_militarized_country #非军事化国家		
 		activate_law = law_type:law_freedom_of_conscience #信仰自由
 		activate_law = law_type:law_elected_bureaucrats #选举官僚制
 		activate_law = law_type:law_continental_law_system #大陆法系
-		activate_law = law_type:law_State_capitalism_ownership #国家资本主义
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_slavery_banned
 		activate_law = law_type:law_multicultural
@@ -20,7 +20,6 @@
 		activate_law = law_type:law_right_of_assembly
 		activate_law = law_type:law_regulatory_bodies #监管机构
   		activate_law = law_type:law_proportional_taxation #比例税制
-		activate_law = law_type:law_national_militia #国家民兵
 		activate_law = law_type:law_dedicated_police
             activate_law = law_type:law_public_health_insurance
             activate_law = law_type:law_womens_suffrage
@@ -41,12 +40,10 @@
 		
 		ig:ig_trade_unions = { #工会
 			remove_ideology = ideology_proletarian #无产阶级主义者
-			add_ideology = ideology_social_democrats #社民主义者
+			add_ideology = ideology_social_democrats #社会民主主义者
 		}
-		ig:ig_landowners = {
-			add_ruling_interest_group = yes
-			add_ideology = ideology_austrian_hegemony
-			set_interest_group_name = austrian_aristocracy
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_elite #政治精英
 		}
 		ig:ig_armed_forces = {
 			add_ruling_interest_group = yes
@@ -57,5 +54,26 @@
 		ig:ig_devout = { 
 			set_interest_group_name = ig_catholic_church 
 		}
+
+		add_modifier = {
+			name = widespread_unemployment #广泛失业
+			years = 10
+			is_decaying = yes
+		}		
+
+		add_modifier = {
+			name = vienna_city_insurance_modifier #维也纳城市保险
+		}	
+
+		add_modifier = {
+			name = recovering_from_war_modifier #从战争中恢复
+			years = 10
+			is_decaying = yes
+		}	
+
+		add_modifier = {
+			name = leftist_ideology #左翼思潮
+			years = 20		
+		}		
 	}
 }

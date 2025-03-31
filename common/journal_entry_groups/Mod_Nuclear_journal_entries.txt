@@ -1,3 +1,7 @@
 ﻿je_group_nuclear_arsenal = {
 
 }
+
+je_group_national_focus_arsenal = {
+
+}

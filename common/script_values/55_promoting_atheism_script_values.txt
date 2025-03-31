@@ -1,0 +1,58 @@
+num_government_clout = {
+    value = 0
+    every_interest_group = {
+        limit = {
+            is_in_government = yes
+        }
+        add = ig_clout
+    }
+}
+
+num_approve_atheism_ig = {
+    value = 0
+    every_interest_group = {
+        limit = {
+            is_in_government = yes
+			leader = {
+				has_approve_state_atheism_ideology = yes
+			}
+        }
+        add = ig_clout
+    }
+}
+
+num_disapprove_atheism_ig = {
+    value = 0
+    every_interest_group = {
+        limit = {
+            is_in_government = yes
+            OR = {
+				leader = {
+					has_disapprove_istate_atheism_deology = yes
+				}
+				is_interest_group_type = ig_devout
+			}
+        }
+        add = ig_clout
+    }
+}
+
+num_approve_atheism_ig_relative = {
+	value = num_approve_atheism_ig
+	subtract = num_disapprove_atheism_ig
+}
+
+num_disapprove_atheism_ig_relative = {
+	value = num_disapprove_atheism_ig
+	subtract = num_approve_atheism_ig
+}
+
+num_approve_atheism_ig_ratio = {
+	value = num_approve_atheism_ig
+	divide  = num_government_clout
+}
+
+num_disapprove_atheism_ig_ratio = {
+	value = num_disapprove_atheism_ig
+	divide  = num_government_clout
+}

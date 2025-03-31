@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+ 
+ adjust_reinvestment: "调整国有投资"
+ adjust_reinvestment_low: "增加25%再投入"
+ adjust_reinvestment_medium: "增加50%再投入"
+ adjust_reinvestment_high: "增加75%再投入"
+ adjust_reinvestment_very_high: "增加100%再投入"
+ reduce_reinvestment_low: "减少25%再投入"
+ reduce_reinvestment_medium: "减少50%再投入"
+ reduce_reinvestment_high: "减少75%再投入"
+ reduce_reinvestment_very_high: "减少100%再投入"
+ 
+ adjust_efficiency: "调整国有分红效率"
+ efficiency_low: "增加25%国有分红效率"
+ efficiency_medium: "增加50%国有分红效率"
+ efficiency_high: "增加75%国有分红效率"
+ efficiency_very_high: "增加100%国有分红效率"

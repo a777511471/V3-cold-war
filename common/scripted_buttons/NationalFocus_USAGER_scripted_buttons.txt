@@ -1,0 +1,451 @@
+agree_GER_brd = {
+	name = "agree_GER_brd"
+	desc = "agree_GER_brd_desc"
+
+	visible = {
+
+	}
+
+	possible = {
+            NOT = { has_variable = agree  }
+			has_variable = disagree
+    }
+
+	effect = {
+		set_variable = agree
+		remove_variable = disagree
+	}
+	ai_chance = {
+         base = 0
+         modifier = {
+         trigger = { root = c:USA }
+         add = 700
+        }
+		modifier = {
+         trigger = { c:RHN = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:BAV = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:HAN = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:GBR = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:FRA = { 
+            relations:root >= 50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:RHN = { 
+            relations:root <= -50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:BAV = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:HAN = { 
+            relations:root <= -50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:GBR = { 
+            relations:root <= -50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:FRA = { 
+            relations:root <= -50
+        } }
+         add = -70
+        }
+    }
+}
+against_GER_brd = {
+	name = "against_GER_brd"
+	desc = "against_GER_brd_desc"
+
+	visible = {
+
+	}
+
+	possible = {
+            NOT = { has_variable = disagree  }
+			has_variable = agree
+    }
+
+	effect = {
+		set_variable = disagree
+		remove_variable = agree
+	}
+	ai_chance = {
+         base = 50
+         modifier = {
+         trigger = { root = c:USA }
+         add = -700
+        }
+		modifier = {
+         trigger = { c:RHN = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:BAV = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:HAN = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:GBR = { 
+            relations:root <= -50 
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:FRA = { 
+            relations:root <= -50
+        } }
+         add = 70
+        }
+		modifier = {
+         trigger = { c:RHN = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:BAV = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:HAN = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:GBR = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+		modifier = {
+         trigger = { c:FRA = { 
+            relations:root >= 50 
+        } }
+         add = -70
+        }
+    }
+}
+
+
+ger_ziyou_button_key = {
+	name = "ger_ziyou_button_key"
+	desc = "ger_ziyou_button_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_luxian_var 
+		var:german_national_focus_luxian_var = 0
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_luxian_var 
+		var:german_national_focus_luxian_var = 0
+		
+		
+		
+	}
+	effect = {
+        change_variable = {
+            name = german_national_focus_luxian_var
+            value = 1
+        }
+		change_variable = {
+            name = german_national_focus_ziyou_var
+            value = 1
+        }
+		
+		
+	}
+	
+	ai_chance = {
+		base = 100
+	}
+	
+}
+
+
+
+ger_shehui_button_key = {
+	name = "ger_shehui_button_key"
+	desc = "ger_shehui_button_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_luxian_var 
+		var:german_national_focus_luxian_var = 0
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_luxian_var 
+		var:german_national_focus_luxian_var = 0
+		
+		
+		
+	}
+	effect = {
+        change_variable = {
+            name = german_national_focus_luxian_var
+            value = 1
+        }
+		change_variable = {
+            name = german_national_focus_shehui_var
+            value = 1
+        }
+		
+		
+	}
+	
+	
+	ai_chance = {
+		base = 0
+	}
+	
+	
+}
+
+
+ger_nazi_button_key = {
+	name = "ger_nazi_button_key"
+	desc = "ger_nazi_button_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_luxian_var 
+		var:german_national_focus_luxian_var = 0
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_luxian_var 
+		var:german_national_focus_luxian_var = 0
+		
+		
+		
+	}
+	effect = {
+        change_variable = {
+            name = german_national_focus_luxian_var
+            value = 1
+        }
+		change_variable = {
+            name = german_national_focus_nazi_var
+            value = 1
+        }
+		
+		
+	}
+	
+	
+	ai_chance = {
+		base = 0
+	}
+	
+	
+}
+
+
+######################分支#####################\
+
+
+ger_ziyou_button_A_key = {
+	name = "ger_ziyou_button_A_key"
+	desc = "ger_ziyou_button_A_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_ziyou_var 
+		var:german_national_focus_ziyou_var = 1
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_ziyou_var 
+		var:german_national_focus_ziyou_var = 1
+		NOT = {has_variable = has_clicked_ziyou_button_B_key_var}
+		
+		
+		
+	}
+	effect = {
+		set_variable = has_clicked_ziyou_button_B_key_var
+		
+	}
+
+
+}
+
+ger_ziyou_button_B_key = {
+	name = "ger_ziyou_button_B_key"
+	desc = "ger_ziyou_button_B_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_ziyou_var 
+		var:german_national_focus_ziyou_var = 1
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_ziyou_var 
+		var:german_national_focus_ziyou_var = 1
+		NOT = {has_variable = has_clicked_ziyou_button_B_key_var}
+		
+		
+	}
+	effect = {
+		set_variable = has_clicked_ziyou_button_B_key_var
+		
+	}
+
+
+}
+
+
+ger_shehui_button_A_key = {
+	name = "ger_shehui_button_A_key"
+	desc = "ger_shehui_button_A_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_shehui_var 
+		var:german_national_focus_shehui_var = 1
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_shehui_var 
+		var:german_national_focus_shehui_var = 1
+		NOT = {has_variable = has_clicked_shehui_button_B_key_var}
+		
+		
+	}
+	effect = {
+		set_variable = has_clicked_shehui_button_B_key_var
+		
+	}
+
+
+}
+
+ger_shehui_button_B_key = {
+	name = "ger_shehui_button_B_key"
+	desc = "ger_shehui_button_B_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_shehui_var 
+		var:german_national_focus_shehui_var = 1
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_shehui_var 
+		var:german_national_focus_shehui_var = 1
+		NOT = {has_variable = has_clicked_shehui_button_B_key_var}
+		
+		
+	}
+	effect = {
+		set_variable = has_clicked_shehui_button_B_key_var
+		
+	}
+
+
+}
+
+ger_nazi_button__key = {
+	name = "ger_nazi_button_A_key"
+	desc = "ger_nazi_button_A_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_nazi_var 
+		var:german_national_focus_nazi_var = 1
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_nazi_var 
+		var:german_national_focus_nazi_var = 1
+		NOT = {has_variable = has_clicked_nazi_button_A_key_var}
+		
+		
+	}
+	effect = {
+		set_variable = has_clicked_nazi_button_A_key_var
+		
+	}
+
+
+}
+
+ger_nazi_button_B_key = {
+	name = "ger_nazi_button_B_key"
+	desc = "ger_nazi_button_B_key_desc"
+	
+	visible = { 
+		has_variable = german_national_focus_nazi_var 
+		var:german_national_focus_nazi_var = 1
+		
+		
+		
+	}
+	possible = {
+		has_variable = german_national_focus_nazi_var 
+		var:german_national_focus_nazi_var = 1
+		NOT = {has_variable = has_clicked_nazi_button_B_key_var}
+		
+		
+	}
+	effect = {
+		set_variable = has_clicked_nazi_button_B_key_var
+		
+	}
+
+
+}

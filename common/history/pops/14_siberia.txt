@@ -27,6 +27,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = siberian
+				religion = orthodox				
 				size = 2008
 			}
 			create_pop = {
@@ -56,6 +57,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = siberian
+				religion = orthodox	
 				size = 3980
 			}
 		}
@@ -67,11 +69,12 @@ POPS = {
 				size = 300000
 			}
 			create_pop = {
-				culture = japanese
+				culture = dahe
 				size = 10000
 			}
 			create_pop = {
-				culture = yakut
+				culture = siberian
+				religion = orthodox	
 				size = 2568
 			}
 		}
@@ -100,6 +103,7 @@ POPS = {
 		region_state:RUS = {
 			create_pop = {
 				culture = siberian
+				religion = orthodox	
 				size = 200000
 			}
 			create_pop = {
@@ -107,7 +111,7 @@ POPS = {
 				size = 3580
 			}
 			create_pop = {
-				culture = japanese
+				culture = dahe
 				size = 6044
 			}
 			create_pop = {
@@ -120,6 +124,7 @@ POPS = {
 		region_state:RUS = {
 			create_pop = {
 				culture = siberian
+				religion = orthodox	
 				size = 5600
 			}
 			create_pop = {
@@ -132,15 +137,16 @@ POPS = {
 		region_state:RUS = {
 			create_pop = {
 				culture = siberian
+				religion = orthodox	
 				size = 200000
 			}
 			create_pop = {
-				culture = yakut
+				culture = siberian
+				religion = orthodox	
 				size = 157600
 			}
 			create_pop = {
-				culture = yakut
-				religion = orthodox
+				culture = siberian				
 				size = 20196
 			}
 			create_pop = {
@@ -160,7 +166,7 @@ POPS = {
 				size = 23000
 			}
 			create_pop = {
-				culture = yakut
+				culture = siberian
 				religion = orthodox
 				size = 200000
 			}
@@ -182,7 +188,7 @@ POPS = {
 				size = 456000
 			}
 			create_pop = {
-				culture = yakut
+				culture = siberian
 				size = 5992
 			}
 			create_pop = {
@@ -195,6 +201,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = siberian
+				religion = orthodox
 				size = 17996
 			}
 		}
@@ -211,6 +218,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = siberian
+				religion = orthodox
 				size = 4996
 			}
 		}

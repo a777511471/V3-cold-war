@@ -1,21 +1,30 @@
 ﻿COUNTRIES = {
 	c:IDN = {
+		ig:ig_armed_forces = {
+			add_ruling_interest_group = yes
+		}
 		effect_starting_technology_tier_4_tech = yes
-		add_technology_researched = urban_planning
-		add_technology_researched = sericulture
-		add_technology_researched = academia
-		add_technology_researched = law_enforcement
-	
-		activate_law = law_type:law_continental_law_system #大陆法系	
-		activate_law = law_type:law_presidential_republic
-		activate_law = law_type:law_oligarchy
-		activate_law = law_type:law_serfdom_banned
-		activate_law = law_type:law_per_capita_based_taxation
-		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_cultural_exclusion
-		activate_law = law_type:law_agrarianism
-		activate_law = law_type:law_outlawed_dissent
-		activate_law = law_type:law_no_social_security
-		activate_law = law_type:law_12_hour_working_system
+
+		activate_law = law_type:law_presidential_republic #总统共和制
+		activate_law = law_type:law_autocracy 
+		activate_law = law_type:law_state_religion #国教至上			
+		activate_law = law_type:law_colonial_exploitation #民族剥削				
+		activate_law = law_type:law_racial_segregation #种族隔离			
+		activate_law = law_type:law_professional_army #职业军队		
+		activate_law = law_type:law_women_own_property #妇女财产权
+		activate_law = law_type:law_per_capita_based_taxation #人均税制			
+		activate_law = law_type:law_commercialized_agriculture #商品化农业	
+		activate_law = law_type:law_local_police #地方警察部队						
+		activate_law = law_type:law_extraction_economy #盘剥经济
+		activate_law = law_type:law_appointed_bureaucrats #任命官僚制
+		activate_law = law_type:law_religious_schools #教会学校
+		activate_law = law_type:law_charitable_health_system #慈善医院
+		activate_law = law_type:law_open_door #门户开放
+		activate_law = law_type:law_case_law_system #海洋法系
+		activate_law = law_type:law_migration_controls
+
+		ig:ig_industrialists = { #实业家
+			set_interest_group_name = ig_elite #政治精英												
+		}				
 	}
 }

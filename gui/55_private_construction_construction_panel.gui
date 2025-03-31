@@ -1,0 +1,263 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+@foreign_invest_icon_size = 30
+
+types construction_panel
+{
+    type private_construction = flowcontainer {
+        direction = vertical
+
+        tax_exp_frame_coin = {
+
+            blockoverride "tutorial_highilight_name" {}
+
+            blockoverride "text_upper" {
+                text = "country_private_construction_allocation_mult"
+            }
+
+            blockoverride "second_line" {}
+
+            blockoverride "text_money" {
+                text = "#v #tooltip:[Country.GetTooltipTag],CONSTRUCTION_PRIVATE_ALLOCATION_TOOLTIP #tooltippable [Country.GetModifier.GetValueFor('country_private_construction_allocation_mult')|%0]#!#!#!"
+            }
+
+            blockoverride "button_1_click" {
+                datacontext = "[GetScriptedGui('set_private_construction_0')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                enabled = yes
+            }
+
+            blockoverride "button_2_click" {
+                datacontext = "[GetScriptedGui('set_private_construction_1')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                enabled = yes
+            }
+
+            blockoverride "button_3_click" {
+                datacontext = "[GetScriptedGui('set_private_construction_2')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                enabled = yes
+            }
+
+            blockoverride "button_4_click" {
+                datacontext = "[GetScriptedGui('set_private_construction_3')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                enabled = yes
+            }
+
+            blockoverride "button_5_click" {
+                datacontext = "[GetScriptedGui('set_private_construction_4')]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                enabled = yes
+            }
+
+            blockoverride "tooltip_1" {
+                datacontext = "[GetScriptedGui('set_private_construction_0')]"
+                tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "tooltip_2" {
+                datacontext = "[GetScriptedGui('set_private_construction_1')]"
+                tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "tooltip_3" {
+                datacontext = "[GetScriptedGui('set_private_construction_2')]"
+                tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "tooltip_4" {
+                datacontext = "[GetScriptedGui('set_private_construction_3')]"
+                tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "tooltip_5" {
+                datacontext = "[GetScriptedGui('set_private_construction_4')]"
+                tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+
+            blockoverride "setvisible_very_low" {
+                datacontext = "[GetScriptedGui('private_construction_0')]"
+                visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "setvisible_very_low_2" {
+                datacontext = "[GetScriptedGui('private_construction_0')]"
+                visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End))]"
+            }
+
+            blockoverride "setvisible_low" {
+                datacontext = "[GetScriptedGui('private_construction_1')]"
+                visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "setvisible_low_2" {
+                datacontext = "[GetScriptedGui('private_construction_1')]"
+                visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End))]"
+            }
+
+            blockoverride "setvisible_medium" {
+                datacontext = "[GetScriptedGui('private_construction_2')]"
+                visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "setvisible_medium_2" {
+                datacontext = "[GetScriptedGui('private_construction_2')]"
+                visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End))]"
+            }
+
+            blockoverride "setvisible_high" {
+                datacontext = "[GetScriptedGui('private_construction_3')]"
+                visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "setvisible_high_2" {
+                datacontext = "[GetScriptedGui('private_construction_3')]"
+                visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End))]"
+            }
+            blockoverride "setvisible_very_high" {
+                datacontext = "[GetScriptedGui('private_construction_4')]"
+                visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+            }
+            blockoverride "setvisible_very_high_2" {
+                datacontext = "[GetScriptedGui('private_construction_4')]"
+                visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End))]"
+            }
+        }
+
+        divider_clean = {}
+
+        container = {
+            minimumsize = { @panel_width_minus_10 50 }
+
+            flowcontainer = {
+                margin_top = 10
+                margin_bottom = 10
+                parentanchor = left|top
+
+                flowcontainer = {
+                    parentanchor = left
+                    direction = vertical
+                    spacing = 7
+
+                    textbox = {
+                        raw_text = "[concept_government_construction]："
+                        autoresize = yes
+                        align = nobaseline
+                        elide = right
+                    }
+
+                    textbox = {
+                        raw_text = "[concept_construction]："
+                        autoresize = yes
+                        align = nobaseline
+                        elide = right
+                    }
+
+					textbox = {
+                        raw_text = "CONSTRUCTION_ALLOCATION"
+                        autoresize = yes
+                        align = nobaseline
+                        elide = right
+                    }
+                }
+
+                flowcontainer = {
+                    parentanchor = left
+                    direction = vertical
+                    spacing = 7
+
+                    textbox = {
+                        raw_text = "GOVERNMENT_CONSTRUCTION_BEING_CONSTRUCTED"
+                        autoresize = yes
+                        align = nobaseline
+                    }
+
+                    textbox = {
+                        raw_text = "GOVERNMENT_CONSTRUCTION_CONSTRUCTION_USING"
+                        maximumsize = { 180 -1 }
+                        autoresize = yes
+                        multiline = yes
+                        align = nobaseline
+                    }
+
+					textbox = {
+                        raw_text = "#v [Country.CalcRelativeUsedGovernmentConstruction|%0]#!"
+                        maximumsize = { 180 -1 }
+                        autoresize = yes
+                        multiline = yes
+                        align = nobaseline
+                    }
+                }
+            }
+
+            vertical_divider_full = {
+                parentanchor = hcenter|vcenter
+            }
+
+            flowcontainer = {
+                margin_top = 10
+                margin_bottom = 10
+				margin_right = 65
+
+                parentanchor = right|top
+
+                flowcontainer = {
+                    parentanchor = left
+                    direction = vertical
+                    spacing = 7
+
+                    textbox = {
+                        raw_text = "[concept_private_construction]："
+                        autoresize = yes
+                        align = nobaseline
+                        elide = right
+                    }
+
+                    textbox = {
+                        raw_text = "[concept_construction]："
+                        autoresize = yes
+                        align = nobaseline
+                        elide = right
+                    }
+
+					textbox = {
+                        raw_text = "CONSTRUCTION_ALLOCATION"
+                        autoresize = yes
+                        align = nobaseline
+                        elide = right
+                    }
+                }
+
+                flowcontainer = {
+                    parentanchor = left
+                    direction = vertical
+                    spacing = 7
+
+                    textbox = {
+                        raw_text = "PRIVATE_CONSTRUCTION_BEING_CONSTRUCTED"
+                        autoresize = yes
+                        align = nobaseline
+                    }
+
+                    textbox = {
+                        raw_text = "PRIVATE_CONSTRUCTION_CONSTRUCTION_USING"
+                        maximumsize = { 180 -1 }
+                        autoresize = yes
+                        multiline = yes
+                        align = nobaseline
+                    }
+
+					textbox = {
+                        raw_text = "#v [Country.CalcRelativeUsedPrivateConstruction|%0]#!"
+                        maximumsize = { 180 -1 }
+                        autoresize = yes
+                        multiline = yes
+                        align = nobaseline
+                    }
+                }
+            }
+        }
+    }
+}

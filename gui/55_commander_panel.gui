@@ -1,0 +1,709 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+types commander_panel_types
+{
+	type commander_panel = default_block_window_two_lines {
+		name = "commander_panel"
+
+		datacontext = "[CommanderPanel.AccessCharacter]"
+
+		blockoverride "animation_state_block" {
+			datacontext = "[CommanderPanel.AccessCharacter]"
+
+			state = {
+				name = _show
+
+				on_start = "[PdxGuiTriggerAllAnimations(Select_CString( CommanderPanel.AccessCharacter.IsAgitator, 'agitator', 'not_agitator' ))]"
+			}
+
+			state = {
+				name = not_agitator
+
+				start_sound = {
+					soundeffect = "event:/SFX/DLC/1.3_ip1/UI/open_character_panel"
+				}
+			}
+
+			state = {
+				name = agitator
+
+				on_start = "[PdxGuiTriggerAllAnimations(Select_CString( CommanderPanel.AccessCharacter.IsHistorical, 'historical_agitator', 'generic_agitator' ))]"
+			}
+
+			state = {
+				name = historical_agitator
+
+				start_sound = {
+					soundeffect = "event:/SFX/DLC/1.3_ip1/UI/historical_agitator_stinger"
+				}
+			}
+
+			state = {
+				name = generic_agitator
+
+				start_sound = {
+					soundeffect = "event:/SFX/DLC/1.3_ip1/UI/generic_agitator_stinger"
+				}
+			}
+
+			state = {
+				name = _hide
+				
+				start_sound = {
+					soundeffect = "event:/SFX/UI/SideBar/budget_stop"
+				}
+			}
+		}
+
+		blockoverride "window_header_name" {
+			text = "[Character.GetFullName]"
+		}
+
+		blockoverride "window_header_name_line_two" {
+			text = "CHARACTER_PANEL_SUBTITLE"
+		}
+
+		blockoverride "goto_visibility" {
+			visible = "[Not(Character.IsInExilePool)]"
+		}
+		blockoverride "goto_properties" {
+			datacontext = "[Character.GetCountry]"
+			tooltip = "ZOOM_TO_LOCATION"
+			onclick = "[Character.ZoomToLocation]"
+		}
+
+		blockoverride "goto_button" {
+			button_icon_goto = { # Character IS Exile
+				size = { 30 30 }
+				visible = "[And(Character.IsInExilePool, GetVariableSystem.Exists('politics_overview_exile_pool'))]"
+				datacontext = "[Character.GetCountry]"
+				tooltip = "GO_TO_BUTTON_EXILED_AGITATORS"
+				onclick = "[InformationPanelBar.OpenPanelTab( 'politics', 'default' )]"
+				input_action = "go_to_details"
+			}
+			button_icon_goto = { # Character IS Exile
+				size = { 30 30 }
+				visible = "[And(Character.IsInExilePool, Not(GetVariableSystem.Exists('politics_overview_exile_pool')))]"
+				datacontext = "[Character.GetCountry]"
+				tooltip = "GO_TO_BUTTON_EXILED_AGITATORS"
+				onclick = "[InformationPanelBar.OpenPanelTab( 'politics', 'default' )]"
+				onclick = "[GetVariableSystem.Toggle('politics_overview_exile_pool')]"
+				input_action = "go_to_details"
+			}
+			button_icon_goto = { #character is General at front
+				size = { 30 30 }
+				visible = "[And( Character.IsGeneral, Character.IsAtFront )  ]"
+				datacontext = "[Character.GetFront]"
+				tooltip = "GO_TO_BUTTON_FRONT"
+				onclick = "[InformationPanelBar.OpenFrontPanel(Character.GetFront)]"
+				input_action = "go_to_details"
+			}
+			button_icon_goto = { # character is Admiral with the order of raiding convoys
+				size = { 30 30 }
+				visible = "[And(Character.IsAdmiral, Character.GetOrderType.IsRaidConvoys) ]"
+				datacontext = "[Character.GetMilitaryFormation.GetTargetSeaNode]"
+				tooltip = "GO_TO_BUTTON_SEA_REGION"
+				onclick = "[InformationPanelBar.OpenSeaRegionPanel(Province.Self)]"
+				input_action = "go_to_details"
+			}
+			button_icon_goto = { #All other cases
+				size = { 30 30 }
+				visible = "[And( And( Not( Character.IsInExilePool ) , Not( And( Character.IsGeneral, Character.IsAtFront ))) ,  Not( And( Character.IsAdmiral, Character.GetOrderType.IsRaidConvoys ) ) )]"
+				datacontext = "[Character.GetCountry]"
+				tooltip = "GO_TO_BUTTON_COUNTRY"
+				onclick = "[InformationPanelBar.OpenCountryPanel(Character.GetCountry)]"
+				input_action = "go_to_details"
+			}
+		}
+
+		blockoverride "fixed_top"
+		{
+			tab_buttons = {
+				# Army
+				blockoverride "first_button" {
+					text = "CHARACTER_PANEL_TAB_OVERVIEW"
+				}
+				blockoverride "first_button_tooltip" {
+					tooltip = "CHARACTER_PANEL_TAB_OVERVIEW"
+				}
+				blockoverride "first_button_click" {
+					onclick = "[InformationPanel.SelectTab('default')]"
+				}
+				blockoverride "first_button_visibility" {
+					visible = "[InformationPanel.IsTabSelected('default')]"
+				}
+				blockoverride "first_button_visibility_checked" {
+					visible = "[Not( InformationPanel.IsTabSelected('default') )]"
+				}
+				blockoverride "first_button_selected" {
+					text = "CHARACTER_PANEL_TAB_OVERVIEW_SELECTED"
+				}
+
+				# Garrisons
+				blockoverride "second_button" {
+					text = "CHARACTER_PANEL_TAB_MODIFIERS"
+				}
+				blockoverride "second_button_tooltip" {
+					tooltip = "CHARACTER_PANEL_TAB_MODIFIERS"
+				}
+				blockoverride "second_button_click" {
+					onclick = "[InformationPanel.SelectTab('modifiers')]"
+				}
+				blockoverride "second_button_visibility" {
+					visible = "[InformationPanel.IsTabSelected('modifiers')]"
+				}
+				blockoverride "second_button_visibility_checked" {
+					visible = "[Not( InformationPanel.IsTabSelected('modifiers') )]"
+				}
+				blockoverride "second_button_selected" {
+					text = "CHARACTER_PANEL_TAB_MODIFIERS_SELECTED"
+				}
+			}
+		}
+
+		blockoverride "scrollarea_content" {
+
+			### CHARACTER PANEL
+			flowcontainer = {
+				visible = "[InformationPanel.IsTabSelected('default')]"
+				using = default_content_fade
+				direction = vertical
+				using = default_list_position
+				minimumsize = { @panel_width -1 }
+				margin_top = 5
+
+
+				widget = {
+					size = { @panel_width_plus_14 520 }
+					### TODO: fix the backgrounds to fit the set container size (currently 540 x 600)
+					
+					character_with_background = {
+						size = { @panel_width_plus_14 520 }
+					}
+
+					widget = {
+						size = { @panel_width 520 }
+
+						flowcontainer = {
+							parentanchor = right|vcenter
+							position = { 0 -15 }
+							margin_left = 5
+							margin_bottom = 7
+							margin_top = 7
+							direction = vertical
+							minimumsize = { 250 -1 }
+
+							background =  {
+								using = entry_bg_fancy_dark
+								alpha = 1
+							}
+
+							### RANK
+							character_stats_entry = {
+								visible = "[Character.IsCommander]"
+								datacontext = "[Character.GetCommanderRank]"
+
+								tooltipwidget = {
+									FancyTooltip_CommanderRank = {}
+								}
+
+								blockoverride "icon" {
+									widget = {
+										parentanchor = left|vcenter
+										position = { 10 0 }
+										size = { 35 35 }
+
+										icon = {
+											size = { 40	40 }
+											texture = "gfx/interface/backgrounds/round_button_bg.dds"
+											parentanchor = vcenter|left
+											
+											icon = {
+												size = { 30	30 }
+												parentanchor = center
+												texture = "[Character.GetCommanderRank.GetTexture]"
+											}
+										}
+									}
+								}
+								
+								blockoverride "double_entry_label" {
+									text = "[concept_rank]"
+								}
+								blockoverride "double_entry_value" {
+									raw_text = "#v [Character.GetRankTitleFor(CommanderRank.Self)]#!"
+								}
+								blockoverride "single_text_entry" {}
+							}
+
+							character_stats_entry = {
+								blockoverride "visibility" {
+									visible = "[Character.IsCommander]"
+								}
+								blockoverride "icon" { }
+								blockoverride "double_entry_label" {}
+								blockoverride "double_entry_value" {}
+								blockoverride "single_text_entry" {}
+
+								blockoverride "additional_items" {
+									widget = {
+										name = "tutorial_highlight_character_panel_promote_button"
+										parentanchor = center
+										size = { 240 50 }
+
+										promote_commander_button = {
+											parentanchor = center
+											visible = "[Not( Character.IsMaxRank )]"
+											tooltip = "MILITARY_PANEL_PROMOTE_CHARACTER_TOOLTIP"
+											blockoverride "size" {
+												size = { 210 40 }
+											}
+										}
+							
+										promote_commander_button = {
+											parentanchor = center
+											visible = "[Character.IsMaxRank]"
+											tooltip = "MILITARY_PANEL_PROMOTE_CHARACTER_TOOLTIP_MAX_RANK"
+
+											blockoverride "size" {
+												size = { 210 40 }
+											}
+										}
+									}
+								}
+							}
+
+							### ROLE
+							character_stats_entry = {
+
+								tooltip = "CHARACTER_PRIMARY_ROLE_TOOLTIP"
+
+								blockoverride "icon" {
+									character_role_icon = {
+										parentanchor = left|vcenter
+										position = { 10 0 }
+									}
+								}
+								blockoverride "double_entry_label" {
+									text = "ROLE"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_PRIMARY_ROLE"
+								}
+								blockoverride "single_text_entry" {}
+							}
+
+							### INTEREST GROUP
+							character_interest_group_entry = {
+								datacontext = "[Character.AccessInterestGroup]"
+							}
+
+							### IDEOLOGY
+							character_stats_entry = {
+								datacontext = "[Character.GetIdeology]"
+
+								tooltipwidget = {
+									FancyTooltip_Ideology = {}
+								}
+
+								blockoverride "icon_texture" {
+									texture = "[Ideology.GetTexture]"
+								}
+								blockoverride "double_entry_label" {
+									text = "IDEOLOGY_CONCEPT"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_IDEOLOGY"
+								}
+								blockoverride "single_text_entry" {}
+							}
+
+							#POPULARITY
+							character_stats_entry = {
+
+								tooltip = "POPULARITY_BREAKDOWN"
+
+								blockoverride "animation" {
+									name = commander_panel_show
+									on_finish = "[PdxGuiTriggerAllAnimations('character_panel_stat')]"
+								}
+
+								blockoverride "icon_texture" {
+									texture = "gfx/interface/icons/generic_icons/popularity.dds"
+								}
+
+								blockoverride "double_entry_label" {
+									text = "POPULARITY"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_POPULARITY"
+								}
+								blockoverride "single_text_entry" {}
+							}	
+
+							### CULTURE
+							character_stats_entry = {
+								datacontext = "[Character.GetCulture]"
+
+								tooltipwidget = {
+									FancyTooltip_Culture = {}
+								}
+
+								blockoverride "icon_texture" {
+									texture = "gfx/interface/backgrounds/round_button_bg.dds"
+									icon = {
+										parentanchor = center
+										size = { 32 32 }
+										texture = "gfx/interface/population/pop_culture.dds"
+									}
+								}
+								blockoverride "double_entry_label" {
+									text = "CHARACTER_PANEL_CULTURE_LABEL"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_CULTURE"
+								}
+								blockoverride "single_text_entry" {}
+							}
+
+							### RELIGION
+							character_stats_entry = {
+								datacontext = "[Character.GetReligion]"
+
+								tooltipwidget = {
+									FancyTooltip_religion = {}
+								}
+
+								blockoverride "icon_texture" {
+									texture = "gfx/interface/backgrounds/round_button_bg.dds"
+									icon = {
+										parentanchor = center
+										size = { 28 28 }
+										texture = "[Character.GetReligion.GetTexture]"
+									}
+								}
+								blockoverride "double_entry_label" {
+									text = "RELIGION"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_RELIGION"
+								}
+								blockoverride "single_text_entry" {}
+							}
+
+							### AGE
+							character_stats_entry = {
+								### This is to not overcrowd the panel when the character is both a General and an Agitator
+								visible = "[Not(And(Character.IsAgitator, Character.IsGeneral))]"
+								tooltip = "CHARACTER_AGE_TOOLTIP"
+
+								blockoverride "icon_texture" {
+									texture = "gfx/interface/icons/generic_icons/age.dds"
+								}
+								blockoverride "double_entry_label" {
+									text = "AGE"
+								}
+								blockoverride "double_entry_value" {
+									text = "CHARACTER_AGE"
+								}
+								blockoverride "single_text_entry" {}
+
+								blockoverride "divider" {
+									divider_clean = {
+										visible = "[Character.IsAgitator]"
+										parentanchor = bottom|hcenter
+										position = { 0 -2 }
+									}
+								}
+							}
+
+							### POLITICAL MOVEMENT PREDICTION - WHEN IN EXILE POOL
+							character_stats_entry = {
+								blockoverride "visibility" {
+									visible = "[Character.IsInExilePool]"
+								}
+
+								blockoverride "icon" {
+									icon = {
+										datacontext = "[Character.PredictMovementToJoin(GetPlayer.Self)]"
+										visible = "[Character.WillJoinMovementIfInvited(GetPlayer.Self)]"
+										size = { 35 35 }
+										texture = "[PoliticalMovement.GetTexture]"
+										parentanchor = left|vcenter
+										position = { 10 0 }					
+									}
+									icon = {
+										datacontext = "[Character.PredictMovementTypeToStart(GetPlayer.Self)]"
+										visible = "[Character.WillStartMovementIfInvited(GetPlayer.Self)]"
+										size = { 35 35 }
+										texture = "[PoliticalMovementType.GetTexture]"
+										parentanchor = left|vcenter
+										position = { 10 0 }					
+									}									
+								}
+
+								blockoverride "double_entry_label" {}
+								blockoverride "double_entry_value" {}
+								blockoverride "single_text_entry" {}
+
+								blockoverride "divider" {}
+
+								blockoverride "additional_items" {
+									textbox = {
+										datacontext = "[Character.PredictMovementToJoin(GetPlayer.Self)]"
+										visible = "[Character.WillJoinMovementIfInvited(GetPlayer.Self)]"
+										size = { 170 40 }
+										position = { 55 0 }
+										parentanchor = vcenter
+										elide = right
+										fontsize_min = 14
+										multiline = yes
+										align = left|nobaseline
+										text = "AGITATOR_POLITICAL_MOVEMENT_PREDICTION_INVITE_JOIN"
+									}
+									textbox = {
+										datacontext = "[Character.PredictMovementTypeToStart(GetPlayer.Self)]"
+										visible = "[Character.WillStartMovementIfInvited(GetPlayer.Self)]"
+										size = { 170 40 }
+										position = { 55 0 }
+										parentanchor = vcenter
+										elide = right
+										fontsize_min = 14
+										multiline = yes
+										align = left|nobaseline
+										text = "AGITATOR_POLITICAL_MOVEMENT_PREDICTION_INVITE_START"
+									}									
+								}
+							}						
+
+							### POLITICAL MOVEMENT - WHEN IN A COUNTRY
+							character_stats_entry = {
+								datacontext = "[Character.GetPoliticalMovement]"
+
+								blockoverride "visibility" {
+									visible = "[And(Not(Character.IsInExilePool), Character.IsAgitator)]"
+								}
+
+								blockoverride "icon" {
+
+									button_icon_round = {
+										visible = "[Character.GetPoliticalMovement.IsValid]"
+										parentanchor = vcenter
+										size = { 35 35 }
+										position = { 10 0 }
+										onclick = "[InformationPanelBar.OpenPoliticalMovementPanel(PoliticalMovement.AccessSelf)]"
+										onrightclick = "[RightClickMenuManager.ShowForPoliticalMovement(PoliticalMovement.AccessSelf)]"
+										using = tooltip_se
+
+										tooltipwidget = {
+											FancyTooltip_PoliticalMovement = {}
+										}
+
+										blockoverride "icon" {
+											texture = "[PoliticalMovement.GetTexture]"
+										}
+
+										blockoverride "icon_size" {
+											size = { 75% 75% }
+										}
+									}
+								}
+
+								blockoverride "double_entry_label" {}
+								blockoverride "double_entry_value" {}
+								blockoverride "single_text_entry" {}
+
+								blockoverride "divider" {}
+
+								blockoverride "additional_items" {
+									textbox = {
+										size = { 170 40 }
+										position = { 55 0 }
+										parentanchor = vcenter
+										elide = right
+										fontsize_min = 14
+										multiline = yes
+										align = left|nobaseline
+										text = "AGITATOR_POLITICAL_MOVEMENT_IN_COUNTRY"
+									}
+								}
+							}
+						}
+					}
+
+					character_interactions_button = {
+						name = "tutorial_highlight_character_panel_interactions_button_2"
+					}
+
+					widget = {
+						size = { @panel_width_plus_14 50 }
+						parentanchor = hcenter|bottom
+						
+						### TIMED MODIFIERS
+						flowcontainer = {
+							parentanchor = right
+							margin_top = 10
+							margin_right = 14
+							margin_left = 14
+							margin_bottom = 10
+							datamodel = "[Character.GetTimedModifiers]"
+							spacing = 5
+							visible = "[Not(IsDataModelEmpty(Character.GetTimedModifiers))]"
+							maximumsize = { @panel_width_minus_10 45 }
+							datamodel_wrap = 2
+
+							item = {
+								icon = {
+									tooltip = "[TimedModifier.GetTooltip]"
+									texture = "[TimedModifier.GetIcon]"
+									size = { 30 30 }
+								}
+							}
+						}
+					}
+				}
+
+				### CHARACTER TRAITS
+				default_header = {
+					blockoverride "text" {
+						datacontext = "[Character]"
+						text = "CHARACTER_PANEL_TRAITS_HEADER"
+					}
+				}
+				character_traits = {}
+
+				widget = { size = { 20 20 }}
+			}
+
+			flowcontainer = {
+				visible = "[InformationPanel.IsTabSelected('modifiers')]"
+				using = default_content_fade
+				direction = vertical
+				using = default_list_position
+				minimumsize = { @panel_width -1 }
+
+				modifier_list = {
+					blockoverride "timed_modifier_visibility" 
+					{
+						visible = no
+					}
+					blockoverride "margin1" {}
+					blockoverride "margin2" {}
+				}
+				
+			}
+		}
+		
+		blockoverride "fixed_bottom" {
+				
+			flowcontainer = {
+				minimumsize = { 400 100 }
+				direction = vertical
+				visible = "[Character.IsCommander]"
+				using = default_fade_in_out
+
+				divider_clean = {
+					size = { @panel_width_plus_14 4 }
+				}
+
+				background = {
+					using = dark_area
+				}
+
+				widget = {
+					size = { 5 5 }
+				}
+
+				empty_state = {
+					blockoverride "visible" {
+						visible = "[Not(Character.HasMilitaryFormation)]"
+					}
+					blockoverride "text" {
+						text = "NOT_PART_OF_ANY_MILITARY_FORMATION"
+					}
+				}
+
+				battle_item = {
+					visible = "[Character.IsInBattle]"
+					datacontext = "[Character.GetBattle]"
+				}
+
+				flowcontainer = {
+					visible = "[Character.HasMilitaryFormation]"
+					parentanchor = hcenter
+					margin = { 10 10 }
+					spacing = 20
+					datacontext = "[Character.GetMilitaryFormation]"
+
+					widget = {
+						parentanchor = vcenter
+						size = { 410 80 }
+
+						military_formation_right_click_item = {
+							blockoverride "tooltip" {
+					        	tooltipwidget = {
+					        		FancyTooltip_MilitaryFormation = {}
+					        	}
+					        }
+
+					        blockoverride "name_max_width" {
+								max_width = 255
+							}
+
+							blockoverride "onclick" {
+								onclick = "[InformationPanelBar.OpenMilitaryFormationPanelTab( MilitaryFormation.AccessSelf, 'default' )]"
+								onrightclick = "[RightClickMenuManager.ShowForMilitaryFormation(MilitaryFormation.AccessSelf)]"
+							}
+						}
+					}
+
+					commander_order_button = {
+						parentanchor = vcenter
+						size = { 80 80 }
+
+						blockoverride "special_order_icon_position" {
+							position = { -7 7 }
+						}
+
+						blockoverride "special_order_icon_size" {
+							size = { 30 30 }
+						}
+					}
+			    }
+
+				widget = {
+					size = { 10 10 }
+				}
+			}
+		}
+
+		blockoverride "bottom_spacing" {}
+		
+		blockoverride "pin_visibility" {
+			visible = "[ObjectsEqual(CommanderPanel.AccessCharacter.GetCountry, GetPlayer.Self)]"
+		}
+
+		blockoverride "pin_properties" {
+			visible = "[CommanderPanel.AccessCharacter.IsPinnedInOutliner]"
+			onclick = "[CommanderPanel.AccessCharacter.TogglePinInOutliner]"
+			datacontext = "[CommanderPanel.AccessCharacter]"
+			tooltip = "UNPIN_CHARACTER"
+		}
+
+		blockoverride "unpin_properties" {
+			visible = "[Not(CommanderPanel.AccessCharacter.IsPinnedInOutliner)]"
+			onclick = "[CommanderPanel.AccessCharacter.TogglePinInOutliner]"
+			datacontext = "[CommanderPanel.AccessCharacter]"
+			tooltip = "PIN_CHARACTER"
+		}
+	}
+}

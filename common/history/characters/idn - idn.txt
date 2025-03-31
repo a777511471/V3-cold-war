@@ -1,0 +1,99 @@
+﻿CHARACTERS = {
+	c:IDN = { #荷属东印度
+		create_character = {
+			historical = yes
+			religion = rel:protestant #新教
+			culture = cu:dutch #荷兰
+			ruler = yes	
+		}
+
+		create_character = { #
+			religion = rel:protestant #新教		
+			culture=cu:dutch #荷兰			
+    		ig_leader = yes
+    		interest_group = ig_industrialists #实业家
+		}
+
+		create_character = { #印尼军队
+			religion = rel:protestant #新教
+			culture = cu:dutch #荷兰
+			ig_leader = yes
+			interest_group = ig_armed_forces	
+			traits = {
+			}
+		}	
+
+		create_character = { #印尼地主
+			religion = rel:protestant #新教
+			culture = cu:dutch #荷兰
+			ig_leader = yes
+			interest_group = ig_landowners	
+			traits = {
+			}
+		}	
+
+		create_character = { #印尼农民
+			religion = rel:protestant #新教
+			culture = cu:dutch #荷兰
+			ig_leader = yes
+			interest_group = ig_rural_folk	
+			traits = {
+			}
+		}	
+
+		create_character = { #知识分子领袖克里斯·苏莫基尔
+			dna = ecchi_dna_chiang_kai_shek	
+			historical = yes		
+			first_name = "Chris"
+			last_name = "Sumokir"
+			birth_date = 1905.1.1
+			culture = cu:dutch-seals #荷印
+			ig_leader = yes
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_liberal_leader #民主主义者
+			traits = {
+				basic_political_operator #政治运作者
+				economist #经济学家
+				honorable #体面		
+				strong #健硕
+				brave #勇敢				
+			}
+		}	
+
+		create_character = { #
+			religion = rel:protestant #新教
+			culture = cu:dutch #荷兰
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie #小市民
+		}	
+
+		create_character = { #印尼教会
+			religion = rel:protestant #新教
+			culture = cu:dutch #荷兰
+			ig_leader = yes
+			interest_group = ig_devout		
+			traits = {
+			}
+		}
+
+		create_character = { #印尼工会
+			religion = rel:atheist #无神论
+			culture = cu:dutch #荷兰
+			ig_leader = yes
+			interest_group = ig_trade_unions					
+			traits = {
+			}
+		}		
+
+		create_character = {
+			#
+			dna = dna_david_farragut		
+			culture = cu:dutch-seals #荷印								
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_1			
+			interest_group = ig_armed_forces	
+			traits = {				
+			}
+		}							
+	}
+}

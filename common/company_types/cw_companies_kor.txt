@@ -15,20 +15,20 @@ company_samsung_C&T = {
 	}
 	
 	potential = {
-			has_interest_marker_in_region = region_manchuria
+			has_interest_marker_in_region = region_korea
 	}
 	
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-					region = sr:region_manchuria
+					region = sr:region_korea
 			}
 		}
 	}	
 
 	possible = { 
 		any_scope_state = {
-					region = sr:region_manchuria
+					region = sr:region_korea
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
@@ -70,20 +70,20 @@ samsung_company = {
 	}
 	
 	potential = {
-			has_interest_marker_in_region = region_manchuria
+			has_interest_marker_in_region = region_korea
 	}
 	
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-					region = sr:region_manchuria
+					region = sr:region_korea
 			}
 		}
 	}	
 
 	possible = { 
 		any_scope_state = {
-					region = sr:region_manchuria
+					region = sr:region_korea
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {

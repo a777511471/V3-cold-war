@@ -1,0 +1,361 @@
+#投资池
+adjust_reinvestment = {
+	is_shown = {
+		NOT = { has_modifier = adjust_reinvestment}
+		NOT = { has_law = law_type:law_laissez_faire}
+		NOT = { has_law = law_type:law_command_economy}
+		NOT = { is_ai = no }		
+		is_ai = no
+	}
+
+	when_taken = {
+		add_modifier = {
+			name = adjust_reinvestment
+			months = -1
+		}
+	}
+	
+	ai_chance = {
+        base = 0
+    }	
+}
+
+stop_adjust_reinvestment = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+	}
+
+	when_taken = {
+		remove_modifier = adjust_reinvestment
+	}
+	
+	ai_chance = {
+        base = 100
+    }	
+}
+
+adjust_reinvestment_very_low = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		OR = {
+			has_modifier = reinvestment_modifier_low
+			has_modifier = reinvestment_modifier_medium
+			has_modifier = reinvestment_modifier_high
+			has_modifier = reinvestment_modifier_very_high
+		}
+	}
+
+	when_taken = {
+		remove_modifier = reinvestment_modifier_low
+		remove_modifier = reinvestment_modifier_medium
+		remove_modifier = reinvestment_modifier_high
+		remove_modifier = reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+adjust_reinvestment_low = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		NOT = { has_modifier = reinvestment_modifier_low}
+	}
+
+	when_taken = {
+		add_modifier = { 
+			name = reinvestment_modifier_low 
+			months = -1
+		}
+		remove_modifier = reinvestment_modifier_medium
+		remove_modifier = reinvestment_modifier_high
+		remove_modifier = reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+adjust_reinvestment_medium = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		NOT = { has_modifier = reinvestment_modifier_medium}
+	}
+
+	when_taken = {
+		remove_modifier = reinvestment_modifier_low
+		add_modifier = reinvestment_modifier_medium
+		remove_modifier = reinvestment_modifier_high
+		remove_modifier = reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+adjust_reinvestment_high = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		NOT = { has_modifier = reinvestment_modifier_high}
+	}
+
+	when_taken = {
+		remove_modifier = reinvestment_modifier_low
+		remove_modifier = reinvestment_modifier_medium
+		add_modifier = reinvestment_modifier_high
+		remove_modifier = reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+adjust_reinvestment_very_high = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		NOT = { has_modifier = reinvestment_modifier_very_high}
+	}
+
+	when_taken = {
+		remove_modifier = reinvestment_modifier_low
+		remove_modifier = reinvestment_modifier_medium
+		remove_modifier = reinvestment_modifier_high
+		add_modifier = reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+reduce_reinvestment_very_low = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		OR = {
+			has_modifier = reduce_reinvestment_modifier_low
+			has_modifier = reduce_reinvestment_modifier_medium
+			has_modifier = reduce_reinvestment_modifier_high
+			has_modifier = reduce_reinvestment_modifier_very_high
+		}
+	}
+
+	when_taken = {
+		remove_modifier = reduce_reinvestment_modifier_low
+		remove_modifier = reduce_reinvestment_modifier_medium
+		remove_modifier = reduce_reinvestment_modifier_high
+		remove_modifier = reduce_reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+reduce_reinvestment_low = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		NOT = { has_modifier = reduce_reinvestment_modifier_low}
+	}
+
+	when_taken = {
+		add_modifier = { 
+			name = reduce_reinvestment_modifier_low 
+			months = -1
+		}
+		remove_modifier = reduce_reinvestment_modifier_medium
+		remove_modifier = reduce_reinvestment_modifier_high
+		remove_modifier = reduce_reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+reduce_reinvestment_medium = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		NOT = { has_modifier = reduce_reinvestment_modifier_medium}
+	}
+
+	when_taken = {
+		remove_modifier = reduce_reinvestment_modifier_low
+		add_modifier = reduce_reinvestment_modifier_medium
+		remove_modifier = reduce_reinvestment_modifier_high
+		remove_modifier = reduce_reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+reduce_reinvestment_high = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		NOT = { has_modifier = reduce_reinvestment_modifier_high}
+	}
+
+	when_taken = {
+		remove_modifier = reduce_reinvestment_modifier_low
+		remove_modifier = reduce_reinvestment_modifier_medium
+		add_modifier = reduce_reinvestment_modifier_high
+		remove_modifier = reduce_reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+
+reduce_reinvestment_very_high = {
+	is_shown = {
+		has_modifier = adjust_reinvestment
+		NOT = { has_modifier = reduce_reinvestment_modifier_very_high}
+	}
+
+	when_taken = {
+		remove_modifier = reduce_reinvestment_modifier_low
+		remove_modifier = reduce_reinvestment_modifier_medium
+		remove_modifier = reduce_reinvestment_modifier_high
+		add_modifier = reduce_reinvestment_modifier_very_high
+	}
+	
+    ai_chance = {
+        base = 0
+    }	
+}
+#国有分红效率
+#adjust_efficiency = {
+#	is_shown = {
+#		NOT = { has_modifier = adjust_efficiency}
+#		is_ai = no
+#	}
+
+#	when_taken = {
+#		add_modifier = {
+#			name = adjust_efficiency
+#			months = -1
+#		}
+#	}
+#	
+#	ai_chance = {
+#		base = 0
+#	}
+#}
+
+#stop_adjust_efficiency = {
+#	is_shown = {
+#		has_modifier = adjust_efficiency
+#	}
+
+#	when_taken = {
+#		remove_modifier = adjust_efficiency
+#	}
+#	
+#	ai_chance = {
+#		base = 100
+#	}	
+#}
+
+#efficiency_very_low = {
+#	is_shown = {
+#		has_modifier = adjust_efficiency
+#		OR = {
+#			has_modifier = efficiency_modifier_low
+#			has_modifier = efficiency_modifier_medium
+#			has_modifier = efficiency_modifier_high
+#			has_modifier = efficiency_modifier_very_high
+#		}
+#	}
+
+#	when_taken = {
+#		remove_modifier = efficiency_modifier_low
+#		remove_modifier = efficiency_modifier_medium
+#		remove_modifier = efficiency_modifier_high
+#		remove_modifier = efficiency_modifier_very_high
+#	}
+#	
+#	ai_chance = {
+#		base = 0
+#	}	
+#}
+
+#efficiency_low = {
+#	is_shown = {
+#		has_modifier = adjust_efficiency
+#		NOT = { has_modifier = efficiency_modifier_low}
+#	}
+
+#	when_taken = {
+#		add_modifier = { 
+#			name = efficiency_modifier_low 
+#			months = -1
+#		}
+#		remove_modifier = efficiency_modifier_medium
+#		remove_modifier = efficiency_modifier_high
+#		remove_modifier = efficiency_modifier_very_high
+#	}
+#	
+#	ai_chance = {
+#		base = 0
+#	}	
+#}
+
+#efficiency_medium = {
+#	is_shown = {
+#		has_modifier = adjust_efficiency
+#		NOT = { has_modifier = efficiency_modifier_medium}
+#	}
+
+#	when_taken = {
+#		remove_modifier = efficiency_modifier_low
+#		add_modifier = efficiency_modifier_medium
+#		remove_modifier = efficiency_modifier_high
+#		remove_modifier = efficiency_modifier_very_high
+#	}
+#	
+#	ai_chance = {
+#		base = 0
+#	}	
+#}
+
+#efficiency_high = {
+#	is_shown = {
+#		has_modifier = adjust_efficiency
+#		NOT = { has_modifier = efficiency_modifier_high}
+#	}
+
+#	when_taken = {
+#		remove_modifier = efficiency_modifier_low
+#		remove_modifier = efficiency_modifier_medium
+#		add_modifier = efficiency_modifier_high
+#		remove_modifier = efficiency_modifier_very_high
+#	}
+#	
+#	ai_chance = {
+#		base = 0
+#	}	
+#}
+
+#efficiency_very_high = {
+#	is_shown = {
+#		has_modifier = adjust_efficiency
+#		NOT = { has_modifier = efficiency_modifier_very_high}
+#	}
+
+#	when_taken = {
+#		remove_modifier = efficiency_modifier_low
+#		remove_modifier = efficiency_modifier_medium
+#		remove_modifier = efficiency_modifier_high
+#		add_modifier = efficiency_modifier_very_high
+#	}
+#	
+#	ai_chance = {
+#		base = 0
+#	}	
+#}

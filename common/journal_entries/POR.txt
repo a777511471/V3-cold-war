@@ -1,0 +1,52 @@
+salazar's_funeral = { #萨拉查的葬礼
+
+	group = je_group_internal_affairs
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	is_shown_when_inactive = { #显示条件
+			c:POR ?= ROOT
+		    exists = c:POR								
+	}   
+	possible = { #激活条件
+        exists = c:POR
+        THIS = c:POR
+		game_date >= 1970.6.27					
+	}
+	complete = { #完成条件
+		game_date >= 1970.7.27
+	}
+    on_complete = {
+        trigger_event = { id = por.1 } #游行队伍（萨拉查去世）        
+        trigger_event = { id = por.2 } #再见了，考迪罗
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+transfer_of_power = { #葡萄牙权力交接
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+			c:POR ?= ROOT
+		    exists = c:POR								
+	}  
+	possible = { #激活条件
+        exists = c:POR
+        THIS = c:POR
+		game_date >= 1968.8.28			
+	}
+	complete = { #完成条件
+		game_date >= 1968.9.28
+	}
+    on_complete = {      
+        trigger_event = { id = por.3 } #葡萄牙权力交接
+        remove_modifier = salazar_era_modifier #萨拉查时代    
+        remove_modifier = age_of_caudillos_modifier #考迪罗时代
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}

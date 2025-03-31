@@ -10,51 +10,47 @@
 		
 		# Laws 
 		activate_law = law_type:law_monarchy #君主制
-		activate_law = law_type:law_mass_conscription 
+        activate_law = law_type:law_universal_suffrage #普选制
+		activate_law = law_type:law_cultural_exclusion #文化排斥		
+		activate_law = law_type:law_private_schools #私立学校
+		activate_law = law_type:law_freedom_of_conscience #信仰自由		
+		activate_law = law_type:law_open_door #门户开放		
+		activate_law = law_type:law_private_capital_support #私人资本扶植（科研）		
+        activate_law = law_type:law_migration_controls #移民控制
+		activate_law = law_type:law_non_militarized_country #非军事化
+		activate_law = law_type:law_guaranteed_liberties #保障自由
+		activate_law = law_type:law_charitable_health_system #慈善医院
+            	activate_law = law_type:law_restricted_child_labor #限制童工
+            	activate_law = law_type:law_encourage_fertility #鼓励生育
+            	activate_law = law_type:law_womens_suffrage #妇女选举权
+            	activate_law = law_type:law_10_hour_working_system #十小时工作制
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_continental_law_system #大陆法系	
-		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_slavery_banned
-		activate_law = law_type:law_ethnostate
-		activate_law = law_type:law_free_trade #自由贸易
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_right_of_assembly
-
 		activate_law = law_type:law_tenant_farmers #佃农
   		activate_law = law_type:law_proportional_taxation #比例税制
 		activate_law = law_type:law_local_police #地方警察部队
-            	activate_law = law_type:law_no_health_system
-            	activate_law = law_type:law_women_own_property
-            	activate_law = law_type:law_oligarchy
-		activate_law = law_type:law_poor_laws
-            	activate_law = law_type:law_compulsory_primary_school
-            	activate_law = law_type:law_unrestricted_labor
-		
-		add_company = company_type:company_mitsubishi #三菱
-		company:company_mitsubishi = {
-			set_company_establishment_date = 1870.10.1
-		}
-
-		add_company = company_type:company_toshiba #东芝株式会社
-		company:company_toshiba = {
-			set_company_establishment_date = 1875.7.1
-		}
-
-		add_company = company_type:company_kawasaki #川崎重工
-		company:company_kawasaki = {
-			set_company_establishment_date = 1878.1.1
-		}
-
-
 
 		set_institution_investment_level = {
 			institution = institution_schools #教育
-			level = 3
+			level = 4
 		}
 
 		set_institution_investment_level = {
 			institution = institution_police #执法
-			level = 3
+			level = 1
+		}
+
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_elite #政治精英
+		}
+
+		ig:ig_devout = { #神道教祀官
+		set_interest_group_name = ig_shinto_monks #神道教祀官
+			remove_ideology = ideology_moralist #道德主义者
+			add_ideology = ideology_shinto_moralist #神道教徒
 		}
 
 		ig:ig_armed_forces = {
@@ -70,9 +66,25 @@
 		ig:ig_intelligentsia = {
 			set_interest_group_name = ig_bureaucracy #官僚
 		}
+
 		trigger_event = {
 			id = japan_mac.1
 			days = 7
 		}
+
+		add_modifier = {
+			name = bitter_loser_modifier #苦涩的失败者
+			years = 30
+			is_decaying = yes
+		}
+
+		add_modifier = {
+			name = fra_military_weakness_modifier #第二次世界大战的创伤
+		}
+
+		add_modifier = {
+			name = kill_the_chaebol_modifier #财阀体制的终结
+			years = 15
+		}		
 	}
 }

@@ -1,27 +1,645 @@
 POPS = {
+	s:STATE_CAMBODIA = {
+		region_state:CAM = {
+			create_pop = {
+				culture = french
+				size = 7996
+			}			
+			create_pop = {
+				culture = khmer
+				size = 5271200
+			}
+			create_pop = {
+				culture = khmer
+				religion = catholic
+				size = 71200
+			}
+			create_pop = {
+				culture = khmer
+				religion = sunni
+				size = 71200
+			}
+			create_pop = {
+				culture = han
+				size = 71200
+			}
+			create_pop = {
+				culture = lao
+				size = 71200
+			}
+			create_pop = {
+				culture = vietnamese
+				size = 71200
+			}						
+		}
+	}
+
+	s:STATE_LAOS = {
+		region_state:LAO = {
+			create_pop = {
+				culture = french
+				size = 7996
+			}					
+			create_pop = {
+				culture = lao
+				size = 1180000
+			}
+		}
+	}
+	s:STATE_CHIANG_MAI = {
+		region_state:SIA = {			
+			create_pop = {
+				culture = thai
+				size = 2000000
+			}
+		}
+	}
+
+	s:STATE_KACHIN = {
+		region_state:BUR = {
+			create_pop = {
+				culture = british
+				size = 7996
+			}
+			create_pop = {
+				culture = kachin
+				religion = animist
+				size = 6080090
+			}
+			create_pop = {
+				culture = burmese
+				size = 280800
+			}
+			create_pop = {
+				culture = shan
+				size = 60000
+			}
+			create_pop = {
+				culture = tibetan
+				size = 20000
+			}
+			create_pop = {
+				culture = avadhi
+				religion = hindu
+				size = 19000
+			}
+			create_pop = {
+				culture = bengali
+				religion = sunni
+				size = 8796
+			}
+			create_pop = {
+				culture = nepali
+				size = 8796
+			}
+			create_pop = {
+				culture = han
+				size = 7996
+			}
+			create_pop = {
+				culture = kachin
+				religion = protestant
+				size = 7996
+			}
+			create_pop = {
+				culture = kachin
+				religion = catholic
+				size = 7996
+			}
+			create_pop = {
+				culture = kachin
+				religion = theravada
+				size = 4000
+			}
+		}
+	}
+
+	s:STATE_SHAN_STATES = {
+		region_state:BUR = {
+			create_pop = {
+				culture = british
+				size = 7996
+			}
+			create_pop = {
+				culture = shan
+				size = 3550010
+			}
+			create_pop = {
+				culture = han
+				religion = protestant
+				size = 200800
+			}
+			create_pop = {
+				culture = thai		
+				size = 156000
+			}					
+			create_pop = {
+				culture = kachin
+				size = 8700
+			}
+			create_pop = {
+				culture = miao
+				size = 8700
+			}
+			create_pop = {
+				culture = avadhi
+				religion = hindu
+				size = 8700
+			}
+			create_pop = {
+				culture = bengali
+				religion = hindu
+				size = 8700
+			}
+			create_pop = {
+				culture = panjabi
+				religion = sunni
+				size = 8700
+			}
+		}
+	}
+
+	s:STATE_MANDALAY = {#曼德勒
+		region_state:BUR = {
+			create_pop = {
+				culture = british
+				size = 7996
+			}			
+			create_pop = {
+				culture = shan				
+				size = 250875
+			}	
+			create_pop = {
+				culture = burmese				
+				size = 540182
+			}
+		}
+	}
+
+	s:STATE_WESTERN_NEW_GUINEA = {
+		region_state:NET = {
+			create_pop = {
+				culture = melanesian
+				size = 1384000
+			}
+			create_pop = {
+				culture = dutch
+				size = 71200
+			}
+			create_pop = {
+				culture = han
+				religion = catholic
+				size = 71200
+			}
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}		
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}					
+		}
+	}
+
+	s:STATE_WEST_JAVA = {
+		region_state:IND = {
+			create_pop = {
+				culture = javan
+				size = 800000
+			}
+			create_pop = {
+				culture = dutch
+				size = 71200
+			}	
+			create_pop = {
+				culture = malay
+				size = 71200
+			}
+			create_pop = {
+				culture = portuguese
+				size = 71200
+			}		
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}		
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}									
+		}		
+		region_state:IDN = {
+			create_pop = {
+				culture = javan
+				size = 21000000
+			}
+			create_pop = {
+				culture = dutch
+				size = 71200
+			}	
+			create_pop = {
+				culture = malay
+				size = 1800000
+			}
+			create_pop = {
+				culture = portuguese
+				size = 71200
+			}	
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}		
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}										
+		}
+	}
+
+	s:STATE_SUNDA_ISLANDS = {
+		region_state:POR = {
+			create_pop = {
+				culture = malay
+				size = 140000
+			}
+			create_pop = {
+				culture = han
+				size = 71200
+			}
+			create_pop = {
+				culture = portuguese
+				size = 71200
+			}
+			create_pop = {
+				culture = moluccan
+				religion = animist
+				size = 71200
+			}
+			create_pop = {
+				culture = han
+				religion = catholic
+				size = 71200
+			}
+			create_pop = {
+				culture = moluccan
+				religion = catholic
+				size = 71200	
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}					
+		}
+		region_state:IDN = {
+			create_pop = {
+				culture = javan
+				size = 10000000
+			}
+			create_pop = {
+				culture = dutch
+				size = 71200
+			}				
+			create_pop = {
+				culture = malay
+				size = 1800000
+			}
+			create_pop = {
+				culture = portuguese
+				size = 71200
+			}		
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}				
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}						
+		}
+	}
+	s:STATE_WEST_BORNEO = {
+		region_state:IDN = {
+			create_pop = {
+				culture = dayak
+				size = 2170000
+			}
+			create_pop = {
+				culture = han
+				size = 71200
+			}			
+			create_pop = {
+				culture = han
+				religion = protestant				
+				size = 71200
+			}					
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}	
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}								
+		}
+	}
+	s:STATE_EAST_BORNEO = {
+		region_state:IDN = {
+			create_pop = {
+				culture = dayak
+				size = 1016000
+			}
+			create_pop = {
+				culture = han			
+				size = 71200
+			}						
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}	
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}									
+		}
+	}
+
+	s:STATE_NORTH_BORNEO = {
+		region_state:BRU = {
+			create_pop = {
+				culture = dayak
+				size = 3670090
+			}
+			create_pop = {
+				culture = han				
+				size = 71200
+			}						
+		}
+	}
+
+	s:STATE_NORTH_SUMATRA = {
+		region_state:IND = {
+			create_pop = {
+				culture = sumatran
+				size = 1098000
+			}
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}	
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}									
+		}
+	}
+	s:STATE_ACEH = {
+		region_state:IND = {
+			create_pop = {
+				culture = sumatran
+				size = 4260090
+			}
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}	
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}									
+		}
+	}
+
+	s:STATE_MOLUCCAS = {
+		region_state:IDN = {
+			create_pop = {
+				culture = melanesian
+				size = 289900
+			}
+			create_pop = {
+				culture = malay
+				size = 289900
+			}
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}					
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}					
+		}
+	}
+
+	s:STATE_WESTERN_AUSTRALIA = {
+		region_state:AST = {
+			create_pop = {
+				culture = australian
+				size = 1830000
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}					
+			create_pop = {
+				culture = south_italian
+				size = 12800
+			}
+			create_pop = {
+				culture = north_italian
+				size = 5666
+			}
+			create_pop = {
+				culture = malay
+				size = 3400
+			}
+			create_pop = {
+				culture = dutch
+				size = 2196
+			}
+			create_pop = {
+				culture = han
+				religion = sunni
+				size = 20750
+			}
+			create_pop = {
+				culture = melanesian
+				size = 20750
+			}
+		}
+		region_state:IDN = {
+			create_pop = {
+				culture = australian
+				size = 31000
+			}
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}			
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}							
+			create_pop = {
+				culture = south_italian
+				size = 12800
+			}
+			create_pop = {
+				culture = north_italian
+				size = 5666
+			}
+			create_pop = {
+				culture = malay
+				size = 3400
+			}
+			create_pop = {
+				culture = dutch
+				size = 2196
+			}
+			create_pop = {
+				culture = han
+				religion = sunni
+				size = 20750
+			}
+			create_pop = {
+				culture = melanesian
+				size = 20750
+			}
+		}
+	}
+
+	s:STATE_TUVA = {
+		region_state:RUS = {
+			create_pop = {
+				culture = mongol
+				size = 85000
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}					
+		}
+	}
+	s:STATE_ACRE = {
+		region_state:BRZ = {
+			create_pop = {
+				culture = amazonian
+				size = 100000
+			}
+			create_pop = {
+				culture = japanese #日本裔
+				religion = catholic
+				size = 71200
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}		
+		}
+	}
+
+	s:STATE_CENTRAL_JAVA = {
+		region_state:IND = {
+			create_pop = {
+				culture = javan
+				size = 20760000
+			}
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}		
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}							
+		}
+	}
+	s:STATE_CELEBES = {
+		region_state:IDN = {
+			create_pop = {
+				culture = moluccan
+				size = 4230000
+			}
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}		
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}								
+		}
+	}
+	s:STATE_SOUTH_SUMATRA = {
+		region_state:IND = {
+			create_pop = {
+				culture = sumatran
+				size = 3009000
+			}
+			create_pop = {
+				culture = dutch-seals
+				size = 71200
+			}			
+			create_pop = {
+				culture = ashkenazi
+				size = 71200
+			}						
+		}
+	}
+
 	s:STATE_MALAYA = {
 		region_state:SEL = {
 			create_pop = {
 				culture = malay
-				size = 12800
+				size = 136050
 			}
 			create_pop = {
 				culture = han
-				religion = theravada
-				size = 12800
+				religion = mahayana
+				size = 680250
 			}
 			create_pop = {
 				culture = han
-				size = 248000
-			}
+				religion = sunni	
+				size = 45350
+			}		
 			create_pop = {
-				culture = tamil
-				size = 2000
-			}
+				culture = han
+				religion = animist
+				size = 1000
+			}					
+			create_pop = {
+				culture = han
+				religion = catholic
+				size = 1000
+			}					
 			create_pop = {
 				culture = british
-				size = 2196
+				size = 45350
 			}
+			create_pop = {
+				culture = panjabi
+				religion = sunni	
+				size = 1000
+			}			
+			create_pop = {
+				culture = tamil
+				size = 1000
+			}			
+			create_pop = {
+				culture = panjabi
+				religion = sikh	
+				size = 1000
+			}	
+			create_pop = {
+				culture = ashkenazi
+				size = 1000
+			}			
+			create_pop = {
+				culture = persian
+				religion = animist
+				size = 1000
+			}															
 		}
 		region_state:SIA = {
 			create_pop = {
@@ -31,72 +649,57 @@ POPS = {
 			create_pop = {
 				culture = han
 				religion = theravada
-				size = 12800
+				size = 45350
 			}
 			create_pop = {
 				culture = han
-				size = 4000
+				size = 45350
 			}
 		}
 		region_state:JOH = {
 			create_pop = {
 				culture = malay
-				size = 2890000
+				size = 3600000
 			}
 			create_pop = {
-				culture = tamil
-				size = 2000
-			}
+				culture = malay
+				religion = catholic			
+				size = 45350
+			}			
 			create_pop = {
-				culture = british
-				size = 2196
-			}
+				culture = han
+				religion = mahayana
+				size = 45350
+			}			
 			create_pop = {
 				culture = han
 				religion = sunni
-				size = 12800
+				size = 45350
 			}
 			create_pop = {
 				culture = han
-				size = 4000
+				size = 1133333
+			}
+			create_pop = {
+				culture = avadhi
+				size = 566667
+			}
+			create_pop = {
+				culture = yuanzhumin
+				size = 340000
+			}
+			create_pop = {
+				culture = british
+				size = 45350
+			}
+			create_pop = {
+				culture = thai
+				size = 45350
+			}
+			create_pop = {
+				culture = khmer
+				size = 45350
 			}
 		}
 	}
-	s:STATE_SUNDA_ISLANDS = {
-		region_state:POR = {
-			create_pop = {
-				culture = malay
-				size = 40000
-			}
-			create_pop = {
-				culture = han
-				size = 20000
-			}
-			create_pop = {
-				culture = portuguese
-				size = 196
-			}
-			create_pop = {
-				culture = moluccan
-				religion = animist
-				size = 16000
-			}
-			create_pop = {
-				culture = han
-				religion = catholic
-				size = 8000
-			}
-			create_pop = {
-				culture = moluccan
-				religion = catholic
-				size = 3996
-			}
-		}
-		region_state:IDN = {
-			create_pop = {
-				culture = malay
-				size = 1800000
-			}
-		}
-	}
-	}
+}

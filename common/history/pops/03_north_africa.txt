@@ -1,4 +1,98 @@
 POPS = {
+	s:STATE_LOWER_EGYPT = {
+		region_state:EGY = {
+			create_pop = {
+				culture = misri
+				size = 6860000
+			}
+		}
+	}
+	s:STATE_UPPER_EGYPT = {
+		region_state:EGY = {
+			create_pop = {
+				culture = misri
+				size = 3030000
+			}
+		}
+	}
+	s:STATE_MIDDLE_EGYPT = {
+		region_state:EGY = {
+			create_pop = {
+				culture = misri
+				size = 4100000
+			}
+		}
+	}
+	s:STATE_EGYPTIAN_DESERT = {
+		region_state:EGY = {
+			create_pop = {
+				culture = misri
+				size = 18562
+			}
+		}
+	}
+	s:STATE_MATRUH = {
+		region_state:EGY = {
+			create_pop = {
+				culture = misri
+				size = 52000
+			}
+		}
+	}
+	s:STATE_SINAI = { #西奈
+		region_state:EGY = {
+			create_pop = {
+				culture = misri
+				size = 3150000
+			}
+            create_pop = {
+                culture = british
+                size = 70000
+            }			
+			create_pop = {
+				culture = hungarian
+				religion = sunni
+				size = 3500
+			}			
+		}
+		region_state:GBR = {
+			create_pop = {
+				culture = british
+				size = 6240
+			}
+			create_pop = {
+				culture = misri
+				size = 150000
+			}
+		}
+	}
+
+	s:STATE_CONSTANTINE = { #君士坦丁
+		region_state:FRA = {
+			create_pop = {
+				culture = maghrebi
+				size = 3340000
+			}
+			create_pop = {
+				culture = french
+				size = 6240
+			}			
+		}
+	}
+
+s:STATE_ORAN = {#奥兰
+	region_state:FRA = {
+		create_pop = {
+			size = 3150000
+			culture = maghrebi
+		}
+		create_pop = {
+			culture = french
+			size = 6240
+		}	
+	}
+}
+
 	s:STATE_ERITREA = {
 		region_state:ERT = {
 			create_pop = {

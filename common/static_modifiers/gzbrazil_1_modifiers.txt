@@ -1,0 +1,12 @@
+﻿
+sa_migration_cost_gz = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_influence_mult = -0.25
+	country_authority_add = -100
+	state_migration_quota_mult = 0.5
+}
+sa_migration_cost_country_migration_restrictiveness_add_gz = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_migration_restrictiveness_add = -100
+	#state_peasants_internal_migration_disallowed_bool = no
+}

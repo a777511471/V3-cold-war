@@ -41,8 +41,8 @@
  combat_unit_type_cuirassiers_desc: "由喷气式发动机推动飞行的战斗机。"
  combat_unit_type_lancers: "战斗无人机"
  combat_unit_type_lancers_desc: "更注重机动性而非火力的军用无人机。"
- combat_unit_type_light_tanks: "空中飞船"
- combat_unit_type_light_tanks_desc: "可以利用空中飞船不依赖当地的机场施加军事压力和进行作战行动。"
+ combat_unit_type_light_tanks: "空天航母"
+ combat_unit_type_light_tanks_desc: "可以利用空天航母不依赖当地的机场施加军事压力和进行作战行动。"
 
  combat_unit_type_light_ship_1: "驱逐舰"
  combat_unit_type_light_ship_1_desc: "专为快速机动设计，用于追猎潜艇和护送有价值的目标。"

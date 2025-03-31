@@ -566,9 +566,9 @@ pm_base_building_shipyards_1 = { #造船厂_1
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_steel_add = 260							
+			goods_input_steel_add = 40						
 			# output goods							
-			goods_output_steamers_add = 252							
+			goods_output_steamers_add = 35							
 		}								
 	}									
 }										
@@ -579,10 +579,10 @@ pm_advance_building_shipyards_2 = { #造船厂_2
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_dye_add = 91							
-			goods_input_glass_add = 39							
+			goods_input_dye_add = 20							
+			goods_input_glass_add = 10							
 			# output goods							
-			goods_output_steamers_add = 126							
+			goods_output_steamers_add = 25							
 		}								
 	}									
 }										
@@ -593,10 +593,10 @@ pm_base_building_shipyards_3 = { #造船厂_3
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_steel_add = 296							
-			goods_input_engines_add = 42							
+			goods_input_steel_add = 45							
+			goods_input_engines_add = 10							
 			# output goods							
-			goods_output_steamers_add = 378							
+			goods_output_steamers_add = 50							
 		}								
 	}									
 }										
@@ -607,11 +607,11 @@ pm_advance_building_shipyards_4 = { #造船厂_4
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_dye_add = 91							
-			goods_input_glass_add = 39							
-			goods_input_telephones_add = 70							
+			goods_input_dye_add = 20							
+			goods_input_glass_add = 5							
+			goods_input_telephones_add = 15							
 			# output goods							
-			goods_output_steamers_add = 252							
+			goods_output_steamers_add = 35							
 		}								
 	}									
 }										
@@ -1268,7 +1268,7 @@ pm_advance_building_gold_fields_5 = { #金矿场_5
 	}									
 	country_modifiers = {									
 		workforce_scaled = {								
-country_minting_add = 15000										
+			country_minting_add = 15000										
 		}								
 	}									
 }										
@@ -1334,7 +1334,7 @@ pm_base_building_urban_center_4 = { #城镇中心_4
 			# output goods							
 			goods_output_services_add = 592							
 			goods_output_housing_services_add = 30							
-			goods_output_transportation_add =178							
+			goods_output_transportation_add = 344							
 		}								
 	}									
 }										
@@ -1491,12 +1491,13 @@ pm_base_building_port_1 = { #港口_1
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_steamers_add = 16							
+			goods_input_steamers_add = 64 #船舶	
+			goods_input_services_add = 64 #服务																
 		}								
 	}									
 	country_modifiers = {									
 		workforce_scaled = {								
-			country_convoys_capacity_add = 150							
+			country_convoys_capacity_add = 1200							
 		}								
 	}									
 	state_modifiers = {									
@@ -1506,19 +1507,20 @@ state_infrastructure_add = 40.0
 	}									
 }										
 										
-pm_base_building_port_2 = { #港口_2										
+pm_base_building_port_2 = { #港口_2优化停靠									
 	unlocking_technologies = {tech_port_management}									
 	texture = gfx/interface/icons/production_method_icons/base2.dds									
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_steamers_add = 20							
-			goods_input_telephones_add = 1							
+			goods_input_steamers_add = 60	
+			goods_input_services_add = 68 #服务				
+			goods_input_electricity_add = 40 #电																			
 		}								
 	}									
 	country_modifiers = {									
 		workforce_scaled = {								
-			country_convoys_capacity_add = 175							
+			country_convoys_capacity_add = 1800							
 		}								
 	}									
 	state_modifiers = {									
@@ -1534,14 +1536,16 @@ pm_base_building_port_3 = { #港口_3
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_steamers_add = 25							
-			goods_input_telephones_add = 1							
-			goods_input_computer_add = 1							
+			goods_input_steamers_add = 80	
+			goods_input_services_add = 80 #服务				
+			goods_input_electricity_add = 40 #电													
+			goods_input_telephones_add = 8							
+			goods_input_computer_add = 8							
 		}								
 	}									
 	country_modifiers = {									
 		workforce_scaled = {								
-			country_convoys_capacity_add = 200							
+			country_convoys_capacity_add = 2400							
 		}								
 	}									
 	state_modifiers = {									
@@ -1672,7 +1676,8 @@ pm_base_building_university_1 = { #大学_1
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_paper_add = 51							
+			goods_input_paper_add = 25
+			goods_input_furniture_add = 25									
 		}								
 	}									
 	state_modifiers = {									
@@ -1694,7 +1699,8 @@ pm_base_building_university_2 = { #大学_2
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_paper_add = 61							
+			goods_input_paper_add = 30
+			goods_input_furniture_add = 30								
 			goods_input_services_add = 30							
 		}								
 	}									
@@ -1838,7 +1844,7 @@ pm_base_building_oil_rig_2 = { #油井_2
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_tools_add = 458							
+			goods_input_tools_add = 229						
 			# output goods							
 			goods_output_oil_add = 580							
 		}								
@@ -1851,8 +1857,8 @@ pm_base_building_oil_rig_3 = { #油井_3
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_tools_add = 458							
-			goods_input_engines_add = 114							
+			goods_input_tools_add = 229						
+			goods_input_engines_add = 57							
 			# output goods							
 			goods_output_oil_add = 870							
 		}								
@@ -1865,7 +1871,7 @@ pm_advance_building_oil_rig_4 = { #油井_4
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_dye_add = 208							
+			goods_input_dye_add = 104							
 			# output goods							
 			goods_output_oil_add = 290							
 		}								
@@ -1878,8 +1884,8 @@ pm_advance_building_oil_rig_5 = { #油井_5
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_dye_add = 208							
-			goods_input_computer_add = 32							
+			goods_input_dye_add = 104							
+			goods_input_computer_add = 16							
 			# output goods							
 			goods_output_oil_add = 580							
 		}								
@@ -1959,12 +1965,12 @@ pm_base_building_construction_sector_0 = { #建造部门_0
 	}									
 	country_modifiers = {									
 		workforce_scaled = {								
-country_construction_add = 0.25										
+country_construction_add = 1										
 		}								
 	}									
 	state_modifiers = {									
 		workforce_scaled = {								
-state_construction_mult = 0.002										
+state_construction_mult = 0.001									
 		}								
 	}									
 }										
@@ -1982,12 +1988,12 @@ pm_base_building_construction_sector_1 = { #建造部门_1
 	}									
 	country_modifiers = {									
 		workforce_scaled = {								
-country_construction_add = 0.75										
+country_construction_add = 2.2										
 		}								
 	}									
 	state_modifiers = {									
 		workforce_scaled = {								
-state_construction_mult = 0.008										
+state_construction_mult = 0.004									
 		}								
 	}									
 }										
@@ -2005,12 +2011,12 @@ pm_base_building_construction_sector_2 = { #建造部门_2
 	}									
 	country_modifiers = {									
 		workforce_scaled = {								
-		country_construction_add = 1.75								
+		country_construction_add = 4							
 		}								
 	}									
 	state_modifiers = {									
 		workforce_scaled = {								
-state_construction_mult = 0.016										
+state_construction_mult = 0.008										
 		}								
 	}									
 }										
@@ -2031,12 +2037,12 @@ pm_advance_building_construction_sector_3 = { #建造部门_3
 										
 	country_modifiers = {									
 		workforce_scaled = {								
-country_construction_add = 1.25										
+country_construction_add = 4										
 		}								
 	}									
 	state_modifiers = {									
 		workforce_scaled = {								
-state_construction_mult = 0.032										
+state_construction_mult = 0.016										
 		}								
 	}									
 }										
@@ -2055,7 +2061,7 @@ pm_base_building_breeding_farm_1 = { #养殖场_1
 }										
 										
 pm_base_building_breeding_farm_2 = { #养殖场_2										
-	unlocking_technologies = {tech_fertilizer_synthesis}
+	unlocking_technologies = { tech_mature_food_industry }
 	texture = gfx/interface/icons/production_method_icons/base2.dds									
 	building_modifiers = {									
 		workforce_scaled = {								
@@ -2069,7 +2075,7 @@ pm_base_building_breeding_farm_2 = { #养殖场_2
 }										
 										
 pm_advance_building_breeding_farm_3 = { #养殖场_3										
-	unlocking_technologies = {tech_greenhouse_technology}
+	unlocking_technologies = { tech_pet }
 	texture = gfx/interface/icons/production_method_icons/refining1.dds									
 	building_modifiers = {									
 		workforce_scaled = {								
@@ -2274,9 +2280,9 @@ pm_base_building_clean_energy_power_station_1 = { #清洁能源发电站_1
 	building_modifiers = {									
 		workforce_scaled = {								
 			# input goods							
-			goods_input_engines_add = 335							
+			goods_input_sulfur_add = 1340						
 			# output goods							
-			goods_output_electricity_add = 2880							
+			goods_output_electricity_add = 3000							
 		}								
 	}									
 }										
@@ -3467,7 +3473,7 @@ pm_base_building_livestock_ranch_1 = { #畜牧场_1
 }										
 										
 pm_base_building_livestock_ranch_2 = { #畜牧场_2										
-	unlocking_technologies = {tech_fertilizer_synthesis}									
+	unlocking_technologies = { tech_mature_food_industry }									
 	texture = gfx/interface/icons/production_method_icons/base2.dds									
 	building_modifiers = {									
 		workforce_scaled = {								
@@ -3480,7 +3486,7 @@ pm_base_building_livestock_ranch_2 = { #畜牧场_2
 }										
 										
 pm_base_building_livestock_ranch_3 = { #畜牧场_3										
-	unlocking_technologies = {tech_greenhouse_technology}									
+	unlocking_technologies = { tech_pet }									
 	texture = gfx/interface/icons/production_method_icons/base3.dds									
 	building_modifiers = {									
 		workforce_scaled = {								
@@ -3805,6 +3811,84 @@ pm_base_building_silk_plantation_3 = { #丝绸种植园_3
 			goods_input_engines_add = 2							
 			# output goods							
 			goods_output_fabric_add = 480							
+		}								
+	}									
+}
+
+pm_base_building_central_bank_1 = { #中央银行_1										
+										
+	texture = gfx/interface/icons/production_method_icons/base1.dds									
+	building_modifiers = {									
+		workforce_scaled = {								
+			# output goods
+			goods_input_paper_add = 100								
+		}
+		level_scaled = {								
+			building_employment_clerks_add = 2500								
+			building_employment_shopkeepers_add = 2000					
+		}								
+	}
+	country_modifiers = {									
+		workforce_scaled = {								
+			country_minting_add = 500										
+		}								
+	}
+	state_modifiers = {									
+		workforce_scaled = {								
+			state_dependent_wage_mult = 0.05
+		}								
+	}								
+}										
+										
+pm_base_building_central_bank_2 = { #中央银行_2										
+	unlocking_technologies = {tech_monetarism}
+	texture = gfx/interface/icons/production_method_icons/base2.dds									
+	building_modifiers = {									
+		workforce_scaled = {								
+			# input goods							
+			goods_input_paper_add = 100
+			goods_input_housing_services_add = 20				
+		}
+		level_scaled = {								
+			building_employment_clerks_add = 5000								
+			building_employment_shopkeepers_add = 4000							
+		}								
+	}
+	country_modifiers = {									
+		workforce_scaled = {								
+			country_minting_add = 1000									
+		}								
+	}
+	state_modifiers = {									
+		workforce_scaled = {								
+			state_dependent_wage_mult = 0.1
+		}								
+	}									
+}										
+										
+pm_base_building_central_bank_3 = { #中央银行_3										
+	unlocking_technologies = {tech_big_data}
+	texture = gfx/interface/icons/production_method_icons/base3.dds									
+	building_modifiers = {									
+		workforce_scaled = {								
+			# input goods							
+			goods_input_paper_add = 100
+			goods_input_housing_services_add = 20
+			goods_input_computer_add = 20							
+		}
+		level_scaled = {								
+			building_employment_clerks_add = 10000								
+			building_employment_shopkeepers_add = 8000							
+		}								
+	}
+	country_modifiers = {									
+		workforce_scaled = {								
+			country_minting_add = 2000									
+		}								
+	}
+	state_modifiers = {									
+		workforce_scaled = {								
+			state_dependent_wage_mult = 0.2
 		}								
 	}									
 }										

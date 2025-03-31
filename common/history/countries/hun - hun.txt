@@ -1,11 +1,13 @@
 ﻿COUNTRIES = {
 	c:HUN = {
-		effect_starting_technology_tier_1_tech = yes
-		
+		effect_starting_technology_tier_2_tech = yes
+		set_next_election_date = 1946.7.1
+		add_technology_researched = tech_self_propelled_artillery #自行火炮
+				
 		# Laws 
 		activate_law = law_type:law_parliamentary_republic #议会共和制
 		activate_law = law_type:law_census_voting #资格性选举制	
-		activate_law = law_type:law_freedom_of_conscience #信仰自由
+		activate_law = law_type:law_total_separation #完全分离
  		activate_law = law_type:law_compulsory_primary_school
 		activate_law = law_type:law_continental_law_system #大陆法系
 		activate_law = law_type:law_womens_suffrage
@@ -24,6 +26,10 @@
 		activate_law = law_type:law_wage_subsidies #工资补贴
 		activate_law = law_type:law_migration_controls #移民控制
 		
+		ig:ig_industrialists = { #企业家
+			set_interest_group_name = ig_entrepreneur
+		}
+
 		ig:ig_armed_forces = { #军队
 			remove_ideology = ideology_loyalist #效忠派
 			add_ideology = ideology_proletarian #无产阶级主义者
@@ -35,7 +41,7 @@
 		}
 		
 		set_institution_investment_level = {
-			institution = institution_schools
+			institution = institution_schools #教育
 			level = 3
 		}
 
@@ -43,5 +49,26 @@
 			institution = institution_police
 			level = 1
 		}
+
+		add_modifier = {
+			name = academy_of_sciences_modifier #匈牙利科学院
+		}		
+
+		add_modifier = {
+			name = the_soviet_hungarian_trade_treaty_modifier #苏匈贸易条约
+			years = 20		
+		}			
+
+		add_modifier = {
+			name = hungarian_military_association_modifier #匈牙利军队协会
+		}	
+
+		add_modifier = {
+			name = hungarian_parliament_modifier #匈牙利议会
+		}	
+
+		add_modifier = {
+			name = fra_military_weakness_modifier #第二次世界大战的创伤
+		}				
 	}
 }

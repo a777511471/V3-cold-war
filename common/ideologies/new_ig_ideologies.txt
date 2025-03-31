@@ -1,3 +1,113 @@
+ideology_red_liberalism = { #红色自由主义者
+	icon = "gfx/interface/icons/ideology_icons/liberal.dds"
+
+	priority = 100
+
+	lawgroup_trade_policy = {
+		law_open_door = strongly_disapprove #门户开放		
+		law_protectionism = approve
+		law_isolationism = strongly_disapprove
+		law_mercantilism = disapprove
+		law_free_trade = neutral
+	}
+
+	lawgroup_childrens_rights = {
+		law_child_labor_allowed = disapprove
+		law_restricted_child_labor = neutral
+		law_abolish_child_laborl = approve #废除童工		
+		law_compulsory_primary_school = strongly_approve
+	}
+
+	lawgroup_economic_system = {
+		law_extraction_economy = strongly_disapprove
+		law_command_economy = neutral #计划经济
+		law_interventionism = approve #经济干预
+		law_agrarianism = disapprove
+		law_traditionalism = strongly_disapprove
+		law_laissez_faire = approve #自由放任	
+	}
+}
+
+ideology_haitian_abolitionist = { #意识形态_海地废奴主义者
+	icon = "gfx/interface/icons/ideology_icons/abolitionist.dds"
+
+	lawgroup_slavery = {
+		law_slavery_banned = neutral
+		law_legacy_slavery = disapprove
+		law_debt_slavery = strongly_disapprove
+		law_slave_trade = strongly_disapprove
+	}
+
+	lawgroup_labour_law = {
+		law_unrestricted_labor = strongly_disapprove #强烈反对
+		law_12_hour_working_system = disapprove #反对
+		law_10_hour_working_system = neutral
+		law_8_hour_working_system = approve
+		law_6_hour_working_system = strongly_approve
+	}
+}
+
+ideology_wahhabi = { #瓦哈比派
+	icon = "gfx/interface/icons/ideology_icons/moralist.dds"
+
+	lawgroup_economic_system = { 			
+		law_agrarianism = approve
+		law_corporatism_ownership = neutral #法团经济		
+		law_industry_banned = neutral #禁止工业
+		law_traditionalism = strongly_approve #传统主义	
+		law_interventionism = approve #经济干预
+		law_cooperative_ownership = disapprove
+		law_collective_economy = disapprove #集体经济	
+		law_laissez_faire = disapprove
+		law_social_capitalism = strongly_disapprove #社会主义市场经济
+		law_state_capitalism_ownership = strongly_disapprove #国家资本主义
+		law_command_economy = strongly_disapprove #计划经济		
+		law_extraction_economy = strongly_disapprove #盘剥经济					
+	}
+
+	lawgroup_internal_security = {
+		law_secret_police = approve
+		law_national_guard = strongly_disapprove
+		law_no_home_affairs = disapprove
+		law_guaranteed_liberties = strongly_disapprove
+	}	
+
+	lawgroup_population_policy = {
+		law_encourage_fertility = disapprove #反对鼓励生育
+		law_free_reproduction = approve #赞成自由生育
+	}
+
+	lawgroup_legal_system = {
+		law_unwritten_law = neutral
+		law_islamic_law_system = approve #支持
+		law_chinese_legal_system = disapprove #反对
+		law_socialist = disapprove #反对
+	}
+
+	lawgroup_governance_principles = {
+		law_monarchy = strongly_approve
+		law_theocracy = strongly_approve
+		law_presidential_republic = neutral
+		law_parliamentary_republic = neutral
+		law_council_republic = strongly_disapprove #坚决反对
+	}
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_approve
+		law_freedom_of_conscience = disapprove #信仰自由 
+		law_total_separation = strongly_disapprove
+		law_state_atheism = strongly_disapprove
+		law_secularization = strongly_disapprove #世俗化
+	}
+
+	lawgroup_citizenship = {
+		law_ethnostate = neutral
+		law_cultural_exclusion = approve #文化排斥		
+		law_national_supremacy = approve #民族至上
+		law_racial_segregation = neutral
+		law_multicultural = strongly_disapprove	
+	}
+}
+
 ideology_welfare = { #福利主义者
 	icon = "gfx/interface/icons/ideology_icons/proletarian.dds"
 
@@ -23,6 +133,13 @@ ideology_welfare = { #福利主义者
 		law_public_health_insurance = approve
 	}	
 	
+	lawgroup_ecological_protection = {
+		law_private_environmental_organizations = disapprove
+		law_no_environmental_protection_department = disapprove
+		law_church_environmental_organizations = neutral
+		law_environmental_protection = approve
+	}
+
 	lawgroup_education_system = {
 		law_public_schools = approve
 		law_private_schools = neutral
@@ -51,10 +168,13 @@ ideology_social_democrats = { #社会民主主义者
 	}
 
 	lawgroup_economic_system = {
+		law_social_capitalism = approve #社会主义市场经济
+		law_state_capitalism_ownership = strongly_approve #国家资本主义	
+		law_collective_economy = strongly_approve #集体经济	
 		law_cooperative_ownership = approve #合作社
 		law_interventionism = approve
 		law_agrarianism = neutral
-		law_traditionalism = disapprove		
+		law_traditionalism = disapprove #传统主义		
 	}
 
 	lawgroup_welfare = {
@@ -71,6 +191,13 @@ ideology_social_democrats = { #社会民主主义者
 		law_public_health_insurance = approve
 	}	
 	
+	lawgroup_ecological_protection = {
+		law_private_environmental_organizations = disapprove
+		law_no_environmental_protection_department = disapprove
+		law_church_environmental_organizations = neutral
+		law_environmental_protection = approve
+	}
+
 	lawgroup_education_system = {
 		law_public_schools = approve
 		law_private_schools = neutral
@@ -132,13 +259,16 @@ ideology_zamindar = { #意识形态柴明达
 	}
 	
 	lawgroup_economic_system = {		
-		law_traditionalism = strongly_approve
+		law_traditionalism = strongly_approve #传统主义
 		law_agrarianism = approve
 		law_interventionism = neutral
 		law_industry_banned = disapprove
 		law_laissez_faire = disapprove
 		law_cooperative_ownership = strongly_disapprove
-		law_command_economy = strongly_disapprove
+		law_collective_economy = strongly_disapprove #集体经济	
+		law_social_capitalism = strongly_disapprove #社会主义市场经济
+		law_state_capitalism_ownership = strongly_disapprove #国家资本主义
+		law_command_economy = strongly_disapprove #计划经济		
 	}
 	
 	lawgroup_trade_policy = {		
@@ -192,17 +322,19 @@ ideology_truman = { #杜鲁门主义者
 	}
 }
 
-ideology_characteristic_socialist = { #特色社会主义者
+ideology_characteristic_socialist = { #市场社会主义者
 	icon = "gfx/interface/icons/ideology_icons/socialist.dds"
 
 	lawgroup_economic_system = {	
 		law_laissez_faire = strongly_approve
 		law_interventionism = approve
 		law_agrarianism = neutral
-		law_traditionalism = disapprove	
+		law_traditionalism = disapprove	 #传统主义
 		law_cooperative_ownership = approve
-		law_command_economy = neutral
+		law_collective_economy = strongly_approve #集体经济	
 		law_industry_banned = strongly_disapprove
+		law_social_capitalism = strongly_approve #社会主义市场经济
+		law_state_capitalism_ownership = approve #国家资本主义		
 	}
 
 	lawgroup_trade_policy = { #贸易政策		

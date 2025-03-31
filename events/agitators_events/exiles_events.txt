@@ -125,7 +125,7 @@ exiles_events.1 = {
 			exile_character = yes
 			add_modifier = {
 				name = modifier_agitator_hopeless
-				months = long_modifier_time
+				years = 10
 			}
 			random_list = {
 				30 = {
@@ -412,7 +412,7 @@ exiles_events.4 = {
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	cooldown = { months = long_modifier_time }
+	cooldown = { years = 10 }
 
 	trigger = {
 		any_interest_group = {
@@ -1037,7 +1037,7 @@ exiles_events.10 = {
 		scope:exile_scope = {
 			add_modifier = {
 				name = modifier_health_treatments
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		add_modifier = {
@@ -1051,7 +1051,7 @@ exiles_events.10 = {
 		scope:exile_scope = {
 			add_modifier = {
 				name = modifier_health_treatments
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		add_modifier = {

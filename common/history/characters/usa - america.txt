@@ -1,7 +1,10 @@
-﻿CHARACTERS = {
+﻿#知识分子模型代码：			dna = dna_thomas_jesup
+
+CHARACTERS = {
 	c:USA = { #美国
 		create_character = {
 			#杜鲁门
+    		dna = dna_truman
 			historical = yes
 			first_name = Harry
 			last_name = Truman
@@ -11,45 +14,154 @@
 			ideology = ideology_truman_leader #杜鲁门主义者
 			ig_leader = yes #利益集团领袖
 			birth_date = 1884.5.8
-			traits = {
-                                 charismatic		
-				 expert_political_operator	
-				 master_bureaucrat		
+			traits = {	
+				expert_political_operator #政治运作专家
+				bigoted #偏执
 			}
 		}
 
 		create_character = {
-			interest_group = ig_trade_unions #利益集团工会
-			ideology = ideology_social_democrat #社民主义者
+            #艾森豪威尔
+    		dna = dna_franklin_buchanan		
+			historical = yes
+			first_name = Dwight
+			last_name = David_Eisenhower
+			culture = cu:dixie
+			birth_date = 1890.10.4
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_radical #激进主义者
+			hq = region_new_england
+			commander_rank = commander_rank_5
+			traits = {				
+				traditionalist_commander
+				expert_offensive_planner
+			}
+		}
+
+		create_character = { #杜勒斯
+			dna = ecchi_dna_woodrow_wilson
+			first_name = "John·Foster"
+			last_name = "Dulles" 
+			historical = yes
 			ig_leader = yes #利益集团领袖
+			birth_date = 1888.2.25
+			culture = cu:yankee
+			interest_group = ig_intelligentsia #利益集团文人
+			ideology = ideology_authoritarian #威权主义者
+			traits = {
+				literary #文学家
+				expert_political_operator #政治运作专家
+				bigoted #偏执				
+			}
 		}
 
 		create_character = {
-                        #哈里博德
+            #马克·克拉克上将
+    		dna = dna_franklin_buchanan		
+			historical = yes
+			first_name = Marcq
+			last_name = Clark
+			culture = cu:yankee
+			birth_date = 1896.5.1
+			is_general = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_radical #激进主义者
+			hq = region_new_england
+			commander_rank = commander_rank_4
+			traits = {				
+				traditionalist_commander
+                resupply_commander #物资征集专家   
+				expensive_tastes #昂贵嗜好
+				reckless #鲁莽								
+			}
+		}
+
+		create_character = { #马歇尔
+			historical = yes	
+    		dna = dna_andrew_jackson				
+			first_name = Georges
+			last_name = Marshall
+			culture = cu:yankee
+			is_general = yes			
+			birth_date = 1880.12.31			
+			interest_group = ig_armed_forces
+			ideology = ideology_radical #激进主义者		
+			commander_rank = commander_rank_4				
+			traits = {
+				traditionalist_commander
+                resupply_commander #物资征集专家                                                                
+			}
+		}
+
+		create_character = {
+			dna = dna_william_shubrick	
+			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_social_democrat #社会民主主义者
+			ig_leader = yes #利益集团领袖
+		}
+
+		create_character = { #福斯特
+			first_name = "William·Zebra"
+			last_name = "Forster" 
+			historical = yes
+    		is_agitator = yes #鼓动者
+			birth_date = 1881.2.25
+			religion = rel:atheist #无神论
+			culture = cu:irish
+			dna = dna_william_shubrick	
+			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_communist #共产主义者
+			traits = {
+				demagogue #煽动者
+			}
+		}
+
+		create_character = { #白劳德		
+			first_name = "Earl"
+			last_name = "Browder" 
+			historical = yes
+    		is_agitator = yes #鼓动者
+			birth_date = 1891.5.20
+			religion = rel:atheist #无神论
+			culture = cu:yankee
+			dna = dna_pershing
+			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_social_democrat #社会民主主义者	
+			traits = {
+				literary #文学家				
+				hedonist #享乐主义者
+				tactful #圆滑
+			}
+		}
+
+		create_character = {
+            #哈里博德
 			historical = yes
 			first_name = Harry
 			last_name = Border
 			culture = cu:dixie
 			birth_date = 1901.5.10
-			dna = dna_franklin_buchanan #地主
+			dna = dna_william_shubrick
 			ig_leader = yes
 			interest_group = ig_landowners #大农场主
 			ideology = ideology_moderate #温和主义者
 			traits = {
-				bigoted
-				experienced_political_operator
+				experienced_political_operator #有经验的政治运作者				
+				bigoted #偏执
 			}
 		}
 
-		create_character = {
+		create_character = { #罗伯特·特尔福德		
+			dna = dna_thomas_jesup			
 			first_name = Robert
 			last_name = Telford
 			culture = cu:yankee
 			birth_date = 1904.1.14
-			dna = dna_andrew_jackson #老农
 			historical = yes
 			ig_leader = yes
-			interest_group = ig_rural_folk
+			interest_group = ig_rural_folk #农民
 			ideology = ideology_moderate
 			traits = {
 				arrogant
@@ -58,6 +170,7 @@
 		}
 
 		create_character = {
+			dna = dna_david_farragut
 			first_name = Billy #教会领袖格雷厄姆
 			last_name = Graham
 			culture = cu:yankee
@@ -73,7 +186,72 @@
 		}
 
 		create_character = {
-                        #东京烧烤店老板柯蒂斯·李梅
+            #沃尔顿·沃克中将
+    		dna = ecchi_dsk_dna_jinricheng	
+			historical = yes
+			first_name = Walton
+			last_name = Walker
+			culture = cu:dixie
+			birth_date = 1889.12.3
+			is_general = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_radical #激进主义者
+			hq = region_new_england
+			commander_rank = commander_rank_3
+			traits = {				
+				expensive_tastes #昂贵嗜好
+				reserved #内敛
+				brave
+				engineer
+				innovative
+				expert_offensive_planner  
+			}
+		}
+
+		create_character = {
+            #埃劳德·弗雷登道尔中将
+			dna = ecchi_dna_martin_van_buren
+			historical = yes
+			first_name = Elaud
+			last_name = Freddendoyle
+			culture = cu:yankee
+			birth_date = 1883.12.28
+			is_general = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_radical #激进主义者
+			hq = region_new_england
+			commander_rank = commander_rank_3
+			traits = {	
+				meticulous #谨小慎微	
+				arrogant #傲慢
+				bigoted #偏执
+				reckless #鲁莽		
+				imposing #威风凛凛
+			}
+		}
+
+		create_character = {
+            #马修·邦克·李奇微中将
+			dna = ecchi_dna_douglas_macarthur
+			historical = yes
+			first_name = Matthew·Bunker
+			last_name = Ridgway
+			culture = cu:dixie
+			birth_date = 1895.3.3
+			is_general = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_radical #激进主义者
+			hq = region_new_england
+			commander_rank = commander_rank_3
+			traits = {				
+				traditionalist_commander
+                resupply_commander #物资征集专家      
+			}
+		}
+
+		create_character = {
+            #东京烧烤店老板柯蒂斯·李梅
+			dna = ecchi_dna_martin_van_buren
 			historical = yes
 			first_name = Curtis
 			last_name = LeMay
@@ -81,36 +259,16 @@
 			birth_date = 1906.11.15
 			is_general = yes
 			interest_group = ig_armed_forces
-			ideology = ideology_moderate #温和主义者
+			ideology = ideology_radical #激进主义者
 			hq = region_new_england
 			commander_rank = commander_rank_2
 			traits = {
+				expensive_tastes #昂贵嗜好
+				reserved #内敛
 				brave
 				engineer
 				innovative
 				expert_offensive_planner
-			}
-		}
-
-		create_character = {
-                        #艾森豪威尔
-			historical = yes
-			first_name = Dwight
-			last_name = David_Eisenhower
-			culture = cu:dixie
-			birth_date = 1890.10.4
-			dna = dna_thomas_jesup
-			is_general = yes
-			ig_leader = yes
-			interest_group = ig_armed_forces
-			ideology = ideology_radical #激进主义者
-			hq = region_new_england
-			commander_rank = commander_rank_5
-			traits = {
-				traditionalist_commander
-				expert_offensive_planner
-				expert_artillery_commander
-                                plains_commander
 			}
 		}
 
@@ -120,7 +278,7 @@
 			last_name = Dewey
 			culture = cu:yankee
 			birth_date = 1902.3.24
-    			dna = dna_roosevelt #实业家
+			dna = dna_pershing
 			ig_leader = yes
 			interest_group = ig_industrialists #大资产阶级
 			ideology = ideology_reformer #改良主义者
@@ -131,69 +289,60 @@
 				erudite #博学
 			}
 		}
-		
-		create_character = {
-                        #巴顿
+
+		create_character = { #奥马尔·布莱德雷
 			historical = yes
-			is_general = yes
-			first_name = Georges
-			last_name = Patton
-			culture = cu:dixie
-			birth_date = 1885.11.11
-			interest_group = ig_armed_forces
-			ideology = ideology_jingoist_leader
-			commander_rank = commander_rank_5
-			hq = region_the_midwest
-			traits = {
-				expert_offensive_planner
-				expert_artillery_commander
-                                wrathful                                                   
-			}
-		}
-		
-		create_character = {
+			dna = ecchi_dna_douglas_macarthur
+			historical = yes			
 			is_general = yes
 			first_name = Omar
 			last_name = Bradley
 			age = 53
 			hq = region_pacific_coast
-			commander_rank = commander_rank_5
+			commander_rank = commander_rank_4
 			traits = {
-				reserved
+				reserved #内敛
 				stalwart_defender
                                 expert_defensive_strategist
 			}
 
 		}
-		
-		create_character = {
-			is_general = yes
-			first_name = Georges
-			last_name = Marshall
-			age = 66
-			hq = region_dixie
-			commander_rank = commander_rank_5
-			traits = {
-				traditionalist_commander
-				defense_in_depth_specialist
-                                resupply_commander
-                                                                  
-			}
 
-		}
-		
 		create_character = { # Sea
-                        #尼米兹
+            #小威廉·哈尔西
+			dna = ecchi_dna_warren_harding
+			historical = yes
+			is_admiral = yes
+			first_name = William
+			last_name = Frederick_Halsey
+			culture = cu:yankee 
+			birth_date = 1882.10.30
+			interest_group = ig_intelligentsia
+			ideology = ideology_ethno_nationalist #族裔民族主义者
+			hq = region_dixie
+			commander_rank = commander_rank_4
+			traits = {
+				expert_naval_commander
+				charismatic
+			    popular_commander				
+				brave #勇敢
+				persistent #执着				
+			}
+		}
+
+		create_character = { # Sea
+            #尼米兹
+			dna = dna_robert_bullard			
 			historical = yes
 			is_admiral = yes
 			first_name = Chester
 			last_name = William_Nimitz
-			culture = cu:yankee
+			culture = cu:north_german
 			birth_date = 1885.8.14
 			interest_group = ig_industrialists
 			ideology = ideology_moderate
 			hq = region_new_england
-			commander_rank = commander_rank_5
+			commander_rank = commander_rank_4
 			traits = {
 				expert_naval_commander
 				dockyard_master
@@ -202,46 +351,31 @@
 			}
 		}
 
-		create_character = { # USA, Admiral
-                        #艾姆斯·斯普鲁恩斯
+		create_character = { # USA海军
+            #艾姆斯·斯普鲁恩斯
+			dna = ecchi_dna_james_k_polk
 			historical = yes
 			is_admiral = yes
 			first_name = Raymond
 			last_name = Ames_Spruance
-			culture = cu:dixie
+			culture = cu:north_german
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
 			birth_date = 1886.7.3
-			commander_rank = commander_rank_5
+			commander_rank = commander_rank_4
 			hq = region_dixie
-			traits = {
-				meticulous
-				expert_naval_commander
-			}
-		}
-		
-		create_character = { # Sea
-                        #哈尔西
-			historical = yes
-			is_admiral = yes
-			first_name = William
-			last_name = Frederick_Halsey
-			culture = cu:yankee
-			birth_date = 1882.10.30
-			interest_group = ig_intelligentsia
-			ideology = ideology_moderate
-			hq = region_dixie
-			commander_rank = commander_rank_5
 			traits = {
 				expert_naval_commander
 				charismatic
-				dockyard_master
-			                 popular_commander
+			    popular_commander	
+				brave #勇敢
+				reserved #内敛
 			}
 		}
 		
 		create_character = { # Sea
-                        #弗莱彻
+            #弗莱彻
+			dna = ecchi_dna_millard_fillmore
 			historical = yes
 			is_admiral = yes
 			first_name = Frank
@@ -251,12 +385,29 @@
 			interest_group = ig_armed_forces
 			ideology = ideology_moderate
 			hq = region_pacific_coast
-			commander_rank = commander_rank_5
-			traits = {
+			commander_rank = commander_rank_4
+			traits = {				
 				expert_naval_commander
 				ambitious
 				dockyard_master
+				hedonist #享乐主义者
 			}
 		}
+
+		create_character = { # Sea
+            #托马斯·卡森·金凯德
+			dna = ecchi_dna_franklin_pierce	
+			historical = yes
+			is_admiral = yes
+			first_name = Thomas·Carson
+			last_name = Kincaid
+			culture = cu:yankee
+			birth_date = 1888.4.3
+			interest_group = ig_armed_forces
+			hq = region_pacific_coast
+			commander_rank = commander_rank_4
+			traits = {				
+			}
+		}		
 	}
 }

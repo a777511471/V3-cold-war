@@ -139,7 +139,7 @@ company_basic_colonial_plantations_1 = {
 	}
 	
 	prosperity_modifier = {
-		state_radicals_from_sol_change_mult = -0.05
+		state_radicals_from_political_movements_mult = -0.05
 	}	
 }
 
@@ -331,7 +331,7 @@ company_basic_forestry = {
 	}
 }
 
-company_basic_oil = { #石油公司/天然气公司
+company_basic_oil = {
 	icon = "gfx/interface/icons/company_icons/basic_oil.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 	
@@ -348,17 +348,13 @@ company_basic_oil = { #石油公司/天然气公司
 	
 	building_types = {
 		building_oil_rig
-		building_refinery
 	}
 
 	possible = { 
 		any_scope_state = {
 			any_scope_building = {
-				OR = {
-					is_building_type = building_oil_rig
-					is_building_type = building_refinery
-				}
-				level >= 3
+				is_building_type = building_oil_rig
+				level >= 5
 			}
 		}
 	}
@@ -397,7 +393,7 @@ company_basic_gold_mining = {
 	
 	prosperity_modifier = {
 		country_minting_mult = 0.05
-		state_loyalists_from_sol_change_mult = 0.05
+		state_loyalists_from_political_movements_mult = 0.05
 	}
 }
 
@@ -477,7 +473,7 @@ company_basic_mineral_mining = {
 	}
 }
 
-company_basic_food = { #食品
+company_basic_food = {
 	icon = "gfx/interface/icons/company_icons/basic_food.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 	
@@ -492,23 +488,15 @@ company_basic_food = { #食品
 		"dynamic_company_type_combine"
 	}
 	
-	building_types = {  
-		building_beverage_factory #饮料工厂
-		building_food_industry #食品厂
-		building_sugar_factory #制糖厂
-		building_sugar_plantation #糖料作物种植园
+	building_types = {
+		building_food_industry
 	}
 
 	possible = { 
 		any_scope_state = {
 			is_incorporated = yes
 			any_scope_building = {
-				OR = {
-					is_building_type = building_beverage_factory #饮料工厂
-					is_building_type = building_food_industry #食品厂
-					is_building_type = building_sugar_factory #制糖厂
-					is_building_type = building_sugar_plantation #糖料作物种植园
-				}
+				is_building_type = building_food_industry
 				level >= 5
 			}
 		}
@@ -587,7 +575,7 @@ company_basic_home_goods = {
 	}
 	
 	prosperity_modifier = {
-		state_loyalists_from_sol_change_mult = 0.1
+		state_loyalists_from_political_movements_mult = 0.1
 	}
 }
 
@@ -621,11 +609,11 @@ company_basic_textiles = {
 	}
 	
 	prosperity_modifier = {
-		state_radicals_from_sol_change_mult = -0.1
+		state_radicals_from_political_movements_mult = -0.1
 	}
 }
 
-company_basic_steel = { #钢铁企业
+company_basic_steel = {
 	icon = "gfx/interface/icons/company_icons/basic_steel.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -659,7 +647,7 @@ company_basic_steel = { #钢铁企业
 	}
 }
 
-company_basic_metalworks = { #金属制品/军械
+company_basic_metalworks = {
 	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -675,12 +663,9 @@ company_basic_metalworks = { #金属制品/军械
 	}
 	
 	building_types = {
-		building_tooling_workshops #工具厂
-		building_large_equipment_factory #大型设备工厂
-		building_arms_industry #武器厂
-		building_artillery_foundries #火炮厂
-		building_war_machine_industry #战争机器厂
-		building_aircraft_factory #飞机制造厂
+		building_tooling_workshops
+		building_arms_industry
+		building_artillery_foundries
 	}
 
 	possible = { 
@@ -688,12 +673,9 @@ company_basic_metalworks = { #金属制品/军械
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_tooling_workshops #工具厂
-					is_building_type = building_large_equipment_factory #大型设备工厂
-					is_building_type = building_arms_industry #武器厂
-					is_building_type = building_artillery_foundries #火炮厂
-					is_building_type = building_war_machine_industry #战争机器厂
-					is_building_type = building_aircraft_factory #飞机制造厂
+					is_building_type = building_tooling_workshops
+					is_building_type = building_arms_industry
+					is_building_type = building_artillery_foundries
 				}
 				level >= 3
 			}
@@ -743,7 +725,7 @@ company_basic_shipyards = {
 	}
 }
 
-company_basic_chemicals = { #化工
+company_basic_chemicals = {
 	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -781,7 +763,7 @@ company_basic_chemicals = { #化工
 	}
 }
 
-company_basic_motors = { #汽车公司
+company_basic_motors = {
 	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -797,9 +779,8 @@ company_basic_motors = { #汽车公司
 	}
 	
 	building_types = {
-		building_car_factory #汽车制造厂
-		building_motor_industry #动力机械厂
-		building_war_machine_industry #战争机器厂
+		building_motor_industry
+		building_war_machine_industry
 	}
 
 	possible = { 
@@ -807,9 +788,8 @@ company_basic_motors = { #汽车公司
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_car_factory #汽车制造厂
-					is_building_type = building_motor_industry #动力机械厂
-					is_building_type = building_war_machine_industry #战争机器厂
+					is_building_type = building_motor_industry
+					is_building_type = building_war_machine_industry
 				}
 				level >= 3
 			}
@@ -859,7 +839,7 @@ company_basic_munitions = {
 	}
 }
 
-company_basic_electrics = { #电气
+company_basic_electrics = {
 	icon = "gfx/interface/icons/company_icons/basic_electrics.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -875,21 +855,13 @@ company_basic_electrics = { #电气
 	}
 	
 	building_types = {
-		building_electrics_industry #电子产品厂
-		building_home_appliance_factory #家电工厂
-		building_electronic_parts_factory #电子零件工厂
-		building_computer_factory #计算机工厂
+		building_electrics_industry
 	}
 
 	possible = { 
 		any_scope_state = {
 			any_scope_building = {
-				OR = {
-					is_building_type = building_electrics_industry #电子产品厂
-					is_building_type = building_home_appliance_factory #家电工厂
-					is_building_type = building_electronic_parts_factory #电子零件工厂
-					is_building_type = building_computer_factory #计算机工厂
-				}
+				is_building_type = building_electrics_industry
 				level >= 5
 			}
 		}

@@ -1,0 +1,38 @@
+namespace = ind
+
+ind.1 = { #八月革命胜利
+	type = country_event
+	orphan = yes
+	
+	title = ind.1.t
+	desc = ind.1.d
+	flavor = ind.1.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/印尼独立.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	duration = 3
+	
+	trigger = { 
+		OR = {
+			c:IND ?= ROOT
+			c:IDN ?= ROOT
+		}
+		OR = {		
+		    exists = c:IND	
+		    exists = c:IDN	
+		}	    			
+	}
+
+	option = {
+		name = ind.1.a
+		default_option = yes
+		annex = c:IDN			
+	}
+}
+

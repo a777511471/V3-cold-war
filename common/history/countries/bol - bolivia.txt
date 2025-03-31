@@ -1,30 +1,38 @@
 ﻿COUNTRIES = {
 	c:BOL = {		
 		effect_starting_technology_tier_4_tech = yes
-		effect_starting_politics_conservative = yes
-		
 		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_autocracy 
-		activate_law = law_type:law_colonial_exploitation #民族剥削
-		activate_law = law_type:law_racial_segregation
-		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_professional_army #职业军队		
+		activate_law = law_type:law_interventionism #经济干预
+		activate_law = law_type:law_free_trade #自由贸易			
+		activate_law = law_type:law_colonial_exploitation #民族剥削		
+		activate_law = law_type:law_cultural_exclusion #文化排斥
+		activate_law = law_type:law_tenant_farmers #佃农
+		activate_law = law_type:law_state_religion
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_per_capita_based_taxation
-		activate_law = law_type:law_no_schools
-		activate_law = law_type:law_no_police
 		
-		set_tariffs_import_priority = g:artillery
-		set_tariffs_import_priority = g:small_arms		
+		add_journal_entry = { type = je_accept_the_quechua_people }
 
 		ig:ig_armed_forces = { # Barragan was head of state, on paper, but Antonio Lopez de Santa Anna had his finger in every political pie
 			add_ruling_interest_group = yes
 			remove_ideology = ideology_caudillismo
 		}
 
-		ig:ig_landowners = {
-			add_ruling_interest_group = yes
+		ig:ig_intelligentsia = { #知识分子 
+			set_interest_group_name = ig_academic_group #学术集团
+		}	
+
+		ig:ig_industrialists = { #财阀
+			set_interest_group_name = ig_chaebol
+		}
+
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_elite #政治精英
 			remove_ideology = ideology_paternalistic
+			add_ideology = ideology_republican_paternalistic #缙绅主义者					
 		}
 
 		ig:ig_devout = {

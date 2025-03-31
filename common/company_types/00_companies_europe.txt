@@ -510,6 +510,52 @@ company_aker_mek = {
 	}
 }
 
+# Nokia AB
+company_nokia = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/finland_nokia.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_paper_mills
+		building_logging_camp
+		building_power_plant
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_UUSIMAA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_UUSIMAA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_electrics_industry_throughput_add = 0.1
+		building_synthetics_plants_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Ursus
 company_ursus = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/polish_ursus.dds"
@@ -640,7 +686,7 @@ company_mozambique_company = {
 	
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.1
-		state_colony_growth_creation_mult = 0.1
+		state_colony_growth_creation_factor = 0.1
 	}	
 	
 	ai_weight = {

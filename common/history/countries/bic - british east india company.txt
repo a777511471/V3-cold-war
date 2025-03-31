@@ -1,32 +1,60 @@
 ﻿COUNTRIES = {
-	c:BIC = { #印度
-		ig:ig_armed_forces = {
-			add_ruling_interest_group = yes
-		}
+	c:BIC ?= { #印度
 		effect_starting_technology_tier_4_tech = yes
 		set_capital = STATE_DELHI
-		activate_law = law_type:law_presidential_republic
-		activate_law = law_type:law_autocracy #独裁制
-		activate_law = law_type:law_protectionism #贸易保护
-		activate_law = law_type:law_colonial_resettlement #民族安置
-		activate_law = law_type:law_tenant_farmers #佃农
+		activate_law = law_type:law_parliamentary_republic #议会共和制
+		activate_law = law_type:law_autocracy #独裁制		
+		activate_law = law_type:law_hindu_caste_enforced #实施种姓制度
+		activate_law = law_type:law_tenant_farmers #佃农			
+		activate_law = law_type:law_peasant_levies #征召农兵					
+		activate_law = law_type:law_dedicated_police #专职警察部队		
+		activate_law = law_type:law_appointed_bureaucrats #任命官僚制				
+		activate_law = law_type:law_cultural_exclusion #文化排斥		
+		activate_law = law_type:law_colonial_exploitation #民族剥削
+		activate_law = law_type:law_extraction_economy #盘剥经济
+		activate_law = law_type:law_religious_schools #教会学校
+		activate_law = law_type:law_charitable_health_system #慈善医院
+		activate_law = law_type:law_open_door #门户开放
 		activate_law = law_type:law_case_law_system #海洋法系
-		activate_law = law_type:law_total_separation
-		activate_law = law_type:law_racial_segregation # English & Anglo-Indian supremacy; no Indians served in the upper echelons of government
-		activate_law = law_type:law_industry_banned
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_land_based_taxation
-		activate_law = law_type:law_migration_controls
-		activate_law = law_type:law_legacy_slavery
 
+		ig:ig_devout = {
+			set_interest_group_name = ig_hindu_priesthood #印度教上师
+		}
 
-		add_company = company_type:company_tata
-		company:company_tata = {
-			set_company_establishment_date = 1869.1.1
+		ig:ig_industrialists = { #实业家
+			set_interest_group_name = ig_elite #政治精英	
+			add_ideology = ideology_plutocratic #意识形态财阀主义者
+			add_ideology = ideology_laissez_faire #意识形态自由放任主义者
+			add_ideology = ideology_individualist #意识形态个人主义者
+			remove_ideology = ideology_colonialist #殖民主义者
+			remove_ideology = ideology_enclavist #飞地主义者
+			remove_ideology = ideology_malthusian #马尔萨斯主义者
+		}
+
+		ig:ig_rural_folk = { #乡村民众
+			set_interest_group_name = ig_ryots #莱特
+			add_ideology = ideology_proletarian #无产阶级主义者			
+		}
+
+		ig:ig_intelligentsia = { #知识分子
+			set_interest_group_name = ig_civil_servants #公务员		
+			remove_ideology = ideology_anti_clerical #反教权主义者
+		}
+
+		ig:ig_petty_bourgeoisie = { #小市民
+			set_interest_group_name = ig_bhadralok #巴德拉罗克
+		}
+
+		ig:ig_armed_forces = {
+			set_interest_group_name = ig_indian_army #印度军队
 		}
 
 		ig:ig_landowners = {
-			add_ideology = ideology_zamindar #柴明达
+			add_ruling_interest_group = yes
+			set_interest_group_name = ig_zamindars #扎明达尔		
+			add_ideology = ideology_zamindar #意识形态扎明达尔
 			remove_ideology = ideology_paternalistic #家长式
 		}
 
@@ -35,13 +63,30 @@
 			value = 0
 		}
 
+		add_journal_entry = { type = je_tudigaige2 } #土地改革
+
 		trigger_event = {
 			id = bic_out_of_control.1
 		}
 
 		add_modifier = {
-			name = bic_out_of_control_modifier
+			name = bic_out_of_control_modifier #殖民统治的崩溃
+			months = -1			
+		}
+
+		add_modifier = {
+			name = the_last_elephant_convoy_modifier #最后的大象运输队
+			years = 30
+		}
+
+		add_modifier = {
+			name = south_asian_militarism_modifier #南亚军国主义
 			months = -1
 		}
+
+		add_modifier = {
+			name = women's_auxiliary_force_modifier #女子辅助部队
+			months = -1
+		}				
 	}
 }

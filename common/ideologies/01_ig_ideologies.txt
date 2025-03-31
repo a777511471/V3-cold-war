@@ -1,4 +1,6 @@
-﻿ideology_paternalistic = { #意识形态家长式的
+﻿
+
+ideology_paternalistic = { #意识形态家长式主义者
 	icon = "gfx/interface/icons/ideology_icons/paternalistic.dds"
 	
 	lawgroup_legal_system = {
@@ -16,10 +18,11 @@
 
 	lawgroup_governance_principles = {
 		law_monarchy = strongly_approve
-		law_theocracy = approve #赞成			
-		law_presidential_republic = neutral #中立
+		law_theocracy = approve			
+		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
-		law_council_republic = disapprove #反对
+		law_corporate_state = neutral
+		law_council_republic = strongly_disapprove
 	}
 	
 	lawgroup_distribution_of_power = {
@@ -30,7 +33,7 @@
 		law_wealth_voting = neutral
 		law_census_voting = disapprove
 		law_universal_suffrage = strongly_disapprove
-		law_multi_party_cooperation_system = disapprove
+		law_multi_party_cooperation_system = approve #一党专政
 		law_anarchy = strongly_disapprove
 		law_technocracy = strongly_disapprove
 	}
@@ -52,11 +55,14 @@
 	lawgroup_economic_system = {		
 		law_traditionalism = strongly_approve
 		law_agrarianism = approve
-		law_interventionism = neutral
 		law_industry_banned = disapprove
-		law_laissez_faire = disapprove
-		law_cooperative_ownership = strongly_disapprove
-		law_command_economy = strongly_disapprove
+		law_laissez_faire = disapprove		
+		law_cooperative_ownership = strongly_disapprove #合作社
+		law_collective_economy = strongly_disapprove #集体经济	
+		law_social_capitalism = strongly_disapprove #社会主义市场经济
+		law_state_capitalism_ownership = strongly_disapprove #国家资本主义
+		law_command_economy = strongly_disapprove #计划经济			
+		law_extraction_economy = disapprove #盘剥经济		
 	}
 	
 	lawgroup_trade_policy = {		
@@ -90,13 +96,16 @@ ideology_laissez_faire = { #自由放任主义者
 	}
 	
 	lawgroup_economic_system = {	
-		law_laissez_faire = strongly_approve
+		law_laissez_faire = strongly_approve		
 		law_interventionism = approve
 		law_agrarianism = neutral
-		law_traditionalism = disapprove	
+		law_traditionalism = disapprove			
 		law_cooperative_ownership = strongly_disapprove
-		law_command_economy = strongly_disapprove
+		law_collective_economy = strongly_disapprove #集体经济	
 		law_industry_banned = strongly_disapprove
+		law_social_capitalism = strongly_disapprove #社会主义市场经济
+		law_state_capitalism_ownership = strongly_disapprove #国家资本主义
+		law_extraction_economy = strongly_disapprove #盘剥经济			
 	}
 	
 	lawgroup_trade_policy = {	
@@ -109,8 +118,9 @@ ideology_laissez_faire = { #自由放任主义者
 	}		
 		
 	lawgroup_childrens_rights = {
-		law_child_labor_allowed = approve
-		law_abolish_child_laborl = neutral
+		law_child_labor_allowed = strongly_approve	
+		law_abolish_child_laborl = approve #废除童工		
+		law_restricted_child_labor = neutral #限制童工
 		law_compulsory_primary_school = disapprove
 	}
 	
@@ -153,6 +163,13 @@ ideology_individualist = { #意识形态_个人主义
 		law_public_health_insurance = disapprove
 	}
 	
+	lawgroup_ecological_protection = {
+		law_private_environmental_organizations = strongly_approve
+		law_no_environmental_protection_department = approve
+		law_church_environmental_organizations = neutral
+		law_environmental_protection = disapprove
+	}
+
 	lawgroup_education_system = {
 		law_private_schools = approve
 		law_public_schools = neutral
@@ -233,6 +250,13 @@ ideology_pious = { #虔信徒
 		law_private_health_insurance = disapprove
 	}
 	
+	lawgroup_ecological_protection = {
+		law_private_environmental_organizations = disapprove
+		law_no_environmental_protection_department = disapprove
+		law_church_environmental_organizations = approve
+		law_environmental_protection = neutral
+	}
+
 	lawgroup_education_system = {
 		law_religious_schools = approve
 		law_no_schools = neutral
@@ -245,8 +269,8 @@ ideology_agrarian = { #农本主义者
 	icon = "gfx/interface/icons/ideology_icons/agrarian.dds"
 	
 	lawgroup_population_policy = {
-		law_encourage_fertility = disapprove #反对鼓励生育
-		law_family_planning = strongly_approve #坚决赞成限制生育
+		law_encourage_fertility = strongly_approve #鼓励生育
+		law_family_planning =  disapprove#限制生育
 		law_free_reproduction = approve #赞成自由生育
 	}
 	
@@ -254,10 +278,12 @@ ideology_agrarian = { #农本主义者
 		law_agrarianism = approve
 		law_industry_banned = neutral
 		law_traditionalism = neutral
-		law_interventionism = neutral
-		law_cooperative_ownership = disapprove
+		law_cooperative_ownership = disapprove			
+		law_collective_economy = disapprove #集体经济	
 		law_laissez_faire = strongly_disapprove
-		law_command_economy = strongly_disapprove
+		law_social_capitalism = strongly_disapprove #社会主义市场经济
+		law_state_capitalism_ownership = strongly_disapprove #国家资本主义
+		law_command_economy = strongly_disapprove #计划经济			
 	}
 
 	lawgroup_land_reform = {
@@ -354,16 +380,14 @@ ideology_moralist = { #道德主义者
 	
 	lawgroup_population_policy = {
 		law_encourage_fertility = disapprove #反对鼓励生育
-		law_family_planning = strongly_approve #坚决赞成限制生育
 		law_free_reproduction = approve #赞成自由生育
 	}
 
 	lawgroup_legal_system = {
 		law_unwritten_law = neutral
 		law_islamic_law_system = neutral
-		law_chinese_legal_system = neutral
+		law_chinese_legal_system = disapprove #反对
 		law_case_law_system = approve #支持
-		law_continental_law_system = disapprove #反对
 		law_socialist = disapprove #反对
 	}
 
@@ -372,7 +396,7 @@ ideology_moralist = { #道德主义者
 		law_theocracy = strongly_approve
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
-		law_council_republic = disapprove #反对
+		law_council_republic = strongly_disapprove #坚决反对
 	}
 
 	lawgroup_church_and_state = {
@@ -492,7 +516,14 @@ ideology_jingoist = { #意识形态_沙文主义者
 
 ideology_liberal = { #自由主义者
 	icon = "gfx/interface/icons/ideology_icons/liberal.dds"
-	
+
+    lawgroup_ecological_protection = {
+        law_private_environmental_organizations = disapprove
+        law_no_environmental_protection_department = disapprove
+        law_church_environmental_organizations = neutral
+        law_environmental_protection = approve
+    }
+
 	lawgroup_population_policy = {
 		law_encourage_fertility = disapprove #反对鼓励生育
 		law_family_planning = approve #赞成限制生育
@@ -595,10 +626,10 @@ ideology_republican = { #共和主义者
 		law_monarchy = disapprove	
 		law_theocracy = disapprove
 		law_council_republic = disapprove
+		law_corporate_state = disapprove #法团国家		
 	}
 	
 	lawgroup_distribution_of_power = {
-		law_multi_party_cooperation_system = strongly_approve
 		law_universal_suffrage = strongly_approve
 		law_census_voting = strongly_approve
 		law_wealth_voting = approve
@@ -630,13 +661,15 @@ ideology_proletarian = { #无产阶级
 		law_graduated_taxation = approve
 	}	
 
-	lawgroup_economic_system = {
+	lawgroup_economic_system = {		
 		law_cooperative_ownership = approve #合作社
+		law_collective_economy = strongly_approve #集体经济	
 		law_command_economy = strongly_approve #计划经济
 		law_interventionism = approve
 		law_agrarianism = neutral
 		law_traditionalism = disapprove		
-		law_laissez_faire = disapprove		
+		law_laissez_faire = disapprove	
+		law_extraction_economy = strongly_disapprove #盘剥经济			
 	}
 	
 	lawgroup_welfare = {
@@ -652,7 +685,7 @@ ideology_proletarian = { #无产阶级
 		law_charitable_health_system = neutral
 		law_public_health_insurance = approve
 	}	
-	
+
 	lawgroup_education_system = {
 		law_public_schools = approve
 		law_private_schools = neutral
@@ -722,7 +755,6 @@ ideology_populist = { #平民主义者
 	}
 
 	lawgroup_distribution_of_power = {
-		law_multi_party_cooperation_system = strongly_approve
 		law_universal_suffrage = strongly_approve
 		law_anarchy = approve
 		law_census_voting = neutral
@@ -763,7 +795,8 @@ ideology_socialist = { #社会主义者
 	}
 
 	lawgroup_economic_system = {	
-		law_command_economy = approve
+		law_command_economy = approve #计划经济				
+		law_collective_economy = approve #集体经济	
 		law_cooperative_ownership = approve
 		law_interventionism = neutral
 		law_agrarianism = neutral
@@ -833,7 +866,7 @@ ideology_reactionary = { #反动主义者
 	}
 }
 
-ideology_plutocratic = { #财阀
+ideology_plutocratic = { #财阀主义者
 	icon = "gfx/interface/icons/ideology_icons/plutocratic.dds"
 
 	lawgroup_population_policy = {
@@ -858,6 +891,7 @@ ideology_plutocratic = { #财阀
 		law_monarchy = neutral			
 		law_presidential_republic = neutral
 		law_parliamentary_republic = neutral
+		law_corporate_state = disapprove
 		law_theocracy = disapprove
 		law_council_republic = strongly_disapprove
 	}
@@ -884,8 +918,8 @@ ideology_patriarchal = { #父权主义者
 	lawgroup_rights_of_women = {
 		law_no_womens_rights = strongly_approve #强烈赞成
 		law_women_own_property = approve
-		law_women_in_the_workplace = approve
-		law_womens_suffrage = neutral
+		law_women_in_the_workplace = neutral
+		law_womens_suffrage = disapprove
 	}
 
 	lawgroup_free_speech = {

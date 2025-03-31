@@ -1,0 +1,61 @@
+je_first_berlin_blockade = {
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/第一次柏林危机.dds"
+
+	group = je_group_objectives
+
+	scripted_progress_bar = first_berlin_blockade_west_progress_bar
+	scripted_progress_bar = first_berlin_blockade_west_progress_bar
+
+	scripted_button = first_berlin_blockade_air_transport_button
+	scripted_button = first_berlin_blockade_air_transport_not_button
+	scripted_button = first_berlin_blockade_military_assistance_button
+	scripted_button = first_berlin_blockade_basic_law_button
+	scripted_button = first_berlin_blockade_democracy_button
+	scripted_button = first_berlin_blockade_USSR_talk_USA_button
+	scripted_button = first_berlin_blockade_USSR_talk_FRA_button
+	scripted_button = first_berlin_blockade_USSR_talk_GBR_button
+	
+    immediate = {
+		set_global_variable = { name = first_berlin_blockade_west_progress value = 0 }
+    }
+    complete = {
+		OR = {
+			has_global_variable = BRD_setup_var
+	        exist = c:BRD
+	}
+}
+    on_complete = {
+	if ={
+            limit ={ c:GBR  = { is_player= yes }
+	}
+			c:GBR ={ trigger_event = { id = west_germany_event.5 popup = yes }}
+ }
+    else_if ={
+            limit ={ c:FRA = { is_player= yes }
+	}
+			c:FRA ={ trigger_event = { id = west_germany_event.5 popup = yes }}
+ }
+    else_if ={
+            limit ={ c:BAV = { is_player= yes }
+	}
+			c:BAV ={ trigger_event = { id = west_germany_event.5 popup = yes }}
+ }
+    else_if ={
+            limit ={ c:YSD = { is_player= yes }
+	}
+			c:YSD ={ trigger_event = { id = west_germany_event.5 popup = yes }}
+ }
+    else_if ={
+            limit ={ c:RHN = { is_player= yes }
+	}
+			c:RHN ={ trigger_event = { id = west_germany_event.5 popup = yes }}
+ }
+    else ={
+            c:USA ={ trigger_event = { id = west_germany_event.5 popup = yes }}
+ } 
+    }
+	
+	weight = 1000
+	transferable = yes
+}

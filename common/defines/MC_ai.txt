@@ -1,0 +1,12 @@
+﻿NAI = {
+	
+# 投资池ai所有者建筑位置选择权重和乘数
+
+	
+	OWNER_COMPANY_SCORE_MULT = 100.0								# 将所有者公司分数乘以此，此分数越高，选择公司建筑而不是其他拥有建筑类型的可能性就越大
+	OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE = 10						# 公司大楼应该在本州投资多少层楼
+	OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE_PENALTY_MULT = 1.0		# 如果所有者公司所在州的公司建筑级别数低于最小值，则将业主公司分数乘以此分数
+	OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY = 100					# 公司大楼应该在本国投资多少层楼的建筑物
+	OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY_PENALTY_MULT = 1.0		# 如果业主公司在本国家/地区的级别数低于最低级别，则将其乘以此分数
+
+}

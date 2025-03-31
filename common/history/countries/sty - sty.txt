@@ -1,6 +1,6 @@
 ﻿COUNTRIES = {
 	c:STY = {
-		effect_starting_technology_tier_1_tech = yes
+		effect_starting_technology_tier_2_tech = yes
 		set_next_election_date = 1946.7.1
 		
 		set_tariffs_export_priority = g:grain
@@ -16,13 +16,13 @@
 		add_taxed_goods = g:tea
 
 		# Laws 
-		activate_law = law_type:law_parliamentary_republic #议会共和制  
+		activate_law = law_type:law_parliamentary_republic #议会共和制
+		activate_law = law_type:law_non_militarized_country #非军事化国家		  
 		activate_law = law_type:law_right_of_assembly #集会权
-		activate_law = law_type:law_professional_army #职业军队
 		activate_law = law_type:law_protectionism #贸易保护
 		activate_law = law_type:law_migration_controls #移民控制
 		activate_law = law_type:law_old_age_pension #养老金
-		activate_law = law_type:law_encourage_fertility #鼓励抚养
+		activate_law = law_type:law_encourage_fertility #鼓励生育
 		activate_law = law_type:law_regulatory_bodies #国家监管机构
                 activate_law = law_type:law_private_health_insurance #私人医疗保险
 		activate_law = law_type:law_private_capital_support #私人资本扶植（科研）
@@ -60,7 +60,7 @@
 
 		ig:ig_trade_unions = { #工会
 			remove_ideology = ideology_proletarian #无产阶级主义者
-			add_ideology = ideology_social_democrats #社民主义者
+			add_ideology = ideology_social_democrats #社会民主主义者
 		}
 	}
 }

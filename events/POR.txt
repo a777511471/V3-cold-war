@@ -1,0 +1,120 @@
+namespace = por
+
+por.1 = { #游行队伍（萨拉查去世）
+	type = country_event
+	placement = ROOT
+
+	title = por.1.t
+	desc = por.1.d
+	flavor = por.1.f
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = por.1.a #
+		default_option = yes
+
+	}
+}
+
+por.2 = { #再见了，考迪罗
+	type = country_event
+	placement = ROOT
+
+	title = por.2.t
+	desc = por.2.d
+	flavor = por.2.f
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_factory_closed.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/factory_closed"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = por.2.a #
+		default_option = yes
+
+	}
+}
+
+por.3 = { #葡萄牙权力交接
+	type = country_event
+	placement = ROOT
+
+	title = por.3.t
+	desc = por.3.d
+	flavor = por.3.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/london_center"
+
+	icon = "gfx/interface/icons/event_icons/paper.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = por.3.a #
+		default_option = yes
+		create_character = {
+			#马尔塞洛·达斯内维斯·阿尔维斯·卡埃塔诺
+    		dna = dna_truman			
+			historical = yes
+			first_name = "Marcello·Dasnevis·Alves"
+			last_name = "Caetano"
+			religion = rel:catholic            
+			ruler = yes		
+			ig_leader = yes
+			birth_date = 1906.8.17			
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_corporatist_leader #法团主义者
+			traits = {
+				basic_political_operator #政治运作者				
+				basic_diplomat #外交家	
+			}
+		}
+
+		create_character = {		
+			religion = rel:catholic
+			heir = yes			
+			traits = {	
+			}
+		}
+
+		create_character = {
+			religion = rel:catholic            
+			ig_leader = yes				
+			interest_group = ig_devout #教会
+			traits = {
+				pious #虔诚
+			}
+		}        
+	}
+}

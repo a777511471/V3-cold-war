@@ -2,18 +2,13 @@
 	c:FIN = {		
 		set_next_election_date = 1946.7.1
 		effect_starting_technology_tier_2_tech = yes
-		add_technology_researched = dialectics
 		effect_starting_politics_conservative = yes
 		
-		add_taxed_goods = g:liquor
-		
-		set_tariffs_export_priority = g:iron
-		set_tariffs_export_priority = g:wood
-		
 		# Laws 
-		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_parliamentary_republic #议会共和制
+		activate_law = law_type:law_continental_law_system #大陆法系		
+		activate_law = law_type:law_elected_bureaucrats #选举官僚制		
 		activate_law = law_type:law_freedom_of_conscience #信仰自由
-		activate_law = law_type:law_elected_bureaucrats #选举官僚制
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_slavery_banned
 		activate_law = law_type:law_national_supremacy
@@ -31,19 +26,44 @@
                 activate_law = law_type:law_compulsory_primary_school
                 activate_law = law_type:law_8_hour_working_system
                 activate_law = law_type:law_migration_controls
-		
+		activate_law = law_type:law_slavery_banned #禁止蓄奴
+
 		set_institution_investment_level = {
-			institution = institution_schools
+			institution = institution_schools #教育
 			level = 3
-		}	
+		}
 
 		ig:ig_trade_unions = { #工会
 			remove_ideology = ideology_proletarian #无产阶级主义者
-			add_ideology = ideology_social_democrats #社民主义者
+			add_ideology = ideology_social_democrats #社会民主主义者
 		}
 
-		ig:ig_landowners = {
-			add_ruling_interest_group = yes
+		ig:ig_intelligentsia = { #知识分子
+			set_interest_group_name = ig_elite #政治精英	
+			add_ideology = ideology_anti_clerical #反教权主义者
+		}		
+
+		ig:ig_industrialists = { #企业家
+			set_interest_group_name = ig_entrepreneur
 		}
+
+		add_modifier = {
+			name = cixous_spirit #西苏”精神
+		}
+
+		add_modifier = {
+			name = rus-fin_riendly_cooperation #苏芬友好合作
+		}		
+
+		add_modifier = {
+			name = objections_increased #异议增加
+			years = 5
+			is_decaying = yes
+		}	
+
+		add_modifier = {
+			name = fra_military_weakness_modifier #第二次世界大战的创伤
+		}
+
 	}
 }

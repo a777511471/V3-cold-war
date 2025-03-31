@@ -13,12 +13,24 @@
 		}		
 
 		create_character = {
-			ig_leader = yes #利益集团领袖
-			religion = rel:sunni #逊尼派
+			#伊拉克教会鼓动者赛义德·阿布·卡西姆·穆萨维·霍伊
+			dna = dna_kropotkin					
+			historical = yes
+			first_name = "Saeed·Abu·Qasim·al-Mousavi"
+			last_name = "Hoy"
+			birth_date = 1899.11.19
+			ig_leader = yes
+			culture = cu:azerbaijani	
+			religion = rel:shiite #什叶派				
 			interest_group = ig_intelligentsia #知识分子
-			traits = {
-			}
-		}
+			ideology = ideology_theocrat #神权政治主义者
+			traits = {							
+				strong #健硕
+				pious #虔诚	 				
+				charismatic #魅力四射
+		        ambitious #雄心勃勃
+			}	
+		}		
 
 		create_character = {
 			ig_leader = yes

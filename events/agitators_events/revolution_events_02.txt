@@ -706,7 +706,7 @@ revolution_pulse_events.5 = {
 
  	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
- 	cooldown = { months = long_modifier_time }
+ 	cooldown = { years = 10 }
 
  	trigger = {
  		any_revolution_ongoing = yes
@@ -796,7 +796,7 @@ revolution_pulse_events.5 = {
  			}
  			add_modifier = {
  				name = public_shame_modifier
- 				months = long_modifier_time
+ 				years = 10
  			}
  		}
  		scope:potemkin_state = {
@@ -2973,7 +2973,7 @@ revolution_pulse_events.22 = {
 					add_trait = scarred
 					add_modifier = {
 						name = modifier_hostage_situation_hero
-						months = long_modifier_time
+						years = 10
 					}
 				}
 				scope:ongoing_revolution = {

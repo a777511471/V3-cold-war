@@ -1,8 +1,22 @@
-﻿institution_social_security = { #社保
+﻿institution_colonial_affairs = { # 民族事务
+	icon = "gfx/interface/icons/institution_icons/colonization.dds"
+	background_texture = "gfx/interface/illustrations/institutions/colonization.dds"
+	modifier = {
+		state_turmoil_effects_mult = -0.05 #动乱地区的惩罚
+		country_secession_progress_mult = -0.05
+	}
+}
+
+institution_ecological_protection = { #环保
+	icon = "gfx/interface/icons/institution_icons/home_affairs.dds"
+	background_texture = "gfx/interface/illustrations/institutions/workplace_safety.dds"
+}
+
+institution_social_security = { #社保
 	icon = "gfx/interface/icons/institution_icons/social_security.dds"
 	background_texture = "gfx/interface/illustrations/institutions/social_security.dds"
 	modifier = {
-		state_welfare_payments_add = 0.01
+		state_welfare_payments_add = 0.2
 	}
 }
 
@@ -52,7 +66,7 @@ institution_police = { #执法
 	}
 }
 
-institution_health_system = {
+institution_health_system = { #卫生系统
 	icon = "gfx/interface/icons/institution_icons/health_service.dds"
 	background_texture = "gfx/interface/illustrations/institutions/health_service.dds"
 }

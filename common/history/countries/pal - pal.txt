@@ -39,5 +39,9 @@
 			institution = institution_police
 			level = 3
 		}
+
+		add_modifier = {
+			name = alia_sports #阿利亚运动		
+		}			
 	}
 }

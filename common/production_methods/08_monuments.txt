@@ -1,5 +1,317 @@
 ﻿# To ensure the game rule 'monument_effects' works properly, the game rule needs to be amended with flags disabling any new monuments' Base method
 # PM Groups should have the 'is_hidden_when_unavailable' flag to ensure only one alternative is visible at any time (unless the player actually has an option they can switch to)
+pm_default_building_marx's_tomb = { #马克思墓
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_trade_unions_pol_str_mult = 0.15
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_engineers_add = 100
+		}
+	}
+}
+
+pm_default_building_persepolis = { #波斯波利斯遗址
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_legitimacy_headofstate_add = 20
+			country_authority_add = 50
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_academics_add = 1000
+		}
+	}
+}
+
+pm_default_building_golestan_palace = { #戈勒斯坦宫
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_add = 0.2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_default_building_baku_torch_temple = { #巴库圣火庙
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_academics_add = 100
+		}
+	}
+}
+
+pm_default_building_sadabad_palace = { #萨达巴德宫
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_add = 0.2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_default_building_liujing_hotel = { #柳京饭店
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_industrialists_pol_str_mult = 0.15
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_engineers_add = 100
+		}
+	}
+}
+
+pm_default_building_pyramid_of_khufu = { #胡夫金字塔
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_academics_add = 100
+		}
+	}
+}
+
+pm_default_building_three_gorges_hydropower_station = { #三峡水电站
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_mult = 0.15
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_engineers_add = 100
+		}
+	}
+}
+
+pm_default_building_potala_palace = { #布达拉宫
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_academics_add = 100
+		}
+	}
+}
+
+pm_default_building_monument_to_the_people's_heroes = { #人民英雄纪念碑
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_rural_folk_pol_str_mult = 0.15
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_engineers_add = 100
+		}
+	}
+}
+
+pm_default_building_machu_picchu = { #马丘比丘
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_academics_add = 100
+		}
+	}
+}
+
+pm_default_building_sanxingdui = { #三星堆
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_academics_add = 100
+		}
+	}
+}
+
+pm_default_building_lenin's_tomb = { #红场列宁墓
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_trade_unions_pol_str_mult = 0.15
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_engineers_add = 100
+		}
+	}
+}
+
+pm_default_building_hermitage = { #冬宫
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_legitimacy_headofstate_add = 20
+			country_authority_add = 50
+			country_prestige_add = 25
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_academics_add = 1000
+		}
+	}
+}
+
+pm_default_building_kremlin = { #克里姆林宫
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_add = 0.2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
+
+pm_default_building_power_bloc_statue = { #国家集团雕像
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 3
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_decree_cost_mult = -0.25 #法令花费
+		}
+	}
+	
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 500
+		}
+	}
+}
 
 pm_default_building_eiffel_tower = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
@@ -20,7 +332,7 @@ pm_default_building_eiffel_tower = {
 	}
 }
 
-pm_default_building_cristo_redentor = {
+pm_default_building_cristo_redentor = { #救世基督像
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	country_modifiers = {
@@ -60,7 +372,7 @@ pm_default_building_angkor_wat = {
 	}
 }
 
-pm_default_building_big_ben = {
+pm_default_building_big_ben = { #大本钟
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 	
 	country_modifiers = {
@@ -85,7 +397,7 @@ pm_default_building_big_ben = {
 	}
 }
 
-pm_default_building_forbidden_city = {
+pm_default_building_forbidden_city = { #紫禁城
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	country_modifiers = {
@@ -101,8 +413,7 @@ pm_default_building_forbidden_city = {
 		#}
 
 		level_scaled = {
-			building_employment_bureaucrats_add = 800
-			building_employment_clergymen_add = 200
+			building_employment_academics_add = 1000
 		}
 	}
 }
@@ -172,7 +483,7 @@ pm_default_building_saint_basils_cathedral = {
 	}
 }
 
-pm_default_building_statue_of_liberty = {
+pm_default_building_statue_of_liberty = { #自由女神像
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	country_modifiers = {
@@ -246,7 +557,7 @@ pm_monument_prestige_only_vatican_city = {
 	}
 }
 
-pm_default_building_white_house = {
+pm_default_building_white_house = { #白宫
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	state_modifiers = {

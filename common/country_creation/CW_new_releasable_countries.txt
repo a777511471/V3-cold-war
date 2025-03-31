@@ -1,0 +1,348 @@
+ADR = {
+	provinces = { x0C64AC }
+
+	ai_will_do = { always = no }
+	
+}
+
+AAB = {
+	provinces = { x89334D }
+
+	ai_will_do = { always = no }
+	
+}
+
+BBD = {
+	provinces = { x445B6C }
+
+	ai_will_do = { always = no }
+	
+}
+
+BKF = {
+	
+	states = {
+		STATE_VOLTA
+	}
+                required_num_states = 1
+	possible = {
+		NOT = { exists = c:MOS }
+	}
+	ai_will_do = { always = no }
+	
+}
+
+COK = {
+	provinces = { xA000B0 }
+
+	ai_will_do = { always = no }
+	
+}
+
+CVD = {
+	
+	states = {
+		STATE_CAPE_VERDE
+	}
+                required_num_states = 1
+
+	ai_will_do = { always = no }
+	
+}
+
+DMC = {
+	provinces = { x70F001 }
+
+	ai_will_do = { always = no }
+	
+}
+
+DBT = {
+	provinces = { x40E050 x9B6C39 x3EE4D1 x9E8FDD }
+
+	ai_will_do = { always = no }
+	
+}
+
+ESL = {
+	provinces = { x90A090 xA30505 x884936 }
+
+	ai_will_do = { always = no }
+	
+}
+
+FJI = {
+	
+	states = {
+		STATE_FIJI
+	}
+                required_num_states = 1
+
+	ai_will_do = { always = no }
+	
+}
+
+GRD = {
+	provinces = { xF0F001 }
+
+	ai_will_do = { always = no }
+	
+}
+
+GUY = {
+	provinces = { xA22A4C xBB88B5 x218011 x1F5190 x6B802F xA52CE3 xE600F3 xA00111 x734F81 x8E31E8 x7B4B5E x63ABD4 x3A069F x24A66B x719492 x41552E x4AE8F7 x9A88B5 xB21306 xB1960A x805A8C x518580 xC0C0D0 xADE6C2 xE85635 x9FEDF7 xAA1153 x6816FF x350473 xFAE8C5 xB3512B xD0678B xD0BA2B xE7864B xA350D5 x6C6251 }
+
+	ai_will_do = { always = no }
+	
+}
+
+KIB = {
+	provinces = { x527F6C }
+
+	ai_will_do = { always = no }
+	
+}
+
+KUT = {
+	provinces = { x68C89A xDABB9C x00F060 }
+
+	ai_will_do = { always = no }
+	
+}
+
+LIC = {
+	provinces = { xD0C0E0 }
+
+	ai_will_do = { always = no }
+	
+}
+
+LST = {
+	provinces = { xF06050 x6DB7E8 xE1EAA4 x8C39B6 x3B4B19 xB6892A xD121F1 }
+
+	ai_will_do = { always = no }
+	
+}
+
+MTY = {
+	
+	states = {
+		STATE_MAURITANIA
+		STATE_INNER_MAURITANIA
+	}
+	required_num_states = 2
+	ai_will_do = { always = no }
+	
+}
+
+MCL = {
+	
+	states = {
+		STATE_EAST_MICRONESIA
+		STATE_WEST_MICRONESIA
+	}
+                required_num_states = 1
+	possible = {
+		NOT = { exists = c:MCR }
+	}
+	ai_will_do = { always = no }
+	
+}
+
+MNC = {
+	provinces = { x5080E0 }
+
+	ai_will_do = { always = no }
+	
+}
+
+MDA = {
+	provinces = { x8955DF x622837 x1E1DEF x712161 xFC9EFE xFDE796 x79D62E x8ACA9B x53D7E0 xE7274A }
+
+	ai_will_do = { always = no }
+	
+}
+
+MLW = {
+	provinces = { x644F6A x23CB5A xEFAC92 x83B741 x806329 x276350 x82E9A5 x8EF620 x4E5483 x2160B0 x52BDB8 }
+
+	ai_will_do = { always = no }
+	
+}
+
+MSH = {
+	provinces = { xF5DBBF x80C011 xCDWEA0 }
+
+	ai_will_do = { always = no }
+	
+}
+
+NAL = {
+	
+	states = {
+		STATE_NAURU
+	}
+                required_num_states = 1
+	possible = {
+		NOT = { exists = c:NRU }
+	}
+	ai_will_do = { always = no }
+	
+}
+
+NMC = {
+	
+	states = {
+		STATE_SKOPIA
+	}
+                required_num_states = 1
+
+	ai_will_do = { always = no }
+	
+}
+
+PLU = {
+	provinces = { x414170 }
+
+	ai_will_do = { always = no }
+	
+}
+
+PPY = {
+	
+	states = {
+		STATE_EASTERN_NEW_GUINEA
+                                STATE_BOUGAINVILLE
+	}
+                required_num_states = 1
+	possible = {
+		NOT = { exists = c:PPU }
+	}
+	ai_will_do = { always = no }
+	
+}
+
+QAT = {
+	provinces = { x2768F8 xEF5020 }
+
+	ai_will_do = { always = no }
+	
+}
+
+RWD = {
+	provinces = { x662B31 x5954AA x34EFF0 x80DF50 }
+	possible = {
+		NOT = { exists = c:RWA }
+	}
+	ai_will_do = { always = no }
+	
+}
+
+SAP = {
+	provinces = { xC02050 }
+
+	ai_will_do = { always = no }
+	
+}
+
+SMN = {
+	provinces = { xFE3729 }
+
+	ai_will_do = { always = no }
+	
+}
+
+SMY = {
+	provinces = { xC00010 xd98cda xa7f8a1 }
+
+	ai_will_do = { always = no }
+	
+}
+
+SN1 = {
+	
+	states = {
+		STATE_SENEGAL
+                                STATE_GAMBIA
+	}
+                required_num_states = 1
+
+	ai_will_do = { always = no }
+	
+}
+
+SRN = {
+	provinces = { xF17CCC xA08011 xDBF640 x50D012 x29D96A xE18467 xDB86CE xE8D6CB xE6BBD3 xA9777B xF6408F x063557 xA299AE x210190 x771D68 xD8362B xF1E3BF x4B427A x0753FE x19A3D9 xC2E46E x58ABBF x3EC2E7 xB6F7B4 x43E136 x102B13 xCDWA5A x822364 x27E268 }
+
+	ai_will_do = { always = no }
+	
+}
+
+SAL = {
+	provinces = { x446C63 }
+
+	ai_will_do = { always = no }
+	
+}
+
+SYC = {
+	provinces = { x60E0B0 }
+
+	ai_will_do = { always = no }
+	
+}
+
+TLT = {
+	provinces = { x4EE71E x3CCE91 x7F4592 }
+
+	ai_will_do = { always = no }
+	
+}
+
+TNG = {
+	provinces = { x208030 }
+
+	ai_will_do = { always = no }
+		possible = {
+		NOT = { exists = c:TNG }
+	}
+}
+
+TAT = {
+	provinces = { x707080 xD496B1 }
+
+	ai_will_do = { always = no }
+	
+}
+
+TVL = {
+	provinces = { x808090 }
+
+	ai_will_do = { always = no }
+	
+}
+
+VNT = {
+	
+	states = {
+		STATE_VANUATU
+	}
+                required_num_states = 1
+	possible = {
+		NOT = { exists = c:VNT }
+	}
+	ai_will_do = { always = no }
+	
+}
+
+MLT = {
+	provinces = { xD0E090 }
+
+	ai_will_do = { always = no }
+}
+
+CML = {
+	provinces = { x606CE0 }
+
+	ai_will_do = { always = no }
+}

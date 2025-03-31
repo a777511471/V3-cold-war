@@ -7,7 +7,7 @@
 	wage_weight = 6 #工资权重
 	paid_private_wage = yes #支付的私人工资
 	literacy_target = 0.60 #识字目标
-	dependent_wage = 0.0	#受抚养工资
+	dependent_wage = 50	#受抚养工资
 	unemployment = yes #能否失业
 	
 	# 70% - 100% politically engaged

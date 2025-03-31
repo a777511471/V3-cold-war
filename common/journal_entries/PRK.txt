@@ -1,5 +1,129 @@
-﻿je_prk = { #统一朝鲜
-	icon = "gfx/interface/icons/invention_icons/wargaming.dds"
+﻿end_hosting = { #结束托管
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	is_shown_when_inactive = { #显示条件
+		OR = {
+			c:PRK ?= ROOT
+			c:KOR ?= ROOT
+		}
+		is_subject = yes #是附庸		
+		is_subject = no #不是附庸				   							
+	}   
+
+	possible = { #激活条件
+		OR = {
+			c:PRK ?= ROOT
+			c:KOR ?= ROOT
+		}
+		is_subject = yes #是附庸					
+    }
+	complete = { #完成条件		
+		game_date >= 1953.7.27	
+		is_subject = yes #是附庸					
+    }
+    
+    on_complete = { #如果完成
+        make_independent = yes #独立        
+    }
+
+    weight = 1000
+}
+
+Korea_War_decision = { #朝鲜战争
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/统一朝鲜.dds"
+
+	is_shown_when_inactive = { #显示条件
+        exists = c:PRK
+        THIS = c:PRK		
+		is_subject = no #不是附庸				   							
+	}   
+
+	possible = { #激活条件
+        NOT = { 
+            has_variable = korean_war_hiw
+        }
+        exists = c:PRK
+        THIS = c:PRK
+		game_date >= 1950.5.25	
+		is_subject = no #不是附庸					
+    }
+	complete = { #完成条件		
+		game_date >= 1950.6.25	
+		is_subject = no #不是附庸				
+    }
+    
+    on_complete = { #如果完成
+
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+KOR_decision = { #建立大韩民国
+	group = je_group_internal_affairs
+
+	icon = "gfx/interface/icons/event_icons/韩国国徽.dds"
+
+	is_shown_when_inactive = { #显示条件
+        exists = c:KOR
+        THIS = c:KOR								
+	}   
+	possible = { #激活条件
+        exists = c:KOR
+        THIS = c:KOR	
+		game_date >= 1948.7.15					
+	}
+
+	complete = { #完成条件
+		game_date >= 1948.8.15	
+	}
+    on_complete = { #如果完成
+		trigger_event = {
+			id = PRK_event.2
+			popup = yes
+	    }			
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+PRK_decision = { #建立朝鲜民主主义人民共和国
+	group = je_group_internal_affairs
+
+	icon = "gfx/interface/icons/event_icons/朝鲜国徽.dds"
+
+	is_shown_when_inactive = { #显示条件
+        exists = c:PRK
+        THIS = c:PRK							
+	}   
+	possible = { #激活条件
+        exists = c:PRK
+        THIS = c:PRK
+		game_date >= 1948.8.9					
+	}
+
+	complete = { #完成条件
+		game_date >= 1948.9.9	
+	}
+    on_complete = {
+		trigger_event = {
+			id = PRK_event.1
+			popup = yes
+	    }							
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_prk = { #统一朝鲜
+	icon = "gfx/interface/icons/event_icons/统一朝鲜.dds"
 
 	group = je_group_foreign_affairs
 
@@ -82,9 +206,143 @@
 	}
 
 	on_complete = {
+		if = {
+			limit = {
+				has_modifier = loyalty_modifier
+			}
+			remove_modifier = loyalty_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = the_general's_kindness_is_not_over_yet_modifier
+			}
+			remove_modifier = the_general's_kindness_is_not_over_yet_modifier
+		}		
 		remove_global_variable = chinese_central_government
-		trigger_event = { id = warlord_china_events.101 popup = yes }
+		trigger_event = { id = chi.11 popup = yes }
 	}
 		
 	weight = 1000
+    should_be_pinned_by_default = yes	
 }
+
+the_fall_of_the_sun = { #太阳的陨落
+
+	group = je_group_internal_affairs
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	is_shown_when_inactive = { #显示条件
+        exists = c:PRK
+        THIS = c:PRK	
+		is_subject = no #不是附庸							
+	}   
+	possible = { #激活条件
+        exists = c:PRK
+        THIS = c:PRK
+		game_date >= 1994.6.8					
+	}
+
+	complete = { #完成条件
+		game_date >= 1994.7.8
+	}
+    on_complete = {
+        trigger_event = { id = PRK_event.4 } #太阳的陨落
+        remove_modifier = wanjingtai_bloodline_modifier
+		add_modifier = {
+			name = baitoushan_bloodline_modifier #白头山血统	
+		}				
+    }
+
+    weight = 1000
+}
+
+peaceful_reunification_of_korea = { #朝鲜和平统一方案
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/统一门.dds"
+
+	is_shown_when_inactive = {
+		OR = {
+			c:PRK ?= ROOT
+			c:KOR ?= ROOT
+		}
+		    exists = c:PRK		
+		    exists = c:KOR			
+	}
+	
+	possible = {
+		OR = {
+			c:PRK ?= ROOT
+			c:KOR ?= ROOT
+		}
+		    exists = c:PRK		
+		    exists = c:KOR			
+	}
+
+	complete = { #完成条件
+		NOT = {
+        	has_law = law_type:law_autocracy
+		}			
+	OR = {
+        c:PRK = { 
+            relations:root >= 50 
+        }
+        c:KOR = { 
+            relations:root >= 50 
+        }
+	}
+        c:USA = { 
+            relations:root >= 50 
+        }	
+        c:PRC = { 
+            relations:root >= 50 
+        }	
+		custom_tooltip = {
+			text = 100_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 30	
+	}
+    on_complete = {
+		trigger_event = {
+			id = PRK_event.5
+			popup = yes
+	    }					
+    }
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = peaceful_reunification_of_korea_goal
+			OR = {
+		    	NOT = { exists = c:PRK }		 
+		    	NOT = { exists = c:KOR }	
+			}				
+		}	
+    }
+
+    on_fail = { #如果失败
+    }
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 1
+	}
+
+	weight = 10000
+    progressbar = yes	
+	should_be_pinned_by_default = yes
+}
+

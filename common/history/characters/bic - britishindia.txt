@@ -1,15 +1,16 @@
 ﻿CHARACTERS = {
 	c:BIC = { #印度
 		create_character = {
+    		dna = dna_george_eden	
 			first_name = "Archibald"
 			last_name = "Wavell"
 			historical = yes
 			culture=cu:british #英格兰
 			ruler = yes
-			ig_leader = yes
+			ig_leader = yes #利益集团领袖
 			birth_date = 1883.5.5
 			interest_group = ig_armed_forces #军队
-			ideology = ideology_moderate #温和主义者
+			ideology = ideology_utilitarian_leader #功利主义者
 			traits = {
 				    charismatic
 		                                      ambitious
@@ -18,6 +19,142 @@
 				    firebrand
 				    mountain_commander
 			}
+		}
+
+		create_character = { #印度副总理尼赫鲁
+    		dna = dna_jawaharlal_nehru		
+			set_character_immortal = yes #长期存在			
+    		first_name = Jawaharlal
+    		last_name = Nehru
+   			historical = yes
+    		culture = cu:kashmir #克什米尔
+    		female = no
+			religion = rel:atheist #无神论
+    		ig_leader = yes
+			ideology = ideology_state_capitalism #国家资本主义者
+    		interest_group = ig_industrialists #实业家
+    		birth_date = 1889.11.14
+    		traits = {
+        		expert_political_operator
+        		charismatic
+        		inspirational_orator
+    		}   
+		}
+
+		create_character = {
+    first_name = Erode_Venkatappa
+    last_name = Ramasamy
+    historical = yes
+    female = no
+    culture = cu:tamil
+			religion = rel:atheist #无神论
+    dna = dna_erode_venkatappa_ramasamy
+    interest_group = ig_rural_folk
+    		ideology = ideology_secularized_reformer #世俗化改良主义者
+    birth_date = 1879.9.17
+    		ig_leader = yes
+    traits = {
+        direct
+        brave
+        erudite
+    }
+}
+
+		create_character = {
+			#康奈·柴特吉
+			first_name = "Kangnai"
+			last_name = "Chaiteji"
+			historical = yes
+    		is_agitator = yes #鼓动者
+			birth_date = 1933.1.1
+			culture = cu:bengali
+			religion = rel:atheist #无神论
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_pacifist #和平主义者
+			traits = {
+				demagogue #煽动者
+			}
+		}
+
+		create_character = { #印度地主
+			religion = rel:hindu #印度教
+			culture = cu:hindustani
+			ig_leader = yes
+			interest_group = ig_landowners	
+			traits = {
+			}
+		}		
+
+		create_character = { #印度文人
+			religion = rel:atheist #无神论
+			culture = cu:hindustani
+			ig_leader = yes
+			interest_group = ig_intelligentsia
+    		ideology = ideology_secularized_reformer #世俗化改良主义者			
+			traits = {
+			}
 		}	
+
+		create_character = { #印度法西斯主义小市民领袖V·D·萨瓦卡
+			historical = yes
+			religion = rel:hindu #印度教
+			culture = cu:marathi
+			first_name = "V·D"
+			last_name = "Savaka"
+			ig_leader = yes
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_fascist #法西斯主义者		
+			traits = {
+			}
+		}	
+
+		create_character = { #印度教上师
+			religion = rel:hindu #印度教
+			culture = cu:hindustani
+			ig_leader = yes
+			interest_group = ig_devout		
+			traits = {
+			}
+		}
+
+		create_character = { #印度工会
+			religion = rel:atheist #无神论
+			culture = cu:hindustani
+			ig_leader = yes
+			interest_group = ig_trade_unions	
+    		ideology = ideology_secularized_reformer #世俗化改良主义者				
+			traits = {
+			}
+		}		
+
+		create_character = {
+			religion = rel:sikh #锡克教		
+			culture = cu:panjabi
+			is_general = yes
+			interest_group = ig_armed_forces #军队
+			commander_rank = commander_rank_4
+			traits = {
+			}
+		}			
+
+		create_character = {
+			religion = rel:sikh #锡克教		
+			culture = cu:panjabi
+			is_general = yes
+			interest_group = ig_armed_forces #军队
+			commander_rank = commander_rank_4
+			traits = {
+			}
+		}	
+
+		create_character = {
+			religion = rel:sikh #锡克教		
+			culture = cu:panjabi
+			is_admiral = yes
+			interest_group = ig_armed_forces #军队
+			commander_rank = commander_rank_1
+			traits = {
+			}
+		}			
 	}
 }

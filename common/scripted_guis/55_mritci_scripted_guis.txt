@@ -1,0 +1,195 @@
+set_private_construction_0 = {
+    scope = country
+    is_shown = {
+        always = yes
+    }
+    is_valid = {
+		always = yes
+	}
+    effect = {
+		remove_all_private_construction_add_modifier = yes
+        set_variable = {
+			name = private_construction_add
+			value = 0
+		}
+	}
+    ai_is_valid = {
+        always = no
+    }
+}
+
+set_private_construction_1 = {
+    scope = country
+    is_shown = {
+        always = yes
+    }
+    is_valid = {
+		always = yes
+	}
+    effect = {
+		remove_all_private_construction_add_modifier = yes
+        set_variable = {
+			name = private_construction_add
+			value = 1
+		}
+        if = {
+            limit = {
+                is_law_private_construction_25 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_15_modifier
+            }
+        }
+        else_if = {
+            limit = {
+                is_law_private_construction_50 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_10_modifier
+            }
+        }
+        else_if = {
+            limit = {
+                is_law_private_construction_75 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_5_modifier
+            }
+        }
+	}
+    ai_is_valid = {
+        always = no
+    }
+}
+
+set_private_construction_2 = {
+    scope = country
+    is_shown = {
+        always = yes
+    }
+    is_valid = {
+		always = yes
+	}
+    effect = {
+		remove_all_private_construction_add_modifier = yes
+        set_variable = {
+			name = private_construction_add
+			value = 2
+		}
+        if = {
+            limit = {
+                is_law_private_construction_25 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_30_modifier
+            }
+        }
+        else_if = {
+            limit = {
+                is_law_private_construction_50 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_20_modifier
+            }
+        }
+        else_if = {
+            limit = {
+                is_law_private_construction_75 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_10_modifier
+            }
+        }
+	}
+    ai_is_valid = {
+        always = no
+    }
+}
+
+set_private_construction_3 = {
+    scope = country
+    is_shown = {
+        always = yes
+    }
+    is_valid = {
+		always = yes
+	}
+    effect = {
+		remove_all_private_construction_add_modifier = yes
+        set_variable = {
+			name = private_construction_add
+			value = 3
+		}
+        if = {
+            limit = {
+                is_law_private_construction_25 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_45_modifier
+            }
+        }
+        else_if = {
+            limit = {
+                is_law_private_construction_50 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_30_modifier
+            }
+        }
+        else_if = {
+            limit = {
+                is_law_private_construction_75 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_15_modifier
+            }
+        }
+	}
+    ai_is_valid = {
+        always = no
+    }
+}
+
+set_private_construction_4 = {
+    scope = country
+    is_shown = {
+        always = yes
+    }
+    is_valid = {
+		always = yes
+	}
+    effect = {
+		remove_all_private_construction_add_modifier = yes
+        set_variable = {
+			name = private_construction_add
+			value = 4
+		}
+        if = {
+            limit = {
+                is_law_private_construction_25 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_60_modifier
+            }
+        }
+        else_if = {
+            limit = {
+                is_law_private_construction_50 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_40_modifier
+            }
+        }
+        else_if = {
+            limit = {
+                is_law_private_construction_75 = yes
+            }
+            add_modifier = {
+                name = private_construction_add_20_modifier
+            }
+        }
+	}
+    ai_is_valid = {
+        always = no
+    }
+}

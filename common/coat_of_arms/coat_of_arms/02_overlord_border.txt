@@ -1,0 +1,6 @@
+default_border_canton = {
+	colored_emblem = {
+		texture = "ce_border_overlord.dds"
+		color1 = "yellow"
+	}
+}

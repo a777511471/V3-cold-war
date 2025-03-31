@@ -33,8 +33,9 @@ je_5_year_plan = {  #五年计划
 
 	complete = {
 		OR = {
-			has_law = law_type:law_command_economy
-			has_law = law_type:law_cooperative_ownership
+			has_law = law_type:law_command_economy #计划经济			
+			has_law = law_type:law_collective_economy #集体经济			
+			has_law = law_type:law_cooperative_ownership #合作社所有制
 		}
 		custom_tooltip = {
 			text = custom_loc_five_year_plan_goal
@@ -48,7 +49,7 @@ je_5_year_plan = {  #五年计划
 	on_complete = {
 		add_modifier = {
 			name = five_year_plan_welfare_mod
-			months = long_modifier_time
+			years = 10
 		}
 	}
 
@@ -66,4 +67,5 @@ je_5_year_plan = {  #五年计划
 	}
 
 	progressbar = yes
+	should_be_pinned_by_default = yes
 }

@@ -1,4 +1,4 @@
-﻿### Personality
+﻿### Personality性格特质
 
 trait_child = {
 	type = personality
@@ -112,17 +112,29 @@ persistent = {
 	value = 3
 }
 
-strong = { #健硕
+fleet_of_foot = { #健步如飞
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/brave.dds"
 
 	character_modifier = {
-		character_health_add = 0.5
+		character_health_add = 0.2
 	}
 
-	weight = 1
+	command_modifier = {
+		character_battle_condition_careful_maneuver_mult = 1 #谨慎机动概率
+		character_battle_condition_aggressive_maneuver_mult = 1 #冒进机动概率
+		character_battle_condition_ramming_maneuver_mult = 1 #撞击机动概率
+	}
 
-	value = 3
+	possible = {
+		has_trait = master_of_micro_exercise #有微操大师	
+	}
+
+    weight = {
+        value = 0
+    }
+
+	value = 0
 }
 
 cautious = {
@@ -581,6 +593,51 @@ cruel = {
 	value = 3
 }
 
+steady = { #沉稳
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/meticulous.dds"
+
+	character_modifier = {
+		character_health_add = 0.05		
+		character_battle_condition_careful_maneuver_mult = 1		
+	}
+
+	command_modifier = {
+		unit_morale_loss_mult = -0.1		
+		unit_offense_mult = 0.05
+		unit_defense_mult = 0.05
+		unit_recovery_rate_add = 0.1
+		character_battle_condition_surprise_maneuver_mult = 0.5
+	}
+
+	country_modifier = {
+		country_bureaucracy_mult = 0.05
+		country_institution_size_change_speed_mult = 0.25
+	}
+
+	agitator_modifier = {
+		interest_group_pop_attraction_mult = 0.025
+		interest_group_pol_str_mult = 0.025
+	}
+
+	interest_group_modifier = {
+		interest_group_pop_attraction_mult = 0.05
+		interest_group_pol_str_mult = 0.05
+	}
+
+	possible = {
+		NOT = { age < define:NCharacters|ADULT_AGE }
+	}
+
+	weight = 1
+
+	replace = {
+		trait_child
+	}
+
+	value = 3
+}
+
 meticulous = {
 	type = personality
 	texture = "gfx/interface/icons/character_trait_icons/meticulous.dds"
@@ -622,6 +679,33 @@ meticulous = {
 	}
 
 	value = 3
+}
+
+kindness = { #受人崇拜
+	type = personality
+	texture = "gfx/interface/icons/character_trait_icons/charismatic.dds"
+
+	character_modifier = {
+		character_popularity_add = 75
+	}
+
+	country_modifier = {
+		country_prestige_mult = -0.1 #国家威望
+		state_radicals_from_sol_change_mult = -0.2
+		state_poor_standard_of_living_add = -1 #下等阶层的生活水平
+		state_middle_standard_of_living_add = 0.5 #中等阶层的生活水平		
+		state_rich_standard_of_living_add = 0.5 #上等阶层的生活水平
+	}
+
+	possible = {
+		has_trait = master_of_micro_exercise #有微操大师	
+	}
+
+    weight = {
+        value = 0
+    }
+
+	value = 0
 }
 
 charismatic = {

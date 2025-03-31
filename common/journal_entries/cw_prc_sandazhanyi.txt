@@ -1,5 +1,5 @@
 je_prc_sandazhanyi = {  #三大战役
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
 	
 	group = je_group_internal_affairs
 	
@@ -38,7 +38,6 @@ je_prc_sandazhanyi = {  #三大战役
 		}
 	}
 	
-	
 	complete = {
 		custom_tooltip = {
 			text = custom_je_prc_sandazhanyi
@@ -52,7 +51,10 @@ je_prc_sandazhanyi = {  #三大战役
 	
 	timeout = 1080
 	
-	on_complete = {
+	on_complete = { #如果完成
+		trigger_event = {
+			id = chi.14
+		}	
 		add_modifier = {
 			name = modifier_sandazhanyi
 			months = 12

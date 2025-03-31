@@ -35,7 +35,7 @@
 	c:BAD = {
 		add_declared_interest = region_north_germany	
 	}
-	c:HAN = {
+	c:YSD = {
 		add_declared_interest = region_south_germany	
 	}	
 	c:SAX = {

@@ -13,3 +13,47 @@ state_building_highway_max_level_add={
 		ai_value=0
 	}
 }
+
+state_building_central_bank_max_level_add={
+	decimals=0
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_manufacturing_allowed_collectivization_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_mining_allowed_collectivization_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_service_allowed_collectivization_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_urban_facilities_allowed_collectivization_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

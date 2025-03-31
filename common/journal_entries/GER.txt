@@ -1,8 +1,459 @@
-je_ger = { #统一德国
-	should_be_pinned_by_default = yes
-	icon = "gfx/interface/icons/invention_icons/wargaming.dds"
+je_expansion_of_the_german_university = { #扩建德意志大学
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}						
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 3
+		}									
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_public_schools #是公立学校	
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}			
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_general_education #通识教育完成
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	weight = 100
+}
+
+je_the_current_state_of_the_german_army = { #德意志陆军的现状
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}	
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+		the_army_is_disordered #军队紊乱
+	}
+
+	complete = {
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}			
+		army_size >= 150	
+		has_technology_researched = tech_nine_principles_of_battles #9条战役原则					
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = military_reconstruction #军队重建
+			years = 20
+		}
+	}
+
+	weight = 100
+}
+
+je_ensuring_russian_friendship = { #确保俄国友谊
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+	
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = { #显示条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}
+		exists = c:RUS				
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}
+		exists = c:RUS				
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+
+	}
+
+	complete = {
+		exists = c:RUS				
+        c:RUS = { 
+            relations:root >= 50 
+        }					
+		NOT = {
+        	has_law = law_type:law_isolationism
+		}			
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = modifier_friendly_cooperation #友好合作
+			years = 20
+		}
+		c:RUS = {
+			add_modifier = {
+				name = modifier_friendly_cooperation #友好合作
+				years = 20
+			}
+		}		
+	}
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = shoufu_goal		 
+		    NOT = { exists = c:RUS }							
+		}	
+    }
+
+    weight = 1000
+}
+
+je_strengthen_the_german_iron_law = { #加强德意志铁律
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+		the_army_is_disordered #军队紊乱
+	}
+
+	complete = {
+        has_law = law_type:law_politicized_military
+		army_size >= 100	
+		has_technology_researched = tech_nine_principles_of_battles #9条战役原则					
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = modifier_strengthen_the_german_iron_law #加强德意志铁律
+			years = 20
+		}
+	}
+
+	weight = 100
+}
+
+je_expansion_of_the_military_academy = { #扩大军官学院
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}			
+		army_size >= 1	
+	}
+
+	possible = { #激活条件
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}			
+		army_size >= 1			
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+
+	}
+
+	complete = {
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}			
+		army_size >= 1	
+		has_technology_researched = tech_nine_principles_of_battles #9条战役原则
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_university #大学	 
+				level >= 10
+			}		
+		}						
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = modifier_expansion_of_the_military_academy #扩大军官学院
+			years = 20
+		}		
+	}
+
+	weight = 100
+}
+
+reunification_of_west_germany = { #西德统一
 
 	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	is_shown_when_inactive = {
+			is_ai = no		
+		OR = {
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}
+	}
+	
+	possible = {
+		OR = {
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT				
+		}
+	}
+
+	complete = { #完成条件
+	OR = {
+        c:BAV = { 
+            relations:root >= 50 
+        }
+        c:YSD = { 
+            relations:root >= 50 
+        }
+        c:RHN = { 
+            relations:root >= 50 
+        }		
+	}
+        c:USA = { 
+            relations:root >= 50 
+        }	
+        c:GBR = { 
+            relations:root >= 50 
+        }	
+        c:FRA = { 
+            relations:root >= 50 
+        }			
+		custom_tooltip = {
+			text = custom_loc_shichangyitihua_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+	}
+    on_complete = {
+		trigger_event = {
+			id = ger.1
+			popup = yes
+		}	
+    }
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+    weight = 1000
+	progressbar = yes	
+    should_be_pinned_by_default = yes
+}
+
+je_aijianliminzhudeguo = { #ai建立民主德国
+	group = je_group_internal_affairs
+
+	icon = "gfx/interface/icons/event_icons/DDR.dds"
+
+	is_shown_when_inactive = { #显示条件
+		is_ai = yes
+        exists = c:PRU
+        THIS = c:PRU						
+	}   
+	possible = { #激活条件
+        exists = c:PRU
+        THIS = c:PRU		
+		game_date >= 1949.9.7				
+	}
+
+	complete = { #完成条件
+		game_date >= 1949.10.7
+	}
+    on_complete = {
+		trigger_event = {
+			id = ger.2
+			popup = yes
+	    }
+    }
+
+    weight = 1000
+}
+
+je_aijianlilianbangdeguo = { #ai建立联邦德国
+	group = je_group_internal_affairs
+
+	icon = "gfx/interface/icons/event_icons/BRD.dds"
+
+	is_shown_when_inactive = { #显示条件
+		is_ai = yes
+		    c:BAV ?= THIS			
+		NOT = {
+				exists = c:BRD
+			}			
+	}   
+	possible = { #激活条件
+		c:BAV ?= THIS		
+		game_date >= 1949.4.23				
+	}
+
+	complete = { #完成条件
+		game_date >= 1949.5.23
+	}
+    on_complete = {
+		trigger_event = {
+			id = ger.1
+			popup = yes
+		}	
+    }
+
+    weight = 1000
+}
+
+je_jianliminzhudeguo = { #建立民主德国
+	should_be_pinned_by_default = yes
+	icon = "gfx/interface/icons/event_icons/DDR.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+			is_ai = no
+		    c:PRU ?= THIS	
+	}
+	
+	possible = {
+		    c:PRU ?= THIS	
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = custom_loc_jianliminzhudeguo_goal
+		}
+		any_scope_state = {
+			state_region = s:STATE_BRANDENBURG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_government_administration
+				level >= 5
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_MECKLENBURG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_government_administration
+				level >= 5
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_ANHALT
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_government_administration
+				level >= 5
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_SAXONY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_government_administration
+				level >= 5
+			}
+		}
+		produced_bureaucracy > 4000	
+	}
+	
+	on_complete = {
+		trigger_event = {
+			id = ger.2
+			popup = yes
+	    }
+	}
+		
+	weight = 1000
+}
+
+je_ger = { #统一德国
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	
+	group = je_group_historical_content
 
 	modifiers_while_active = {
 		modifier_chinese_warlord_era
@@ -23,16 +474,417 @@ je_ger = { #统一德国
 	}
 
 	complete = {
-			owns_entire_state_region = STATE_ANHALT #萨克森-安哈尔特
-			owns_entire_state_region = STATE_NORTH_RHINE #北莱茵
-			owns_entire_state_region = STATE_BAVARIA #巴伐利亚
-			owns_entire_state_region = STATE_BADEN #巴登
+		trigger_if = {
+			limit = {
+				global_var:chinese_central_government ?= this
+			}
+			custom_tooltip = {
+				text = no_independent_ger_countries_tt
+				any_country = {
+					filter = {
+						OR = {
+							country_has_primary_culture = cu:north_german
+							country_has_primary_culture = cu:south_german
+						}
+						OR = {
+							capital.region = sr:region_north_germany
+							capital.region = sr:region_south_germany
+							capital.region = sr:region_rhine
+						}
+					}
+					OR = {
+						THIS = ROOT
+						is_subject_of = ROOT
+					}
+					percent = 1
+				}
+			}
+		}
+		trigger_else = {
+			trigger_if = {
+				limit = {
+					global_var:chinese_central_government ?= {
+						is_country_alive = yes
+					}
+				}
+				custom_tooltip = {
+					text = central_government_defeated_tt
+					OR = {
+						NOT = {
+							exists = global_var:chinese_central_government
+						}
+						global_var:chinese_central_government ?= {
+							is_country_alive = no
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = no_independent_chinese_countries_tt
+				any_country = {
+					filter = {
+						OR = {
+							country_has_primary_culture = cu:north_german
+							country_has_primary_culture = cu:south_german
+						}
+						OR = {
+							capital.region = sr:region_north_germany
+							capital.region = sr:region_south_germany
+							capital.region = sr:region_rhine
+						}
+					}
+					OR = {
+						THIS = ROOT
+						is_subject_of = ROOT
+					}
+					percent = 1
+				}
+			}
+		}
+			owns_entire_state_region = STATE_BRANDENBURG
+		custom_tooltip = {
+			text = has_formed_ger_tt
+			c:GER ?= this
+		}
 	}
 	
 	on_complete = {
 		remove_global_variable = chinese_central_government
-		trigger_event = { id = GER_event.3 popup = yes }
+		trigger_event = { id = ger.3 popup = yes }
 	}
 		
 	weight = 1000
+}
+
+peaceful_reunification_of_germany = { #德国和平统一方案
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	is_shown_when_inactive = {
+		OR = {
+			c:DDR ?= ROOT
+			c:BRD ?= ROOT
+		}
+		    exists = c:DDR		
+		    exists = c:BRD					
+	}
+	
+	possible = {	
+		OR = {
+			c:DDR ?= ROOT
+			c:BRD ?= ROOT
+		}
+		    exists = c:DDR		
+		    exists = c:BRD			
+	}
+
+	complete = { #完成条件
+		NOT = {
+        	has_law = law_type:law_autocracy
+		}			
+	OR = {
+        c:DDR = { 
+            relations:root >= 50 
+        }
+        c:BRD = { 
+            relations:root >= 50 
+        }
+	}
+        c:USA = { 
+            relations:root >= 50 
+        }	
+        c:RUS = { 
+            relations:root >= 50 
+        }	
+		custom_tooltip = {
+			text = 100_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 90	
+	}
+    on_complete = {
+		trigger_event = {
+			id = ger.4
+			popup = yes
+		}		
+    }
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 1
+	}
+
+    weight = 1000
+	progressbar = yes	
+    should_be_pinned_by_default = yes
+}
+
+je_aiaustrian_unification = { #ai奥地利统一
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	is_shown_when_inactive = { #显示条件
+		is_ai = yes
+		c:AUS ?= THIS					
+	}   
+	possible = { #激活条件
+		c:AUS ?= THIS		
+		game_date >= 1955.9.1			
+	}
+
+	complete = { #完成条件
+		game_date >= 1955.10.1
+	}
+    on_complete = {
+		trigger_event = {
+			id = AUS_event.1
+			popup = yes
+		}
+    }
+
+    weight = 1000
+}
+
+austrian_unification = { #奥地利统一
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	is_shown_when_inactive = {
+			is_ai = no		
+		OR = {
+			c:AUS ?= ROOT
+			c:NTL ?= ROOT
+			c:ETL ?= ROOT		
+			c:STY ?= ROOT					
+		}
+	}
+	
+	possible = {
+		OR = {
+			c:AUS ?= ROOT
+			c:NTL ?= ROOT
+			c:ETL ?= ROOT		
+			c:STY ?= ROOT				
+		}
+	}
+
+	complete = { #完成条件
+		NOT = {
+        	has_law = law_type:law_autocracy
+		}			
+	OR = {
+        c:AUS = { 
+            relations:root >= 50 
+        }
+        c:NTL = { 
+            relations:root >= 50 
+        }
+        c:ETL = { 
+            relations:root >= 50 
+        }		
+        c:STY = { 
+            relations:root >= 50 
+        }			
+	}
+        c:USA = { 
+            relations:root >= 50 
+        }	
+        c:RUS = { 
+            relations:root >= 50 
+        }	
+		custom_tooltip = {
+			text = custom_loc_shichangyitihua_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+	}
+    on_complete = {
+		trigger_event = {
+			id = AUS_event.1
+			popup = yes
+		}
+    }
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+    weight = 1000
+	progressbar = yes	
+    should_be_pinned_by_default = yes
+}
+
+austro_hungarian_merger = { #奥匈合并（备用）
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	is_shown_when_inactive = {
+			is_ai = yes		
+		OR = {
+			c:AUS ?= ROOT
+			c:HUN ?= ROOT
+		}
+		    exists = c:AUS		
+		    exists = c:HUN			
+	}
+	
+	possible = {
+		OR = {
+			c:AUS ?= ROOT
+			c:HUN ?= ROOT
+		}
+		    exists = c:AUS		
+		    exists = c:HUN			
+	}
+
+	complete = { #完成条件
+		NOT = {
+        	has_law = law_type:law_autocracy
+		}			
+	OR = {
+        c:AUS = { 
+            relations:root >= 100 
+        }
+        c:HUN = { 
+            relations:root >= 100 
+        }
+	}
+        c:USA = { 
+            relations:root >= 100 
+        }	
+        c:RUS = { 
+            relations:root >= 100 
+        }	
+		custom_tooltip = {
+			text = custom_loc_shichangyitihua_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 30	
+	}
+    on_complete = {
+		annex = c:AUS
+		annex = c:HUN
+		add_primary_culture = cu:south_german
+		add_primary_culture = cu:hungarian
+    }
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+    weight = 1000
+}
+
+make_germany_great_again = { #让德意志再次伟大（备用）
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	is_shown_when_inactive = {
+			is_ai = yes
+		OR = {
+			c:AUS ?= ROOT
+			c:GER ?= ROOT
+		}
+		    exists = c:AUS		
+		    exists = c:GER			
+	}
+	
+	possible = {
+		OR = {
+			c:AUS ?= ROOT
+			c:GER ?= ROOT
+		}
+		    exists = c:AUS		
+		    exists = c:GER			
+	}
+
+	complete = { #完成条件
+		NOT = {
+        	has_law = law_type:law_autocracy
+		}			
+	OR = {
+        c:AUS = { 
+            relations:root >= 100 
+        }
+        c:GER = { 
+            relations:root >= 100 
+        }
+	}
+        c:USA = { 
+            relations:root >= 100 
+        }	
+        c:RUS = { 
+            relations:root >= 100 
+        }	
+		custom_tooltip = {
+			text = custom_loc_shichangyitihua_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 200	
+	}
+    on_complete = {
+		annex = c:AUS
+		annex = c:GER
+    }
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+    weight = 1000
 }

@@ -112,7 +112,7 @@
 		}	
 	}
 	
-	c:HAN = {
+	c:YSD = {
 		create_political_lobby = {  
 			type = lobby_pro_overlord
 			target = c:GBR

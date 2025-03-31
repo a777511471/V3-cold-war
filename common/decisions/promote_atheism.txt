@@ -1,0 +1,94 @@
+promote_atheism_decision = { #推行无神论
+	is_shown = { #显示条件
+			is_ai = no #ai禁用
+		NOT = { country_has_state_religion = rel:atheist }
+	}
+
+	possible = {
+		ig:ig_devout = {
+			is_in_government = no
+			is_powerful = no
+		}
+		custom_tooltip = {
+			text = ruler_not_ig_devout
+			ruler = {
+				NOT = {is_interest_group_type = ig_devout}
+			}
+		}
+		OR = {
+			is_power_bloc_leader = no
+			power_bloc ?= {
+				NOT = { has_identity = identity:identity_religious }
+			}
+		}
+
+		has_law = law_type:law_total_separation
+		NOT = { country_has_state_religion = rel:atheist }
+
+		NOT = { has_modifier = stop_promote_atheism }
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				has_game_rule = atheism_banning_devout
+			}
+			if = {
+				limit = {
+					c:BIC ?= this
+					country_has_state_religion = rel:protestant
+				}
+				set_variable = {
+					name = BIC_protestant
+				}
+			}
+			else = {
+				custom_tooltip = {
+					text = atheism_exile_tt
+					every_scope_character = {
+						limit = {
+							is_interest_group_type = ig_devout
+						}
+						clean_up_exile_character_roles = yes
+						exile_character = yes
+					}
+				}
+			}
+		}
+
+		set_variable = {
+			name = potential_religion
+			value = ROOT.religion
+		}
+		set_state_religion = rel:atheist
+		add_modifier = {
+			name = antireligious_policies
+			months = normal_modifier_time
+		}
+		custom_tooltip = {
+			text = promote_atheism_conversion
+			every_scope_state = {
+				limit = {
+					owner = ROOT
+					is_incorporated = yes
+				}
+				convert_population = {
+					target = rel:atheist
+					value = 0.15
+				}
+			}
+		}
+
+		recalculate_pop_ig_support = yes
+	}
+
+	ai_chance = {
+		base = 0
+		modifier = {
+			trigger = {
+				is_government_approve_state_atheism_advantageous = yes
+            }
+			add = 10
+		}
+	}
+}

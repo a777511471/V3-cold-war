@@ -32,7 +32,7 @@ pmg_government_administration_bureaucrat_professionalism = {
 	}
 }
 
-pmg_government_administration_religious_administration = {
+pmg_government_administration_religious_administration = { #世俗化
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	ai_selection = most_productive
 

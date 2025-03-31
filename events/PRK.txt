@@ -9,15 +9,15 @@ PRK_event.1 = { #成立朝鲜
 	flavor = PRK.1.f
 
 	event_image = { #事件图像
-		texture = "gfx/event_pictures/PRK.dds"
+		texture = "gfx/event_pictures/朝鲜成立.dds"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/朝鲜国徽.dds"
 
-	duration = 0
+	duration = 3
 	
 	trigger = { 
 	}
@@ -26,13 +26,37 @@ PRK_event.1 = { #成立朝鲜
 		name = PRK.1.a
 		default_option = yes
 		add_modifier = {
-			name = the_country_of_our_ancestors_modifier
-			years = 1
+			name = wanjingtai_bloodline_modifier #万景台血统
+			years = 48
+			is_decaying = yes			
 		}
+		add_modifier = {
+			name = the_general's_kindness_is_not_over_yet_modifier #将军的恩情还不完
+		}		
 	c:PRK = { make_independent = yes 
-	change_relations = { country = c:RUS value = 100 }}
-		activate_law = law_type:law_multi_party_cooperation_system #改变法律为一党专政
+		activate_law = law_type:law_multi_party_cooperation_system #改变法律为一党专政		
+		activate_law = law_type:law_state_atheism #改变法律为国家无神论	
+		recalculate_pop_ig_support = yes
+		set_state_religion = rel:atheist
+		add_modifier = {
+			name = antireligious_policies
+			years = 10
+		}
+		custom_tooltip = {
+			text = state_atheism_conversion_tt
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+				}
+				convert_population = {
+					target = rel:atheist
+					value = 0.15
+				}
+			}
+		}				
+		change_relations = { country = c:RUS value = 100 }}
 		create_character = { #金日成
+    		dna = ecchi_dsk_dna_jinricheng		
 			first_name = "Richeng"
 			last_name = "Jin"
 			historical = yes
@@ -40,15 +64,16 @@ PRK_event.1 = { #成立朝鲜
 			birth_date = 1912.4.15
 			religion = rel:atheist #无神论
 			ig_leader = yes
-			is_general = yes # both ruler and general
-			commander_rank =commander_rank_4
 			interest_group = ig_armed_forces #军队
-			ideology = ideology_authoritarian #威权主义者
+			ideology = ideology_communist #共产主义者
+			set_character_immortal = yes			
 			traits = {
+				kindness #受人崇拜
 				expensive_tastes #昂贵嗜好
 			}	
 		}	
 		create_character = { #金正日
+    		dna = ecchi_dsk_dna_jinricheng		
 			first_name = "Zhengri"
 			last_name = "Jin"
 			historical = yes
@@ -56,16 +81,15 @@ PRK_event.1 = { #成立朝鲜
 			birth_date = 1942.2.16
 			religion = rel:atheist #无神论
 			interest_group = ig_armed_forces #军队
-			ideology = ideology_authoritarian #威权主义者
+			ideology = ideology_communist #共产主义者
+			set_character_immortal = yes			
 			traits = {
+				kindness #受人崇拜
 				expensive_tastes #昂贵嗜好
 			}
 		}
+       		trigger_event = { id = PRK_event.3 } 		
 	}
-
-	option = {
-		name = PRK.1.b
-    }
 }
 
 PRK_event.2 = { #成立韩国
@@ -83,9 +107,9 @@ PRK_event.2 = { #成立韩国
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
 
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/韩国国徽.dds"
 
-	duration = 0
+	duration = 3
 	
 	trigger = { 
 	}
@@ -94,13 +118,13 @@ PRK_event.2 = { #成立韩国
 		name = KOR.1.a
 		default_option = yes
 		add_modifier = {
-			name = the_country_of_our_ancestors_modifier
-			years = 1
-		}
+			name = loyalty_modifier #忠！诚！
+		}	
 	c:KOR = { make_independent = yes 
 	change_relations = { country = c:USA value = 100 }}
 		activate_law = law_type:law_autocracy #改变法律为独裁
 		create_character = { #李承晚
+			dna = ecchi_dna_zhu_de			
 			first_name = "Chengwan"
 			last_name = "Li"
 			historical = yes
@@ -111,6 +135,7 @@ PRK_event.2 = { #成立韩国
 			interest_group = ig_intelligentsia #知识分子
 			ideology = ideology_authoritarian #威权主义者
 			traits = {
+				great_mathematician #大数学家
 				cruel #残暴
 			}	
 		}
@@ -120,10 +145,405 @@ PRK_event.2 = { #成立韩国
 			interest_group = ig_armed_forces #军队
 			traits = {
 			}
-		}
+		}			
+	}
+}
+
+PRK_event.3 = { #朝鲜政府改组
+	type = country_event
+	placement = ROOT
+
+	title = PRK_event.3.t
+	desc = PRK_event.3.e
+	flavor = PRK_event.3.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/PRK.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/朝鲜劳动党.dds"
+
+	duration = 3
+
+	trigger = {
 	}
 
 	option = {
-		name = KOR.1.b
+		name = PRK_event.3.a #扶植游击队派
+		default_option = yes
+		create_character = { 
+			religion = rel:atheist #无神论		
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_1				
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_authoritarian #威权主义者		
+			traits = {
+			}	
+		}		
+	}
+	option = {
+		name = PRK_event.3.b #扶植南劳派
+		create_character = { #朴宪永
+			first_name = "Xianyong"
+			last_name = "Bak"
+			historical = yes
+			birth_date = 1900.5.24
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_1			
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_vanguardist #马克思列宁主义者		
+			traits = {
+			}	
+		}	
+	}
+	option = {
+		name = PRK_event.3.c #扶植延安派
+		create_character = { 
+			religion = rel:atheist #无神论
+			ig_leader = yes			
+			interest_group = ig_rural_folk #农民
+			ideology = ideology_mao #毛泽东主义者
+			traits = {
+			}	
+		}
+	}
+	option = {
+		name = PRK_event.3.d #扶植甲山派
+			create_character = { #朴金喆
+			first_name = "Jinji"
+			last_name = "Bak"
+			historical = yes
+			birth_date = 1912.1.1
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_1						
+			interest_group = ig_intelligentsia #文人
+			ideology = ideology_market_socialism #市场社会主义者		
+			traits = {
+			}	
+		}	
+	}
+	option = {
+		name = PRK_event.3.g #扶植苏联派
+			create_character = { #许嘉谊
+			dna = dna_emperor_minh_mang			
+			first_name = "Jiayi"
+			last_name = "Hee"
+			historical = yes
+			birth_date = 1908.1.1
+			culture=cu:russian #俄罗斯			
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			is_general = yes # both ruler and general
+			commander_rank = commander_rank_1				
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_stalin #意识形态斯大林主义者	
+			traits = {
+			}	
+		}	
+	}
+}
+
+PRK_event.4 = { #太阳的陨落
+	type = country_event
+	placement = ROOT
+
+	title = PRK_event.4.t
+	desc = PRK_event.4.e
+	flavor = PRK_event.4.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/PRK.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+	}
+
+	option = {
+		name = PRK_event.4.a #扶植游击队派
+		default_option = yes
+		ruler = {
+			kill_character = yes
+		}		
+		create_character = { #金正日
+    		dna = ecchi_dsk_dna_jinricheng				
+			first_name = "Zhengri"
+			last_name = "Jin"
+			historical = yes
+			ruler = yes # both ruler and general	
+			birth_date = 1942.2.16
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+			}
+		}		
+		create_character = { #金正恩	
+    		dna = ecchi_dsk_dna_jinricheng					
+			first_name = "Zhengen"
+			last_name = "Jin"
+			historical = yes
+			heir = yes	
+			birth_date = 1984.1.8
+			religion = rel:atheist #无神论
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+				bigoted #偏执
+				engineer #工程师
+				cruel #残暴
+			}
+		}	
+	}
+	option = {
+		name = PRK_event.4.b #彻底铲除南劳派
+		ruler = {
+			kill_character = yes
+		}			
+		create_character = { #金正日
+    		dna = ecchi_dsk_dna_jinricheng			
+			first_name = "Zhengri"
+			last_name = "Jin"
+			historical = yes
+			ruler = yes # both ruler and general	
+			birth_date = 1942.2.16
+			religion = rel:atheist #无神论
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+			}
+		}		
+		create_character = { #金正恩	
+    		dna = ecchi_dsk_dna_jinricheng				
+			first_name = "Zhengen"
+			last_name = "Jin"
+			historical = yes
+			heir = yes	
+			birth_date = 1984.1.8
+			religion = rel:atheist #无神论
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+				bigoted #偏执
+				engineer #工程师
+				cruel #残暴
+			}
+		}	
+		create_character = {
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+			}
+		}			
+	}
+	option = {
+		name = PRK_event.4.c #彻底铲除延安派
+		ruler = {
+			kill_character = yes
+		}		
+		create_character = { #金正日
+    		dna = ecchi_dsk_dna_jinricheng		
+			first_name = "Zhengri"
+			last_name = "Jin"
+			historical = yes
+			ruler = yes # both ruler and general	
+			birth_date = 1942.2.16
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+			}
+		}		
+		create_character = { #金正恩	
+    		dna = ecchi_dsk_dna_jinricheng				
+			first_name = "Zhengen"
+			last_name = "Jin"
+			historical = yes
+			heir = yes	
+			birth_date = 1984.1.8
+			religion = rel:atheist #无神论
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+				bigoted #偏执
+				engineer #工程师
+				cruel #残暴
+			}
+		}			
+		create_character = { 
+			religion = rel:atheist #无神论
+			ig_leader = yes			
+			interest_group = ig_rural_folk #农民
+			ideology = ideology_jin #金日成主义者
+			traits = {
+			}	
+		}
+	}
+	option = {
+		name = PRK_event.4.d #彻底铲除甲山派
+		ruler = {
+			kill_character = yes
+		}		
+		create_character = { #金正日
+    		dna = ecchi_dsk_dna_jinricheng		
+			first_name = "Zhengri"
+			last_name = "Jin"
+			historical = yes
+			ruler = yes # both ruler and general	
+			birth_date = 1942.2.16
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+			}
+		}		
+		create_character = { #金正恩
+    		dna = ecchi_dsk_dna_jinricheng				
+			first_name = "Zhengen"
+			last_name = "Jin"
+			historical = yes
+			heir = yes	
+			birth_date = 1984.1.8
+			religion = rel:atheist #无神论
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+				bigoted #偏执
+				engineer #工程师
+				cruel #残暴
+			}
+		}			
+			create_character = { 
+			religion = rel:atheist #无神论
+			ig_leader = yes					
+			interest_group = ig_intelligentsia #文人
+			ideology = ideology_jin #金日成主义者	
+			traits = {
+			}	
+		}	
+	}
+	option = {
+		name = PRK_event.4.g #彻底铲除苏联派
+		ruler = {
+			kill_character = yes
+		}		
+		create_character = { #金正日
+    		dna = ecchi_dsk_dna_jinricheng				
+    		dna = ecchi_dna_zhu_de		
+			first_name = "Zhengri"
+			last_name = "Jin"
+			historical = yes
+			ruler = yes # both ruler and general	
+			birth_date = 1942.2.16
+			religion = rel:atheist #无神论
+			ig_leader = yes
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+			}
+		}		
+		create_character = { #金正恩
+    		dna = ecchi_dsk_dna_jinricheng					
+			first_name = "Zhengen"
+			last_name = "Jin"
+			historical = yes
+			heir = yes	
+			birth_date = 1984.1.8
+			religion = rel:atheist #无神论
+			interest_group = ig_armed_forces #军队
+			ideology = ideology_jin #金日成主义者
+			traits = {
+				kindness #受人崇拜
+				expensive_tastes #昂贵嗜好
+				bigoted #偏执
+				engineer #工程师
+				cruel #残暴
+			}
+		}			
+			create_character = { 			
+			religion = rel:atheist #无神论
+			ig_leader = yes			
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_jin #金日成主义者
+			traits = {
+			}	
+		}	
+	}
+}
+
+PRK_event.5 = { #朝鲜和平统一
+	type = country_event
+	orphan = yes
+	
+	title = PRK_event.5.t
+	desc = PRK_event.5.d
+	flavor = PRK_event.5.f
+
+	event_image = { #事件图像
+		texture = "gfx/event_pictures/PRK.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/统一门.dds"
+
+	duration = 3
+	
+	trigger = { 
+	}
+
+	option = {
+		name = PRK_event.5.a
+		annex = c:PRK
+		annex = c:KOR
+		if = {
+			limit = {
+				has_modifier = loyalty_modifier
+			}
+			remove_modifier = loyalty_modifier
+		}
+		if = {
+			limit = {
+				has_modifier = the_general's_kindness_is_not_over_yet_modifier
+			}
+			remove_modifier = the_general's_kindness_is_not_over_yet_modifier
+		}	
 	}
 }

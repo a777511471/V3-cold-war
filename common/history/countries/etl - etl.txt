@@ -1,17 +1,14 @@
 ﻿COUNTRIES = {
 	c:ETL = {
 		set_next_election_date = 1946.7.1
-		effect_starting_technology_tier_1_tech = yes
-		add_technology_researched = joint_stock_companies #股份公司
-		add_technology_researched = investment_banks #投资银行
-		add_technology_researched = mutual_funds #共同基金
+		effect_starting_technology_tier_2_tech = yes
 		set_tax_level = medium
 		
 		add_taxed_goods = g:wine
 		effect_starting_politics_liberal = yes
 		# Laws
 		activate_law = law_type:law_right_of_assembly #集会权
-		activate_law = law_type:law_professional_army #职业军队
+		activate_law = law_type:law_non_militarized_country #非军事化国家
 		activate_law = law_type:law_private_capital_support #私人资本扶植（科研）
 		activate_law = law_type:law_old_age_pension #养老金
                 activate_law = law_type:law_universal_suffrage #普选制
@@ -35,14 +32,9 @@
             activate_law = law_type:law_compulsory_primary_school
             activate_law = law_type:law_8_hour_working_system
 
-		add_company = company_type:swarovski
-		company:swarovski = {
-			set_company_establishment_date = 1895.1.1
-		}
-
 		ig:ig_trade_unions = { #工会
 			remove_ideology = ideology_proletarian #无产阶级主义者
-			add_ideology = ideology_social_democrats #社民主义者
+			add_ideology = ideology_social_democrats #社会民主主义者
 		}
 
 		set_institution_investment_level = {

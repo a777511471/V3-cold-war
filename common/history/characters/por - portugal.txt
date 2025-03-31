@@ -2,17 +2,43 @@
 	c:POR = {
 		create_character = {
 			#安东尼奥·萨拉查，“最伟大的”以及“最糟糕的”葡萄牙人
+			dna = dna_king_leopold_01			
 			historical = yes
 			first_name = "Antonio"
 			last_name = "Salazar"
 			ruler = yes
 			ig_leader = yes
 			birth_date = 1889.4.28
+			set_character_immortal = yes #长期存在				
 			interest_group = ig_devout #教会
-			ideology = ideology_authoritarian #威权主义者
+			ideology = ideology_corporatist_leader #法团主义者
 			traits = {
+				economic_expert #经济学专家									
+				basic_political_operator #政治运作者				
+				basic_diplomat #外交家	
+				pious #虔诚
+				reserved #内敛
 			}
 		}
+
+		create_character = {
+			#马尔塞洛·达斯内维斯·阿尔维斯·卡埃塔诺
+    		dna = dna_truman			
+			historical = yes
+			first_name = "Marcello·Dasnevis·Alves"
+			last_name = "Caetano"
+			heir = yes			
+			ig_leader = yes
+			birth_date = 1906.8.17
+			set_character_immortal = yes #长期存在				
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_corporatist_leader #法团主义者
+			traits = {
+				basic_political_operator #政治运作者				
+				basic_diplomat #外交家	
+			}
+		}
+
 		create_character = {
 			#安东尼奥·奥斯卡·德·弗拉戈索·卡尔莫纳
 			historical = yes

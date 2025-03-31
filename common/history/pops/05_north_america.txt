@@ -1,4 +1,58 @@
 POPS = {
+	s:STATE_CALIFORNIA = {
+		region_state:USA = {
+			create_pop = {
+				culture = yankee
+				size = 5680000
+			}
+			create_pop = {
+				culture = ashkenazi
+				size = 9000
+			}			
+			create_pop = {
+				culture = mexican
+				size = 9000
+			}
+			create_pop = {
+				culture = caribeno
+				size = 8000
+			}
+			create_pop = {
+				culture = afro_american
+				size = 7000
+			}
+			create_pop = {
+				culture = han
+				size = 655900
+			}
+			create_pop = {
+				culture = filipino
+				size = 5000
+			}
+			create_pop = {
+				culture = panjabi
+				size = 4000
+			}
+			create_pop = {
+				culture = korean
+				size = 3000
+			}
+			create_pop = {
+				culture = vietnamese
+				size = 2000
+			}
+			create_pop = {
+				culture = han
+				religion = animist			
+				size = 1000
+			}			
+			create_pop = {
+				culture = japanese
+				size = 1000
+			}
+		}
+	}
+
 	s:STATE_DISTRICT_OF_COLUMBIA = {
 		region_state:USA = {
 			create_pop = {
@@ -107,6 +161,18 @@ POPS = {
 				religion = jewish
 				size = 2000
 			}
+			create_pop = {
+				culture = north_german
+				size = 9000
+			}
+			create_pop = {
+				culture = south_german
+				size = 9000
+			}
+			create_pop = {
+				culture = scottish
+				size = 9000
+			}			
 			create_pop = {
 				culture = mexican
 				size = 9000
@@ -241,47 +307,11 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = yankee
-				size = 225000
+				size = 3225000
 			}
 			create_pop = {
-				culture = siouan
-				size = 8000
-			}
-			create_pop = {
-				culture = mexican
+				culture = central_american
 				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 7000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
 			}
 		}
 	}
@@ -377,48 +407,16 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = yankee
-				size = 693880
+				size = 2693880
 			}
 			create_pop = {
 				culture = siouan
-				size = 4000
+				size = 12000
 			}
 			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 7000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
-			}
+				culture = irish
+				size = 12000
+			}		
 		}
 	}
 	s:STATE_NEBRASKA = {
@@ -429,8 +427,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = siouan
-				size = 4000
+				size = 12000
 			}
+			create_pop = {
+				culture = irish
+				size = 12000
+			}		
 			create_pop = {
 				culture = mexican
 				size = 9000
@@ -473,48 +475,16 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = yankee
-				size = 1880000
+				size = 2880000
 			}
 			create_pop = {
 				culture = siouan
 				size = 12000
 			}
 			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 7000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
-			}
+				culture = irish
+				size = 12000
+			}			
 		}
 	}
 	s:STATE_ARKANSAS = {
@@ -523,6 +493,14 @@ POPS = {
 				culture = dixie
 				size = 1850000
 			}
+			create_pop = {
+				culture = siouan
+				size = 12000
+			}
+			create_pop = {
+				culture = irish
+				size = 12000
+			}					
 			create_pop = {
 				culture = mexican
 				size = 9000
@@ -805,54 +783,33 @@ POPS = {
 				size = 4840000
 			}
 			create_pop = {
-				culture = siouan
-				size = 4000
+				culture = maghrebi
+				size = 21000
 			}
 			create_pop = {
-				culture = irish
-				size = 8000
+				culture = misri
+				size = 21000
 			}
 			create_pop = {
-				culture = yankee
-				religion = catholic
-				size = 4004
+				culture = mashriqi
+				size = 21000
+			}		
+			create_pop = {
+				culture = muskogean
+				size = 21000
 			}
 			create_pop = {
-				culture = mexican
-				size = 9000
-			}
+				culture = bedouin
+				size = 21000
+			}								
 			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
+				culture = berber
+				size = 21000
+			}		
 			create_pop = {
-				culture = afro_american
-				size = 7000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
-			}
+				culture = yemenite
+				size = 21000
+			}						
 		}
 	}
 	s:STATE_OHIO = {
@@ -1103,51 +1060,7 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = dixie
-				size = 1470000
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 31183
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
-			}
-			create_pop = {
-				culture = muskogean
-				size = 8000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
+				size = 2470000
 			}
 		}
 	}
@@ -1155,52 +1068,11 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = dixie
-				size = 2910000
-			}
-			create_pop = {
-				culture = ashkenazi
-				religion = jewish
-				size = 1000
-			}
-			create_pop = {
-				culture = cherokee
-				size = 8946
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
+				size = 2000000
 			}
 			create_pop = {
 				culture = afro_american
-				size = 7000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
+				size = 910000
 			}
 		}
 	}
@@ -1252,43 +1124,7 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = dixie
-				size = 251997
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 100000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
+				size = 2251997
 			}
 		}
 	}
@@ -1299,45 +1135,9 @@ POPS = {
 				size = 9640000
 			}
 			create_pop = {
-				culture = ashkenazi
-				religion = jewish
-				size = 2000
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 7000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
+				culture = alemannic
+				religion = protestant
+				size = 180000
 			}
 		}
 	}
@@ -1433,43 +1233,7 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = yankee
-				size = 380900
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 7000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
+				size = 2380900
 			}
 		}
 	}
@@ -1477,43 +1241,7 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = yankee
-				size = 688090
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 7000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
+				size = 1688090
 			}
 		}
 	}
@@ -1521,52 +1249,7 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = yankee
-				size = 1600000
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 12000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
-			}
-			create_pop = {
-				culture = irish
-				size = 52400
-			}
-			create_pop = {
-				culture = yankee
-				religion = catholic
-				size = 28400
+				size = 2600000
 			}
 		}
 	}
@@ -1574,48 +1257,7 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = yankee
-				size = 1200000
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 24000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
-			}
-			create_pop = {
-				culture = yankee
-				religion = catholic
-				size = 32000
+				size = 2200000
 			}
 		}
 	}
@@ -1715,43 +1357,11 @@ POPS = {
 			}
 			create_pop = {
 				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
+				size = 21000
 			}
 			create_pop = {
 				culture = afro_american
 				size = 21000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
-			}
-			create_pop = {
-				culture = cherokee
-				size = 3644
 			}
 		}
 	}
@@ -1824,7 +1434,7 @@ POPS = {
 		region_state:MEX = {
 			create_pop = {
 				culture = mexican
-				size = 304000
+				size = 2304000
 			}
 			create_pop = {
 				culture = oodham
@@ -1836,7 +1446,7 @@ POPS = {
 		region_state:MEX = {
 			create_pop = {
 				culture = mexican
-				size = 521000
+				size = 1521000
 			}
 			create_pop = {
 				culture = oodham
@@ -1848,7 +1458,7 @@ POPS = {
 		region_state:MEX = {
 			create_pop = {
 				culture = mexican
-				size = 183600
+				size = 2183600
 			}
 			create_pop = {
 				culture = oodham
@@ -1881,7 +1491,7 @@ POPS = {
 		region_state:MEX = {
 			create_pop = {
 				culture = mexican
-				size = 440806
+				size = 2440806
 			}
 			create_pop = {
 				culture = afro_caribeno
@@ -1962,7 +1572,7 @@ POPS = {
 		region_state:MEX = {
 			create_pop = {
 				culture = mexican
-				size = 108000
+				size = 2108000
 			}
 			create_pop = {
 				culture = oodham
@@ -2010,7 +1620,7 @@ POPS = {
 		region_state:MEX = {
 			create_pop = {
 				culture = mexican
-				size = 594909
+				size = 1594909
 			}
 			create_pop = {
 				culture = nahua
@@ -2030,7 +1640,7 @@ POPS = {
 		region_state:MEX = {
 			create_pop = {
 				culture = mexican
-				size = 1060000
+				size = 2060000
 			}
 			create_pop = {
 				culture = zapotec
@@ -2050,44 +1660,8 @@ POPS = {
 		region_state:USA = {
 			create_pop = {
 				culture = dixie
-				size = 77000
-			}
-			create_pop = {
-				culture = mexican
-				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 17000
-			}
-			create_pop = {
-				culture = han
-				size = 6000
-			}
-			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
-				culture = panjabi
-				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
+				size = 2077000
 			}
 		}
 	}
-	}
+}

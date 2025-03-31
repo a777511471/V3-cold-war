@@ -2,6 +2,7 @@
 	c:EGY = {
 		create_character = {
 			#法鲁克一世
+    		dna = ecchi_dsk_dna_jinricheng			
 			historical = yes
 			first_name = "Muhammad"
 			last_name = "Farouk"
@@ -17,5 +18,20 @@
 				innovative #创新精神
 			}
 		}	
+
+
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_market_liberal #市场自由主义者
+		}			
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_trade_unions #工会
+			religion = rel:atheist #无神论			
+			ideology = ideology_democratic_socialism #民主社会主义者
+		}								
 	}
 }

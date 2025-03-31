@@ -1,0 +1,97 @@
+on_monthly_pulse_country = {
+	effect = {
+		
+		if = {
+			limit = {
+				country_rank >= rank_value:minor_power
+				average_sol >= 17
+				is_at_war = no
+				is_subject = no
+				OR = {
+					AND = {
+						any_primary_culture = {
+							has_discrimination_trait = european_heritage
+						}
+						OR = {
+							#has_law = law_type:law_racial_segregation
+							has_law = law_type:law_cultural_exclusion
+							has_law = law_type:law_multicultural
+						}
+						NOR = {
+							has_law = law_type:law_closed_borders
+							has_law = law_type:law_isolationism
+						}
+					}
+					AND = {
+						any_primary_culture = {
+							has_discrimination_trait = european_heritage
+						}
+						OR = {
+							has_law = law_type:law_national_supremacy
+							has_law = law_type:law_racial_segregation
+							has_law = law_type:law_cultural_exclusion
+							has_law = law_type:law_multicultural
+						}
+						has_law = law_no_migration_controls
+					}
+					AND = {
+						has_law = law_type:law_multicultural
+						NOR = {
+							has_law = law_type:law_closed_borders
+							has_law = law_type:law_isolationism
+						}
+					}
+				}
+			}
+			add_journal_entry = {
+				type = je_south_america_migrationgz
+			}
+		}
+		if = {
+			limit = {
+				country_rank >= rank_value:minor_power
+				average_sol >= 17
+				is_at_war = no
+				is_subject = no
+				OR = {
+					AND = {
+						any_primary_culture = {
+							has_discrimination_trait = east_asian_heritage
+						}
+						OR = {
+							#has_law = law_type:law_racial_segregation
+							has_law = law_type:law_cultural_exclusion
+							has_law = law_type:law_multicultural
+						}
+						NOR = {
+							has_law = law_type:law_closed_borders
+							has_law = law_type:law_isolationism
+						}
+					}
+					AND = {
+						any_primary_culture = {
+							has_discrimination_trait = east_asian_heritage
+						}
+						OR = {
+							has_law = law_type:law_national_supremacy
+							has_law = law_type:law_racial_segregation
+							has_law = law_type:law_cultural_exclusion
+							has_law = law_type:law_multicultural
+						}
+						has_law = law_no_migration_controls
+					}
+					AND = {
+						has_law = law_type:law_multicultural
+						NOR = {
+							has_law = law_type:law_closed_borders
+							has_law = law_type:law_isolationism
+						}
+					}
+				}
+			}
+			add_journal_entry = {
+				type = je_south_america_migrationgz1
+			}
+		}
+	}
+}

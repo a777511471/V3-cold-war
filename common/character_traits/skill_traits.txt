@@ -1,6 +1,261 @@
-﻿### skill Traits
+﻿### skill Traits能力特质
 
 #Commander Skills
+regional_construction_scheduling_expert = { #地区建造调度专家
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/engineer.dds"
+
+	command_modifier = { #指挥官buff
+		character_battle_condition_dug_in_mult = 1
+		character_battle_condition_logistics_secured_mult = 1
+	}
+
+	country_modifier = { #统治者buff
+		country_construction_add = 15
+		country_engineers_pol_str_mult = 0.20
+		country_machinists_pol_str_mult = 0.15
+	}
+
+	agitator_modifier = { #鼓动者buff
+		country_construction_add = 5		
+		country_engineers_pol_str_mult = 0.10
+		country_machinists_pol_str_mult = 0.05
+	}
+
+	interest_group_modifier = { #领袖buff
+		country_construction_add = 10		
+		country_engineers_pol_str_mult = 0.15
+		country_machinists_pol_str_mult = 0.10
+	}
+
+	possible = {
+		owner ?= { NOT = { is_country_type = decentralized } }
+		NOT = { age < define:NCharacters|ADULT_AGE }
+	}
+
+	weight = {
+		value = 1
+		if = {
+			limit = {
+				has_role = agitator
+				interest_group = {
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			multiply = 3
+		}
+	}
+
+	replace = {
+	}
+
+	value = 3
+}
+
+research_master = { #科研大师
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/innovative.dds"
+
+	character_modifier = {
+	}
+
+	command_modifier = { #指挥官buff
+		unit_morale_loss_mult = -0.15
+		character_battle_condition_surprise_maneuver_mult = 1
+	}
+
+	country_modifier = { #统治者buff
+		country_tech_research_speed_mult = 0.1 #科技研究速度
+	}
+
+	agitator_modifier = { #鼓动者buff
+		country_tech_research_speed_mult = 0.05 #科技研究速度	
+	}
+
+	interest_group_modifier = { #领袖buff
+		country_tech_research_speed_mult = 0.07 #科技研究速度	
+	}
+
+	possible = {
+		OR = {
+			is_heir = yes
+			is_ruler = yes
+			has_role = general
+			has_role = admiral
+		}
+		NOT = { age < define:NCharacters|ADULT_AGE }
+	}
+
+	weight = 1
+
+	replace = {
+		trait_child
+	}
+
+	value = 3
+}
+
+economist = { #经济学家
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/basic_political_operator.dds"
+
+	country_modifier = {
+		country_authority_mult = 0.05
+	}
+
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.025
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.05
+	}
+
+	possible = {
+		has_role = politician # ruler, heir, or IG leader
+		NOT = { age < define:NCharacters|ADULT_AGE }
+		NOR = {
+			has_trait = experienced_economist
+			has_trait = economic_expert
+		}
+	}
+
+	weight = {
+		value = 50
+		if = {
+			limit = {
+				OR = {
+					has_trait = cautious
+					has_trait = charismatic
+					has_trait = ambitious
+					has_trait = reserved
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = arrogant
+					has_trait = wrathful
+				}
+			}
+			divide = 2
+		}
+	}
+
+	replace = {
+	}
+
+	value = 1
+}
+
+experienced_economist = { #有经验的经济学家
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/experienced_political_operator.dds"
+
+	country_modifier = {
+		country_authority_mult = 0.1
+	}
+
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.05
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.1
+	}
+
+	possible = {
+		has_role = politician
+		NOT = { age < define:NCharacters|ADULT_AGE }
+		has_trait = economist
+	}
+
+	weight = {
+		value = 50
+		if = {
+			limit = {
+				OR = {
+					has_trait = cautious
+					has_trait = charismatic
+					has_trait = ambitious
+					has_trait = reserved
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = arrogant
+					has_trait = wrathful
+				}
+			}
+			divide = 2
+		}
+	}
+
+	replace = {
+		economist
+	}
+
+	value = 2
+}
+
+economic_expert = { #经济学专家
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/expert_political_operator.dds"
+
+	country_modifier = {
+		country_authority_mult = 0.2
+	}
+
+	agitator_modifier = {
+		interest_group_pol_str_mult = 0.1
+	}
+
+	interest_group_modifier = {
+		interest_group_pol_str_mult = 0.2
+	}
+
+	possible = {
+		has_role = politician
+		NOT = { age < define:NCharacters|ADULT_AGE }
+		has_trait = experienced_economist
+	}
+
+	weight = {
+		value = 50
+		if = {
+			limit = {
+				OR = {
+					has_trait = cautious
+					has_trait = charismatic
+					has_trait = ambitious
+					has_trait = reserved
+				}
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = arrogant
+					has_trait = wrathful
+				}
+			}
+			divide = 2
+		}
+	}
+
+	replace = {
+		experienced_economist
+	}
+
+	value = 3
+}
+
 resupply_commander = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/resupply_commander.dds"
@@ -753,6 +1008,31 @@ expert_convoy_raider = {
 	value = 3
 }
 
+master_of_micro_exercise = { #微操大师
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/traditionalist_commander.dds"
+
+	character_modifier = { #人物buff
+		character_popularity_add = -25
+	} 
+
+	command_modifier = { #指挥官buff
+		state_conscription_rate_add = -0.05 #征兵率
+		military_formation_movement_speed_mult = -0.05 #编队速度
+		character_command_limit_mult = -0.2
+	}
+
+	possible = {
+		has_trait = master_of_micro_exercise #有微操大师	
+	}
+
+    weight = {
+        value = 0
+    }
+
+	value = 0
+}
+
 traditionalist_commander = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/traditionalist_commander.dds"
@@ -933,8 +1213,34 @@ dockyard_master = {
 }
 
 # Politician Skills
+outrageous_diplomat = { #天真的外交家
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/basic_diplomat.dds"
 
-basic_diplomat = {
+	character_modifier = {
+		character_popularity_add = -10
+	}
+
+	command_modifier = {
+		unit_morale_recovery_mult = -0.25
+	}
+
+	country_modifier = {
+		country_influence_mult = -0.05
+	}
+
+	possible = {
+		has_trait = master_of_micro_exercise #有微操大师	
+	}
+
+    weight = {
+        value = 0
+    }
+
+	value = 0
+}
+
+basic_diplomat = { #外交家
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/basic_diplomat.dds"
 
@@ -1531,6 +1837,42 @@ explorer = {
 	value = 2
 }
 
+enemy_of_the_people = { #人民公敌
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/bandit.dds"
+
+	character_modifier = {
+		character_popularity_add = -25
+	}
+
+	command_modifier = { #指挥官buff
+	}
+
+	agitator_modifier = { #鼓动者buff
+		interest_group_in_opposition_approval_add = -1
+	}
+
+	interest_group_modifier = { #利益集团领袖buff
+		interest_group_in_opposition_approval_add = -2
+	}
+
+	country_modifier = { #统治者buff
+		state_mortality_mult = 0.05
+		country_prestige_mult = -0.05
+		country_infamy_decay_mult = -0.5
+	}
+
+	possible = {
+		has_trait = master_of_micro_exercise #有微操大师	
+	}
+
+    weight = {
+        value = 0
+    }
+
+	value = 0
+}
+
 bandit = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/bandit.dds"
@@ -1646,6 +1988,29 @@ erudite = {
 	}
 }
 
+great_mathematician = { #大数学家
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/literary.dds"
+
+	character_modifier = {
+		character_popularity_add = -5 #人气
+	}
+
+	interest_group_modifier = { #利益集团领袖buff
+		interest_group_pol_str_mult = 0.03
+	}
+
+	possible = {
+		has_trait = master_of_micro_exercise #有微操大师	
+	}
+
+    weight = {
+        value = 0
+    }
+
+	value = 0
+}
+
 literary = {
 	type = skill
 	texture = "gfx/interface/icons/character_trait_icons/literary.dds"
@@ -1740,6 +2105,40 @@ engineer = {
 	}
 
 	value = 3
+}
+
+master_of_business_warfare = { #干扰商战大师
+	type = skill
+	texture = "gfx/interface/icons/character_trait_icons/master_bureaucrat.dds"
+
+	character_modifier = { #人物buff
+		character_popularity_add = -25
+	} 
+
+	country_modifier = { #统治者buff
+		state_standard_of_living_add = -1 #生活水平
+		country_bureaucrats_pol_str_mult = 0.10
+	}
+
+	agitator_modifier = { #鼓动者buff
+		country_bureaucrats_pol_str_mult = 0.10
+	}
+
+	command_modifier = { #指挥官buff
+	}
+
+	interest_group_modifier = { #利益集团领袖buff
+	}
+
+	possible = {
+		has_trait = master_of_micro_exercise #有微操大师	
+	}
+
+    weight = {
+        value = 0
+    }
+
+	value = 0
 }
 
 master_bureaucrat = {

@@ -1,11 +1,15 @@
 ﻿COUNTRIES = {
 	c:SIA = {
-		effect_starting_technology_tier_5_tech = yes
+		effect_starting_technology_tier_4_tech = yes
 		effect_starting_politics_traditional = yes
 		activate_law = law_type:law_landed_voting #地产投票
 		activate_law = law_type:law_tenant_farmers #佃农
 		activate_law = law_type:law_outlawed_dissent #异议非法
 		activate_law = law_type:law_isolationism #孤立主义	
+
+		set_tax_level = medium
+		set_military_wage_level = low
+		set_government_wage_level = low
 
 		ig:ig_devout = {
 			set_interest_group_name = ig_theravada_monks
@@ -13,8 +17,23 @@
 			add_ideology = ideology_buddhist_moralist
 		}
 
-		ig:ig_landowners = {
-			add_ruling_interest_group = yes
+		ig:ig_intelligentsia = { #知识分子
+			set_interest_group_name = ig_elite #政治精英	
+			add_ideology = ideology_anti_clerical #反教权主义者
+		}
+
+		ig:ig_industrialists = { #财阀
+			set_interest_group_name = ig_chaebol
+		}
+
+		ig:ig_landowners = { #地主
+			set_interest_group_name = ig_giant #豪门
+		}
+
+		add_modifier = {
+			name = bitter_loser_modifier #苦涩的失败者
+			years = 30
+			is_decaying = yes
 		}
 	}
 }

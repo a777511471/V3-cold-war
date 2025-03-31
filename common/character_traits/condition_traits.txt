@@ -1,4 +1,12 @@
-﻿### Conditions
+﻿### Conditions健康特质
+strong = { #健硕
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/brave.dds"
+
+	character_modifier = {
+		character_health_add = 0.3
+	}
+}
 
 alcoholic = {
 	type = condition
@@ -536,12 +544,10 @@ expensive_tastes = { #昂贵嗜好
 	texture = "gfx/interface/icons/character_trait_icons/expensive_tastes.dds"
 
 	character_modifier = {
-		character_popularity_add = 25
+		character_health_add = -0.05
 	}
 
 	country_modifier = {
-		state_tax_waste_add = 0.01
-		country_prestige_mult = 0.05
 	}
 
 	agitator_modifier = {
@@ -677,6 +683,38 @@ war_criminal = {
 
 	interest_group_modifier = {
 	}
+}
+
+chinese_medicine_enthusiasts = { #讳疾忌医
+	type = condition
+	texture = "gfx/interface/icons/character_trait_icons/sickly.dds"
+
+	character_modifier = {
+		character_health_add = -0.2
+	}
+
+	command_modifier = {
+	}
+
+	country_modifier = {
+	}
+
+	agitator_modifier = {
+	}
+
+	interest_group_modifier = {
+		interest_group_ig_intelligentsia_pop_attraction_mult = -0.5 #文人人群吸引力
+	}
+
+	possible = {
+		has_trait = master_of_micro_exercise #有微操大师	
+	}
+
+    weight = {
+        value = 0
+    }
+
+	value = 0
 }
 
 sickly = {

@@ -6,6 +6,7 @@
 			last_name = "Dutra"
 			ruler = yes
 			birth_date = 1883.5.18
+			culture = cu:brazilian
 			dna = dna_emperor_pedro_02
 			interest_group = ig_armed_forces
 			ideology = ideology_liberal_leader #民主主义者
@@ -20,6 +21,7 @@
 			last_name = "Vargas"
 			ig_leader = yes
 			birth_date = 1882.4.19
+			culture = cu:brazilian
 			interest_group = ig_armed_forces
 			ideology = ideology_moderate #温和主义者
 			traits = {
@@ -28,11 +30,88 @@
 		}
 
 		create_character = {
-			is_admiral = yes
-			commander_rank = commander_rank_1
+    		is_agitator = yes #鼓动者
+			culture = cu:brazilian		
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_land_reformer #意识形态土地改革者
 			traits = {
-				meticulous
+				demagogue #煽动者
 			}
+		}
+
+		create_character = {
+    		is_agitator = yes #鼓动者
+			culture = cu:brazilian		
+			interest_group = ig_rural_folk #乡村民众
+			ideology = ideology_land_reformer #意识形态土地改革者
+			traits = {
+				demagogue #煽动者
+			}
+    agitator_usage = {
+        country_trigger = {
+            c:BRZ ?= this
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk #乡村民众
+        }   
+        earliest_usage_date = 1946.6.26
+        latest_usage_date = 2000.1.1
+        chance = 100
+    }			
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:brazilian
+			religion = rel:catholic #天主教
+			interest_group = ig_devout #虔信者
+			ideology = ideology_enlightened_theocrats #开明神权主义者
+			traits = {
+			}
+		}
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			culture = cu:brazilian
+			religion = rel:catholic #天主教
+			interest_group = ig_intelligentsia #知识分子
+			traits = {
+			}
+		}
+
+		create_character = {
+			ig_leader = yes
+			culture = cu:brazilian
+			religion = rel:catholic #天主教
+			interest_group = ig_petty_bourgeoisie #小市民
+		}
+
+		create_character = {
+			ig_leader = yes
+			culture = cu:brazilian
+			religion = rel:catholic #天主教
+			interest_group = ig_rural_folk #乡村民众
+		}
+
+		create_character = {
+			ig_leader = yes
+			culture = cu:brazilian
+			religion = rel:catholic #天主教
+			interest_group = ig_landowners #地主
+		}
+
+		create_character = {
+			ig_leader = yes
+			culture = cu:brazilian
+			religion = rel:catholic #天主教
+			interest_group = ig_industrialists #实业家
+		}
+
+		create_character = {
+			culture = cu:brazilian
+			religion = rel:catholic #天主教
+			interest_group = ig_trade_unions #利益集团工会
+			ig_leader = yes #利益集团领袖
 		}
 	}	
 }

@@ -1,14 +1,32 @@
 ﻿COUNTRIES = {
 	c:IND = {
-		effect_starting_technology_tier_5_tech = yes
-		activate_law = law_type:law_debt_slavery
-		activate_law = law_type:law_serfdom
-		effect_starting_politics_traditional = yes
-
-		ig:ig_devout = {
-			set_interest_group_name = ig_hindu_priesthood
-			remove_ideology = ideology_moralist
-			add_ideology = ideology_hindu_moralist
+		ig:ig_armed_forces = {
+			add_ruling_interest_group = yes
 		}
+		effect_starting_technology_tier_4_tech = yes
+
+		activate_law = law_type:law_presidential_republic #总统共和制
+		activate_law = law_type:law_autocracy 
+		activate_law = law_type:law_interventionism #经济干预
+		activate_law = law_type:law_protectionism #贸易保护				
+		activate_law = law_type:law_state_religion #国教至上			
+		activate_law = law_type:law_colonial_exploitation #民族剥削				
+		activate_law = law_type:law_racial_segregation #种族隔离			
+		activate_law = law_type:law_professional_army #职业军队		
+		activate_law = law_type:law_women_own_property #妇女财产权
+		activate_law = law_type:law_per_capita_based_taxation #人均税制			
+		activate_law = law_type:law_commercialized_agriculture #商品化农业	
+		activate_law = law_type:law_local_police #地方警察部队						
+		activate_law = law_type:law_appointed_bureaucrats #任命官僚制
+		activate_law = law_type:law_religious_schools #教会学校
+		activate_law = law_type:law_charitable_health_system #慈善医院
+		activate_law = law_type:law_case_law_system #海洋法系
+		activate_law = law_type:law_migration_controls
+
+		ig:ig_industrialists = { #实业家
+			set_interest_group_name = ig_elite #政治精英												
+		}				
+
+		add_journal_entry = { type = je_august_revolution } #八月革命		
 	}
 }

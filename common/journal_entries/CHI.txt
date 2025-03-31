@@ -1,0 +1,1385 @@
+#人间十年
+liberating_women = { #发射卫星
+	icon = "gfx/interface/icons/invention_icons/feminism.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		has_technology_researched = human_rights #公民主义	
+    }
+	possible = { #激活条件
+		has_technology_researched = human_rights #公民主义	
+	}
+	complete = { #完成条件
+		has_law = law_type:law_womens_suffrage	#妇女选举权
+		has_technology_researched = feminism #新女权主义			
+	}
+    on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_woman_soldiers #斗志昂扬的女权主义者
+			years = 5
+			is_decaying = yes			
+		}
+		add_modifier = {
+			name = modifier_pankhurst_womens_rights_support #鼓动女权主义
+			years = 20
+			is_decaying = yes			
+		}
+    }
+}
+
+je_china_and_the_soviet_union_were_at_loggerheads = { #中苏交恶
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/中苏交恶.dds"
+
+	immediate = { #如果启用	
+		trigger_event = { id = chi.17 days = 0 popup = yes } #苏联要求提前清偿债务
+		trigger_event = { id = chi.18 days = 0 popup = yes } #苏联撤资原子弹	
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+		gradually_undo_cooperation #逐渐取消合作
+	}
+
+	complete = { #完成条件
+		exists = c:RUS			
+        c:RUS = { 
+            relations:root <= 0 
+        }		
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 500	
+	}
+
+    on_complete = {
+		trigger_event = { id = chi.19 days = 0 popup = yes } #苏联撤走军事顾问
+		trigger_event = { id = chi.20 days = 0 popup = yes } #苏联撤资在华企业
+		add_modifier = {
+			name = modifier_unimpressed #独立自主
+			years = 20		
+		}
+    }
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = shoufu_goal		 
+		    NOT = { exists = c:RUS }							
+		}	
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+establish_a_complete_industrial_system = {  #建立完整工业体系
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}	
+		game_date >= 1965.12.1
+    }
+	possible = { #激活条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}		
+		game_date >= 1966.1.1			
+	}
+
+	immediate = {
+		root = {
+			save_scope_as = five_year_plan_country
+		}
+	}
+
+	complete = {
+		has_technology_researched = tech_mature_food_industry #成熟食品工业
+		has_technology_researched = tech_light_industrial_machinery #轻工业机械			
+		has_technology_researched = tech_mature_civil_light_industry #成熟民用轻工业
+		has_technology_researched = tech_chemical_machinery #化工机械	
+		has_technology_researched = tech_heavy_industrial_machinery #重工业机械				
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry #食品厂
+				level >= 30
+			}
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mills #合金加工厂
+				level >= 30
+			}
+		}				
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tooling_workshops #工具厂
+				level >= 30
+			}
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chemical_plants #化工厂
+				level >= 30
+			}
+		}				
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_refinery #炼油厂
+				level >= 15
+			}
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_plastic_products_factory #塑料厂
+				level >= 30
+			}
+		}			
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = establish_a_complete_industrial_system #建立完整工业体系
+			years = 5
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = {
+	}
+
+	progressbar = yes
+	should_be_pinned_by_default = yes
+}
+
+construction_of_the_three_gorges_hydropower_station = { #建造三峡水电站
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}	
+		has_technology_researched = tech_advanced_clean_energy #先进清洁能源
+		owns_entire_state_region = STATE_WESTERN_HUBEI		
+    }
+	possible = { #激活条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}		
+		has_technology_researched = tech_advanced_clean_energy #先进清洁能源
+		owns_entire_state_region = STATE_WESTERN_HUBEI				
+	}
+
+	complete = { #完成条件
+		has_technology_researched = tech_advanced_clean_energy #先进清洁能源
+		owns_entire_state_region = STATE_WESTERN_HUBEI		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_three_gorges_hydropower_station #三峡水电站
+				level >= 1
+			}
+		}			
+	}
+    on_complete = { #如果完成
+		add_modifier = {
+			name = man_can_conquer_nature #人定胜天
+			years = 5
+			is_decaying = yes			
+		}
+    }
+}
+
+eliminate_pests_and_diseases = { #除害灭病
+	icon = "gfx/interface/icons/invention_icons/antibiotics.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		institution_investment_level = {
+			institution = institution_health_system
+			value >= 1
+		}	
+    }
+	possible = { #激活条件
+		institution_investment_level = {
+			institution = institution_health_system
+			value >= 1
+		}	
+	}
+	complete = { #完成条件
+		institution_investment_level = {
+			institution = institution_health_system
+			value >= 2
+		}	
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_pharmaceutical_factory #医疗用品厂
+				level >= 15
+			}
+		}				
+	}
+    on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_popularize_rural_medica_care #医疗水平提高
+			years = 5
+			is_decaying = yes			
+		}
+    }
+}
+
+popularize_rural_medica_care = { #普及农村医疗
+	icon = "gfx/interface/icons/invention_icons/antibiotics.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		institution_investment_level = {
+			institution = institution_health_system
+			value < 1
+		}	
+    }
+	possible = { #激活条件
+		institution_investment_level = {
+			institution = institution_health_system
+			value < 1
+		}	
+	}
+	complete = { #完成条件
+		institution_investment_level = {
+			institution = institution_health_system
+			value >= 1
+		}	
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_pharmaceutical_factory #医疗用品厂
+				level >= 10
+			}
+		}				
+	}
+    on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_popularize_rural_medica_care #医疗水平提高
+			years = 5
+			is_decaying = yes			
+		}
+    }
+}
+
+liberating_women = { #妇女解放运动
+	icon = "gfx/interface/icons/invention_icons/feminism.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		has_technology_researched = human_rights #公民主义	
+    }
+	possible = { #激活条件
+		has_technology_researched = human_rights #公民主义	
+	}
+	complete = { #完成条件
+		has_law = law_type:law_womens_suffrage	#妇女选举权
+		has_technology_researched = feminism #新女权主义			
+	}
+    on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_woman_soldiers #斗志昂扬的女权主义者
+			years = 5
+			is_decaying = yes			
+		}
+		add_modifier = {
+			name = modifier_pankhurst_womens_rights_support #鼓动女权主义
+			years = 20		
+		}
+    }
+}
+
+liberate_serfs = { #解放农奴
+	icon = "gfx/interface/icons/law_icons/小农土地所有制.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		has_law = law_type:law_serfdom	#农奴制
+    }
+	possible = { #激活条件
+		has_law = law_type:law_serfdom	#农奴制
+	}
+	complete = { #完成条件
+		NOT = { 
+			has_law = law_type:law_serfdom	#农奴制																						
+		}			
+	}
+    on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_liberate_serfs #解放农奴
+			years = 20		
+		}
+    }
+}
+
+future_plans = { #未来的计划
+	group = je_group_internal_affairs
+
+    icon = "gfx/interface/icons/event_icons/socialism.dds"
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.27
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.27
+	}
+	complete = { #完成条件
+		game_date >= 2050.12.31
+	}
+    on_complete = {
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+great_leap_forward = { #大跃进
+
+    icon = "gfx/interface/icons/event_icons/大跃进.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+        THIS = c:PRC							
+	}
+	possible = { #激活条件
+        THIS = c:PRC		
+		game_date >= 1958.5.1							
+	}
+
+	complete = { #完成条件
+		custom_tooltip = {
+			text = 100_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no	       
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = man_can_conquer_nature #人定胜天
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 1
+	}
+
+	fail = { #失败条件
+		game_date >= 1961.5.1		
+	}
+
+	on_fail = { #如果失败
+		add_modifier = {
+			name = little_success #收效甚微
+			years = 15
+			is_decaying = yes			
+		}	
+	}
+
+	progressbar = yes
+	should_be_pinned_by_default = yes
+}
+
+take_the_class_struggle_as_the_key_link = { #以阶级斗争为纲
+    icon = "gfx/interface/icons/event_icons/新中国.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}				
+	}
+	possible = { #激活条件
+		has_law = law_type:law_council_republic #委员会共和制	
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}		
+		game_date >= 1957.10.1										
+	}
+
+	complete = { #完成条件
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_monument_to_the_people's_heroes #人民英雄纪念碑
+				level >= 1
+			}
+		}	
+		NOT = { 
+			has_law = law_type:law_autocracy	#独裁制		
+			has_law = law_type:law_oligarchy	#寡头制		
+			has_law = law_type:law_technocracy	#技术治国	
+			has_law = law_type:law_extraction_economy	#盘剥经济	
+			has_law = law_type:law_open_door	#门户开放				
+			has_law = law_type:law_land_based_taxation	#土地税制		
+			has_law = law_type:law_serfdom	#农奴制			
+			has_law = law_type:law_tenant_farmers	#佃农		
+			has_law = law_type:law_colonial_exploitation	#民族剥削		
+			has_law = law_type:law_no_workers_rights	#无劳动者权利		
+			has_law = law_type:law_child_labor_allowed #允许童工	
+			has_law = law_type:law_restricted_child_labor #限制童工		
+			has_law = law_type:law_no_social_security #无社会保障																					
+		}
+		has_law = law_type:law_council_republic #委员会共和制
+		has_law = law_type:law_guaranteed_liberties #保障自由
+		has_law = law_type:law_people_police_force #社会主义警察部队		
+		has_law = law_type:law_womens_suffrage #妇女选举权
+		has_law = law_type:law_slavery_banned #禁止蓄奴							
+		OR = {
+			has_law = law_type:law_protected_speech #言论保护
+			has_law = law_type:law_right_of_assembly #集会权
+		}		
+		OR = {
+			has_law = law_type:law_6_hour_working_system #六小时工作制
+			has_law = law_type:law_8_hour_working_system #八小时工作制
+		}						
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = long_live_the_people #人民万岁
+			years = 20
+		}
+	}
+
+	fail = { #失败条件		
+		OR = {
+			has_law = law_type:law_social_capitalism #社会主义市场经济
+			NOT = { has_law = law_type:law_council_republic } #委员会共和制	
+		}
+	}
+
+	on_fail = { #如果失败
+		add_modifier = {
+			name = negative_program #否定纲领
+			years = 15
+			is_decaying = yes			
+		}	
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+take_food_as_the_key_link = { #以粮为纲
+
+    icon = "gfx/interface/icons/event_icons/以粮为纲.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}				
+	}
+	possible = { #激活条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}	
+		game_date >= 1958.8.17												
+	}
+	complete = { #完成条件
+		OR = {
+			has_law = law_type:law_collectivized_agriculture #集体化农业
+			has_law = law_type:law_commercialized_small_farmers #商品化小农制
+		}		
+		any_scope_state = {
+			state_region = s:STATE_SICHUAN
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_SOUTHERN_ANHUI
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_NORTHERN_ANHUI
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_HENAN
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_ZHILI
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_NORTHERN_MANCHURIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_JIANGSU
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_SHANDONG
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}				
+		any_scope_state = {
+			state_region = s:STATE_HUNAN
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_SOUTHERN_MANCHURIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_rye_farm #黑麦农场 
+				}
+				level >= 50
+			}
+		}				
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no		
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = alleviating_food_shortages #缓解粮食短缺问题
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = { #失败条件
+		in_default = yes		
+	}
+
+	on_fail = { #如果失败
+		add_modifier = {
+			name = serious_setbacks #严重挫折
+			years = 15
+			is_decaying = yes			
+		}
+	}
+
+	progressbar = yes
+	should_be_pinned_by_default = yes
+}
+
+great_steelmaking = { #大炼钢铁
+
+    icon = "gfx/interface/icons/event_icons/大炼钢铁.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}				
+	}
+	possible = { #激活条件
+    	OR = {
+        	THIS = c:PRC			
+        	THIS = c:CHI			
+		}	
+		game_date >= 1958.8.17							
+	}
+	complete = { #完成条件
+		any_scope_state = {
+			state_region = s:STATE_HINGGAN
+			is_incorporated = yes
+            any_scope_building = {
+                is_building_type = building_steel_mills #合金加工厂     
+                level >= 40
+            }   
+		}	
+		any_scope_state = {
+			state_region = s:STATE_SHENGJING
+			is_incorporated = yes
+            any_scope_building = {
+                is_building_type = building_steel_mills #合金加工厂     
+                level >= 40
+            }   
+		}	
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_HUBEI
+			is_incorporated = yes
+            any_scope_building = {
+                is_building_type = building_steel_mills #合金加工厂     
+                level >= 40
+            }   
+		}				
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no		
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = establishment_of_the_steel_industry #建立钢铁工业
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = { #失败条件
+		in_default = yes		
+	}
+
+	on_fail = { #如果失败
+		add_modifier = {
+			name = serious_setbacks #严重挫折
+			years = 15
+			is_decaying = yes			
+		}
+	}
+
+	progressbar = yes
+	should_be_pinned_by_default = yes
+}
+
+je_plan_childbearing = { #计划生育
+	icon = "gfx/interface/icons/law_icons/限制生育.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		OR = { 			
+			c:PRC ?= ROOT 
+			c:CHI ?= ROOT 			
+			c:CHN ?= ROOT 					
+			c:BIC ?= ROOT 			
+			c:MUG ?= ROOT 
+			c:IDS ?= ROOT 				
+			c:HND ?= ROOT 										
+			}								
+	}
+
+	possible = { #激活条件
+		OR = { 			
+			c:PRC ?= ROOT 
+			c:CHI ?= ROOT 		
+			c:CHN ?= ROOT 									
+			c:BIC ?= ROOT 			
+			c:MUG ?= ROOT 
+			c:IDS ?= ROOT 				
+			c:HND ?= ROOT 											
+			}	
+		institution_investment_level = {
+			institution = institution_family_planning
+			value >= 0
+		}			
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_family_planning  #是限制生育	
+		institution_investment_level = {
+			institution = institution_family_planning
+			value >= 4
+		}			
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_family_planning #优生少生
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	weight = 100
+}
+
+je_establish_a_college_entrance_examination_system = { #建立高考制度
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+			c:PRC ?= ROOT
+		    exists = c:PRC		
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 3
+		}								
+	}
+
+	possible = { #激活条件
+			c:PRC ?= ROOT
+		    exists = c:PRC		
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 3
+		}									
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_public_schools #是公立学校		
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}			
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_establish_a_college_entrance_examination_system #建立高考制度
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	weight = 100
+}
+
+transfer_of_power2 = { #党国权力交接
+
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+        exists = c:CHI
+        THIS = c:CHI							
+	}
+	possible = { #激活条件
+        exists = c:CHI
+        THIS = c:CHI
+		game_date >= 1975.4.25									
+	}
+	complete = { #完成条件
+		game_date >= 1978.5.20	
+	}
+    on_complete = {      
+        trigger_event = { id = chi.12 } #党国权力交接
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_quality_education = { #素质教育
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+					
+	}
+
+	possible = { #激活条件
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}			
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_public_schools #是公立学校	
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 5
+		}			
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_quality_education #素质教育完成
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	weight = 100
+}
+
+je_general_education = { #通识教育
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件	
+		NOT = {
+			c:PRC ?= ROOT			
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}				
+	}
+
+	possible = { #激活条件
+		NOT = {
+			c:PRC ?= ROOT			
+			c:PRU ?= ROOT			
+			c:BAV ?= ROOT
+			c:YSD ?= ROOT
+			c:RHN ?= ROOT					
+		}	
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 3
+		}									
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_public_schools #是公立学校	
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}			
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_general_education #通识教育完成
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	weight = 100
+}
+
+je_literacy_education = { #扫盲教育
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		NOT = { c:PRC ?= ROOT }			
+	}
+
+	possible = { #激活条件
+		NOT = { c:PRC ?= ROOT }	
+		institution_investment_level = {
+			institution = institution_schools
+			value <= 1
+		}								
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+		educational_resources_are_severely_inadequate #教育资源严重不足
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_public_schools #是公立学校		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_university #大学	 
+				level >= 1
+			}		
+		}				
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_literacy_education #扫盲教育完成
+			months = long_modifier_time
+			is_decaying = yes
+		}
+		if = {
+			limit = {
+				has_modifier = illiteracy_is_everywhere #文盲遍地
+			}
+			remove_modifier = illiteracy_is_everywhere #文盲遍地
+		}			
+	}
+
+	weight = 100
+}
+
+je_establish_a_college_entrance_examination_system = { #建立高考制度
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+			c:PRC ?= ROOT
+		    exists = c:PRC		
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 3
+		}								
+	}
+
+	possible = { #激活条件
+			c:PRC ?= ROOT
+		    exists = c:PRC		
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 3
+		}									
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_public_schools #是公立学校		
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}			
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_establish_a_college_entrance_examination_system #建立高考制度
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	weight = 100
+}
+
+je_terakoya = { #扫盲运动
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+			c:PRC ?= ROOT
+		    exists = c:PRC			
+	}
+
+	possible = { #激活条件
+			c:PRC ?= ROOT
+		    exists = c:PRC			
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = {
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 3
+		}
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = modifier_legacy_of_terakoya
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	weight = 100
+}
+
+free_declaration = { #免费声明
+	group = je_group_internal_affairs
+
+    icon = "gfx/interface/icons/event_icons/socialism.dds"
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.27
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.27
+	}
+	complete = { #完成条件
+		game_date >= 2050.12.31
+	}
+    on_complete = {
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_shoufulvshun = { #收复旅顺
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	possible = { #激活条件	
+		exists = c:RUS		
+	}
+
+	complete = { #完成条件
+        	has_law = law_type:law_council_republic		
+        c:RUS = { 
+            relations:root >= 50 
+        }	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 350	
+	}
+
+    on_complete = {
+		trigger_event = {
+			id = chi.6
+			popup = yes
+		}
+    }
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = shoufu_goal		 
+		    NOT = { exists = c:RUS }							
+		}	
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_shoufuxianggang = { #收复香港
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/香港回归.dds"
+
+	is_shown_when_inactive = { #显示条件
+		is_ai = no		
+		OR = {
+			c:PRC ?= ROOT
+			c:CHI ?= ROOT
+		}
+		OR = {		
+		    exists = c:PRC		
+		    exists = c:CHI	
+		}		
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRC ?= ROOT
+			c:CHI ?= ROOT
+		}
+		OR = {		
+		    exists = c:PRC		
+		    exists = c:CHI	
+		}			
+	}
+
+	complete = { #完成条件
+        c:GBR = { 
+            relations:root >= 50 
+        }	
+
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 400	
+	}
+	
+    on_complete = {
+		trigger_event = {
+			id = chi.7
+			popup = yes
+		}
+    }
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = shoufu_goal	
+		    NOT = { exists = c:GBR }			
+		}	
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_shoufuaomen = { #收复澳门
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	is_shown_when_inactive = { #显示条件
+		is_ai = no		
+		OR = {
+			c:PRC ?= ROOT
+			c:CHI ?= ROOT
+		}
+		OR = {		
+		    exists = c:PRC		
+		    exists = c:CHI	
+		}			
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRC ?= ROOT
+			c:CHI ?= ROOT
+		}
+		OR = {		
+		    exists = c:PRC		
+		    exists = c:CHI	
+		}			
+	}
+
+	complete = { #完成条件
+        c:POR = { 
+            relations:root >= 50 
+        }	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 450	
+	}
+
+    on_complete = {
+		trigger_event = {
+			id = chi.8
+			popup = yes
+		}
+    }
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = shoufu_goal	
+		    NOT = { exists = c:POR }					
+		}	
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_shoufutaiwan = { #和平收复台湾
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/收复台湾.dds"
+
+	possible = { #激活条件	
+		exists = c:CHI		
+	}
+
+	complete = { #完成条件
+        c:USA = { 
+            relations:root >= 50 
+        }		
+        c:CHI = { 
+            relations:root >= 50 
+        }	
+		NOT = {
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}				
+		army_size > 500	
+	}
+
+    on_complete = {
+		trigger_event = {
+			id = chi.9
+			popup = yes
+		}
+    }
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = peaceful_reunification_of_korea_goal		 
+		    NOT = { exists = c:CHI }				
+		}	
+    }
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
+
+je_xibudakaifa = { #西部大开发
+
+	group = je_group_foreign_affairs
+
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+
+	is_shown_when_inactive = { #显示条件	
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRC ?= ROOT
+			c:CHI ?= ROOT
+		}
+		OR = {		
+		    exists = c:PRC		
+		    exists = c:CHI	
+		}				
+	}
+
+	complete = { #完成条件
+		NOT = {
+			has_law = law_type:law_presidential_republic #总统共和制
+			has_law = law_type:law_semi_presidential_republic #半总统共和制
+			has_law = law_type:law_parliamentary_republic #议会共和制
+		}
+	}
+    on_complete = {
+		trigger_event = {
+			id = chi.6
+			popup = yes
+		}
+    }
+
+    weight = 1000
+}

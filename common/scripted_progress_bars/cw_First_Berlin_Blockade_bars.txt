@@ -1,0 +1,49 @@
+ first_berlin_blockade_west_progress_bar = {
+	name = "divided_monarchists_bonapartist_progress_bar"
+	desc = "divided_monarchists_bonapartist_progress_bar_desc"
+
+	default = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = first_berlin_blockade_end }
+			}
+			add = {
+				desc = "bonapartist_progress_from_effects"
+				value = owner.var:first_berlin_blockade_west_progress_from_effects
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+
+ }
+
+ first_berlin_blockade_west_progress_bar = {
+	name = "divided_monarchists_orleanist_progress_bar"
+	desc = "divided_monarchists_orleanist_progress_bar_desc"
+
+	default_bad = yes
+
+	monthly_progress = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = first_berlin_blockade_end }
+			}
+			add = {
+				desc = "orleanist_progress_from_effects"
+				value = owner.var:first_berlin_blockade_east_progress_from_effects
+			}
+		}
+	}
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+
+ }

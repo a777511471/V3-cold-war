@@ -1,17 +1,12 @@
 ﻿CHARACTERS = {
 	c:ITA = {
-		create_character = {#意大利总理
-			historical = yes
-			ruler = yes
-			traits = {
-			}
-		}
-
-		create_character = {#阿尔契德·加斯贝利，意大利首相
+		create_character = {#阿尔契德·加斯贝利，意大利总理
+    		dna = dna_truman		
 			first_name = "Archide"
 			last_name = "Gasbury"
 			birth_date = 1881.4.3
 			historical = yes
+			ruler = yes			
 			ig_leader = yes
 			interest_group = ig_intelligentsia #知识分子
 			ideology = ideology_republican_leader #共和主义者
@@ -42,5 +37,36 @@
 			traits = {
 			}
 		}
+
+		create_character = {
+            #
+			dna = dna_king_leopold_01
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_radical #激进主义者
+			commander_rank = commander_rank_1
+			traits = {				
+				traditionalist_commander
+				expert_offensive_planner
+			}
+		}		
+
+		create_character = { #海军
+            #
+			dna = ecchi_dna_james_k_polk
+			is_admiral = yes
+			culture = cu:north_german
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			commander_rank = commander_rank_1
+			traits = {
+				expert_naval_commander
+				charismatic
+			    popular_commander	
+				brave #勇敢
+				reserved #内敛
+			}
+		}		
 	}
 }

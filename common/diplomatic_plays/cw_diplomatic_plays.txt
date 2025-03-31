@@ -1,0 +1,42 @@
+dp_war_of_china = {
+	war_goal = annex_country
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+
+	add_infamy_for_starting_initiator_wargoals = no
+
+	
+	selectable_in_lens = {
+		always= no
+	}
+	
+	possible = {
+		always= no
+	}
+	
+	on_weekly_pulse = {}
+	
+	on_war_begins = {trigger_event = { id = jiefangzhanzheng_breakup.1}}
+
+	on_war_end = {trigger_event = { id = bttw.1}}
+}
+
+dp_war_of_korea = {
+	war_goal = annex_country
+	
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+
+	add_infamy_for_starting_initiator_wargoals = no
+
+	
+	selectable_in_lens = {
+		always= no
+	}
+	
+	possible = {
+		always= no
+	}
+	
+	on_weekly_pulse = {}
+
+}

@@ -3,7 +3,7 @@ space_race_core_progress_bar = {
  	desc = "space_race_core_progress_bar_usa_desc"
  	second_desc = "space_race_core_progress_bar_rus_desc"
 
- 	double_sided_gold = yes
+ 	double_sided_bad = yes
 
  	yearly_progress = {
 		if = {

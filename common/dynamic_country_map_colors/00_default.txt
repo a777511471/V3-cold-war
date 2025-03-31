@@ -110,6 +110,16 @@ usa_monarchy = {
 	}
 }
 
+usa_communist = {
+	color = "red_dark"
+
+	possible = {
+		exists = c:USA
+		THIS = c:USA
+		has_law = law_type:law_council_republic
+	}
+}
+
 ukraine_free_territory = {
 	color = "black"
 
@@ -271,19 +281,6 @@ fascist_spain = {
 	}
 }
 
-republican_portugal = {
-	color = "green_dark"
-
-	possible = {
-		exists = c:POR
-		THIS = c:POR
-		OR = {
-			has_law = law_type:law_parliamentary_republic
-			has_law = law_type:law_presidential_republic
-		}
-	}
-}
-
 communist_britain = {
 	color = "british_red"
 
@@ -431,20 +428,6 @@ republican_india = {
 	possible = {
 		exists = c:BHT
 		THIS = c:BHT
-		OR = {
-			has_law = law_type:law_parliamentary_republic
-			has_law = law_type:law_presidential_republic
-			has_law = law_type:law_council_republic
-		}
-	}
-}
-
-republican_hindustan = {
-	color = "hoi4_pakistan_blue"
-
-	possible = {
-		exists = c:HND
-		THIS = c:HND
 		OR = {
 			has_law = law_type:law_parliamentary_republic
 			has_law = law_type:law_presidential_republic
@@ -668,6 +651,18 @@ federation_of_the_americas = {
 				}
 				count > 1
 			}
+		}
+	}
+}
+
+republican_portugal = {
+	color = "green_dark"
+
+	possible = {
+		exists = c:POR
+		THIS = c:POR
+		NOT = {
+			has_law = law_type:law_monarchy
 		}
 	}
 }

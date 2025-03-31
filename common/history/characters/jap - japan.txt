@@ -8,30 +8,16 @@
 			last_name = Yamato
 			birth_date = 1901.4.29
 			religion = rel:shinto #神道教
-			dna = dna_emperor_minh_mang
+			dna = ecchi_dna_zhaohe
 			interest_group = ig_intelligentsia #官僚
 			ideology = ideology_royalist #保皇主义者
+			set_character_immortal = yes			
 			traits = {
+				demagogue #煽动者				
 				tactful #圆滑
-				pillager #掠夺者
 				grifter #骗子
 				bandit #强盗
-				demagogue #煽动者
 				cruel #残暴
-			}
-		}
-
-		create_character = { #三岛由纪夫
-			first_name = Youjifu
-			last_name = Sandao
-			birth_date = 1925.1.14
-			historical = yes
-    			is_agitator = yes #鼓动者
-			interest_group = ig_devout #虔信者
-			ideology = ideology_national_socialists #国社主义者
-			traits = {
-				demagogue #煽动者
-				literary #文学家
 			}
 		}
 
@@ -45,13 +31,64 @@
 			interest_group = ig_trade_unions #利益集团工会
 			ideology = ideology_communist #意识形态共产主义者
 			traits = {
+				demagogue #煽动者
+				literary #文学家				
 				masterful_diplomat #外交大师
-				charismatic #魅力四射
 				brave #勇敢
 			}
 		}
 
+		create_character = { #野坂参三
+			first_name = Cansan
+			last_name = Yeban
+			birth_date = 1892.3.30
+			historical = yes
+    		is_agitator = yes #鼓动者
+			religion = rel:atheist #无神论
+			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_communist #意识形态共产主义者
+			traits = {
+				demagogue #煽动者
+				literary #文学家				
+				masterful_diplomat #外交大师
+				brave #勇敢
+			}
+		}
+
+		create_character = { #三岛由纪夫
+			dna = ecchi_dna_wellington_koo			
+			first_name = Youjifu
+			last_name = Sandao
+			birth_date = 1925.1.14
+			historical = yes
+    		is_agitator = yes #鼓动者
+			interest_group = ig_devout #虔信者
+			ideology = ideology_national_socialists #民族社会主义者
+			traits = {
+				demagogue #煽动者
+				literary #文学家
+				hedonist #享乐主义者				
+			}
+		}
+
+		create_character = { #
+			ig_leader = yes			
+			religion = rel:protestant #新教
+			interest_group = ig_landowners 
+			ideology = ideology_authoritarian #威权主义者
+		}
+
+		create_character = { #
+			ig_leader = yes				
+			religion = rel:catholic #天主教
+			interest_group = ig_industrialists 
+			ideology = ideology_authoritarian #威权主义者
+			traits = {
+			}
+		}
+
 		create_character = { #三木武夫
+			dna = ecchi_dna_hu_shih				
 			first_name = Wufu
 			last_name = Sanmu
 			birth_date = 1907.3.17
@@ -66,6 +103,7 @@
 		}
 
 		create_character = { #石桥湛山
+			dna = ecchi_dna_hu_shih				
 			first_name = Zhanshan
 			last_name = Shiqiao
 			birth_date = 1884.9.25
@@ -77,7 +115,7 @@
 			traits = {
 				masterful_diplomat #外交大师
 				charismatic #魅力四射
-				brave #勇敢
+				brave #勇敢				
 			}
 		}
 
@@ -88,13 +126,14 @@
 			last_name = MacArthur 
 			culture = cu:dixie
 			birth_date = 1880.1.26
-			dna = dna_king_leopold_01
+    		dna = dna_truman
 			interest_group = ig_armed_forces #军队
 			ideology = ideology_authoritarian #威权主义者
+			set_character_immortal = yes #长期存在			
 			traits = {
-				strong #健硕
-				hedonist #享乐主义者
-				celebrity_commander #明星指挥官
+				celebrity_commander #明星指挥官				
+				charismatic #魅力四射				
+				persistent #执着
 			}
 		}
 

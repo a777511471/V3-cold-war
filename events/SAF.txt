@@ -1,0 +1,89 @@
+namespace = saf
+
+saf.1 = {
+    type = country_event
+    placement = root
+    
+    title = saf.1.t
+    desc = saf.1.d
+    flavor = saf.1.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = saf.1.a
+        default_option = true
+        add_primary_culture = cu:zulu
+        add_primary_culture = cu:xhosa      
+        add_primary_culture = cu:tswana
+        add_primary_culture = cu:khoisan
+        add_primary_culture = cu:sotho
+
+    }
+}
+
+saf.2 = {
+    type = country_event
+    placement = root
+    
+    title = saf.2.t
+    desc = saf.2.d
+    flavor = saf.2.f
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    duration = 3    
+
+    immediate = {
+    }
+    option = {
+        name = saf.2.a
+        default_option = true
+        add_primary_culture = cu:zulu
+        add_primary_culture = cu:xhosa      
+        add_primary_culture = cu:tswana
+        add_primary_culture = cu:khoisan
+        add_primary_culture = cu:sotho
+            remove_primary_culture = cu:british   
+            remove_primary_culture = cu:boer
+		every_scope_character = {
+			limit = {
+				OR = {
+					culture = cu:british
+					culture = cu:boer
+				}
+			}
+			kill_character = yes
+		}    
+
+		create_character = { #曼德拉
+			first_name = "Nelson·Rolihlahla"
+			last_name = "Mandela"
+			ruler = yes             
+			ig_leader = yes
+			historical = yes
+			birth_date = 1918.7.18
+			culture = cu:xhosa
+			religion = rel:protestant #新教
+			interest_group = ig_intelligentsia #文人
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+				strong #健硕
+				basic_diplomat #外交家
+				tactful
+				charismatic
+			}
+		} 
+
+		activate_law = law_type:law_ethnostate #改变法律为民族国家	        			
+		activate_law = law_type:law_encourage_immigration #改变法律为鼓励移民			                                                  
+    }
+}

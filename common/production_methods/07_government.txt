@@ -286,7 +286,7 @@ pm_professional_bureaucrats = {
 	}			
 }	
 
-pm_secular_bureaucrats = {
+pm_secular_bureaucrats = { #世俗管治
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 	
 	disallowing_laws = {
@@ -300,12 +300,13 @@ pm_secular_bureaucrats = {
 	}			
 }
 
-pm_religious_bureaucrats = {
+pm_religious_bureaucrats = { #教士行政
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 	
 	disallowing_laws = {
 		law_total_separation
 		law_state_atheism
+		law_secularization #推广无神论
 	}	
 	
 	building_modifiers = {
@@ -435,23 +436,18 @@ pm_religious_academia = {
 	}			
 }			
 
-pm_skyscraper_bureaucratic_nexus = {
+pm_skyscraper_bureaucratic_nexus = { #摩天大楼官僚中心
 	texture = "gfx/interface/icons/production_method_icons/skyscraper_bureaucratic_nexus.dds"
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_poor_standard_of_living_add = 0.2 #下等阶层的生活水平
+			building_government_administration_throughput_add = 0.25
 		}
 	}
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_furniture_add = 2
-			goods_input_electricity_add = 2
-			goods_input_transportation_add = 2
-
-			goods_output_housing_services_add = 31
-			goods_output_services_add = 25
+			goods_input_paper_add = 25
 		}
 
 		level_scaled = {
@@ -473,7 +469,7 @@ pm_skyscraper_trade_nexus = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_paper_add = 12
+			goods_input_paper_add = 25
 		}
 
 		level_scaled = {
@@ -484,20 +480,3 @@ pm_skyscraper_trade_nexus = {
 	}
 }
 		
-pm_no_airships = {
-	texture = "gfx/interface/icons/production_method_icons/no_airships.dds"
-}
-
-pm_airship_mooring_post = {
-	texture = "gfx/interface/icons/production_method_icons/airship_mooring_post.dds"
-	
-	unlocking_technologies = {
-		zeppelins
-	}
-	
-	country_modifiers = {
-		workforce_scaled = { 
-			country_prestige_add = 10
-		}
-	}
-}

@@ -1559,7 +1559,7 @@ land_ownership_law_events.12 = {
 					leader = {
 						add_modifier = {
 							name = modifier_state_planning_pop_up
-							months = long_modifier_time
+							years = 10
 						}
 					}
 				}
@@ -1572,7 +1572,7 @@ land_ownership_law_events.12 = {
 					leader = {
 						add_modifier = {
 							name = modifier_state_planning_pop_down
-							months = long_modifier_time
+							years = 10
 						}
 					}
 				}

@@ -5,10 +5,10 @@
 			last_name = "Saint_Martin"
 			historical = yes
 			ruler = yes
-			ig_leader = yes
+			ig_leader = yes #利益集团领袖
 			birth_date = 1887.9.13
 			interest_group = ig_intelligentsia #知识分子
-			ideology = ideology_social_democrat #社民主义者
+			ideology = ideology_social_democrat #社会民主主义者
 			traits = {
 				charismatic #魅力四射
 				brave #勇敢
@@ -20,16 +20,56 @@
 			last_name = "Batista"
 			historical = yes
 			is_general = yes
-			ig_leader = yes
+			ig_leader = yes #利益集团领袖
 			commander_rank = commander_rank_4
 			birth_date = 1901.1.16
 			interest_group = ig_armed_forces #军队
-			ideology = ideology_authoritarian #威权主义者
+			ideology = ideology_reformer #改良主义者
 			traits = {
 				celebrity_commander #明星指挥官
 				imperious #盛气凌人
 				bigoted #偏执
 			}
 		}	
+
+		create_character = { #古巴国父菲德尔·卡斯特罗
+			dna = ecchi_dna_josip_tito		
+			first_name = "Fidel"
+			last_name = "Castro"
+			historical = yes
+    		is_agitator = yes #鼓动者
+			birth_date = 1926.8.13
+			religion = rel:atheist #无神论			
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_radical #激进主义者
+			traits = {
+				basic_political_operator #政治运作者
+				demagogue #煽动者				
+				strong #健硕				
+				charismatic #魅力四射
+				brave #勇敢
+				innovative #创新精神		
+			}
+		}				
+
+		create_character = { #劳尔·卡斯特罗
+    		dna = dna_truman		
+			first_name = "Raul"
+			last_name = "Castro"
+			historical = yes
+    		is_agitator = yes #鼓动者
+			birth_date = 1931.6.3
+			religion = rel:atheist #无神论			
+			interest_group = ig_trade_unions #工会
+			ideology = ideology_radical #激进主义者
+			traits = {
+				basic_political_operator #政治运作者
+				demagogue #煽动者				
+				strong #健硕				
+				charismatic #魅力四射
+				brave #勇敢
+				innovative #创新精神		
+			}
+		}				
 	}
 }

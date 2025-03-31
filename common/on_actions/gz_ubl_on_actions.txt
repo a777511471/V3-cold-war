@@ -1,0 +1,21 @@
+
+on_monthly_pulse_country = {
+	effect = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+		}	
+		universal_basic_Income_scripted_effects_on1 = yes
+		#universal_basic_Income_scripted_effects_on1 = yes
+		#universal_basic_Income_scripted_effects_on6 = yes
+		#universal_basic_Income_scripted_effects_on7 = yes
+		#universal_basic_Income_scripted_effects_on8 = yes
+		#universal_basic_Income_scripted_effects_on9 = yes
+		#universal_basic_Income_scripted_effects_on10 = yes
+		#universal_basic_Income_scripted_effects_on11 = yes
+		add_journal_entry = {
+			type = universal_basic_Income
+		}
+	}
+}

@@ -1,0 +1,6 @@
+country_stats_entry_potential_religion = {
+    scope = country
+    is_shown = {
+        has_variable = potential_religion
+    }
+}

@@ -1,4 +1,279 @@
 POPS = {
+	s:STATE_BOTSWANA = {
+		region_state:BTW = {
+			create_pop = {
+				culture = tswana
+				size = 3248000
+			}
+			create_pop = {
+				culture = british
+				size = 48000
+			}			
+		}
+	}
+
+	s:STATE_EASTERN_CAPE = {
+		region_state:SAF = {
+			create_pop = {
+				culture = boer
+				size = 1300000
+			}			
+			create_pop = {
+				culture = xhosa
+				size = 1300000
+			}
+			create_pop = {
+				culture = british
+				size = 48000
+			}
+			create_pop = {
+				culture = nguni
+				size = 48000
+			}
+			create_pop = {
+				culture = khoisan
+				size = 48000
+			}
+			create_pop = {
+				culture = tswana
+				size = 48000
+			}				
+		}
+	}
+	s:STATE_CAPE_COLONY = {
+		region_state:SAF = {
+			create_pop = {
+				culture = xhosa
+				size = 1300000
+			}			
+			create_pop = {
+				culture = sotho
+				size = 48000
+			}
+			create_pop = {
+				culture = boer
+				size = 2030000
+			}
+			create_pop = {
+				culture = tswana
+				size = 48000
+			}				
+		}
+	}
+	s:STATE_NORTHERN_CAPE = {
+		region_state:SAF = {
+			create_pop = {
+				culture = boer
+				size = 3030000
+			}			
+			create_pop = {
+				culture = sotho
+				size = 600000
+			}
+			create_pop = {
+				culture = british
+				size = 48000
+			}
+			create_pop = {
+				culture = tswana
+				size = 48000
+			}				
+		}
+	}
+
+	s:STATE_NAMAQUALAND = {
+		region_state:SAF = {
+			create_pop = {
+				culture = boer
+				size = 3000000
+			}				
+			create_pop = {
+				culture = herero
+				size = 369000
+			}
+			create_pop = {
+				culture = khoisan
+				size = 1000
+			}	
+			create_pop = {
+				culture = tswana
+				size = 48000
+			}				
+		}
+	}
+	s:STATE_HEREROLAND = {
+		region_state:SAF = {
+			create_pop = {
+				culture = boer
+				size = 3000000
+			}				
+			create_pop = {
+				culture = herero
+				size = 369000
+			}
+			create_pop = {
+				culture = khoisan
+				size = 1000
+			}			
+			create_pop = {
+				culture = tswana
+				size = 48000
+			}				
+		}
+	}
+	s:STATE_ZULULAND = {
+		region_state:SAF = {
+			create_pop = {
+				culture = zulu
+				size = 2166666
+			}
+			create_pop = {
+				culture = boer
+				size = 1200000
+			}		
+			create_pop = {
+				culture = hindustani
+				size = 232317
+			}		
+			create_pop = {
+				culture = tswana
+				size = 48000
+			}							
+		}
+	}
+	s:STATE_VRYSTAAT = {
+		region_state:SAF = {
+			create_pop = {
+				culture = boer
+				size = 2200000
+			}
+			create_pop = {
+				culture = sotho
+				size = 1200000
+			}		
+			create_pop = {
+				culture = tswana
+				size = 48000
+			}					
+		}
+	}
+	s:STATE_TRANSVAAL = {
+		region_state:SAF = {
+			create_pop = {
+				culture = boer
+				size = 2480000
+			}
+			create_pop = {
+				culture = sotho
+				size = 480000
+			}	
+			create_pop = {
+				culture = tswana
+				size = 48000
+			}						
+		}
+	}
+
+	s:STATE_LINDI = {
+		region_state:TAN = {
+			create_pop = {
+				culture = sukuma
+				size = 1500000
+			}				
+			create_pop = {
+				culture = lacustrine_bantu
+				religion = protestant						
+				size = 1000000	
+			}
+			create_pop = {
+				culture = lacustrine_bantu
+				size = 45350
+			}			
+			create_pop = {
+				culture = british
+				size = 45350
+			}			
+			create_pop = {
+				culture = north_german
+				size = 45350
+			}		
+			create_pop = {
+				culture = south_german
+				size = 45350
+			}		
+			create_pop = {
+				culture = sudanese
+				size = 45350
+			}					
+		}
+	}
+	s:STATE_ZANZIBAR = {
+		region_state:TAN = {
+			create_pop = {
+				culture = lacustrine_bantu
+				religion = protestant						
+				size = 1800000
+			}
+			create_pop = {
+				culture = sukuma
+				size = 700000
+			}	
+			create_pop = {
+				culture = lacustrine_bantu
+				size = 45350
+			}				
+			create_pop = {
+				culture = british
+				size = 45350
+			}			
+			create_pop = {
+				culture = north_german
+				size = 45350
+			}		
+			create_pop = {
+				culture = south_german
+				size = 45350
+			}			
+			create_pop = {
+				culture = sudanese
+				size = 45350
+			}									
+		}
+	}
+	s:STATE_TANGANYIKA = {
+		region_state:TAN = {			
+			create_pop = {
+				culture = lacustrine_bantu
+				religion = protestant						
+				size = 1400000
+			}
+			create_pop = {
+				culture = sukuma
+				size = 1100000
+			}		
+			create_pop = {
+				culture = lacustrine_bantu
+				size = 45350
+			}				
+			create_pop = {
+				culture = british
+				size = 45350
+			}			
+			create_pop = {
+				culture = north_german
+				size = 45350
+			}		
+			create_pop = {
+				culture = south_german
+				size = 45350
+			}	
+			create_pop = {
+				culture = sudanese
+				size = 45350
+			}												
+		}
+	}
+
 	s:STATE_IVORY_COAST = {
 		region_state:AOF = {
 			create_pop = {
@@ -59,7 +334,7 @@ POPS = {
 		region_state:LIB = {
 			create_pop = {
 				culture = afro_american
-				size = 745900
+				size = 1745900
 			}
 			create_pop = {
 				culture = kru
@@ -171,50 +446,7 @@ POPS = {
 			}
 		}
 	}
-	s:STATE_EASTERN_CAPE = {
-		region_state:SAF = {
-			create_pop = {
-				culture = boer
-				size = 1300000
-			}
-			create_pop = {
-				culture = british
-				size = 48000
-			}
-			create_pop = {
-				culture = nguni
-				size = 8000
-			}
-			create_pop = {
-				culture = khoisan
-				size = 27996
-			}
-		}
-	}
-	s:STATE_CAPE_COLONY = {
-		region_state:SAF = {
-			create_pop = {
-				culture = sotho
-				size = 40004
-			}
-			create_pop = {
-				culture = boer
-				size = 1030000
-			}
-		}
-	}
-	s:STATE_NORTHERN_CAPE = {
-		region_state:SAF = {
-			create_pop = {
-				culture = sotho
-				size = 600000
-			}
-			create_pop = {
-				culture = british
-				size = 4000
-			}
-		}
-	}
+
 	s:STATE_LOURENCO_MARQUES = {
 		region_state:MOZ = {
 			create_pop = {
@@ -227,4 +459,4 @@ POPS = {
 			}
 		}
 	}
-	}
+}

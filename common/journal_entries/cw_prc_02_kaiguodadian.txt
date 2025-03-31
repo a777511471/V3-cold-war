@@ -1,6 +1,6 @@
 
 je_kaiguodadian = {
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	icon = "gfx/interface/icons/event_icons/中国政协徽.dds"
 
 	group = je_group_internal_affairs
 	
@@ -18,7 +18,8 @@ je_kaiguodadian = {
 
 	should_be_pinned_by_default = yes
 	
-	immediate = {
+	immediate = { #如果启用	
+		trigger_event = { id = chi.10 days = 0 popup = yes }			
 		every_scope_state = {
 			limit = {
 				OR = {
@@ -30,7 +31,7 @@ je_kaiguodadian = {
 			}
 			add_modifier = {
 				name = xinanfeihuan_modifier
-				months = long_modifier_time
+				years = 10
 			}
 		}
 		set_variable = {
@@ -81,8 +82,8 @@ je_kaiguodadian = {
 	scripted_button = wunianjihua_button_key
 }
 
-je_xinanjiaofei = {
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+je_xinanjiaofei = { #西南剿匪
+	icon = "gfx/interface/icons/event_icons/西南剿匪.dds"
 
 	group = je_group_internal_affairs
 	
@@ -95,12 +96,12 @@ je_xinanjiaofei = {
 	
 	on_monthly_pulse = {
 		random_events = {
-			100 = 0
+			90 = 0		
 			20 = xinanjiaofei.1 
 			20 = xinanjiaofei.2 
 			20 = xinanjiaofei.3 
 		}
-	
+		
 		effect = {
 			if = {
 				limit = {
@@ -166,16 +167,16 @@ je_xinanjiaofei = {
 		}
 	}
 
-	on_complete = {
+	on_complete = { #如果完成
+		remove_modifier = huanxiangtuan_modifier	
 		every_scope_state = {
 			if = {
 				limit = {
 					has_modifier = xinanfeihuan_modifier
 				}
-				remove_modifier = xinanfeihuan_modifier
 				add_modifier = {
 					name = feihuanqingchu_modifier
-					months = long_modifier_time
+					years = 10
 				}
 			}
 		}
@@ -193,12 +194,13 @@ je_xinanjiaofei = {
 
 je_tudigaige = {
 
-	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	icon = "gfx/interface/icons/event_icons/土改.dds"
 
 	group = je_group_internal_affairs
 
 	complete = {
 		has_law = law_type:law_collectivized_agriculture
+		NOT = { has_law = law_type:law_land_based_taxation } #没有土地税制法律	
 		any_scope_state = {
 			owner = ROOT
 			OR = {
@@ -223,7 +225,7 @@ je_tudigaige = {
 					}
 				}
 			}
-			count = all
+			count >= 30
 		}
 		any_scope_state = {
 			owner = ROOT
@@ -250,14 +252,14 @@ je_tudigaige = {
 					}
 				}
 			}
-			count = all
+			count >= 30
 		}
 	}
 
 	on_complete = {
 		add_modifier = {
 			name = tugaiwancheng_modifier
-			months = long_modifier_time
+			years = 10
 		}
 	}
 	
@@ -265,6 +267,41 @@ je_tudigaige = {
 	
 }
 
+je_tudigaige2 = { #土地改革2
+
+    icon = "gfx/interface/icons/invention_icons/粮食.dds"
+
+	group = je_group_internal_affairs
+
+	complete = {
+		OR = {
+			has_law = law_type:law_collectivized_agriculture #集体化农业
+			has_law = law_type:law_commercialized_small_farmers #商品化小农制
+		}		
+		NOT = { has_law = law_type:law_land_based_taxation } #没有土地税制法律
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_maize_farm #玉米农场	 
+				}
+				level >= 20
+			}
+		}			
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = land_reform
+			years = 15
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+	
+}
 
 je_5_year_plan = {  #五年计划
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
@@ -279,8 +316,9 @@ je_5_year_plan = {  #五年计划
 
 	complete = {
 		OR = {
-			has_law = law_type:law_command_economy
-			has_law = law_type:law_cooperative_ownership
+			has_law = law_type:law_command_economy #计划经济			
+			has_law = law_type:law_collective_economy #集体经济			
+			has_law = law_type:law_cooperative_ownership #合作社所有制
 		}
 		custom_tooltip = {
 			text = custom_loc_five_year_plan_goal
@@ -291,10 +329,10 @@ je_5_year_plan = {  #五年计划
 		in_default = no
 	}
 
-	on_complete = {
+	on_complete = { #如果完成
 		add_modifier = {
 			name = five_year_plan_welfare_mod
-			months = long_modifier_time
+			years = 10
 		}
 	}
 
@@ -312,4 +350,5 @@ je_5_year_plan = {  #五年计划
 	}
 
 	progressbar = yes
+	should_be_pinned_by_default = yes
 }

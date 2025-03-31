@@ -2,7 +2,7 @@
 	c:BHN = {
 		effect_starting_technology_tier_5_tech = yes
 
-		activate_law = law_type:law_islamic_law_system #伊斯兰法系
+		activate_law = law_type:law_islamic_law_system #宗教法系
 
 		ig:ig_devout = { 
 			set_interest_group_name = ig_sunni_madrasahs

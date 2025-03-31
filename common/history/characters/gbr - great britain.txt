@@ -10,7 +10,7 @@
 			dna = dna_king_leopold_01
 			culture = cu:british
 			interest_group = ig_intelligentsia
-		        ideology = ideology_reformer #改良主义者
+		    ideology = ideology_reformer #改良主义者
 			traits = {
 				cautious #谨慎
 				brave #勇敢
@@ -26,68 +26,142 @@
 			female = yes
 			noble = yes #贵族成员
 			birth_date = 1926.4.21
-			dna = dna_queen_maria
 			culture = cu:british
 			interest_group = ig_intelligentsia
-		        ideology = ideology_reformer #改良主义者
+		    ideology = ideology_reformer #改良主义者
 			traits = {
-					basic_diplomat #外交家
-					basic_political_operator #政治运作者
+				basic_diplomat #外交家
+				basic_political_operator #政治运作者
 			}
 		}
 
 		create_character = { #工党领袖艾德礼
+			dna = ecchi_dna_adolf_hitler		
 			historical = yes
 			first_name = Clement_Richard
 			last_name = Attlee
-			age = 53
+			birth_date = 1883.1.3
+			culture = cu:british			
 			ig_leader = yes
 			interest_group = ig_intelligentsia #知识分子
 			ideology = ideology_democratic_socialism #民主社会主义者
 			traits = {
-		        expert_political_operator
-		        inspirational_orator
-		        firebrand
-                        masterful_diplomat
+		        experienced_diplomat #有经验的外交家
+				basic_political_operator #政治运作者
+				demagogue #煽动者
+				inspirational_orator #鼓舞人心的演说家
+				hedonist #享乐主义者
 			}
 		}
 
-		create_character = { #保守党领袖丘吉尔
-		    historical = yes
-		    first_name = Winston
-		    last_name = Churchill
-		    culture = cu:british
-		    noble = yes #贵族成员
-		    female = no
-		    ig_leader = yes
-		    religion = protestant
-		    ideology = ideology_market_liberal #市场自由主义
-		    interest_group = ig_petty_bourgeoisie
-		    birth_date = 1874.11.30
-		    traits = {
-			expensive_tastes #昂贵嗜好
-			hedonist #享乐主义者
-		        inspirational_orator
-                        masterful_diplomat
-		    }
-		}
-
-		create_character = {
+		create_character = { #共产党领袖哈里·波利特
+			dna = dna_king_leopold_01		
+			historical = yes
+			first_name = Khaari
+			last_name = Poulett
+			birth_date = 1890.11.22
+			culture = cu:british			
+			ig_leader = yes #利益集团领袖		
 			interest_group = ig_trade_unions #利益集团工会
-			ideology = ideology_social_democrat #社民主义者
-			ig_leader = yes #利益集团领袖
+			ideology = ideology_stalin #意识形态斯大林主义者
+			traits = {
+		        literary #文学家
+				ambitious #雄心勃勃
+			}
 		}
 
-		create_character = {
+		create_character = { #共产党人拉贾尼·帕姆·杜特
+			dna = dna_william_shubrick		
+			historical = yes
+			first_name = Rajani·Pam
+			last_name = Dutt
+			birth_date = 1896.6.19
+			culture = cu:british		
+			religion = rel:atheist #无神论				
+    		is_agitator = yes #鼓动者					
+			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_vanguardist #马列主义者
+			traits = {
+		        literary #文学家
+				demagogue #煽动者				
+				ambitious #雄心勃勃
+				hedonist #享乐主义者				
+			}
+		}
+
+		create_character = { #托马斯·加尔布雷思
 			historical = yes
 			first_name = Thomas
 			last_name = Galbraith
+			culture = cu:british			
 			ig_leader = yes
 			interest_group = ig_devout
 			ideology = ideology_market_liberal
 			traits = {
 				pious
-                                                                    reserved
+                reserved
+			}
+		}
+
+		create_character = { #财阀领袖
+		    culture = cu:british
+		    noble = yes #贵族成员
+		    female = no
+		    ig_leader = yes
+		    religion = protestant
+			interest_group = ig_industrialists #实业家
+		    ideology = ideology_market_liberal #市场自由主义者
+		    traits = {
+		        inspirational_orator #鼓动人心的演说家				
+				literary #文学家		
+				strong #健硕
+				alcoholic #酗酒												
+				expensive_tastes #昂贵嗜好
+				hedonist #享乐主义者
+		    }
+		}		
+
+		create_character = { #小市民领袖
+			culture = cu:british	
+			ig_leader = yes							
+			interest_group = ig_petty_bourgeoisie #小市民
+		    ideology = ideology_syndicalism #工团主义者
+			traits = {
+		        inspirational_orator #鼓动人心的演说家				
+				literary #文学家		
+				strong #健硕
+				alcoholic #酗酒												
+				expensive_tastes #昂贵嗜好
+				hedonist #享乐主义者
+			}
+		}
+
+		create_character = { #军队领袖
+			is_general = yes
+			culture = cu:british	
+			ig_leader = yes							
+			interest_group = ig_armed_forces
+			ideology = ideology_liberal_leader #民主主义者
+            commander_rank = commander_rank_5
+			traits = {
+				plains_commander
+                trench_rat
+                expert_defensive_strategist
+                stalwart_defender
+			}
+		}
+
+		create_character = { #随机卫生胡陆军准将
+			dna = ecchi_dna_adolf_hitler			
+			is_general = yes
+			culture=cu:south_german #南德			
+			interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_national_socialists #民族社会主义者
+            commander_rank = commander_rank_1
+			traits = {
+				inspirational_orator #在啤酒馆鼓舞人心的演说家
+				firebrand #煽动大师
+				tactful #圆滑					
 			}
 		}
 
@@ -95,18 +169,19 @@
 			historical = yes
 			is_general = yes
 			culture = cu:irish
-			first_name =Bernard
+			first_name = Bernard
 			last_name = Montgomery
 			birth_date = 1887.11.17
+			culture = cu:british			
 			interest_group = ig_armed_forces
 			ideology = ideology_moderate
-                        hq = region_england
-                        commander_rank = commander_rank_5
+            hq = region_england
+            commander_rank = commander_rank_5
 			traits = {
 				plains_commander
-                                                                    trench_rat
-                                                                    expert_defensive_strategist
-                                                                    stalwart_defender
+                trench_rat
+                expert_defensive_strategist
+                stalwart_defender
 			}
 		}
 
@@ -115,6 +190,7 @@
 			first_name = Maxwell_Fyfe
 			last_name = David
 			birth_date = 1900.5.29
+			culture = cu:british			
 			ig_leader = yes
 			interest_group = ig_landowners
 			ideology = ideology_radical
@@ -129,6 +205,7 @@
 			first_name = Derick_Heathcoat
 			last_name = Amory
 			age = 47
+			culture = cu:british			
 			ig_leader = yes
 			interest_group = ig_rural_folk
 			ideology = ideology_radical
@@ -140,58 +217,70 @@
 			}
 		}
 
-		create_character = { # Sea
+		create_character = { #伯纳德·罗林斯
+			historical = yes
+			is_admiral = yes
+			first_name = Bernard
+			last_name = Rawlins
+			interest_group = ig_armed_forces
+			birth_date = 1889.5.21
+			culture = cu:british			
+			commander_rank = commander_rank_4
+			traits = {
+				expert_naval_commander #海军指挥专家	
+			}
+		}
+
+		create_character = { #约翰·托维，皇家海军本土舰队司令，击沉俾斯麦号
 			historical = yes
 			is_admiral = yes
 			first_name = John
 			last_name = Tovey
 			interest_group = ig_armed_forces
 			age = 61
+			culture = cu:british			
 			hq = region_england
 			commander_rank = commander_rank_5
 			traits = {
 				direct
 				expert_naval_commander
                                                                     dockyard_master	
-			}
-			#约翰·托维，皇家海军本土舰队司令，击沉俾斯麦号
+			}			
 		}
 
-		create_character = {
+		create_character = { #路易斯·蒙巴顿，亚太舰队司令，盟军联合作战司令
 			historical = yes
-			is_general = yes
-			first_name = Louis
+			is_admiral = yes
+			first_name = Luis
 			last_name = Mountbatten
 			interest_group = ig_intelligentsia
-			age = 46
-			hq = region_north_sea_coast
-			commander_rank = commander_rank_5
+			ideology = ideology_reformer #改良主义者		
+			birth_date = 1900.6.25
+			culture = cu:british			
+			commander_rank = commander_rank_2
 			traits = {
-				expert_artillery_commander
-				expert_offensive_planner
-                                                                    basic_naval_commander
-			}
-			#路易斯·蒙巴顿，亚太舰队司令，盟军联合作战司令
+				expert_naval_commander #海军指挥专家	
+			}			
 		}
 
-		create_character = { # Sea
+		create_character = { # 萨默维尔爵士，皇家海军北海舰队司令
 			historical = yes
 			is_admiral = yes
 			first_name = Sir_James
 			last_name = Somerville
 			interest_group = ig_armed_forces
 			age = 54
+			culture = cu:british			
 			hq = region_indochina
 			commander_rank = commander_rank_5
 			traits = {
 				expert_naval_commander
                                                                     dockyard_master
                                                                     direct
-			}
-			# 萨默维尔爵士，皇家海军北海舰队司令
+			}			
 		}
 
-		create_character = {
+		create_character = { #哈罗德·亚历山大，二战北非军区盟军总司令，指挥突尼斯战役有功而被封“突尼斯的亚历山大勋爵”
 			historical = yes
 			is_general = yes
 			first_name = Harold
@@ -199,14 +288,14 @@
 			interest_group = ig_industrialists
 			ideology = ideology_royalist #保皇主义者
 			age = 55
+			culture = cu:british			
 			hq = region_south_india
 			commander_rank = commander_rank_5
 			traits = {
 				brave
                         plains_commander
                         expert_offensive_planner
-			}
-			#哈罗德·亚历山大，二战北非军区盟军总司令，指挥突尼斯战役有功而被封“突尼斯的亚历山大勋爵”
+			}			
 		}
 
 		create_character = {
@@ -216,6 +305,7 @@
 			last_name = Wavell
 			interest_group = ig_industrialists
 			age = 63
+			culture = cu:british			
 			hq = region_indochina
 			commander_rank = commander_rank_5
 			traits = {
@@ -234,11 +324,12 @@
 			last_name = Platt
 			interest_group = ig_intelligentsia
 			age = 51
+			culture = cu:british			
 			hq = region_niger
 			commander_rank = commander_rank_5
 			traits = {
 				forest_commander
-				resupply_commander
+				resupply_commander #物资征集专家  
                                                                     experienced_defensive_strategist
 			}
 
@@ -251,6 +342,7 @@
 			last_name = Morton_Forbes
 			interest_group = ig_intelligentsia
 			age = 56
+			culture = cu:british			
 			hq = region_north_sea_coast
 			commander_rank = commander_rank_5
 			traits = {
@@ -269,6 +361,7 @@
 			interest_group = ig_armed_forces
 			ideology = ideology_moderate
 			birth_date = 1891.9.5
+			culture = cu:british			
 			hq = region_england
 			commander_rank = commander_rank_5
 			traits = {
@@ -276,7 +369,43 @@
 				expert_naval_commander
 				wrathful
 			}
-
 		}
+
+		create_character = { #詹姆斯·里维特-卡纳克
+    		dna = dna_franklin_buchanan				
+			historical = yes
+			is_admiral = yes
+			first_name = Sir_James
+			last_name = Rivet-Karnak
+			interest_group = ig_armed_forces #军队	
+			birth_date = 1891.2.12
+			culture = cu:british			
+			commander_rank = commander_rank_3
+			traits = {
+				expert_naval_commander #海军指挥专家	
+			}			
+		}
+
+		#create_character = { #保守党领袖丘吉尔
+		    historical = yes
+		    first_name = Winston
+		    last_name = Churchill
+		    culture = cu:british
+		    noble = yes #贵族成员
+		    female = no
+		    ig_leader = yes
+		    religion = protestant
+		    ideology = ideology_market_liberal #市场自由主义
+		    interest_group = ig_petty_bourgeoisie
+		    birth_date = 1874.11.30
+		    traits = {
+		        inspirational_orator #鼓动人心的演说家				
+				literary #文学家		
+				strong #健硕
+				alcoholic #酗酒												
+				expensive_tastes #昂贵嗜好
+				hedonist #享乐主义者
+		    }
+		}		
 	}
 }

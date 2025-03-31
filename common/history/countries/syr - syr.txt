@@ -5,7 +5,7 @@
 		set_tax_level = medium
 		
 		# Laws
-		activate_law = law_type:law_presidential_republic #总统共和制
+		activate_law = law_type:law_semi_presidential_republic #半总统共和制
 		activate_law = law_type:law_national_supremacy #民族至上
 		activate_law = law_type:law_women_in_the_workplace #女性工作
 		activate_law = law_type:law_free_trade #自由贸易

@@ -1036,22 +1036,15 @@ CAN = {
 		priority = 10
 		
 		trigger = {
-			exists = c:GBR
-			c:GBR = {
-				has_diplomatic_pact = {
-					who = c:CAN
-					type = puppet
-					is_initiator = yes
-				}
-			}
-		}  
+			coa_def_subject_trigger = yes
 	}
+}
 	dynamic_country_name = {
 		name = dyn_c_zizhiling_CAN
 
 		adjective = CAN_ADJ
 		#is_main_tag_only = yes
-		priority = 10
+		priority = 100
 		
 		trigger = {
 			exists = c:GBR
@@ -1254,98 +1247,126 @@ ICL = {
 	}
 } 
 
-USA = { # United States of America
-	dynamic_country_name = {
-		name = dyn_c_united_states
-    adjective = USA_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-			NOT = { coa_def_communist_flag_trigger = yes }
-		}
-	}
-	
-	dynamic_country_name = {
-		name = dyn_c_united_senators
-		priority = 1
-		adjective = USA_ADJ
-		trigger = {
-			exists = c:USA
-			c:USA = {			
-				any_scope_state = {
-					state_region = { has_variable = district_of_columbia }
-					count > 0
-				}
-				any_scope_state = {
-					state_region = { NOT = { has_variable = district_of_columbia } }
-					count < 1
-				}			
-			}			
-		}
-	}	
+GTM = { #危地马拉
+    dynamic_country_name = {
+        name = dyn_c_jzz_GTM
+        
+        adjective = GTM_ADJ
+        #is_main_tag_only = yes 
+        priority = 0
+        
+        trigger = {
+            coa_def_monarchy_flag_trigger = yes
+        }
+    }
+    dynamic_country_name = {
+        name = dyn_c_republic_GTM
+        
+        adjective = GTM_ADJ
+        #is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            coa_def_republic_flag_trigger = yes
+            NOT = { coa_def_communist_flag_trigger = yes }
+        }
+    }
+    dynamic_country_name = {#
+        name = dyn_c_societ_republic_GTM
+        
+        adjective = GTM_ADJ
+        #is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+        }
+    }
+    dynamic_country_name = {
+        name = dyn_shenquan_GTM
+        
+        adjective = GTM_ADJ
+        #is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            coa_def_theocracy_flag_trigger = yes
+        }
+    }
 
-	dynamic_country_name = {
-		name = dyn_c_united_state
-		priority = 1
-		adjective = USA_ADJ
-		trigger = {
-			exists = c:USA
-			c:USA = {		
-				any_scope_state = {
-					state_region = { NOT = { has_variable = district_of_columbia } }
-					count = 1
-				}
-			}
-		}
-	}
+    dynamic_country_name = { #危地马拉国
+        name = dyn_c_fa_GTM
+        adjective = GTM_ADJ
+        
+        is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            scope:actor ?= {                    
+                has_law = law_type:law_corporate_state            
+            }
+        }
+    }    
+} 
 
-	dynamic_country_name = {
-		name = dyn_c_united_sovereign_archduchy
-		adjective = dyn_c_united_sovereign_archduchy_adj
-		
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
+GUA = { #伯利兹
+    dynamic_country_name = {
+        name = dyn_c_jzz_GUA
+        
+        adjective = GUA_ADJ
+        #is_main_tag_only = yes 
+        priority = 0
+        
+        trigger = {
+            coa_def_monarchy_flag_trigger = yes
+        }
+    }
+    dynamic_country_name = {
+        name = dyn_c_republic_GUA
+        
+        adjective = GUA_ADJ
+        #is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            coa_def_republic_flag_trigger = yes
+            NOT = { coa_def_communist_flag_trigger = yes }
+        }
+    }
+    dynamic_country_name = {#
+        name = dyn_c_societ_republic_GUA
+        
+        adjective = GUA_ADJ
+        #is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            coa_def_communist_flag_trigger = yes
+        }
+    }
+    dynamic_country_name = {
+        name = dyn_shenquan_GUA
+        
+        adjective = GUA_ADJ
+        #is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            coa_def_theocracy_flag_trigger = yes
+        }
+    }
 
-	dynamic_country_name = {
-		name = dyn_c_united_syndicates_of_america
-		adjective = USA_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}	
-
-	dynamic_country_name = {
-		name = dyn_c_united_synods_of_america
-		adjective = USA_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
-	
-	dynamic_country_name = {
-		name = dyn_c_north_american_technate
-		adjective = USA_ADJ
-		#is_main_tag_only = yes
-		priority = 0
-		
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-			scope:actor = {
-				has_law = law_type:law_technocracy
-			}
-		}
-	}
+    dynamic_country_name = { #伯利兹国
+        name = dyn_c_fa_GUA
+        adjective = GUA_ADJ
+        
+        is_main_tag_only = yes
+        priority = 0
+        
+        trigger = {
+            scope:actor ?= {                    
+                has_law = law_type:law_corporate_state            
+            }
+        }
+    }    
 }

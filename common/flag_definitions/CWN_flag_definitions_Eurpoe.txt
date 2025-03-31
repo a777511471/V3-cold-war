@@ -1,0 +1,955 @@
+PRU = { # Prussia
+	flag_definition = {
+		coa = PRU	
+		subject_canton = PRU
+		allow_overlord_canton = yes
+		priority = 1
+	}
+	flag_definition = {
+		coa = PRU_teutonic_order
+		subject_canton = PRU_teutonic_order
+		allow_overlord_canton = yes
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		priority = 5		
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = PRU_republic
+		subject_canton = PRU_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = PRU_absolute_monarchy
+		subject_canton = PRU_absolute_monarchy
+		allow_overlord_canton = yes	
+		coa_with_overlord_canton = PRU_subject	
+		overlord_canton_scale = { 0.337 0.337 }				
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = PRU_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = PRU_fascist
+		subject_canton = PRU_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}	
+    flag_definition = {
+		coa = GERO
+		subject_canton = GERO
+        	allow_overlord_canton = yes #加上宗主国旗帜
+		priority = 10000
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+BAV = { # Bavaria
+	flag_definition = {
+		coa = BAV
+		subject_canton = BAV
+		allow_overlord_canton = yes
+		priority = 1
+	}
+	flag_definition = {
+		coa = BAV_republic
+		subject_canton = BAV_republic
+        allow_overlord_canton = yes
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BAV_absolute_monarchy
+		subject_canton = BAV_absolute_monarchy
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BAV_theocracy
+		subject_canton = BAV_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = BAV_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = BAV_subject_PRU
+		priority = 50
+		trigger = { 
+			coa_def_prussian_ensign_trigger = yes
+		}
+	}	
+    flag_definition = {
+		coa = GERO
+		subject_canton = GERO
+        allow_overlord_canton = yes
+		priority = 10000
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}	
+}
+
+YSD = { # Hannover
+	flag_definition = {
+		coa = YSD
+		allow_overlord_canton = yes		
+		subject_canton = YSD
+		priority = 1
+	}
+    flag_definition = {
+		coa = GERO
+		subject_canton = GERO
+        allow_overlord_canton = yes
+		priority = 10000
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = YSD_absolute_monarchy
+		subject_canton = YSD_absolute_monarchy
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = YSD_republic
+		subject_canton = YSD_republic
+		allow_overlord_canton = yes		
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = YSD_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = YSD_subject_PRU
+		priority = 50
+		trigger = { 
+			coa_def_prussian_ensign_trigger = yes
+		}
+	}
+}
+
+RHN = {
+	flag_definition = {
+		coa = RHN	
+		subject_canton = RHN
+		priority = 1
+	}
+	flag_definition = {
+		coa = RHN_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+    flag_definition = {
+		coa = RHN_republic
+		subject_canton = RHN_republic
+		allow_overlord_canton = yes			
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+    flag_definition = {
+		coa = GERO
+		subject_canton = GERO
+        allow_overlord_canton = yes
+		priority = 10000
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+BAF = { #  巴尔干联邦
+	flag_definition = {
+		coa = BAF
+		subject_canton = BAF
+		# allow_overlord_canton = yes		
+		# coa_with_overlord_canton = BAF_subject		
+		priority = 1
+	}
+        flag_definition = {
+		coa = BAF_monarchy
+		priority = 1500
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = { #柬埔寨人民共和国
+		coa = BAF_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+BUL = { # 保加利亚
+	flag_definition = {
+		coa = BUL_subject
+		subject_canton = BUL_subject
+		allow_overlord_canton = no #加上宗主国旗帜	
+		priority = 20
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+NTL = { # 北蒂罗尔（法属奥地利）
+	flag_definition = {
+		coa = NTL
+		overlord_canton_scale = { 0.337 0.5 }		
+		subject_canton = NTL
+		priority = 1
+	}
+	flag_definition = {
+		coa = NTL_subject
+		subject_canton = NTL_subject
+		allow_overlord_canton = yes #加上宗主国旗帜	
+		priority = 20
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+ETL = { # 东蒂罗尔（美属奥地利）
+	flag_definition = {
+		coa = ETL
+		overlord_canton_scale = { 0.337 0.5 }		
+		subject_canton = ETL
+		priority = 1
+	}
+	flag_definition = {
+		coa = ETL_subject
+		subject_canton = ETL_subject
+		allow_overlord_canton = yes #加上宗主国旗帜	
+		priority = 20
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+STY = { # 施蒂里亚（英属奥地利）
+	flag_definition = {
+		coa = STY
+		overlord_canton_scale = { 0.337 0.5 }		
+		subject_canton = STY
+		priority = 1
+	}
+	flag_definition = {
+		coa = STY_subject
+		subject_canton = STY_subject
+		allow_overlord_canton = yes #加上宗主国旗帜	
+		priority = 20
+		trigger = {
+			coa_def_subject_trigger = yes
+		}
+	}
+}
+
+BYZ = { # Byzantium
+	flag_definition = {
+		coa = BYZ #大希腊
+		allow_overlord_canton = yes
+		subject_canton = BYZ
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+	}
+
+	flag_definition = {
+		coa = BYZ_theocracy
+		subject_canton = BYZ_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}	
+
+	flag_definition = {
+		coa = BYZ_empire
+		subject_canton = BYZ_empire
+		priority = 20
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			NOT = { 
+				has_law = law_type:law_command_economy 
+			}
+		}
+	}	
+
+	flag_definition = {
+		coa = BYZ_communist
+		priority = 1500 # need to override the DEFAULT
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+GRE = { # Greece
+	flag_definition = {
+		coa = GRE
+		allow_overlord_canton = yes
+		subject_canton = GRE
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+	}
+	flag_definition = {
+		coa = GRE_theocracy
+		subject_canton = GRE_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = GRE_monarchy
+		subject_canton = GRE_monarchy
+		priority = 20
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				NOT = { has_law = law_type:law_autocracy }
+			}
+		}
+	}	
+	flag_definition = {
+		coa = GRE_absolute_monarchy
+		priority = 10
+		allow_overlord_canton = yes
+		subject_canton = GRE_absolute_monarchy
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				has_law = law_type:law_autocracy
+			}	
+		}
+	}
+	flag_definition = {
+		coa = GRE_republic
+		subject_canton = GRE
+		priority = 10
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.5 @[1/9*5] }
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			scope:actor ?= {
+				NOT = { has_law = law_type:law_autocracy }
+			}
+		}
+	}
+	flag_definition = {
+		coa = GRE_autocracy
+		subject_canton = GRE_autocracy
+		priority = 50
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			scope:actor ?= {
+				has_law = law_type:law_autocracy
+			}	
+		}
+	}
+	flag_definition = {
+		coa = GRE_fascist
+		subject_canton = GRE_fascist
+		priority = 50
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GRE_communist
+		priority = 1500 # need to override the DEFAULT
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+}
+
+RUS = { # Russia
+	flag_definition = {
+		coa = RUS_theocracy
+		subject_canton = RUS_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = RUS_imperial
+		allow_overlord_canton = yes		
+		subject_canton = RUS_imperial
+		priority = 1
+	}
+	flag_definition = {
+		coa = RUS_absolute_monarchy
+		subject_canton = RUS 
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = RUS_republic
+		subject_canton = RUS_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}		
+	flag_definition = {
+		coa = RUS_dictatorship
+		subject_canton = RUS_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = RUS_oligarchy
+		subject_canton = RUS_oligarchy
+		priority = 25
+		trigger = {
+			coa_def_oligarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = RUS_soviet_union
+		subject_canton = RUS_soviet_union_subject
+		priority = 1500 # need to override the DEFAULT
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = RUS_soviet_technocracy
+		subject_canton = RUS_soviet_union_subject
+		priority = 1750 # need to override the DEFAULT
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+			scope:actor ?= {
+				has_law = law_type:law_technocracy
+			}
+		}
+	}
+	flag_definition = {
+		coa = RUS_fascist
+		subject_canton = RUS_fascist
+		priority = 1500
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = RUS_theocracy
+		subject_canton = RUS_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = RUS_nihilist
+		priority = 1500 # need to override the DEFAULT
+		trigger = { 
+			coa_def_nihilist_flag_trigger = yes
+		}
+	}
+}	
+
+GER = { # Germany
+	flag_definition = {
+		coa = GER_modern
+		subject_canton = GER_modern
+	}
+	flag_definition = {
+		coa = GER_modern
+		subject_canton = GER_modern
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_dictatorship
+		subject_canton = GER_dictatorship
+		priority = 15
+		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_spartakist
+		subject_canton = GER_spartakist
+		priority = 2000
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_ddr
+		subject_canton = GER_ddr
+		priority = 1500
+		trigger = { 
+			scope:actor ?= {
+				OR = {
+					AND = {
+						has_law = law_type:law_single_party_state
+						py:communist_party ?= {
+							any_member = {
+								is_in_government = yes
+							}
+						}
+					}
+					AND = {
+						OR = {
+							has_law = law_type:law_autocracy
+							has_law = law_type:law_technocracy
+							has_law = law_type:law_oligarchy
+						}
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+								has_ideology = ideology:ideology_anarchist
+							}
+						}
+					}
+					AND = {
+						is_subject = yes
+						overlord = {
+							has_law = law_type:law_council_republic
+						}
+					}
+				}
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = GER_nazi
+		subject_canton = GER_nazi
+		priority = 1250
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+}
+
+DDR = { # Germany
+	flag_definition = {
+		coa = GER_ddr
+		subject_canton = GER_ddr
+	}
+	flag_definition = {
+		coa = GER_brd
+		subject_canton = GER_brd
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_dictatorship
+		subject_canton = GER_dictatorship
+		priority = 15
+		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_ddr
+		subject_canton = GER_spartakist
+		priority = 2000
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_ddr
+		subject_canton = GER_ddr
+		priority = 1500
+		trigger = { 
+			scope:actor ?= {
+				OR = {
+					AND = {
+						has_law = law_type:law_single_party_state
+						py:communist_party ?= {
+							any_member = {
+								is_in_government = yes
+							}
+						}
+					}
+					AND = {
+						OR = {
+							has_law = law_type:law_autocracy
+							has_law = law_type:law_technocracy
+							has_law = law_type:law_oligarchy
+						}
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+								has_ideology = ideology:ideology_anarchist
+							}
+						}
+					}
+					AND = {
+						is_subject = yes
+						overlord = {
+							has_law = law_type:law_council_republic
+						}
+					}
+				}
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = GER_fascist
+		subject_canton = GER_fascist
+		priority = 1250
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+	    }
+    }
+}
+
+BRD = { # Germany
+	flag_definition = {
+		coa = GER_ddr
+		subject_canton = GER_ddr
+	}
+	flag_definition = {
+		coa = GER_brd
+		subject_canton = GER_brd
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_dictatorship
+		subject_canton = GER_dictatorship
+		priority = 15
+		trigger = { 
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_ddr
+		subject_canton = GER_spartakist
+		priority = 2000
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GER_ddr
+		subject_canton = GER_ddr
+		priority = 1500
+		trigger = { 
+			scope:actor ?= {
+				OR = {
+					AND = {
+						has_law = law_type:law_single_party_state
+						py:communist_party ?= {
+							any_member = {
+								is_in_government = yes
+							}
+						}
+					}
+					AND = {
+						OR = {
+							has_law = law_type:law_autocracy
+							has_law = law_type:law_technocracy
+							has_law = law_type:law_oligarchy
+						}
+						ruler ?= {
+							OR = {
+								has_ideology = ideology:ideology_communist
+								has_ideology = ideology:ideology_vanguardist
+								has_ideology = ideology:ideology_anarchist
+							}
+						}
+					}
+					AND = {
+						is_subject = yes
+						overlord = {
+							has_law = law_type:law_council_republic
+						}
+					}
+				}
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = GER_fascist
+		subject_canton = GER_fascist
+		priority = 1250
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+	    }
+    }
+}
+
+ION = { # 民主希腊
+	flag_definition = {
+		coa = GRE
+		allow_overlord_canton = yes
+		subject_canton = GRE
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+	}
+	flag_definition = {
+		coa = GRE_theocracy
+		subject_canton = GRE_theocracy
+		priority = 20
+		trigger = { 
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = GRE_monarchy
+		subject_canton = GRE_monarchy
+		priority = 20
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				NOT = { has_law = law_type:law_autocracy }
+			}
+		}
+	}	
+	flag_definition = {
+		coa = GRE_absolute_monarchy
+		priority = 10
+		allow_overlord_canton = yes
+		subject_canton = GRE_absolute_monarchy
+		overlord_canton_scale = { @canton_scale_cross_x @canton_scale_cross_y }
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				has_law = law_type:law_autocracy
+			}	
+		}
+	}
+	flag_definition = {
+		coa = GRE_republic
+		subject_canton = GRE
+		priority = 10
+		allow_overlord_canton = yes
+		overlord_canton_scale = { 0.5 @[1/9*5] }
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			scope:actor ?= {
+				NOT = { has_law = law_type:law_autocracy }
+			}
+		}
+	}
+	flag_definition = {
+		coa = GRE_autocracy
+		subject_canton = GRE_autocracy
+		priority = 50
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+			scope:actor ?= {
+				has_law = law_type:law_autocracy
+			}	
+		}
+	}
+	flag_definition = {
+		coa = GRE_fascist
+		subject_canton = GRE_fascist
+		priority = 50
+		trigger = { 
+			coa_def_fascist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = GRE_communist
+		priority = 1500 # need to override the DEFAULT
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}	
+}
+
+POR = { # Portugal
+	flag_definition = {
+		coa = POR
+		subject_canton = POR
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = POR_subject
+		priority = 1
+	}
+	flag_definition = {
+		coa = POR_absolute_monarchy
+		subject_canton = POR_absolute_monarchy
+		priority = 20
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = POR_republic
+		subject_canton = POR_republic
+		priority = 50
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = POR_dictatorship
+		subject_canton = POR_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = POR_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+SPA = { # Spain
+	flag_definition = {
+		coa = SPA
+		subject_canton = SPA
+		coa_with_overlord_canton = SPA_subject
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = SPA_republic
+		subject_canton = SPA_republic
+		priority = 50
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SPA_absolute_monarchy
+		subject_canton = SPA_absolute_monarchy
+		priority = 10
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SPA_dictatorship
+		subject_canton = SPA_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SPA_communist
+		subject_canton = SPA_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SPA_theocracy
+		subject_canton = SPA_theocracy
+		priority = 20
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = SPA_subject_GBR
+		allow_overlord_canton = yes
+		priority = 100
+		trigger = {
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+}
+
+IBE = { # Iberia
+	flag_definition = {
+		coa = IBE
+		coa_with_overlord_canton = IBE
+		allow_overlord_canton = yes
+	}
+	flag_definition = {
+		coa = IBE_republic
+		subject_canton = IBE_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = IBE_dictatorship
+		subject_canton = IBE_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = IBE_communist
+		subject_canton = IBE_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}		
+}

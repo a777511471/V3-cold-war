@@ -10,19 +10,19 @@
 	
 }
 
-law_encourage_fertility = { #鼓励抚养
+law_encourage_fertility = { #鼓励生育
 	group = lawgroup_population_policy
-	icon = "gfx/interface/icons/law_icons/鼓励抚养.dds"
+	icon = "gfx/interface/icons/law_icons/鼓励生育.dds"
 	
 	progressiveness = 25
 
 	modifier = {
-		country_institution_family_planning_max_investment_add = 5
+		country_institution_family_planning_max_investment_add = 2
 	}
 
 	institution = institution_family_planning	
 	institution_modifier = {
-		state_birth_rate_mult = 0.05
+		state_birth_rate_mult = 0.1
 	}
 
 }
@@ -34,13 +34,13 @@ law_family_planning = { #限制生育
 	progressiveness = 50
 
 	modifier = {
-		country_institution_family_planning_max_investment_add = 5
+		country_institution_family_planning_max_investment_add = 2
 	}
 
 	institution = institution_family_planning	
 	institution_modifier = {
-		state_birth_rate_mult = -0.05
-		state_education_access_add = 0.05
+		state_birth_rate_mult = -0.1
+		state_education_access_add = 0.1
 	}
 	
 }

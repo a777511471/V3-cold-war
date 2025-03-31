@@ -1,0 +1,11 @@
+first_berlin_blockade_west_progress_add = {
+			je:je_first_berlin_blockade = {
+				add_progress = { value = 1 name = first_berlin_blockade_west_progress_bar }
+			}
+		}
+
+first_berlin_blockade_west_progress_add_2 = {
+			je:je_first_berlin_blockade = {
+				add_progress = { value = 2 name = first_berlin_blockade_east_progress_bar }
+			}
+		}

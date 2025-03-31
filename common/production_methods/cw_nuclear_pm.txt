@@ -1,0 +1,130 @@
+pm_base_building_sand_mine_2 = { #砂土矿_2										
+
+	texture = gfx/interface/icons/production_method_icons/base2.dds									
+	building_modifiers = {									
+		workforce_scaled = {								
+			# input goods							
+			goods_input_tools_add = 100							
+			# output goods							
+			goods_output_sulfur_add = 400							
+		}								
+	}									
+}										
+										
+pm_base_building_sand_mine_3 = { #砂土矿_3										
+	unlocking_technologies = {tech_explosives}
+	texture = gfx/interface/icons/production_method_icons/base3.dds									
+	building_modifiers = {									
+		workforce_scaled = {								
+			# input goods							
+			goods_input_tools_add = 100							
+			goods_input_dye_add = 50							
+			# output goods							
+			goods_output_sulfur_add = 800							
+		}								
+	}									
+}										
+										
+pm_advance_building_sand_mine_4 = { #砂土矿_4										
+	unlocking_technologies = {tech_mine_construction}
+	texture = gfx/interface/icons/production_method_icons/refining1.dds									
+	building_modifiers = {									
+		workforce_scaled = {								
+			# input goods							
+			goods_input_steel_add = 50							
+			# output goods							
+			goods_output_sulfur_add = 250							
+		}								
+	}									
+}																				
+
+pm_automation_building_sand_mine_1 = { #非金属矿场_1										
+										
+	texture = gfx/interface/icons/production_method_icons/automation1.dds
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 30
+		}
+	}											
+	building_modifiers = {									
+		level_scaled = {								
+			building_employment_laborers_add = 17600							
+			building_employment_machinists_add = 2000							
+		}								
+	}									
+}										
+										
+pm_automation_building_sand_mine_2 = { #非金属矿场_2										
+	unlocking_technologies = {tech_semi_mechanized_mining}
+	texture = gfx/interface/icons/production_method_icons/automation2.dds	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}											
+	building_modifiers = {									
+		workforce_scaled = {								
+			# input goods							
+			goods_input_tools_add = 10							
+		}								
+		level_scaled = {								
+			building_employment_laborers_add = 12800							
+			building_employment_machinists_add = 2400							
+			building_employment_engineers_add = 400							
+		}								
+		unscaled = {								
+			building_economy_of_scale_level_cap_add = 5							
+		}								
+	}									
+}										
+										
+pm_automation_building_sand_mine_3 = { #非金属矿场_3										
+	unlocking_technologies = {tech_coal_planer_and_segmented_support}
+	texture = gfx/interface/icons/production_method_icons/automation3.dds
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}											
+	building_modifiers = {									
+		workforce_scaled = {								
+			# input goods							
+			goods_input_tools_add = 10							
+			goods_input_machine_add = 6							
+		}								
+		level_scaled = {								
+			building_employment_laborers_add = 8000							
+			building_employment_machinists_add = 2800							
+			building_employment_engineers_add = 800							
+		}								
+		unscaled = {								
+			building_economy_of_scale_level_cap_add = 15							
+		}								
+	}									
+}										
+										
+pm_automation_building_sand_mine_4 = { #非金属矿场_4										
+	unlocking_technologies = {tech_electrohydraulic_control_hydraulic_support}
+	texture = gfx/interface/icons/production_method_icons/automation4.dds	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 6
+		}
+	}											
+	building_modifiers = {									
+		workforce_scaled = {								
+			# input goods							
+			goods_input_tools_add = 10							
+			goods_input_machine_add = 6							
+			goods_input_equipment_add = 4							
+		}								
+		level_scaled = {								
+			building_employment_laborers_add = 3200							
+			building_employment_machinists_add = 3200							
+			building_employment_engineers_add = 1200							
+		}								
+		unscaled = {								
+			building_economy_of_scale_level_cap_add = 25							
+		}								
+	}									
+}
