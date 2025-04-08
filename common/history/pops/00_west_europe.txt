@@ -501,6 +501,22 @@ region_state:GBR = {
 				religion = catholic
 				size = 8000
 			}
+			create_pop = {
+				culture = ashkenazi
+				size = 12000
+			}		
+			create_pop = {
+				culture = irish
+				size = 12000
+			}				
+			create_pop = {
+				culture = han
+				size = 6000
+			}
+			create_pop = {
+				culture = panjabi
+				size = 4000
+			}						
 		}
 	}
 	s:STATE_WEST_COUNTRY = {

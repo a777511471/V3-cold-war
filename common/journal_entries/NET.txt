@@ -1,0 +1,101 @@
+je_expansion_of_the_artillery_plant = { #扩建火炮厂
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+	
+	group = je_group_historical_content
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+
+	}
+
+	complete = {
+		has_technology_researched = tech_informationized_long_range_strike_system #信息化远程打击系统				
+		has_technology_researched = tech_multiple_rocket_launchers #多管火箭炮	
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+					is_building_type = building_artillery_foundries #火炮厂 
+				level >= 5
+			}		
+		}				
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = development_of_artillery_technology #发展火炮技术
+			years = 20
+		}
+	}
+
+	weight = 100
+}
+
+reclamation_of_land = {  #开垦土地
+    icon = "gfx/interface/icons/invention_icons/粮食.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	complete = {
+		has_technology_researched = tech_soil_nutrition #土壤学 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_maize_farm #玉米农场	 
+					is_building_type = building_rye_farm #黑麦农场	                    
+				}
+				level >= 20
+			}
+        }			
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway #铁路
+				level >= 30
+			}
+		}			
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = reclamation_of_land #开垦土地
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = {
+	}
+
+	progressbar = yes
+}

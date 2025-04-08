@@ -32,7 +32,6 @@ CHARACTERS = {
 			ig_leader = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_radical #激进主义者
-			hq = region_new_england
 			commander_rank = commander_rank_5
 			traits = {				
 				traditionalist_commander
@@ -68,7 +67,6 @@ CHARACTERS = {
 			is_general = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_radical #激进主义者
-			hq = region_new_england
 			commander_rank = commander_rank_4
 			traits = {				
 				traditionalist_commander
@@ -196,7 +194,6 @@ CHARACTERS = {
 			is_general = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_radical #激进主义者
-			hq = region_new_england
 			commander_rank = commander_rank_3
 			traits = {				
 				expensive_tastes #昂贵嗜好
@@ -219,7 +216,6 @@ CHARACTERS = {
 			is_general = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_radical #激进主义者
-			hq = region_new_england
 			commander_rank = commander_rank_3
 			traits = {	
 				meticulous #谨小慎微	
@@ -241,7 +237,6 @@ CHARACTERS = {
 			is_general = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_radical #激进主义者
-			hq = region_new_england
 			commander_rank = commander_rank_3
 			traits = {				
 				traditionalist_commander
@@ -260,7 +255,6 @@ CHARACTERS = {
 			is_general = yes
 			interest_group = ig_armed_forces
 			ideology = ideology_radical #激进主义者
-			hq = region_new_england
 			commander_rank = commander_rank_2
 			traits = {
 				expensive_tastes #昂贵嗜好
@@ -298,7 +292,6 @@ CHARACTERS = {
 			first_name = Omar
 			last_name = Bradley
 			age = 53
-			hq = region_pacific_coast
 			commander_rank = commander_rank_4
 			traits = {
 				reserved #内敛
@@ -319,7 +312,6 @@ CHARACTERS = {
 			birth_date = 1882.10.30
 			interest_group = ig_intelligentsia
 			ideology = ideology_ethno_nationalist #族裔民族主义者
-			hq = region_dixie
 			commander_rank = commander_rank_4
 			traits = {
 				expert_naval_commander
@@ -341,7 +333,6 @@ CHARACTERS = {
 			birth_date = 1885.8.14
 			interest_group = ig_industrialists
 			ideology = ideology_moderate
-			hq = region_new_england
 			commander_rank = commander_rank_4
 			traits = {
 				expert_naval_commander
@@ -363,7 +354,6 @@ CHARACTERS = {
 			ideology = ideology_moderate
 			birth_date = 1886.7.3
 			commander_rank = commander_rank_4
-			hq = region_dixie
 			traits = {
 				expert_naval_commander
 				charismatic
@@ -384,7 +374,6 @@ CHARACTERS = {
 			birth_date = 1885.4.19
 			interest_group = ig_armed_forces
 			ideology = ideology_moderate
-			hq = region_pacific_coast
 			commander_rank = commander_rank_4
 			traits = {				
 				expert_naval_commander
@@ -404,8 +393,22 @@ CHARACTERS = {
 			culture = cu:yankee
 			birth_date = 1888.4.3
 			interest_group = ig_armed_forces
-			hq = region_pacific_coast
 			commander_rank = commander_rank_4
+			traits = {				
+			}
+		}		
+
+		create_character = { # Sea
+            #威廉·亨利·珀内尔·布兰迪中将
+			dna = ecchi_dna_franklin_pierce	
+			historical = yes
+			is_admiral = yes
+			first_name = William·Henry·Purnell
+			last_name = Blondie
+			culture = cu:yankee
+			birth_date = 1890.1.1
+			interest_group = ig_armed_forces
+			commander_rank = commander_rank_3
 			traits = {				
 			}
 		}		

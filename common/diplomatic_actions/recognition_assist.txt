@@ -1,0 +1,57 @@
+﻿recognition_assist = {
+	texture = "gfx/interface/icons/diplomatic_action_icons/recognition_assist.dds"
+	groups= {
+		general
+	}
+	requires_approval = no
+
+	selectable = {
+		has_journal_entry = je_help_recognition
+	}
+
+	possible = {
+		scope:target_country = {
+			is_country_type = unrecognized
+			OR = {
+				country_is_in_africa = yes
+				country_is_in_east_asia = yes
+				country_is_in_west_south_asia = yes
+			}
+		}
+		scope:target_country.relations:root > 30
+	}
+
+	accept_effect = {
+		change_relations = { country = scope:target_country value = 30 }
+		
+		scope:target_country = { 
+			if = {
+				limit = {
+					has_journal_entry = je_earn_recognition
+				}
+				je:je_earn_recognition ?= {
+					add_progress = { value = 500 name = earn_recognition_progress_bar }
+				}
+			}
+			else = {
+				set_country_type = recognized
+			}
+		}
+		change_infamy = -5
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 0.25
+		}	
+	
+		propose_score = {
+			value = 10
+		}	
+	
+		will_propose = { 
+			always = no
+		}
+	}
+}
+

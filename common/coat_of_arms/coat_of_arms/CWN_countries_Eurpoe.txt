@@ -600,6 +600,7 @@ GER_iron_cross = {
 		texture = "ce_tricolor_horizontal.dds"
 		color1 = color2
 		color2 = color3
+		instance = { scale = { 0.7 0.7 } }
 	}
 
 	colored_emblem = {
@@ -622,26 +623,27 @@ GER_modern = {
 }
 GER_dictatorship = {
 	pattern = "pattern_solid.tga"
-	color1 = "red"
-	color2 = "white"
-	color3 = "black"
+	color1 = "black"
+	color2 = "red"
+	color3 = "yellow"
 
 	colored_emblem = {
-		texture = "ce_frame_circle.dds"
+		texture = "ce_tricolor_horizontal.dds"
 		color1 = color2
 		color2 = color3
-		instance = { scale = { 0.66 0.66 } }
-	}
-	colored_emblem = {
-		texture = "ce_iron_cross.dds"
-		color1 = color2
-		color2 = color3
-		instance = { scale = { 0.7 0.7 } }
 	}
 }
 GER_spartakist = {
 	pattern = "pattern_solid.tga"
-	color1 = "red"
+	color1 = "black"
+	color2 = "red"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_tricolor_horizontal.dds"
+		color1 = color2
+		color2 = color3
+	}
 		
 	colored_emblem = {
 		texture = "ce_spartakist_star.dds"
@@ -706,7 +708,7 @@ GER_nazi = {
 	color1 = "red"
 
 	textured_emblem = {
-		texture = "te_nazi_modern_flag.dds"		
+		texture = "Nazi/te_nazi_flag.dds"		
 	}
 }
 GER_nihilist = {	
@@ -1394,8 +1396,7 @@ POR_subject = {
 	}	
 }
 
-ADR = 
-{
+ADR = {
 	pattern = "pattern_solid.tga"
 	color1 = rgb{13 53 111}
 	
@@ -1562,7 +1563,7 @@ FRA_communist = {
 	}	
 	textured_emblem = {
 		texture = "te_France_communist.dds"
-		instance = { scale = { 0.9 0.9 } }
+		instance = { scale = { 1.1 1.1 } }
 	}	
 }
 FRA_communist_canton = {
@@ -1576,7 +1577,7 @@ FRA_communist_canton = {
 	}
 	textured_emblem = {
 		texture = "te_France_communist.dds"
-		instance = { scale = { 0.9 0.9 } }
+		instance = { scale = { 1.1 1.1 } }
 	}
 }
 
@@ -1642,7 +1643,7 @@ IBE_communist = {
 		instance = { scale = { 1 1 } position = { 0.9 0.5 } }
 	}
 	textured_emblem = {
-		texture = "coa_ibe_com.dds"
+		texture = "te_Iberia_communist.dds"
 		instance = { scale = { 1 1 } position = { @third 0.5 }}
 	}
 	

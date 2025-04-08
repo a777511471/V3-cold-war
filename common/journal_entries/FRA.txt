@@ -1,4 +1,4 @@
-je_freedom_equality_and_universal_love = { #自由平等博爱
+je_freedom_equality_and_fraternity = { #自由、平等、博爱
 	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
 
 	group = je_group_historical_content
@@ -8,12 +8,12 @@ je_freedom_equality_and_universal_love = { #自由平等博爱
 		has_law = law_type:law_protected_speech #言论保护 		
 		has_law = law_type:law_multicultural #文化多元
 		NOT = {
-        		has_law = law_type:law_state_religion #国教
-        		has_law = law_type:law_colonial_exploitation #民族剥削
+        	has_law = law_type:law_state_religion #国教
+        	has_law = law_type:law_colonial_exploitation #民族剥削
 		}	
-			radical_fraction = {
-				value < 0.1
-			}		
+		radical_fraction = {
+			value < 0.1
+		}		
 	}
 
 	on_complete = { #如果完成
@@ -23,6 +23,4 @@ je_freedom_equality_and_universal_love = { #自由平等博爱
 	}
 
 	weight = 10000
-	
-	should_be_pinned_by_default = yes 
 }

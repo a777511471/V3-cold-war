@@ -2,7 +2,8 @@
 	c:CHI = { #中华民国
 		effect_starting_technology_tier_4_tech = yes
 		add_technology_researched = sericulture #古代技艺
-
+		add_technology_researched = tech_rail_transport #铁路运输	
+		add_technology_researched = tech_helicopter_transport #航空运输	
 		set_tax_level = very_high 
 
 		activate_law = law_type:law_presidential_republic #总统共和制

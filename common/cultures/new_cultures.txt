@@ -1985,12 +1985,13 @@ south_italian= {
 	}
 }
 
-british= { # "English" in localization
+british= { # 英格兰
 	color= rgb{ 210 156 140 }
 	religion = protestant
 	traits = { anglophone european_heritage }
 	
 	obsessions = {
+		groceries #加工食品
 		liquor #饮品
 	}
 	

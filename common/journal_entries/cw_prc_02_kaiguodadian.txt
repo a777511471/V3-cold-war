@@ -286,6 +286,7 @@ je_tudigaige2 = { #土地改革2
 					is_building_type = building_rice_farm #水稻农场
 					is_building_type = building_wheat_farm #小麦农场	 
 					is_building_type = building_maize_farm #玉米农场	 
+					is_building_type = building_rye_farm #黑麦农场	   					
 				}
 				level >= 20
 			}
@@ -298,9 +299,6 @@ je_tudigaige2 = { #土地改革2
 			years = 15
 		}
 	}
-	
-	should_be_pinned_by_default = yes
-	
 }
 
 je_5_year_plan = {  #五年计划

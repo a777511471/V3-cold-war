@@ -1,49 +1,93 @@
 ﻿CHARACTERS = {
 	c:PAL = {
 		create_character = {
-			ruler = yes
-			ig_leader = yes
-			culture = cu:british
-			interest_group = ig_landowners #地主
-			historical = yes
-		}	
+			dna = dna_franklin_buchanan    		
+			ruler = yes	
+			culture = cu:british					
+			interest_group = ig_rural_folk #利益集团农民			
+			ideology = ideology_authoritarian #威权主义者			
+			traits = {				
+			}
+		}
+
 		create_character = {
+			#教会领袖阿明·侯赛尼		
+			dna = dna_kropotkin			
+			historical = yes
+			first_name = al-Amin
+			last_name = Hosseini
+			birth_date = 1895.7.1									
 			ig_leader = yes #利益集团领袖
-			culture = cu:british
+			interest_group = ig_devout #教会
+			ideology = ideology_fascist #法西斯主义者			
+			traits = {				
+				cruel #残暴			
+				pious #虔诚								
+			}
+		}		
+
+		create_character = {
+			#小市民领袖
+			dna = dna_pershing		
+			interest_group = ig_petty_bourgeoisie #利益集团小市民
+			ideology = ideology_authoritarian #威权主义者
+			ig_leader = yes #利益集团领袖
+			culture = cu:british			
+		}	
+
+		create_character = {
+			culture = cu:british			
+			dna = dna_william_shubrick	
+			ig_leader = yes #利益集团领袖
 			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_social_democrat #社会民主主义者
 			traits = {
 			}
 		}
 
 		create_character = {
-			ig_leader = yes
-			culture = cu:british
-			interest_group = ig_armed_forces #军队
-		}
+			dna = dna_william_shubrick	   				
+			ig_leader = yes		
+			culture = cu:british			
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian #威权主义者			
+			traits = {				
+
+			}
+		}		
 
 		create_character = {
-			ig_leader = yes
-			culture = cu:british
-			interest_group = ig_petty_bourgeoisie #小市民
-		}
-
-		create_character = {
-			ig_leader = yes
-			culture = cu:british
-			interest_group = ig_rural_folk #乡村民众
-		}
-
-		create_character = {
-			ig_leader = yes
-			culture = cu:british
-			interest_group = ig_industrialists #实业家
-		}
-
-		create_character = {
-			culture = cu:british
+			culture = cu:british			
+			dna = dna_william_shubrick	
 			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_social_democrat #社会民主主义者
 			ig_leader = yes #利益集团领袖
-		}
+		}											
 
+		create_character = {
+			culture = cu:british			
+			interest_group = ig_rural_folk #利益集团农民
+		    ideology = ideology_market_liberal #市场自由主义者
+			ig_leader = yes #利益集团领袖
+		}		
+
+		create_character = {
+			interest_group = ig_industrialists #利益集团实业家
+		    ideology = ideology_market_liberal #市场自由主义者
+			ig_leader = yes #利益集团领袖
+			culture = cu:british			
+		}		
+
+		create_character = {
+			culture = cu:british			
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_landowners #地主
+		    ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+			}
+		}				
 	}
 }
+
+
+

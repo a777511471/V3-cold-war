@@ -1,0 +1,198 @@
+namespace = kmt
+kmt.1 = { *白色恐怖，初期政治剧情
+    type = country_event
+    placement = root
+    
+    title = kmt.1.t
+    desc = kmt.1.d
+    flavor = kmt.1.f
+    event_image = {
+        texture = "gfx/event_pictures/百废待兴.dds"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    duration = 3
+
+    option = {
+        name = kmt.3.a
+        add_modifier = {
+			name = kmt_white_terror #kmt_white_terror
+			years = 5
+		}
+    }
+}
+
+
+kmt.2 = { #首届政党轮替，中期政治剧情开始
+    type = country_event
+    placement = root
+    
+    title = kmt.2.t
+    desc = kmt.2.d
+    flavor = kmt.2.f
+    event_image = {
+        texture = "gfx/event_pictures/就职典礼.dds"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    duration = 3    
+
+    trigger = { 
+	}
+    option = {
+         name = kmt.2.a
+
+         create_character = {
+			#架空人物
+
+			dna = ecchi_dna_zhaohe		
+			historical = yes
+			first_name = "Jimi"
+			last_name = "Ha" 
+			religion = rel:atheist #无神论
+			ruler = yes		
+			ig_leader = yes #利益集团领袖
+			birth_date = 1906.1.1			
+			interest_group = ig_industrialists #实业家
+			ideology = ideology_market_liberal #市场自由主义者		
+			traits = {
+				basic_political_operator #政治运作者
+				economic_expert #经济学专家								
+				literary #文学家
+				honorable #体面
+			}
+		}
+    }
+}
+
+
+kmt.3 = { #小蒋打虎，初期经济线开始
+    type = country_event
+    placement = root
+    
+    title = kmt.3.t
+    desc = kmt.3.d
+    flavor = kmt.3.f
+    event_image = {
+        texture = "gfx/event_pictures/小蒋打虎.dds"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    duration = 3    
+
+    trigger = { 
+	}
+
+    option = {
+        name = kmt.3.a
+        add_modifier = {
+			name = kmt_beating_tiger #小蒋打虎
+			years = 5
+		}
+    }
+}
+
+kmt.4 = { ##民选总统遇刺，后期剧情开始
+    type = country_event
+    placement = root
+    
+    title = kmt.4.t
+    desc = kmt.4.d
+    flavor = kmt.4.f
+    event_image = {
+        texture = "gfx/event_pictures/降半旗.dds"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    duration = 3    
+
+    trigger = { 
+	}
+    option = {
+        name = kmt.4.a
+    }
+}
+
+kmt.5 ={ #根深蒂固的腐败
+    type = country_event
+    placement = root
+    
+    title = kmt.5.t
+    desc = kmt.5.d
+    flavor = kmt.5.f
+    event_image = {
+        texture = "gfx/event_pictures/腐败.dds"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    duration = 1    
+
+    trigger = { 
+	}
+    option = {
+        name = kmt.5.a
+    add_modifier = {
+    name = kmt_beating_tiger_failed #rooted corruption
+    years = 5
+    }
+
+    }
+}
+
+kmt.6 ={ #黄金十年
+    type = country_event
+    placement = root
+    
+    title = kmt.6.t
+    desc = kmt.6.d
+    flavor = kmt.6.f
+    event_image = {
+        texture = "gfx/event_pictures/industry.dds"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    duration = 1    
+
+    trigger = { 
+	}
+    option = {
+        name = kmt.6.a
+    add_modifier = {
+    name = kmt_gloden_ten_years_plan
+    years = 10
+    }
+    }
+}
+
+kmt.7 ={ #重建教育
+    type = country_event
+    placement = root
+    
+    title = kmt.7.t
+    desc = kmt.7.d
+    flavor = kmt.7.f
+    event_image = {
+        texture = "gfx/event_pictures/教育.dds"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    duration = 1    
+
+    trigger = { 
+	}
+    option = {
+    name = kmt.7.a
+
+    add_modifier = {
+    name = KMTEducationPlan
+    years = 5
+    }
+    }
+}

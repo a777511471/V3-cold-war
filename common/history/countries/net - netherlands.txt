@@ -59,6 +59,10 @@
 
 		add_modifier = {
 			name = fra_military_weakness_modifier #第二次世界大战的创伤
-		}		
+		}	
+
+		add_modifier = {
+			name = navigation_obligations_act_modifier #航行义务法案
+		}				
 	}
 }

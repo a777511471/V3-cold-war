@@ -1,0 +1,19 @@
+file changed:
+
+
+F:\steam\steamapps\workshop\content\529340\2962076252\events\CHI.txt
+删除了部分民国和中共共享的事件
+
+F:\steam\steamapps\workshop\content\529340\2962076252\events\KMT.txt
+全新民国事件
+F:\steam\steamapps\workshop\content\529340\2962076252\common\journal_entries\KMT_NEW_JE.txt
+全新民国日志
+
+F:\steam\steamapps\workshop\content\529340\2962076252\common\static_modifiers\cw_modifer.txt
+新增modifier
+
+
+以下是新增翻译
+F:\steam\steamapps\workshop\content\529340\2962076252\localization\simp_chinese\names_l_simp_chinese.yml
+F:\steam\steamapps\workshop\content\529340\2962076252\localization\simp_chinese\CWN·Journal\cw_new_journal_entries_l_simp_chinese.yml
+F:\steam\steamapps\workshop\content\529340\2962076252\localization\simp_chinese\names_l_simp_chinese.yml

@@ -51,7 +51,7 @@ objective_tutorial = { #和平崛起
 	enabled_background = "gfx/interface/icons/objectives/learn.dds"
 	icon = "gfx/interface/icons/objectives/economic_dominance.dds"
 	
-	recommended_tags = { PRC BAV BRZ SEL }	
+	recommended_tags = { PRC YSD BRZ SEL }	
 	recommended_game_rules = { lenient_ai_behavior low_ai_aggression }
 
 	objective_subgoals = {

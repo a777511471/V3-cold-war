@@ -1,6 +1,6 @@
 ﻿COUNTRIES = {
 	c:EOT = {
-		effect_starting_technology_tier_5_tech = yes
+		effect_starting_technology_tier_4_tech = yes
 		add_technology_researched = electrical_generation
 		add_technology_researched = electric_railway
 		add_technology_researched = admiralty

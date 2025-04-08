@@ -132,10 +132,8 @@
  je_accept_the_japanese_people_goal: "完成接纳日裔的任务。"
  je_accept_the_japanese_people_reason: "19世纪末，日裔移民漂洋过海，投身矿场、农田，辛勤劳作，为国家经济发展作出不可磨灭的贡献。岁月流转，社会进步，他们获得了法定自由，财富日增，文化扎根。然而，他们在政治领域的影响力却始终被束缚，社会偏见与制度性障碍，使他们无法真正融入国家治理体系。今日，国家的发展已不可再忽视这一群体的诉求。不平等的现状不仅影响社会稳定，更阻碍了国家的真正统一。若要构建一个包容而强盛的国度，赋予日裔真正的公民权利，已成不可推卸之责任。"
 
- je_freedom_equality_and_universal_love: "自由、平等、博爱"
- je_freedom_equality_and_universal_love_goal: "完成接纳法国少数族裔和以图阿雷格人为主的法国黑人的任务。"
- je_freedom_equality_and_universal_love_reason: "共和的理想，不应止步于宣言。
-自法国大革命以来，“自由、平等、博爱”成为法兰西共和国的基石。然而，在这座灯塔照耀的土地上，少数族裔与法国黑人的社会地位仍未真正得到平等对待。他们曾在本土与殖民地的建设中挥洒汗水，他们在战火中与共和国并肩作战，然而法律之外，现实依旧残酷。社会歧视与制度性不公使他们难以获得与其他公民同等的机会。\n\n若法兰西要真正履行自己的承诺，维护共和体制的稳定，就必须推进这些群体在政治、经济、社会中的全面参与。我们理应积极推动社会对他们的接纳，以期真正实现“自由、平等、博爱”的伟大目标。"
+ je_freedom_equality_and_fraternity: "自由、平等、博爱"
+ je_freedom_equality_and_fraternity_reason: "共和的理想，不应止步于宣言。自法国大革命以来，“自由、平等、博爱”成为法兰西共和国的基石。然而，在这座灯塔照耀的土地上，少数族裔与法国黑人的社会地位仍未真正得到平等对待。他们曾在本土与殖民地的建设中挥洒汗水，他们在战火中与共和国并肩作战，然而法律之外，现实依旧残酷。社会歧视与制度性不公使他们难以获得与其他公民同等的机会。\n\n若法兰西要真正履行自己的承诺，维护共和体制的稳定，就必须推进这些群体在政治、经济、社会中的全面参与。我们理应积极推动社会对他们的接纳，以期真正实现“自由、平等、博爱”的伟大目标。"
 
  the_fall_of_the_sun:0 "太阳的陨落"
  the_fall_of_the_sun_reason:0 "金日成主席——国家的缔造者、人民的恩人，在1994年7月8日逝世。 在他的领导下，[ROOT.GetCountry.GetName]由废墟崛起，走上了独立自主的道路。他的去世，使全国人民陷入深切的哀悼。按照党的决议，金正日同志继承最高领导人之位，成为[ROOT.GetCountry.GetName]的新掌舵人。"
@@ -266,7 +264,7 @@
  je_accept_the_bengali_people_reason: "孟加拉人自殖民时代起，便在国家的矿场、种植园和建筑工地上挥洒汗水，为经济增长贡献了不可估量的力量。然而，殖民政府给予他们的回报，是剥削、贫困和毫无希望的社会地位。\n\n即便在现代，孟加拉人仍被排除在政治权力之外，社会不公继续桎梏着他们的未来。他们被需要——但仅限于劳力，而非权利。\n\n然而，历史的教训一次次证明：被剥夺者不会永远沉默。不公平的待遇已成为社会动荡的隐患，若不加以解决，孟加拉人可能不会再等待施舍，而是自己争取权利——哪怕意味着用枪杆子来争取一片属于自己的土地。"
 
  reunification_of_west_germany:0 "建立联邦德国"
- reunification_of_west_germany_reason:0 "根据外交，政治与经济形势需要，我们准备在美、英、法占#v $GER$#!建立#v $GER$#!联邦共和国。"
+ reunification_of_west_germany_reason:0 "根据外交，政治与经济形势需要，我们准备在德意志西部建立#v $GER$#!联邦共和国。"
 
  je_environmental_protection:0 "环境保护法"
  je_environmental_protection_reason:0 "根据民生和经济形势需要，为保护和改善环境，防治污染和其他公害，保障公众健康，推进生态文明建设，促进经济社会可持续发展，我们将制定环境保护法。"
@@ -337,10 +335,132 @@
  je_expansion_of_the_german_university:0 "扩建德意志大学"
  je_expansion_of_the_german_university_reason: "大学一直是我们的主要科研人才的来源地，如果我们能扩建我国的大学，我们就能发掘出更多更好的科学家来协助研究。"
 
+ public_works:0 "公共建设"
+ public_works_reason: "我们必须建设大型公共工程。土地的开垦和铁路、道路和高速公路的建设，不仅创造了就业机会，而且还有助于改善国家民生和经济。"
 
+ reclamation_of_land:0 "开垦土地"
+ reclamation_of_land_reason: "我们现在必须完成开垦土地项目。这将为我们提供更好的基础设施，和更多的工业与农业的扩张空间。"
 
+ je_collectivized_agriculture:0 "集体化农业"
+ je_collectivized_agriculture_reason: "在我们国家，很多土地都属于富有的权贵或大资本家，既不公平也不公正。耕者应有其田!我们要把权贵和大资本家的土地分配给勤劳的农民！"
 
+ je_establishment_of_a_labour_committee:0 "设立劳工委员会"
+ je_establishment_of_a_labour_committee_reason: "我们预想，在我们国家设立劳工委员会，没有了压榨劳工的贪婪资本家，所有收入都会被分配给劳动者，工农翻身做主人!为了避免混乱，人民政府和劳工委员会可以代为管理，但要是他们腐化了，我们随时都能进行物理意义上的批判!"
 
+ iron_and_steel_state_act:0 "钢铁国营法案"
+ iron_and_steel_state_act_reason: "二战后初期，英国钢铁业并不存在重组与效率低下问题，同时英国钢铁业劳资记录非常良好，钢铁产量逐年递增。 然而受经济制约，英国生产钢铁出来卖不出去，导致英国钢铁产量一直都很稳定，几乎没有增长。 此后，围绕钢铁部门国有化与私有化的争议在50年代蔓延。 1948年工党执政下议会通过了钢铁国营法案，工党希望通过国家对资源的调配使钢铁生产合理化。"
+ restoration_of_the_steel_industry:0 "恢复钢铁业"
+
+ je_defend_all_laborers:0 "保卫所有劳工"
+ je_defend_all_laborers_reason: "不论种族，不论国家，我们境内所有的劳工都应该过上好日子。我们会通过议会斗争分配国家的资金来确保这一点。当他们看到劳工真正实行八小时工作制甚至是六小时工作制的生活有多好后，我们的想法就会在国际上变得更受欢迎!"
+
+ je_consolidate_the_border:0 "巩固边境"
+ je_consolidate_the_border_reason: "第二次世界大战结束之后，美国和苏联在国家战略、国家利益、社会制度和意识形态上的对立和冲突，使其逐渐成为对手。1946年英国前首相丘吉尔发表“铁幕演说”，拉开了冷战的序幕。伴随着铁幕降临，敌军随时可能入侵我们的家园。如果边境遭到攻击，我们就需要防御。我们会沿着国家边境筑起高墙，让劳工和农民们免遭敌军的侵害!"
+ consolidate_the_border:0 "巩固边境"
+
+ je_crush_racism:0 "碾碎种族主义"
+ je_crush_racism_reason: "自由的理想，不应止步于宣言。我们必须要粉碎反动的种族主义观点。我们会开展大规模的媒体宣传运动，让国家的各民族人民都获得自由和平等。种族主义是个癫狂的思潮，居然将不同民族通过一条愚蠢的分界线割裂开来。"
+ crush_racism:0 "碾碎种族主义"
+
+ je_large-scale_cooperatives:0 "大规模合作社"
+ je_large-scale_cooperatives_reason: "合作社的想法类似于公司，但它比资本主义和社会主义市场经济体制下的公司更好。合作社没有所谓的老板!劳工就是自己的老板!利润和成本都会均摊。我们会把合作社做大，迫使外国在我国的企业要么也让劳工来经营，要么就给我滚蛋!"
+
+ je_people's_commune:0 "人民公社"
+ je_people's_commune_reason: "人民公社的想法类似于公司，但它比资本主义和社会主义市场经济体制下的公司更好。人民公社没有所谓的老板!劳工就是自己的老板!利润和成本都会均摊。我们会把人民公社做大，迫使外国在我国的企业要么也让劳工来经营，要么就给我滚蛋!"
+
+ je_abolish_the_caste_system:0 "废除种姓制度"
+ je_abolish_the_caste_system_reason: "放眼印度，种姓等级制度在印度法律上强制实行，剥夺了大部分社会成员的权利，阻碍了社会经济向上的流动性，这是错误的!我们会推翻这套老旧的系统，逼迫支持种姓制度的婆罗门官僚退休，让政府选举新的官僚。"
+ abolish_the_caste_system:0 "废除种姓制度"
+
+ je_secularise:0 "世俗化"
+ je_secularise_reason: "我们并不是很关心我国民众对于警察的看法，但我国的神职阶级是一群反动的团体，他们宣扬贫困，宣扬阶级和平。他们通通都会被解职，从事实诚的工作。我们不会再让他们向无知的民众兜售虚幻的童话!"
+ secularise:0 "世俗化"
+
+ je_expansion_of_the_artillery_plant:0 "扩建火炮厂"
+ je_expansion_of_the_artillery_plant_reason: "火炮厂为我们的部队制造大炮等远程武器和炮弹(经外国许可生产)。如果我们的目标是扩大我们的军队，那我们就应该扩大它。"
+
+ je_control_of_public_opinion1:0 "管制舆论" #通用
+ je_control_of_public_opinion1_reason: "谨言慎行，管好你的嘴巴，确保你的忠诚，否则我们就要派出骑兵和警察，对你一秒六棍了！"
+ je_control_of_public_opinion2:0 "管制舆论" #南朝鲜
+ je_control_of_public_opinion2_reason: "谨言慎行，管好你的嘴巴，确保你的忠诚，否则我们就要派出警察，对你一秒六棍了！"
+ je_control_of_public_opinion3:0 "管制舆论" #带英
+ je_control_of_public_opinion3_reason: "谨言慎行，管好你的嘴巴，确保你的忠诚，否则我们就要派出骑兵和警察，对你一秒六棍了！"
+
+ je_foreign_trade-oriented_research:0 "贸易导向研究" #
+ je_foreign_trade-oriented_research_reason: "开展以外贸为导向的科研工作，促进国际合作和全球市场的技术创新。"
+
+ responding_to_the_energy_crisis:0 "应对能源危机" #
+ responding_to_the_energy_crisis_reason: "日本一直是一个资源匮乏的国度，基本所有主要能源都严重依赖国外进口。近期战后经济停滞给我们的经济带来不小的困难，我们需要开采资源以应对能源危机了。"
+
+ reestablish_roc_economy_1:0 "中华民国经济重建：政治改革"
+ reestablish_roc_economy_1_reason:0 "随着蒋经国专员抵达上海，在其尊父，刚于1948年5月20日宣誓就任的，中华民国大总统蒋介石的授意下，掀起了一场名为打虎的财政经济改革，以挽救行将就木的民国财政和经济 \n\n 为了做到开源和节流，大规模裁军和国家体制改革势在必行，有了蒋公子坐镇上海，蒋总统执掌南京，凭借着内战胜利的空前权威，我们定能挽救民国经济于水火之中！"
+
+ reestablish_roc_economy_2:0 "中华民国经济重建：再现黄金十年"
+ reestablish_roc_economy_2_reason:0 "在本轮经济建设计划中，政府将扮演核心角色，年度预算的大笔的资金将用于重点建设民用轻工业，尽可能补全民用工业的产业链缺陷，实现初级工业产品的自给自足。\n全面的工业化需要大量的熟练技工，而目前我国如此低下的识字率显然无法满足如此要求，因此政府在本阶段将在全国推行义务扫盲班运动，深入城市与乡村提供免费识字教育。至于全面重整教育体制，如何培养高级人才向更高级产业结构转型，这一重任便交给下一阶段吧。"
+ 
+ reestablish_roc_economy_3:0 "中华民国经济重建：重整教育体制"
+ reestablish_roc_economy_3_reason:0 "经过抗战时期的大学内迁与合以及二次内战的空前混乱，整片中华大地几乎难以找出几所正常运转的大学，基础教育几乎完全停摆，城市地区尚且如此，农村地区则几乎是文盲遍地。如此低下的识字率显然无法满足全面工业化的需求，因此全面重整教育系统刻不容缓，我们计划在全国范围内建设并开设大学，从英美友邦邀请学者与教师弥补教师力量的不足。至于这些学者向我们的大学生宣传自由主义言论的可能，这确实是内政部和军统一直强调和担心的事情，然而蒋经国专员力排众议，作为妥协我们会尽可能加强言论审查，总之邀请他们总比邀请共产主义者好，是吗？"
+
+ industrial_development_in_saxony:0 "萨克森工业开发"
+ industrial_development_in_saxony_reason:0 "勃兰登堡工业基地的发展潜力已经几近饱和，工业区有必要进一步向南扩张，而萨克森地区因处于勃兰登堡工业区南面，成为了我国的开发首选。"
+
+ industry3.0:0 "工业3.0"
+ industry3.0_reason:0 "新一轮的产业升级已然开始，我国想要在下一轮工业大变革中独占鳌头，就必须抢占技术的先机。"
+
+ je_twin_eagles_on_the_other_side:0 "彼岸双鹰"
+ je_twin_eagles_on_the_other_side_reason:0 "美利坚作为当世第一大超级大国，拥有大量德国移民和德国海外投资。德国有必要与美国保持良好的关系，以抵挡这疯狂世间越来越多新近崛起的威胁。"
+
+ je_protecting_the_north_sea_iron_ore_arteries:0 "保护北海铁矿动脉"
+ je_protecting_the_north_sea_iron_ore_arteries_reason:0 "我国大量的金属矿，如铁矿和钨矿资源需要从斯堪的纳维亚半岛进口，我们需要进一步优化与瑞典的贸易关系，让铁矿石自由流动。"
+
+ the_dawn_of_information_technology:0 "信息技术的黎明"
+ the_dawn_of_information_technology_reason:0 "随着我国在电子工业领域进行的一系列投入，我们的信息技术都走到了世界前列，一个属于我国的信息技术和电子工业黎明正在诞生。"
+
+ national_academy_of_sciences:0 "国家科学院"
+ national_academy_of_sciences_reason:0 "国家科学院是我们民族的文化瑰宝。在变革之风袭来的今天，我们的学院将迎来新一轮的扩建。相信科学家们的智慧之火，定能将祖国的未来点亮。"
+ modifier_national_academy_of_sciences:0 "国家科学院"
+
+ resource_empowerment:0 "资源赋能"
+ resource_empowerment_reason:0 "工厂需要矿产开动，祖国需要资源赋能，在对经济较差的地区的投资建设中，资源将成为毋庸置疑的重点。"
+
+ the_wealth_of_the_persian_gulf:0 "波斯湾的财富"
+ the_wealth_of_the_persian_gulf_reason:0 "波斯湾的巴士拉和科威特地区蕴藏着丰厚的宝藏，而我们在中东的石油公司无疑将在与外国佬的竞争中胜出，将巴士拉和科威特地区的石油牢牢控制在我们手中。"
+
+ modern_commercial_fleet:0 "现代商业船队"
+ modern_commercial_fleet_reason:0 "若是要进一步发展工业，我们还需要更多资源，祖国的物产已然不能尽数满足工业部门的需求。大量的资源需要我们自贸易伙伴手中获得，因此我们必须建立现代商业船队。"
+
+ revitalization_of_the_old_ruhr_industrial_base:0 "重建鲁尔"
+ revitalization_of_the_old_ruhr_industrial_base_reason:0 "鲁尔区是祖国的明珠，但时代的变革和经济中心的转移让这一祖国瑰宝失去了本来的光泽。德意志的工业长子需要重新崛起，鲁尔老工业区将在工人们的努力下重获新生。"
+
+ revitalization_of_the_old_northeast_industrial_base:0 "振兴东北老工业基地"
+ revitalization_of_the_old_northeast_industrial_base_reason:0 "东北是祖国的明珠，但时代的变革和经济中心的转移让这一祖国瑰宝失去了本来的光泽。祖国的工业长子需要重新崛起，东北将在工人们的努力下重获新生。"
+
+ je_moderate_ethnic_policy:0 "温和的民族政策"
+ je_moderate_ethnic_policy_reason: "我们有必要温和的方式对待少数民族和占领区的百姓，他们总有一日会团结在我们民主与自由的旗帜下。"
+ moderate_ethnic_policy:0 "温和的民族政策"
+
+ soil_nutrition:0 "动力铁路"
+ soil_nutrition_reason:0 "动力铁路是现代必不可少的运输路径，我们必须确保铁路的畅通让火车再不可能严重迟到。"
+
+ je_ideological_crusades:0 "意识形态的十字军"
+ je_ideological_crusades_reason:0 "德意志的军队为传播民主而来，为播撒自由而来。我们将撕碎笼罩在欧罗巴上空的阴云，我们将成为欧洲大陆上唯一的辉光。"
+
+ je_improve_the_labor_welfare_system:0 "健全劳工福利体系"
+ je_improve_the_labor_welfare_system_reason:0 "祖国的建设离不开广大劳工的支持，我们需要健全广大工人的福利系统，让工人摆脱如吸血鬼般的资本家的控制，为他们的祖国和自己持续奋斗。"
+
+ je_improvement_of_the_trade_union_act:0 "完善工会法案"
+ je_improvement_of_the_trade_union_act_reason:0 "工会不仅是职工利益的代言人，也是社会稳定器之一，在现代社会中具有不可替代的地位和作用。我们将在接下来的改革中完善现有的工会体制，让工会成为劳工和资本家间的“缓冲带”，让诉求得到反馈，让骚乱平息于无形。在工会的润滑作用下，我们的社会将长期稳定下去。"
+
+ je_economics_and_democracy:0 "经济学与民主"
+ je_economics_and_democracy_reason:0 "未来的祖国势必将比过去的任何时刻都更加富有，更加繁荣——这一结果是先进的经济学思想和优秀的民主制度共同作用下缔造的必然。"
+
+ je_democracy_that_belongs_to_the_nation:0 "属于民族的民主主义"
+ je_democracy_that_belongs_to_the_nation_reason:0 "祖国的民主制度将会是一项真正服务人民的，象征公平，正义与博爱的制度。我国公民作为我国民主制度的核心，理应先行享受到这份民主的红利——因此，我们的民族事业将会是民族性的，而只有与民族认同联系在一起的民主主义，才能够成为真正意义上具有实际可行性的民主。"
+ democracy_that_belongs_to_the_nation:0 "属于民族的民主主义"
+
+ je_liberal_democracy_and_education:0 "自由民主与教育"
+ je_liberal_democracy_and_education_reason:0 "自由与民主不仅仅是一句口号，是时候用民主的精神打破以权贵和资本家为首的邪恶保守派对意识形态领域的垄断与腐蚀了。民主派人士将号召为人民服务的教育工作人员率先对祖国的教育制度进行革新，将民主与自由的思想传播到广大青年一代中。"
+ liberal_democracy_and_education:0 "自由民主与教育"
 
 
 

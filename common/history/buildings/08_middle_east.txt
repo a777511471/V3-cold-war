@@ -198,6 +198,26 @@
 	}
 	s:STATE_TRANSJORDAN={
 		region_state:EOT={
+            create_building={
+                building="building_livestock_ranch"
+                add_ownership={
+                    country={
+                        country="c:EOT"
+                        levels=1
+                    }
+                }
+                reserves=1
+            }			
+            create_building={
+                building="building_wheat_farm"
+                add_ownership={
+                    country={
+                        country="c:EOT"
+                        levels=1
+                    }
+                }
+                reserves=1
+            }						
 		}
 	}
 	s:STATE_PALESTINE={

@@ -374,14 +374,14 @@ VNZ_oligarchy = {
 
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
-
-	colored_emblem = {
+	
+    colored_emblem = {
 		texture = "ce_tricolor_horizontal.dds"
 		color1 = "blue"
 		color2 = "red"
 	}
 	textured_emblem = {
-		texture = "te_Venezuela.dds"	
+		texture = "te_Venezuela.dds"
 	}		
 }
 VNZ_monarchy = {
@@ -837,7 +837,7 @@ ECU_oligarchy = {
 	# 1845-60 7 stars design (w-b-w)
 	
 	pattern = "pattern_solid.tga"
-	color1 = "white"
+	color1 = "yellow"
 
 	colored_emblem = {
 		texture = "ce_stripes_02_bottom_karelia.dds"
@@ -848,7 +848,7 @@ ECU_oligarchy = {
 	textured_emblem = {
 		texture = "te_Ecuador.dds"	
 		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }
-	}	
+	}
 }
 ECU_communist = {
 	# Emblem of PCE

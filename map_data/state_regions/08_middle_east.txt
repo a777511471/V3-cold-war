@@ -164,7 +164,7 @@ STATE_TRANSJORDAN = {
     mine = "x104A1B"
     wood = "x60D0E0"
     arable_land = 5
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     
     naval_exit_id = 3047
 }
@@ -315,6 +315,7 @@ STATE_BASRA = {
     subsistence_building = "building_subsistence_orchards"
     provinces = { "x00F060" "x1CC9CC" "x1D7F5E" "x2050E0" "x41F864" "x68C89A" "x6CBE21" "x7CAD29" "x807060" "x88ADC8" "x93CB74" "x9F9CCA" "xBE6A23" "xDABB9C" "xDB6370" "xF1BF17" "xFE18C1" }
     traits = { "state_trait_mesopotamian_floodplain" "state_trait_tigris_river" "state_trait_euphrates_river" }
+    traits = { "state_trait_the_persian_gulf" }
     city = "x807060"
     port = "x00F060"
     farm = "x9F9CCA"

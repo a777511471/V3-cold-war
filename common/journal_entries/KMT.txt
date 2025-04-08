@@ -1,0 +1,145 @@
+reestablish_roc_economy_1= {  #中华民国重建经济1：政策改革
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件		
+        THIS = c:CHI				
+		game_date >= 1946.9.1  
+        NOT = { exists = c:PRC }     
+    }
+	possible = { #激活条件
+        THIS = c:CHI
+        NOT = { exists = c:PRC } 		
+		game_date >= 1946.9.7			
+	}
+
+	immediate = {
+	 trigger_event = { id = kmt.3 popup = yes }
+	}
+
+	complete = {
+		has_law = law_type:law_professional_army #职业军队，开始裁军			
+		has_law = law_type:law_laissez_faire #自由放任，哈耶克你崛起吧
+		has_law = law_type:law_free_trade #自由贸易
+		army_size < 320 
+		army_size > 299
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = kmt_reestablish_1_successed #第一阶段重建完成
+		}
+	}
+	should_be_pinned_by_default = yes
+
+	timeout = 1825
+
+	on_timeout = {
+	trigger_event = { id = kmt.5 }
+	}
+}
+
+reestablish_roc_economy_2= {  #中华民国重建经济2：全力发展
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件		
+        THIS = c:CHI				
+		game_date >= 1946.9.1  
+        NOT = { exists = c:PRC }     
+    }
+	possible = { #激活条件
+        THIS = c:CHI
+        NOT = { exists = c:PRC } 		
+		has_modifier = kmt_reestablish_1_successed
+		game_date >= 1900.2.2
+	}
+
+	immediate = {
+	 trigger_event = { id = kmt.6 popup = yes }
+	}
+
+	complete = {
+	has_technology_researched = tech_mature_food_industry #成熟食品工业
+	has_technology_researched = tech_light_industrial_machinery #轻工业机械			
+	has_technology_researched = tech_mature_civil_light_industry #成熟民用轻工业
+	has_technology_researched = tech_chemical_machinery #化工机械
+
+	custom_tooltip = {
+	text = 25_goal
+		scope:journal_entry = {
+		is_goal_complete = yes}
+	}
+	in_default = no	  
+	}
+
+	 on_complete = { #如果完成
+		add_modifier = {
+			name = kmt_reestablish_2_successed #第二阶段重建完成
+		}
+	}
+	should_be_pinned_by_default = yes
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	timeout = 3650
+}
+
+reestablish_roc_economy_3= {  #中华民国重建经济3：启迪民智
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+	
+    is_shown_when_inactive = { #显示条件		
+        THIS = c:CHI				
+		game_date >= 1946.9.1  
+        NOT = { exists = c:PRC }     
+    }
+	
+	possible = { #激活条件
+        THIS = c:CHI
+        NOT = { exists = c:PRC } 	
+		has_modifier = kmt_reestablish_1_successed	
+		has_modifier = kmt_reestablish_2_successed
+		game_date >= 1900.2.2
+	}
+
+	immediate = {
+	 trigger_event = { id = kmt.7 popup = yes }
+	}
+
+	complete = {
+	has_technology_researched = tech_mature_food_industry #成熟食品工业
+	}
+
+	on_complete = { #如果完成
+
+		remove_modifier = {
+		name = kmt_reestablish_1_successed	
+		}
+
+		remove_modifier = {
+		name = kmt_reestablish_2_successed	
+		}
+
+		add_modifier = {
+			name = kmt_reestablish_3_successed #重建完成,升级为最终版
+		}
+	}
+	should_be_pinned_by_default = yes
+
+	timeout = 1825
+}
+
+

@@ -502,6 +502,15 @@ GER = { # Germany
 	flag_definition = {
 		coa = GER_modern
 		subject_canton = GER_modern
+		priority = 1
+	}
+	flag_definition = {
+		coa = GER_iron_cross
+		subject_canton = GER_iron_cross
+		priority = 10
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
 	}
 	flag_definition = {
 		coa = GER_modern

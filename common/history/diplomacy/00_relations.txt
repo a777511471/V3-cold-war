@@ -330,6 +330,7 @@
 		set_relations = { country = c:PRU value = 30 }
 	}
 	c:TUR = {
+		set_relations = { country = c:BUL value = 30 }		
 		set_relations = { country = c:AFG value = 50 }
 		set_relations = { country = c:IRQ value = 50 }
 		set_relations = { country = c:TRI value = 30 }

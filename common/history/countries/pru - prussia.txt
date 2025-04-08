@@ -69,6 +69,9 @@
 		add_modifier = {
 			name = fra_military_weakness_modifier #第二次世界大战的创伤
 		}
+		add_modifier = {
+			name = german_academy_of_sciences_modifier #德意志科学院
+		}		
 
 	}
 }

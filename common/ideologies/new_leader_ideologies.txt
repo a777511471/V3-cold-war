@@ -2630,11 +2630,11 @@ ideology_democratic_socialism = { #民主社会主义者
 
 	lawgroup_economic_system = {	
 		law_social_capitalism = approve #社会主义市场经济
-		law_state_capitalism_ownership = strongly_approve #国家资本主义			
+		law_state_capitalism_ownership = neutral #国家资本主义			
 		law_command_economy = disapprove #计划经济
-		law_collective_economy = strongly_approve #集体经济
+		law_collective_economy = disapprove #集体经济
 		law_cooperative_ownership = approve #合作社
-		law_interventionism = disapprove
+		law_interventionism = neutral
 		law_agrarianism = disapprove
 		law_traditionalism = disapprove	
 		law_laissez_faire = strongly_disapprove

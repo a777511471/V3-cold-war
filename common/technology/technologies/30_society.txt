@@ -88,7 +88,7 @@ urbanization = { #城市化
 		state_infrastructure_from_population_add = 2
 		state_infrastructure_from_population_max_add = 40	
 		state_building_construction_sector_max_level_add = 10
-		country_max_weekly_construction_progress_add = 20
+		country_max_weekly_construction_progress_add = 5
 		market_land_trade_capacity_add = 50
 	}
 	
@@ -106,7 +106,7 @@ urban_planning = { #城市规划
 		state_infrastructure_from_population_add = 1
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 20
+		country_max_weekly_construction_progress_add = 5
 		market_land_trade_capacity_add = 10
 	}
 	
@@ -120,77 +120,7 @@ urban_planning = { #城市规划
 }
 
 
-modern_sewerage = { #现代排水系统
-	# Unlocks Maintained Sewers PM in Urban Centers
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/modern_sewerage.dds"
-	category = society
-	
-	modifier = {
-		state_infrastructure_from_population_add = 1
-		state_infrastructure_from_population_max_add = 20
-		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 50
-		market_land_trade_capacity_add = 10
-		state_pollution_reduction_health_mult = -0.1
-	}
-	
-	unlocking_technologies = {
-		urban_planning
-	}
-	
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
 
-
-steel_frame_buildings = { #现代钢结构建筑
-	# Unlocks Covered Markets PM in Urban Centers
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/steel_frame_buildings.dds"
-	category = society
-	modifier = {
-		state_infrastructure_from_population_add = 1 #每100K人口产生的基础设施
-		state_infrastructure_from_population_max_add = 20
-		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 100
-		market_land_trade_capacity_add = 10
-	}
-	
-	unlocking_technologies = {
-		modern_sewerage
-	}
-	
-	ai_weight = {
-		value = 2 # Important in general
-	}
-}
-
-
-### ERA 4
-elevator = { #现代电梯
-	# Unlocks Arcades PM in Urban Center
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/elevator.dds"
-	category = society
-	
-	modifier = {
-		state_infrastructure_from_population_add = 1
-		state_infrastructure_from_population_max_add = 20
-		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 200
-		market_land_trade_capacity_add = 10
-	}	
-	
-	unlocking_technologies = {
-		steel_frame_buildings
-	}
-	
-	ai_weight = {
-		value = 1.5 # Important in general
-	}
-}
 
 colonization = { #新殖民主义
 	# Unlocks Colonial Resettlement, Colonial Exploitation - Colonial Affairs Laws
@@ -1352,12 +1282,12 @@ tech_construction_department = {#施工部门
 	unlocking_technologies = {
 		
 	}
-modifier = {
+	modifier = {
 		state_infrastructure_from_population_add = 2
-state_infrastructure_from_population_max_add = 40 
-state_building_construction_sector_max_level_add = 10
-country_max_weekly_construction_progress_add = 20
-market_land_trade_capacity_add = 50
+		state_infrastructure_from_population_max_add = 40 
+		state_building_construction_sector_max_level_add = 10
+		country_max_weekly_construction_progress_add = 5
+		market_land_trade_capacity_add = 50
 	}
 }
 tech_cement = {#水泥
@@ -1372,25 +1302,6 @@ tech_cement = {#水泥
 		tech_construction_department
 	}
 }
-
-tech_modern_hydraulic_engineering = {#现代水利工程
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/concrete_dockyards.dds"
-	category = society
-	ai_weight = {
-		value = 3
-	}
-
-	modifier = {
-		state_harvest_condition_flood_impact_mult = -0.05 #洪水收获状况影响
-		state_harvest_condition_drought_impact_mult = -0.05 #干旱收获状况影响
-	}
-
-	unlocking_technologies = {
-		tech_cement
-	}
-}
-
 tech_reinforced_concrete = {#钢筋混凝土
 	era = era_3
 	texture = "gfx/interface/icons/invention_icons/reinforced_concrete.dds"
@@ -1460,7 +1371,7 @@ tech_complete_construction_machinery = {#完备施工机械
 		state_infrastructure_from_population_add = 1
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 5
+		country_max_weekly_construction_progress_add = 25
 		market_land_trade_capacity_add = 10
 	}
 
@@ -1505,7 +1416,7 @@ tech_giant_tower_crane = {#巨型塔吊
 		state_infrastructure_from_population_add = 1
 		state_infrastructure_from_population_max_add = 20
 		state_building_construction_sector_max_level_add = 5
-		country_max_weekly_construction_progress_add = 5
+		country_max_weekly_construction_progress_add = 25
 		market_land_trade_capacity_add = 10
 	}
 
@@ -1677,13 +1588,13 @@ tech_road_administration_department = {#路政部门
 	unlocking_technologies = {
 		tech_public_policy_and_management
 	}
-modifier = {
+	modifier = {
 		state_building_highway_max_level_add = 1
-state_infrastructure_from_population_add = 1
-state_infrastructure_from_population_max_add = 20
-state_building_construction_sector_max_level_add = 5
-country_max_weekly_construction_progress_add = 20
-market_land_trade_capacity_add = 10
+		state_infrastructure_from_population_add = 1
+		state_infrastructure_from_population_max_add = 20
+		state_building_construction_sector_max_level_add = 5
+		country_max_weekly_construction_progress_add = 15
+		market_land_trade_capacity_add = 10
 	}
 }
 tech_bureaucracy_theory = {#官僚主义理论
@@ -1718,7 +1629,6 @@ modifier = {
 	state_infrastructure_from_population_add = 1
 	state_infrastructure_from_population_max_add = 20
 	state_building_construction_sector_max_level_add = 5
-	country_max_weekly_construction_progress_add = 20
 	market_land_trade_capacity_add = 10
 	}
 }

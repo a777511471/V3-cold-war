@@ -1,0 +1,143 @@
+
+
+responding_to_the_energy_crisis = {  #应对能源危机
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		c:JAP ?= ROOT	
+    }
+	possible = { #激活条件
+		c:JAP ?= ROOT		
+	}
+
+	complete = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_coal_mine #煤矿
+				level >= 21
+			}
+        }			
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_iron_mine #金属矿
+				level >= 21
+			}
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_sulfur_mine #非金属矿
+					is_building_type = building_sand_mine #砂石土矿 
+				}
+				level >= 21
+			}
+		}	
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig #油井
+				level >= 15
+			}
+		}							
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = resource_empowerment #资源赋能
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = {
+	}
+
+	progressbar = yes
+}
+
+je_foreign_trade-oriented_research = { #外贸导向研究
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+	
+	group = je_group_foreign_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+
+	}
+
+	complete = {
+		NOT = {
+        	has_law = law_type:law_no_scientific_research_system #无科研体系      
+        	has_law = law_type:law_isolationism #孤立主义
+		}		        
+        OR = {
+            c:USA = { 
+                relations:root >= 50 
+            }	            
+            c:RUS = { 
+                relations:root >= 50 
+            }	
+            c:GBR = { 
+                relations:root >= 50 
+            }	            
+            c:FRA = { 
+                relations:root >= 50 
+            }            
+            c:PRC = { 
+                relations:root >= 50 
+            }	            
+            c:CHI = { 
+                relations:root >= 50 
+            }             
+        }				
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_university #大学	 
+				level >= 15
+			}		
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_research_institution #科研机构	 
+				level >= 5
+			}		
+		}		        	
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = modifier_friendly_cooperation #友好合作
+			years = 20
+		}
+	}
+
+    weight = 1000
+}

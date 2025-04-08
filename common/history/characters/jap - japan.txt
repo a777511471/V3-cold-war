@@ -71,14 +71,14 @@
 			}
 		}
 
-		create_character = { #
+		create_character = { #地主
 			ig_leader = yes			
 			religion = rel:protestant #新教
 			interest_group = ig_landowners 
 			ideology = ideology_authoritarian #威权主义者
 		}
 
-		create_character = { #
+		create_character = { #实业家
 			ig_leader = yes				
 			religion = rel:catholic #天主教
 			interest_group = ig_industrialists 

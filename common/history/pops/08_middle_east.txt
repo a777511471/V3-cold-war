@@ -701,6 +701,12 @@ POPS = {
 		}
 	}
 	s:STATE_KARS = {
+		region_state:RUS = {
+			create_pop = {
+				culture = turkish
+				size = 241000
+			}
+		}		
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
@@ -729,14 +735,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = north_caucasian
-				pop_type = slaves
 				size = 2300
 			}
 			create_pop = {
 				culture = georgian
-				pop_type = slaves
 				size = 1400
 			}
 		}
 	}
-	}
+}

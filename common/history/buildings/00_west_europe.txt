@@ -6224,12 +6224,12 @@
 		}
 	}
 	s:STATE_RHINELAND={
-		region_state:RHN={
+		region_state:YSD={
 			create_building={
 				building="building_university"
 				add_ownership={
 					country={
-						country="c:RHN"
+						country="c:YSD"
 						levels=10
 					}
 				}
@@ -6241,7 +6241,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:RHN"
+						country="c:YSD"
 						levels=15
 						region="STATE_RHINELAND"
 					}
@@ -6253,7 +6253,7 @@
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:RHN"
+						country="c:YSD"
 						levels=3
 					}
 				}
@@ -6265,7 +6265,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:RHN"
+						country="c:YSD"
 						levels=5
 						region="STATE_RHINELAND"
 					}
@@ -6278,7 +6278,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:RHN"
+						country="c:YSD"
 						levels=11
 						region="STATE_RHINELAND"
 					}
@@ -6291,7 +6291,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:RHN"
+						country="c:YSD"
 						levels=10
 						region="STATE_RHINELAND"
 					}
@@ -6302,7 +6302,7 @@
 		}
 	}
 	s:STATE_NORTH_RHINE={
-		region_state:RHN={
+		region_state:YSD={
 		}
 		region_state:YSD={
 			create_building={
@@ -6810,12 +6810,12 @@
 		}
 	}
 	s:STATE_WURTTEMBERG={
-		region_state:BAV={
+		region_state:YSD={
 			create_building={
 				building="building_university"
 				add_ownership={
 					country={
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 					}
 				}
@@ -6827,7 +6827,7 @@
 				add_ownership={
 					building={
                         type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
                         levels=25
                         region="STATE_WURTTEMBERG"
 					}
@@ -6839,7 +6839,7 @@
                 building="building_chemical_plants"
                 add_ownership={
                     country={
-						country="c:BAV"
+						country="c:YSD"
                         levels=1
                     }
                 }
@@ -6849,7 +6849,7 @@
                 building="building_car_factory"
                 add_ownership={
                     country={
-						country="c:BAV"
+						country="c:YSD"
                         levels=1
                     }
                 }
@@ -6860,7 +6860,7 @@
                 add_ownership={
                     building={
                         type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
                         levels=1
                         region="STATE_WURTTEMBERG"
                     }
@@ -6872,7 +6872,7 @@
                 building="building_rocket_center"
                 add_ownership={
                     country={
-						country="c:BAV"
+						country="c:YSD"
                         levels=1
                     }
                 }
@@ -6883,7 +6883,7 @@
                 add_ownership={
                     building={
                         type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
                         levels=1
                         region="STATE_RUHR"
                     }
@@ -6895,7 +6895,7 @@
                 building="building_aircraft_factory"
                 add_ownership={
                     country={
-						country="c:BAV"
+						country="c:YSD"
                         levels=1
                     }
                 }
@@ -6905,7 +6905,7 @@
 				building="building_war_machine_industry"
 				add_ownership={
 					country={
-						country="c:BAV"
+						country="c:YSD"
 						levels=1
 					}
 				}
@@ -6916,7 +6916,7 @@
 				building="building_steel_mills"
 				add_ownership={
 					country={
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 					}
 				}
@@ -6926,13 +6926,13 @@
 		}
 	}
 	s:STATE_BADEN={
-		region_state:BAV={
+		region_state:YSD={
 			create_building={
 				building="building_railway"
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=25
 						region="STATE_BADEN"
 					}
@@ -6945,7 +6945,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:BAV"
+						country="c:YSD"
 						levels=5
 						region="STATE_BADEN"
 					}
@@ -6958,7 +6958,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=2
 						region="STATE_BADEN"
 					}
@@ -6971,7 +6971,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=20
 						region="STATE_BADEN"
 					}
@@ -6980,12 +6980,12 @@
 				activate_production_methods={ "pm_transportation_2" "pm_base_building_textile_mills_2" "pm_advance_building_textile_mills_3" "pm_automation_building_textile_mills_2" }
 			}
 		}
-		region_state:RHN={
+		region_state:YSD={
 			create_building={
 				building="building_university"
 				add_ownership={
 					country={
-						country="c:RHN"
+						country="c:YSD"
 						levels=10
 					}
 				}
@@ -6996,7 +6996,7 @@
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:RHN"
+						country="c:YSD"
 						levels=2
 					}
 				}
@@ -7008,7 +7008,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:RHN"
+						country="c:YSD"
 						levels=25
 						region="STATE_BADEN"
 					}
@@ -7020,7 +7020,7 @@
                 building="building_chemical_plants"
                 add_ownership={
                     country={
-						country="c:RHN"
+						country="c:YSD"
                         levels=1
                     }
                 }
@@ -7030,7 +7030,7 @@
                 building="building_car_factory"
                 add_ownership={
                     country={
-						country="c:RHN"
+						country="c:YSD"
                         levels=1
                     }
                 }
@@ -7041,7 +7041,7 @@
                 add_ownership={
                     building={
                         type="building_financial_district"
-						country="c:RHN"
+						country="c:YSD"
                         levels=1
 						region="STATE_BADEN"
                     }
@@ -7053,7 +7053,7 @@
                 building="building_rocket_center"
                 add_ownership={
                     country={
-						country="c:RHN"
+						country="c:YSD"
                         levels=1
                     }
                 }
@@ -7064,7 +7064,7 @@
                 add_ownership={
                     building={
                         type="building_financial_district"
-						country="c:RHN"
+						country="c:YSD"
                         levels=1
 						region="STATE_BADEN"
                     }
@@ -7076,7 +7076,7 @@
                 building="building_aircraft_factory"
                 add_ownership={
                     country={
-						country="c:RHN"
+						country="c:YSD"
                         levels=1
                     }
                 }
@@ -7087,7 +7087,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:RHN"
+						country="c:YSD"
 						levels=5
 						region="STATE_BADEN"
 					}
@@ -7191,12 +7191,12 @@
 				activate_production_methods={ "pm_base_building_tooling_workshops_2" "pm_advance_building_tooling_workshops_3" "pm_transportation_2" "pm_automation_building_tooling_workshops_2" }
 			}
 		}
-		region_state:BAV={
+		region_state:YSD={
 			create_building={
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:BAV"
+						country="c:YSD"
 						levels=1
 					}
 				}
@@ -7208,7 +7208,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:BAV"
+						country="c:YSD"
 						levels=7
 						region="STATE_HANNOVER"
 					}
@@ -7301,13 +7301,13 @@
 		}
 	}
 	s:STATE_BAVARIA={
-		region_state:BAV={			
+		region_state:YSD={			
 			create_building={
 				building="building_railway"
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=25
 						region="STATE_BAVARIA"
 					}
@@ -7320,7 +7320,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=3
 						region="STATE_BAVARIA"
 					}
@@ -7333,7 +7333,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=3
 						region="STATE_BAVARIA"
 					}
@@ -7345,7 +7345,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 						region="STATE_BAVARIA"
 					}
@@ -7357,7 +7357,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=15
 						region="STATE_BAVARIA"
 					}
@@ -7369,7 +7369,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 						region="STATE_BAVARIA"
 					}
@@ -7381,7 +7381,7 @@
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:BAV"
+						country="c:YSD"
 						levels=1
 					}
 				}
@@ -7392,7 +7392,7 @@
 				building="building_university"
 				add_ownership={
 					country={
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 					}
 				}
@@ -7404,7 +7404,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=2
 						region="STATE_BAVARIA"
 					}
@@ -7417,7 +7417,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 						region="STATE_BAVARIA"
 					}
@@ -7430,7 +7430,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:BAV"
+						country="c:YSD"
 						levels=5
 						region="STATE_BAVARIA"
 					}
@@ -7441,13 +7441,13 @@
 		}
 	}
 	s:STATE_FRANCONIA={
-		region_state:BAV={
+		region_state:YSD={
 			create_building={
 				building="building_railway"
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=25
 						region="STATE_FRANCONIA"
 					}
@@ -7460,7 +7460,7 @@
 				add_ownership={
 					building={
 						type="building_manor_house"
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 						region="STATE_FRANCONIA"
 					}
@@ -7472,7 +7472,7 @@
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:BAV"
+						country="c:YSD"
 						levels=5
 					}
 				}
@@ -7525,13 +7525,13 @@
 		}
 	}
 	s:STATE_HESSE={
-		region_state:BAV={
+		region_state:YSD={
 			create_building={
 				building="building_railway"
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 						region="STATE_HESSE"
 					}
@@ -7544,7 +7544,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=10
 						region="STATE_HESSE"
 					}
@@ -7556,7 +7556,7 @@
 				building="building_government_administration"
 				add_ownership={
 					country={
-						country="c:BAV"
+						country="c:YSD"
 						levels=5
 					}
 				}
@@ -7568,7 +7568,7 @@
 				add_ownership={
 					building={
 						type="building_financial_district"
-						country="c:BAV"
+						country="c:YSD"
 						levels=50
 						region="STATE_HESSE"
 					}

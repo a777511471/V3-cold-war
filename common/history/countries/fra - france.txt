@@ -2,7 +2,8 @@
 	c:FRA = { #法国
 		set_next_election_date = 1946.7.1
 		effect_starting_technology_tier_2_tech = yes
-
+		add_technology_researched = tech_rail_transport #铁路运输	
+		add_technology_researched = tech_helicopter_transport #航空运输	
 		add_technology_researched = tech_electronic_product #电子产品	
 		add_technology_researched = tech_mechanized_infantry #机械化步兵
 		add_technology_researched = tech_self_propelled_artillery #自行火炮
@@ -126,7 +127,7 @@
 			is_decaying = yes
 		}
 
-		add_journal_entry = { type = je_freedom_equality_and_universal_love }	#自由平等博爱	
+		add_journal_entry = { type = je_freedom_equality_and_fraternity }	#自由平等博爱	
 
 	}
 }

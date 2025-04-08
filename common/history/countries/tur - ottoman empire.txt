@@ -7,7 +7,7 @@
 		set_government_wage_level = low
 
 		# Laws
-		activate_law = law_type:law_parliamentary_republic #议会共和制   
+		activate_law = law_type:law_presidential_republic #总统共和制
 		activate_law = law_type:law_colonial_exploitation #民族剥削	
 		activate_law = law_type:law_racial_segregation #种族隔离
 		activate_law = law_type:law_women_in_the_workplace #女性工作
@@ -72,6 +72,12 @@
 			years = 5
 			is_decaying = yes			
 		}
-
+		add_modifier = {
+			name = modifier_flexible_diplomacy #灵活外交
+		}		
+		add_modifier = {
+			name = military_aid_from_the_UK #来自英国的军事援助
+			years = 20		
+		}		
 	}
 }

@@ -1,54 +1,50 @@
 ﻿DIPLOMACY = { #附庸
-	c:USA = {
+	c:USA ?= {
+		create_diplomatic_pact = {
+			country = c:PNM #巴拿马
+			type = protectorate #保护国
+		}		
 		create_diplomatic_pact = {
 			country = c:LIB #利比里亚
 			type = protectorate #保护国
 		}		
 		create_diplomatic_pact = {
 			country = c:PHI #菲律宾
-			type = dominion #自治领
+			type = satellite #卫星国
 		}
 		create_diplomatic_pact = {
 			country = c:ETL #美属奥地利
-			type = puppet #傀儡国
+			type = territory #监管国
 		}		
 		create_diplomatic_pact = {
-			country = c:ETL #美属奥地利
-			type = grant_own_market #附庸有自己市场			
-		}
-		create_diplomatic_pact = {
 			country = c:KOR #南朝鲜
-			type = puppet #傀儡国
+			type = territory #监管国
 		}
 		create_diplomatic_pact = {
-			country = c:BAV #美占德国
-			type = puppet #傀儡国
+			country = c:YSD #美占德国
+			type = territory #监管国
 		}				
 		create_diplomatic_pact = {
-			country = c:BAV #美占德国
-			type = grant_own_market #附庸有自己市场			
-		}
-		create_diplomatic_pact = {
 			country = c:JAP #日本
-			type = puppet #傀儡国
+			type = territory #监管国
 		}
 		create_diplomatic_pact = {
 			country = c:CUB #古巴
 			type = protectorate #保护国
 		}
 	}
-	c:RUS = { #苏联
+	c:RUS ?= { #苏联
 		create_diplomatic_pact = {
 			country = c:AUS #苏属奥地利
-			type = puppet #傀儡国
+			type = territory #监管国
 		}
 		create_diplomatic_pact = {
 			country = c:PRK #北朝鲜
-			type = puppet #傀儡国
+			type = territory #监管国
 		}
 		create_diplomatic_pact = {
 			country = c:PRU #苏占德国
-			type = puppet #傀儡国
+			type = territory #监管国
 		}
 		create_diplomatic_pact = {
 			country = c:KUR #库尔德斯坦
@@ -60,40 +56,36 @@
 		}
 		create_diplomatic_pact = {
 			country = c:MGL
-			type = protectorate #保护国
+			type = satellite #卫星国
 		}
 		create_diplomatic_pact = {
 			country = c:POL
-			type = protectorate #保护国
+			type = satellite #卫星国
 		}	
 		create_diplomatic_pact = {
 			country = c:CZH
-			type = protectorate #保护国
+			type = satellite #卫星国
 		}
 		create_diplomatic_pact = {
 			country = c:HUN
-			type = protectorate #保护国
+			type = satellite #卫星国
 		}
 		create_diplomatic_pact = {
 			country = c:ROM
-			type = protectorate #保护国
+			type = satellite #卫星国
 		}	
 		create_diplomatic_pact = {
 			country = c:BUL
-			type = protectorate #保护国
+			type = satellite #卫星国
 		}
 	}
-	c:CHI = {
+	c:CHI ?= {
 		create_diplomatic_pact = {
 			country = c:TIB
 			type = puppet #傀儡国
 		}			
 	}
-	c:GBR = {
-		create_diplomatic_pact = {
-			country = c:BRU #文莱
-			type = protectorate #保护国
-		}		
+	c:GBR ?= {
 		create_diplomatic_pact = {
 			country = c:CEY #锡兰
 			type = colony #殖民领
@@ -112,7 +104,7 @@
 		}
 		create_diplomatic_pact = {
 			country = c:STY #英属奥地利
-			type = puppet #傀儡国
+			type = territory #监管国
 		}
 		create_diplomatic_pact = {
 			country = c:STY #英属奥地利			
@@ -121,10 +113,6 @@
 		create_diplomatic_pact = {
 			country = c:SEL #新加坡
 			type = colony
-		}
-		create_diplomatic_pact = {
-			country = c:YSD #英占德国
-			type = puppet #傀儡国
 		}
 		create_diplomatic_pact = {
 			country = c:ARB #科威特
@@ -148,7 +136,7 @@
 		}
 		create_diplomatic_pact = {
 			country = c:PAL #巴勒斯坦
-			type = protectorate #保护国
+			type = territory #保护国
 		}
 		create_diplomatic_pact = {
 			country = c:SIK #锡金
@@ -168,7 +156,7 @@
 		}
 		create_diplomatic_pact = {
 			country = c:TRI #利比亚
-			type = protectorate #保护国
+			type = territory #保护国
 		}
 		create_diplomatic_pact = {
 			country = c:AST #澳大利亚
@@ -183,12 +171,16 @@
 			type = personal_union #共主联邦
 		}
 		create_diplomatic_pact = {
-			country = c:SUD #苏丹
-			type = colony #殖民领
+			country = c:EGY #埃及
+			type = protectorate #受保护国
 		}
 		create_diplomatic_pact = {
+			country = c:SUD
+			type = colony #殖民领
+	}
+		create_diplomatic_pact = {
 			country = c:UGA #乌干达
-			type = dominion #自治领
+			type = semi_autonomous_colony #殖民领
 		}
 		create_diplomatic_pact = {
 			country = c:KNY #肯尼亚
@@ -212,7 +204,7 @@
 	}
 	    create_diplomatic_pact = {
 			country = c:NIG #尼日利亚
-			type = dominion #自治领
+			type = semi_autonomous_colony
 	}
 	create_diplomatic_pact = {
 			country = c:SRL #塞拉利昂
@@ -236,7 +228,7 @@
 	}
 }
 
-	c:FRA = {
+	c:FRA ?= {
 		create_diplomatic_pact = {
 			country = c:LAO #老挝
 			type = protectorate #保护国
@@ -247,11 +239,11 @@
 		}
 		create_diplomatic_pact = {
 			country = c:NTL #法属奥地利
-			type = puppet #傀儡国
+			type = territory #监管国
 		}
 		create_diplomatic_pact = {
-			country = c:RHN #法占德国
-			type = puppet #傀儡国
+			country = c:NTL #法属奥地利		
+			type = grant_own_market #附庸有自己市场
 		}
 		create_diplomatic_pact = {
 			country = c:AOF #法属西非
@@ -263,11 +255,11 @@
 		}
 		create_diplomatic_pact = {
 			country = c:MOR #法属摩洛哥
-			type = protectorate #保护国
+			type = semi_autonomous_colony #保护国
 		}
 		create_diplomatic_pact = {
 			country = c:TUN #法属突尼斯
-			type = dominion #自治领
+			type = semi_autonomous_colony #保护国
 		}
 		create_diplomatic_pact = {
 			country = c:AEF #法属赤道非洲
@@ -308,7 +300,7 @@
 			type = colony
 		}
 	}
-	c:NET = {
+	c:NET ?= {
 		create_diplomatic_pact = {
 			country = c:IDN #印尼
 			type = colony

@@ -1,10 +1,229 @@
+liberal_democracy_and_education = { #自由民主与教育
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_bureaucracy_add = 50 #行政力	
+	country_legitimacy_base_add = 5 #政权合法性
+	interest_group_ig_intelligentsia_approval_add = 1 #知识分子支持度				
+}
+
+democracy_that_belongs_to_the_nation = { #属于民族的民主主义
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_bureaucracy_mult = 0.05 #行政力	
+	country_legitimacy_ideological_incoherence_mult = -0.05 #意识形态不一致导致的合法性惩罚
+	interest_group_ig_intelligentsia_approval_add = 1 #知识分子支持度	
+	interest_group_ig_trade_unions_approval_add = 1 #工会支持度
+	interest_group_ig_petty_bourgeoisie_approval_add = 1 #小市民支持度				
+}
+
+democratic_trade_unions = { #民主工会
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	building_group_bg_manufacturing_throughput_add = 0.05 #制造业吞吐量
+	state_construction_mult = 0.05 #地区建造效率		
+}
+
+democratic_crusade = { #民主十字军
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_army_offense_mult = 0.05 #陆军进攻
+	unit_army_defense_mult = 0.05 #陆军防御
+}
+
+soil_nutrition = { #动力铁路
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_railway_throughput_add = 0.05 #铁路建筑吞吐量
+	state_infrastructure_mult = 0.05 #省份基础设施	
+}
+
+moderate_ethnic_policy = { #温和的民族政策
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_bureaucracy_mult = 0.05 #行政力	
+	country_legitimacy_base_add = 10 #政权合法性
+}
+
+modern_commercial_fleet = { #现代商业船队
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_convoys_capacity_mult = 0.05 #商船
+	building_shipyards_throughput_add = 0.05 #造船厂建筑吞吐量
+}
+
+resource_empowerment = { #资源赋能
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_group_bg_mining_throughput_add = 0.05 #矿井吞吐量
+	building_group_bg_oil_extraction_throughput_add = 0.05 #石油精炼厂吞吐量
+}
+
+modifier_national_academy_of_sciences = { #国家科学院
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 0.03 #科技研究速度
+	country_bureaucracy_add = -100 #国家行政力
+}
+
+german_academy_of_sciences_modifier = { #德意志科学院
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 0.03 #科技研究速度
+	country_bureaucracy_add = -100 #国家行政力
+}
+
+the_dawn_of_information_technology = { #信息技术的黎明
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 0.05 #科技研究速度	
+	building_electrics_industry_throughput_add = 0.05 #电子产品厂建筑吞吐量
+}
+
+modifier_metal_ore_trade = { #金属矿贸易
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_construction_goods_cost_mult = -0.05 #建造商品花费
+	country_tech_research_speed_mult = 0.05 #科技研究速度
+}
+
+industry3.0 = { #工业3.0
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_tech_research_speed_mult = 0.05 #科技研究速度	
+}
+
+modifier_flexible_diplomacy = { #灵活外交
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_influence_mult = 0.05 #影响力	
+	country_improve_relations_speed_mult = 0.05 #改善关系速度
+}
+
+industrial_base = { #工业基地
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_construction_mult = 0.15 #地区建造效率	
+}
+
+kmt_white_terror = { #白色恐怖，初期政治剧情
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_prestige_add = -100
+	state_mortality_mult = 0.01 
+	country_infamy_generation_mult = 0.33
+	country_infamy_decay_mult = -0.33
+}
+
+kmt_beating_tiger = { #小蒋打虎
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_authority_add = -500
+	country_legitimacy_base_add = 30
+	country_law_enactment_success_add = 0.05
+	country_law_enactment_time_mult = -0.30
+	country_law_enactment_stall_mult = -0.30
+	country_bureaucracy_add = -2500
+}
+
+kmt_beating_tiger_failed ={ #根深蒂固的腐败
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_loan_interest_rate_add = 0.3
+	country_legitimacy_base_add = -35
+	country_law_enactment_success_add = -0.15
+	country_law_enactment_stall_mult = 0.33
+	building_throughput_add = -0.25
+}
+
+kmt_gloden_ten_years_plan = { #黄金十年计划
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_bureaucracy_add = -2500
+	building_throughput_add = 0.1
+	country_max_weekly_construction_progress_add = 10
+	state_construction_mult = 0.1
+	building_construction_sector_throughput_add = 0.15
+	state_education_access_add = 0.15
+}
+
+KMTEducationPlan= { #重建教育
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	country_bureaucracy_add = -2400
+	country_ expenses_ add = 50000
+	building_throughput_add = 0.15
+	state_construction_mult = 0.15
+	state_education_access_add = 0.30
+}
+
+kmt_reestablish_1_successed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 150
+	country_loyalists_from_legitimacy_mult = 0.15
+}
+
+kmt_reestablish_2_successed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 150
+	state_construction_mult = 0.05
+	building_throughput_add = 0.05
+}
+
+kmt_reestablish_3_successed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_add = 300
+	country_loyalists_from_legitimacy_mult = 0.15
+	state_construction_mult = 0.05
+	building_throughput_add = 0.05
+}
+
+modifier_deutsches_university = { #德意志大学
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_education_access_add = 0.3
+	country_tech_research_speed_mult = 0.2
+	country_bureaucracy_mult = -0.05 #行政力
+}
+
+navigation_obligations_act_modifier = { #航行义务法案
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_conscription_rate_mult = 0.05 #可征召营队（百分比）
+}
+
+development_of_artillery_technology = { #发展火炮技术
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_military_tech_research_speed_mult = 0.05
+	building_artillery_foundries_throughput_add = 0.1 #火炮厂吞吐量		
+	country_military_goods_cost_mult = 0.25 #军用商品花费
+}
+
+secularise = { #世俗化
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_devout_pol_str_mult = -0.5 #教会政治力量
+	country_bureaucracy_mult = 0.1 #行政力	
+	interest_group_ig_trade_unions_approval_add = 1 #工会支持度	
+}
+
+abolish_the_caste_system = { #废除种姓制度
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_landowners_pol_str_mult = -0.5 #地主政治力量
+	country_bureaucracy_add = 90 #国家行政力
+}
+
+crush_racism = { #碾碎种族主义
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_bureaucracy_mult = 0.05 #行政力	
+	country_legitimacy_base_add = 10 #政权合法性
+}
+
+consolidate_the_border = { #巩固边境
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_building_conscription_center_max_level_add = 5
+	unit_army_defense_mult = 0.05
+	state_conscription_rate_mult = 0.05 #可征召营队（百分比）
+}
+
+restoration_of_the_steel_industry = { #恢复钢铁工业
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds	
+	building_steel_mills_throughput_add = 0.05 #炼钢厂建筑吞吐量
+}
+
+reclamation_of_land = { #开垦土地
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_construction_mult = 0.1 #地区建造效率	
+	state_infrastructure_mult = 0.05 #省份基础设施
+}
+
+public_works = { #公共建设
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_construction_mult = 0.1 #地区建造效率	
+}
+
 modifier_friendly_cooperation = { #友好合作
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	building_electrics_industry_throughput_add = 0.05 #电子产品厂建筑吞吐量
+	country_weekly_innovation_max_add = 5 #最大创新力投入	
 	country_bureaucracy_mult = -0.05 #行政力		
 	country_improve_relations_speed_mult = 0.05 #改善关系速度
 	state_construction_mult = 0.05 #地区建造效率	
-	interest_group_ig_trade_unions_approval_add = 1 #工会支持度
 }
 
 modifier_strengthen_the_german_iron_law = { #加强德意志铁律
@@ -415,7 +634,7 @@ modifier_quality_education = { #素质教育完成
 modifier_general_education = { #通识教育完成
     icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	country_tech_research_speed_mult = 0.2
-	country_bureaucracy_mult = -0.1
+	country_bureaucracy_mult = -0.1 #行政力
 }
 
 modifier_literacy_education = { #扫盲教育完成
@@ -428,7 +647,7 @@ modifier_establish_a_college_entrance_examination_system = { #建立高考制度
     icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	state_education_access_add = 0.3
 	country_tech_research_speed_mult = 0.2
-	country_bureaucracy_mult = -0.1
+	country_bureaucracy_mult = -0.1 #行政力
 }
 
 modifier_legacy_of_terakoya = { #扫盲运动完成
@@ -442,7 +661,7 @@ modifier_jap_terakoya = { #扫盲运动
     icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	state_education_access_add = 0.25
 	state_peasants_education_access_add = 0.20
-	country_tech_research_speed_mult = -0.10
+	country_bureaucracy_mult = -0.1 #行政力
 }
 
 murder_funding8 = { #谋杀经费
@@ -531,6 +750,8 @@ police_state_modifier = { #警察国家
 	country_improve_relations_speed_mult = -0.15 #改善关系速度
 	country_legitimacy_ideological_incoherence_mult = -0.25 #意识形态不一致导致的合法性惩罚
 	interest_group_ig_intelligentsia_approval_add = -1 #知识分子支持度
+	state_mortality_turmoil_mult = 0.05 #每级动乱的死亡率
+	state_turmoil_effects_mult = -0.05 #来自动乱的地区惩罚
 }
 
 aboriginal_led_army_modifier = { #以原住民为主导的军队

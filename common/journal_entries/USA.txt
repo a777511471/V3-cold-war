@@ -1,0 +1,71 @@
+
+
+public_works = {  #公共建设
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	complete = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_rice_farm #水稻农场
+					is_building_type = building_wheat_farm #小麦农场	 
+					is_building_type = building_maize_farm #玉米农场	
+					is_building_type = building_rye_farm #黑麦农场                     
+				}
+				level >= 20
+			}
+        }			
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway #铁路
+				level >= 30
+			}
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_highway #高速公路
+				level >= 3
+			}
+		}				
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = public_works #公共建设
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = {
+	}
+
+	progressbar = yes
+}

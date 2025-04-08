@@ -63,5 +63,27 @@
 				brave #勇敢				
 			}
 		}				
+
+		#create_character = {
+            #伯恩哈德亲王
+			dna = dna_king_frederik_william_03	
+			historical = yes
+			first_name = Bernhard
+			last_name = Peter1
+			culture = cu:north_german
+			birth_date = 1911.1.1
+    		noble = yes			
+			is_general = yes
+			ig_leader = yes
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate #温和主义者
+			commander_rank = commander_rank_5
+			traits = {			
+				popular_commander #受欢迎的指挥官
+				basic_political_operator #政治运作者
+				charismatic #魅力四射
+				brave #勇敢				
+			}
+		}				
 	}
 }

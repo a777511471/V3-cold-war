@@ -71,14 +71,14 @@ law_interventionism = { #经济干预
 	}
 	
 	modifier = {
+		country_max_companies_add = 1 #公司上限			
 		building_cash_reserves_mult = 0.2 #最大现金储备
 		country_gold_reserve_limit_mult = 0.2 #黄金储备上限		
-		country_force_privatization_bool = yes #强制私有化
 		country_disable_nationalization_without_compensation_bool = yes
 		country_private_construction_allocation_mult = 0.5
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.5
-		country_government_dividends_efficiency_add = 0.25
+		country_government_dividends_efficiency_add = 0.03
 	}
 	
 	possible_political_movements = {
@@ -138,14 +138,11 @@ law_agrarianism = { #农本主义
 	}
 	
 	modifier = {
-		state_aristocrats_investment_pool_efficiency_mult = 0.5
-		state_clergymen_investment_pool_efficiency_mult = 0.5
-		state_farmers_investment_pool_efficiency_mult = 0.5
+		state_shopkeepers_investment_pool_efficiency_mult = -0.25
 		state_capitalists_investment_pool_efficiency_mult = -0.25
-		country_private_construction_allocation_mult = 0.5
+		country_private_construction_allocation_mult = 0.7
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.5
-		country_government_dividends_efficiency_add = 0.3
 		
 		country_disable_nationalization_without_compensation_bool = yes
 	}
@@ -279,7 +276,6 @@ law_industry_banned = { #禁止工业
 		country_production_tech_spread_mult = -0.25
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.25
-		country_government_dividends_efficiency_add = 0.3
 		state_peasants_education_access_add = -0.10
 		country_disable_nationalization_without_compensation_bool = yes
 		country_economic_dependence_on_overlord_add = -0.5
@@ -430,8 +426,8 @@ law_laissez_faire = { #自由放任
 	
 	modifier = {
 		country_loan_interest_rate_mult = -0.25
-		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
-		state_capitalists_investment_pool_efficiency_mult = 0.25
+		state_shopkeepers_investment_pool_efficiency_mult = 0.35	
+		state_capitalists_investment_pool_efficiency_mult = 0.35
 		country_private_construction_allocation_mult = 0.75
 		country_government_dividends_reinvestment_add = 1.0		
 		country_max_companies_add = 2 #公司上限
@@ -534,7 +530,7 @@ law_social_capitalism = { #社会主义市场经济
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 1.0
 		building_nationalization_investment_return_add = 0.5
-		country_government_dividends_efficiency_add = 0.4		
+		country_government_dividends_efficiency_add = 0.05		
 	}
 	
 	possible_political_movements = {
@@ -599,7 +595,7 @@ law_state_capitalism_ownership = { #国家资本主义
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 1.0
 		building_nationalization_investment_return_add = 0.5
-		country_government_dividends_efficiency_add = 0.3
+		country_government_dividends_efficiency_add = 0.03
 	}
 	
 	possible_political_movements = {
@@ -663,8 +659,8 @@ law_cooperative_ownership = { #合作社
 	}
 	
 	modifier = {
-		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
-		state_farmers_investment_pool_efficiency_mult = 0.25
+		state_shopkeepers_investment_pool_efficiency_mult = 0.3	
+		state_farmers_investment_pool_efficiency_mult = 0.3
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 1.0
 		
@@ -754,8 +750,9 @@ law_collective_economy = { #集体经济（合作社完全体）
 	}
 	
 	modifier = {
-		state_shopkeepers_investment_pool_efficiency_mult = 0.3
-		state_farmers_investment_pool_efficiency_mult = 0.3
+		state_shopkeepers_investment_pool_efficiency_mult = 0.35	
+		state_farmers_investment_pool_efficiency_mult = 0.35
+
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 1.0
 		
@@ -766,8 +763,8 @@ law_collective_economy = { #集体经济（合作社完全体）
 		building_group_bg_private_infrastructure_allowed_collectivization_add = 1.0
 		building_group_bg_arts_allowed_collectivization_add = 1.0
 		
+		country_foreign_collectivization_bool = yes
 		country_company_pay_to_establish_bool = yes
-		country_foreign_collectivization_bool = yes #外国集体化
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
@@ -853,12 +850,10 @@ law_command_economy = { #计划经济
 		country_disable_investment_pool_bool = yes
 		
 		country_authority_mult = 0.3
-		country_bureaucrats_pol_str_mult = 0.1
-		country_engineers_pol_str_mult = 0.1		
-		country_academics_pol_str_mult = 0.1		
+		country_bureaucrats_pol_str_mult = 0.1	
 		building_nationalization_cost_mult = -0.55
 		building_nationalization_radicals_mult = -0.75
-		country_government_dividends_efficiency_add = 0.45
+		country_government_dividends_efficiency_add = 0.045
 		
 		country_leverage_resistance_mult = 0.3
 

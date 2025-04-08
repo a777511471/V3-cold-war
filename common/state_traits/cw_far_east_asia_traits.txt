@@ -1,4 +1,12 @@
-﻿state_trait_port_of_shanghai = { #上海港
+﻿state_trait_peru_fishery = { #秘鲁渔业
+    icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	
+	modifier = {
+		building_group_bg_fishing_throughput_add = 0.2
+	}
+}
+
+state_trait_port_of_shanghai = { #上海港
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	
 	modifier = {

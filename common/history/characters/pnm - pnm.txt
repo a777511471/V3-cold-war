@@ -1,0 +1,106 @@
+﻿CHARACTERS = {
+	c:PNM ?= {
+		create_character = {
+			dna = dna_franklin_buchanan    		
+			ruler = yes			
+			interest_group = ig_petty_bourgeoisie #利益集团小市民			
+			ideology = ideology_authoritarian #威权主义者			
+			traits = {				
+			}
+		}
+
+		create_character = {
+			#小市民领袖阿努尔福·阿里亚斯·马德里
+			dna = dna_pershing		
+			historical = yes
+			first_name = Arnulfo·Arias
+			last_name = Madrid
+			interest_group = ig_petty_bourgeoisie #利益集团小市民
+			ideology = ideology_authoritarian #威权主义者
+			ig_leader = yes #利益集团领袖
+			birth_date = 1901.8.15
+			traits = {
+				master_bureaucrat #高明官僚
+				basic_diplomat #外交官
+				basic_political_operator #政治运作者
+				literary #文学家				
+				strong #健硕		
+			}
+		}	
+
+		create_character = { #军队领袖何塞·安东尼奥·雷蒙，陆军上将
+    		dna = ecchi_dsk_dna_jinricheng			   		
+			historical = yes
+			first_name = Jose_Antonio
+			last_name = Raimon				
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian #威权主义者
+			ig_leader = yes #利益集团领袖
+			is_general = yes
+			commander_rank = commander_rank_4			
+			birth_date = 1908.4.11			
+			traits = {			
+				basic_political_operator #政治运作者					
+				enemy_of_the_people #人民公敌
+				expensive_tastes #昂贵嗜好	
+				hedonist #享乐主义者																				
+				cruel #残暴		
+			}
+		}		
+
+		create_character = {
+			#知识分子领袖里卡多·华金·阿尔法罗
+    		dna = dna_roosevelt		
+			historical = yes
+			first_name = Ricardo·Joaquin
+			last_name = Alfaro
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_humanitarian #人道主义者
+			ig_leader = yes #利益集团领袖
+			birth_date = 1882.8.20
+			traits = {
+				master_bureaucrat #高明官僚
+				basic_diplomat #外交官
+				basic_political_operator #政治运作者
+				literary #文学家					
+			}
+		}	
+
+		create_character = {			
+			dna = dna_david_farragut
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_devout #教会
+		    ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+
+			}
+		}
+
+		create_character = {
+			dna = dna_william_shubrick	
+			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_social_democrat #社会民主主义者
+			ig_leader = yes #利益集团领袖
+		}											
+
+		create_character = {
+			interest_group = ig_rural_folk #利益集团农民
+		    ideology = ideology_market_liberal #市场自由主义者
+			ig_leader = yes #利益集团领袖
+		}		
+
+		create_character = {
+			interest_group = ig_industrialists #利益集团实业家
+		    ideology = ideology_market_liberal #市场自由主义者
+			ig_leader = yes #利益集团领袖
+		}		
+
+		create_character = {
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_landowners #地主
+		    ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+			}
+		}				
+	}
+}

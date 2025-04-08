@@ -452,7 +452,7 @@ chi.12 = { #党国权力交接
 		}		
 		create_character = {
 			#蒋经国
-			dna = ecchi_dna_zhaohe		
+			dna = ecchi_dna_hu_shih	
 			historical = yes
 			first_name = "Jingguo"
 			last_name = "Jiangg" 

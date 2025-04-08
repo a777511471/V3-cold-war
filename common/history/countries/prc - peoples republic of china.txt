@@ -3,7 +3,7 @@ COUNTRIES = {
 		effect_starting_technology_tier_4_tech = yes
 		add_technology_researched = tech_economics_foundations #资本论		
 		add_technology_researched = sericulture #古代技艺
-		
+	
 		set_tax_level = medium
 		set_military_wage_level = low
 		set_government_wage_level = low

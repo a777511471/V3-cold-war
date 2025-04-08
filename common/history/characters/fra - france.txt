@@ -13,22 +13,6 @@
 			}
 		}
 
-		create_character = { #让-路易·蒂克西埃-维尼扬古
-    		dna = ecchi_dna_philippe_petain				
-			first_name = Jean-Louis
-			last_name = Tixie-Vinyangu
-			birth_date = 1907.10.12
-			historical = yes
-    		is_agitator = yes #鼓动者
-		    interest_group = ig_petty_bourgeoisie #小市民
-			ideology = ideology_national_socialists #民族社会主义者
-			traits = {
-				inspirational_orator #在啤酒馆鼓舞人心的演说家
-				firebrand #煽动大师
-				tactful #圆滑		
-			}
-		}
-
 		create_character = {#法国共产党领袖莫里斯·多列士
     		dna = dna_maurice_thorez			
 			first_name = Morris
@@ -149,7 +133,37 @@
                                                                     direct
 			}
 		}
-		
+
+		create_character = { #让-路易·蒂克西埃-维尼扬古
+    		dna = ecchi_dna_philippe_petain				
+			first_name = Jean-Louis
+			last_name = Tixie-Vinyangu
+			birth_date = 1907.10.12
+			historical = yes
+    		is_agitator = yes #鼓动者
+		    interest_group = ig_petty_bourgeoisie #小市民
+			ideology = ideology_national_socialists #民族社会主义者
+			traits = {
+				inspirational_orator #在啤酒馆鼓舞人心的演说家
+				firebrand #煽动大师
+				tactful #圆滑		
+			}
+		}
+
+		create_character = {
+			#教会领袖弗朗索瓦·夏尔-鲁		
+			dna = dna_pershing				
+			historical = yes
+			first_name = Francois
+			last_name = Charles-Roux	
+			birth_date = 1879.11.19											
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_devout #教会
+			ideology = ideology_jingoist_leader #沙文主义者		
+			traits = {				
+				basic_diplomat #外交家				
+			}
+		}		
 
 		create_character = { #菲利普·奥博尼奥，海军上将
 			historical = yes
@@ -205,13 +219,12 @@
 		create_character = { #阿方斯·朱安，陆军元帅
 			historical = yes
 			is_general = yes
+			commander_rank = commander_rank_5			
 			first_name = Alphonse
 			last_name = Juin
 			birth_date = 1888.12.16
 			interest_group = ig_armed_forces
 			ideology = ideology_republican_leader
-			hq = region_north_africa
-			commander_rank = commander_rank_5
 			traits = {
 				trench_rat
                                                                      surveyor

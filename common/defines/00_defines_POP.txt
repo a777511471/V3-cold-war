@@ -1,0 +1,93 @@
+﻿
+
+
+
+
+
+
+
+NPops = {
+
+##### MIGRATION #####
+## 常规 ##
+	MIGRATION_MIN_STATE_POPS = 20000 # 人口少于此数量的州将不会移民
+	MIGRATION_STATE_POPULATION_THRESHOLD = 100000 # 人口少于此数量的州已减少市场移民数量，以避免人口彻底减少
+	MIGRATION_MAX_PER_STATE_BASE = 500  # 一周内从一个州迁出或迁入的人数不得超过此数量（基准）
+	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 20  # was 5 # 一周内从一个州迁出或迁入的人数不得超过此数量（随基础设施扩展）
+	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.0075  # was 0.005 # 每周最大迁出数量被限制在一个州人口的这个比例内
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.1  # was 0.05 # 一个州的失业工人数量 * 此值添加到有多少人可以从该州迁移（从 MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION 中限定后）
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.1  # was 0.05 # 一个州的失业工人数量 * 此值从有多少人可以迁移到该州（从 MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION 中限定后）
+
+	# 迁移意愿 #
+	MIGRATION_DESIRE_BASE = 0 # 迁移意愿的基本值
+	MIGRATION_DESIRE_FROM_DISCRIMINATION = 100 # 受到歧视将使迁移意愿增加这么多
+	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -1.0 # 人口的迁移意愿将受到其工作满意度的影响乘以该值。
+
+	# 文化社区 #
+	CULTURAL_COMMUNITY_LINGER_TIME_WEEKS = 3 # 当给定文化的最后一批人口离开某个州时，相应的文化社区将在这么长时间后被移除
+	CULTURAL_COMMUNITY_MAX_PER_MONTH_CHANCE = 0.04
+
+	# 奴隶制 #
+	MIGRATION_MIN_POP_AMOUNT = 1 # 每周可以迁移的人口数量不得少于这个数量（如果有任何迁移发生）
+
+	# UX/UI 标签 #
+	MIGRATION_PULL_HIGH_THRESHOLD = 1.25 # 州的移民吸引必须至少达到市场平均水平 * 这个才能获得 market immigration
+	MIGRATION_PULL_LOW_THRESHOLD = 0.5  # was 0.75 # 州的移民拉动必须小于或等于市场平均水平 * 这个才能获得 full amount of emigration
+
+
+## 移民吸引力 ##
+	MIGRATION_PULL_EMPTY_STATE = 100 											# 如果一个州根本没有人口，则给予其巨大的移民吸引力
+	MIGRATION_PULL_FROM_LIVING_STANDARD = 2 									# 目标州每个平均生活水平点的移民吸引力
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT = 1.5 								# 每增加 10k 个非自给性工作，移民吸引力就会增加
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT_MAX = 30 							# 来自可用非自给性工作岗位的移民吸引力不能超过此值
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX_EMPLOYMENT_MULTIPLIER = 0.75 	# 计算可用的可耕地，就好像自给性农场只有其最大就业的这一部分，因此中国大部分州的就业率都很高自给自足的农场不会获得巨大的移民推动力
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT = 0.5 					# 每增加 10,000 个自给自足的工作岗位，移民拉动就会增加
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT_MAX = 30 				# 可用自给自足工作的移民拉动不能超过此值
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 1 								# 每增加 10,000 个失业人口，移民拉动就会减少此值
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT_MAX = 50 						# 失业导致的移民拉动减少不能超过此值
+
+
+## 市场迁移 ##
+	# 市场迁移处理 #
+	MARKET_MIGRATION_STATE_ATTRACTION_FRACTION = 0.6  # was 0.75 			# 具有最具吸引力的州的移民吸引力至少这一比例的州将获得移民
+	MARKET_MIGRATION_PER_WEEK_FACTOR = 5        							# 对于移民拉动的每个差异点，将有此数量的个人进行迁移
+	MARKET_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000   				# 此外，对于移民拉动的每个差异点，每增加一个人口数量，将有更多个人进行迁移
+	MARKET_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 5 	# 如果最佳选择是移民拉动增量低于此数字的州，则人口不会迁移
+	MARKET_MIGRATION_MIN_POP_FRACTION_TO_MOVE = 0.01  # was 0.05 			# 如果想要迁移的人构成低于该比例的人口，则不会产生新的人口，他们也不会迁移。
+	MIGRATION_PULL_MULT_FROM_NO_DISCRIMINATION = 0.75  # was 0.5 			# 如果人口从歧视转变为无歧视，则迁移拉动乘数增加此倍数（不适用于大规模迁移目标）
+	MIGRATION_PULL_MULT_FROM_HOMELANDS = 0.3  # was 0.2 					# 如果人口迁移到文化家园，则迁移拉动乘数增加此倍数（不适用于大规模迁移目标）
+
+
+## Mass Migrations ##
+	# 大规模迁移设置 #
+	MASS_MIGRATION_ORIGIN_MIN_TURMOIL = 0.15 				# 文化发源地必须至少有这么多动乱才能创建迁移目标
+	MASS_MIGRATION_ORIGIN_MIN_EMIGRANTS = 100000 			# 一个州必须至少有这么多的潜在移民才能引发大规模迁移
+	MASS_MIGRATION_TARGET_MAX_TURMOIL = 0.30			 	# 一个州必须有这么多或更少的文化动乱才能被选为大规模迁移目标
+	MASS_MIGRATION_TARGET_MIN_ARABLE_LAND = 20 				# 一个州必须至少有这么多的可耕地才能成为大规模迁移目标
+	MASS_MIGRATION_STATE_MIN_MARKET_ACCESS = 0.7 			# 一个州必须至少有这么多的市场准入才能成为大规模迁移目标或原籍州
+	MASS_MIGRATION_SPAWN_CHANCE = 2 						# 每周发生一次潜在的大规模移民，与动乱程度成正比（1 = 1%）
+	MASS_MIGRATION_SPAWN_CHANCE_STRUGGLING_FACTOR = 0.2 	# 一个国家/地区的文化中，SoL 每低于 10 点，机会就会增加此值
+	MASS_MIGRATION_SPAWN_CHANCE_STARVING_FACTOR = 1 		# 一个国家/地区的文化中，SoL 每低于 5 点，机会就会增加此值（在挣扎因素之上添加）
+	MASS_MIGRATION_TARGET_COUNTRY_RANDOM_FACTOR = 0.5 		# 此值越高，大规模移民国家目标的选择就越随机
+	MASS_MIGRATION_TARGET_STATE_RANDOM_FACTOR = 0.5 		# 此值越高，目标国家/地区的大规模移民状态目标的选择就越随机
+	MASS_MIGRATION_DURATION_MONTHS = 14  # was 12 			# 大规模移民持续多长时间以月为单位
+	MASS_MIGRATION_COOLDOWN_MONTHS = 48 					# 同一文化需要多少个月才能再次从某个国家大规模移民
+	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 4 	# 至少有此数量可能目标国家的国家不会受到任何大规模移民目标分数的惩罚
+	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.2 			# 大规模移民目标分数减少了其自身的分数，该分数等于此分数乘以小于 MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY 的可能目标国家数。或者分数 = 分数 - 分数 * 此 * PossibleStatesDiff
+
+
+
+	# 大规模迁移处理 #
+	MASS_MIGRATION_PER_WEEK_FACTOR = 10 								#
+	MASS_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000 				#
+	MASS_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 10 	#
+	# 以下因素是在迁移拉动阈值检查*之后*应用的，因此它们仅影响一个州获得的迁移份额的大小
+	MIGRATION_PULL_MULT_FROM_MASS_MIGRATION_TARGET = 1.5 				# 目标州是大规模迁移目标时，迁移拉动乘以该值
+	MIGRATION_PULL_MULT_FROM_MASS_MIGRATION_TARGET_ADJACENCY = 1.1 		# 目标州紧邻大规模迁移目标时，迁移拉动乘以该值
+	MIGRATION_MAX_PER_STATE_MASS_EMIGRATION_MULT = 3.0		 			# 大规模迁移时，每周移民上限乘以该数量（从 MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION 限制后）
+	MIGRATION_MAX_PER_STATE_MASS_IMMIGRATION_MULT = 5.0 				# 大规模迁移时，每周移民上限乘以该数量（从 MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION 限制后）
+	MASS_MIGRATION_NEIGHBORING_TARGET_STATE_LIMIT_FRACTION = 0.5 		# 邻近州与大规模迁移中的主要目标州相比所获得的限制分数
+
+
+
+}

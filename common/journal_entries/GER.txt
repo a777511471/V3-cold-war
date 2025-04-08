@@ -1,3 +1,1020 @@
+je_liberal_democracy_and_education = { #自由民主与教育
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26										
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_technology_researched = tech_critical_school #批判学派
+		has_technology_researched = tech_marxist_political_economics #马克思主义政治经济学		
+		has_technology_researched = tech_bureaucracy_theory #官僚主义理论		
+		has_law = law_type:law_guaranteed_liberties #保障自由
+		has_law = law_type:law_protected_speech #言论保护 
+		NOT = {
+			has_law = law_type:law_autocracy	#独裁制		
+			has_law = law_type:law_oligarchy	#寡头制		
+			has_law = law_type:law_technocracy	#技术治国				
+		}			
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}			
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_university #大学	 
+				level >= 20
+			}		
+		}				
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = liberal_democracy_and_education #自由民主与教育
+			years = 20	 
+		}
+	}
+
+	weight = 100
+}
+
+je_democracy_that_belongs_to_the_nation = { #属于民族的民主主义
+	icon = "gfx/interface/icons/law_icons/universal_suffrage.dds"
+
+	group = je_group_historical_content
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	complete = { 
+		has_technology_researched = tech_critical_school #批判学派
+		has_technology_researched = tech_marxist_political_economics #马克思主义政治经济学		
+		has_technology_researched = nationalism #现代民族主义
+		has_technology_researched = tech_bureaucracy_theory #官僚主义理论			
+		NOT = {
+			has_law = law_type:law_autocracy	#独裁制		
+			has_law = law_type:law_oligarchy	#寡头制		
+			has_law = law_type:law_technocracy	#技术治国			
+        	has_law = law_type:law_continental_law_system #大陆法系
+        	has_law = law_type:law_case_law_system #海洋法系		
+		}	
+		radical_fraction = {
+			value < 0.1
+		}		
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = democracy_that_belongs_to_the_nation #属于民族的民主主义
+			years = 20	            
+		}
+	}
+
+	weight = 10000
+}
+
+je_economics_and_democracy = { #经济学与民主
+
+	icon = "gfx/interface/icons/law_icons/universal_suffrage.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	complete = {
+		has_technology_researched = tech_marxist_political_economics #马克思主义政治经济学
+		has_technology_researched = tech_new_keynesianism #新凯恩斯主义
+		has_technology_researched = tech_solow_model #索洛模型  		
+		has_technology_researched = tech_monetarism #货币主义
+		has_technology_researched = tech_phillips_curve_and_is_lm_model #菲利普斯曲线	
+		has_technology_researched = tech_international_trade_theory #国际贸易理论		
+		NOT = {
+			has_law = law_type:law_autocracy	#独裁制		
+			has_law = law_type:law_oligarchy	#寡头制		
+			has_law = law_type:law_technocracy	#技术治国		
+		}	
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_central_bank #中央银行
+				level >= 1
+			}
+		}			
+		in_default = no				        						
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = economic_recovery_modifier #经济复苏
+			years = 5            
+		}
+	}
+}
+
+je_improvement_of_the_trade_union_act = { #完善工会法案
+
+	icon = "gfx/interface/icons/law_icons/worker_protections.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	complete = {
+		has_technology_researched = tech_critical_school #批判学派
+		has_technology_researched = tech_marxist_political_economics #马克思主义政治经济学
+		has_technology_researched = human_rights #公民主义   		
+    	NOT = {            
+        	has_law = law_type:law_no_workers_rights #无劳动者权利		
+		}	        						
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = democratic_trade_unions #民主工会
+			years = 5            
+		}
+	}
+}
+
+je_improve_the_labor_welfare_system = { #健全劳工福利体系
+
+	icon = "gfx/interface/icons/law_icons/worker_protections.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = { #显示条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:YSD ?= ROOT				
+		}
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:YSD ?= ROOT					
+		}	
+	}
+
+	complete = {
+    	NOT = {
+			has_law = law_type:law_extraction_economy	#盘剥经济	            
+        	has_law = law_type:law_no_workers_rights #无劳动者权利		
+			has_law = law_type:law_child_labor_allowed #允许童工	
+			has_law = law_type:law_restricted_child_labor #限制童工	
+		}	        
+		OR = {
+			has_law = law_type:law_protected_speech #言论保护
+			has_law = law_type:law_right_of_assembly #集会权
+		}		
+		OR = {
+			has_law = law_type:law_6_hour_working_system #六小时工作制
+			has_law = law_type:law_8_hour_working_system #八小时工作制
+		}							
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = long_live_the_people #人民万岁
+			years = 20	            
+		}
+	}
+}
+
+
+je_ideological_crusades = { #意识形态的十字军
+	icon = "gfx/interface/icons/event_icons/event_war.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:YSD ?= ROOT				
+		}
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:YSD ?= ROOT					
+		}	
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+
+	}
+
+	complete = {
+		has_law = law_type:law_guaranteed_liberties #保障自由
+		has_law = law_type:law_protected_speech #言论保护 
+		NOT = {
+			has_law = law_type:law_autocracy	#独裁制		
+			has_law = law_type:law_oligarchy	#寡头制		
+			has_law = law_type:law_technocracy	#技术治国				
+        	has_law = law_type:law_non_militarized_country
+			has_law = law_type:law_peasant_levies
+		}			
+		army_size >= 150	
+		has_technology_researched = tech_nine_principles_of_battles #9条战役原则					
+	}
+
+	on_complete = {
+		add_modifier = {
+			name = democratic_crusade #民主十字军
+			years = 20
+		}
+		create_character = { #
+			culture=cu:south_german #南德			
+			interest_group = ig_petty_bourgeoisie #小市民
+			is_general = yes
+			commander_rank = commander_rank_1
+			traits = {
+		 	        expert_offensive_planner
+			        experienced_defensive_strategist		
+			        popular_commander
+			        defense_in_depth_specialist
+			        surveyor
+			}
+		}		
+	}
+
+	weight = 100
+}
+
+soil_nutrition = {  #动力铁路
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	complete = {
+		has_technology_researched = tech_soil_nutrition #动力铁路	
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_railway #铁路
+				level >= 51
+			}
+		}			
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = soil_nutrition #动力铁路
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = {
+	}
+
+	progressbar = yes
+}
+
+je_moderate_ethnic_policy = { #温和的民族政策
+	icon = "gfx/interface/icons/law_icons/no_colonial_affairs.dds"
+	
+	group = je_group_historical_content #国家议程
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1946.6.26
+    }
+	possible = { #激活条件
+		game_date >= 1946.6.26		
+	}
+
+	complete = {   
+		has_technology_researched = human_rights #公民主义 
+		has_law = law_type:law_civilization_and_civilization #少数民族保障
+		radical_fraction = {
+			value < 0.1
+		}		
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = moderate_ethnic_policy #温和的民族政策
+			years = 20          
+		}
+	}
+
+	fail = { #失败条件		
+
+	}    
+}
+
+revitalization_of_the_old_ruhr_industrial_base = { #重建鲁尔
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+		c:YSD ?= ROOT	
+		owns_entire_state_region = STATE_RUHR			
+	}
+	possible = { #激活条件
+		c:YSD ?= ROOT	
+		owns_entire_state_region = STATE_RUHR													
+	}
+	complete = { #完成条件
+		owns_entire_state_region = STATE_RUHR	
+		any_scope_state = {
+			state_region = s:STATE_RUHR	
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry #食品厂
+				level >= 21
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_RUHR	
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mills #合金加工厂
+				level >= 21
+			}
+		}				
+		any_scope_state = {
+			state_region = s:STATE_RUHR				
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tooling_workshops #工具厂
+				level >= 21
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_RUHR				
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chemical_plants #化工厂
+				level >= 21
+			}
+		}				
+		any_scope_state = {
+			state_region = s:STATE_RUHR				
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_refinery #炼油厂
+				level >= 15
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_RUHR				
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_plastic_products_factory #塑料厂
+				level >= 21
+			}
+		}						
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no		
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = industrial_base #工业基地
+			years = 20			
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	progressbar = yes
+}
+
+modern_commercial_fleet = { #现代商业船队
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+    
+    group = je_group_internal_affairs
+    is_shown_when_inactive = { #显示条件
+		any_scope_state = {		
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards #造船厂
+				level >= 1
+			}
+		}
+    }
+	possible = { #激活条件
+		any_scope_state = {		
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards #造船厂
+				level >= 1
+			}
+		}			
+	}
+	complete = { #完成条件
+		NOT = {
+        	has_law = law_type:law_isolationism #孤立主义
+		}				
+		has_technology_researched = tech_large_freighters #大型货轮
+		any_scope_state = {		
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards #造船厂
+				level >= 15
+			}
+		}		
+		in_default = no		
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modern_commercial_fleet #现代商业船队
+			years = 20				
+		}
+	}
+}
+
+the_wealth_of_the_persian_gulf = { #波斯湾的财富
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+		owns_entire_state_region = STATE_BASRA			
+	}
+	possible = { #激活条件
+		owns_entire_state_region = STATE_BASRA														
+	}
+	complete = { #完成条件
+		owns_entire_state_region = STATE_BASRA
+		has_technology_researched = tech_integrated_petroleum_exploration_technology #石油综合勘探技术	
+		any_scope_state = {
+			state_region = s:STATE_BASRA			
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig #油井
+				level >= 15
+			}
+		}		
+		in_default = no		
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = resource_empowerment #资源赋能
+			years = 5
+			is_decaying = yes				
+		}
+	}
+}
+
+resource_empowerment = {  #资源赋能
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		NOT = {		
+			c:JAP ?= ROOT				
+		}			
+    }
+	possible = { #激活条件
+		NOT = {		
+			c:JAP ?= ROOT				
+		}			
+	}
+
+	complete = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_coal_mine #煤矿
+				level >= 21
+			}
+        }			
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_iron_mine #金属矿
+				level >= 21
+			}
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_sulfur_mine #非金属矿
+					is_building_type = building_sand_mine #砂石土矿 
+				}
+				level >= 21
+			}
+		}	
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig #油井
+				level >= 21
+			}
+		}							
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = resource_empowerment #资源赋能
+			years = 20
+			is_decaying = yes				
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = {
+	}
+
+	progressbar = yes
+}
+
+national_academy_of_sciences = { #国家科学院
+	icon = "gfx/interface/icons/institution_icons/schools.dds"
+	
+	group = je_group_historical_content
+
+	is_shown_when_inactive = { #显示条件
+					
+	}
+
+	possible = { #激活条件
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}			
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	complete = { #完成条件
+		has_law = law_type:law_state_led #是科学院主导		
+		has_law = law_type:law_public_schools #是公立学校	
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 4
+		}			
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_university #大学	 
+				level >= 15
+			}		
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_research_institution #科研机构	 
+				level >= 5
+			}		
+		}					
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = modifier_national_academy_of_sciences #国家科学院
+			years = 20
+		}
+	}
+
+	weight = 100
+}
+
+the_dawn_of_information_technology = {  #信息技术的黎明
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1971.1.1
+    }
+	possible = { #激活条件
+		game_date >= 1971.1.1
+	}
+
+	complete = {	
+		has_technology_researched = tech_first_generation_supercomputers #第一代超级计算机
+		has_technology_researched = tech_semiconductor #半导体
+		has_technology_researched = tech_automotive_radar #汽车雷达
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_computer_factory #计算机工厂
+				level >= 5
+			}
+		}				
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electrics_industry #电子产品厂
+				level >= 30
+			}
+		}				
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electronic_parts_factory #电子零件厂
+				level >= 30
+			}
+		}					
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = the_dawn_of_information_technology #信息技术的黎明
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = {
+	}
+
+	progressbar = yes
+}
+
+je_protecting_the_north_sea_iron_ore_arteries = { #保护北海铁矿动脉
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+	
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = { #显示条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:YSD ?= ROOT				
+		}		
+		exists = c:SWE		
+	}
+
+	possible = { #激活条件
+		OR = {
+			c:PRU ?= ROOT			
+			c:YSD ?= ROOT				
+		}		
+		exists = c:SWE					
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+
+	}
+
+	complete = {
+		exists = c:SWE		
+        c:SWE = { 
+            relations:root >= 50 
+        }					
+		NOT = {
+        	has_law = law_type:law_isolationism #孤立主义
+		}			
+	}
+
+	on_complete = {
+        change_relations = {
+            country = c:SWE
+            value = 10
+        }					
+		add_modifier = {
+			name = modifier_metal_ore_trade #金属矿贸易
+			years = 20
+		}		
+	}
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = shoufu_goal		 
+		    NOT = { exists = c:USA }							
+		}	
+    }
+
+    weight = 1000
+}
+
+je_twin_eagles_on_the_other_side = { #彼岸双鹰
+	icon = "gfx/interface/icons/event_icons/active_peace_deal.dds"
+	
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = { #显示条件
+		c:YSD ?= ROOT
+		exists = c:USA			
+	}
+
+	possible = { #激活条件
+		c:YSD ?= ROOT
+		exists = c:USA				
+	}
+
+	modifiers_while_active = { #日志进行时的buff
+
+	}
+
+	complete = {
+		exists = c:USA			
+        c:USA = { 
+            relations:root >= 50 
+        }					
+		NOT = {
+        	has_law = law_type:law_isolationism #孤立主义
+		}			
+	}
+
+	on_complete = {
+        change_relations = {
+            country = c:USA
+            value = 10
+        }		
+		add_modifier = {
+			name = modifier_friendly_cooperation #友好合作
+			years = 20
+		}
+		c:USA = {
+			add_modifier = {
+				name = modifier_friendly_cooperation #友好合作
+				years = 20
+			}
+		}			
+	}
+
+	fail = { #失败条件某方不存在
+		custom_tooltip = {
+			text = shoufu_goal		 
+		    NOT = { exists = c:USA }							
+		}	
+    }
+
+    weight = 1000
+}
+
+industry3.0 = {  #工业3.0
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_internal_affairs
+
+    is_shown_when_inactive = { #显示条件
+		game_date >= 1970.1.1
+    }
+	possible = { #激活条件
+		game_date >= 1970.1.1		
+	}
+
+	complete = {
+		has_technology_researched = tech_nuclear_power_technology #核电技术		
+		has_technology_researched = tech_first_generation_supercomputers #第一代超级计算机
+		has_technology_researched = tech_rocket_engineering #火箭工程
+		has_technology_researched = tech_transgenosis #现代转基因技术
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant #发电厂
+				level >= 21
+			}
+		}					
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_clean_energy_power_station #清洁能源发电站
+				level >= 21
+			}
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_computer_factory #计算机工厂
+				level >= 5
+			}
+		}				
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_rocket_center #火箭中心
+				level >= 5
+			}
+		}		
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electrics_industry #电子产品厂
+				level >= 21
+			}
+		}				
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electronic_parts_factory #电子零件厂
+				level >= 21
+			}
+		}					
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no
+	}
+
+    on_complete = { #如果完成
+		add_modifier = {
+			name = industry3.0 #工业3.0
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	fail = {
+	}
+
+	progressbar = yes
+}
+
+industrial_development_in_saxony = { #萨克森工业开发
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+    
+    group = je_group_internal_affairs
+	is_shown_when_inactive = { #显示条件
+		c:PRU ?= ROOT	
+		owns_entire_state_region = STATE_SAXONY				
+	}
+	possible = { #激活条件
+		c:PRU ?= ROOT		
+		owns_entire_state_region = STATE_SAXONY															
+	}
+	complete = { #完成条件
+		owns_entire_state_region = STATE_SAXONY	
+		any_scope_state = {
+			state_region = s:STATE_SAXONY	
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry #食品厂
+				level >= 60
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_SAXONY	
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_steel_mills #合金加工厂
+				level >= 21
+			}
+		}				
+		any_scope_state = {
+			state_region = s:STATE_SAXONY				
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tooling_workshops #工具厂
+				level >= 21
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_SAXONY				
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chemical_plants #化工厂
+				level >= 21
+			}
+		}				
+		any_scope_state = {
+			state_region = s:STATE_SAXONY				
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_refinery #炼油厂
+				level >= 15
+			}
+		}		
+		any_scope_state = {
+			state_region = s:STATE_SAXONY				
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_plastic_products_factory #塑料厂
+				level >= 21
+			}
+		}						
+		custom_tooltip = {
+			text = custom_loc_five_year_plan_goal
+				scope:journal_entry = {
+				is_goal_complete = yes
+			}
+		}
+		in_default = no		
+	}
+
+	on_complete = { #如果完成
+		add_modifier = {
+			name = industrial_base #工业基地
+			years = 20
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 0.25
+	}
+
+	progressbar = yes
+}
+
 je_expansion_of_the_german_university = { #扩建德意志大学
 	icon = "gfx/interface/icons/institution_icons/schools.dds"
 	
@@ -6,19 +1023,15 @@ je_expansion_of_the_german_university = { #扩建德意志大学
 	is_shown_when_inactive = { #显示条件
 		OR = {
 			c:PRU ?= ROOT			
-			c:BAV ?= ROOT
-			c:YSD ?= ROOT
-			c:RHN ?= ROOT					
+			c:YSD ?= ROOT				
 		}						
 	}
 
 	possible = { #激活条件
 		OR = {
 			c:PRU ?= ROOT			
-			c:BAV ?= ROOT
-			c:YSD ?= ROOT
-			c:RHN ?= ROOT					
-		}
+			c:YSD ?= ROOT				
+		}		
 		institution_investment_level = {
 			institution = institution_schools
 			value >= 3
@@ -35,11 +1048,18 @@ je_expansion_of_the_german_university = { #扩建德意志大学
 			institution = institution_schools
 			value >= 4
 		}			
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_university #大学	 
+				level >= 20
+			}		
+		}				
 	}
 
 	on_complete = { #如果完成
 		add_modifier = {
-			name = modifier_general_education #通识教育完成
+			name = modifier_deutsches_university #德意志大学
 			months = long_modifier_time
 			is_decaying = yes
 		}
@@ -89,6 +1109,19 @@ je_the_current_state_of_the_german_army = { #德意志陆军的现状
 			name = military_reconstruction #军队重建
 			years = 20
 		}
+		create_character = { #
+			culture=cu:south_german #南德			
+			interest_group = ig_petty_bourgeoisie #小市民
+			is_general = yes
+			commander_rank = commander_rank_1
+			traits = {
+		 	        expert_offensive_planner
+			        experienced_defensive_strategist		
+			        popular_commander
+			        defense_in_depth_specialist
+			        surveyor
+			}
+		}		
 	}
 
 	weight = 100
@@ -100,23 +1133,13 @@ je_ensuring_russian_friendship = { #确保俄国友谊
 	group = je_group_foreign_affairs
 
 	is_shown_when_inactive = { #显示条件
-		OR = {
-			c:PRU ?= ROOT			
-			c:BAV ?= ROOT
-			c:YSD ?= ROOT
-			c:RHN ?= ROOT					
-		}
+		c:PRU ?= ROOT			
 		exists = c:RUS				
 	}
 
 	possible = { #激活条件
-		OR = {
-			c:PRU ?= ROOT			
-			c:BAV ?= ROOT
-			c:YSD ?= ROOT
-			c:RHN ?= ROOT					
-		}
-		exists = c:RUS				
+		c:PRU ?= ROOT					
+		exists = c:RUS			
 	}
 
 	modifiers_while_active = { #日志进行时的buff
@@ -129,11 +1152,15 @@ je_ensuring_russian_friendship = { #确保俄国友谊
             relations:root >= 50 
         }					
 		NOT = {
-        	has_law = law_type:law_isolationism
+        	has_law = law_type:law_isolationism #孤立主义
 		}			
 	}
 
 	on_complete = {
+        change_relations = {
+            country = c:RUS
+            value = 10
+        }		
 		add_modifier = {
 			name = modifier_friendly_cooperation #友好合作
 			years = 20
@@ -143,7 +1170,7 @@ je_ensuring_russian_friendship = { #确保俄国友谊
 				name = modifier_friendly_cooperation #友好合作
 				years = 20
 			}
-		}		
+		}			
 	}
 
 	fail = { #失败条件某方不存在
@@ -194,6 +1221,19 @@ je_strengthen_the_german_iron_law = { #加强德意志铁律
 			name = modifier_strengthen_the_german_iron_law #加强德意志铁律
 			years = 20
 		}
+		create_character = { #
+			culture=cu:south_german #南德			
+			interest_group = ig_petty_bourgeoisie #小市民
+			is_general = yes
+			commander_rank = commander_rank_1
+			traits = {
+		 	        expert_offensive_planner
+			        experienced_defensive_strategist		
+			        popular_commander
+			        defense_in_depth_specialist
+			        surveyor
+			}
+		}			
 	}
 
 	weight = 100
@@ -229,13 +1269,13 @@ je_expansion_of_the_military_academy = { #扩大军官学院
         	has_law = law_type:law_non_militarized_country
 			has_law = law_type:law_peasant_levies
 		}			
-		army_size >= 1	
+		army_size >= 100	
 		has_technology_researched = tech_nine_principles_of_battles #9条战役原则
 		any_scope_state = {
 			is_incorporated = yes
 			any_scope_building = {
-					is_building_type = building_university #大学	 
-				level >= 10
+				is_building_type = building_university #大学	 
+				level >= 15
 			}		
 		}						
 	}
@@ -245,66 +1285,39 @@ je_expansion_of_the_military_academy = { #扩大军官学院
 			name = modifier_expansion_of_the_military_academy #扩大军官学院
 			years = 20
 		}		
+		create_character = { #
+			interest_group = ig_armed_forces
+			is_general = yes
+			commander_rank = commander_rank_1
+			traits = {
+		 	        expert_offensive_planner
+			        experienced_defensive_strategist		
+			        popular_commander
+			        defense_in_depth_specialist
+			        surveyor
+			}
+		}		
 	}
 
 	weight = 100
 }
 
-reunification_of_west_germany = { #西德统一
+reunification_of_west_germany = { #建立联邦德国
 
 	group = je_group_foreign_affairs
 
 	icon = "gfx/interface/icons/event_icons/BRD.dds"
 
 	is_shown_when_inactive = {
-			is_ai = no		
-		OR = {
-			c:BAV ?= ROOT
-			c:YSD ?= ROOT
-			c:RHN ?= ROOT					
-		}
+		c:YSD ?= ROOT				
 	}
 	
 	possible = {
-		OR = {
-			c:BAV ?= ROOT
-			c:YSD ?= ROOT
-			c:RHN ?= ROOT				
-		}
+		c:YSD ?= ROOT		
 	}
 
 	complete = { #完成条件
-	OR = {
-        c:BAV = { 
-            relations:root >= 50 
-        }
-        c:YSD = { 
-            relations:root >= 50 
-        }
-        c:RHN = { 
-            relations:root >= 50 
-        }		
-	}
-        c:USA = { 
-            relations:root >= 50 
-        }	
-        c:GBR = { 
-            relations:root >= 50 
-        }	
-        c:FRA = { 
-            relations:root >= 50 
-        }			
-		custom_tooltip = {
-			text = custom_loc_shichangyitihua_goal
-				scope:journal_entry = {
-				is_goal_complete = yes
-			}
-		}
-		in_default = no	
-		NOT = {
-        	has_law = law_type:law_non_militarized_country
-			has_law = law_type:law_peasant_levies
-		}				
+		game_date >= 1949.5.23
 	}
     on_complete = {
 		trigger_event = {
@@ -313,18 +1326,7 @@ reunification_of_west_germany = { #西德统一
 		}	
     }
 
-	current_value = {
-		value = root.gdp
-	}
-
-	goal_add_value = {
-		value = root.gdp
-		multiply = 0.25
-	}
-
     weight = 1000
-	progressbar = yes	
-    should_be_pinned_by_default = yes
 }
 
 je_aijianliminzhudeguo = { #ai建立民主德国
@@ -351,36 +1353,6 @@ je_aijianliminzhudeguo = { #ai建立民主德国
 			id = ger.2
 			popup = yes
 	    }
-    }
-
-    weight = 1000
-}
-
-je_aijianlilianbangdeguo = { #ai建立联邦德国
-	group = je_group_internal_affairs
-
-	icon = "gfx/interface/icons/event_icons/BRD.dds"
-
-	is_shown_when_inactive = { #显示条件
-		is_ai = yes
-		    c:BAV ?= THIS			
-		NOT = {
-				exists = c:BRD
-			}			
-	}   
-	possible = { #激活条件
-		c:BAV ?= THIS		
-		game_date >= 1949.4.23				
-	}
-
-	complete = { #完成条件
-		game_date >= 1949.5.23
-	}
-    on_complete = {
-		trigger_event = {
-			id = ger.1
-			popup = yes
-		}	
     }
 
     weight = 1000
@@ -520,7 +1492,7 @@ je_ger = { #统一德国
 				}
 			}
 			custom_tooltip = {
-				text = no_independent_chinese_countries_tt
+				text = no_independent_ger_countries_tt
 				any_country = {
 					filter = {
 						OR = {

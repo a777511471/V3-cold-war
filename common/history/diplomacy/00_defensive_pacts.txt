@@ -1,12 +1,20 @@
 ﻿DIPLOMACY = { #防御协议
 	c:RUS ?= {
 		create_diplomatic_pact = {
+			country = c:TUR
+			type = defensive_pact
+		}					
+		create_diplomatic_pact = {
 			country = c:FIN
 			type = defensive_pact
 		}	
 	}
 
 	c:TUR ?= {
+		create_diplomatic_pact = {
+			country = c:BUL
+			type = defensive_pact
+		}			
 		create_diplomatic_pact = {
 			country = c:PER
 			type = defensive_pact

@@ -362,44 +362,32 @@ POPS = {
 	s:STATE_NORTH_DAKOTA = {
 		region_state:USA = {
 			create_pop = {
+				culture = ashkenazi
+				size = 12000
+			}			
+			create_pop = {
 				culture = yankee
-				size = 681000
+				size = 2681000
 			}
+			create_pop = {
+				culture = siouan
+				size = 12000
+			}
+			create_pop = {
+				culture = irish
+				size = 12000
+			}				
 			create_pop = {
 				culture = mexican
 				size = 9000
-			}
-			create_pop = {
-				culture = caribeno
-				size = 8000
-			}
-			create_pop = {
-				culture = afro_american
-				size = 7000
 			}
 			create_pop = {
 				culture = han
 				size = 6000
 			}
 			create_pop = {
-				culture = filipino
-				size = 5000
-			}
-			create_pop = {
 				culture = panjabi
 				size = 4000
-			}
-			create_pop = {
-				culture = korean
-				size = 3000
-			}
-			create_pop = {
-				culture = vietnamese
-				size = 2000
-			}
-			create_pop = {
-				culture = japanese
-				size = 1000
 			}
 		}
 	}

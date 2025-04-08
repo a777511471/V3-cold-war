@@ -25,15 +25,27 @@ ger.1 = { #成立西德
 	option = {
 		name = ger.1.a
 		default_option = yes
-		          annex = c:BAV
-		          annex = c:RHN
-				  annex = c:YSD
 	 		change_tag = BRD					  
 				  make_independent = yes #独立
             add_primary_culture = cu:north_german	      
             remove_primary_culture = cu:south_german
 			set_state_religion = rel:protestant #新教		
-		set_capital = STATE_NORTH_RHINE #波恩			  
+		set_capital = STATE_NORTH_RHINE #波恩	
+		create_character = {
+			dna = dna_david_farragut
+			first_name = Konrad #教会领袖康拉德·阿登纳
+			last_name = Adenauer
+			culture = cu:north_german #北德
+			birth_date = 1876.1.5
+			historical = yes
+			ruler = yes				
+			ig_leader = yes
+			interest_group = ig_devout
+    		ideology = ideology_liberal_leader #民主主义者
+			traits = {
+				strong #健硕	
+			}
+		}				  
 	}
 }
 

@@ -1,0 +1,93 @@
+﻿CHARACTERS = {
+	c:EOT ?= {
+		create_character = {
+			dna = dna_franklin_buchanan    		
+			ruler = yes	
+			religion = rel:sunni #逊尼派
+			interest_group = ig_landowners #大地主								
+			ideology = ideology_authoritarian #威权主义者			
+			traits = {				
+			}
+		}
+
+		create_character = {
+            #拉吉布·纳沙什比
+			dna = dna_pershing				
+			historical = yes
+			first_name = Rajib
+			last_name = Nashashby
+			culture = cu:mashriqi
+			religion = rel:sunni #逊尼派			
+			birth_date = 1881.1.1
+			ig_leader = yes
+			interest_group = ig_landowners #大地主
+		    ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+				experienced_political_operator #有经验的政治运作者				
+			}
+		}
+
+		create_character = {
+			#小市民领袖
+			interest_group = ig_petty_bourgeoisie #利益集团小市民
+			ideology = ideology_authoritarian #威权主义者
+			ig_leader = yes #利益集团领袖
+			religion = rel:sunni #逊尼派			
+			traits = {	
+			}
+		}	
+
+		create_character = {			
+			dna = dna_david_farragut
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_devout #教会
+		    ideology = ideology_market_liberal #市场自由主义者
+			traits = {
+
+			}
+		}
+
+		create_character = {
+			dna = dna_william_shubrick	
+			religion = rel:sunni #逊尼派			
+			ig_leader = yes #利益集团领袖
+			interest_group = ig_intelligentsia #知识分子
+			ideology = ideology_social_democrat #社会民主主义者
+			traits = {
+			}
+		}
+
+		create_character = {
+			dna = dna_william_shubrick	   				
+			ig_leader = yes		
+			religion = rel:sunni #逊尼派			
+			interest_group = ig_armed_forces
+			ideology = ideology_authoritarian #威权主义者			
+			traits = {				
+
+			}
+		}		
+
+		create_character = {
+			dna = dna_william_shubrick
+			religion = rel:sunni #逊尼派				
+			interest_group = ig_trade_unions #利益集团工会
+			ideology = ideology_social_democrat #社会民主主义者
+			ig_leader = yes #利益集团领袖
+		}											
+
+		create_character = {
+			religion = rel:sunni #逊尼派			
+			interest_group = ig_rural_folk #利益集团农民
+		    ideology = ideology_market_liberal #市场自由主义者
+			ig_leader = yes #利益集团领袖
+		}		
+
+		create_character = {
+			interest_group = ig_industrialists #利益集团实业家
+		    ideology = ideology_market_liberal #市场自由主义者
+			ig_leader = yes #利益集团领袖
+			religion = rel:sunni #逊尼派			
+		}				
+	}
+}

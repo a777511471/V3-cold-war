@@ -63,6 +63,9 @@
 			name = the_tragedy_of_the_civil_war_modifier #内战之殇
 			years = 10
 			is_decaying = yes			
+		}				
+		add_modifier = {
+			name = modifier_flexible_diplomacy #灵活外交
 		}										
 	}
 }
